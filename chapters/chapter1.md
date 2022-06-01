@@ -18,15 +18,34 @@ Let import the dataset, do a summary of it and identify quantitative variables (
 Use the `as.factor()` function.
 </codeblock>
 
-The first point is to represent two variables. Choose them and plot their histogram.
+The empirical distribution of a variable is the set of values (or modalities) taken by this variable, and their associated numbers. However, the variables being continuous, it is very rare to have the same value twice for two different individuals.
+
+We therefore choose to make a grouping in classes.
+
+The first point is to represent one variable. Choose it and plot its histogram.
 
 <codeblock id="01_02">
 _layout(matrix(1:2,1,2))_ allows you to obtain two graphs on a single window. 
 </codeblock>
 
-Next, plot the density for each sensory attributes with the `density()` function of R. Try to do it in a single window like before. 
+Here, a lot of information is available to us. The first one is an idea of the representation of the scores given by the judges to the attribute. We that a lot of notes are between 0 and 1. The rest is more homogeneous. As explain previously, this distribution is cut in classes. The cut is set by the argument `breaks`. By default, it is set with the _Sturges_ method, which is the most recommended in the most of the cases. If you specify manually this number,  make sure the number is not too high or not too low.
+
+<codeblock id="01_09">
+</codeblock>
+
+We notice however that this histogram represents the frequencies of observations on the ordinate, or more precisely the number of observations of each class. It is the argument `freq = True` that gives us this representation. But you sometimes histograms are plot using Frequency density, the frequency per unit for the data in each class. It is calculated by dividing the frequency by the class width. We change the argument `probability` to `probability = TRUE` to have this representation.
+
+<codeblock id="01_10">
+</codeblock>
+
+This notion of density is introduce here, it allows to restrict the frequencies of the classes between 0 and 1. Plot the density for one sensory attributes with the `density()` function of R.  
 
 <codeblock id="01_03">
+</codeblock>
+
+The histogram of frenquency density can be superposed to the curve. First, plot the histogram for one sensory attribute and add the line of the density.
+
+<codeblock id="01_11">
 </codeblock>
 
 To a better understanding of the dispersion of a quantitative variable, we want to calculate the mean, the standard deviation, the first quartile and the third quartile for each sensory attributes in the dataset `experts`. Do it and save them in a dataframe. 
