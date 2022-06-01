@@ -31,6 +31,7 @@ Next, plot the density for each sensory attributes with the `density()` function
 To a better understanding of the dispersion of a quantitative variable, we want to calculate the mean, the standard deviation, the first quartile and the third quartile for each sensory attributes in the dataset `experts`. Do it and save them in a dataframe. 
 
 <codeblock id="01_04">
+That is what is expected: 
 
 |     | mean | sd | median | q1 | q3 |
 |   :-:  |:-:    |:-:    |:-:    |:-:    |:-:    |
@@ -48,6 +49,14 @@ To a better understanding of the dispersion of a quantitative variable, we want 
 | Wrapping | 5.7368056 | 3.415128 | 6.3 | 2.775 | 8.900 |
 
 </codeblock>
+
+->>>>>>>>>>>>>>Ajout partie guillaume sur les plot de density avec indicateurs
+
+This indicators can be visualized, plot the boxplot of each sensory attributes.Add the line corresponding to the mean of the attribute. 
+
+<codeblock id="01_05">
+</codeblock>
+
 
 
 </exercise>
