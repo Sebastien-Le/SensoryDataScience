@@ -1,2 +1,7 @@
-experts <- read.table(file="data/perfumes_qda_experts.csv",header=TRUE, sep=",",dec=".",quote="\"")
-summary(experts)
+layout(matrix(1:2,1:2))
+
+d1 <- density(experts$Spicy) 
+plot(d1, main = "Density of Spicy") 
+
+d2 <- density(experts$Heady) 
+plot(d2, main="Density of Heady") 

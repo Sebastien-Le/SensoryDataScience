@@ -1,2 +1,7 @@
-experts <- read.table(file="data/perfumes_qda_experts.csv",header=TRUE, sep=",",dec=".",quote="\"")
-___(experts)
+_____(________)
+
+d1 <- density(experts$_____) 
+plot(d1, main = "Density of _____") 
+
+d2 <- density(experts$_____) 
+plot(d2, main="Density of ____") 
