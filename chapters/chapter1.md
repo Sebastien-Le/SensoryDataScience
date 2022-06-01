@@ -50,7 +50,7 @@ The histogram of frenquency density can be superposed to the curve. First, plot 
 <codeblock id="01_11">
 </codeblock>
 
-we can also compare two estimate density of two different variables. Create a graph with the lines of the density of two sensory attributes.
+We can also compare two estimate density of two different variables. Create a graph with the lines of the density of two sensory attributes.
 
 <codeblock id="01_12">
 </codeblock>
@@ -84,6 +84,7 @@ That is what is expected:
 These indicators can be visualized, plot the box-plot of each sensory attributes. Do it on six attributes and add the line corresponding to the mean. 
 
 <codeblock id="01_05">
+
 </codeblock>
 
 Let's illustrate these indicators in complementary of the density. For example, the median is a quantile associate to the order 0.5 :

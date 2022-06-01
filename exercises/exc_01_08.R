@@ -8,4 +8,4 @@ experts %>%
   filter(Product == ___ | Product == ___ | Product == ___ ) %>%
 
   # Graph
-  ggplot() + aes(x=___, fill=___) + ____() + labs(title="Boxplot of ____ according three products")
+  ggplot() + aes(y=____, x= ____, fill=____) + ____() + labs(title="Boxplot of ____ according three products")
