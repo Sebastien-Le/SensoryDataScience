@@ -12,10 +12,11 @@ id: 1
 
 <exercise id="1" title="Distribution of sensory attributes">
 
+## Histogram
+
 Let import the dataset, do a summary of it and identify quantitative variables (sensory attributes); we're gonna work only on this variables for moment.
 
 <codeblock id="01_01">
-Use the `as.factor()` function.
 </codeblock>
 
 The empirical distribution of a variable is the set of values (or modalities) taken by this variable, and their associated numbers. However, the variables being continuous, it is very rare to have the same value twice for two different individuals.
@@ -25,7 +26,6 @@ We therefore choose to make a grouping in classes.
 The first point is to represent one variable. Choose it and plot its histogram.
 
 <codeblock id="01_02">
-_layout(matrix(1:2,1,2))_ allows you to obtain two graphs on a single window. 
 </codeblock>
 
 Here, a lot of information is available to us. The first one is an idea of the representation of the scores given by the judges to the attribute. We that a lot of notes are between 0 and 1. The rest is more homogeneous. As explain previously, this distribution is cut in classes. The cut is set by the argument `breaks`. By default, it is set with the _Sturges_ method, which is the most recommended in the most of the cases. If you specify manually this number,  make sure the number is not too high or not too low.
@@ -38,6 +38,8 @@ We notice however that this histogram represents the frequencies of observations
 <codeblock id="01_10">
 </codeblock>
 
+## Density
+
 This notion of density is introduce here, it allows to restrict the frequencies of the classes between 0 and 1. Plot the density for one sensory attributes with the `density()` function of R.  
 
 <codeblock id="01_03">
@@ -48,7 +50,16 @@ The histogram of frenquency density can be superposed to the curve. First, plot 
 <codeblock id="01_11">
 </codeblock>
 
-To a better understanding of the dispersion of a quantitative variable, we want to calculate the mean, the standard deviation, the first quartile and the third quartile for each sensory attributes in the dataset `experts`. Do it and save them in a dataframe. 
+we can also compare two estimate density of two different variables. Create a graph with the lines of the density of two sensory attributes.
+
+<codeblock id="01_12">
+</codeblock>
+
+## Position indicator
+
+Now that we have an idea of the variable density, we can introduce the notion of position indicator. We now want to know which notes "cut" the population into two groups of equal size. The median is the value separating the higher half from the lower half of a data sample, a population, or a probability distribution. For a data set, it may be thought of as "the middle" value. To generalize, we have the notion of quantile, which are cut points dividing the observations in a sample in the same way. For example, the median is a quantile associate to the order 0.5. 
+
+We want to calculate the mean, the standard deviation, the first quantile and the third quantile for each sensory attributes in the data set `experts`. Do it and save them in a data frame. 
 
 <codeblock id="01_04">
 That is what is expected: 
@@ -70,11 +81,24 @@ That is what is expected:
 
 </codeblock>
 
-->>>>>>>>>>>>>>Ajout partie guillaume sur les plot de density avec indicateurs
-
-This indicators can be visualized, plot the box-plot of each sensory attributes.Add the line corresponding to the mean of the attribute. 
+This indicators can be visualized, plot the box-plot of each sensory attributes.Do it on six attributes and add the line corresponding to the mean. 
 
 <codeblock id="01_05">
+</codeblock>
+
+Let's illustrate these indicators in complementary of the density. 
+
+<codeblock id="01_13">
+</codeblock>
+
+Do the same with the first and third quartile. 
+
+<codeblock id="01_14">
+</codeblock>
+
+Finally, we plot the density with the mean and 2.5 and 97.5 quantile.
+
+<codeblock id="01_15">
 </codeblock>
 
 </exercise>
