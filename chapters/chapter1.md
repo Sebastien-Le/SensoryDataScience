@@ -57,7 +57,7 @@ we can also compare two estimate density of two different variables. Create a gr
 
 ## Position indicator
 
-Now that we have an idea of the variable density, we can introduce the notion of position indicator. We now want to know which notes "cut" the population into two groups of equal size. The median is the value separating the higher half from the lower half of a data sample, a population, or a probability distribution. For a data set, it may be thought of as "the middle" value. To generalize, we have the notion of quantile, which are cut points dividing the observations in a sample in the same way. For example, the median is a quantile associate to the order 0.5. 
+Now that we have an idea of the variable density, we can introduce the notion of position indicator. We now want to know which notes "cut" the population into two groups of equal size. The median is the value separating the higher half from the lower half of a data sample, a population, or a probability distribution. For a data set, it may be thought of as "the middle" value. To generalize, we have the notion of quantile, which are cut points dividing the observations in a sample in the same way. 
 
 We want to calculate the mean, the standard deviation, the first quantile and the third quantile for each sensory attributes in the data set `experts`. Do it and save them in a data frame. 
 
@@ -81,22 +81,22 @@ That is what is expected:
 
 </codeblock>
 
-This indicators can be visualized, plot the box-plot of each sensory attributes.Do it on six attributes and add the line corresponding to the mean. 
+These indicators can be visualized, plot the box-plot of each sensory attributes. Do it on six attributes and add the line corresponding to the mean. 
 
 <codeblock id="01_05">
 </codeblock>
 
-Let's illustrate these indicators in complementary of the density. 
+Let's illustrate these indicators in complementary of the density. For example, the median is a quantile associate to the order 0.5 :
 
 <codeblock id="01_13">
 </codeblock>
 
-Do the same with the first and third quartile. 
+Do the same with the first and third quantile. 
 
 <codeblock id="01_14">
 </codeblock>
 
-Finally, we plot the density with the mean and 2.5 and 97.5 quantile.
+Finally, plot the density again and add the mean and 2.5 and 97.5 quantile.
 
 <codeblock id="01_15">
 </codeblock>

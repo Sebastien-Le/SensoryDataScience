@@ -1,7 +1,7 @@
 d<-density(_____)
 
 # Plot the line
-plot(d, main="____ Distribution and median")
+plot(d, main="____ distribution and median")
 p50 <- which.max(cumsum(d$y/sum(d$y)) >= 0.50)
 
 # Plot the shading

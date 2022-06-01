@@ -4,7 +4,7 @@ library(dplyr)
 experts %>%  
   # Select 3 products and 1 sensory attribute
   select(c(Product, Spicy)) %>% 
-  filter(Product == "Coco Mademoiselle" | Product == "Angel" | Product == "Chanel N5" ) %>%
+  filter(Product == "J'adore ET" | Product == "Angel" | Product == "Chanel N5" ) %>%
   # Add the mean's column
   group_by(Product) %>% 
   mutate(mu=mean(Spicy)) %>% 

@@ -1,7 +1,7 @@
 d<-density(experts$Vanilla)
 
 # Plot the line
-plot(d, main="Vanilla Distribution and median")
+plot(d, main="Vanilla distribution and median")
 p50 <- which.max(cumsum(d$y/sum(d$y)) >= 0.50)
 
 # Plot the shading
