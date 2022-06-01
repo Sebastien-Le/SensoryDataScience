@@ -15,6 +15,7 @@ id: 1
 Let import the dataset, do a summary of it and identify quantitative variables (sensory attributes); we're gonna work only on this variables for moment.
 
 <codeblock id="01_01">
+Use the `as.factor()` function.
 </codeblock>
 
 The first point is to represent two variables. Choose them and plot their histogram.
@@ -52,7 +53,7 @@ That is what is expected:
 
 ->>>>>>>>>>>>>>Ajout partie guillaume sur les plot de density avec indicateurs
 
-This indicators can be visualized, plot the boxplot of each sensory attributes.Add the line corresponding to the mean of the attribute. 
+This indicators can be visualized, plot the box-plot of each sensory attributes.Add the line corresponding to the mean of the attribute. 
 
 <codeblock id="01_05">
 </codeblock>
@@ -62,7 +63,7 @@ This indicators can be visualized, plot the boxplot of each sensory attributes.A
 
 <exercise id="2" title="Product effect">
 
-The sensory attributes are collected fro differents products, let's take account of this point. Remember the dataset, `Product`, `Session`, `Panelist` and `Rank` must be categorical, do the transformation. 
+The sensory attributes are collected for different products, let's take account of this point. Remember the data set, `Product`, `Session`, `Panelist` and `Rank` must be categorical, do the transformation. 
 
 <codeblock id="01_06">
 </codeblock>
@@ -70,7 +71,7 @@ The sensory attributes are collected fro differents products, let's take account
 The point of interest in sensory analysis is the product effect on each sensory attributes. To begin, plot the density for one sensory attribute and for three product. To do it, you must to use `ggplot2` and `dplyr` libraries.
 
 <codeblock id="01_07">
-To reduce the dataframe with the informations you need, use dplyr with :
+To reduce the data frame with the information you need, use dplyr with :
 - `select()` : select the product and the sensory attribute;
 - `filter()` : select rows of your products;
 - `group_by()` and `mutate()` : calculate the mean for each product.
@@ -84,7 +85,7 @@ Each sensory attributes has different dispersion depending on the product you’
 The next part focus on the box-plots of the same sensory attribute. Using the same libraries, build three box-plot for three products.
 
 <codeblock id="01_08">
-To plot the boxplot, use `geom_boxplot()`.
+To plot the box-plot, use `geom_boxplot()`.
 </codeblock>
 
 </exercise>
