@@ -134,3 +134,52 @@ To plot the box-plot, use `geom_boxplot()`.
 
 </exercise>
 
+<exercise id="3" title="To the distance notion">
+
+# Differences between products 
+
+To have a better understanding of this differences between products, we use the precedent boxplots, where we add a segment between each means. Choose three products and one sensory attribut and run this code :
+
+<codeblock id="01_16">
+</codeblock>
+
+These segments are equivalent to a `distance` between all the product, in the sensory attribute point of view. Try to have these visualization for four sensory attributes and for each, three products. So you need to plot four graphs, for this use the `gridExtra` library. With the `grid.arrange` function, you can arrange all your plots like you want. 
+
+<codeblock id="01_17">
+</codeblock>
+
+Now, do exactly the same without plotting the boxplots:
+
+<codeblock id="01_18">
+</codeblock>
+
+To finish, we want to plot same graphs but without the variance. To do, you need to divide values by the standard deviation. Next, plot the same graphs :
+
+<codeblock id="01_21">
+</codeblock>
+
+We have finally 4 univariate analysis of the mean differences between all the product for each attributes. For example, _Chanel N5_ and _Angel_ are closer than _J'adore ET_ in Spicy perception. They have a shorter "distance" between them. 
+
+We can summary these graphics in four _4x4_ matrix with the distance mean-mean for each product. to get it, start to get the data frame of means of three sensory attributes for three products. 
+
+<codeblock id="01_19">
+Use the function summarize() of dplyr to add the column corresponding to the mean of one attribute. 
+
+For example, that is what is expected: 
+
+|Product| mean_Spicy | mean_Citrus | mean_Floral |
+| :-: | :-: | :-: | :-: |
+| Angel | 3.9000000 | 0.4083333 | 2.491667 | 
+| Chanel N5 | 3.7333333 | 0.9291667 | 6.150000 |
+| J'adore ET | 0.3416667 | 1.5750000 | 8.179167 |
+</codeblock>
+
+Next, calculate the distances-matrix for each sensory attributes.
+
+<codeblock id="01_20">
+To calculate distances, use the dist() function. Next, transform the table in matrix. 
+</codeblock>
+
+
+</exercise>
+
