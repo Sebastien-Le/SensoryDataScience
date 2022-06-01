@@ -57,7 +57,35 @@ This indicators can be visualized, plot the boxplot of each sensory attributes.A
 <codeblock id="01_05">
 </codeblock>
 
+</exercise>
 
+
+<exercise id="2" title="Product effect">
+
+The sensory attributes are collected fro differents products, let's take account of this point. Remember the dataset, `Product`, `Session`, `Panelist` and `Rank` must be categorical, do the transformation. 
+
+<codeblock id="01_06">
+</codeblock>
+
+The point of interest in sensory analysis is the product effect on each sensory attributes. To begin, plot the density for one sensory attribute and for three product. To do it, you must to use `ggplot2` and `dplyr` libraries.
+
+<codeblock id="01_07">
+To reduce the dataframe with the informations you need, use dplyr with :
+- `select()` : select the product and the sensory attribute;
+- `filter()` : select rows of your products;
+- `group_by()` and `mutate()` : calculate the mean for each product.
+Next, to plot the graph, you need to use :
+- `geom_density()`: plot the density of each product according values of your sensory attribute;
+- `geom_vline` : plot the line representing the mean for each product.
+</codeblock>
+
+Each sensory attributes has different dispersion depending on the product you’re focusing on, it's the product effect.
+
+The next part focus on the box-plots of the same sensory attribute. Using the same libraries, build three box-plot for three products.
+
+<codeblock id="01_08">
+To plot the boxplot, use `geom_boxplot()`.
+</codeblock>
 
 </exercise>
 
