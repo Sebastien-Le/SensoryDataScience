@@ -214,11 +214,13 @@ With the data frame of means built just before, we get the two matrix of distanc
 
 <exercise id="6" title="Inertia">
 
-![formula](https://render.githubusercontent.com/render/math?math=In = \frac{1}{n-1}\sum_{i=1}^{n}d^{2}(i, 0))
-![formula](https://render.githubusercontent.com/render/math?math=In = \sum_{i=1}^{n}d^{2}(i, i')=2n\sum_{i=1}^{n}d^{2}(i, 0) \\\Leftrightarrow \sum_{i=1}^{n}d^{2}(i, i') = 2n(n-1)In \\\Leftrightarrow In = \frac{\sum_{i=1}^{n}d^{2}(i, i')}{2n(n-1)})
+In =![formula](https://render.githubusercontent.com/render/math?math=\frac{1}{n-1}\sum_{i=1}^{n}d^{2}(i, 0))
+In = ![formula](https://render.githubusercontent.com/render/math?math=\sum_{i=1}^{n}d^{2}(i, i'))![formula](https://render.githubusercontent.com/render/math?math=2n\sum_{i=1}^{n}d^{2}(i, 0)) 
+![formula](https://render.githubusercontent.com/render/math?math=\Leftrightarrow \sum_{i=1}^{n}d^{2}(i, i')) = ![formula](https://render.githubusercontent.com/render/math?math=2n(n-1)In \Leftrightarrow) In = ![formula](https://render.githubusercontent.com/render/math?math=\frac{\sum_{i=1}^{n}d^{2}(i, i')}{2n(n-1)}))
 
 <codeblock id="01_26">
 </codeblock>
+
 
 </exercise>
 
