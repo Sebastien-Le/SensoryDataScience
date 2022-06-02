@@ -1,8 +1,3 @@
-df$Floral <- df$Floral/sd(df$Floral)
-df$Citrus <- df$Citrus/sd(df$Citrus)
-df$Spicy <- df$Spicy/sd(df$Spicy)
-df$Heady <- df$Heady/sd(df$Heady)
-
 a1 <- ggplot(df)+aes(y=Floral, x= Product, color=Product)+ 
   stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
   stat_summary(fun=mean, geom="point")+

@@ -134,9 +134,7 @@ To plot the box-plot, use `geom_boxplot()`.
 
 </exercise>
 
-<exercise id="3" title="To the distance notion">
-
-# Differences between products 
+<exercise id="3" title="Differences between products">
 
 To have a better understanding of this differences between products, we use the precedent box-plots, where we add a segment between each means. Choose three products and one sensory attributes and run this code :
 
@@ -153,14 +151,16 @@ Now, do exactly the same without plotting the boxplots:
 <codeblock id="01_18">
 </codeblock>
 
-To finish, we want to plot same graphs but without the variance. To do, you need to divide values by the standard deviation. Next, plot the same graphs :
+To finish, we want to plot same graphs but without the variance. This very important step makes it possible to compare individuals with each other in relation to a reference value which is the one in 0. Moreover, by dividing by the standard deviation, each individual has the same weight which is 1.
+
+To do, you need to divide values by the standard deviation. Next, plot the same graphs :
 
 <codeblock id="01_21">
 </codeblock>
 
 We have finally 4 univariate analysis of the mean differences between all the products for each attributes. For example, _Chanel N5_ and _Angel_ are closer than _J'adore ET_ in Spicy perception. They have a shorter "distance" between them. 
 
-We can summary these graphics in four _4x4_ matrix with the distance mean-mean for each product. to get it, start to get the data frame of means of three sensory attributes for three products. 
+We can summary these graphics in four _4x4_ matrix with the distance mean-mean for each product. To get it, start to get the data frame of means of three sensory attributes for three products. 
 
 <codeblock id="01_19">
 Use the function summarize() of dplyr to add the column corresponding to the mean of one attribute. 
@@ -174,6 +174,10 @@ For example, that is what is expected:
 | J'adore ET | 0.3416667 | 1.5750000 | 8.179167 |
 </codeblock>
 
+</exercise>
+
+<exercise id="4" title="The notion of metric">
+
 Next, calculate the distances-matrix for each sensory attributes.
 
 <codeblock id="01_20">
@@ -185,6 +189,36 @@ Try to combine them in order to visualize simultaneously.
 <codeblock id="01_22">
 </codeblock>
 
+A negative slope between two sensory attributes can be traduce like a negative linear relation, and conversely.This is the notion of correlation, it's a standardized form of covariance. You can observe the sign of values and compare them with the previous graphs.
+
+<codeblock id="01_23">
+</codeblock>
+
+We can save information about these attributes without products and the dispersion can be traduce with distances between us. 
+
+<codeblock id="01_24">
+</codeblock>
 
 </exercise>
 
+<exercise id="5" title="Structure">
+
+With the data frame of means built just before, we get the two matrix of distances between products `dist.prod` and the matrix of co-variance attributes `cov.att`.  
+
+?sorting?
+
+Heatmap : 
+
+<codeblock id="01_25">
+</codeblock>
+
+? Pourquoi pas symétrique ?
+
+</exercise>
+
+<exercise id="6" title="Inertia">
+
+<codeblock id="01_26">
+</codeblock>
+
+</exercise>

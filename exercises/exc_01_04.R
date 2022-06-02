@@ -1,7 +1,7 @@
 dispersion <- data.frame("mean"=double(), "sd"=double(), "median"=double(), "q1"=double(), "q3"=double())
 
 for (a in 5:16){
-  mean <- ____
+  me <- ____
   sd <- ____
   med <- ____
   q1 <- ____
