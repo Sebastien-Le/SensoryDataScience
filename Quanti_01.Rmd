@@ -7,6 +7,8 @@ output: html_document
 
 ```{r}
 perfumes <- read.csv("data/perfumes_qda_experts.csv")
+perfumes <- perfumes %>% filter(Product=="Angel"|Product=="Chanel N5"|Product=="J'adore ET") %>% 
+  select(c("Product","Vanilla", "Floral", "Citrus"))
 ```
 
 ## PART 1A
@@ -229,9 +231,7 @@ without variance:
 perfumes$Vanilla <- perfumes$Vanilla/var(perfumes$Vanilla)
 perfumes$Floral <- perfumes$Floral/var(perfumes$Floral)
 perfumes$Citrus <- perfumes$Citrus/var(perfumes$Citrus)
-
 library("gridExtra")
-
 A1 <- ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+ 
 stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
 stat_summary(fun=mean, geom="point")+
@@ -263,11 +263,6 @@ Mean_Attributes <- perfumes %>% group_by(Product) %>% summarise(
           mean_Floral=mean(Floral)
 )
 
-
-matrix_Floral <- as.matrix(dist(Mean_Attributes$mean_Floral))
-matrix_Citrus <- as.matrix(dist(Mean_Attributes$mean_Citrus))
-matrix_Vanilla <- as.matrix(dist(Mean_Attributes$mean_Vanilla))
-
 ```
 
 We can combine to visualize simultaneously 2 attributes:
@@ -277,7 +272,6 @@ A2A3<-ggplot(Mean_Attributes)+aes(x = mean_Floral, y=mean_Citrus, color=Product)
 A1A3<-ggplot(Mean_Attributes)+aes(x = mean_Vanilla, y=mean_Citrus, color=Product)+geom_path(aes(group=1), color="black")+geom_point()
 grid.arrange(A1A2, A2A3, A1A3, ncol=2, nrow = 2)
 ```
-
 Covariance and correlation notion : 
 (Faire a la main?)
 ```{r}
@@ -291,14 +285,14 @@ Mean_Attributes<- data.frame(Mean_Attributes, row.names=1)
 with `Mean_Attributes`, we can construct two matrices : 
 ```{r}
 
-Attributes_Mat <- cov(perfumes[,c("Vanilla","Citrus", "Floral")])
+Attributes_Mat <- cov(Mean_Attributes)
 Products_Mat <- as.matrix(dist(Mean_Attributes))
-t(Mean_Attributes)
+Attributes_Mat
+Products_Mat
 ```
 
 ```{r}
-heatmap(Attributes_Mat)
-heatmap(Products_Mat)
+heatmap(Attributes_Mat,Colv = NA, Rowv = NA)
+heatmap(Products_Mat,Colv = NA, Rowv = NA)
 ```
-
 
