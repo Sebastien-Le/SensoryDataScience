@@ -158,7 +158,7 @@ To finish, we want to plot same graphs but without the variance. To do, you need
 <codeblock id="01_21">
 </codeblock>
 
-We have finally 4 univariate analysis of the mean differences between all the product for each attributes. For example, _Chanel N5_ and _Angel_ are closer than _J'adore ET_ in Spicy perception. They have a shorter "distance" between them. 
+We have finally 4 univariate analysis of the mean differences between all the products for each attributes. For example, _Chanel N5_ and _Angel_ are closer than _J'adore ET_ in Spicy perception. They have a shorter "distance" between them. 
 
 We can summary these graphics in four _4x4_ matrix with the distance mean-mean for each product. to get it, start to get the data frame of means of three sensory attributes for three products. 
 
