@@ -18,5 +18,5 @@ abline(v=d$x[q975])
 text(d$x[q975],0.2, "Q97.5", pos=2)
 
 # Plot the vline for Q0.25
-abline(v=d$x[p025])
+abline(v=d$x[q025])
 text(d$x[q025],0.2, "Q0.25", pos=2)

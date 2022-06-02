@@ -81,7 +81,7 @@ That is what is expected:
 
 </codeblock>
 
-These indicators can be visualized, plot the box-plot of each sensory attributes. Do it on six attributes and add the line corresponding to the mean. 
+These indicators can be visualized, plot the box-plot of each sensory attributes. Do it on three attributes and add the line corresponding to the mean. 
 
 <codeblock id="01_05">
 
@@ -138,7 +138,7 @@ To plot the box-plot, use `geom_boxplot()`.
 
 # Differences between products 
 
-To have a better understanding of this differences between products, we use the precedent boxplots, where we add a segment between each means. Choose three products and one sensory attribut and run this code :
+To have a better understanding of this differences between products, we use the precedent box-plots, where we add a segment between each means. Choose three products and one sensory attributes and run this code :
 
 <codeblock id="01_16">
 </codeblock>
@@ -178,6 +178,11 @@ Next, calculate the distances-matrix for each sensory attributes.
 
 <codeblock id="01_20">
 To calculate distances, use the dist() function. Next, transform the table in matrix. 
+</codeblock>
+
+Try to combine them in order to visualize simultaneously.
+
+<codeblock id="01_22">
 </codeblock>
 
 
