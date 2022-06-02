@@ -1,3 +1,3 @@
-d1 <- density(experts$_____) 
-plot(d1, main = "Density of _____") 
+d <- density(experts$_____) 
+plot(d, main = "Density of _____") 
 
