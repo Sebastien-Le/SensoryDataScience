@@ -205,20 +205,25 @@ We can save information about these attributes without products and the dispersi
 
 With the data frame of means built just before, we get the two matrix of distances between products `dist.prod` and the matrix of co-variance attributes `cov.att`.  
 
-?sorting?
-
-Heatmap : 
+`heatmap()` function is used to visualize values of a matrix in colors. With it, we can already find structures. Do it on the both matrix and try to find structures.
 
 <codeblock id="01_25">
 </codeblock>
-
-? Pourquoi pas symétrique ?
 
 </exercise>
 
 <exercise id="6" title="Inertia">
 
+![formula](https://render.githubusercontent.com/render/math?math=In = \frac{1}{n-1}\sum_{i=1}^{n}d^{2}(i, 0))
+![formula](https://render.githubusercontent.com/render/math?math=In = \sum_{i=1}^{n}d^{2}(i, i')=2n\sum_{i=1}^{n}d^{2}(i, 0) \\\Leftrightarrow \sum_{i=1}^{n}d^{2}(i, i') = 2n(n-1)In \\\Leftrightarrow In = \frac{\sum_{i=1}^{n}d^{2}(i, i')}{2n(n-1)})
+
 <codeblock id="01_26">
 </codeblock>
 
+</exercise>
+
+<exercise id="7" title="PCA">
+</exercise>
+
+<exercise id="8" title="Supplementary information">
 </exercise>
