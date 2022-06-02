@@ -147,3 +147,132 @@ abline(h=mean(perfumes$Citrus))
 text(0.75,mean(perfumes$Citrus)+0.25, "mean", pos=2)
 ```
 
+# PARTIE 2
+
+Here we introduce 2 packages : dyplr and ggplot to upgrate our graphics. We also considerate a product effect, as product influence the variance of the notes.
+
+## 2A
+
+```{r}
+library(tidyverse)
+```
+As they are many products, we will focus on only three : 
+
+```{r}
+perfumes <- perfumes %>% filter(Product=="Angel"|Product=="Chanel N5"|Product=="J'adore ET")
+```
+
+```{r}
+ggplot(perfumes)+aes(x=Floral, color=Product)+geom_density()
+```
+```{r}
+ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+geom_boxplot()
+```
+# PART 3
+
+To have a better understanding of this differences between products, we use the precedent boxplots, where we add a segment between each means. 
+```{r}
+ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+geom_boxplot() + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")
+```
+These segments are equivalent to a `distance` between all the product, in the `Floral` Point of view. If we want to have these visualization for all variables : 
+
+```{r}
+library("gridExtra")
+A1 <- ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+geom_boxplot() + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A2 <- ggplot(perfumes)+aes(y=Vanilla, x= Product, color=Product)+geom_boxplot() + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A3 <- ggplot(perfumes)+aes(y=Citrus, x= Product, color=Product)+geom_boxplot() + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+grid.arrange(A1, A2, A3, ncol=2, nrow = 2)
+```
+
+without boxplots :
+```{r}
+library("gridExtra")
+A1 <- ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+ 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A2 <- ggplot(perfumes)+aes(y=Vanilla, x= Product, color=Product) + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A3 <- ggplot(perfumes)+aes(y=Citrus, x= Product, color=Product) + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+grid.arrange(A1, A2, A3, ncol=2, nrow = 2)
+```
+without variance:
+```{r}
+perfumes$Vanilla <- perfumes$Vanilla/sd(perfumes$Vanilla)
+perfumes$Floral <- perfumes$Floral/sd(perfumes$Floral)
+perfumes$Citrus <- perfumes$Citrus/sd(perfumes$Citrus)
+
+library("gridExtra")
+
+A1 <- ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+ 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A2 <- ggplot(perfumes)+aes(y=Vanilla, x= Product, color=Product) + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A3 <- ggplot(perfumes)+aes(y=Citrus, x= Product, color=Product) + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+grid.arrange(A1, A2, A3, ncol=2, nrow = 2)
+```
+
+We have finally 3 univariate analysis of the mean differences between all the product for each attributes. For example, Chanel N5 and J'adore ET are closer than Angel in Vanilla perception. They have a shorter "distance" between them. 
+
+We can summary these graphics in 3 4x4 matrix with the distance mean-mean for each product : 
+```{r}
+Mean_Attributes <- perfumes %>% group_by(Product) %>% summarise(
+          mean_Vanilla=mean(Vanilla),
+          mean_Citrus=mean(Citrus),
+          mean_Floral=mean(Floral)
+)
+
+matrix_Floral <- as.matrix(dist(Mean_Attributes$mean_Floral))
+matrix_Citrus <- as.matrix(dist(Mean_Attributes$mean_Citrus))
+matrix_Vanilla <- as.matrix(dist(Mean_Attributes$mean_Vanilla))
+```
+
+We can combine to visualize simultaneously 2 attributes:
+```{r}
+A1A2<-ggplot(Mean_Attributes)+aes(x = mean_Vanilla, y=mean_Floral, color=Product)+geom_path(aes(group=1),color="black")+geom_point()
+A2A3<-ggplot(Mean_Attributes)+aes(x = mean_Floral, y=mean_Citrus, color=Product)+geom_path(aes(group=1),color="black")+geom_point()
+A1A3<-ggplot(Mean_Attributes)+aes(x = mean_Vanilla, y=mean_Citrus, color=Product)+geom_path(aes(group=1), color="black")+geom_point()
+grid.arrange(A1A2, A2A3, A1A3, ncol=2, nrow = 2)
+```
+
