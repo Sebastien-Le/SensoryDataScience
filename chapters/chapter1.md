@@ -146,7 +146,6 @@ These segments are equivalent to a `distance` between all the product, in the se
 <codeblock id="01_17">
 </codeblock>
 
-Now, do exactly the same without plotting the boxplots:
 Now, do exactly the same without plotting the box-plots:
 
 <codeblock id="01_18">
@@ -206,7 +205,7 @@ We can save information about these attributes without products and the dispersi
 
 With the data frame of means built just before, we get the two matrix of distances between products `dist.prod` and the matrix of co-variance attributes `cov.att`.  
 
-`heatmap()` function is used to visualize values of a matrix in colors. With it, we can already find structures. Do it on the both matrix and try to find structures.
+`heatmap()` function is used to visualize values of a matrix in colors, columns and rows are ordered before and that's why we can already find somes structures. Do it on the both matrix and try to find structures.
 
 <codeblock id="01_25">
 </codeblock>
@@ -215,15 +214,57 @@ With the data frame of means built just before, we get the two matrix of distanc
 
 <exercise id="6" title="Inertia">
 
+<center><img src="/inertia.jpeg" width="25%"/></center> 
+
+With these formulas, we can calculate inertia on both matrix. If you scale them, the inertia must be equal to the dimension of them (here 3). 
 
 <codeblock id="01_26">
 </codeblock>
 
+We can decompose inertia, as we can decompose our distance matrix in block regarding the heatmap. With the same methode, calculate the inertia of one group and for others : 
+
+<codeblock id="01_27">
+</codeblock>
+
+>>>>>>> Prendre plus grande matrice pr avoir au moins 2 groupes != de 1 ind/var
 
 </exercise>
 
 <exercise id="7" title="PCA">
+
+## FactoMineR
+
+Using the `PCA()` function from FactoMineR, do the method on the matrix of means of attributes and print the coordinates of individuals and variables.
+
+<codeblock id="01_28">
+</codeblock>
+
+## Decomposition with svd() 
+
+Now, we gonna do the PCA on the same matrix but manually and using the `svd()` function that does the decomposition of the matrix.
+
+<codeblock id="01_29">
+</codeblock>
+
+## Using Nipals algorithm
+
+<codeblock id="01_30">
+</codeblock>
+
 </exercise>
 
 <exercise id="8" title="Supplementary information">
+
+Now, we know how is performed the PCA and how we get the coordinates of individuals or variables. To a better understanding of results, including supplementary information is very important and technically not complicated.
+
+## Supplementary variables 
+ 
+As PCA only uses continuous variables in the calculation of the distances between individuals, categorical variables can only be considered as supplementary. For continuous variables, determining whether they are illustrative or not is arbitrary, and depends on the point of view adopted. Often, continuous variables are considered as supplementary if they are from a different nature. 
+
+>>>>>>> exemple ajout var supp 
+
+We can use supplementary individuals to a better understanding of structures. For example, adding supplementary individuals that you already know characteristics is appropriate to compare new products. This requires knowledge and expertise that is external and specific to the study context.
+
+>>>>>>> exemple ajout ind supp 
+
 </exercise>
