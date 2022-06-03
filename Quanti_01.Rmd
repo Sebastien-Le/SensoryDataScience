@@ -7,6 +7,8 @@ output: html_document
 
 ```{r}
 perfumes <- read.csv("data/perfumes_qda_experts.csv")
+perfumes <- perfumes %>% filter(Product=="Angel"|Product=="Chanel N5"|Product=="J'adore ET") %>% 
+  select(c("Product","Vanilla", "Floral", "Citrus"))
 ```
 
 ## PART 1A
@@ -224,32 +226,7 @@ stat_summary(fun=mean, geom="point")+
         axis.ticks.x=element_blank())
 grid.arrange(A1, A2, A3, ncol=2, nrow = 2)
 ```
-without variance:
-```{r}
-perfumes$Vanilla <- perfumes$Vanilla/var(perfumes$Vanilla)
-perfumes$Floral <- perfumes$Floral/var(perfumes$Floral)
-perfumes$Citrus <- perfumes$Citrus/var(perfumes$Citrus)
-library("gridExtra")
-A1 <- ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+ 
-stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
-stat_summary(fun=mean, geom="point")+
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
-A2 <- ggplot(perfumes)+aes(y=Vanilla, x= Product, color=Product) + 
-stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
-stat_summary(fun=mean, geom="point")+
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
-A3 <- ggplot(perfumes)+aes(y=Citrus, x= Product, color=Product) + 
-stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
-stat_summary(fun=mean, geom="point")+
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
-grid.arrange(A1, A2, A3, ncol=2, nrow = 2)
-```
+We lose the idea of distribution, we have the product representation. 
 
 We have finally 3 univariate analysis of the mean differences between all the product for each attributes. For example, Chanel N5 and J'adore ET are closer than Angel in Vanilla perception. They have a shorter "distance" between them. 
 
@@ -258,9 +235,7 @@ We can summary these graphics in 3 4x4 matrix with the distance mean-mean for ea
 Mean_Attributes <- perfumes %>% group_by(Product) %>% summarise(
           mean_Vanilla=mean(Vanilla),
           mean_Citrus=mean(Citrus),
-          mean_Floral=mean(Floral)
-)
-
+          mean_Floral=mean(Floral))
 ```
 
 We can combine to visualize simultaneously 2 attributes:
@@ -277,19 +252,111 @@ cov(Mean_Attributes[,-1])
 cov(perfumes[,c("Vanilla","Citrus", "Floral")])
 ```
 ```{r}
-Mean_Attributes<- data.frame(Mean_Attributes, row.names=1)
+Mean_Attributes <- data.frame(Mean_Attributes, row.names=1)
 ```
 
 with `Mean_Attributes`, we can construct two matrices : 
 ```{r}
 
-Attributes_Mat <- cov(perfumes[,c("Vanilla","Citrus", "Floral")])
-Products_Mat <- as.matrix(dist(Mean_Attributes))
-t(Mean_Attributes)
+Attributes_Mat <- cov(Mean_Attributes)
+Products_Mat <- as.matrix(dist(Mean_Attributes)^2)
+Attributes_Mat
+Products_Mat
+```
+
+We can imagine a negative relation between Vanilla-Floral and Vanilla-Citrus, and a positive one for Vanilla-Citrus. That is the idea of Co-variance.
+
+```{r}
+image(Attributes_Mat)
+image(Products_sc_Mat)
+
+```
+
+These heatmaps allow us to imagine structures on individuals and variables. 
+
+Calculons l'inertie pour notre matrice centrée réduite
+(on doit retoruver le nombre de variables : 3)
+```{r}
+Products_sc_Mat <- as.matrix(dist(scale(Mean_Attributes))^2)
+Products_sc_Mat
+Att_sc_Mat <- cov(scale(Mean_Attributes))
+Att_sc_Mat
+diag(Att)
+sum(Products_sc_Mat)/12
+```
+--> formules? 
+
+We can decompose inertia, as we can decompose our distance matrix in block regarding the heatmap. 
+We have the first block inducing a first structure for our individuals (products) : 
+```{r}
+block1 <- Products_sc_Mat[2:3,2:3]
+```
+
+# PCA 
+## FUNCTION FACTOMINER
+
+```{r}
+library(FactoMineR)
+res<-PCA(scale(Mean_Attributes), graph = FALSE, scale.unit = F)
+res$ind$coord
+res$var$coord
+```
+## PCA WITH SVD DECOMPOSED
+
+### Svd
+```{r}
+svd <- svd(scale(Mean_Attributes))
+diag <- diag(svd$d)
+
+#verification
+svd$u%*%diag%*%t(svd$v)
+scale(as.matrix(Mean_Attributes))[1:3,1:3]
 ```
 
 ```{r}
-heatmap(Attributes_Mat)
-heatmap(Products_Mat)
+scale(Mean_Attributes)%*%svd$v
+t(scale(Mean_Attributes))%*%svd$u/sqrt(3)
+```
+
+
+## NIPALS
+
+```{r}
+NIPALS <- function(X){
+  X = as.matrix(X)
+  N = nrow(X)
+  M = ncol(X)
+
+  D = diag(1/N, N)
+  Xini = X
+  qrX=qr(X)
+  rang = qrX$rank
+  vec=matrix(0,nrow=M,ncol=rang) 
+  t=X[,1]
+  i=1
+  
+  p=t(X)%*%t%*%(1/(t(t)%*%t))
+  p=p/as.numeric(sqrt(t(p)%*%p))
+  print(rang)
+  while (i<rang+1) {
+    norm=1
+    while(norm>0.000001){
+      t=(X%*%p)%*%(1/(t(p)%*%p))
+      p2=t(X)%*%t%*%(1/(t(t)%*%t))
+      p2=p2/as.numeric(sqrt(t(p2)%*%p2))
+      diff=p2-p
+      norm=t(diff)%*%diff
+      p=p2
+      print(p)
+      print(i)
+  }
+  vec[,i]=p
+  X=X-(t%*%t(p))
+  i=i+1
+  }
+return(vec)
+}
+NIPALS(Mean_Attributes)
+svd(Mean_Attributes)
 ```
 
