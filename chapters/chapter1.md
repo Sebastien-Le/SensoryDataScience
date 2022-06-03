@@ -232,12 +232,24 @@ We can decompose inertia, as we can decompose our distance matrix in block regar
 
 <exercise id="7" title="PCA">
 
+## FactoMineR
+
+Using the `PCA()` function from FactoMineR, do the method on the matrix of means of attributes and print the coordinates of individuals and variables.
+
+<codeblock id="01_28">
+</codeblock>
+
 ## Decomposition with svd() 
 
-## PCA by hands
+Now, we gonna do the PCA on the same matrix but manually and using the `svd()` function that does the decomposition of the matrix.
 
-## PCA()
+<codeblock id="01_29">
+</codeblock>
 
+## Using Nipals algorithm
+
+<codeblock id="01_30">
+</codeblock>
 
 </exercise>
 
@@ -254,6 +266,5 @@ As PCA only uses continuous variables in the calculation of the distances betwee
 We can use supplementary individuals to a better understanding of structures. For example, adding supplementary individuals that you already know characteristics is appropriate to compare new products. This requires knowledge and expertise that is external and specific to the study context.
 
 >>>>>>> exemple ajout ind supp 
-
 
 </exercise>
