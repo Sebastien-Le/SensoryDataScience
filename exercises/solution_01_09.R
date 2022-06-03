@@ -1,1 +1,1 @@
-hist(experts$Spicy, main="Histogram of Spicy", break=50)
+hist(experts$Spicy, main="Histogram of Spicy", breaks=50)

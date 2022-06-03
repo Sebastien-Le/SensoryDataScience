@@ -1,2 +1,2 @@
-d1 <- density(experts$Spicy) 
-plot(d1, main = "Density of Spicy") 
+d <- density(experts$Spicy) 
+plot(d, main = "Density of Spicy") 

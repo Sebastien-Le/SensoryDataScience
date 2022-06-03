@@ -1,0 +1,49 @@
+---
+title: "ACP à la main"
+output: pdf_document
+---
+
+# ACP à la main
+
+```{r}
+X <- means.variables
+library(FactoMineR)
+res.pca <- PCA(X, graph = F)
+F <- res.pca$ind$coord
+V <- res.pca$var$coord
+
+# Centrer réduire
+m <- apply(X,2,mean) #mean
+s <- apply(X,2,sd) #standard deviation
+Y <- sweep(X,2,m,"-")
+apply(Y,2,mean)
+apply(Y,2,sd)
+Z <- sweep(Y,2,s,"/")
+apply(Z,2,sd)
+
+# Calcul vectoriel
+R <- t(as.matrix(Z))%*%as.matrix(Z)/3
+e <- eigen(R)
+names(e)
+dim(e$vectors)
+q <- 3
+V <- e$vectors[,1:q]
+Fbis <- as.matrix(Z)%*%V
+head(Fbis)
+head(F)
+
+# SVD triplet
+n <- nrow(X)
+#first compute Z with the non corrected standard deviation
+s <- apply(Y,2,sd)*sqrt((n-1)/n)
+Z <- sweep(Y,2,s,"/")
+e_svd <- svd(Z)
+names(e_svd)
+(e_svd$d^2)[1:q]/n #division by n because of the metric
+U <- e_svd$u[,1:q] #matrix of the q first left singular vectors
+Fbisbis <- U%*%diag(e_svd$d[1:q]) #principal components
+head(Fbisbis)
+head(F)
+e$values
+res.pca$eig
+```*

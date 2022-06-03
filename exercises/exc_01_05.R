@@ -5,7 +5,7 @@ for (a in 5:16){
   boxplot(____, xlab=___)
   
   # Mean
-  text(0.75,mean(experts[,a])+0.25, "mean", pos=2)
+  text(0.75, mean(experts[,a])+0.25, "mean", pos=2)
   abline(h=mean(experts[,a]))
   
   # Q1
