@@ -147,6 +147,7 @@ These segments are equivalent to a `distance` between all the product, in the se
 </codeblock>
 
 Now, do exactly the same without plotting the boxplots:
+Now, do exactly the same without plotting the box-plots:
 
 <codeblock id="01_18">
 </codeblock>
