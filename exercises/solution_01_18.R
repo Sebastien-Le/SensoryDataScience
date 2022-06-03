@@ -1,27 +1,27 @@
-a1 <- ggplot(df)+aes(y=Floral, x= Product, color=Product)+ 
+a1 <- ggplot(df) + aes(y=Floral, x=Product, color=Product) + 
   stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
-  stat_summary(fun=mean, geom="point")+
+  stat_summary(fun=mean, geom="point") +
   theme(axis.title.x=element_blank(),
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank())
 
-a2 <- ggplot(df)+aes(y=Citrus, x= Product, color=Product) + 
+a2 <- ggplot(df) + aes(y=Citrus, x=Product, color=Product) + 
   stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
-  stat_summary(fun=mean, geom="point")+
+  stat_summary(fun=mean, geom="point") +
   theme(axis.title.x=element_blank(),
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank())
 
-a3 <- ggplot(df)+aes(y=Spicy, x= Product, color=Product) + 
+a3 <- ggplot(df)+aes(y=Spicy, x=Product, color=Product) + 
   stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
-  stat_summary(fun=mean, geom="point")+
+  stat_summary(fun=mean, geom="point") +
   theme(axis.title.x=element_blank(),
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank())
 
-a4 <- ggplot(df)+aes(y=Heady, x= Product, color=Product) + 
+a4 <- ggplot(df)+aes(y=Heady, x=Product, color=Product) + 
   stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
-  stat_summary(fun=mean, geom="point")+
+  stat_summary(fun=mean, geom="point") +
   theme(axis.title.x=element_blank(),
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank())
