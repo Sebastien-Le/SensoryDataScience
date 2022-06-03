@@ -26,6 +26,7 @@ We therefore choose to make a grouping in classes.
 The first point is to represent one variable. Choose it and plot its histogram.
 
 <codeblock id="01_02">
+
 </codeblock>
 
 Here, a lot of information is available to us. The first one is an idea of the representation of the scores given by the judges to the attribute. We that a lot of notes are between 0 and 1. The rest is more homogeneous. As explain previously, this distribution is cut in classes. The cut is set by the argument `breaks`. By default, it is set with the _Sturges_ method, which is the most recommended in the most of the cases. If you specify manually this number,  make sure the number is not too high or not too low.
@@ -231,6 +232,8 @@ We can decompose inertia, as we can decompose our distance matrix in block regar
 </exercise>
 
 <exercise id="7" title="PCA">
+
+So we saw that a structure exists in the matrix of individuals and variables. The analysis into main components makes it possible to highlight them.
 
 ## FactoMineR
 

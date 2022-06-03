@@ -1,13 +1,14 @@
 ---
-title: 'Chapter 1: Introduction to sensory analysis'
+title: 'Chapter 2: More stuff'
 description:
-  'This chapter will teach you about many cool things and introduce you to the
-  most important concepts of the course.'
-prev: null
-next: /chapter2
+  'This chapter will teach you even more stuff and help you learn some new
+  concepts.'
+prev: /chapter1
+next: null
 type: chapter
-id: 1
+id: 2
 ---
+<<<<<<< HEAD
 
 
 <exercise id="1" title="Distribution of sensory attributes">
@@ -270,3 +271,5 @@ We can use supplementary individuals to a better understanding of structures. Fo
 >>>>>>> exemple ajout ind supp 
 
 </exercise>
+=======
+>>>>>>> 97db192a6325197ab342ad7efe4588339b674b4e
