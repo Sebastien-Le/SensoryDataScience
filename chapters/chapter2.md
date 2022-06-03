@@ -258,6 +258,8 @@ Now, we gonna do the PCA on the same matrix but manually and using the `svd()` f
 Now, we know how is performed the PCA and how we get the coordinates of individuals or variables. To a better understanding of results, including supplementary information is very important and technically not complicated.
 
 ## Supplementary variables 
+
+Supplementary elements consists in projecting additional individuals and/or variables in the graphs obtained from PCA, but without taking this additional information into account in the construction of the dimensions.
  
 As PCA only uses continuous variables in the calculation of the distances between individuals, categorical variables can only be considered as supplementary. For continuous variables, determining whether they are illustrative or not is arbitrary, and depends on the point of view adopted. Often, continuous variables are considered as supplementary if they are from a different nature. 
 
