@@ -6,5 +6,5 @@ experts %>%
   __________ + 
   
   # Add lines between each means
-  stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
-  stat_summary(fun=mean, geom="point")
+  stat_summary(fun.y=mean, geom="line", aes(group=1), color="black") + 
+  stat_summary(fun.y=mean, geom="point")

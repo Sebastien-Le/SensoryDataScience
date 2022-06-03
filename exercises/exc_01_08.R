@@ -1,7 +1,7 @@
 library(ggplot2)
 library(dplyr)
 
-experts %>%  
+experts %>%
   
   # Select 3 products and 1 sensory attribute
   select(c(___ , ___)) %>% 

@@ -3,7 +3,7 @@ diag <- diag(svd$d)
 
 #Verification
 svd$u%*%diag%*%t(svd$v)
-scale(as.matrix(means.variables))[1:3,1:3]
+scale(as.matrix(means.variables))[1:3, 1:3]
 
 #Individuals coordinates
 scale(means.variables)%*%svd$v
