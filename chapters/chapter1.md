@@ -267,5 +267,4 @@ We can use supplementary individuals to a better understanding of structures. Fo
 
 >>>>>>> exemple ajout ind supp 
 
-
 </exercise>
