@@ -232,6 +232,8 @@ We can decompose inertia, as we can decompose our distance matrix in block regar
 
 <exercise id="7" title="PCA">
 
+So we saw that a structure exists in the matrix of individuals and variables. The analysis into main components makes it possible to highlight them.
+
 ## FactoMineR
 
 Using the `PCA()` function from FactoMineR, do the method on the matrix of means of attributes and print the coordinates of individuals and variables.
