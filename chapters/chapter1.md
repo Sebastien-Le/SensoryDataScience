@@ -146,7 +146,7 @@ These segments are equivalent to a `distance` between all the product, in the se
 <codeblock id="01_17">
 </codeblock>
 
-Now, do exactly the same without plotting the boxplots:
+Now, do exactly the same without plotting the box-plots:
 
 <codeblock id="01_18">
 </codeblock>
@@ -205,7 +205,7 @@ We can save information about these attributes without products and the dispersi
 
 With the data frame of means built just before, we get the two matrix of distances between products `dist.prod` and the matrix of co-variance attributes `cov.att`.  
 
-`heatmap()` function is used to visualize values of a matrix in colors. With it, we can already find structures. Do it on the both matrix and try to find structures.
+`heatmap()` function is used to visualize values of a matrix in colors, columns and rows are ordered before and that's why we can already find somes structures. Do it on the both matrix and try to find structures.
 
 <codeblock id="01_25">
 </codeblock>
@@ -214,14 +214,7 @@ With the data frame of means built just before, we get the two matrix of distanc
 
 <exercise id="6" title="Inertia">
 
-We have : 
-
-In = ![formula](https://render.githubusercontent.com/render/math?math=\frac{1}{n-1}\sum_{i=1}^{n}d^{2}i, 0)
-and :
-In = ![formula](https://render.githubusercontent.com/render/math?math=\sum_{i=1}^{n}d^{2}(i, i')) = ![formula](https://render.githubusercontent.com/render/math?math=2n\sum_{i=1}^{n}d^{2}(i, 0)) 
-so we can write :
-![formula](https://render.githubusercontent.com/render/math?math=\Leftrightarrow \sum_{i=1}^{n}d^{2}(i, i')) = ![formula](https://render.githubusercontent.com/render/math?math=2n(n-1)In\Leftrightarrow)In = ![formula](https://render.githubusercontent.com/render/math?math=\frac{\sum_{i=1}^{n}d^{2}(i, i')}{2n(n-1)}))
-
+Now, 
 <codeblock id="01_26">
 </codeblock>
 
@@ -229,7 +222,19 @@ so we can write :
 </exercise>
 
 <exercise id="7" title="PCA">
+
+## Decomposition with svd() 
+
+## PCA by hands
+
+## PCA()
+
+
 </exercise>
 
 <exercise id="8" title="Supplementary information">
+
+On a prouvé que le "moteur" fonctionne, donc à partir de là on peut rajouter ce qu'on veut -> info supp 
+
+
 </exercise>
