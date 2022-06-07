@@ -59,9 +59,9 @@ lines(density(experts$Floral), col="red")
 
 legend(10, 0.2, legend=c("Vanilla", "Floral"),col=c("blue", "red"), lty=1:2, cex=0.8)
 ```
----
-Functions used : hist(), plot(), lines(), legend(), density()
----
+
+*Functions used : hist(), plot(), lines(), legend(), density()*
+
 ## Position indicator
 
 Now that we have an idea of the variable density, we can introduce the notion of position indicator. We now want to know which notes "cut" the population into two groups of equal size. The median is the value separating the higher half from the lower half of a data sample, a population, or a probability distribution. For a data set, it may be thought of as "the middle" value. To generalize, we have the notion of quantile, which are cut points dividing the observations in a sample in the same way. 
@@ -173,9 +173,9 @@ text(d$x[q975],0.2, "Q97.5", pos=2)
 abline(v=d$x[q025])
 text(d$x[q025],0.2, "Q0.25", pos=2)
 ```
----
-Functions used : data.frame(), which.max(), polygon(), abline(), par()
----
+
+*Functions used : data.frame(), which.max(), polygon(), abline(), par()*
+
 # 2. Product effect
 
 The sensory attributes are collected for different products, let's take account of this point. Remember the data set, `Product`, `Session`, `Panelist` and `Rank` must be categorical, do the transformation. 
@@ -217,9 +217,7 @@ experts %>%
   # Graph
   ggplot() + aes(y=Floral, x= Product, fill=Product) + geom_boxplot() + labs(title="Boxplot of Floral according three products")
 ```
----
-Functions used : select(), group_by(), filter(), mutate(), ggplot(), geom_boxplot()
----
+*Functions used : select(), group_by(), filter(), mutate(), ggplot(), geom_boxplot()*
 
 # 3. Differences between products 
 
@@ -370,9 +368,8 @@ means <- df %>% group_by(Product) %>% summarise(
 )
 means
 ```
----
-Functions used :  stat_summary()
----
+
+*Functions used :  stat_summary()*
 
 # 4. Notion of metric
 
@@ -406,9 +403,8 @@ We can save information about these attributes without products and the dispersi
 ```{r}
 dist.prod <- as.matrix(dist(means.variables))
 ```
----
-Functions used : as.matrix(), geom_path(), geom_point(), cov(), dist()
---- 
+
+*Functions used : as.matrix(), geom_path(), geom_point(), cov(), dist()*
 
 # 5. Structure 
 
@@ -420,9 +416,8 @@ With the data frame of means built just before, we get the two matrix of distanc
 heatmap(cov.att)
 heatmap(dist.prod)
 ```
----
-Functions used : heatmap()
---- 
+*Functions used : heatmap()*
+
 # 6. Inertia 
 
 With these formulas, we can calculate inertia on both matrix. If you scale them, the inertia must be equal to the dimension of them (here 3). 
@@ -449,9 +444,8 @@ spicy <- as.data.frame(cov.att)[1,1]
 ```
 >>>>>>> Prendre plus grande matrice pr avoir au moins 2 groupes != de 1 ind/var
 
----
-Functions used : sum(), dim(), scale()
---- 
+*Functions used : sum(), dim(), scale()*
+
 # 7. PCA
 
 ## FactoMineR
