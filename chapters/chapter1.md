@@ -14,12 +14,12 @@ id: 1
 
 ## Histogram
 
-Let import the dataset, do a summary of it and identify quantitative variables (sensory attributes); we're gonna work only on this variables for moment.
+Let import the dataset, do a summary of it and identify quantitative variables (sensory attributes); we're gonna work only on these variables for moment.
 
 <codeblock id="01_01">
 </codeblock>
 
-The empirical distribution of a variable is the set of values (or modalities) taken by this variable, and their associated numbers. However, the variables being continuous, it is very rare to have the same value twice for two different individuals.
+The empirical distribution of a variable is the set of values (or modalities) taken by this variable, and their associated numbers. However, the variables being continuous, it's very rare to have the same value twice for two different individuals.
 
 We therefore choose to make a grouping in classes.
 
