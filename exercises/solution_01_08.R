@@ -4,6 +4,6 @@ experts %>%
   filter(Product == "Coco Mademoiselle" | Product == "Angel" | Product == "Chanel N5" ) %>%
   
   # Graph
-  ggplot() + aes(y=Floral, x= Product, fill=Product) + geom_boxplot() + labs(title="Boxplot of Floral according three products")
+  ggplot() + aes(y=Floral, x=Product, fill=Product) + geom_boxplot() + labs(title="Boxplot of Floral according three products")
 
 

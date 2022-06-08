@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 1: Introduction to sensory analysis'
+title: 'Chapter 1: Sensory analysis for two quantitatives variables'
 description:
   'This chapter will teach you about many cool things and introduce you to the
   most important concepts of the course.'
