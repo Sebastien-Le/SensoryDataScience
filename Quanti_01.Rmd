@@ -7,6 +7,8 @@ output: html_document
 
 ```{r}
 perfumes <- read.csv("data/perfumes_qda_experts.csv")
+perfumes <- perfumes %>% filter(Product=="Angel"|Product=="Chanel N5"|Product=="J'adore ET") %>% 
+  select(c("Product","Vanilla", "Floral", "Citrus"))
 ```
 
 ## PART 1A
@@ -145,5 +147,216 @@ abline(h=mean(perfumes$Vanilla))
 boxplot(perfumes$Citrus, main="Citrus")
 abline(h=mean(perfumes$Citrus))
 text(0.75,mean(perfumes$Citrus)+0.25, "mean", pos=2)
+```
+
+# PARTIE 2
+
+Here we introduce 2 packages : dyplr and ggplot to upgrate our graphics. We also considerate a product effect, as product influence the variance of the notes.
+
+## 2A
+
+```{r}
+library(tidyverse)
+```
+As they are many products, we will focus on only three : 
+
+```{r}
+perfumes <- perfumes %>% filter(Product=="Angel"|Product=="Chanel N5"|Product=="J'adore ET")
+```
+
+```{r}
+ggplot(perfumes)+aes(x=Floral, color=Product)+geom_density()
+```
+```{r}
+ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+geom_boxplot()
+```
+# PART 3
+
+To have a better understanding of this differences between products, we use the precedent boxplots, where we add a segment between each means. 
+```{r}
+ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+geom_boxplot() + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")
+```
+These segments are equivalent to a `distance` between all the product, in the `Floral` Point of view. If we want to have these visualization for all variables : 
+
+```{r}
+library("gridExtra")
+A1 <- ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+geom_boxplot() + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A2 <- ggplot(perfumes)+aes(y=Vanilla, x= Product, color=Product)+geom_boxplot() + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A3 <- ggplot(perfumes)+aes(y=Citrus, x= Product, color=Product)+geom_boxplot() + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+grid.arrange(A1, A2, A3, ncol=2, nrow = 2)
+```
+
+without boxplots :
+```{r}
+library("gridExtra")
+A1 <- ggplot(perfumes)+aes(y=Floral, x= Product, color=Product)+ 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A2 <- ggplot(perfumes)+aes(y=Vanilla, x= Product, color=Product) + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+A3 <- ggplot(perfumes)+aes(y=Citrus, x= Product, color=Product) + 
+stat_summary(fun=mean, geom="line", aes(group=1), color="black") + 
+stat_summary(fun=mean, geom="point")+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+grid.arrange(A1, A2, A3, ncol=2, nrow = 2)
+```
+We lose the idea of distribution, we have the product representation. 
+
+We have finally 3 univariate analysis of the mean differences between all the product for each attributes. For example, Chanel N5 and J'adore ET are closer than Angel in Vanilla perception. They have a shorter "distance" between them. 
+
+We can summary these graphics in 3 4x4 matrix with the distance mean-mean for each product : 
+```{r}
+Mean_Attributes <- perfumes %>% group_by(Product) %>% summarise(
+          mean_Vanilla=mean(Vanilla),
+          mean_Citrus=mean(Citrus),
+          mean_Floral=mean(Floral))
+```
+
+We can combine to visualize simultaneously 2 attributes:
+```{r}
+A1A2<-ggplot(Mean_Attributes)+aes(x = mean_Vanilla, y=mean_Floral, color=Product)+geom_path(aes(group=1),color="black")+geom_point()
+A2A3<-ggplot(Mean_Attributes)+aes(x = mean_Floral, y=mean_Citrus, color=Product)+geom_path(aes(group=1),color="black")+geom_point()
+A1A3<-ggplot(Mean_Attributes)+aes(x = mean_Vanilla, y=mean_Citrus, color=Product)+geom_path(aes(group=1), color="black")+geom_point()
+grid.arrange(A1A2, A2A3, A1A3, ncol=2, nrow = 2)
+```
+Covariance and correlation notion : 
+(Faire a la main?)
+```{r}
+cov(Mean_Attributes[,-1])
+cov(perfumes[,c("Vanilla","Citrus", "Floral")])
+```
+```{r}
+Mean_Attributes <- data.frame(Mean_Attributes, row.names=1)
+```
+
+with `Mean_Attributes`, we can construct two matrices : 
+```{r}
+
+Attributes_Mat <- cov(Mean_Attributes)
+Products_Mat <- as.matrix(dist(Mean_Attributes)^2)
+Attributes_Mat
+Products_Mat
+```
+
+We can imagine a negative relation between Vanilla-Floral and Vanilla-Citrus, and a positive one for Vanilla-Citrus. That is the idea of Co-variance.
+
+```{r}
+image(Attributes_Mat)
+image(Products_sc_Mat)
+
+```
+
+These heatmaps allow us to imagine structures on individuals and variables. 
+
+Calculons l'inertie pour notre matrice centrée réduite
+(on doit retoruver le nombre de variables : 3)
+```{r}
+Products_sc_Mat <- as.matrix(dist(scale(Mean_Attributes))^2)
+Products_sc_Mat
+Att_sc_Mat <- cov(scale(Mean_Attributes))
+Att_sc_Mat
+diag(Att)
+sum(Products_sc_Mat)/12
+```
+--> formules? 
+
+We can decompose inertia, as we can decompose our distance matrix in block regarding the heatmap. 
+We have the first block inducing a first structure for our individuals (products) : 
+```{r}
+block1 <- Products_sc_Mat[2:3,2:3]
+```
+
+# PCA 
+## FUNCTION FACTOMINER
+
+```{r}
+library(FactoMineR)
+res<-PCA(scale(Mean_Attributes), graph = FALSE, scale.unit = F)
+res$ind$coord
+res$var$coord
+```
+## PCA WITH SVD DECOMPOSED
+
+### Svd
+```{r}
+svd <- svd(scale(Mean_Attributes))
+diag <- diag(svd$d)
+
+#verification
+svd$u%*%diag%*%t(svd$v)
+scale(as.matrix(Mean_Attributes))[1:3,1:3]
+```
+
+```{r}
+scale(Mean_Attributes)%*%svd$v
+t(scale(Mean_Attributes))%*%svd$u/sqrt(3)
+```
+
+
+## NIPALS
+
+```{r}
+NIPALS <- function(X){
+  X = as.matrix(X)
+  N = nrow(X)
+  M = ncol(X)
+
+  D = diag(1/N, N)
+  Xini = X
+  qrX=qr(X)
+  rang = qrX$rank
+  vec=matrix(0,nrow=M,ncol=rang) 
+  t=X[,1]
+  i=1
+  
+  p=t(X)%*%t%*%(1/(t(t)%*%t))
+  p=p/as.numeric(sqrt(t(p)%*%p))
+  print(rang)
+  while (i<rang+1) {
+    norm=1
+    while(norm>0.000001){
+      t=(X%*%p)%*%(1/(t(p)%*%p))
+      p2=t(X)%*%t%*%(1/(t(t)%*%t))
+      p2=p2/as.numeric(sqrt(t(p2)%*%p2))
+      diff=p2-p
+      norm=t(diff)%*%diff
+      p=p2
+      print(p)
+      print(i)
+  }
+  vec[,i]=p
+  X=X-(t%*%t(p))
+  i=i+1
+  }
+return(vec)
+}
+NIPALS(Mean_Attributes)
+svd(Mean_Attributes)
 ```
 

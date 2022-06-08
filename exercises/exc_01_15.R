@@ -6,12 +6,12 @@ q025 <- _____
 q975 <- _____
 
 # Plot the shading
-polygon(___, ___, col = 'lightblue')
-polygon(___,___,col = "lightblue")
+polygon(___, ___, col='lightblue')
+polygon(___,___,col="lightblue")
 
 # Plot the vline for mean
 abline(v=mean(_____))
-text(mean(_____),0.2, "mean", pos=2)
+text(mean(_____), 0.2, "mean", pos=2)
 
 # Plot the vline for Q97.5
 ____

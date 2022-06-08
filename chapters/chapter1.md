@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 1: Introduction to sensory analysis'
+title: 'Chapter 1: Sensory analysis for two quantitatives variables'
 description:
   'This chapter will teach you about many cool things and introduce you to the
   most important concepts of the course.'
@@ -14,18 +14,19 @@ id: 1
 
 ## Histogram
 
-Let import the dataset, do a summary of it and identify quantitative variables (sensory attributes); we're gonna work only on this variables for moment.
+Let import the dataset, do a summary of it and identify quantitative variables (sensory attributes); we're gonna work only on these variables for moment.
 
 <codeblock id="01_01">
 </codeblock>
 
-The empirical distribution of a variable is the set of values (or modalities) taken by this variable, and their associated numbers. However, the variables being continuous, it is very rare to have the same value twice for two different individuals.
+The empirical distribution of a variable is the set of values (or modalities) taken by this variable, and their associated numbers. However, the variables being continuous, it's very rare to have the same value twice for two different individuals.
 
 We therefore choose to make a grouping in classes.
 
 The first point is to represent one variable. Choose it and plot its histogram.
 
 <codeblock id="01_02">
+
 </codeblock>
 
 Here, a lot of information is available to us. The first one is an idea of the representation of the scores given by the judges to the attribute. We that a lot of notes are between 0 and 1. The rest is more homogeneous. As explain previously, this distribution is cut in classes. The cut is set by the argument `breaks`. By default, it is set with the _Sturges_ method, which is the most recommended in the most of the cases. If you specify manually this number,  make sure the number is not too high or not too low.
@@ -81,7 +82,7 @@ That is what is expected:
 
 </codeblock>
 
-These indicators can be visualized, plot the box-plot of each sensory attributes. Do it on six attributes and add the line corresponding to the mean. 
+These indicators can be visualized, plot the box-plot of each sensory attributes. Do it on three attributes and add the line corresponding to the mean. 
 
 <codeblock id="01_05">
 
@@ -134,11 +135,9 @@ To plot the box-plot, use `geom_boxplot()`.
 
 </exercise>
 
-<exercise id="3" title="To the distance notion">
+<exercise id="3" title="Differences between products">
 
-# Differences between products 
-
-To have a better understanding of this differences between products, we use the precedent boxplots, where we add a segment between each means. Choose three products and one sensory attribut and run this code :
+To have a better understanding of this differences between products, we use the precedent box-plots, where we add a segment between each means. Choose three products and one sensory attributes and run this code :
 
 <codeblock id="01_16">
 </codeblock>
@@ -148,19 +147,21 @@ These segments are equivalent to a `distance` between all the product, in the se
 <codeblock id="01_17">
 </codeblock>
 
-Now, do exactly the same without plotting the boxplots:
+Now, do exactly the same without plotting the box-plots:
 
 <codeblock id="01_18">
 </codeblock>
 
-To finish, we want to plot same graphs but without the variance. To do, you need to divide values by the standard deviation. Next, plot the same graphs :
+To finish, we want to plot same graphs but without the variance. This very important step makes it possible to compare individuals with each other in relation to a reference value which is the one in 0. Moreover, by dividing by the standard deviation, each individual has the same weight which is 1.
+
+To do, you need to divide values by the standard deviation. Next, plot the same graphs :
 
 <codeblock id="01_21">
 </codeblock>
 
 We have finally 4 univariate analysis of the mean differences between all the products for each attributes. For example, _Chanel N5_ and _Angel_ are closer than _J'adore ET_ in Spicy perception. They have a shorter "distance" between them. 
 
-We can summary these graphics in four _4x4_ matrix with the distance mean-mean for each product. to get it, start to get the data frame of means of three sensory attributes for three products. 
+We can summary these graphics in four _4x4_ matrix with the distance mean-mean for each product. To get it, start to get the data frame of means of three sensory attributes for three products. 
 
 <codeblock id="01_19">
 Use the function summarize() of dplyr to add the column corresponding to the mean of one attribute. 
@@ -174,12 +175,99 @@ For example, that is what is expected:
 | J'adore ET | 0.3416667 | 1.5750000 | 8.179167 |
 </codeblock>
 
+</exercise>
+
+<exercise id="4" title="The notion of metric">
+
 Next, calculate the distances-matrix for each sensory attributes.
 
 <codeblock id="01_20">
 To calculate distances, use the dist() function. Next, transform the table in matrix. 
 </codeblock>
 
+Try to combine them in order to visualize simultaneously.
+
+<codeblock id="01_22">
+</codeblock>
+
+A negative slope between two sensory attributes can be traduce like a negative linear relation, and conversely.This is the notion of correlation, it's a standardized form of covariance. You can observe the sign of values and compare them with the previous graphs.
+
+<codeblock id="01_23">
+</codeblock>
+
+We can save information about these attributes without products and the dispersion can be traduce with distances between us. 
+
+<codeblock id="01_24">
+</codeblock>
 
 </exercise>
 
+<exercise id="5" title="Structure">
+
+With the data frame of means built just before, we get the two matrix of distances between products `dist.prod` and the matrix of co-variance attributes `cov.att`.  
+
+`heatmap()` function is used to visualize values of a matrix in colors, columns and rows are ordered before and that's why we can already find somes structures. Do it on the both matrix and try to find structures.
+
+<codeblock id="01_25">
+</codeblock>
+
+</exercise>
+
+<exercise id="6" title="Inertia">
+
+<center><img src="/inertia.jpeg" width="25%"/></center> 
+
+With these formulas, we can calculate inertia on both matrix. If you scale them, the inertia must be equal to the dimension of them (here 3). 
+
+<codeblock id="01_26">
+</codeblock>
+
+We can decompose inertia, as we can decompose our distance matrix in block regarding the heatmap. With the same methode, calculate the inertia of one group and for others : 
+
+<codeblock id="01_27">
+</codeblock>
+
+>>>>>>> Prendre plus grande matrice pr avoir au moins 2 groupes != de 1 ind/var
+
+</exercise>
+
+<exercise id="7" title="PCA">
+
+So we saw that a structure exists in the matrix of individuals and variables. The analysis into main components makes it possible to highlight them.
+
+## FactoMineR
+
+Using the `PCA()` function from FactoMineR, do the method on the matrix of means of attributes and print the coordinates of individuals and variables.
+
+<codeblock id="01_28">
+</codeblock>
+
+## Decomposition with svd() 
+
+Now, we gonna do the PCA on the same matrix but manually and using the `svd()` function that does the decomposition of the matrix.
+
+<codeblock id="01_29">
+</codeblock>
+
+## Using Nipals algorithm
+
+<codeblock id="01_30">
+</codeblock>
+
+</exercise>
+
+<exercise id="8" title="Supplementary information">
+
+Now, we know how is performed the PCA and how we get the coordinates of individuals or variables. To a better understanding of results, including supplementary information is very important and technically not complicated.
+
+## Supplementary variables 
+ 
+As PCA only uses continuous variables in the calculation of the distances between individuals, categorical variables can only be considered as supplementary. For continuous variables, determining whether they are illustrative or not is arbitrary, and depends on the point of view adopted. Often, continuous variables are considered as supplementary if they are from a different nature. 
+
+>>>>>>> exemple ajout var supp 
+
+We can use supplementary individuals to a better understanding of structures. For example, adding supplementary individuals that you already know characteristics is appropriate to compare new products. This requires knowledge and expertise that is external and specific to the study context.
+
+>>>>>>> exemple ajout ind supp 
+
+</exercise>
