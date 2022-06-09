@@ -1,0 +1,145 @@
+---
+title: "Vietnamien VS English"
+output: pdf_document
+---
+```{r}
+library(readxl)
+library(dplyr)
+library(FactoMineR)
+library(vietnameseConverter)
+library(stringi)
+```
+
+# Import + modifications 
+
+Import du jeu de données initial (sans traduction):
+```{r}
+barbes <- read_excel("data/barbes.xlsx")
+```
+
+Import de la traduction :
+
+On importe avec les accents et on créait une nouvelle colonne sans eux avec la fonction `stri_trans_general()` du package `stringi` (il permet de faire de la translitération de texte) 
+```{r}
+trad <- read.table("data/traduction.txt", sep="\n", header = TRUE, encoding = "UTF-8") 
+colnames(trad) <- "Trad"
+trad <- trad %>% mutate(trad = stri_trans_general(Trad, "Latin-ASCII")) %>% select(trad)
+```
+
+Mutate + transformation en variables catégorielles :
+```{r}
+barbes <- barbes %>% mutate(Trad=trad$trad)
+barbes <- data.frame(barbes$Barbes, barbes$Juge, barbes$Mots, barbes$Trad)
+colnames(barbes) <- c("Barbes", "Juge", "Mots","Trad")
+
+barbes$Barbes <- as.factor(barbes$Barbes)
+barbes$Juge <- as.factor(barbes$Juge)
+```
+
+Vérification :
+```{r}
+summary(barbes)
+
+summary(barbes$Barbes)
+
+# Un B7 au lieu de b7 traîne, correction :
+levels(barbes$Barbes) <- c("b1","b2", "b3", "b4","b5","b6","b7","b7","b8")
+summary(barbes$Barbes)
+```
+Création de deux df : viet et en
+```{r}
+barbes.en <- barbes[,-4]
+barbes.viet <- barbes[,-3]
+```
+
+## Tableaux de contingence
+
+Deux options : 
+- en délimitant les effectifs à >10, 
+- aucune délimitation.
+
+Pour les mots anglais : 
+```{r}
+res.textual.en <- textual(barbes.en,num.text = 3, contingence.by = 1, sep.word = ";")
+
+eff.en <- as.data.frame(apply(res.textual.en$cont.table, MARGIN = 2, FUN=sum))
+
+# Tout les mots : 627 mots
+words_selection.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)]
+# Sélection des mots qui apparaissent plus de 10 fois : 31
+words_selection_sup10.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)>=10]
+```
+
+```{r}
+res.textual.viet <- textual(barbes.viet,num.text = 3, contingence.by = 1, sep.word = ";")
+
+eff.viet <- as.data.frame(apply(res.textual.viet$cont.table, MARGIN = 2, FUN=sum))
+
+# Tout les mots : 669 mots
+words_selection.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)]
+# Sélection des mots qui apparaissent plus de 10 fois : 29
+words_selection_sup10.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)>=10]
+```
+
+En résumé : 
+- en anglais; sur 627 mots, 31 apparaissent plus de 10 fois;
+- en vietnamien; sur 669 mots, 29 apparaissent plus de 10 fois. 
+
+-> problème de traduction (problème pas très important ici)
+
+# Analyse exploratoire 
+
+## CA
+Deux CA :
+- sur tout les mots,
+- sur les mots qui aparaissent plus de 10 fois.
+
+Anglais : 
+```{r}
+res.CA.en <- CA(words_selection.en, graph=FALSE)
+#plot.CA(res.CA.en) -> illisible
+
+res.CA.sup10.en <- CA(words_selection_sup10.en, graph=FALSE)
+plot.CA(res.CA.sup10.en)
+```
+Vietnamien : 
+```{r}
+res.CA.viet <- CA(words_selection.viet, graph=FALSE)
+# plot.CA(res.CA.viet) -> illisible
+
+res.CA.sup10.viet <- CA(words_selection_sup10.viet, graph=FALSE)
+plot.CA(res.CA.sup10.viet)
+```
+## MCA
+
+Que ce soit en anglais ou en vietnamien, il nous faut avec une colonne représentant les 9 produits (barbes) et une colonne pour chaque juge désignant les mots donnés pour chacune des barbes.
+
+```{r}
+# ANGLAIS :
+barbes.en.V2 <- data.frame(barbes=levels(barbes.en$Barbes))
+for (j in levels(barbes.en$Juge)){
+  test <- barbes.en %>% filter(Juge==j)
+  test <- test[-2]
+  barbes.en.V2 <- cbind(barbes.en.V2, j=test[,2])
+}
+colnames(barbes.en.V2)[-1] <- levels(barbes.en$Juge)
+
+# VIETNAMIEN :
+barbes.viet.V2 <- data.frame(barbes=levels(barbes.viet$Barbes))
+for (j in levels(barbes.viet$Juge)){
+  test <- barbes.viet %>% filter(Juge==j)
+  test <- test[-2]
+  barbes.viet.V2 <- cbind(barbes.viet.V2, j=test[,2])
+}
+colnames(barbes.viet.V2)[-1] <- levels(barbes.viet$Juge)
+```
+
+On exécute ensuite les MCA sur chacun :
+```{r}
+res.mca.viet <- MCA(barbes.viet.V2,graph=FALSE,ncp=30)
+plot.MCA(res.mca.viet,axes=c(1,2),choix="ind",invisible="var")
+
+res.mca.en <- MCA(barbes.en.V2,graph=FALSE,ncp=30)
+plot.MCA(res.mca.en,axes=c(1,2),choix="ind",invisible="var")
+```
+
