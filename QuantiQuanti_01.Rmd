@@ -741,4 +741,44 @@ We can use supplementary individuals to a better understanding of structures. Fo
 
 >>>>>>> exemple ajout ind supp 
 
-# 8. Ponderate ACP 
+# 8. weighted PCA
+
+Here is an application of weighted PCA with MFA and the dataset wine
+```{r}
+library("FactoMineR")
+library("factoextra")
+
+data(wine)
+
+# We keep actives variables
+wine_quanti <- wine[, -c(1,2,30,31)]
+
+group1 <- wine_quanti[, 1:5]
+group2 <- wine_quanti[, 6:8]
+group3 <- wine_quanti[, 9:18]
+group4 <- wine_quanti[, 19:27]
+
+# PCA on each group
+res.pca1 <- PCA(group1)
+res.pca2 <- PCA(group2)
+res.pca3 <- PCA(group3)
+res.pca4 <- PCA(group4)
+
+# First eigen values of each PCA
+egv1 <- res.pca1$eig[1]
+egv2 <- res.pca2$eig[1]
+egv3 <- res.pca3$eig[1]
+egv4 <- res.pca4$eig[1]
+
+# Vector of weight
+w <- c(1/c(rep(egv1,5),rep(egv2,3),rep(egv3,10),rep(egv4,9) ))
+res.pca.pon <- PCA(wine_quanti, col.w = w)
+
+coord_pca_pond <- res.pca.pon$ind$coord
+
+res.pca.pon$eig
+svd.triplet(scale(wine_quanti))
+PCA(wine_quanti)$svd
+
+```
+

@@ -151,7 +151,7 @@ text(0.75,mean(perfumes$Citrus)+0.25, "mean", pos=2)
 
 # PARTIE 2
 
-Here we introduce 2 packages : dyplr and ggplot to upgrate our graphics. We also considerate a product effect, as product influence the variance of the notes.
+Here we introduce 2 packages : dyplr and ggplot to upgrade our graphics. We also considerate a product effect, as product influence the variance of the notes.
 
 ## 2A
 
@@ -267,6 +267,8 @@ Products_Mat
 We can imagine a negative relation between Vanilla-Floral and Vanilla-Citrus, and a positive one for Vanilla-Citrus. That is the idea of Co-variance.
 
 ```{r}
+Products_sc_Mat <- as.matrix(dist(scale(Mean_Attributes))^2)
+Products_sc_Mat
 image(Attributes_Mat)
 image(Products_sc_Mat)
 
@@ -277,11 +279,8 @@ These heatmaps allow us to imagine structures on individuals and variables.
 Calculons l'inertie pour notre matrice centrée réduite
 (on doit retoruver le nombre de variables : 3)
 ```{r}
-Products_sc_Mat <- as.matrix(dist(scale(Mean_Attributes))^2)
-Products_sc_Mat
 Att_sc_Mat <- cov(scale(Mean_Attributes))
 Att_sc_Mat
-diag(Att)
 sum(Products_sc_Mat)/12
 ```
 --> formules? 
@@ -337,7 +336,6 @@ NIPALS <- function(X){
   
   p=t(X)%*%t%*%(1/(t(t)%*%t))
   p=p/as.numeric(sqrt(t(p)%*%p))
-  print(rang)
   while (i<rang+1) {
     norm=1
     while(norm>0.000001){
@@ -347,8 +345,6 @@ NIPALS <- function(X){
       diff=p2-p
       norm=t(diff)%*%diff
       p=p2
-      print(p)
-      print(i)
   }
   vec[,i]=p
   X=X-(t%*%t(p))
@@ -358,5 +354,11 @@ return(vec)
 }
 NIPALS(Mean_Attributes)
 svd(Mean_Attributes)
+```
+
+# Weighted PCA
+
+```{r}
+
 ```
 
