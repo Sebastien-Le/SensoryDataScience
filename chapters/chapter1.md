@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 1: Sensory analysis for two quantitatives variables'
+title: 'Chapter 1: Sensory analysis for two quantitative variables'
 description:
   'This chapter will teach you about many cool things and introduce you to the
   most important concepts of the course.'
@@ -26,7 +26,6 @@ We therefore choose to make a grouping in classes.
 The first point is to represent one variable. Choose it and plot its histogram.
 
 <codeblock id="01_02">
-
 </codeblock>
 
 Here, a lot of information is available to us. The first one is an idea of the representation of the scores given by the judges to the attribute. We that a lot of notes are between 0 and 1. The rest is more homogeneous. As explain previously, this distribution is cut in classes. The cut is set by the argument `breaks`. By default, it is set with the _Sturges_ method, which is the most recommended in the most of the cases. If you specify manually this number,  make sure the number is not too high or not too low.
