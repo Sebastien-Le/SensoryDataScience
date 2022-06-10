@@ -1,6 +1,8 @@
 ---
-title: "Overview"
-output: pdf_document
+title: "Part1 : Quanti-Quanti"
+output:
+  html_document: 
+    toc: yes
 ---
 
 # 1. Distribution of sensory attributes
@@ -733,15 +735,15 @@ Now, we know how is performed the PCA and how we get the coordinates of individu
  
 As PCA only uses continuous variables in the calculation of the distances between individuals, categorical variables can only be considered as supplementary. For continuous variables, determining whether they are illustrative or not is arbitrary, and depends on the point of view adopted. Often, continuous variables are considered as supplementary if they are from a different nature. 
 
->>>>>>> exemple ajout var supp 
+> exemple ajout var supp 
 
 ## Supplementary individuals
 
 We can use supplementary individuals to a better understanding of structures. For example, adding supplementary individuals that you already know characteristics is appropriate to compare new products. This requires knowledge and expertise that is external and specific to the study context.
 
->>>>>>> exemple ajout ind supp 
+> exemple ajout ind supp 
 
-# 8. weighted PCA
+# 8. Weighted PCA
 
 Here is an application of weighted PCA with MFA and the dataset wine
 ```{r}
@@ -782,3 +784,580 @@ PCA(wine_quanti)$svd
 
 ```
 
+> Ajout des blocs déjà faits
+
+# I. Variance and inertia
+
+## Center of gravity
+
+We have seen how to define the variance of a quantitative variable. We can also see the variance more geometrically on an axis. Let's use the variable `Vanilla` from the same data set used in the lesson 1. 
+
+```{r}
+vanilla <- experts$Vanilla
+
+plot(x=vanilla, y=rep(1, length(vanilla)), main="Vanilla", ylab="")
+abline(v = mean(vanilla), col="red", lwd=3, lty=2)
+```
+We can see the observations of the variable as points in a one-dimensional space with the mean center of gravity. Let us generalize this vision with two variables:
+```{r}
+df <- data.frame(experts$Vanilla, experts$Citrus)
+colnames(df) <- c("Vanilla", "Citrus")
+```
+
+```{r}
+plot(df)
+points(x=mean(df$Vanilla),y=mean(df$Citrus), type="p", col="red",lwd=3, lty=2)
+text(mean(df$Vanilla)+0.5, mean(df$Citrus)+0.5, "Center of gravity", col="red")
+```
+The center of gravity is the point $$(\bar{Vanilla}, \bar{Citrus})$$. If we take more than 2 variables, the center of gravity will be the matrix of means of variables. Let's take all the quantitative variables of the data set : 
+
+```{r}
+df <- data.frame(experts[,5:16])
+```
+
+Put the coordinates of the center of gravity for this dataframe : 
+```{r}
+colMeans(df)
+```
+
+## Inertia
+
+Now we have a point cloud with a center of gravity $$G$$. The distance that each individual has to this center of gravity can be calculated using the Euclidean distance: $$ d^2\left(x_{i},G\right)   = \sum _{i=1}^{p}  \left( x_{ij}-g_{j}\right)^2$$ with $$p$$ the number of variables.
+
+Let's do it with all quantitative variables for the 10th first individuals. For this, you must to calculate the matrix of the center of gravity $$n \times p$$ and the matrix of distances using the `apply()` function of R: 
+```{r}
+matG <- matrix(colMeans(df[1:10,]), nrow(df[1:10,]), ncol(df) , byrow=TRUE)
+apply((df[1:10,] - matG)^2, 1, sum)
+```
+Hide : the result is the vector of 10 distances of individuals between each coordinates of the enter of gravity.
+
+The inertia is the name for the mean of this distances : 
+$$I=\frac{1}{n}\sum_{i=1}^{n} d^{2}(x_{i}, G)$$
+Calculate inertia of the precedent example : 
+```{r}
+distG <- apply((df[1:10,] - matG)^2, 1, sum)
+sum(distG)/(nrow(df[1:10,])-1)
+```
+
+## Sum of the variance
+
+Build the vector of the variances of the 12 variables of df:
+```{r}
+variances <- c()
+for (j in 1:12){
+  variances <- cbind(variances, var(df[1:10,j]))
+}
+variances
+```
+Now, calculate the sum of this vector : 
+```{r}
+sum(variances)
+```
+Compare the result found here and the one found in the previous section. Then understand this:
+
+$$\frac{1}{n}\sum_{i=1}^{n} d^{2}(x_{i}, g))\Leftrightarrow \frac{1}{n}\sum_{i=1}^{n} \sum_{j=1}^{p}(x_{ij}-x_{.j})^{2}))
+\Leftrightarrow \sum_{j=1}^{p} \frac{1}{n}\sum_{i=1}^{n}(x_{ij}-x_{.j})^{2}))\Leftrightarrow \sum_{j=1}^{p} Var(X_{j}))$$
+
+# II .Bivariate analysis: two quantitative variables
+
+For this part, we focus on the relation between the variable `Fruity` and `Floral`. Exist it a relation between this two attributes ?
+
+```{r}
+df <- data.frame(experts$Fruity, experts$Floral)
+colnames(df) <- c("Fruity", "Floral")
+```
+
+To begin, plot the observations of the `Floral` attribute in function of the `Fruity` attribuet :
+```{r}
+plot(df)
+```
+What's the information can we obtain with this plot ?
+- the comportement of a variable with an other, for example if `Fruity` increase, `Floral` increased too. It's a linear relation. 
+- wrong answer 
+- wrong answer
+
+## Covariance
+
+In the first part of this lesson we calculate the variance for one variable. Here, we use the covariance matrix. It's an indicator of the linear direction between 2 variables.
+
+$$Cov(X,Y)=\frac{1}{N-1}\sum_{n}^{1}(x_{i}-\bar{x})(y_{i}-\bar{y})$$
+Try to calculate manually the covariance between this two variable : 
+
+```{r}
+N <- length(df$Floral)
+1/(N-1)*sum((df$Fruity-mean(df$Fruity))*(df$Floral-mean(df$Floral)))
+```
+Verify your answer with the `cov()` function of R :
+```{r}
+cov(df$Fruity,df$Floral)
+```
+
+## Correlation 
+
+The correlation between two variables indicate any type of association refers to the degree to which a pair of variables are linearly related. It's a measure of dependence, the most familiar measure is the Pearson correlation coefficient :
+$$\rho_{XY} = corr(X,Y) = \frac{cov(X,Y)}{\sigma_{X}\sigma_{Y}}$$
+
+Try to calculate the correlation coefficient between `Fruity` and `Floral` :
+```{r}
+cov <- 1/(N-1)*sum((df$Fruity-mean(df$Fruity))*(df$Floral-mean(df$Floral)))
+cov / (sqrt(var(df$Fruity))*sqrt(var(df$Floral)))
+```
+Verify your answer with the `cor()` function of R :
+```{r}
+cor(df$Fruity, df$Floral)
+```
+
+# III. Test-F
+
+## Context and formalisation
+
+The test-F is a statistic test that determines the equality of variances of two populations, this makes it possible to compare two population variances. Both populations are presumed to be Gaussian. 
+
+Let $$Y = (Y1, . . ,Y_{n_{1}})$$ a $$n_{1}$$-sample of law $$\mathcal{N}(\mu_{1}, σ^{2}_{1})$$ and $$Z = (Z_{1},...,Z_{n_{2}})$$ a $$n_{2}$$-sample of law $$\mathcal{N}(\mu_{2}, σ^{2}_{2})$$. Assume $Y$ and $Z$ are independent and pose $$X = (Y,Z)$$.
+So, here we test : 
+
+- $$ H_{0} : σ^{2}_{1}=σ^{2}_{2} $$;
+- $$ H_{1} : σ^{2}_{1} \ne σ^{2}_{2}$$.
+
+## Construction of the test statistics
+
+Variables $$\frac{n_{1}S^{2}_{1}}{\sigma^{2}_{1}} $$ and $$\frac{n_{2}S^{2}_{2}}{\sigma^{2}_{2}}$$ are independent and distributed according to the laws of the $$\chi ^{2}(n_{1})$$ and $$\chi ^{2}(n_{2})$$ with $$S^{2}_{1}=\frac{1}{n_{1}-1}\sum_{1}^{n}(y_{i}-\bar{y})^2$$ and $$S^{2}_{2}=\frac{1}{n_{2}-1}\sum_{1}^{n}(z_{i}-\bar{z})^2$$. 
+
+Under the hypothesis of equality of variances we deduce that the random variable :
+
+$$\frac{\frac{n_{1}S^{2}_{1}}{n_{1}-1}}{\frac{n_{2}S^{2}_{2}}{n_{2}-1}} \sim \mathcal{F}(n_{1}-1, n_{2}-1)$$
+
+## Decision 
+
+In this case, the comparison test being bilateral, H0 is rejected at the risk threshold $$\alpha$$ in the cases: 
+
+- $$f_{obs}\le f_{\frac{\alpha}{2}}(v_{1},v_{2})$$;
+- $$f_{obs}\ge f_{1-\frac{\alpha}{2}}(v_{1},v_{2})$$. 
+
+Hence the decision rule, H0 is rejected if :
+$$f_{obs} 	\notin [f_{\frac{\alpha}{2}}(n_{1}-1,n_{2}-1),f_{1-\frac{\alpha}{2}}(n_{1}-1,n_{2}-1)]$$
+
+## Practice
+
+### Manually
+
+In Argentina, an experiment was conducted in 2009 to solve problems related to the intensification of agriculture and especially to a new method cattle feeding. The traditional A.Angus breed is not adapted to this system breeding, a cross: A.Angus x Charolaise was created. The objective is to obtain animals better adapted to these new practices while maintaining a homogeneity comparable to the traditional breed. The character studied is the GMQ (Average Daily Gain) expressed in kg.
+
+The results observed on two batches (here in the sense of "samples") are as follows:
+
+- for lot 1: pure breed, sample size 16, variance 0.26.
+- for lot 2: cross-breed, sample size: 21, variance: 0.37.
+
+Can we consider that the GMQ of cross A . Angus x Charolaise gives results as homogeneous as that of the pure race? (we will take a risk threshold of 0.05). 
+
+Calculate $$f_{obs}$$ and the quantiles of the fisher law :
+
+```{r}
+f <- (16*0.26/15)/(21*0.37/20)
+v1 <- qf(0.025,df1=15,df2=20)
+v2 <- qf(0.975,df1=15,df2=20)
+```
+
+What's the conclusion ?
+- $$H0$$ rejected
+- $$H0$$ not rejected
+
+### Using R
+
+Let's compare two variables of the dataset `experts` : `Spicy` and `Heady`. To do a t-test with R, use the `var.test()` function :
+```{r}
+var.test(experts$Spicy, experts$Heady)
+```
+
+Calculate manually the f-statistic :
+```{r}
+(288*var(experts$Spicy)/287)/(288*var(experts$Heady)/287)
+```
+
+# IV. Test-T
+
+## Utilisation
+A Student's t test, also known as a Student's t test, is a tool for evaluating the means of one or two populations using a hypothesis test. 
+A Student's t-test can be used to evaluate whether a single group differs from a known value (one-sample t-test), whether two groups differ 
+from each other (independent two-sample t-test), or whether there is a significant difference in paired measures (paired or dependent sample 
+Student's t-test).
+
+## Understand the statistic
+
+Let's find manually the results of the statistic : 
+```{r}
+x<-c(442.7, 380.2, 406.8, 507.7, 615.1, 486.8, 438.7, 390.7, 399.5, 789.9)
+res<-t.test(x, mu=200) #real test
+
+
+## find manually :
+xbar <- (1/10)*sum(x) # estimate mean of x
+diff <- x-xbar
+sumsq <- (1/9)*sum(diff^2) # non-biaised estimate var of x
+t <- sqrt(10)*(xbar-200)/sqrt(sumsq)
+```
+
+## Understand the test
+### Contexte and formalisation 
+
+Let $$X = (X_{1},...,X_{n_{1}})$$ a $$n_{1}$$-sample of law $$\mathcal{N}(\mu_{1}, σ^{2}_{1})$$ and $$Y = (Y1, . . ,Y_{n_{2}})$$  a $$n_{2}$$-sample of law $$\mathcal{N}(\mu_{2}, σ^{2}_{2})$$. $$\bar{X}$$ (resp. $$\bar{Y}$$ ) always refers to the estimator of the expectation of the variable $$X$$ (resp. $$Y$$ ) and $$S^{2}_{1}$$ (resp. $$S^{2}_{2}$$) that of variance.
+So, here we test : 
+
+- $$ H_{0} : \mu_{1}=\mu_{2} $$;
+- $$ H_{1} : \mu_{1} \ne \mu_{2}$$.
+Testing $$\mu_{1}=\mu_{2} $$ is therefore testing the mean $$\mu_{1}-\mu_{2}=0 $$ of a variable Gaussian random ($$\bar{X}$$-$$\bar{Y}$$) and variance $$(\frac{S^{2}_{1}}{n_{1}}+\frac{S^{2}_{2}}{n_{2}})$$ ($$σ^{2}_{1}$$ and $$σ^{2}_{2}$$ are unknown). 
+
+The test statistic is $$T(X)=\frac{\bar{X}-\bar{Y}}{\sqrt{\frac{S^{2}_{1}}{n_{1}}+\frac{S^{2}_{2}}{n_{2}}}} \sim \mathcal{T}(n_{1}+n_{2}-2)$$.
+
+### Decision 
+
+In this case, the comparison test being bilateral, H0 is rejected at the risk threshold $$\alpha$$ in the cases: 
+
+- $$t_{obs}\le t_{\frac{\alpha}{2}}(v_{1})$$;
+- $$t_{obs}\ge t_{1-\frac{\alpha}{2}}(v_{1})$$.
+
+Hence the decision rule, H0 is rejected if :
+$$t_{obs} \notin [t_{\frac{\alpha}{2}}(n_{1}+n_{2}-2),t_{1-\frac{\alpha}{2}}(n_{1}+n_{2}-2)]$$
+
+### Practice 
+
+Using `Spicy` and `Heady` variables, calculate the t-statistic manually and verify your answer with the `t.test()` function :
+```{r}
+(mean(experts$Spicy) - mean(experts$Heady))/sqrt((var(experts$Spicy)/288)+(var(experts$Heady)/288))
+t.test(experts$Spicy, experts$Heady)
+```
+
+What's the conclusion ?
+- $$H0$$ rejected
+- $$H0$$ not rejected
+
+# V. ANOVA
+ANOVA tests whether any of the group means are different from the overall mean of the data by checking the variance of each individual group against the overall variance of the data, several T-test are performed for each modality. If one or more groups falls outside the range of variation predicted by the null hypothesis (all group means are equal), the test is statistically significant. 
+
+## One-way ANOVA
+
+Let's considere the categorical (qualitative) variable `Product` of the dataset and the quantitative variable `Woody` :
+```{r}
+df <- data.frame(experts$Product, experts$Woody)
+colnames(df) <- c("Product", "Woody")
+```
+
+What's the objective of ANOVA here?
+- Are my products significantly different regarding the sensory attribute Woody?
+- wrong answer
+- wrong answer
+
+Build the model with the `aov()` function : 
+```{r}
+one.way <- aov(Woody~Product, data=df)
+```
+
+Get the summary of the model : 
+```{r}
+summary(one.way)
+```
+To understand the first 4 columns of this summary, look at the following table: 
+
+[image](static/anova-table.png)
+
+To practice, try to complete this table :
+
+[image](static/table_anova.JPG)
+
+```{r}
+x1 <- 6.4*10.6
+x2 <- x1*4
+x3 <- 377.36 - x2
+x4 <- x3/10.6
+x5 <- 4+x4
+```
+
+The last column of the result of summary corresponds to the p-value of the F-statistic. This shows how likely is that the F-value alculated from the test would have occurred if the null hypothesis of no difference among group means were true.
+
+Here the p-value of the `Wood` variable is low so it appears that the sensory attribut has a real impact on the different products, such as `Wood` are really specific to some products. 
+
+## Two-way ANOVA
+
+```{r}
+df <- cbind(df, experts$Session)
+colnames(df) <- c("Product","Woody","Session")
+```
+
+Try to build the model :
+
+```{r}
+two.way <- aov(Woody~Product+Session, data=df)
+summary(two.way)
+```
+What can you conclude with this result ? 
+- there is a highly significant Product effect: the products have been differentiated regarding the sensory attribute `Woody`;
+- there is a highly significant Product and Session effect: the products and the sessions have been differentiated regarding the sensory attribute `Woody`;
+- there is a highly significant Session effect: the sessions have been differentiated regarding the sensory attribute `Woody`.
+
+## Adding interaction 
+
+Sometimes we can try an interaction effect rather than an additive effect of your independent variables. For example, we can try the hypothesis that the panel is not repeatable from one session to other which isn't what we should expect from a sensory panel. 
+
+```{r}
+interaction <- aov(Woody~Product*Session, data=df)
+summary(interaction)
+```
+For a better understanding of the notion of interaction, let’s use the graphinter function of the SensoMineR package. For a given couple of factors $$A = (\alpha_{i})\quad i∈I$$, $$I$$ the panel space and $$B = (\beta_{j} ) \quad j∈J$$, $$J$$ the product space, this function plots the means for each level
+$$\alpha\beta_{ij}$$ of the interaction effect AB in an intuitive graphical output. 
+
+This function takes as argument the dataset, the position of the first then the second variables of the interaction and the first and last position of numerical variables. 
+```{r}
+library(SensoMineR)
+graphinter(df,col.p=1,col.j=3,firstvar=2,lastvar=2,numr=1,numc=1)
+```
+
+The x-axis of this output represents the average values of the products calculated over all sessions, whereas the y-axis represents the average values of the products calculated for each session. When there is no interaction effect between products and sessions, the two broken lines are parallel (one line per session). On the contrary, when there is a significant interaction, the two lines split and/or cross; in our case they split.
+
+## decat function from _SensoMineR_
+
+To get the list of attributes that structures the product space, the decat function of the SensoMineR package is used. This function systematically performs ANOVA on each sensory attribute using this model : 
+
+$$Attribut_{iks}\sim\mu + \alpha_{i} + \beta_{k} + \gamma_{s} + \alpha\beta_{ik} + \alpha\gamma_{is} + \beta\gamma_{ks} + \epsilon_{iks}$$
+
+where
+
+- $$\mu$$ is the average effect so the average score;
+- $$\alpha_{i}$$ is $$i^{th}$$ the coefficient associated with the _Product_ effect;
+- $$\beta_{k}$$ is $$k^{th}$$ the coefficient associated with the _Panelist_ effect;
+- $$\gamma_{s}$$ is $$s^{th}$$ the coefficient associated with the _Session_ effect; 
+- $$\alpha\beta_{ik}$$ is $$ik^{th}$$ the coefficient associated with the _Product-Panelist_ interaction;
+- $$\alpha\gamma_{is}$$ is $$is^{th}$$ the coefficient associated with the _Product-Session_ interaction;
+- $$\beta\gamma_{ks}$$ is $$ks^{th}$$ the coefficient associated with the _Panelist-Session_ interaction;
+- and $$\epsilon_{iks}$$ denotes the error term.
+
+```{r}
+res.decat <- decat(experts,formul="~Product+Panelist+Session",firstvar=5, lastvar=ncol(experts),graph=FALSE)
+names(res.decat)
+```
+
+This output highlights the sensory attributes for which products are differentiated at a significance threshold of 0.05 :
+```{r}
+res.decat$resF
+```
+
+Try to find the same p-value for `Heady` with the `aov()` function : 
+```{r}
+heady.aov <- aov(Heady~Product+Panelist+Session+Product:Panelist+Product:Session+Panelist:Session, data=experts)
+summary(heady.aov)
+```
+
+# VI. Khi²
+
+## Cross tabulation
+
+The easiest way to obtain a cross tabulation is to use the table function by giving it as parameters the two variables to cross.
+
+```{r}
+library(dplyr)
+library(questionr)
+data_fruity <- experts %>% filter(Fruity>6)
+data_table <- table(data_fruity$Product)
+tab <- table(data_fruity$Product, data_fruity$Panelist)
+cprop(tab)
+```
+
+## Study the cross table of the 2 variables
+
+The idea is if two variables I and J are independent, then we expect the number of individuals nij who satisfy I and J to be equal to eff_theo = ni.\*nj./n On the contrary, if nij is significantly different from fi\*nj , the more reason here is to think that I and J are not independent.
+
+Studying a correlation between two categorical variables leads to comparing the nij with the eff_theo.
+
+```{r}
+data(tea)
+summary(tea)
+tab <- table(tea$breakfast,tea$tea.time)
+tab
+```
+construct the theorical table :
+
+```{r}
+theo11 <- (sum(tab[1,])*sum(tab[,1]))/sum(tab)
+theo12 <- (sum(tab[1,])*sum(tab[,2]))/sum(tab)
+theo21 <- (sum(tab[2,])*sum(tab[,1]))/sum(tab)
+theo22 <- (sum(tab[2,])*sum(tab[,2]))/sum(tab)
+theo <- cbind(c(theo11,theo21),c(theo12,theo22))
+colnames(theo)<-colnames(tab)
+row.names(theo)<- row.names(tab)
+theo
+tab
+```
+We have to compare now the 2 tables.
+
+First, we substract all theorical values to experimental values:
+
+```{r}
+newtab <- tab-theo
+```
+Then we take the square value:
+```{r}
+newtab <- newtab^2
+```
+Finally, we divide by the theorical effectifs : 
+```{r}
+newtab <- newtab/theo
+newtab
+```
+This table is called the table of deviations from independence
+
+The sum of the table give the Chi2 statistic:
+```{r}
+chi2 <- sum(newtab)
+chi2
+```
+
+# VII. condes() 
+
+## What's the concept?
+
+The `condes()` function from FactoMineR is using when you want to comparate a quantitative variable with other variable. The function identifies the type of others by itself and returns
+
+- the description of the `num.var` by the quantitative variables in the `quanti` argument or/and the categorical variables which characterized the continuous variable renseigned in `num.var`, in the `quali` argument;
+- and when others variables are qualitatives, the `category` returns a description of the continuous variable `num.var` by each category of all the categorical variables. 
+
+## Compare with a quantitative variable
+
+In our case, we use the function on the data frame composed of `Floral` and `Fruity` variables :
+
+```{r}
+res.condes <- condes(donnee = data.frame(experts$Fruity, experts$Floral), num.var = 1)
+```
+
+Reminder the description of the function, in our case, what's return ?
+- only `quanti`
+- `quanti` and `quali`
+- `quanti`, `quali` and `category`
+
+Let's get a look on argument(s) : 
+```{r}
+res.condes$quanti
+```
+
+Here, it's tested if the correlation coefficient is significantly different from zero. The null hypothesis is $$H0 : 	\rho = 0$$, there is not significant linear relationship between the two variables and the alternate hypothesis is $$H1 : 	\rho 	\ne 0$$. Get a look on the p-value, what can you conclude ?
+- there is a significant linear relationship between `Fruity` and `Floral`;
+- there is not a significant linear relationship between `Fruity` and `Floral`. 
+_Hind_ : When the p-value < 0.05, H0 is rejected. It's the case here so there is a significant correlation between them.
+
+## Compare with a qualitative variable 
+
+```{r}
+res.condes <- condes(donnee = data.frame(experts$Fruity, experts$Product), num.var = 1)
+res.condes$quali
+```
+Here a one-factor variance analysis test is performed. 
+
+The first argument is the $$R^{2}$$ statistic. It represents the percentage of variation in a response variable (here `Fruity`) explained by its relationship with one or more predictor (here `Product`). 
+
+The second argument is the p-value from an ANOVA. 
+
+With this result, what can you conclude ?
+- the products have been differentiated regarding the sensory attribute `Fruity`;
+- the products haven't been differentiated regarding the sensory attribute `Fruity`
+
+## Use all the data
+
+Let's apply on the entire dataset. We choose to describe the first quantitative variable `Spicy` :
+
+```{r}
+res.condes <- condes(donnee = experts, num.var = 5)
+```
+
+Print results for the quantitative variables first, then for the qualitative variables:
+```{r}
+res.condes$quanti
+res.condes$quali
+```
+
+You can see that only significant variables are displayed in both cases.
+
+Next, an other result of the `condes` function is : 
+```{r}
+res.condes$category
+```
+In practice, this result is more important than the other two because we're interested by the differences within the product groups themselves. The p-value  returned is that of the t-test. Here, for each product $$i$$ the t-test is performed with $$H0: \mu_{i} = \mu$$ with $$\mu_{i}$$ the mean estimator of `Spicy` in the group $$i$$ and $$\mu$$ the mean estimator for the global population. 
+
+# VIII. catdes() 
+
+## What's the concept?
+
+The `catdes()` function from FactoMineR is using when you want to comparate a qualitative variable with other variable. The function identifies the type of others by itself and returns
+
+- the description of the `num.var` by the quantitative variables in the `quanti` argument and the $$\eta^{2}$$-score in for each quantitative variable in the `quanti.var` argument;
+-  the categorical variables which characterized the continuous variable renseigned in `num.var`, in the `test.chi2` argument; and the `category` returns a description of the continuous variable `num.var` by each category of all the categorical variables. 
+
+## Compare with a quantitative variable 
+
+Let's start to compare the variable `Product` with the quantitative variable `Green`
+```{r}
+res.catdes <- catdes(donnee = data.frame(experts$Product, experts$Green), num.var = 1)
+```
+
+Reminder the description of the function, in our case, what's return ?
+- only `quanti`;
+- `quanti` and `quanti.var`;
+- only `test.chi2`;
+- `test.chi2` and `category`;
+- `quanti`, `quanti.var`,`test.chi2` and `category`.
+
+Let's get a look on argument(s) : 
+```{r}
+res.catdes$quanti.var
+res.catdes$quanti
+```
+
+In `quanti.var`, $$\eta^{2}$$ ranges from 0 to 1 and where values closer to 1 indicate a higher proportion of variance can be explained by a given variable in the ANOVA model performed. The p-value is that of this one-factor ANOVA.
+
+In `quanti`, the v-test performed is very close to the notion of z-score. In its basic form, the V-test is the quantile of a standardized normal distribution (with mean equal to 0 and standard deviation equal to 1) corresponding to a given probability. It is used to transform p-values into scores that are more easily interpretable. The result is displayed as "NULL" for certain modality. This is because the probability used is by default 5%. To display the results for all modalities, change the `proba` argument. Do it:
+
+```{r}
+catdes(donnee = data.frame(experts$Product, experts$Green), num.var = 1, proba=1)
+```
+
+## Compare with a qualitative variable
+
+Let's compare the same `Product` variable but with `Session`. Write the line and look to the result :
+```{r}
+res.catdes <- catdes(donnee = data.frame(experts$Product, experts$Session), num.var = 1)
+```
+
+Why is it NULL ? Try an other solution : 
+```{r}
+res.catdes <- catdes(donnee = data.frame(experts$Product, experts$Session), num.var = 1, proba = 1)
+```
+
+Reminder the description of the function, in our case, what's return ?
+- only `quanti`;
+- `quanti` and `quanti.var`;
+- only `test.chi2`;
+- `test.chi2` and `category`;
+- `quanti`, `quanti.var`,`test.chi2` and `category`.
+
+Get this argument(s) :
+
+```{r}
+res.catdes$test.chi2
+res.catdes$category
+```
+In the `test.chi2` argument, like its name, it's the $$\chi^{2}$$-test result. The important part is in `category` :
+
+- Cla/mod : proportion of individuals of this group in this modality : 8.33% of individuals in the first Session noted the product Angel;
+- Mod/Cla : proportion of individuals of this modality in this group : 50% of individuals who voted Angel was in the first Session;
+- p.value : significance level of the over-representation in the group of the modality;
+- v.test : value of the test statistic used to determine the significance of the descriptive variables of the group. If it's positive there is a over representation of the modality and vice versa. 
+
+## Use all the data
+
+Let's apply on the entire dataset. We choose to describe the variable `Product` :
+```{r}
+res.catdes <- catdes(donnee = experts, num.var = 4)
+```
+
+```{r}
+res.catdes$test.chi2
+res.catdes$quanti.var
+res.catdes$quanti
+```

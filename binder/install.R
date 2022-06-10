@@ -1,3 +1,8 @@
 install.packages("dplyr")
 install.packages("ggplot2")
 install.packages("gridExtra")
+install.packages("FactoMineR")
+install.packages("SensoMineR")
+install.packages("questionr")
+install.packages("stringi")
+install.packages("readxl")
