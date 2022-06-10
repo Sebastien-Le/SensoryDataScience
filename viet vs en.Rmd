@@ -110,7 +110,8 @@ res.CA.viet <- CA(words_selection.viet, graph=FALSE)
 res.CA.sup10.viet <- CA(words_selection_sup10.viet, graph=FALSE)
 plot.CA(res.CA.sup10.viet)
 ```
-## MCA
+
+## INTRODUCTION A LA MCA
 
 Que ce soit en anglais ou en vietnamien, il nous faut avec une colonne représentant les 9 produits (barbes) et une colonne pour chaque juge désignant les mots donnés pour chacune des barbes.
 
