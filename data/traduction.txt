@@ -1,0 +1,553 @@
+Từ
+ấn độ;cha;nghiêm túc
+sexy;cơ bản;quý ông
+nga;cũ;bẩn
+béo;xấu xí;thổ nhĩ kỳ
+châu á;điên;lạ
+rậm rạp;bẩn thỉu;xấu xí
+lười biếng;trẻ;tự phụ
+cow_boy;xấu xí;buồn cười
+tin cậy;trẻ;năng động
+lãnh đạo;tin tưởng;năng động
+hoang dã;olden_days;bốn mươi
+tin tưởng;ba mươi;bình tĩnh
+cũ;cũ;nghiêm ngặt
+tin cậy;bốn mươi;bận rộn
+cũ;cũ;nghịch ngợm
+olden_days;cũ;thao túng
+mặc quần áo;hipster;mát mẻ
+mặc quần áo;rider;rocker
+viking;bad_boy;hipster
+mặc quần áo;mát mẻ;hipster
+bí ẩn;ý;phù thủy 
+mặc quần áo;rocker; kim loại
+shyfull;tối giản;đơn giản
+guitarist;vui vẻ;quyến rũ
+mát mẻ;lãng mạn;thư giãn
+rải rác;sexy;dễ thương
+hipster;kind;russian
+trung lập;yếu;thư giãn
+ấn độ;bản gốc;người suy nghĩ
+hoang dã;trung tính;trống rỗng
+ấu dâm;lạ;giật
+mỹ;hài hước;redneck
+dandy;lịch sử;quý tộc
+đẳng cấp;bad_boy;người lớn
+hipster;tatoo;khỏe mạnh
+công việc;cha;bạn bè
+tiếng Ý;bản gốc;nhân viên
+biker;thực phẩm;ích kỷ
+nhà xã hội học;geek;freelancer
+cow_boy;cướp;bia
+gọn gàng;nghiêm túc;quyến rũ
+bị bỏ quên;mệt mỏi;hút thuốc
+bẩn thỉu;âu yếm;yên tĩnh
+nice;speakative;unconfident
+nhỏ nhặt;self_confident;găng tay
+bận rộn;âu yếm;nghiêm túc
+self_confident;kiêu ngạo;xa cách
+self_confident;hài hước;béo
+xù xì;lãng mạn;ý
+tội phạm;fast_life;cẩu thả
+xù xì;nga;hipster
+hipster;nhà sinh thái học;grevist
+nhọn;giật;bốc đồng
+xấu xí;hipster;thư giãn
+xấu xí;giật;ấu dâm
+mỹ;truck_driver;bicycle_handlebars
+tự tin;virile;chiếm ưu thế
+bất cẩn;thư giãn;mát mẻ
+hipster;kiêu ngạo;vinyl_lover
+cổ điển;bất cẩn;nhàm chán
+kỳ lạ;không hợp thời trang;antique_dealer
+bản gốc;hoang dã;virile
+weirdo;artist;music
+old_fashioned;biker;rock
+lớp học;nghiêm túc;chăm chỉ
+gọn gàng;trưởng thành;nghiêm túc
+hippie;hoang dã;slacker
+mệt mỏi;ốm yếu;lười biếng
+sáng tạo;cũ;hài hước
+nghiêm túc;gọn gàng;đầy tham vọng
+sáng tạo;truyện tranh;nghệ sĩ
+sáng tạo;nghệ sĩ;diễn viên hài
+cổ điển;trưởng thành;liên quan
+kẻ bắt cóc;gắt gỏng;lười biếng
+hipster;viking;háo hức
+đương đại;ăn chay;trưởng thành
+dartagnan;cũ;tự hào
+tù nhân;nhà sinh thái học;bận rộn
+giai cấp;gangster;nhạy cảm
+Tiếng Mexico;mafioso;choleric
+cool;hipster;kind
+sexy;nghiêm túc;trẻ
+viking;lông;nhút nhát
+cha;tử tế;quarentenary
+biến thái;music_teacher;hippie
+nghiêm trọng;biker;thirty_years_old
+nghệ sĩ;giáo viên;tử tế
+truck_driver;đầy đặn;rượu
+guitar;câm;bad_boy
+trẻ;tải xuống;cặn bã
+hipster;single;lumberjack
+đậu phụ;béo;cha
+pizza_maker;Ý;gầy
+biker;good_guy;lumberjack
+long_hair;giáo viên;ngồi
+alaphilippe;gypsies;mexican
+phong cách;trẻ;vô tổ chức
+sạch sẽ;giáo viên;trẻ
+người lái;đá;hình xăm
+nhút nhát;đơn giản;giáo viên
+kỳ lạ;cũ;dê
+đơn giản;điên rồ;kiểu
+kỳ lạ;cũ;dê
+quốc gia;phong cách;rodeo
+vô tổ chức;tramp;lumberjack
+trẻ;cặn bã;biến thái
+toxicoman;chưa lập gia đình;cũ
+cha;redneck;fat
+pizza_maker;tiếng Ý;high_pitched_voice
+biker;tattoo;well_trimmed
+giáo viên;câm;long_hair
+alaphilippe;mexican;truck_driver
+phổ biến;trẻ;trưởng thành
+trẻ;bad_boy;hợp thời trang
+tiều phu;già;bất cẩn
+trẻ;cha;trưởng thành
+lạ;cũ;doanh nhân
+già;tiều phu;cha
+già;béo phì;lạ
+tiều phu;mỹ;cha
+không gọn gàng;năm mươi;thông cảm
+trẻ;thân thiện;mát mẻ
+hipster;guitarist;hào phóng
+untidy;fourty;woodcutter
+người hút thuốc;luẩn quẩn;đồng
+đáng yêu;mát mẻ;nghiêm túc
+người hút thuốc;luẩn quẩn;đam mê
+roader;fifty;energetic
+ria mép;hipster;không điển hình
+thô ráp;quý ông;nam tính
+biker;vikings;ấn tượng
+cổ điển;được cung cấp;mềm
+oudated;guitarist;goatee
+mộc mạc;bia;nhà văn
+dê;hairpiece;nobleic
+old;emperor;spanish
+bận rộn;dám nghĩ dám làm;lãnh đạo
+thông minh;mát mẻ;thư giãn
+tiều phu;hoang dã;thư giãn
+rậm rạp;ngọt ngào;bình tĩnh
+sắc nét;đồi trụy;tiếng Ý
+old;boastfull;hipster
+tỉ mỉ;yêu cầu;sắc nét
+pablo_escobar;spaghetti;gọn gàng
+thời trang;thuần chay;molky
+trẻ;máy cắt cỏ;ngân hàng
+ông già Noel;vô gia cư;hippie
+lumberjack;tatoo;mùa đông
+cái ác;nguy hiểm;ranh mãnh
+cũ;dầu;thợ cắt tóc
+nông dân;âm nhạc;gimbard
+bảy mươi;rock;pop
+cẩn thận;có tổ chức;không ích kỷ
+bỏ bê;mệt mỏi;trầm cảm
+thoải mái;nhàm chán;eco_friendly
+thứ năm;cha;đã kết hôn
+đồi trụy;kiêu ngạo;tự ái
+hách dịch;hiệu quả;thúc đẩy
+đồi trụy;kiêu ngạo;giáo viên
+simple_minded;vui vẻ;hài hước
+sang trọng;lôi cuốn;khéo léo
+dũng cảm;táo bạo;thân thiện
+tiều phu;hipster;guitarist
+kín đáo, yên tĩnh, tự nhiên
+hói;nhạy cảm;hài hước
+tài năng;thúc đẩy;ảnh hưởng
+hùng hồn;lấp lánh;thông minh
+đá;biker;da
+quý ông;gọn gàng;thành công
+máy bay chiến đấu;bị bỏ quên;lôi cuốn
+hipster;lumberjack;tự tin
+mạnh mẽ;nhạy cảm;bình tĩnh
+đồi trụy;tiếng Ý;trẻ con
+tự phụ;virile;bold
+thô lỗ;truyện tranh;cảm xúc
+vui vẻ;khiêu khích;oldschool
+quý ông;lôi cuốn;mạnh mẽ
+gọn gàng;tinh tế;dũng cảm
+xù xì;hoang dã;bị bỏ quên
+bình thường;đáng kính;ngọt ngào
+đồi trụy;xấu xa;khó chịu
+lumberjack;nhạy cảm;hipster
+kiêu ngạo;tự phụ;thô lỗ
+sang trọng;tinh tế;thanh lịch
+barman;biker;lo lắng
+trẻ;học sinh;mát mẻ
+hipster;viking;lumberjack
+viking;lumberjack;thợ cắt tóc
+trung quốc;lạ;đồi trụy
+trapper;canadian;explorer
+trung quốc;lạ;nhà khoa học
+cũ;redneck;lạ
+hipster;nông dân;mát mẻ
+sexy;bad_boy;doanh nhân
+lumberjack;viking;hipster
+đẹp;béo;bị bỏ quên
+tể tướng;luẩn quẩn;tự ái
+trưởng thành;biker;xăm
+kiêu ngạo;lạ;uyên bác
+redneck;old;rodeo
+thông minh;đẹp trai;đẹp trai
+mệt mỏi;bận rộn;tù nhân
+hipster;hồi giáo;nhà sinh thái học
+tuổi hai mươi;sinh viên;thời trang
+latino;hippie;đầy màu sắc
+nhạc sĩ;trưởng thành;cha
+nghiêm ngặt;history_teacher;nhà sinh thái học
+người đi xe máy;già, big_belly
+lumberjack;bia; Pháp
+không cạo râu;bẩn thỉu;trẻ
+hipster;nordic;lumberjack
+lumberjack;nordic;farmer
+la_fouine;châu Á;lạ
+alaphilippe;lumberjack;nordic
+bình tĩnh;lạ;trẻ
+redneck;rock;biker
+gọn gàng;hợp thời trang;thư giãn 
+trẻ;tự tin;thể thao
+lumberjack;manly;lạnh
+gọn gàng;hợp thời trang;thư giãn 
+nhút nhát;xuyên thấu;lạ
+tự tin;virile;self_assured
+nhút nhát;xỏ lỗ;lỗi thời
+redneck;nông dân;tức giận
+kết hôn;hài hước;well_dressed
+lớp học;trẻ;sexy
+cũ;cẩu thả;mệt mỏi
+tù nhân;thất nghiệp;cẩu thả
+đồi trụy;hướng ngoại;kiêu ngạo
+biker;rocker;xăm
+kỳ lạ;narcissist;psycopath
+biker;thanh lịch;lạ
+bẩn;gipsy;ba mươi
+mô hình;bẩn;gipsy
+kim loại;vô gia cư;bẩn
+bẩn;gipsy;middle_aged
+avant_gardist;gipsy;nhút nhát
+bẩn;middle_aged;redneck
+bẩn;thiếu niên;gipsy
+vintage;charlie_chaplin;phong cách
+lộn xộn;ba mươi;đánh bóng
+thiếu niên;thô;nghiêm ngặt
+đá;biker;bẩn
+cẩn thận;trẻ;giáo viên
+sultan;đồi trụy;kỳ lạ
+béo;biker;redneck
+vụng về;xã hội;lỗi thời
+thám tử;cổ điển;cũ
+cha;đẹp trai;phong cách
+lười biếng;trầm cảm;chủ nhật
+hipster;thợ cắt tóc;tatoo
+bị bỏ quên;lười biếng;nghệ sĩ
+guitarist;biến thái;uggly
+cha;bốn mươi;đã kết hôn
+lố bịch;uggly;họa sĩ
+sombrero;spanish;sangria
+hipster;cũ;thiết kế
+bị bỏ qua;tự nhiên;đơn giản
+hipster;viking;lumberjack
+mộc mạc;tự nhiên;hoang dã
+đồi trụy;narcissist;kỳ lạ
+kỳ lạ;thiết kế;đáng sợ
+đồi trụy;narcissist;kỳ lạ
+biker;da;đá
+trẻ trung;gọn gàng;hiện đại
+bad_boy;mô hình;cổ điển
+biker;bia;thợ xăm
+hoang dã;phổ biến;cổ điển
+quý tộc;văn học;tinh vi
+doanh nhân;ông chủ;người mẫu
+kỳ lạ;xấu xí;cũ
+tám mươi;rocker;cũ
+bố;trẻ;buồn
+cũ;xấu;buồn
+tiều phu;gỗ;thực vật
+trẻ trung;hạnh phúc;xinh đẹp
+nghệ sĩ;sợ hãi;thiên nhiên
+chăm sóc;hạnh phúc;trẻ
+nhút nhát;nghệ sĩ;hoang dã
+latin;strict;convivial
+ấn độ;nghiêm túc;cha
+tự tin;gọn gàng;người lớn
+nga;lumberjack;bẩn
+hipster;lớn;xấu xí
+xấu xí;old_fashioned;vụng về
+nghiêm trọng;người lớn;có nghĩa là
+xấu xí;vụng về;old_fashioned
+tigre;redneck;american
+trẻ;thủy thủ;bận rộn
+trẻ;công nhân;mệt mỏi
+hipster;santa_claus;cũ
+trẻ;công nhân;city_boy
+ugly_boy;tây ban nha;nông thôn
+bị bỏ quên;nông dân;texas
+cũ;nhạc sĩ;ugly_boy
+mexico;cũ;nông dân
+nam tính;hoang dã;sexy
+sexy;gọn gàng;trẻ
+lumberjack;dirty;biker
+mềm;loại;trấn an 
+kỳ lạ;ác quỷ;hung hăng 
+rậm rạp;trầy xước;ngu ngốc
+lố bịch;vô dụng;nhạc sĩ
+biến thái;nguy hiểm;bẩn thỉu
+thợ cắt tóc;giáo viên;flanel_shirt
+công nhân;cà phê;tiếng Tây Ban Nha
+tôn giáo;nga;ngứa
+cơ bản;kính;tiếng Pháp
+excentric;weird;ugly
+bald_headed;hút thuốc;john_doe
+charlie_chaplin;the_thirties;lạ mắt
+biker;tatoos;tank_top
+thirty_years_old;bị bỏ quên;bận rộn
+trẻ trung;thanh lịch;three_days
+viking;hoang dã;mất vệ sinh
+quyến rũ;bận rộn;trưởng thành
+đồi trụy;triết gia;nhà sinh thái học
+bị bỏ quên;tù nhân;nhạc sĩ
+đồi trụy;nghiêm ngặt;luẩn quẩn
+đồi trụy;the_sixties;gangster
+lộn xộn;thợ cắt tóc;ý
+cổ điển;ánh sáng;hiện đại
+mountain_people;viking;vintage
+cũ;sauvage;thanh lịch
+bản gốc;dê;hippie
+táo bạo;trưởng thành;hipster
+charlie_chaplin;lố bịch;kỳ lạ
+well_made;phương Tây;khác nhau
+lộn xộn;trưởng thành;độc lập
+người lao động; young_adult; luật sư
+lười biếng; hipster; già
+well_made; cổ điển; nhã
+nhạc sĩ; hippie; Guitar
+lumberjack; hiện đại; north_people
+lố bịch; lạ; già
+cao bồi; khác nhau; Vintage
+lộn xộn; thợ cắt tóc; tiếng Ý
+cổ điển; ánh sáng; hiện đại
+mountain_people; viking; Vintage
+cũ; sauvage; nhã
+người hút thuốc;luẩn quẩn;đồng
+đáng yêu;mát mẻ;nghiêm túc
+người hút thuốc;luẩn quẩn;đam mê
+roader;fifty;energetic
+phù hợp;xem;giàu
+nghèo;tù nhân;lười biếng
+viking;chiến binh;xấu xí
+trẻ;chăm chỉ;hoang dã
+người hút thuốc;tiếng Ý;họa sĩ
+xấu xí;lỗi thời;trẻ
+nghệ sĩ;lố bịch;stange
+mexico;mobster, nhân vật phản diện
+bận rộn;dám nghĩ dám làm;lớp
+thông minh;thân thiện;mát mẻ
+người lao động;hoang dã;thông minh
+bình tĩnh;tử tế;mát mẻ
+biến thái;nhút nhát;hướng nội
+trưởng thành;có kinh nghiệm;luẩn quẩn
+nghệ sĩ;hướng nội;yên tĩnh
+cũ;rocker;hài hước
+bẩn; không gọn gàng; lười
+hiện đại; sạch sẽ; động lực học
+biker; đá; Manly
+hipster; không gọn gàng; nông dân
+dê; mờ ám; Tinh thần
+cổ điển; hiện đại; viril
+mờ ám; geek; nghiêm
+boor; nông dân; barbeccue
+đẳng cấp; gợi cảm; bỏ bê
+gợi cảm; bad_boy; bỏ bê
+lumberjack; hoang dã; old_school
+mạnh mẽ; áp đặt; powerfull
+đồi trụy; exentric; khó chịu
+lumberjack; chill; Lôi cuốn
+đồi trụy; exentric; khó chịu
+xấu xa; nghi phạm; lạ
+thợ mộc;hài hước;lôi cuốn
+gọn gàng;doanh nhân;lôi cuốn
+biker;dirty;rocker
+chưa quyết định;nghiêm túc;nhàm chán
+judoka;luẩn quẩn;đồi trụy
+giáo viên;bình tĩnh;quyến rũ
+trẻ;geek;nhút nhát
+mexico;ngông cuồng;không điển hình
+gọn gàng;hợp thời trang;bảo trì
+nam tính;sexy;bị bỏ quên
+hipster;axman;viking
+đẹp;nhẹ nhàng;lãng mạn
+old_fashion;nghịch ngợm;xảo quyệt
+badboy;độc hại;kiêu ngạo
+tiếng Tây Ban Nha;bling_bling;biker
+cổ điển;bảy mươi;truck_driver
+thuần chay;young_executive;nhà thơ
+mệt mỏi;bận rộn;cha
+viking;bia;thợ mộc
+trẻ;bất cẩn;poorly_maintained
+trung quốc;dê;người hút thuốc
+ăn thịt;hút thuốc;ích kỷ
+tối giản;nhút nhát;nhạc sĩ
+texan;biker;nationalist
+hiện đại;bad_boy;đẹp
+rắc;gai;kính
+hipster;hoang dã;brushy
+lumberjack;thân thiện;hardworker
+khó chịu;gây phiền nhiễu;peeky
+mát mẻ;thể thao;đẹp
+âm nhạc;thanh;hài hước
+thân thiện;hào phóng;big_eater
+lộn xộn;bobo;lôi cuốn
+năng động;tự tin;đẹp
+bobo;nice;coquet
+đẹp;lộn xộn;lôi cuốn
+maghrebian;hài hước;đẹp
+độc đoán;quyến rũ;nghiêm túc
+nhút nhát;maghrebian;nice
+đẹp;hài hước;nhạc sĩ
+lộn xộn;thiếu niên;bẩn
+quyến rũ;phong cách;ba mươi
+biker;bẩn;đá
+lộn xộn;bia;bẩn
+hài hước;giáo viên;lạ
+bất cẩn;bẩn thỉu;trẻ
+xấu xí;kỳ lạ;người chơi
+nghiêm ngặt;hài hước;smily
+người lao động;bận rộn;lãnh đạo
+thân thiện;thông minh;gọn gàng
+man rợ;bị bỏ quên;lười biếng
+ngọt ngào;bất cẩn;nông dân
+cái ác;buồn cười;bản gốc
+hipster;cũ;đậm
+khinh miệt;kiêu ngạo;khác biệt
+biker;rodeo;vintage
+cổ điển;not_origanal;trẻ
+young_father;cơ bản;thư giãn
+hipster;vintage;old
+cơ bản;trẻ;đẹp
+bản gốc;ngông cuồng;lạ
+cẩu thả;trẻ;man rợ
+kỳ lạ;khác biệt;cổ điển
+kỳ lạ;lạ;bản gốc
+bình thường;bị bỏ qua;bận rộn
+hiện đại;thanh lịch;thông minh
+hipster;biker;rocker
+thân thiện;trẻ;bình thường
+kỳ lạ;exentric;xấu xí
+cha;đáng sợ;thức ăn nhanh
+thông minh;nhút nhát;người đọc
+biker;thợ săn;lạ
+hippy;cẩu thả;middle_age
+tự tin;trẻ;clasic
+bẩn thỉu;khó chịu;đáng sợ
+mát mẻ;lướt sóng;phổ biến
+lạ;not_fun;sợ hãi
+hippy;middle_age;savege
+hitler;lạ;cũ
+thanh tra;cũ;sợ hãi
+giáo viên;đẹp;vui vẻ
+đơn giản;lười biếng;trẻ
+hipster;nhút nhát;bình tĩnh
+giản dị;hướng nội;đơn giản
+hướng ngoại;giáo viên;nghiêm ngặt
+bình thường;phong cách;thân thiện
+kiêu ngạo;tự phát;nghiêm ngặt
+táo bạo;cũ;tò mò
+đơn giản;giản dị;cổ điển
+đẳng cấp;trẻ trung;giản dị
+hipster;biker;mộc mạc
+đơn giản;trẻ;cổ điển
+không điển hình;kỳ lạ;đặc biệt
+đơn giản;giản dị;trẻ
+không điển hình;kỳ lạ;kiêu ngạo
+hài hước;tự phát;tự tin
+tỉnh táo;đơn giản;hiệu quả
+hợp thời trang;sạch sẽ;cổ điển
+tiều phu;mộc mạc;bất cẩn
+cổ điển;trẻ;giản dị
+tối giản;nghiêm ngặt;lỗi thời
+ông nội;lỗi thời;sử gia
+tối giản;nghiên cứu;lạ
+old_school;giáo sư;lỗi thời
+trang trí;lộn xộn;hợp thời trang
+duy trì;thưa thớt;hợp thời trang
+hipster;hoang dã;logger
+trang trí;phổ biến;hợp thời trang
+old_fashioned;không điển hình;not_stylish
+trang trí;xây dựng;forty_years_old
+tối giản;old_fashioned;không điển hình
+biker;không phổ biến;fifty_years_old
+trẻ;not_clean;tối
+trẻ;three_day;pretty_boy
+hoang dã;cũ;bảo trì
+sixtees;lumberjack;hoang dã
+nghệ sĩ;small_boy;nhạc sĩ
+diễn viên;người lớn;hipster
+deutch;minimalist;old
+tây ban nha;guitar;cũ
+bobo; bố; chủ nghĩa khoái lạc
+vô nhiễm; ba mươi; năng động
+lumberjack; bẩn; nhạc sĩ
+vô tổ chức; thư giãn; nghệ sĩ	
+không điển hình; ông nội; sử gia	
+hertthrob; tò mò; party_boy	
+cũ; kỳ lạ; nghiêm	
+nghiêm túc; trồng trọt; thú vị	
+nghệ sĩ;thành phố;mát mẻ	
+trẻ;thể dục;lãnh đạo	
+giáng sinh;hipster;bản gốc	
+cơ bản;cha;convivial	
+thợ máy;lạ;xe máy	
+lumberjack;ăn thịt;cũ	
+hình xăm;đá;bia	
+bản gốc;tiếng Ý;họa sĩ	
+cũ;bẩn;lười biếng	
+thất nghiệp;pyjama;slacker	
+hipster;hard_rock;xỏ khuyên	
+giáo sư;áo sơ mi;cà vạt	
+ý;chủ nhà;lãng mạn	
+lớp;phù hợp;buisness_man	
+lố bịch;puny;nhút nhát	
+đá;biker;cũ	
+nam tính;quý ông;thanh lịch	
+mất trật tự;not_stylish;người lớn	
+hipster;hợp thời trang;không điển hình	
+đẳng cấp;đơn giản;trình quản lý	
+bản gốc;tối giản;lạ	
+mạnh mẽ;lười biếng;ngoan cường	
+đáng ngạc nhiên;not_pretty;lố bịch	
+tây;mexico;tây ban nha	
+bốn mươi; cha; Phong cách	
+lười biếng; trẻ; Vui vẻ	
+cũ; uống rượu; dơ	
+bận rộn; sếp; mát	
+kỳ lạ; lập dị; Narcissistic	
+middle_aged; gentelman; Lãng mạn	
+nghệ thuật; hipster; lạ	
+cow_boy; tây ban nha; self_centered	
+charsmatic;thirty_years_old;cool	
+trẻ trung;sạch sẽ;hợp thời trang	
+hipster;biker;cũ	
+cơ bản;cha;phổ biến	
+lỗi thời;not_stylish;lập dị	
+tự ái;kiêu ngạo;tự phụ	
+thô lỗ;mysogynist;luẩn quẩn	
+roader;rock;vintage 	
+ông nội;cổ điển;đẹp	
+trẻ;đẹp trai;doanh nhân	
+hipster;hài hước;brooklyn	
+nhút nhát;kín đáo;tử tế	
+kỳ lạ;khó chịu;bad_guy	
+mượt mà;sạch sẽ;nghiêm túc	
+kỳ quặc;đáng sợ;kỳ lạ	
+bản gốc;hài hước;loại
