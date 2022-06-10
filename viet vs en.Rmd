@@ -22,15 +22,13 @@ Import de la traduction :
 On importe avec les accents et on créait une nouvelle colonne sans eux avec la fonction `stri_trans_general()` du package `stringi` (il permet de faire de la translitération de texte) 
 ```{r}
 trad <- read.table("data/traduction.txt", sep="\n", header = TRUE, encoding = "UTF-8") 
-colnames(trad) <- "Trad"
-trad <- trad %>% mutate(trad = stri_trans_general(Trad, "Latin-ASCII")) %>% select(trad)
+colnames(trad) <- "trad_avec_accents"
+trad <- trad %>% mutate(trad_sans_accents = stri_trans_general(trad_avec_accents, "Latin-ASCII")) 
 ```
 
 Mutate + transformation en variables catégorielles :
 ```{r}
-barbes <- barbes %>% mutate(Trad=trad$trad)
-barbes <- data.frame(barbes$Barbes, barbes$Juge, barbes$Mots, barbes$Trad)
-colnames(barbes) <- c("Barbes", "Juge", "Mots","Trad")
+barbes <- cbind(barbes, trad)
 
 barbes$Barbes <- as.factor(barbes$Barbes)
 barbes$Juge <- as.factor(barbes$Juge)
@@ -49,6 +47,8 @@ summary(barbes$Barbes)
 Création de deux df : viet et en
 ```{r}
 barbes.en <- barbes[,-4]
+barbes.en <- barbes.en[,-4]
+
 barbes.viet <- barbes[,-3]
 ```
 
@@ -70,8 +70,21 @@ words_selection.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table
 words_selection_sup10.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)>=10]
 ```
 
+Viet sans accent :
 ```{r}
-res.textual.viet <- textual(barbes.viet,num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.viet.sans.accent <- textual(barbes.viet[,-3],num.text = 3, contingence.by = 1, sep.word = ";")
+
+eff.viet <- as.data.frame(apply(res.textual.viet.sans.accent$cont.table, MARGIN = 2, FUN=sum))
+
+# Tout les mots : 669 mots
+words_selection.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)]
+# Sélection des mots qui apparaissent plus de 10 fois : 29
+words_selection_sup10.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)>=10]
+```
+
+Viet avec accents :
+```{r}
+res.textual.viet <- textual(barbes.viet[,-4],num.text = 3, contingence.by = 1, sep.word = ";")
 
 eff.viet <- as.data.frame(apply(res.textual.viet$cont.table, MARGIN = 2, FUN=sum))
 
@@ -102,44 +115,43 @@ res.CA.en <- CA(words_selection.en, graph=FALSE)
 res.CA.sup10.en <- CA(words_selection_sup10.en, graph=FALSE)
 plot.CA(res.CA.sup10.en)
 ```
-Vietnamien : 
+Vietnamien sans accent : 
+```{r}
+res.CA.viet <- CA(words_selection.viet.sans.accent, graph=FALSE)
+# plot.CA(res.CA.viet) -> illisible
+
+res.CA.sup10.viet.sans.accent <- CA(words_selection_sup10.viet.sans.accent, graph=FALSE)
+plot.CA(res.CA.sup10.viet.sans.accent, invisible="row")
+```
+
+Vietnamien avec accent : 
 ```{r}
 res.CA.viet <- CA(words_selection.viet, graph=FALSE)
 # plot.CA(res.CA.viet) -> illisible
 
 res.CA.sup10.viet <- CA(words_selection_sup10.viet, graph=FALSE)
-plot.CA(res.CA.sup10.viet)
-```
-## MCA
+plot.CA(res.CA.sup10.viet, invisible="row")
 
-Que ce soit en anglais ou en vietnamien, il nous faut avec une colonne représentant les 9 produits (barbes) et une colonne pour chaque juge désignant les mots donnés pour chacune des barbes.
+res.CA.sup10.viet$col$coord
+res.CA.sup10.viet.sans.accent$col$coord
+```
+# Comparaison
 
 ```{r}
-# ANGLAIS :
-barbes.en.V2 <- data.frame(barbes=levels(barbes.en$Barbes))
-for (j in levels(barbes.en$Juge)){
-  test <- barbes.en %>% filter(Juge==j)
-  test <- test[-2]
-  barbes.en.V2 <- cbind(barbes.en.V2, j=test[,2])
-}
-colnames(barbes.en.V2)[-1] <- levels(barbes.en$Juge)
-
-# VIETNAMIEN :
-barbes.viet.V2 <- data.frame(barbes=levels(barbes.viet$Barbes))
-for (j in levels(barbes.viet$Juge)){
-  test <- barbes.viet %>% filter(Juge==j)
-  test <- test[-2]
-  barbes.viet.V2 <- cbind(barbes.viet.V2, j=test[,2])
-}
-colnames(barbes.viet.V2)[-1] <- levels(barbes.viet$Juge)
+res.CA.sup10.en$col$coord
+res.CA.sup10.viet$col$coord
+res.CA.sup10.viet.sans.accent$col$coord
 ```
 
-On exécute ensuite les MCA sur chacun :
-```{r}
-res.mca.viet <- MCA(barbes.viet.V2,graph=FALSE,ncp=30)
-plot.MCA(res.mca.viet,axes=c(1,2),choix="ind",invisible="var")
+Conclusion : 
+- avec ou sans accents, les coord pour les mots viet sont les mêmes
+- différence avec anglais mais pcq trad bancale
 
-res.mca.en <- MCA(barbes.en.V2,graph=FALSE,ncp=30)
-plot.MCA(res.mca.en,axes=c(1,2),choix="ind",invisible="var")
+# Plus petits jeu de données avec vérification de traduction 
+
+```{r}
+barbesV2 <- barbes[1:12,]
+barbesV2 <- barbesV2[-2,]
+barbesV2 <- barbesV2[-7,]
 ```
 
