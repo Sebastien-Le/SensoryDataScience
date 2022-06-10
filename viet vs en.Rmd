@@ -130,14 +130,7 @@ res.CA.viet <- CA(words_selection.viet, graph=FALSE)
 # plot.CA(res.CA.viet) -> illisible
 
 res.CA.sup10.viet <- CA(words_selection_sup10.viet, graph=FALSE)
-<<<<<<< HEAD
-plot.CA(res.CA.sup10.viet)
-```
-
-## INTRODUCTION A LA MCA
-=======
 plot.CA(res.CA.sup10.viet, invisible="row")
->>>>>>> b212df915ed2424a965958a407d3b951012b338c
 
 res.CA.sup10.viet$col$coord
 res.CA.sup10.viet.sans.accent$col$coord
