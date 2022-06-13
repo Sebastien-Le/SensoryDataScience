@@ -63,7 +63,7 @@ res.textual.en <- textual(barbes.en,num.text = 3, sep.word = ";", contingence.by
 eff.en <- as.data.frame(apply(res.textual.en$cont.table, MARGIN = 2, FUN=sum))
 
 # Tout les mots : 627 mots
-words_selection.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)]
+words_selection.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)>=1]
 # Sélection des mots qui apparaissent plus de 10 fois : 31
 words_selection_sup10.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)>=10]
 
@@ -81,7 +81,7 @@ res.textual.viet <- textual(barbes.viet[,-4],num.text = 3, contingence.by = 1, s
 eff.viet <- as.data.frame(apply(res.textual.viet$cont.table, MARGIN = 2, FUN=sum))
 
 # Tout les mots : 669 mots
-words_selection.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)]
+words_selection.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)>=1]
 # Sélection des mots qui apparaissent plus de 10 fois : 29
 words_selection_sup10.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)>=10]
 
@@ -99,7 +99,7 @@ res.textual.viet.sans.accent <- textual(barbes.viet[,-3],num.text = 3, contingen
 eff.viet <- as.data.frame(apply(res.textual.viet.sans.accent$cont.table, MARGIN = 2, FUN=sum))
 
 # Tout les mots : 669 mots
-words_selection.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)]
+words_selection.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)>=1]
 # Sélection des mots qui apparaissent plus de 10 fois : 29
 words_selection_sup10.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)>=10]
 
@@ -130,67 +130,52 @@ barbesV2 <- barbesV2 %>% mutate(trad_sans_accents = stri_trans_general(Trad, "La
 barbesV2$Juge <- as.factor(barbesV2$Juge)
 barbesV2$Barbes <- as.factor(barbesV2$Barbes)
 
-barbesV2.viet.acc <- barbesV2[, -c(3,5)]
-barbesV2.viet.sans.acc <- barbesV2[, -c(3,4)]
-barbesV2.en <- barbesV2[,-c(4,5)]
+barbesV2.viet.acc <- as.data.frame(barbesV2[, -c(3,5)])
+barbesV2.viet.sans.acc <- as.data.frame(barbesV2[, -c(3,4)])
+barbesV2.en <- as.data.frame(barbesV2[,-c(4,5)])
 ```
 
 ## Anglais :
 ```{r}
-res.textual.en <- textual(barbesV2.en,num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.en.V2 <- textual(barbesV2.en,num.text = 3, contingence.by = 1, sep.word = ";")
 
-eff.en <- as.data.frame(apply(res.textual.en$cont.table, MARGIN = 2, FUN=sum))
+eff.en.V2 <- as.data.frame(apply(res.textual.en.V2$cont.table, MARGIN = 2, FUN=sum))
 
-# Tout les mots : 627 mots
-words_selection.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)]
-# Sélection des mots qui apparaissent plus de 10 fois : 31
-words_selection_sup10.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)>=10]
+words_selection.en.V2 <- res.textual.en.V2$cont.table[,apply(res.textual.en.V2$cont.table, 2, sum)>=1]
+res.CA.en.V2 <- CA(words_selection.en.V2, graph=FALSE)
+plot.CA(res.CA.en.V2)
 
-res.CA.en <- CA(words_selection.en, graph=FALSE)
-#plot.CA(res.CA.en) -> illisible
-
-res.CA.sup10.en <- CA(words_selection_sup10.en, graph=FALSE)
-plot.CA(res.CA.sup10.en)
 ```
 
 ## Vietnamien avec accents :
 ```{r}
-res.textual.viet <- textual(barbesV2.viet.acc,num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.viet.V2 <- textual(barbesV2.viet.acc,num.text = 3, contingence.by = 1, sep.word = ";")
 
-eff.viet <- as.data.frame(apply(res.textual.viet$cont.table, MARGIN = 2, FUN=sum))
+eff.viet.V2 <- as.data.frame(apply(res.textual.viet.V2$cont.table, MARGIN = 2, FUN=sum))
 
-# Tout les mots : 669 mots
-words_selection.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)]
-# Sélection des mots qui apparaissent plus de 10 fois : 29
-words_selection_sup10.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)>=10]
+words_selection.viet.V2 <- res.textual.viet.V2$cont.table[,apply(res.textual.viet.V2$cont.table, 2, sum)>=1]
 
-res.CA.viet <- CA(words_selection.viet, graph=FALSE)
-# plot.CA(res.CA.viet) -> illisible
-
-res.CA.sup10.viet <- CA(words_selection_sup10.viet, graph=FALSE)
-plot.CA(res.CA.sup10.viet, invisible="row")
+res.CA.viet.V2 <- CA(words_selection.viet.V2, graph=FALSE)
+plot.CA(res.CA.viet.V2)
 ```
 
 ## Vietnamien sans accents :
 ```{r}
-res.textual.viet.sans.accent <- textual(barbesV2.viet.sans.acc,num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.viet.sans.accent.V2 <- textual(barbesV2.viet.sans.acc,num.text = 3, contingence.by = 1, sep.word = ";")
 
-eff.viet <- as.data.frame(apply(res.textual.viet.sans.accent$cont.table, MARGIN = 2, FUN=sum))
+eff.viet.V2 <- as.data.frame(apply(res.textual.viet.sans.accent.V2$cont.table, MARGIN = 2, FUN=sum))
 
-# Tout les mots : 669 mots
-words_selection.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)]
-# Sélection des mots qui apparaissent plus de 10 fois : 29
-words_selection_sup10.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)>=10]
+words_selection.viet.sans.accent.V2 <- res.textual.viet.sans.accent.V2$cont.table[,apply(res.textual.viet.sans.accent.V2$cont.table, 2, sum)>=1]
 
-res.CA.viet <- CA(words_selection.viet.sans.accent, graph=FALSE)
-# plot.CA(res.CA.viet) -> illisible
-
-res.CA.sup10.viet.sans.accent <- CA(words_selection_sup10.viet.sans.accent, graph=FALSE)
-plot.CA(res.CA.sup10.viet.sans.accent, invisible="row")
+res.CA.viet.sans.accent.V2 <- CA(words_selection.viet.sans.accent.V2, graph=FALSE)
+plot.CA(res.CA.viet.sans.accent.V2) 
 ```
 
-## Comparaison 
-```{r}
+## Comparaison
 
+```{r}
+res.CA.en.V2$col$coord
+res.CA.viet.V2$col$coord
+res.CA.viet.sans.accent.V2$col$coord
 ```
 
