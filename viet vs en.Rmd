@@ -65,7 +65,7 @@ res.textual.en <- textual(barbes.en,num.text = 3, contingence.by = 1, sep.word =
 eff.en <- as.data.frame(apply(res.textual.en$cont.table, MARGIN = 2, FUN=sum))
 
 # Tout les mots : 627 mots
-words_selection.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)]
+words_selection.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)>=1]
 # Sélection des mots qui apparaissent plus de 10 fois : 31
 words_selection_sup10.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)>=10]
 ```
@@ -77,7 +77,7 @@ res.textual.viet.sans.accent <- textual(barbes.viet[,-3],num.text = 3, contingen
 eff.viet <- as.data.frame(apply(res.textual.viet.sans.accent$cont.table, MARGIN = 2, FUN=sum))
 
 # Tout les mots : 669 mots
-words_selection.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)]
+words_selection.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)>=1]
 # Sélection des mots qui apparaissent plus de 10 fois : 29
 words_selection_sup10.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)>=10]
 ```
@@ -89,7 +89,7 @@ res.textual.viet <- textual(barbes.viet[,-4],num.text = 3, contingence.by = 1, s
 eff.viet <- as.data.frame(apply(res.textual.viet$cont.table, MARGIN = 2, FUN=sum))
 
 # Tout les mots : 669 mots
-words_selection.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)]
+words_selection.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)>=1]
 # Sélection des mots qui apparaissent plus de 10 fois : 29
 words_selection_sup10.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)>=10]
 ```
