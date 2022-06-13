@@ -23,7 +23,7 @@ Import de la traduction :
 
 On importe avec les accents et on créait une nouvelle colonne sans eux avec la fonction `stri_trans_general()` du package `stringi` (il permet de faire de la translitération de texte) 
 ```{r}
-trad <- read.table("data/traduction.txt", sep="\n", header = TRUE, encoding = "UTF-8") 
+trad <- read.table("data/traduction.txt", sep="\t", header = TRUE, encoding = "UTF-8") 
 colnames(trad) <- "trad_avec_accents"
 trad <- trad %>% mutate(trad_sans_accents = stri_trans_general(trad_avec_accents, "Latin-ASCII")) 
 ```
@@ -86,7 +86,7 @@ words_selection.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont
 words_selection_sup10.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)>=10]
 
 res.CA.viet <- CA(words_selection.viet, graph=FALSE)
-# plot.CA(res.CA.viet) -> illisible
+#plot.CA(res.CA.viet) -> illisible
 
 res.CA.sup10.viet <- CA(words_selection_sup10.viet, graph=FALSE)
 plot.CA(res.CA.sup10.viet, invisible="row")
@@ -103,7 +103,7 @@ words_selection.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,app
 # Sélection des mots qui apparaissent plus de 10 fois : 29
 words_selection_sup10.viet.sans.accent <- res.textual.viet.sans.accent$cont.table[,apply(res.textual.viet.sans.accent$cont.table, 2, sum)>=10]
 
-res.CA.viet <- CA(words_selection.viet.sans.accent, graph=FALSE)
+res.CA.viet.sans.accent <- CA(words_selection.viet.sans.accent, graph=FALSE)
 # plot.CA(res.CA.viet) -> illisible
 
 res.CA.sup10.viet.sans.accent <- CA(words_selection_sup10.viet.sans.accent, graph=FALSE)
@@ -114,8 +114,8 @@ plot.CA(res.CA.sup10.viet.sans.accent, invisible="row")
 
 ```{r}
 res.CA.sup10.en$col$coord
-res.CA.sup10.viet$col$coord
-res.CA.sup10.viet.sans.accent$col$coord
+res.CA.viet$col$coord
+res.CA.viet.sans.accent$col$coord
 ```
 
 Conclusion : 
@@ -144,7 +144,6 @@ eff.en.V2 <- as.data.frame(apply(res.textual.en.V2$cont.table, MARGIN = 2, FUN=s
 words_selection.en.V2 <- res.textual.en.V2$cont.table[,apply(res.textual.en.V2$cont.table, 2, sum)>=1]
 res.CA.en.V2 <- CA(words_selection.en.V2, graph=FALSE)
 plot.CA(res.CA.en.V2)
-
 ```
 
 ## Vietnamien avec accents :
@@ -156,7 +155,8 @@ eff.viet.V2 <- as.data.frame(apply(res.textual.viet.V2$cont.table, MARGIN = 2, F
 words_selection.viet.V2 <- res.textual.viet.V2$cont.table[,apply(res.textual.viet.V2$cont.table, 2, sum)>=1]
 
 res.CA.viet.V2 <- CA(words_selection.viet.V2, graph=FALSE)
-plot.CA(res.CA.viet.V2)
+plot.CA(res.CA.viet.V2, invisible="col")
+plot.CA(res.CA.viet.V2, invisible="row")
 ```
 
 ## Vietnamien sans accents :
