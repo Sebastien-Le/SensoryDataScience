@@ -58,7 +58,7 @@ barbes.viet <- barbes[,-3]
 
 ## Anglais :
 ```{r}
-res.textual.en <- textual(barbes.en,num.text = 3, sep.word = ";", contingence.by = 1)
+res.textual.en <- textual(barbes.en,num.text = 3, sep.word = ";", contingence.by = 2)
 
 eff.en <- as.data.frame(apply(res.textual.en$cont.table, MARGIN = 2, FUN=sum))
 
@@ -71,12 +71,13 @@ res.CA.en <- CA(words_selection.en, graph=FALSE)
 #plot.CA(res.CA.en) -> illisible
 
 res.CA.sup10.en <- CA(words_selection_sup10.en, graph=FALSE)
-plot.CA(res.CA.sup10.en)
+plot.CA(res.CA.sup10.en, invisible="row")
+plot.CA(res.CA.sup10.en, invisible="col")
 ```
 
 ## Vietnamien avec accents :
 ```{r}
-res.textual.viet <- textual(barbes.viet[,-4],num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.viet <- textual(barbes.viet[,-4],num.text = 3, contingence.by = 2, sep.word = ";")
 
 eff.viet <- as.data.frame(apply(res.textual.viet$cont.table, MARGIN = 2, FUN=sum))
 
@@ -90,11 +91,12 @@ res.CA.viet <- CA(words_selection.viet, graph=FALSE)
 
 res.CA.sup10.viet <- CA(words_selection_sup10.viet, graph=FALSE)
 plot.CA(res.CA.sup10.viet, invisible="row")
+plot.CA(res.CA.sup10.viet, invisible="col")
 ```
 
 ## Vietnamien sans accents :
 ```{r}
-res.textual.viet.sans.accent <- textual(barbes.viet[,-3],num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.viet.sans.accent <- textual(barbes.viet[,-3],num.text = 3, contingence.by = 2, sep.word = ";")
 
 eff.viet <- as.data.frame(apply(res.textual.viet.sans.accent$cont.table, MARGIN = 2, FUN=sum))
 
@@ -108,6 +110,7 @@ res.CA.viet.sans.accent <- CA(words_selection.viet.sans.accent, graph=FALSE)
 
 res.CA.sup10.viet.sans.accent <- CA(words_selection_sup10.viet.sans.accent, graph=FALSE)
 plot.CA(res.CA.sup10.viet.sans.accent, invisible="row")
+plot.CA(res.CA.sup10.viet.sans.accent, invisible="col")
 ```
 
 ## Comparaison
@@ -137,45 +140,63 @@ barbesV2.en <- as.data.frame(barbesV2[,-c(4,5)])
 
 ## Anglais :
 ```{r}
-res.textual.en.V2 <- textual(barbesV2.en,num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.en.V2 <- textual(barbesV2.en,num.text = 3, contingence.by = 2, sep.word = ";")
 
 eff.en.V2 <- as.data.frame(apply(res.textual.en.V2$cont.table, MARGIN = 2, FUN=sum))
 
 words_selection.en.V2 <- res.textual.en.V2$cont.table[,apply(res.textual.en.V2$cont.table, 2, sum)>=1]
 res.CA.en.V2 <- CA(words_selection.en.V2, graph=FALSE)
-plot.CA(res.CA.en.V2)
+
+plot.CA(res.CA.en.V2, invisible = "row")
+plot.CA(res.CA.en.V2, invisible="col")
 ```
 
 ## Vietnamien avec accents :
 ```{r}
-res.textual.viet.V2 <- textual(barbesV2.viet.acc,num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.viet.V2 <- textual(barbesV2.viet.acc,num.text = 3, contingence.by = 2, sep.word = ";")
 
 eff.viet.V2 <- as.data.frame(apply(res.textual.viet.V2$cont.table, MARGIN = 2, FUN=sum))
 
 words_selection.viet.V2 <- res.textual.viet.V2$cont.table[,apply(res.textual.viet.V2$cont.table, 2, sum)>=1]
 
 res.CA.viet.V2 <- CA(words_selection.viet.V2, graph=FALSE)
-plot.CA(res.CA.viet.V2, invisible="col")
 plot.CA(res.CA.viet.V2, invisible="row")
+plot.CA(res.CA.viet.V2, invisible="col")
 ```
 
 ## Vietnamien sans accents :
 ```{r}
-res.textual.viet.sans.accent.V2 <- textual(barbesV2.viet.sans.acc,num.text = 3, contingence.by = 1, sep.word = ";")
+res.textual.viet.sans.accent.V2 <- textual(barbesV2.viet.sans.acc,num.text = 3, contingence.by = 2, sep.word = ";")
 
 eff.viet.V2 <- as.data.frame(apply(res.textual.viet.sans.accent.V2$cont.table, MARGIN = 2, FUN=sum))
 
 words_selection.viet.sans.accent.V2 <- res.textual.viet.sans.accent.V2$cont.table[,apply(res.textual.viet.sans.accent.V2$cont.table, 2, sum)>=1]
 
 res.CA.viet.sans.accent.V2 <- CA(words_selection.viet.sans.accent.V2, graph=FALSE)
-plot.CA(res.CA.viet.sans.accent.V2) 
+plot.CA(res.CA.viet.sans.accent.V2, invisible = "row")
+plot.CA(res.CA.viet.sans.accent.V2, invisible = "col") 
 ```
 
 ## Comparaison
 
 ```{r}
-res.CA.en.V2$col$coord
-res.CA.viet.V2$col$coord
-res.CA.viet.sans.accent.V2$col$coord
+coord.en.V2 <- data.frame("words"=rownames(res.CA.en.V2$col$coord))
+coord.en.V2 <- coord.en.V2 %>% mutate(Dim1.en=res.CA.en.V2$col$coord[,1], Dim2.en=res.CA.en.V2$col$coord[,2])
+coord.en.V2 <- as.data.frame(coord.en.V2[order(coord.en.V2$Dim1.en,coord.en.V2$Dim2.en),])
+
+coord.viet.acc.V2 <- data.frame("words"=rownames(res.CA.viet.V2$col$coord))
+coord.viet.acc.V2 <- coord.viet.acc.V2 %>% mutate(Dim1.viet.acc = res.CA.viet.V2$col$coord[,1], Dim2.viet.acc=res.CA.viet.V2$col$coord[,2])
+coord.viet.acc.V2 <- as.data.frame(coord.viet.acc.V2[order(coord.viet.acc.V2$Dim1.viet.acc,coord.viet.acc.V2$Dim2.viet.acc),])
+
+coord.viet.sans.acc.V2 <- data.frame("words"=rownames(res.CA.viet.sans.accent.V2$col$coord))
+coord.viet.sans.acc.V2 <- coord.viet.sans.acc.V2 %>% mutate(Dim1.viet.sans.acc = res.CA.viet.sans.accent.V2$col$coord[,1], Dim2.viet.sans.acc=res.CA.viet.sans.accent.V2$col$coord[,2])
+coord.viet.sans.acc.V2 <- as.data.frame(coord.viet.sans.acc.V2[order(coord.viet.sans.acc.V2$Dim1.viet.sans.acc,coord.viet.sans.acc.V2$Dim2.viet.sans.acc),])
+
+coord <- cbind(coord.en.V2, coord.viet.acc.V2, coord.viet.sans.acc.V2)
+
 ```
+
+Conclusion : 
+- pas de différence entre CA mots anglais versus mots vietnamiens (warnings sur l'encodage lors de la CA mais coordonnées pareilles);
+- aucune utilité des mots vietnamiens sans accents
 
