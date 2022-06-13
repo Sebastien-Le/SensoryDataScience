@@ -781,7 +781,6 @@ coord_pca_pond <- res.pca.pon$ind$coord
 res.pca.pon$eig
 svd.triplet(scale(wine_quanti))
 PCA(wine_quanti)$svd
-
 ```
 
 > Ajout des blocs déjà faits
