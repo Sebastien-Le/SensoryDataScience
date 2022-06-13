@@ -2,7 +2,9 @@
 title: "Part2 : Quali-Quali"
 author: "Guillaume"
 date: "07/06/2022"
-output: html_document
+output:
+  html_document: 
+    toc: yes
 ---
 #Representation of sensory attributes and bivariate analysis
 ## data importation, cleaning and selection
