@@ -194,7 +194,7 @@ res.descfreq
 The V-test is used to transform p-values into scores that are more easily interpretable. The main
 feature of this indicator is that it can be positive, or negative, depending on the test that has been performed. It is closed to a Z-score. 
 
-#Pratic example with beards
+# Pratic example with barbes
 
 ```{r}
 library(readxl)
@@ -204,107 +204,75 @@ library(vietnameseConverter)
 library(stringi)
 ```
 
-
-# Import + modifications 
-
-Import du jeu de données initial (sans traduction):
+## Import + modifications 
 ```{r}
-barbes <- read_excel("data/barbes.xlsx")
+barbesV2 <- read_excel("data/barbesV2.xlsx")
+barbesV2 <- barbesV2 %>% mutate(trad_sans_accents = stri_trans_general(Trad, "Latin-ASCII"))
+barbesV2$Juge <- as.factor(barbesV2$Juge)
+barbesV2$Barbes <- as.factor(barbesV2$Barbes)
+
+barbesV2.viet.acc <- as.data.frame(barbesV2[, -c(3,5)])
+barbesV2.viet.sans.acc <- as.data.frame(barbesV2[, -c(3,4)])
+barbesV2.en <- as.data.frame(barbesV2[,-c(4,5)])
 ```
 
-Import de la traduction :
-
-On importe avec les accents et on créait une nouvelle colonne sans eux avec la fonction `stri_trans_general()` du package `stringi` (il permet de faire de la translitération de texte)
-
+### Anglais :
 ```{r}
-trad <- read.table("data/traduction.txt", sep="\n", header = TRUE, encoding = "UTF-8") 
-colnames(trad) <- "Trad"
-trad <- trad %>% mutate(trad = stri_trans_general(Trad, "Latin-ASCII")) %>% select(trad)
+res.textual.en.V2 <- textual(barbesV2.en,num.text = 3, contingence.by = 2, sep.word = ";")
+
+eff.en.V2 <- as.data.frame(apply(res.textual.en.V2$cont.table, MARGIN = 2, FUN=sum))
+
+words_selection.en.V2 <- res.textual.en.V2$cont.table[,apply(res.textual.en.V2$cont.table, 2, sum)>=1]
+res.CA.en.V2 <- CA(words_selection.en.V2, graph=FALSE)
+
+plot.CA(res.CA.en.V2, invisible = "row")
+plot.CA(res.CA.en.V2, invisible="col")
 ```
 
-Mutate + transformation en variables catégorielles :
-
+### Vietnamien avec accents :
 ```{r}
-barbes <- barbes %>% mutate(Trad=trad$trad)
-barbes <- data.frame(barbes$Barbes, barbes$Juge, barbes$Mots, barbes$Trad)
-colnames(barbes) <- c("Barbes", "Juge", "Mots","Trad")
+res.textual.viet.V2 <- textual(barbesV2.viet.acc,num.text = 3, contingence.by = 2, sep.word = ";")
 
-barbes$Barbes <- as.factor(barbes$Barbes)
-barbes$Juge <- as.factor(barbes$Juge)
+eff.viet.V2 <- as.data.frame(apply(res.textual.viet.V2$cont.table, MARGIN = 2, FUN=sum))
+
+words_selection.viet.V2 <- res.textual.viet.V2$cont.table[,apply(res.textual.viet.V2$cont.table, 2, sum)>=1]
+
+res.CA.viet.V2 <- CA(words_selection.viet.V2, graph=FALSE)
+plot.CA(res.CA.viet.V2, invisible="row")
+plot.CA(res.CA.viet.V2, invisible="col")
 ```
 
-Vérification :
+### Vietnamien sans accents :
 ```{r}
-summary(barbes)
+res.textual.viet.sans.accent.V2 <- textual(barbesV2.viet.sans.acc,num.text = 3, contingence.by = 2, sep.word = ";")
 
-summary(barbes$Barbes)
+eff.viet.V2 <- as.data.frame(apply(res.textual.viet.sans.accent.V2$cont.table, MARGIN = 2, FUN=sum))
 
-# Un B7 au lieu de b7 traîne, correction :
-levels(barbes$Barbes) <- c("b1","b2", "b3", "b4","b5","b6","b7","b7","b8")
-summary(barbes$Barbes)
+words_selection.viet.sans.accent.V2 <- res.textual.viet.sans.accent.V2$cont.table[,apply(res.textual.viet.sans.accent.V2$cont.table, 2, sum)>=1]
+
+res.CA.viet.sans.accent.V2 <- CA(words_selection.viet.sans.accent.V2, graph=FALSE)
+plot.CA(res.CA.viet.sans.accent.V2, invisible = "row")
+plot.CA(res.CA.viet.sans.accent.V2, invisible = "col") 
 ```
 
-Création de deux df : viet et en
+### Comparaison
 
 ```{r}
-barbes.en <- barbes[,-4]
-barbes.viet <- barbes[,-3]
-```
-## Tableaux de contingence
+coord.en.V2 <- data.frame("words"=rownames(res.CA.en.V2$col$coord))
+coord.en.V2 <- coord.en.V2 %>% mutate(Dim1.en=res.CA.en.V2$col$coord[,1], Dim2.en=res.CA.en.V2$col$coord[,2])
+coord.en.V2 <- as.data.frame(coord.en.V2[order(coord.en.V2$Dim1.en,coord.en.V2$Dim2.en),])
 
-Deux options : 
-- en délimitant les effectifs à >10, 
-- aucune délimitation.
+coord.viet.acc.V2 <- data.frame("words"=rownames(res.CA.viet.V2$col$coord))
+coord.viet.acc.V2 <- coord.viet.acc.V2 %>% mutate(Dim1.viet.acc = res.CA.viet.V2$col$coord[,1], Dim2.viet.acc=res.CA.viet.V2$col$coord[,2])
+coord.viet.acc.V2 <- as.data.frame(coord.viet.acc.V2[order(coord.viet.acc.V2$Dim1.viet.acc,coord.viet.acc.V2$Dim2.viet.acc),])
 
-Pour les mots anglais : 
-```{r}
-res.textual.en <- textual(barbes.en,num.text = 3, contingence.by = 1, sep.word = ";")
+coord.viet.sans.acc.V2 <- data.frame("words"=rownames(res.CA.viet.sans.accent.V2$col$coord))
+coord.viet.sans.acc.V2 <- coord.viet.sans.acc.V2 %>% mutate(Dim1.viet.sans.acc = res.CA.viet.sans.accent.V2$col$coord[,1], Dim2.viet.sans.acc=res.CA.viet.sans.accent.V2$col$coord[,2])
+coord.viet.sans.acc.V2 <- as.data.frame(coord.viet.sans.acc.V2[order(coord.viet.sans.acc.V2$Dim1.viet.sans.acc,coord.viet.sans.acc.V2$Dim2.viet.sans.acc),])
 
-eff.en <- as.data.frame(apply(res.textual.en$cont.table, MARGIN = 2, FUN=sum))
-
-# Tout les mots : 627 mots
-words_selection.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)]
-# Sélection des mots qui apparaissent plus de 10 fois : 31
-words_selection_sup10.en <- res.textual.en$cont.table[,apply(res.textual.en$cont.table, 2, sum)>=10]
+coord <- cbind(coord.en.V2, coord.viet.acc.V2, coord.viet.sans.acc.V2)
 ```
 
-```{r}
-res.textual.viet <- textual(barbes.viet,num.text = 3, contingence.by = 1, sep.word = ";")
-
-eff.viet <- as.data.frame(apply(res.textual.viet$cont.table, MARGIN = 2, FUN=sum))
-
-# Tout les mots : 669 mots
-words_selection.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)]
-# Sélection des mots qui apparaissent plus de 10 fois : 29
-words_selection_sup10.viet <- res.textual.viet$cont.table[,apply(res.textual.viet$cont.table, 2, sum)>=10]
-```
-
-En résumé : 
-- en anglais; sur 627 mots, 31 apparaissent plus de 10 fois;
-- en vietnamien; sur 669 mots, 29 apparaissent plus de 10 fois. 
-
--> problème de traduction (problème pas très important ici)
-
-# Analyse exploratoire 
-
-## CA
-Deux CA :
-- sur tout les mots,
-- sur les mots qui aparaissent plus de 10 fois.
-
-Anglais : 
-```{r}
-res.CA.en <- CA(words_selection.en, graph=FALSE)
-#plot.CA(res.CA.en) -> illisible
-
-res.CA.sup10.en <- CA(words_selection_sup10.en, graph=FALSE)
-plot.CA(res.CA.sup10.en)
-```
-Vietnamien : 
-```{r}
-res.CA.viet <- CA(words_selection.viet, graph=FALSE)
-# plot.CA(res.CA.viet) -> illisible
-
-res.CA.sup10.viet <- CA(words_selection_sup10.viet, graph=FALSE)
-plot.CA(res.CA.sup10.viet)
-```
+Conclusion : 
+- pas de différence entre CA mots anglais versus mots vietnamiens (warnings sur l'encodage lors de la CA mais coordonnées pareilles);
+- aucune utilité des mots vietnamiens sans accents

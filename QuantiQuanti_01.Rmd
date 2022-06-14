@@ -244,6 +244,7 @@ for (attribute in colnames(experts[,5:7])){
   abline(h=mean(experts[,attribute]))
 }
 ```
+
 ##### ggplot2 function
 
 By using `ggplot2`, you can represent the same graphs with the function `geom_boxplot()`. To get several graphs on the same window, you can use the `gridExtra` library. It's useful only for ggplot's graphs. You must to store each graph in variables and with the function `grid.arrange()` where you inform variables and the number of rows (`nrow`) and columns (`columns`), you can plot graphs in the same window. 
