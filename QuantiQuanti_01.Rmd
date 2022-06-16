@@ -93,26 +93,51 @@ ggplot(experts)+
   aes(x=Spicy)+
   geom_histogram()
 ```
-Here you just informed the x-axis because by default the y-axis is the frequencies but if you want to plot the graph of the histogram of the density you can inquire the y-axis like `y=..density..`. 
-
-```{r}
-ggplot(experts)+
-  aes(x=Spicy)+
-  geom_histogram(aes(y=..density..))
-```
 
 In the layer `aes()` we can use different argument to modify the appareance or add more information. The most natural is to differenciate the distribution of the variable between products in using the `fill()` argument. 
 
 ```{r}
 ggplot(experts)+
-  aes(x=Spicy,fill=Product)+
-  geom_histogram(aes(y=..density..), position="identity")
+  aes(x=Spicy, fill=Product)+
+  geom_histogram()
 ```
 *Aesthetic tips* : to add a title and change the axes's titles, use the layer `labs()`
 ```{r}
 ggplot(experts)+
   aes(x=Spicy,fill=Product)+
-  geom_histogram(aes(y=..density..), position="identity")+
+  geom_histogram()+
+  labs(title="Histogram of Spicy" ,x="Spicy values", y = "Frequency")
+```
+
+
+Here you just informed the x-axis because by default the y-axis is the frequencies but if you want to plot the graph of the histogram of the density you can inquire the y-axis like `y=..density..`. 
+
+```{r}
+ggplot(experts)+
+  aes(x=Spicy,y=..density..)+
+  geom_histogram()+
+  labs(title="Histogram of Spicy" ,x="Spicy values", y = "Density")
+```
+Use *fill* to differenciate products: 
+```{r}
+ggplot(experts)+
+  aes(x=Spicy, y=..ndensity..,fill=Product)+
+  geom_histogram()+
+  labs(title="Histogram of Spicy" ,x="Spicy values", y = "Density")
+```
+We use *ndensity* so scale at 1 maximum. But problem : densities are cumulated in the y-axis. We can change the position :
+```{r}
+ggplot(experts)+
+  aes(x=Spicy, fill=Product)+
+  geom_histogram(aes(y=after_stat(ndensity)), position=position_dodge())+
+  labs(title="Histogram of Spicy" ,x="Spicy values", y = "Density")
+```
+Same example with only four products : 
+```{r}
+experts %>% filter(Product=="Chanel N5" | Product=="Pure Poison" | Product=="Shalimar" | Product=="Angel") %>%
+  ggplot()+
+  aes(x=Spicy, fill=Product)+
+  geom_histogram(aes(y=after_stat(ndensity)), position=position_dodge())+
   labs(title="Histogram of Spicy" ,x="Spicy values", y = "Density")
 ```
 
@@ -252,6 +277,7 @@ for (attribute in colnames(experts[,5:7])){
   abline(h=mean(experts[,attribute]))
 }
 ```
+
 ##### ggplot2 function
 
 By using `ggplot2`, you can represent the same graphs with the function `geom_boxplot()`. To get several graphs on the same window, you can use the `gridExtra` library. It's useful only for ggplot's graphs. You must to store each graph in variables and with the function `grid.arrange()` where you inform variables and the number of rows (`nrow`) and columns (`columns`), you can plot graphs in the same window. 
