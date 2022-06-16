@@ -93,27 +93,52 @@ ggplot(experts)+
   aes(x=Spicy)+
   geom_histogram()
 ```
-Here you just informed the x-axis because by default the y-axis is the frequencies but if you want to plot the graph of the histogram of the density you can inquire the y-axis like `y=..density..`. 
-
-```{r}
-ggplot(experts)+
-  aes(x=Spicy, y=..density..)+
-  geom_histogram()
-```
 
 In the layer `aes()` we can use different argument to modify the appareance or add more information. The most natural is to differenciate the distribution of the variable between products in using the `fill()` argument. 
 
 ```{r}
 ggplot(experts)+
-  aes(x=Spicy, y=..density.., fill=Product)+
+  aes(x=Spicy, fill=Product)+
   geom_histogram()
 ```
 *Aesthetic tips* : to add a title and change the axes's titles, use the layer `labs()`
 ```{r}
 ggplot(experts)+
-  aes(x=Spicy, y=..density.., fill=Product)+
-  geom_histogram() +
+  aes(x=Spicy,fill=Product)+
+  geom_histogram()+
   labs(title="Histogram of Spicy" ,x="Spicy values", y = "Frequency")
+```
+
+
+Here you just informed the x-axis because by default the y-axis is the frequencies but if you want to plot the graph of the histogram of the density you can inquire the y-axis like `y=..density..`. 
+
+```{r}
+ggplot(experts)+
+  aes(x=Spicy,y=..density..)+
+  geom_histogram()+
+  labs(title="Histogram of Spicy" ,x="Spicy values", y = "Density")
+```
+Use *fill* to differenciate products: 
+```{r}
+ggplot(experts)+
+  aes(x=Spicy, y=..ndensity..,fill=Product)+
+  geom_histogram()+
+  labs(title="Histogram of Spicy" ,x="Spicy values", y = "Density")
+```
+We use *ndensity* so scale at 1 maximum. But problem : densities are cumulated in the y-axis. We can change the position :
+```{r}
+ggplot(experts)+
+  aes(x=Spicy, fill=Product)+
+  geom_histogram(aes(y=after_stat(ndensity)), position=position_dodge())+
+  labs(title="Histogram of Spicy" ,x="Spicy values", y = "Density")
+```
+Same example with only four products : 
+```{r}
+experts %>% filter(Product=="Chanel N5" | Product=="Pure Poison" | Product=="Shalimar" | Product=="Angel") %>%
+  ggplot()+
+  aes(x=Spicy, fill=Product)+
+  geom_histogram(aes(y=after_stat(ndensity)), position=position_dodge())+
+  labs(title="Histogram of Spicy" ,x="Spicy values", y = "Density")
 ```
 
 ## Density
@@ -175,7 +200,15 @@ The plot of the density can be differentiate between products if we inform it wi
 
 ```{r}
 ggplot(experts) + 
-  aes(x=Vanilla, color=Product) + 
+  aes(x=Vanilla, col=Product) + 
+  geom_density() +
+  labs(title="Density of Vanilla for each product" ,x="Vanilla values", y = "Density")
+```
+It is possible for part of a curve to be >1 and for the area under the curve to be <1 or =1. Here, for the product "Pleasure", the part of the curve that is above y=1 --- i.e., the part between approx. x=0 and x=0.25 only has a width of around 0.25. So the area of that part is approximately 0.25 * 1.3 (1.3 being a guess at the average value in that x span), or around 0.325.You have to use ..scaled.. (density estimate, scaled to maximum of 1) within geom_density, by default it uses ..density...
+
+```{r}
+ggplot(experts) + 
+  aes(x=Vanilla, y=..scaled.., color=Product) + 
   geom_density() +
   labs(title="Density of Vanilla for each product" ,x="Vanilla values", y = "Density")
 ```
@@ -183,7 +216,7 @@ ggplot(experts) +
 
 ```{r}
 ggplot(experts) + 
-  aes(x=Vanilla, fill=Product) + 
+  aes(x=Vanilla, y=..scaled..,fill=Product) + 
   geom_density(alpha=0.5)  +
   labs(title="Density of Vanilla for each product" ,x="Vanilla values", y = "Density")
 ```

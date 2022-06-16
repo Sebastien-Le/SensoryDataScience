@@ -26,6 +26,7 @@ On importe avec les accents et on créait une nouvelle colonne sans eux avec la 
 trad <- read.table("data/traduction.txt", sep="\t", header = TRUE, encoding = "UTF-8") 
 colnames(trad) <- "trad_avec_accents"
 trad <- trad %>% mutate(trad_sans_accents = stri_trans_general(trad_avec_accents, "Latin-ASCII")) 
+Encoding(trad$trad_avec_accents)
 ```
 
 Mutate + transformation en variables catégorielles :
@@ -129,11 +130,19 @@ Conclusion :
 
 ```{r}
 barbesV2 <- read_excel("data/barbesV2.xlsx")
+
+barbesV3 <- read.table("data/barbesV3.csv", encoding="latin1", header=TRUE)
+Encoding(barbesV3$ï..Trad)
+barbesV3$ï..Trad <- decodeVN(barbesV3$ï..Trad )
+Encoding(barbesV3$ï..Trad)
+
 barbesV2 <- barbesV2 %>% mutate(trad_sans_accents = stri_trans_general(Trad, "Latin-ASCII"))
 barbesV2$Juge <- as.factor(barbesV2$Juge)
 barbesV2$Barbes <- as.factor(barbesV2$Barbes)
 
 barbesV2.viet.acc <- as.data.frame(barbesV2[, -c(3,5)])
+Encoding(barbesV2.viet.acc$Trad)
+
 barbesV2.viet.sans.acc <- as.data.frame(barbesV2[, -c(3,4)])
 barbesV2.en <- as.data.frame(barbesV2[,-c(4,5)])
 ```
@@ -200,3 +209,12 @@ Conclusion :
 - pas de différence entre CA mots anglais versus mots vietnamiens (warnings sur l'encodage lors de la CA mais coordonnées pareilles);
 - aucune utilité des mots vietnamiens sans accents
 
+```{r}
+string <- c("Qu\u00B6ng Tr\u00DE", "An \u00A7\u00ABn", "Th\u00F5a Thi\u00AAn Hu\u00D5")
+string <- c("tên_ông_vua")
+Encoding(string)
+string.encod <- decodeVN(string)
+Encoding(string.encod)
+decodeVN(string, diacritics = FALSE)
+```
+Quand on fait decodeVN(string), on garde les accents mais ça les convertit en UTF-8.
