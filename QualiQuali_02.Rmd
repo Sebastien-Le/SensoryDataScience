@@ -40,7 +40,8 @@ We want to visualize both variables simultaneously. A barchat is appropriate to 
 ```{r}
 library(ggplot2)
 
-ggplot(GMO.Al.A, aes(Position.Al.A, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories") 
+ggplot(GMO.Al.A, aes(Position.Al.A, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories") +
+  scale_fill_manual(values=c("Extreme left"="#bb0000","Left"="#FF8080","Liberal"="#ffeb00","Greens"="#3BA019","Right"="#0066cc"))
 ## ..count.. : stat transformation of the original data set
 ```
 
@@ -56,7 +57,8 @@ ind.sample <- sample(1:135)
 GMO.Al.A.Sample <- data.frame("Position.Al.A"=GMO.Al.A$Position.Al.A[ind.sample],'Political.Party'=GMO.Al.A$Political.Party)
 
 #visualization
-ggplot(GMO.Al.A.Sample, aes(Position.Al.A, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories sampled") 
+ggplot(GMO.Al.A.Sample, aes(Position.Al.A, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories sampled") +
+  scale_fill_manual(values=c("Extreme left"="#bb0000","Left"="#FF8080","Liberal"="#ffeb00","Greens"="#3BA019","Right"="#0066cc"))
 ```
 ## probability side
 
@@ -83,10 +85,14 @@ rownames(GMO_theo) <- rownames(GMO_table)
 colnames(GMO_theo) <- colnames(GMO_table)
 
 #barplot
-par(mfrow=c(1,3))
-barplot(t(as.table(as.matrix(GMO_theo))), beside = TRUE, main="effectifs theoriques")
-barplot(table(GMO.Al.A.Sample)/135, beside = TRUE,main="sample")
-barplot(t(table(GMO.Al.A)/135), beside = TRUE,main="non sample")
+barplot((as.table(as.matrix(GMO_theo))), beside = TRUE, main="effectifs theoriques", col=c("#bb0000","#3BA019","#FF8080","#ffeb00","#0066cc"))
+legend("topleft", inset=.02, title="Political Party", c("Extreme left","Greens","Left",'Liberal','Right'), horiz=TRUE, cex=0.8, fill=c("#bb0000","#3BA019","#FF8080","#ffeb00","#0066cc"))
+
+barplot(t(table(GMO.Al.A.Sample))/135, beside = TRUE, main="sample", col=c("#bb0000","#3BA019","#FF8080","#ffeb00","#0066cc"))
+legend("topleft", inset=.02, title="Political Party", c("Extreme left","Greens","Left",'Liberal','Right'), horiz=TRUE, cex=0.8, fill=c("#bb0000","#3BA019","#FF8080","#ffeb00","#0066cc"))
+#
+barplot((table(GMO.Al.A)/135), beside = TRUE,main="non sample", col=c("#bb0000","#3BA019","#FF8080","#ffeb00","#0066cc"))
+legend("topleft", inset=.02, title="Political Party", c("Extreme left","Greens","Left",'Liberal','Right'), horiz=TRUE, cex=0.8, fill=c("#bb0000","#3BA019","#FF8080","#ffeb00","#0066cc"))
 ```
 We have our referent situation on the left, where variables are perfectly independant. The sample data is very closed to the it, but the original one seems to be deviate. We can try to make first hypothesis concerning a test on independence. 
 
@@ -100,7 +106,8 @@ df <- rownames_to_column(df_theo, "Political.Party")
 
 df <- df %>% pivot_longer(!Political.Party, names_to="Position.Al.A", values_to = "frequence")
 ggplot(df, aes(y=frequence,x=Position.Al.A, fill=Political.Party))+
-         geom_col( position = "dodge", color="black")+ggtitle("Barplot of theorical table")
+         geom_col( position = "dodge", color="black")+ggtitle("Barplot of theorical table")+
+  scale_fill_manual(values=c("Extreme left"="#bb0000","Left"="#FF8080","Liberal"="#ffeb00","Greens"="#3BA019","Right"="#0066cc"))
 ```
 
 #Deviation to the independance

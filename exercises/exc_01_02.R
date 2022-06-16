@@ -1,1 +1,1 @@
-hist(experts$____, main="Histogram of ____")
+experts <- read.table(file="data/perfumes_qda_experts.csv",header=TRUE, sep=",",quote="\"")
