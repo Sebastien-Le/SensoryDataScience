@@ -98,15 +98,32 @@ And you can change this value easily by assigning another value:
 
 Finally, let's check our *experts* data frame.
 
-According to the output, you can see that we have two types of variables: the experimental factors, on the one hand, the sensory attributes, on the other hand.
+According to the output, you can see that we have two types of variables: the experimental factors, on the one hand, the sensory attributes, on the other hand. 
 
-For each factor, as for any qualitative variable, the `summary()` function provides the number of occurrences for each level: *e.g.*, for the *Product* variable, among the 288 rows in the data frame, 24 rows correspond to an assessment of the product *Angel*.
+For each factor, as for any qualitative variable, the `summary()` function provides the number of occurrences for each level: *e.g.*, for the *Product* variable, among the 288 rows in the data frame, 24 rows correspond to an assessment of the product *Angel*. 
 
-For each sensory attribute, as for any quantitative variable, the `summary()` function provides location parameters such as the minimum, the maximum, the median, the mean and the other quartiles of the variable of interest.
+For each sensory attribute, as for any quantitative variable, the `summary()` function provides the so-called location parameters such as the minimum, the maximum, the median, the mean and the other quartiles of the variable of interest.
 
-The values of these location parameters can also be obtained by running the following simple functions:
+## The R corner
+
+The values of these location parameters can also be obtained by running the following simple functions. These values can be combined using the very important `c()` function (this function combines values into a vector).
 
 <codeblock id="01_13">
+</codeblock>
+
+Let's calculate these values for all the attributes and store them in a data frame. Let's create a data frame called *loc.parameters* with the `data.frame()` function.
+
+<codeblock id="01_14">
+</codeblock>
+
+By iterating according to the columns we can calculate the values of the location parameters for each attribute and bind them, row by row with the `rbind()` function.
+
+<codeblock id="01_15">
+</codeblock>
+
+Then, in order to obtain an operational data frame, we set the names of the columns and the rows with the `colnames()` and the `rownames()` functions.
+
+<codeblock id="01_16">
 </codeblock>
 
 </exercise>
