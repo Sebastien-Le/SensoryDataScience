@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 1: Dealing with quantitative perception'
 description:
-  'One of the most common situation when dealing with *quantitative perception* occurs when a set of stimuli is assessed by panelists according to a bunch of quantitative sensory attributes. One can distinguish between two situations: when the sensory attributes are the same from one panelist to the other, when panelists can use their own sensory attributes. In the following example, we will deal with the so-called QDA type of data, when panelists rate according to a fix list of attributes. These data are the origin of sensory data, and we will see that it's a very convenient model, from a statistical point of view, in other words you will be able to learn a lot in terms of statistical thinking from these data.'
+  'description très intéressante'
 prev: null
 next: /chapter2
 type: chapter
