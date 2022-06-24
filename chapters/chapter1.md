@@ -11,15 +11,15 @@ id: 1
 
 <exercise id="1" title="From sensory data collection to a collection of sensory data">
 
-Let's say you are a panelist, and you have to assess a set of perfumes according to a list of sensory attributes from 0 to 10: 0 meaning that you don't perceive the perfume you assess as *heady* for instance, 10 meaning that you perceive the perfume as extremely *heady*. 
+Giả sử bạn là một người tham gia hội thảo và bạn phải đánh giá một bộ nước hoa theo danh sách các thuộc tính cảm quan từ 0 đến 10: 0 nghĩa là bạn không cảm nhận được loại nước hoa mà bạn đánh giá là * hấp dẫn *, ví dụ: 10 nghĩa là bạn cảm thấy nước hoa cực kỳ * nồng nặc *.
 
-Each time you will have to evaluate a perfume, a lab assistant will provide you with a sample of the perfume and a form to be filled. On this form, you will note your name, the three digits code of the perfume you are testing.
+Mỗi lần bạn sẽ phải đánh giá một loại nước hoa, một trợ lý phòng thí nghiệm sẽ cung cấp cho bạn một mẫu nước hoa và một biểu mẫu để đổ. Trên mẫu đơn này, bạn sẽ ghi chú tên của bạn, mã ba chữ số của loại nước hoa bạn đang thử.
 
-From a statistical point of view, the statistical unit of interest is the form on which you have noted many information. 
+Theo quan điểm thống kê, đơn vị thống kê quan tâm là biểu mẫu mà bạn đã ghi chú nhiều thông tin.
 
-In other words, as in data set rows correspond to statistical units and columns correspond to variables, in our situation, each row of our data set is a form with information such as the name of the panelist, the product that has been assessed, the scores for the different sensory attributes.
+Nói cách khác, như trong các hàng của tập dữ liệu tương ứng với các đơn vị thống kê và các cột tương ứng với các biến, trong tình huống của chúng tôi, mỗi hàng trong tập dữ liệu của chúng tôi là một biểu mẫu với thông tin như tên của người tham gia, sản phẩm đã được đánh giá, điểm cho các thuộc tính cảm quan khác nhau.
 
-Before importing the data, let's have a look at our first data set based on quantitative measurements: *perfumes_qda_experts.csv*.
+Trước khi nhập dữ liệu, hãy xem tập dữ liệu đầu tiên của chúng tôi dựa trên các phép đo định lượng: * perfumes_qda_experts.csv *.
 
 </exercise>
 
