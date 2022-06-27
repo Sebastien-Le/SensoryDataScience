@@ -1,0 +1,1 @@
+plot(d$x,d$y,main="Density of Spicy")

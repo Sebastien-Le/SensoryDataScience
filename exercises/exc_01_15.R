@@ -5,3 +5,5 @@ for (j in 5:16){
   q3 <- quantile(experts[,j], 0.75)
   loc.parameters <- rbind(loc.parameters, c(me, med, q1, q3))
 }
+
+loc.parameters
