@@ -177,7 +177,6 @@ Don't hesitate to go to the following link *https://www.r-bloggers.com/2015/12/h
 
 Finally, let's check our *experts* data frame.
 
---------
 
 ```{r}
 summary(experts)
