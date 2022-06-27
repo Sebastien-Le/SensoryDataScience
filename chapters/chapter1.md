@@ -27,8 +27,8 @@ Before importing the data, let's have a look at our first data set based on quan
 
 Let's recall that:
 
-- A data collection is the process of gathering and measuring information.
-- A data set is a collection of data. In the case of tabular data, a data set corresponds to one table, where every column of the table represents a particular variable, and each row corresponds to a given record of the data set in question. $\square$
+* A data collection is the process of gathering and measuring information.
+* A data set is a collection of data. In the case of tabular data, a data set corresponds to one table, where every column of the table represents a particular variable, and each row corresponds to a given record of the data set in question. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
 </exercise>
 
@@ -42,10 +42,10 @@ Let's first import our dataset and have a look at it. To do so, we will use two 
 
 To survive in this jungle what you need to know is: 
 
-- How to install R
-- How to look for the appropriate piece of information when using a function or a package (let's define this roughly as a set of functions)
-- How to use that piece of information
-- How to import a data set and play with it
+* How to install R
+* How to look for the appropriate piece of information when using a function or a package (let's define this roughly as a set of functions)
+* How to use that piece of information
+* How to import a data set and play with it
 
 R can be found on the CRAN (Comprehensive R Archive Network) at the following address: http: //cran.r-project.org/. Choose the version that corresponds to your operating system (windows, mac or Linux), then download it. To install it you can just use the default options and say "yes" to everything. 
 
