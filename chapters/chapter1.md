@@ -19,7 +19,7 @@ Let's say you are a panelist, and you have to assess a set of perfumes according
 
 From a statistical point of view, the **statistical unit** of interest is the form on which you have noted many information. In other words, as in a data set rows correspond to statistical units and columns correspond to variables, in our situation, each row of our data set is a form with information such as the name of the panelist, the product that has been assessed, the scores for the different sensory attributes.
 
-Before importing the data, let's have a look at our first data set based on quantitative measurements: "perfumes_qda_experts.csv".
+Before importing the data, let's have a look at our first data set based on quantitative measurements: _perfumes_qda_experts.csv_.
 
 ## The *Stat* corner: data collection *versus* collection of data
 
