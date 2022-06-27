@@ -21,9 +21,10 @@ Let's say you are a panelist, and you have to assess a set of perfumes according
 
 From a statistical point of view, the **statistical unit** of interest is the form on which you have noted many information. In other words, as in a data set rows correspond to statistical units and columns correspond to variables, in our situation, each row of our data set is a form with information such as the name of the panelist, the product that has been assessed, the scores for the different sensory attributes.
 
-Before importing the data, let's have a look at our first data set based on quantitative measurements: *perfumes_qda_experts.csv*.
+Before importing the data, let's have a look at our first data set based on quantitative measurements: "perfumes_qda_experts.csv".
 
 ## The *Stat* corner: data collection *versus* collection of data
+
 
 Let's recall that:
 
@@ -156,7 +157,7 @@ And you can change this value easily by assigning another value:
 
 ## The *Algo* corner: the notion of iteration
 
-Let $j$ be the column index. We are going to write our first *loop* in R, so that the four first columns of *experts* can be considered as experimental factors.
+Let ![formula](https://render.githubusercontent.com/render/math?math=j) be the column index. We are going to write our first *loop* in R, so that the four first columns of *experts* can be considered as experimental factors.
 
 <codeblock id="01_12">
 </codeblock>
@@ -178,11 +179,11 @@ For each sensory attribute, as for any quantitative variable, the `summary()` fu
 
 When you look at the output of the `summary()` function, *Qu.* stands for quartile^[By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups], and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
-- Minimum (![formula](https://render.githubusercontent.com/render/math?math=Q_0) or ![formula](https://render.githubusercontent.com/render/math?math=0^{th}) percentile): the lowest data point in the data set excluding any outliers
-- Maximum (![formula](https://render.githubusercontent.com/render/math?math=Q_4) or ![formula](https://render.githubusercontent.com/render/math?math=100^{th}) percentile): the highest data point in the data set excluding any outliers
-- Median (![formula](https://render.githubusercontent.com/render/math?math=Q_2) or ![formula](https://render.githubusercontent.com/render/math?math=50^{th}) percentile): the middle value in the data set
-- First quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_1) or ![formula](https://render.githubusercontent.com/render/math?math=25^{th}) percentile): also known as the lower quartile, it is the median of the lower half of the data set
-- Third quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_3) or ![formula](https://render.githubusercontent.com/render/math?math=75^{th}) percentile): also known as the upper quartile, it is the median of the upper half of the data set
+- Minimum (![formula](https://render.githubusercontent.com/render/math?math=Q_0) or ![formula](https://render.githubusercontent.com/render/math?math= 0^{th}) percentile): the lowest data point in the data set excluding any outliers
+- Maximum (![formula](https://render.githubusercontent.com/render/math?math=Q_4) or ![formula](https://render.githubusercontent.com/render/math?math= 100^{th}) percentile): the highest data point in the data set excluding any outliers
+- Median (![formula](https://render.githubusercontent.com/render/math?math=Q_2) or ![formula](https://render.githubusercontent.com/render/math?math= 50^{th}) percentile): the middle value in the data set
+- First quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_1) or ![formula](https://render.githubusercontent.com/render/math?math= 25^{th}) percentile): also known as the lower quartile, it is the median of the lower half of the data set
+- Third quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_3) or ![formula](https://render.githubusercontent.com/render/math?math= 75^{th}) percentile): also known as the upper quartile, it is the median of the upper half of the data set
 
 ## The *R* corner: the `c()` function, building an intermediate data set
 
@@ -211,7 +212,7 @@ Then, in order to obtain an operational data frame, we set the names of the colu
 
 
 
-<exercise id="2" title="From location parameters to the notion of distribution and its visualization">
+<exercise id="3" title="From location parameters to the notion of distribution and its visualization">
 
 In this part, we are going to introduce one of the most convenient way of representing a sequence of values (in our case, the scores associated with a sensory attribute), the so-called *boxplot*.
 
@@ -244,7 +245,7 @@ For a better understanding of the notion of distribution, let's display the valu
 
 ## The *Math* corner: function composition
 
-In mathematics, function composition is an operation that takes two functions ![formula](https://render.githubusercontent.com/render/math?math=f) and ![formula](https://render.githubusercontent.com/render/math?math=g), and produces a function ![formula](https://render.githubusercontent.com/render/math?math=h) such that ![formula](https://render.githubusercontent.com/render/math?math=h(x) = g(f(x))). In the following code, instead of saving the results of the selection in an R object, we used what is called function composition.
+In mathematics, function composition is an operation that takes two functions ![formula](https://render.githubusercontent.com/render/math?math=f) and ![formula](https://render.githubusercontent.com/render/math?math=g), and produces a function ![formula](https://render.githubusercontent.com/render/math?math=h) such that ![formula](https://render.githubusercontent.com/render/math?math=h(x)) = ![formula](https://render.githubusercontent.com/render/math?math=g(f(x))). In the following code, instead of saving the results of the selection in an R object, we used what is called function composition.
 
 <codeblock id="01_22">
 </codeblock>
@@ -342,7 +343,7 @@ As in R base, the default output is based on occurrences, but it can be changed 
 
 
 
-<exercise id="3" title="From distribution to dispersion">
+<exercise id="4" title="From distribution to dispersion">
 
 Dispersion is (one of) **the** most important concept in statistics. It can be defined as the extent to which values of a variable differ from a fixed value such as the mean. We will illustrate graphically this concept and then define it more formally.
 
@@ -366,7 +367,7 @@ The blue area illustrates the notion of dispersion around the mean, in the sense
 
 
 
-<exercise id="4" title="From dispersion to standard deviation">
+<exercise id="5" title="From dispersion to standard deviation">
 
 As said previously, the concept of dispersion can be defined as the extent to which values of a variable differ from a fixed value such as the mean. In the same way as we have introduced location parameters, in this part, we will introduce the notion of dispersion parameters.
 
