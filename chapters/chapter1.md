@@ -179,11 +179,11 @@ For each sensory attribute, as for any quantitative variable, the `summary()` fu
 
 When you look at the output of the `summary()` function, *Qu.* stands for quartile^[By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups], and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
-- Minimum (![formula](https://render.githubusercontent.com/render/math?math=Q_0) or ![formula](https://render.githubusercontent.com/render/math?math= 0^{th}) percentile): the lowest data point in the data set excluding any outliers
-- Maximum (![formula](https://render.githubusercontent.com/render/math?math=Q_4) or ![formula](https://render.githubusercontent.com/render/math?math= 100^{th}) percentile): the highest data point in the data set excluding any outliers
-- Median (![formula](https://render.githubusercontent.com/render/math?math=Q_2) or ![formula](https://render.githubusercontent.com/render/math?math= 50^{th}) percentile): the middle value in the data set
-- First quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_1) or ![formula](https://render.githubusercontent.com/render/math?math= 25^{th}) percentile): also known as the lower quartile, it is the median of the lower half of the data set
-- Third quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_3) or ![formula](https://render.githubusercontent.com/render/math?math= 75^{th}) percentile): also known as the upper quartile, it is the median of the upper half of the data set
+- Minimum (![formula](https://render.githubusercontent.com/render/math?math=Q_0) or ![formula](https://render.githubusercontent.com/render/math?math=\text{0}^{th}) percentile): the lowest data point in the data set excluding any outliers
+- Maximum (![formula](https://render.githubusercontent.com/render/math?math=Q_4) or ![formula](https://render.githubusercontent.com/render/math?math=\text{100}^{th}) percentile): the highest data point in the data set excluding any outliers
+- Median (![formula](https://render.githubusercontent.com/render/math?math=Q_2) or ![formula](https://render.githubusercontent.com/render/math?math=\text{50}^{th}) percentile): the middle value in the data set
+- First quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_1) or ![formula](https://render.githubusercontent.com/render/math?math=\text{25}^{th}) percentile): also known as the lower quartile, it is the median of the lower half of the data set
+- Third quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_3) or ![formula](https://render.githubusercontent.com/render/math?math=\text{75}^{th}) percentile): also known as the upper quartile, it is the median of the upper half of the data set
 
 ## The *R* corner: the `c()` function, building an intermediate data set
 
