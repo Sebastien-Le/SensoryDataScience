@@ -1,1 +1,1 @@
-experts <- read.csv("data/perfumes_qda_experts.csv" )
+experts <- read.csv("data/perfumes_qda_experts.csv")

@@ -1394,4 +1394,5 @@ res.catdes <- catdes(donnee = experts, num.var = 4)
 res.catdes$test.chi2
 res.catdes$quanti.var
 res.catdes$quanti
+
 ```
