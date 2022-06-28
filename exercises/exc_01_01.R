@@ -1,4 +1,1 @@
-experts <- read.table(file="data/perfumes_qda_experts.csv", header=TRUE, sep=",", 
-dec=".", quote="\"")
-# arguments...
-___(experts)
+experts <- read.csv(file = "data/perfumes_qda_experts.csv" )

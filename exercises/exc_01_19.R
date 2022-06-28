@@ -1,1 +1,1 @@
-means <- df %>% _______
+boxplot(experts$Fruity)

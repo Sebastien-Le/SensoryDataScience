@@ -134,6 +134,7 @@ ggplot(experts)+
 ```
 Same example with only four products : 
 ```{r}
+library(dplyr)
 experts %>% filter(Product=="Chanel N5" | Product=="Pure Poison" | Product=="Shalimar" | Product=="Angel") %>%
   ggplot()+
   aes(x=Spicy, fill=Product)+

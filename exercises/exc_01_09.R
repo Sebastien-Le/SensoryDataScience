@@ -1,3 +1,1 @@
-hist(experts$Spicy, main="Histogram of Spicy", ____=__)
-
-
+levels(experts$Product)

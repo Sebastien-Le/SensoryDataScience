@@ -1,3 +1,2 @@
-d <- density(experts$_____) 
-plot(d, main="Density of _____") 
+experts[1:5,1:8]
 
