@@ -189,7 +189,7 @@ When you look at the output of the `summary()` function, *Qu.* stands for quarti
 
 ## The *R* corner: the `c()` function, building an intermediate data set
 
-The values of these location parameters can also be obtained by running the functions `mean()` and `quantile()`. The input of these two functions is a sequence of values from which we want to calculate the mean, and the quantilles. After calculating the location paramters, we can combine them using the very important `c()` function (this function combines values into a vector): in other words we apply a function on outputs provided by some other functions.
+The values of these location parameters can also be obtained by running the functions `mean()` and `quantile()`. The input of these two functions is a sequence of values from which we want to calculate the mean, and the quantiles. After calculating the location paramters, we can combine them using the very important `c()` function (this function combines values into a vector): in other words we apply a function on outputs provided by some other functions.
 
 <codeblock id="01_13">
 </codeblock>
@@ -248,7 +248,7 @@ For a better understanding of the notion of distribution, let's display the valu
 ## The *Math* corner: function composition
 
 In mathematics, function composition is an operation that takes two functions ![formula](https://render.githubusercontent.com/render/math?math=f) and ![formula](https://render.githubusercontent.com/render/math?math=g), and produces a function ![formula](https://render.githubusercontent.com/render/math?math=h) such that
-<img src="https://latex.codecogs.com/svg.image?h(x)=g(f(x))"/>. In the following code, instead of saving the results of the selection in an R object, we used what is called function composition.
+<span style="position: center" ><img src="https://latex.codecogs.com/svg.image?h(x)=g(f(x))"/></span>. In the following code, instead of saving the results of the selection in an R object, we used what is called function composition.
 
 <codeblock id="01_22">
 </codeblock>
@@ -354,7 +354,7 @@ Let's say we want to visualize 30% of the values "around" the average (arbitrari
 
 In practice, we want to find `x1` and `x2` such as the mean lies between `x1` and `x2`, and 
 
-<img src="https://latex.codecogs.com/svg.image?P[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3"/>
+<span style="position: center"><img src="https://latex.codecogs.com/svg.image?P[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3"/></span>
 
 where <img src="https://latex.codecogs.com/svg.image?F_X()"/> is the so-called **cumulative function**, and <img src="https://latex.codecogs.com/svg.image?f_X()"/> the density function of ![formula](https://render.githubusercontent.com/render/math?math=X), a continuous random variable associated with a sensory attribute.
 
