@@ -407,3 +407,359 @@ From your data, create a data frame of dispersion parameters such as the range, 
 </codeblock>
 
 </exercise>
+
+
+
+
+
+<exercise id="6" title="From distribution to conditional distribution">
+
+The main question with sensory data or perception data is often: "can I explain the differences between the scores provided by my assessors for a given attributes, by the differences between my products?". In other words, one of the main hypothesis you want to test is whether different products might induce different perceptions and therefore might explain the variability of the scores.
+
+Let's consider the two products *Angel* and *J'adore ET*, and the sensory attribute *Floral*: is there a difference between these two products according to the *Floral* attribute?
+
+To clarify this question, let's represent the *Floral* attribute according to the two products *Angel* and *J'adore ET*. This task clearly suggests data manipulation, and we are going to introduce briefly the `dplyr` package. Don't hesitate to have a look at the *dplyr* cheat sheet at the following address: *https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf*. You can also visit this page: *https://dplyr.tidyverse.org/reference/filter.html*.
+
+## The *R* corner: this is a `%>%`
+
+To subset our *experts* data frame, keeping the rows related to the two products *Angel* and *J'adore ET*, we're going to use the `filter()` function and a very important tool named **pipe**, `%>%`; not to be confused with the vertical line `|`, which is the logical operator *OR* and which is also called *pipe*.
+
+If you want to know more about pipes (the first one), have a look at the online book *R for data science* from *Hadley Wickham* and *Garrett Grolemund*: *https://r4ds.had.co.nz/pipes.html*.
+
+<codeblock id="01_36">
+</codeblock>
+
+Actually, you can subset in many different ways. If you remember well, you can navigate through a matrix with square brackets, where rows are separated by columns with a comma. If you want to select rows related to *Angel*, you can put a condition on the rows.
+
+<codeblock id="01_37">
+</codeblock>
+
+You can add another condition with the logical operator `|` and select rows related to *Angel* and *J'adore ET*.
+
+<codeblock id="01_38">
+</codeblock>
+
+Another way to do it, would be to use the `%in%` operator.
+
+<codeblock id="01_39">
+</codeblock>
+
+Let's have a look et the summary of the subset.
+
+<codeblock id="01_40">
+</codeblock>
+
+As you can see, the *Product* variable is still considered as a factor with 12 levels. You can get rid of the unused levels with the `droplevels()` function.![formula](https://render.githubusercontent.com/render/math?math=\square)
+
+<codeblock id="01_41">
+</codeblock>
+
+<codeblock id="01_42">
+</codeblock>
+
+To have an other visualization, we can use `fill` and not `color` to have the shade of lines and we can change the gradient of colors of lines in informing the parameter `alpha` in `geom_histogram()`
+
+<codeblock id="01_43">
+</codeblock>
+
+Another way of representing this type of information is by using boxplots.
+
+<codeblock id="01_44">
+</codeblock>
+
+Remember what we said at the beginning of this part, we want to test whether different products might induce different perceptions and therefore might explain the variability of the scores: this is exactly what this graphical output suggests.
+
+</exercise>
+
+
+
+
+
+<exercise id="7" title="From conditional distribution to the comparison of two means">
+
+Let's have a look at the *Angel* data on the one hand, on the *J'adore ET* data on the other hand. To do so we're going to build two data frames named *angel_exp* and *jadore_exp* respectively.
+
+<codeblock id="01_45">
+</codeblock>
+
+## The *Stat* corner: the magic of sampling distribution and confidence interval
+
+In a real life situation, you measure some quantitative variable on a sample of size <img src="https://latex.codecogs.com/svg.image?n"/>, in order to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu"/> of what you measure. Formally, you would say, for instance, that you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}"/>, that follow a normal distribution with mean <img src="https://latex.codecogs.com/svg.image?\mu"/> and variance <img src="https://latex.codecogs.com/svg.image?\sigma^2"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ x_1, \dots, x_n \}"/>, you usually want to estimate <img src="https://latex.codecogs.com/svg.image?\mu"/>, to get some insights on your population.
+To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i"/>. Why would you do that? The answer is, <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/> has some very good properties. This estimator is a random variable which expectation is equal to <img src="https://latex.codecogs.com/svg.image?\mu"/>, in other words <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\mu"/>. By definition, in probability theory, the expected value of a random variable is intuitively the long-run average value of repetitions of the experiment it represents (Wikipedia). The other very important property is that the distribution of the mean <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\bar{X}_n"/> is approximately a normal distribution, whatever the original distribution of the <img src="https://latex.codecogs.com/svg.image?X_i"/>, it's incredible but true.
+
+The thing is, in a real life situation, you only have one sample (in most cases). But if you had the possibility to have an infinite number of samples, you would be able to calculate an infinite number of means and to calculate the mean of the means. From that, you would get $E(\bar{X}_n)$, as well as the standard deviation of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/>, and its distribution. You would be able to get a confidence interval of the mean, which is really important.
+
+If you had enough money to run several times the same experiment, and hence to have measures from many different samples, you would see that the mean of the means over the samples is equal to $\mu$. Practically, it means that estimating the mean by using the formula <img src="https://latex.codecogs.com/svg.image?\frac{1}{n}\sum x_i"/> that you've learned when you were in school, is a good thing to do: the estimator <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i"/> has a very good property.
+
+Please, copy and paste the following command lines.
+
+<codeblock id="01_46">
+</codeblock>
+
+As you can see, we have simulated 20 *realizations* of a random variable following a normal distribution with <img src="https://latex.codecogs.com/svg.image?\mu=85"/> and <img src="https://latex.codecogs.com/svg.image?\sigma=2"/>.
+
+<codeblock id="01_47">
+</codeblock>
+
+What if we simulate 100 samples of size 20?
+
+<codeblock id="01_56">
+</codeblock>
+
+Remember the previous graphical representation that you obtained from 11 samples? The means that you have calculated for the 11 samples, are not exactly the same. They vary, but not as much as the original data. It's not only important to understand that, but it should be also very intuitive for you.
+When the population is infinite (and in the case of withdraws with replacement), the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/> is:
+
+<img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_n)=\frac{\sigma^2}{n}."/>
+
+It should make sense for you that the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/> depends on the variance of the original data, the ones that you measures on your statistical individual. If the data are variable ("messy"), the average will certainly vary from one sample to the other.
+
+To understand the denominator, let's take samples of different sizes. If you measure small samples, the mean of your samples will vary more from one sample to the other than if you measure large samples. Let's take samples of size <img src="https://latex.codecogs.com/svg.image?n=2"/> for instance, which is really unrealistic. In one sample you may get two small individuals or two big individuals (let's say you measure the size of an individual), which can explain the fact that the mean may vary a lot from one sample to the other. If you work with samples of size <img src="https://latex.codecogs.com/svg.image?n=1000000000"/>, which can also be unrealistic, you won't probably get 1000000000 small individuals in one sample. For these samples of large size you will probably have something representative of the distribution of your individuals. The means over something representative will not vary a lot from one sample to the other, as they are all supposed to be representative.
+
+This result on the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/> is really important. I'm sure that you have already seen this formula somewhere, and each time you want to calculate a confidence interval for some estimator you divide some variance by <img src="https://latex.codecogs.com/svg.image?\sqrt{n}"/>. Don't do that systematically. You have to understand what you're doing. If you are interested into some kind of estimator, all you have to do is to get the variance of that estimator. If your estimator is "blablabla", you need to know the variance of "blablabla", in order to get a confidence interval for "blablabla".
+
+The way <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/> is distributed is not dependent from the fact that the <img src="https://latex.codecogs.com/svg.image?X_i"/> follow a normal distribution. This result is not that intuitive, but it is really important, as even though you're not working with normal distributions, the estimator of the mean will follow a normal distribution, that's the **central limit theorem**.
+
+Suppose that <img src="https://latex.codecogs.com/svg.image?\forall i, X_i"/> follows a <img src="https://latex.codecogs.com/svg.image?N(\mu,\sigma^2)"/>. Then if you standardize the data, you get the following formula:
+
+<img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}} \sim N(0,1)."/>
+
+From that formula, you can easily deduce a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu"/>.
+
+<img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}};\bar{X}_n+u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}}],"/>
+
+where <img src="https://latex.codecogs.com/svg.image?u_{1-\alpha/2}"/> is the quantile of a normal distribution (X) such as <img src="https://latex.codecogs.com/svg.image?P(X\leq u_{1-\alpha/2})=1-\alpha/2"/>.
+
+You should read the formula this way:
+
+<img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \sigma_{\bar{X}_n};\bar{X}_n+u_{1-\alpha/2}\times \sigma_{\bar{X}_n}],"/>
+
+or even more generally
+
+<img src="https://latex.codecogs.com/svg.image?[blabla-C\times \sigma_{blabla};blabla+C\times \sigma_{blabla}],"/>
+
+where <img src="https://latex.codecogs.com/svg.image?blabla"/> is the estimator of your parameter if interest and <img src="https://latex.codecogs.com/svg.image?C"/> is a constant.
+
+When <img src="https://latex.codecogs.com/svg.image?\sigma"/> is not known, the standardization is not as trivial as in the previous case. You can't divide by <img src="https://latex.codecogs.com/svg.image?\sigma"/> anymore, as you don't know its value. You have to estimate it in an *inferential* context. This word, *inferential*, is super important, we've seen it before. It means that you want to generalize what you observed on the individuals of your sample, to the individuals of the whole population. In other words as you don't know <img src="https://latex.codecogs.com/svg.image?\sigma"/> you have to estimate it, but in a particular way, that takes into account the fact that you are working with a sample.
+
+In an inferential context, we are going to use the following formula:
+
+<img src="https://latex.codecogs.com/svg.image?S'^2=\frac{1}{n-1}\sum(X_i-\bar{X}_n)^2"/>
+
+Why so? Actually, the main idea behind that estimator is that if you work on a sample in an inferential context you will always underestimate the variance with the sum of squares divided by <img src="https://latex.codecogs.com/svg.image?n"/>, as there is always some variability that you will miss: you observe less diversity on a sample, than on the whole population. So if you want to *infer* you have to boost the formula by dividing your sum of squares by <img src="https://latex.codecogs.com/svg.image?n-1"/> rather than by dividing by <img src="https://latex.codecogs.com/svg.image?n"/>.
+
+As <img src="https://latex.codecogs.com/svg.image?S'"/> is a random variable and not a constant (as <img src="https://latex.codecogs.com/svg.image?\sigma"/> when you know its value), the distribution of the "standardized" <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/> is more complex than in the previous case.
+
+<img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{S'/\sqrt{n}} \sim T(n-1)."/>
+
+Hence, the confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu"/> is:
+
+<img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}};\bar{X}_n+t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}}],"/>
+
+where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1"/> degrees of freedom (T) such as <img src="https://latex.codecogs.com/svg.image?P(T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2"/>. <img src="https://latex.codecogs.com/svg.image?\square"/>
+
+Very practically, it means that you can determine a confidence interval for the real mean $\mu$ that you will never know.
+
+<codeblock id="01_48">
+</codeblock>
+
+## Exercise: the notion of *p-value*
+
+The function we're going to use for our **t-test** is called `t.test`. If you don't know how to use this function, write the following code in the console `?t.test` and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? <img src="https://latex.codecogs.com/svg.image?\square"/>
+
+When you compare two means, <img src="https://latex.codecogs.com/svg.image?\mu_1"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2"/>, you want to assess which one of the two following hypotheses^[By definition, a supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation.] is the most convincing:
+
+1. <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 = \mu_2"/>
+2. <img src="https://latex.codecogs.com/svg.image?H_1: \mu_1 \ne \mu_2"/>
+
+When you look at the <img src="https://latex.codecogs.com/svg.image?H_0"/>, the so-called null hypothesis, you can also rephrase it the following way: <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 - \mu_2 =0"/>. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2"/> (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following test statistic^[By definition, a single measure of some attribute of a sample (_i.e._ a statistic) used in statistical hypothesis testing, Wikipedia]:
+
+<img src="https://latex.codecogs.com/svg.image?D=\bar{X}_1-\bar{X}_2."/>
+
+And of course, if you think about what we said in the previous section, you need to estimate <img src="https://latex.codecogs.com/svg.image?D"/> and its variance, in order to get a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2"/>.
+
+The main difficulty here is to get an estimator for <img src="https://latex.codecogs.com/svg.image?\sigma^2_D"/> (let's call this estimator <img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D"/>) and to get the distribution of
+
+<img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D},"/>
+
+under the null hypothesis (when the two means are the same).
+
+The principle of this test is fundamental, and it will be always the same principle for other test statistic: you need to know their standard deviation, and their distribution under the null hypothesis, once standardized (once it is divided by the standard deviation).
+
+As "everything" is independent, the variance of a difference is the sum of the variances. In other words:
+
+<img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_1-\bar{X}_2) = Var(\bar{X}_1) + Var(\bar{X}_2)= \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}."/>
+
+If we can assume that there's a common variance <img src="https://latex.codecogs.com/svg.image?\sigma^2=\sigma_1^2=\sigma_2^2"/> (_cf._ next section), then 
+
+<img src="https://latex.codecogs.com/svg.image?\sigma^2_D=\sigma^2(\frac{1}{n_1}+\frac{1}{n_2})."/>
+
+Now we have to find an estimator of the common variance <img src="https://latex.codecogs.com/svg.image?\sigma^2"/>, which is naturally the weighted average of the variances:
+
+<img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{(n_1-1){S'_1}^2+(n_2-1){S'_2}^2}{n_1+n_2-2}."/>
+
+It's not that difficult and it's rather logical (you want to mix both information, and you mostly believe in the one for which you have lots of observations); and finally:
+
+<img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D=\hat{\sigma}^2(\frac{1}{n_1}+\frac{1}{n_2})."/>
+
+Under the null hypothesis (the two means are equal):
+
+<img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D} \sim T(n_1+n_2-2)."/>
+
+
+In statistics, statistical hypothesis testing is fundamental. Two hypotheses are confronted, the null hypothesis, <img src="https://latex.codecogs.com/svg.image?H_0"/>, and the alternative hypothesis, <img src="https://latex.codecogs.com/svg.image?H_1"/>. Apparently, one hypothesis has to be chosen, but in practice the problem is different and can be expressed the following way: should I chose <img src="https://latex.codecogs.com/svg.image?H_0"/>? In other words, the problem is not symmetrical and <img src="https://latex.codecogs.com/svg.image?H_0"/> is the hypothesis according to which a decision is taken. By definition (Wikipedia), the size for simple hypotheses, is the test's probability of incorrectly rejecting the null hypothesis. *The false positive rate*; the significance level of a test ($\alpha$), is the upper bound imposed on the size of a test. Its value is chosen by the statistician prior to looking at the data or choosing any particular test to be used. It is the maximum exposure to erroneously rejecting <img src="https://latex.codecogs.com/svg.image?H_0"/> he/she is ready to accept. Testing <img src="https://latex.codecogs.com/svg.image?H_0"/> at significance level <img src="https://latex.codecogs.com/svg.image?\alpha"/> means testing <img src="https://latex.codecogs.com/svg.image?H_0"/> with a test whose size does not exceed <img src="https://latex.codecogs.com/svg.image?\alpha"/>. In most cases, one uses tests whose size is equal to the significance level.
+
+</exercise>
+
+
+
+
+
+<exercise id="8" title="From the comparison of two means to the notion of **model**">
+
+The concept of model is very important. A model, in its usual sense, can be seen as a simplified description of the reality. When you test the difference in means between the two products *Angel* and *J'adore ET*, you implicitly suggest that the floral character of a perfume depends on the perfume. This model can be written the following way: `Floral~Products`. From a perceptual point of view, this model is really too simplistic, and in reality, q simple but much more realistic model is to consider the assessor as a factor of variability. In other words, you want to evaluate the following model: `Floral~Products+Panelist`.
+
+For educational purposes, we will first look at the first model but in practice it is the second model that should be considered.
+
+Let's now use the following notations: 
+
+* <img src="https://latex.codecogs.com/svg.image?y_{ij}"/> is the value taken for the <img src="https://latex.codecogs.com/svg.image?j^{th}"/> value associated with the <img src="https://latex.codecogs.com/svg.image?i^{th}"/> perfume
+* <img src="https://latex.codecogs.com/svg.image?y_{i.}"/> is the average over the values for the <img src="https://latex.codecogs.com/svg.image?i^{th}"/> perfume
+* <img src="https://latex.codecogs.com/svg.image?y_{..}"/> is the average over the values and over the perfumes
+* <img src="https://latex.codecogs.com/svg.image?n_{i}"/> is sample size for the <img src="https://latex.codecogs.com/svg.image?i^{th}"/> perfume
+
+The following formula is very important as it represents a very important concept, the decomposition of the total variance into two parts, the **within** variance and the **between** variance:
+
+<img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{..})^2=\sum_{i=1}^In_i(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{i.})^2,"/>
+
+<img src="https://latex.codecogs.com/svg.image?SS_T=SS_{B}+SS_{W}."/>
+
+When <img src="https://latex.codecogs.com/svg.image?n_i=r"/> (which means that you have the same number of observations _per_ perfume; the design is called a _balanced design_) the decomposition of the total variance can be written:
+
+<img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{..})^2=\sum_{i=1}^Ir(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{i.})^2."/>
+
+Another very important concept is the _determination coefficient_ which corresponds to the proportion of variability that is due to your factor of interest (in our example, the *Product* factor). In other words, in that *total* variability amongst the values, it is the part due to the differences between the perfumes (*i.e.*, the *Product* factor, also called the _Product_ effect):
+
+<img src="https://latex.codecogs.com/svg.image?R^2=\frac{SS_B}{SS_T}=1-\frac{SS_W}{SS_T}."/>
+
+In our problem, we want to test whether there is an effect of our factor of interest or not. We are confronted to an hypothesis test (again):
+
+* <img src="https://latex.codecogs.com/svg.image?H_0:"/> the factor has no effect on <img src="https://latex.codecogs.com/svg.image?Y"/> (there is no differences between the perfumes)
+* <img src="https://latex.codecogs.com/svg.image?H_0:"/> the factor has an effect on <img src="https://latex.codecogs.com/svg.image?Y"/> (at least one perfume is different from the others)
+
+Under the null hypothesis, when the factor has no effect, we have the following important result: 
+
+<img src="https://latex.codecogs.com/svg.image?\frac{\frac{SS_B}{I-1}}{\frac{SS_W}{n-I}}=\frac{MS_F}{MS_R}\sim F^{I-1}_{n-I}"/>
+
+The numerator is the Mean Square of the factor, while the denominator is the Mean Square of the residual. The distribution under the null hypothesis is an *F* distribution with <img src="https://latex.codecogs.com/svg.image?I-1"/> degrees of freedom on the numerator and <img src="https://latex.codecogs.com/svg.image?n-I"/> degrees of freedom on the denominator.
+
+In other words, if you want to test the effect of a factor, you have to calculate that kind of test statistic (the ratio of mean squares). For each test, you will get a *p-value*.
+
+These results can be obtained in two steps. First, we **fit** the model with the very important `lm()` function: the output of this function is what is called a *fitted model object*. Then, we run the `anova()` function on the *fitted model object* to compute an analysis of variance table: this table is crucial as it summarizes how the total variance is decomposed according to your model.
+
+<codeblock id="01_49">
+</codeblock>
+
+<codeblock id="01_50">
+</codeblock>
+
+</exercise>
+
+
+
+
+
+<exercise id="9" title="From the notion of model to the analysis of variance model">
+
+This model assumes that you can associate one mean _per_ perfume. For a given perfume, the differences amongst the values is due to a random variable that follows a normal distribution.
+
+The model can be written the following way:
+
+<img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu_i + \epsilon_{ij},"/>
+
+where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0"/>. 
+
+This model can also be written the following way: 
+
+<img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu + \alpha_i + \epsilon_{ij},"/>.
+
+where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0"/>. 
+
+In order to estimate the parameters of the model, we use the following constraint: 
+
+<img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0."/>
+
+This constraint is particularly interesting as implicitly you compare the effect of the qualitative factor of interest with respect to the mean <img src="https://latex.codecogs.com/svg.image?\mu"/>.
+
+The problem of estimation of the parameters consists in estimating <img src="https://latex.codecogs.com/svg.image?\hat{\mu}"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i"/> such as
+
+<img src="https://latex.codecogs.com/svg.image?y_{ij}= \hat{\mu} + \hat{\alpha}_i + \epsilon_{ij},"/>
+
+that minimize <img src="https://latex.codecogs.com/svg.image?\sum e^2_{ij}"/>. Hence the name of the method used to get these estimations and which is called the least squares method.
+
+In the case where the number of observations is the same from one condition to the other (here, from one perfume to the other), the estimations of the parameters with the least squares method are very simple and natural:
+
+1. <img src="https://latex.codecogs.com/svg.image?\hat{\mu}=y_{..}"/>
+2. <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i = y_{i.}-y_{..}"/>
+
+Of course, as mentioned previously, as we want to see whether there's an effect of the factor on a continuous variable <img src="https://latex.codecogs.com/svg.image?Y"/> and for which modality(ies) of the factor there's a difference with respect to the mean, we're going to test <img src="https://latex.codecogs.com/svg.image?\alpha_i"/> with respect to 0. As always, to assess the veracity of an hypothesis, in our case whether <img src="https://latex.codecogs.com/svg.image?\alpha_i=0"/> or not, for a given <img src="https://latex.codecogs.com/svg.image?i"/>, we need the variance or the test statistic <img src="https://latex.codecogs.com/svg.image?\sigma^2_{\hat{\alpha}_i}"/>. When the design is balanced:
+
+<img src="https://latex.codecogs.com/svg.image?Var(\hat{\alpha}_i)=\sigma^2_{\hat{\alpha}_i} = \frac{I-1}{I}\frac{\sigma^2}{r}."/>
+
+To estimate <img src="https://latex.codecogs.com/svg.image?\sigma^2"/> we're going to use as an estimator:
+
+<img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{\sum_{i}\sum_{j}(y_{ij}-y_{i.})^2}{n-I}=\frac{\sum_{i}\sum_{j}e^2_{ij}}{n-I}."/>
+
+Indeed, 
+
+<img src="https://latex.codecogs.com/svg.image?\hat{y}_{ij} = \hat{\mu} + \hat{\alpha}_i,"/>
+
+and
+
+<img src="https://latex.codecogs.com/svg.image?e_{ij}=y_{ij} -\hat{y}_{ij}."/>
+
+## Exercise
+
+* Install the **FactoMineR** package. 
+* Load the **FactoMineR** package with the `library()` function.
+* Take a look at the `AovSum()` function of the **FactoMineR** package (`?AovSum`).
+* With the model that you have written, run the `AovSum` function and put the results of this function in an R object called `res`.
+* Apply the `names()` function to `res`. What are the results of this function?
+* Look at the component `res$Ftest`. Concerning the products, what would you say in terms of Floral?
+* Look at the component `res$Ttest`. Which one of the products is the most Floral?
+* Write another model that will allow you to integrate the fact that subject may eventually behave differently.
+* Perform the analysis of variance that corresponds to that new model. Provide an interpretation of the results.
+
+## The `SensoMineR` corner:
+
+Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
+
+<codeblock id="01_51">
+</codeblock>
+
+As mentioned previously, *resdecat* is a list of results. As a list, you can have access to its different components by using the `names()` function, that provides the name of each component of your output.
+
+<codeblock id="01_52">
+
+</codeblock>
+
+To access to one of the component, just write the name of the output associated with the name of the component: the association is done with the *$* sign.
+
+<codeblock id="01_53">
+</codeblock>
+
+As a matter of fact, *resdecat$resT* is also constituted of smaller results. Let's identify them with the **names** function (again)
+
+<codeblock id="01_54">
+</codeblock>
+
+It appears that the `decat()` function provides a sensory description of each product. For instance, if you write the following code in the R console, you will get a description of the product *Angel*.
+
+<codeblock id="01_55">
+</codeblock>
+
+According to the coefficients of the first column, this product has been perceived as significantly higher regarding the descriptors *Greedy*, *Heady*,..., and significantly lower regarding the descriptors *Floral*, *Fruity*,...
+
+**Recap. **What have we done so far? and, what should you know? You should know how to install R, to install packages, to look at the information that is necessary to run some functions. Once the analysis is made, you usually get an output which is either a graphical output, or results from some calculations. These numerical results can be displayed in the console, by typing the name of the result of interest. Please, keep in mind the concept of list.
+
+</exercise>
+
