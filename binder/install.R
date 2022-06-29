@@ -1,5 +1,6 @@
 install.packages("dplyr")
-install.packages("ggplot2", dependencies = TRUE, repos = "http://cran.us.r-project.org"))
+install.packages("ggplot2")
+# install.packages("ggplot2", dependencies = TRUE, repos = "http://cran.us.r-project.org")
 install.packages("gridExtra")
 install.packages("FactoMineR")
 install.packages("SensoMineR")
