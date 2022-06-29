@@ -1,1 +1,1 @@
-hist(experts$Spicy, breaks=50)
+hist(experts$Spicy, breaks=__)

@@ -1,1 +1,1 @@
-hist(experts$Spicy, breaks=50, ylab="Number of occurences")
+hist(experts$Spicy, breaks=50, ylab=____)

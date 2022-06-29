@@ -23,7 +23,6 @@ Before importing the data, let's have a look at our first data set based on quan
 
 ## The *Stat* corner: data collection *versus* collection of data
 
-
 Let's recall that:
 
 * A data collection is the process of gathering and measuring information.
@@ -37,8 +36,6 @@ Before importing our data set in R, let's recall that R is like a freeway. It's 
 
 ## The *R* corner: the survival guide
 
-Let's first import our dataset and have a look at it. To do so, we will use two apparently different functions, the `read.csv()` function, dedicated to *csv* files, and the `read.table()` function, which seems more generic. We will also use a very important sign that will allow you to assign results provided by an R function to an R object: `<-`. Indeed, importing data means reading data from a source, then storing what has been read in an R object.
-
 To survive in this jungle what you need to know is: 
 
 * How to install R
@@ -46,7 +43,7 @@ To survive in this jungle what you need to know is:
 * How to use that piece of information
 * How to import a data set and play with it
 
-R can be found on the CRAN (Comprehensive R Archive Network) at the following address: http: //cran.r-project.org/. Choose the version that corresponds to your operating system (windows, mac or Linux), then download it. To install it you can just use the default options and say "yes" to everything. 
+R can be found on the CRAN (Comprehensive R Archive Network) at the following address: http://cran.r-project.org/ . Choose the version that corresponds to your operating system (windows, mac or Linux), then download it. To install it you can just use the default options and say "yes" to everything. 
 
 Once R is installed, open it, and please read carefully the message that appears in your R window, and in particular its end. As written,
 
@@ -67,6 +64,7 @@ demo()
 you will see that R will suggest you several demos. Just pick one of them, say *graphics* for instance and have a look at what happens.
 
 <codeblock id="01_58">
+hints -> phrase sébastien
 </codeblock>
 
 As you can see, a function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, all you have to do is to write in the console the name of the function preceded by a question mark, as follows.
@@ -88,7 +86,7 @@ Actually, this line of code will produce exactly the same result as the followin
 
 In this one, we have introduced the notion of **argument**: in mathematics, a variable associated with a function and determining the value of the function.
 
-## The *R* corner: the `read.table()` function
+## The *R* corner: the *read.table()* function
 
 As its name suggests, the `read.table()` function reads a file in table format and creates a **data frame** from it, with cases corresponding to lines and variables to fields in the file. Actually, the two functions `read.csv()` and `read.table()` are the same, except for the defaults, *i.e.* the default values of the arguments. 
 
@@ -102,7 +100,7 @@ Let's have a look at what has been imported in R, the object *experts* which is 
 <codeblock id="01_03">
 </codeblock>
 
-Now, use the `head()` function to display part of the *experts* object.
+Now, apply the `head()` function  on the *experts* object to display part of it.
 
 <codeblock id="01_04">
 </codeblock>
@@ -118,7 +116,7 @@ By comparing these outputs, you can understand the results provided by the `summ
 
 The outputs provided by a function can be either a graphical output, or a numerical output. When it's a numerical output, it's often constituted of many different numerical results. It is literally a list of results, *i.e.* a number of connected items that are calculated by the function. The concept of **list** is really important in R, as you may want to access easily to the different items that constitute the output.  ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
-As the *Panelist*, *Session*, *Rank*, and *Product* variables are intrinsically the sources of variability of the different sensory attributes, they have to be considered as experimental factors. To do so, we are going to transform them as factors by using the `as.factor()` function. As a variable is part of a data frame, we will use the `$` sign to reach a given variable of interest. Actually the `$` sign is used to reach any  component of an R object.
+As the *Panelist*, *Session*, *Rank*, and *Product* variables are intrinsically the sources of variability of the different sensory attributes, they have to be considered as experimental factors. To do so, we are going to transform them as factors by using the `as.factor()` function. As a variable is part of a data frame, we will use the `$` sign to reach a given variable of interest. Actually the `$` sign is used to reach any  component of an R object (including a list).
 
 <codeblock id="01_06">
 </codeblock>
@@ -130,12 +128,15 @@ Let's now do that for the other experimental factors.
 <codeblock id="01_07">
 </codeblock>
 
-Let's now have a look at our data frame (the output is displayed in the console).
+Let's now have a look at our data frame.
 
 <codeblock id="01_08">
 </codeblock>
 
 Apparently, nothing has changed but if you run the `summary()` function you will see that the first 4 variables are now considered as factors.
+
+<codeblock id="01_60">
+</codeblock>
 
 A very important function related to the notion of factor is the `level()` function (and all its variants). Let's apply it to the *Product* variable of our *experts* data frame. This function displays the vector of levels of a factor (or categorical variable).
 
@@ -159,7 +160,7 @@ Let ![formula](https://render.githubusercontent.com/render/math?math=j) be the c
 <codeblock id="01_12">
 </codeblock>
 
-These following lines do the same result:
+These following lines produce the same result. Brackets are used when dealing with several instructions. 
 
 <codeblock id="01_59">
 </codeblock>
@@ -181,17 +182,17 @@ For each sensory attribute, as for any quantitative variable, the `summary()` fu
 
 When you look at the output of the `summary()` function, *Qu.* stands for quartile. By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups, and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
-- Minimum (![formula](https://render.githubusercontent.com/render/math?math=Q_0)) or <img src="https://latex.codecogs.com/svg.image?0^{th}"/> percentile): the lowest data point in the data set excluding any outliers
+- Minimum (<img src="https://latex.codecogs.com/svg.image?Q_0"/>  or <img src="https://latex.codecogs.com/svg.image?0^{th}"/> percentile): the lowest data point in the data set excluding any outliers
 
 - Maximum (<img src="https://latex.codecogs.com/svg.image?Q_4"/>  or <img src="https://render.githubusercontent.com/render/math?math=100^{th}"> percentile): the highest data point in the data set excluding any outliers
 
-- Median (![formula](https://render.githubusercontent.com/render/math?math=Q_2)) or <img src="https://latex.codecogs.com/svg.image?50^{th}"/> percentile): the middle value in the data set
+- Median (<img src="https://latex.codecogs.com/svg.image?Q_2"/>  or <img src="https://latex.codecogs.com/svg.image?50^{th}"/> percentile): the middle value in the data set
 
-- First quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_1) or <img src="https://latex.codecogs.com/svg.image?25^{th}"/>) percentile): also known as the lower quartile, it is the median of the lower half of the data set
+- First quartile (<img src="https://latex.codecogs.com/svg.image?Q_1"/>  or <img src="https://latex.codecogs.com/svg.image?25^{th}"/> percentile): also known as the lower quartile, it is the median of the lower half of the data set
 
-- Third quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_3) or <img src="https://latex.codecogs.com/svg.image?75^{th}"/>) percentile): also known as the upper quartile, it is the median of the upper half of the data set
+- Third quartile (<img src="https://latex.codecogs.com/svg.image?Q_3"/> or <img src="https://latex.codecogs.com/svg.image?75^{th}"/> percentile): also known as the upper quartile, it is the median of the upper half of the data set
 
-## The *R* corner: the `c()` function, building an intermediate data set
+## The *R* corner: the *c()* function, building an intermediate data set
 
 The values of these location parameters can also be obtained by running the functions `mean()` and `quantile()`. The input of these two functions is a sequence of values from which we want to calculate the mean, and the quantiles. After calculating the location paramters, we can combine them using the very important `c()` function (this function combines values into a vector): in other words we apply a function on outputs provided by some other functions.
 
@@ -222,51 +223,42 @@ Then, in order to obtain an operational data frame, we set the names of the colu
 
 In this part, we are going to introduce one of the most convenient way of representing a sequence of values (in our case, the scores associated with a sensory attribute), the so-called *boxplot*.
 
-As for the `mean()` function, the main input you need to fill in is the vector of values you want to represent.
+As for the `mean()` function, the main input you need to fill in is the vector of values you want to represent. Let's represent the *Fruity* attribute.
 
 <codeblock id="01_19">
 </codeblock>
 
 ## The *Stat* corner: the interquartile range
 
-By definition, a boxplot is a standardized way of displaying a sequence of values based on: the minimum, the maximum, the sample median, and the first and third quartiles. In addition to the minimum and maximum values used to construct a boxplot, another important element that can also be employed to obtain a boxplot is the interquartile range (*IQR*), the distance between the upper and lower quartiles. Intuitively, you can see the notion of dispersion appearing in the notion of range. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+By definition, a boxplot is a standardized way of displaying a sequence of values based on: the minimum, the maximum, the sample median, and the first and third quartiles. In addition to the minimum and maximum values used to construct a boxplot, another important element that can also be employed to obtain a boxplot is the interquartile range (*IQR*), the distance between the upper and lower quartiles. Intuitively, you can see the notion of *dispersion* appearing in the notion of range. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
 ## The *R* corner: setting graphical parameters
 
-Let's represent three boxplots in a same graphical output using a loop. To do so, we use the `par()` function to set some graphical parameters and we set the `mfrow` argument to create a matrix of plots in one ploting space.
+To create a matrix of plots in one ploting space, we use the `par()` function to set some graphical parameters, and the `mfrow` argument .
+
+```{r}
+par(mfrow=c(i,j))
+```
+
+Let's represent the three first sensory attributes, from columns 5 to 7 using three boxplots in a same graphical output and a loop.
 
 <codeblock id="01_20">
 </codeblock>
 
 ## Exercise 
 
-To the previous graphical output, add a line corresponding to the mean with the `abline()` function. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+To the previous graphical output, add a line corresponding to the mean with the `abline()` function and the *h* argument, which value will be directly assigned to the mean. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
 <codeblock id="01_21">
 </codeblock>
 
 By definition, a distribution is "the way in which something is shared out among a group or spread over an area". To some extent, a boxplot is a representation of a distribution. In our situation we want to understand how the scores of given sensory attribute are distributed; we also want to see if this distribution depends on some experimental factors (the products or the panelists, for instance).
 
-For a better understanding of the notion of distribution, let's display the values that lie between 0 and 1 (included), and let's count them. To do so, we first have to select them, then to get the length (or dimension) of the vector with the scores selected. 
-
-## The *Math* corner: function composition
-
-In mathematics, function composition is an operation that takes two functions ![formula](https://render.githubusercontent.com/render/math?math=f) and ![formula](https://render.githubusercontent.com/render/math?math=g), and produces a function ![formula](https://render.githubusercontent.com/render/math?math=h) such that
-<span style="position: center" ><img src="https://latex.codecogs.com/svg.image?h(x)=g(f(x))" style="margin-bottom : -0.25rem"/></span>. In the following code, instead of saving the results of the selection in an R object, we used what is called function composition.
-
-<codeblock id="01_22">
-</codeblock>
-
-`<=` is called a logical operator, and you can combine them if you want the values that lie between 1 and 2.
-
-<codeblock id="01_23">
-</codeblock>
-
-For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie bteween 1 and 2: it seems that our **product space** composed of perfumes is not spicy at all.
+For a better understanding of the notion of distribution, let's display the values that lie between 0 and 1 (included), and let's count them. To do so, we first have to select them, then to get the length (or dimension) of the vector with the scores selected.
 
 ## The *Algo* corner: the notion of logical operators
 
-The most important logical operators are:
+Logical operators are important to select data. The most important logical operators are:
 
 * `<`	less than
 * `<=`	less than or equal to
@@ -278,24 +270,36 @@ The most important logical operators are:
 * `x | y`	x OR y
 * `x & y`	x AND y
 
-As demonstrated, logical operators are important to select data. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+![formula](https://render.githubusercontent.com/render/math?math=\square)
+
+<codeblock id="01_22">
+</codeblock>
+
+You can combine them if you want the values that lie between 1 and 2.
+
+<codeblock id="01_23">
+</codeblock>
+
+For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie bteween 1 and 2: it seems that our **product space** composed of perfumes is not spicy at all.
+
+
 
 Let's visualize the *Spicy* attribute by using a two dimensional graph, where the *x-axis* correspond to the values taken by the scores and the *y-axis* to their respective number of occurrences. To represent this so-called **histogram**, we will first use the `hist()` function. The basic input is the sequence of values you want to represent, as for the `boxplot()` function.
 
 <codeblock id="01_24">
 </codeblock>
 
-As we have seen previously, we have many values that lie between 0 and 1, and it could make sense to change the *breakpoints*. In our case, we used the defaults of the `hist()` function, but we could imagine increasing the number of *breaks*.
+As we have seen previously, we have many values that lie between 0 and 1, and it could make sense to change the *breakpoints*. In our case, we used the defaults of the `hist()` function, but we could imagine increasing the number of *breaks* : let's assign the value of the *breaks* argument to 50.
 
 <codeblock id="01_25">
 </codeblock>
 
-If you consider a frequency as the relative number of times something occurs, the default legend on the *y-axis* is somehow misleading. You can change it by setting the `ylab` argument.
+If you consider a frequency as the relative number of times something occurs, the default legend on the *y-axis* is somehow misleading. You can change it by setting the `ylab` argument to number of occurences.
 
 <codeblock id="01_26">
 </codeblock>
 
-Let's now set the `probability` argument to `TRUE`, and change the default title with the `main` argument.
+Let's now set the `probability` argument to `TRUE`, and change the default title with the `main` argument to "Distribution of the values for the Spicy attribute".
 
 <codeblock id="01_27">
 </codeblock>
@@ -325,7 +329,7 @@ Let's now plot the two vectors `d$x` and `d$y`.
 <codeblock id="01_30">
 </codeblock>
 
-## The *R* corner: `ggplot2` an alternative to base R
+## The *R* corner: *ggplot2* an alternative to base R
 
 So far, the functions we've used are directly integrated in R. There's a possibility to use *external* R functions from what is called a package: in other words, a bunch of functions dedicated to a specific purpose. In the following section, we introduce the `ggplot2` package to visualize our data. `ggplot2` is a system for declaratively creating graphics, based on The Grammar of Graphics. The main idea is to provide the data, tell `ggplot2` how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
 
