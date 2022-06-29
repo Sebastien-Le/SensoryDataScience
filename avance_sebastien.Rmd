@@ -952,3 +952,55 @@ According to the coefficients of the first column, this product has been perceiv
 
 **Recap. **What have we done so far? and, what should you know? You should know how to install R, to install packages, to look at the information that is necessary to run some functions. Once the analysis is made, you usually get an output which is either a graphical output, or results from some calculations. These numerical results can be displayed in the console, by typing the name of the result of interest. Please, keep in mind the concept of list.
 
+# end part
+# ----------------------------------------------------------------------------------------------------
+# begin new part
+
+# Passage aux variables supplémentaires
+
+```{r}
+tab.adjust.mean <- data.frame(resdecat$adjmean)
+res.PCA <- PCA(tab.adjust.mean)#On recupere le resultat de la PCA
+plan.coord.var <- res.PCA$var$coord[,1:2]#On recupere les coordonnees du plan des variables projetees
+res.kmeans <- kmeans(plan.coord.var, centers=3)#On recupere les clusters associes aux variables pour les futures generations de nos variables hedoniques
+tab.cluster<-data.frame(plan.coord.var)
+tab.cluster$cluster <- res.kmeans$cluster#On rajoute les correspondances var-cluster
+
+new.tab.hedonic <<- tab.adjust.mean#Notre nouveau tableau avec les nouvelles variables generees
+generate_hedonic <- function(nb_iter, nb_clust){
+  temp.tab.clust <- tab.cluster %>% filter(cluster == nb_clust)
+  keepvar <- row.names(temp.tab.clust)
+  temp.tab <- tab.adjust.mean %>% select(all_of(keepvar))
+  for (i in 1:nb_iter){
+    rand <- runif(length(colnames(temp.tab)),1,10)
+    weights <- rand/sum(rand)
+    newvar <- paste0(paste0("Cluster",nb_clust),paste0("hedovar", i))
+    weightmat <- sapply(1:ncol(temp.tab),function(x) temp.tab[,x] * weights[x] )
+    newval <- apply(weightmat, 1, sum)
+    assign(newvar,newval)
+    new.tab.hedonic <<- data.frame(new.tab.hedonic, get(as.name(newvar)))
+    colnames(new.tab.hedonic)[length(colnames(new.tab.hedonic))] <<- newvar
+  }
+  return(new.tab.hedonic)
+}
+
+
+generate_hedonic(35, 1)
+generate_hedonic(35, 2)
+generate_hedonic(35, 3)
+PCA(new.tab.hedonic, quanti.sup = 13:117)
+```
+
+# Individus supplémentaires :
+
+```{r}
+means <- summarize_all(tab.adjust.mean, mean)
+new.tab.indsup <- rbind(tab.adjust.mean,G= means)
+PCA(new.tab.indsup, ind.sup = 13)
+```
+```{r}
+#Version avec j'adore ET en individu supplémentaire : 
+index <- match("J'adore ET", rownames(tab.adjust.mean))
+PCA(tab.adjust.mean, ind.sup = index)
+```
+
