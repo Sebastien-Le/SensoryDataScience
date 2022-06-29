@@ -159,7 +159,7 @@ Let ![formula](https://render.githubusercontent.com/render/math?math=j) be the c
 <codeblock id="01_12">
 </codeblock>
 
-These following lines do the same result :
+These following lines do the same result:
 
 <codeblock id="01_59">
 </codeblock>
@@ -233,7 +233,7 @@ By definition, a boxplot is a standardized way of displaying a sequence of value
 
 ## The *R* corner: setting graphical parameters
 
-Let's represent three boxplots in a same graphical output. To do so, we use the `par()` function to set some graphical parameters and we set the `mfrow` argument to create a matrix of plots in one ploting space.
+Let's represent three boxplots in a same graphical output using a loop. To do so, we use the `par()` function to set some graphical parameters and we set the `mfrow` argument to create a matrix of plots in one ploting space.
 
 <codeblock id="01_20">
 </codeblock>
@@ -736,7 +736,7 @@ and
 <codeblock id="01_57">
 </codeblock>
 
-## The `SensoMineR` corner:
+## The SensoMineR corner:
 
 Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
 
