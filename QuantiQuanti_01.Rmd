@@ -693,7 +693,7 @@ Using the `PCA()` function from FactoMineR, do the method on the matrix of means
 
 ```{r}
 library(FactoMineR)
-res<-PCA(scale(means.variables), graph = FALSE, scale.unit = F)
+res<-PCA(scale(means.variables), scale.unit = F)
 res$ind$coord
 res$var$coord
 ```
@@ -770,7 +770,9 @@ Now, we know how is performed the PCA and how we get the coordinates of individu
  
 As PCA only uses continuous variables in the calculation of the distances between individuals, categorical variables can only be considered as supplementary. For continuous variables, determining whether they are illustrative or not is arbitrary, and depends on the point of view adopted. Often, continuous variables are considered as supplementary if they are from a different nature. 
 
-> exemple ajout var supp 
+```{r}
+plot(res)
+```
 
 ## Supplementary individuals
 
