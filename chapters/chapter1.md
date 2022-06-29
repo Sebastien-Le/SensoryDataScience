@@ -66,9 +66,8 @@ demo()
 
 you will see that R will suggest you several demos. Just pick one of them, say *graphics* for instance and have a look at what happens.
 
-```{r}
-demo(graphics)
-```
+<codeblock id="01_58">
+</codeblock>
 
 As you can see, a function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, all you have to do is to write in the console the name of the function preceded by a question mark, as follows.
 
@@ -160,6 +159,11 @@ Let ![formula](https://render.githubusercontent.com/render/math?math=j) be the c
 <codeblock id="01_12">
 </codeblock>
 
+These following lines do the same result:
+
+<codeblock id="01_59">
+</codeblock>
+
 Don't hesitate to go to the following link *https://www.r-bloggers.com/2015/12/how-to-write-the-first-for-loop-in-r/*. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
 Finally, let's check our *experts* data frame.
@@ -229,7 +233,7 @@ By definition, a boxplot is a standardized way of displaying a sequence of value
 
 ## The *R* corner: setting graphical parameters
 
-Let's represent three boxplots in a same graphical output. To do so, we use the `par()` function to set some graphical parameters and we set the `mfrow` argument to create a matrix of plots in one ploting space.
+Let's represent three boxplots in a same graphical output using a loop. To do so, we use the `par()` function to set some graphical parameters and we set the `mfrow` argument to create a matrix of plots in one ploting space.
 
 <codeblock id="01_20">
 </codeblock>
@@ -354,7 +358,7 @@ Let's say we want to visualize 30% of the values "around" the average (arbitrari
 
 In practice, we want to find `x1` and `x2` such as the mean lies between `x1` and `x2`, and 
 
-<img src="https://latex.codecogs.com/svg.image?P[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3" style="margin-left : 10rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?P[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3"/></center>
 
 where <img src="https://latex.codecogs.com/svg.image?F_X()"/> is the so-called **cumulative function**, and <img src="https://latex.codecogs.com/svg.image?f_X()"/> the density function of ![formula](https://render.githubusercontent.com/render/math?math=X), a continuous random variable associated with a sensory attribute.
 
@@ -380,7 +384,7 @@ The most important dispersion parameter is the so-called **standard deviation**.
 
 ## The *Stat* corner: mean and standard deviation
 
-Let's say you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of your variables, to get some insights on your population. To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. From this estimator (which is by the way a random variable), you can get an estimation of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> by calculating <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem; width : 15%"/>. The standard deviation <img src="https://latex.codecogs.com/svg.image?\sigma" style="margin-bottom : -0.25rem"/> can be estimated using the following expression: <img src="https://latex.codecogs.com/svg.image?s = \sqrt{\frac{1}{n}\sum(x_i-\bar{x})^2}" style="margin-bottom : -1rem; width : 18%"/>.
+Let's say you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of your variables, to get some insights on your population. To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. From this estimator (which is by the way a random variable), you can get an estimation of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> by calculating <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. The standard deviation <img src="https://latex.codecogs.com/svg.image?\sigma" style="margin-bottom : -0.25rem"/> can be estimated using the following expression: <img src="https://latex.codecogs.com/svg.image?s = \sqrt{\frac{1}{n}\sum(x_i-\bar{x})^2}" style="margin-bottom : -1rem"/>.
 
 **Centering** the data is as important as it is simple, apparently. By definition, to center is to place in the middle. Centering is subtracting the average to each value that has been measured. In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow x_i-\bar{x}" style="margin-bottom : -0.25rem"/>, where <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n}\sum x_i" style="margin-bottom : -1rem"/> is the average calculated over the ![formula](https://render.githubusercontent.com/render/math?math=x_i).
 
@@ -509,7 +513,7 @@ What if we simulate 100 samples of size 20?
 Remember the previous graphical representation that you obtained from 11 samples? The means that you have calculated for the 11 samples, are not exactly the same. They vary, but not as much as the original data. It's not only important to understand that, but it should be also very intuitive for you.
 When the population is infinite (and in the case of withdraws with replacement), the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is:
 
-<img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_n)=\frac{\sigma^2}{n}." style="margin-left : 30rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_n)=\frac{\sigma^2}{n}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 It should make sense for you that the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/> depends on the variance of the original data, the ones that you measures on your statistical individual. If the data are variable ("messy"), the average will certainly vary from one sample to the other.
 
@@ -521,21 +525,21 @@ The way <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-
 
 Suppose that <img src="https://latex.codecogs.com/svg.image?\forall i, X_i" style="margin-bottom : -0.25rem"/> follows a <img src="https://latex.codecogs.com/svg.image?N(\mu,\sigma^2)" style="margin-bottom : -0.25rem"/>. Then if you standardize the data, you get the following formula:
 
-<img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}} \sim N(0,1)." style="margin-left : 30rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}} \sim N(0,1)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 From that formula, you can easily deduce a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>.
 
-<img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}};\bar{X}_n+u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}}]," style="margin-left : 23rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}};\bar{X}_n+u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 where <img src="https://latex.codecogs.com/svg.image?u_{1-\alpha/2}" style="margin-bottom : -0.25rem"/> is the quantile of a normal distribution (X) such as <img src="https://latex.codecogs.com/svg.image?P(X\leq u_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem"/>.
 
 You should read the formula this way:
 
-<img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \sigma_{\bar{X}_n};\bar{X}_n+u_{1-\alpha/2}\times \sigma_{\bar{X}_n}]," style="margin-left : 23rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \sigma_{\bar{X}_n};\bar{X}_n+u_{1-\alpha/2}\times \sigma_{\bar{X}_n}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 or even more generally
 
-<img src="https://latex.codecogs.com/svg.image?[blabla-C\times \sigma_{blabla};blabla+C\times \sigma_{blabla}]," style="margin-left : 23rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?[blabla-C\times \sigma_{blabla};blabla+C\times \sigma_{blabla}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 where <img src="https://latex.codecogs.com/svg.image?blabla"/> is the estimator of your parameter if interest and <img src="https://latex.codecogs.com/svg.image?C"/> is a constant.
 
@@ -543,17 +547,17 @@ When <img src="https://latex.codecogs.com/svg.image?\sigma"/> is not known, the 
 
 In an inferential context, we are going to use the following formula:
 
-<img src="https://latex.codecogs.com/svg.image?S'^2=\frac{1}{n-1}\sum(X_i-\bar{X}_n)^2" style="margin-left : 23rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?S'^2=\frac{1}{n-1}\sum(X_i-\bar{X}_n)^2" style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 Why so? Actually, the main idea behind that estimator is that if you work on a sample in an inferential context you will always underestimate the variance with the sum of squares divided by <img src="https://latex.codecogs.com/svg.image?n"/>, as there is always some variability that you will miss: you observe less diversity on a sample, than on the whole population. So if you want to *infer* you have to boost the formula by dividing your sum of squares by <img src="https://latex.codecogs.com/svg.image?n-1"/> rather than by dividing by <img src="https://latex.codecogs.com/svg.image?n"/>.
 
 As <img src="https://latex.codecogs.com/svg.image?S'"/> is a random variable and not a constant (as <img src="https://latex.codecogs.com/svg.image?\sigma"/> when you know its value), the distribution of the "standardized" <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is more complex than in the previous case.
 
-<img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{S'/\sqrt{n}} \sim T(n-1)." style="margin-left : 25rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{S'/\sqrt{n}} \sim T(n-1)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 Hence, the confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> is:
 
-<img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}};\bar{X}_n+t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}}]," style="margin-left : 23rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}};\bar{X}_n+t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}" style="margin-bottom : -0.75rem"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1"/> degrees of freedom (T) such as <img src="https://latex.codecogs.com/svg.image?P(T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem; margin-top : 1rem"/>. <img src="https://latex.codecogs.com/svg.image?\square"/>
 
@@ -573,13 +577,13 @@ When you compare two means, <img src="https://latex.codecogs.com/svg.image?\mu_1
 
 When you look at the <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/>, the so-called null hypothesis, you can also rephrase it the following way: <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 - \mu_2 =0" style="margin-bottom : -0.25rem"/>. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2" style="margin-bottom : -0.25rem"/> (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following test statistic. [By definition, a single measure of some attribute of a sample (_i.e._ a statistic) used in statistical hypothesis testing, Wikipedia]:
 
-<img src="https://latex.codecogs.com/svg.image?D=\bar{X}_1-\bar{X}_2." style="margin-left : 27rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?D=\bar{X}_1-\bar{X}_2." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 And of course, if you think about what we said in the previous section, you need to estimate <img src="https://latex.codecogs.com/svg.image?D"/> and its variance, in order to get a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2"  style="margin-bottom : -0.25rem"/>.
 
 The main difficulty here is to get an estimator for <img src="https://latex.codecogs.com/svg.image?\sigma^2_D"  style="margin-bottom : -0.25rem"/> (let's call this estimator <img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D"  style="margin-bottom : -0.25rem"/>) and to get the distribution of
 
-<img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D}," style="margin-left : 30rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D}," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 under the null hypothesis (when the two means are the same).
 
@@ -587,23 +591,23 @@ The principle of this test is fundamental, and it will be always the same princi
 
 As "everything" is independent, the variance of a difference is the sum of the variances. In other words:
 
-<img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_1-\bar{X}_2) = Var(\bar{X}_1) + Var(\bar{X}_2)= \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}." style="margin-left : 17rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_1-\bar{X}_2) = Var(\bar{X}_1) + Var(\bar{X}_2)= \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 If we can assume that there's a common variance <img src="https://latex.codecogs.com/svg.image?\sigma^2=\sigma_1^2=\sigma_2^2" style="margin-bottom : -0.25rem"/> (_cf._ next section), then 
 
-<img src="https://latex.codecogs.com/svg.image?\sigma^2_D=\sigma^2(\frac{1}{n_1}+\frac{1}{n_2})." style="margin-left : 27rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\sigma^2_D=\sigma^2(\frac{1}{n_1}+\frac{1}{n_2})." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 Now we have to find an estimator of the common variance <img src="https://latex.codecogs.com/svg.image?\sigma^2" style="margin-bottom : -0.25rem"/>, which is naturally the weighted average of the variances:
 
-<img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{(n_1-1){S'_1}^2+(n_2-1){S'_2}^2}{n_1+n_2-2}." style="margin-left : 23rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{(n_1-1){S'_1}^2+(n_2-1){S'_2}^2}{n_1+n_2-2}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 It's not that difficult and it's rather logical (you want to mix both information, and you mostly believe in the one for which you have lots of observations); and finally:
 
-<img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D=\hat{\sigma}^2(\frac{1}{n_1}+\frac{1}{n_2})." style="margin-left : 27rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D=\hat{\sigma}^2(\frac{1}{n_1}+\frac{1}{n_2})." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 Under the null hypothesis (the two means are equal):
 
-<img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D} \sim T(n_1+n_2-2)." style="margin-left : 27rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D} \sim T(n_1+n_2-2)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 
 In statistics, statistical hypothesis testing is fundamental. Two hypotheses are confronted, the null hypothesis, <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/>, and the alternative hypothesis, <img src="https://latex.codecogs.com/svg.image?H_1"  style="margin-bottom : -0.25rem"/>. Apparently, one hypothesis has to be chosen, but in practice the problem is different and can be expressed the following way: should I chose <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/>? In other words, the problem is not symmetrical and <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/> is the hypothesis according to which a decision is taken. By definition (Wikipedia), the size for simple hypotheses, is the test's probability of incorrectly rejecting the null hypothesis. *The false positive rate*; the significance level of a test (<img src="https://latex.codecogs.com/svg.image?\alpha"/>), is the upper bound imposed on the size of a test. Its value is chosen by the statistician prior to looking at the data or choosing any particular test to be used. It is the maximum exposure to erroneously rejecting <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/> he/she is ready to accept. Testing <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/> at significance level <img src="https://latex.codecogs.com/svg.image?\alpha"/> means testing <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/> with a test whose size does not exceed <img src="https://latex.codecogs.com/svg.image?\alpha"/>. In most cases, one uses tests whose size is equal to the significance level.
@@ -629,17 +633,17 @@ Let's now use the following notations:
 
 The following formula is very important as it represents a very important concept, the decomposition of the total variance into two parts, the **within** variance and the **between** variance:
 
-<img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{..})^2=\sum_{i=1}^In_i(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{i.})^2," style="margin-left : 15rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{..})^2=\sum_{i=1}^In_i(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{i.})^2," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
-<img src="https://latex.codecogs.com/svg.image?SS_T=SS_{B}+SS_{W}." style="margin-left : 27rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?SS_T=SS_{B}+SS_{W}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/><center>
 
 When <img src="https://latex.codecogs.com/svg.image?n_i=r"/> (which means that you have the same number of observations _per_ perfume; the design is called a _balanced design_) the decomposition of the total variance can be written:
 
-<img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{..})^2=\sum_{i=1}^Ir(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{i.})^2." style="margin-left : 15rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{..})^2=\sum_{i=1}^Ir(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{i.})^2." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 Another very important concept is the _determination coefficient_ which corresponds to the proportion of variability that is due to your factor of interest (in our example, the *Product* factor). In other words, in that *total* variability amongst the values, it is the part due to the differences between the perfumes (*i.e.*, the *Product* factor, also called the _Product_ effect):
 
-<img src="https://latex.codecogs.com/svg.image?R^2=\frac{SS_B}{SS_T}=1-\frac{SS_W}{SS_T}." style="margin-left : 25rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?R^2=\frac{SS_B}{SS_T}=1-\frac{SS_W}{SS_T}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 In our problem, we want to test whether there is an effect of our factor of interest or not. We are confronted to an hypothesis test (again):
 
@@ -648,7 +652,7 @@ In our problem, we want to test whether there is an effect of our factor of inte
 
 Under the null hypothesis, when the factor has no effect, we have the following important result: 
 
-<img src="https://latex.codecogs.com/svg.image?\frac{\frac{SS_B}{I-1}}{\frac{SS_W}{n-I}}=\frac{MS_F}{MS_R}\sim F^{I-1}_{n-I}" style="margin-left : 25rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+v<img src="https://latex.codecogs.com/svg.image?\frac{\frac{SS_B}{I-1}}{\frac{SS_W}{n-I}}=\frac{MS_F}{MS_R}\sim F^{I-1}_{n-I}" style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 The numerator is the Mean Square of the factor, while the denominator is the Mean Square of the residual. The distribution under the null hypothesis is an *F* distribution with <img src="https://latex.codecogs.com/svg.image?I-1"/> degrees of freedom on the numerator and <img src="https://latex.codecogs.com/svg.image?n-I"/> degrees of freedom on the denominator.
 
@@ -674,25 +678,25 @@ This model assumes that you can associate one mean _per_ perfume. For a given pe
 
 The model can be written the following way:
 
-<img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu_i + \epsilon_{ij}," style="margin-left : 25rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu_i + \epsilon_{ij}," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.25rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.25rem"/>. 
 
 This model can also be written the following way: 
 
-<img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu + \alpha_i + \epsilon_{ij}," style="margin-left : 25rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>.
+<center><img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu + \alpha_i + \epsilon_{ij}," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/>.</center>
 
 where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.25rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.25rem"/>. 
 
 In order to estimate the parameters of the model, we use the following constraint: 
 
-<img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0." style="margin-left : 30rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 This constraint is particularly interesting as implicitly you compare the effect of the qualitative factor of interest with respect to the mean <img src="https://latex.codecogs.com/svg.image?\mu"/>.
 
 The problem of estimation of the parameters consists in estimating <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i" style="margin-bottom : -0.25rem"/> such as
 
-<img src="https://latex.codecogs.com/svg.image?y_{ij}= \hat{\mu} + \hat{\alpha}_i + \epsilon_{ij}," style="margin-left : 25rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?y_{ij}= \hat{\mu} + \hat{\alpha}_i + \epsilon_{ij}," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 that minimize <img src="https://latex.codecogs.com/svg.image?\sum e^2_{ij}" style="margin-bottom : -0.75rem"/>. Hence the name of the method used to get these estimations and which is called the least squares method.
 
@@ -703,19 +707,19 @@ In the case where the number of observations is the same from one condition to t
 
 Of course, as mentioned previously, as we want to see whether there's an effect of the factor on a continuous variable <img src="https://latex.codecogs.com/svg.image?Y"/> and for which modality(ies) of the factor there's a difference with respect to the mean, we're going to test <img src="https://latex.codecogs.com/svg.image?\alpha_i" style="margin-bottom : -0.25rem"/> with respect to 0. As always, to assess the veracity of an hypothesis, in our case whether <img src="https://latex.codecogs.com/svg.image?\alpha_i=0" style="margin-bottom : -0.25rem"/> or not, for a given <img src="https://latex.codecogs.com/svg.image?i"/>, we need the variance or the test statistic <img src="https://latex.codecogs.com/svg.image?\sigma^2_{\hat{\alpha}_i}" style="margin-bottom : -0.25rem"/>. When the design is balanced:
 
-<img src="https://latex.codecogs.com/svg.image?Var(\hat{\alpha}_i)=\sigma^2_{\hat{\alpha}_i} = \frac{I-1}{I}\frac{\sigma^2}{r}."  style="margin-left : 25rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?Var(\hat{\alpha}_i)=\sigma^2_{\hat{\alpha}_i} = \frac{I-1}{I}\frac{\sigma^2}{r}."  style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 To estimate <img src="https://latex.codecogs.com/svg.image?\sigma^2"/> we're going to use as an estimator:
 
-<img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{\sum_{i}\sum_{j}(y_{ij}-y_{i.})^2}{n-I}=\frac{\sum_{i}\sum_{j}e^2_{ij}}{n-I}." style="margin-left : 22rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{\sum_{i}\sum_{j}(y_{ij}-y_{i.})^2}{n-I}=\frac{\sum_{i}\sum_{j}e^2_{ij}}{n-I}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 Indeed, 
 
-<img src="https://latex.codecogs.com/svg.image?\hat{y}_{ij} = \hat{\mu} + \hat{\alpha}_i," style="margin-left : 30rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?\hat{y}_{ij} = \hat{\mu} + \hat{\alpha}_i," style="*margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 and
 
-<img src="https://latex.codecogs.com/svg.image?e_{ij}=y_{ij} -\hat{y}_{ij}." style="margin-left : 30rem; margin-top : -1.25rem; margin-bottom : 1.25rem"/>
+<center><img src="https://latex.codecogs.com/svg.image?e_{ij}=y_{ij} -\hat{y}_{ij}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 ## Exercise
 
@@ -732,7 +736,7 @@ and
 <codeblock id="01_57">
 </codeblock>
 
-## The `SensoMineR` corner:
+## The SensoMineR corner:
 
 Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
 
