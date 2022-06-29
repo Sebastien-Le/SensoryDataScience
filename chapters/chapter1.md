@@ -66,9 +66,8 @@ demo()
 
 you will see that R will suggest you several demos. Just pick one of them, say *graphics* for instance and have a look at what happens.
 
-```{r}
-demo(graphics)
-```
+<codeblock id="01_58">
+</codeblock>
 
 As you can see, a function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, all you have to do is to write in the console the name of the function preceded by a question mark, as follows.
 
@@ -158,6 +157,11 @@ And you can change this value easily by assigning another value:
 Let ![formula](https://render.githubusercontent.com/render/math?math=j) be the column index. We are going to write our first *loop* in R, so that the four first columns of *experts* can be considered as experimental factors.
 
 <codeblock id="01_12">
+</codeblock>
+
+These following lines do the same result :
+
+<codeblock id="01_59">
 </codeblock>
 
 Don't hesitate to go to the following link *https://www.r-bloggers.com/2015/12/how-to-write-the-first-for-loop-in-r/*. ![formula](https://render.githubusercontent.com/render/math?math=\square)
