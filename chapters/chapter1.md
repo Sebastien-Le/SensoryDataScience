@@ -78,6 +78,13 @@ h1 {
 .accordion p:last-child {
   margin-bottom: 0;
 }
+hr
+{
+border:solid 1px black;
+width: 96%;
+color: #FFFF00;
+height: 1px;
+}
 </style>
 
 <exercise id="1" title="From sensory data collection to a collection of sensory data">
@@ -166,7 +173,8 @@ As its name suggests, the `read.table()` function reads a file in table format a
 
 Don't hesitate to have a look at the help page of the `read.table()` function. 
 
-<hr style="border:2px solid gray">
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 Let's have a look at what has been imported in R, the object *experts* which is actually a data frame. To display any R object, write its name in the console. To display part of the *experts* object, select the rows and columns you want to diplay. By definition, a data frame is a table or a two-dimensional array, and you can navigate in this array as you would in any matrix, with indices that you would specify using **square brackets** (not to be confused with the **parentheses** used when using a function).
 
