@@ -587,7 +587,10 @@ Let's have a look et the summary of the subset.
 <codeblock id="01_40">
 </codeblock>
 
-As you can see, the *Product* variable is still considered as a factor with 12 levels. You can get rid of the unused levels with the `droplevels()` function.![formula](https://render.githubusercontent.com/render/math?math=\square)
+As you can see, the *Product* variable is still considered as a factor with 12 levels. You can get rid of the unused levels with the `droplevels()` function.
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 <codeblock id="01_41">
 </codeblock>
@@ -693,19 +696,23 @@ Hence, the confidence interval for <img src="https://latex.codecogs.com/svg.imag
 
 <center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}};\bar{X}_n+t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}" style="margin-bottom : -0.75rem"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1"/> degrees of freedom (T) such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}( T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem; margin-top : 1rem"/>. <img src="https://latex.codecogs.com/svg.image?\square"/>
+where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}" style="margin-bottom : -0.75rem"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1"/> degrees of freedom (T) such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}( T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem; margin-top : 1rem"/>. 
 
 Very practically, it means that you can determine a confidence interval for the real mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> that you will never know. 
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 ## Exercise: the notion of *p-value*
 <br>
 
-The function we're going to use for our **t-test** is called `t.test`. If you don't know how to use this function, write the following code in the console `?t.test` and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? 
+The function we're going to use for our **t-test** is called `t.test`. If you don't know how to use this function, click on *https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test* and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? 
 
 <codeblock id="01_48">
 </codeblock>
 
-<img src="https://latex.codecogs.com/svg.image?\square"/>
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 When you compare two means, <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.25rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.25rem"/>, you want to assess which one of the two following hypotheses. By definition, a supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation is the most convincing:
 
@@ -871,18 +878,101 @@ We subset the dataframe *experts*:
 <codeblock id="01_61">
 </codeblock>
 
+The `AovSum()` function of the **FactoMineR** package estimates the coefficients of the ANOVA model without any prior information on the products, i.e., by considering that <img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0." style="margin-bottom : -1.5rem"/>. Take a look at the `AovSum()` function of the **FactoMineR** package :
+```{r out}
+Analysis of variance with the contrasts sum (the sum of the coefficients is 0)
 
+* Description : Analysis of variance with the contrasts sum (the sum of the coefficients is 0) 
+                Test for all the coefficients 
+                Handle missing values
 
+* Usage : AovSum(formula, data, na.action = na.omit, ...)
 
-Take a look at the `AovSum()` function of the **FactoMineR** package (`?AovSum`).
-* With the model that you have written, run the `AovSum` function and put the results of this function in an R object called `res`.
-* Apply the `names()` function to `res`. What are the results of this function?
-* Look at the component `res$Ftest`. Concerning the products, what would you say in terms of Floral?
-* Look at the component `res$Ttest`. Which one of the products is the most Floral?
-* Write another model that will allow you to integrate the fact that subject may eventually behave differently.
-* Perform the analysis of variance that corresponds to that new model. Provide an interpretation of the results.
+* Arguments
 
+  - formula	: the formula for the model 'y~x1+x2+x1:x2'
+  - data : a data-frame
+  - na.action	: (where relevant) information returned by model.frame on the special handling of NAs.
+  - ... other arguments, cf the function lm
 
+* Value : Retourne des objets
+  - Ftest	 : a table with the F-tests
+  - Ttest	: a table with the t-tests
+
+* Examples : 
+  ## Example two-way anova
+  data(senso)
+  res <- AovSum(Score~ Product + Day , data=senso)
+  res
+  
+  ## Example two-way anova with interaction
+  data(senso)
+  res2 <- AovSum(Score~ Product + Day + Product : Day, data=senso)
+  res2
+  
+  ## Example ancova
+  data(footsize)
+  res3 <- AovSum(footsize ~ size + sex + size : sex, data=footsize)
+  res3
+
+* Authors : Francois Husson husson@agrocampus-ouest.fr
+```
+
+Write the model with the sensory attribute *Floral*.
+
+<codeblock id="01_62">
+</codeblock>
+
+Apply the `names()` function to `res`. What are the results of this function?
+
+<codeblock id="01_63">
+</codeblock>
+
+Look at the component `res$Ftest`. 
+
+<codeblock id="01_64">
+</codeblock>
+
+What are the results of this function?
+
+<choice id=4>
+<opt text="1">
+Look at the second dimension, what's the pourcentage of variability ?
+</opt>
+<opt text="2" correct="true">
+</opt>
+<opt text="3" correct="false">
+4.7% is too small to choose 3 dimensions.
+</opt>
+</choice>
+
+Look at the component `res$Ttest`. 
+
+<codeblock id="01_65">
+</codeblock>
+
+Which one of the products is the most Floral?
+
+<choice id=4>
+<opt text="1">
+Look at the second dimension, what's the pourcentage of variability ?
+</opt>
+<opt text="2" correct="true">
+</opt>
+<opt text="3" correct="false">
+4.7% is too small to choose 3 dimensions.
+</opt>
+</choice>
+
+Write another model that will allow you to integrate the fact that subject may eventually behave differently.
+
+<codeblock id="01_66">
+</codeblock>
+
+Perform the analysis of variance that corresponds to that new model. Provide an interpretation of the results.
+
+<codeblock id="01_67">
+</codeblock>
 
 ## The SensoMineR corner:
 <br>
