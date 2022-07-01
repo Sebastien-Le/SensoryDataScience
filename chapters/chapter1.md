@@ -945,14 +945,10 @@ Look at the component `res$Ftest`.
 
 What are the results of this function?
 
-<choice id=4>
-<opt text="1">
-Look at the second dimension, what's the pourcentage of variability ?
+<choice id=1>
+<opt text="It appears that the sensory attribut hasn't a real impact on the different products, such as *Floral* are really specific to some products ">
 </opt>
-<opt text="2" correct="true">
-</opt>
-<opt text="3" correct="false">
-4.7% is too small to choose 3 dimensions.
+<opt text="It appears that the sensory attribut has a real impact on the different products, such as *Floral* are really specific to some products" correct="true">
 </opt>
 </choice>
 
@@ -961,16 +957,22 @@ Look at the component `res$Ttest`.
 <codeblock id="01_65">
 </codeblock>
 
-Which one of the products is the most Floral?
+It seems that the products were appreciated significantly differently. Which one of the products is the most Floral?
 
-<choice id=4>
-<opt text="1">
-Look at the second dimension, what's the pourcentage of variability ?
+<choice id=1>
+<opt text="Angel">
 </opt>
-<opt text="2" correct="true">
+<opt text="Aromatics Elixir">
 </opt>
-<opt text="3" correct="false">
-4.7% is too small to choose 3 dimensions.
+<opt text="Chanel N5">
+</opt>
+<opt text="J'adore EP" correct="true">
+</opt>
+<opt text="Lolita Lempicka">
+</opt>
+<opt text="Pleasures ">
+</opt>
+<opt text="Shalimar">
 </opt>
 </choice>
 
@@ -979,7 +981,8 @@ Write another model that will allow you to integrate the fact that subject may e
 <codeblock id="01_66">
 </codeblock>
 
-Perform the analysis of variance that corresponds to that new model. Provide an interpretation of the results.
+The addition of the Panelist effect in our ANOVA model has for consequence a semantic change when interpreting the results: although *Floral* scores
+were originally collected, the products are now interpreted in terms of preferences. Provide an interpretation of the results.
 
 <codeblock id="01_67">
 </codeblock>
