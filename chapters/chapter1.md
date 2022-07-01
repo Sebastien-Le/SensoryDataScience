@@ -1029,28 +1029,71 @@ According to the coefficients of the first column, this product has been perceiv
 <exercise id="10" title="The ChearR corner">
 
 ### Import a CSV file with *read.csv()* or *read.table()*
+<codeblock id="01_68">
+</codeblock>
 
 ### Get result summaries of a dataframe or fitted model with *summary()*
+<codeblock id="01_69">
+</codeblock>
 
 ### Transform a variable into factor with *as.factor()*
+<codeblock id="01_70">
+</codeblock>
 
 ### Get main location parameters with *mean()* and *quantile()*
+<codeblock id="01_71">
+</codeblock>
 
 ### Get and Set columns and rows names with *colnames()* and *rownames()*
+<codeblock id="01_72">
+</codeblock>
 
-### Import a CSV file with *read.csv()*
+### Represent an attibute with *boxplot()*, *hist()* and *density()*
+<codeblock id="01_73">
+</codeblock>
 
-### Import a CSV file with *read.csv()*
+### Represent an attibute with *geom_boxplot()*, *geom_histogram()* and *geom_density()*
+<codeblock id="01_74">
+</codeblock>
 
-### Import a CSV file with *read.csv()*
+### Get main dispersion parameters with *sd()*, *var()*, *min()*, *max()*
+<codeblock id="01_75">
+</codeblock>
 
-### Import a CSV file with *read.csv()*
+### Filter your data with *dyplr* and *filter*
+<codeblock id="01_76">
+</codeblock>
 
-### Import a CSV file with *read.csv()*
+### Select columns of your data with *dyplr* and *select*
+<codeblock id="01_77">
+</codeblock>
 
-### Import a CSV file with *read.csv()*
+### Draw advanced plots with *plot()*, *abline()*, *points()*
+<codeblock id="01_78">
+</codeblock>
 
-### Import a CSV file with *read.csv()*
+### Simulate gaussian density with *rnorm()*
+<codeblock id="01_79">
+</codeblock>
 
-### Import a CSV file with *read.csv()*
+### Student test with *t.test()*
+<codeblock id="01_80">
+</codeblock>
+
+### fit linear models with *lm()*
+<codeblock id="01_81">
+</codeblock>
+
+### Compare multiple group means with *anova()*
+<codeblock id="01_82">
+</codeblock>
+
+### Anova with the contrasts sum with *AovSum()*
+<codeblock id="01_83">
+</codeblock>
+
+### Understand products according to the sensory descriptors with *decat*
+<codeblock id="01_84">
+</codeblock>
+
 </exercise>
