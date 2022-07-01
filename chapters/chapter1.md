@@ -99,6 +99,10 @@ From a statistical point of view, the **statistical unit** of interest is the fo
 
 Before importing the data, let's have a look at our first data set based on quantitative measurements: `perfumes_qda_experts.csv`.
 
+<br>
+<center><img src="data_perfumes.png" alt="what image shows"  width=100%></center>
+<br>
+
 ## The *Stat* corner: data collection *versus* collection of data
 <br>
 
@@ -987,7 +991,7 @@ were originally collected, the products are now interpreted in terms of preferen
 <codeblock id="01_67">
 </codeblock>
 
-## The decat() function:
+## The *decat()* function:
 <br>
 
 Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
@@ -1024,4 +1028,29 @@ According to the coefficients of the first column, this product has been perceiv
 
 <exercise id="10" title="The ChearR corner">
 
+### Import a CSV file with *read.csv()* or *read.table()*
+
+### Get result summaries of a dataframe or fitted model with *summary()*
+
+### Transform a variable into factor with *as.factor()*
+
+### Get main location parameters with *mean()* and *quantile()*
+
+### Get and Set columns and rows names with *colnames()* and *rownames()*
+
+### Import a CSV file with *read.csv()*
+
+### Import a CSV file with *read.csv()*
+
+### Import a CSV file with *read.csv()*
+
+### Import a CSV file with *read.csv()*
+
+### Import a CSV file with *read.csv()*
+
+### Import a CSV file with *read.csv()*
+
+### Import a CSV file with *read.csv()*
+
+### Import a CSV file with *read.csv()*
 </exercise>
