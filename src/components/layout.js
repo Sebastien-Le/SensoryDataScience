@@ -41,7 +41,11 @@ const Layout = ({ isHome, title, description, children }) => {
                                     </Link>
                                 </h1>
                             )}
+                            <div>
+                                <center><img src="MG.png" alt="what image shows"  width="50%"></img></center>
+                            </div>
                             <div className={classes.content}>
+                                
                                 {(title || description) && (
                                     <header className={classes.header}>
                                         {title && <h1 className={classes.title}>{title}</h1>}
