@@ -150,7 +150,10 @@ As you can see, a function (with some rare exceptions) need some inputs to produ
 ```{r}
 ?read.csv
 ```
-The structure of the help page in the R documentation is roughly the same from one function to the other. It begins by a description of the function, then it shows how it can be used, then it describes the arguments of the function, in other words the input you have to provide to run the function (some/most of the arguments are optional as there is often a default value for each argument). Finally, it presents the outputs calculated or plotted by the function and it provides examples that you can copy and paste directly in your R console, without even having any data sets. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+The structure of the help page in the R documentation is roughly the same from one function to the other. It begins by a description of the function, then it shows how it can be used, then it describes the arguments of the function, in other words the input you have to provide to run the function (some/most of the arguments are optional as there is often a default value for each argument). Finally, it presents the outputs calculated or plotted by the function and it provides examples that you can copy and paste directly in your R console, without even having any data sets. 
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 Let's first import our dataset in R and have a look at it. To do so, we will use the `read.csv()` function, dedicated to *csv* files. We will also use a very important sign that will allow you to assign results provided by an R function to an R object: `<-`. Indeed, importing data means reading data from a source, then storing what has been read in an R object.
 
@@ -195,7 +198,10 @@ By comparing these outputs, you can understand the results provided by the `summ
 
 ## The *R* corner: the output of a function
 
-The outputs provided by a function can be either a graphical output, or a numerical output. When it's a numerical output, it's often constituted of many different numerical results. It is literally a list of results, *i.e.* a number of connected items that are calculated by the function. The concept of **list** is really important in R, as you may want to access easily to the different items that constitute the output.  ![formula](https://render.githubusercontent.com/render/math?math=\square)
+The outputs provided by a function can be either a graphical output, or a numerical output. When it's a numerical output, it's often constituted of many different numerical results. It is literally a list of results, *i.e.* a number of connected items that are calculated by the function. The concept of **list** is really important in R, as you may want to access easily to the different items that constitute the output.  
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 As the *Panelist*, *Session*, *Rank*, and *Product* variables are intrinsically the sources of variability of the different sensory attributes, they have to be considered as experimental factors. To do so, we are going to transform them as factors by using the `as.factor()` function. As a variable is part of a data frame, we will use the `$` sign to reach a given variable of interest. Actually the `$` sign is used to reach any  component of an R object (including a list).
 
@@ -246,7 +252,11 @@ These following lines produce the same result. Brackets are used when dealing wi
 <codeblock id="01_59">
 </codeblock>
 
-Don't hesitate to go to the following link *https://www.r-bloggers.com/2015/12/how-to-write-the-first-for-loop-in-r/*. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+Don't hesitate to go to the following link *https://www.r-bloggers.com/2015/12/how-to-write-the-first-for-loop-in-r/*. 
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
+
 
 Finally, let's check our *experts* data frame.
 
@@ -261,7 +271,7 @@ For each sensory attribute, as for any quantitative variable, the `summary()` fu
 
 ## The *Stat* corner: the notion of percentile
 
-When you look at the output of the `summary()` function, *Qu.* stands for quartile. By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups, and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+When you look at the output of the `summary()` function, *Qu.* stands for quartile. By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups, and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*. 
 
 - Minimum (<img src="https://latex.codecogs.com/svg.image?Q_0"/>  or <img src="https://latex.codecogs.com/svg.image?0^{th}"/> percentile): the lowest data point in the data set excluding any outliers
 
@@ -272,6 +282,8 @@ When you look at the output of the `summary()` function, *Qu.* stands for quarti
 - First quartile (<img src="https://latex.codecogs.com/svg.image?Q_1"/>  or <img src="https://latex.codecogs.com/svg.image?25^{th}"/> percentile): also known as the lower quartile, it is the median of the lower half of the data set
 
 - Third quartile (<img src="https://latex.codecogs.com/svg.image?Q_3"/> or <img src="https://latex.codecogs.com/svg.image?75^{th}"/> percentile): also known as the upper quartile, it is the median of the upper half of the data set
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 ## The *R* corner: the *c()* function, building an intermediate data set
 
@@ -311,7 +323,11 @@ As for the `mean()` function, the main input you need to fill in is the vector o
 
 ## The *Stat* corner: the interquartile range
 
-By definition, a boxplot is a standardized way of displaying a sequence of values based on: the minimum, the maximum, the sample median, and the first and third quartiles. In addition to the minimum and maximum values used to construct a boxplot, another important element that can also be employed to obtain a boxplot is the interquartile range (*IQR*), the distance between the upper and lower quartiles. Intuitively, you can see the notion of *dispersion* appearing in the notion of range. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+By definition, a boxplot is a standardized way of displaying a sequence of values based on: the minimum, the maximum, the sample median, and the first and third quartiles. In addition to the minimum and maximum values used to construct a boxplot, another important element that can also be employed to obtain a boxplot is the interquartile range (*IQR*), the distance between the upper and lower quartiles. Intuitively, you can see the notion of *dispersion* appearing in the notion of range. 
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
+
 
 ## The *R* corner: setting graphical parameters
 
@@ -328,7 +344,11 @@ Let's represent the three first sensory attributes, from columns 5 to 7 using th
 
 ## Exercise 
 
-To the previous graphical output, add a line corresponding to the mean with the `abline()` function and the *h* argument, which value will be directly assigned to the mean. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+To the previous graphical output, add a line corresponding to the mean with the `abline()` function and the *h* argument, which value will be directly assigned to the mean. 
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
+
 
 <codeblock id="01_21">
 </codeblock>
@@ -351,7 +371,8 @@ Logical operators are important to select data. The most important logical opera
 * `x | y`	x OR y
 * `x & y`	x AND y
 
-![formula](https://render.githubusercontent.com/render/math?math=\square)
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 <codeblock id="01_22">
 </codeblock>
@@ -362,7 +383,6 @@ You can combine them if you want the values that lie between 1 and 2.
 </codeblock>
 
 For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie bteween 1 and 2: it seems that our **product space** composed of perfumes is not spicy at all.
-
 
 
 Let's visualize the *Spicy* attribute by using a two dimensional graph, where the *x-axis* correspond to the values taken by the scores and the *y-axis* to their respective number of occurrences. To represent this so-called **histogram**, we will first use the `hist()` function. The basic input is the sequence of values you want to represent, as for the `boxplot()` function.
@@ -387,7 +407,10 @@ Let's now set the `probability` argument to `TRUE`, and change the default title
 
 ## Exercise
 
-If you want to have a better understanding of the *y-axis*, please have a look at the following link *https://stackoverflow.com/questions/32564005/density-frequency-and-probability-in-hist*. It should help you understanding the notion of histogram and of density. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+If you want to have a better understanding of the *y-axis*, please have a look at the following link *https://stackoverflow.com/questions/32564005/density-frequency-and-probability-in-hist*. It should help you understanding the notion of histogram and of density. 
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 Let's now introduce the notion of density. By definition, the density of a continuous random variable, is a function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random variable) can be interpreted as providing a relative likelihood that the value of the random variable would be close to that sample. (*https://en.wikipedia.org/wiki/Probability_density_function*)
 
@@ -491,15 +514,22 @@ The call of this function is very easy, but there is in fact a real conceptual d
 
 ## The *Stat* corner: inferential *versus* descriptive
 
-If you look at the help page of the `sd()` function you will see in the *Details* section that "Like var this uses denominator n - 1". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (*https://en.wikipedia.org/wiki/Statistical_inference* and *https://en.wikipedia.org/wiki/Descriptive_statistics*). The denominator ![formula](https://render.githubusercontent.com/render/math?math=n-1) is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by ![formula](https://render.githubusercontent.com/render/math?math=n): to boost your estimation, the idea is to divide by a smaller number, ![formula](https://render.githubusercontent.com/render/math?math=n-1) instead of ![formula](https://render.githubusercontent.com/render/math?math=n). ![formula](https://render.githubusercontent.com/render/math?math=\square)
+If you look at the help page of the `sd()` function you will see in the *Details* section that "Like var this uses denominator n - 1". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (*https://en.wikipedia.org/wiki/Statistical_inference* and *https://en.wikipedia.org/wiki/Descriptive_statistics*). The denominator ![formula](https://render.githubusercontent.com/render/math?math=n-1) is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by ![formula](https://render.githubusercontent.com/render/math?math=n): to boost your estimation, the idea is to divide by a smaller number, ![formula](https://render.githubusercontent.com/render/math?math=n-1) instead of ![formula](https://render.githubusercontent.com/render/math?math=n). 
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
+
 
 
 ## Exercise
 
-From your data, create a data frame of dispersion parameters such as the range, the IQR, the standard deviation and the variance. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+From your data, create a data frame of dispersion parameters such as the range, the IQR, the standard deviation and the variance. 
 
 <codeblock id="01_35">
 </codeblock>
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
+<br>
 
 </exercise>
 
