@@ -29,6 +29,7 @@ body {
   font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
   color: #333;
   font-weight: 300;
+  
 }
 .accordion {
   margin-bottom: 1em;
@@ -48,12 +49,12 @@ body {
   cursor: pointer;
   font-weight: normal;
   padding: 15px;
-  background:#a1daf8
-;
+  background:#61B4DD;
+  border-radius:15px;
 }
 .accordion label:hover,
 .accordion label:focus {
-  background: #61B4DD;
+  background: #4E92B2;
 }
 
 
@@ -163,7 +164,9 @@ As its name suggests, the `read.table()` function reads a file in table format a
 <codeblock id="01_02">
 </codeblock>
 
-Don't hesitate to have a look at the help page of the `read.table()` function. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+Don't hesitate to have a look at the help page of the `read.table()` function. 
+
+<hr style="border:2px solid gray">
 
 Let's have a look at what has been imported in R, the object *experts* which is actually a data frame. To display any R object, write its name in the console. To display part of the *experts* object, select the rows and columns you want to diplay. By definition, a data frame is a table or a two-dimensional array, and you can navigate in this array as you would in any matrix, with indices that you would specify using **square brackets** (not to be confused with the **parentheses** used when using a function).
 
