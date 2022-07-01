@@ -133,7 +133,7 @@ demo()
 you will see that R will suggest you several demos. Just pick one of them and have a look at what happens.
 
 <codeblock id="01_58">
-To do so, apply demo function using <i>graphics</i> for instance. 
+To do so, apply the demo() function to the instance <i>graphics</i>.
 </codeblock>
 
 As you can see, a function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, all you have to do is to write in the console the name of the function preceded by a question mark, as follows.
