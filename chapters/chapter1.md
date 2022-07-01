@@ -1026,7 +1026,7 @@ According to the coefficients of the first column, this product has been perceiv
 
 </exercise>
 
-<exercise id="10" title="The ChearR corner">
+<exercise id="10" title="The CheatR corner">
 
 ### Import a CSV file with *read.csv()* or *read.table()*
 <codeblock id="01_68">
@@ -1044,7 +1044,7 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_71">
 </codeblock>
 
-### Get and Set columns and rows names with *colnames()* and *rownames()*
+### Get and set columns and rows names with *colnames()* and *rownames()*
 <codeblock id="01_72">
 </codeblock>
 
@@ -1060,11 +1060,11 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_75">
 </codeblock>
 
-### Filter your data with *dyplr* and *filter*
+### Filter your data with *dyplr* and *filter()*
 <codeblock id="01_76">
 </codeblock>
 
-### Select columns of your data with *dyplr* and *select*
+### Select columns of your data with *dyplr* and *select()*
 <codeblock id="01_77">
 </codeblock>
 
@@ -1080,7 +1080,7 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_80">
 </codeblock>
 
-### fit linear models with *lm()*
+### Fit linear models with *lm()*
 <codeblock id="01_81">
 </codeblock>
 
@@ -1092,7 +1092,7 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_83">
 </codeblock>
 
-### Understand products according to the sensory descriptors with *decat*
+### Understand products according to the sensory descriptors with *decat()*
 <codeblock id="01_84">
 </codeblock>
 
