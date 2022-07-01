@@ -1068,12 +1068,12 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_77">
 </codeblock>
 
-### Draw advanced plots with *plot()*, *abline()*, *points()*
-<codeblock id="01_78">
-</codeblock>
-
 ### Simulate gaussian density with *rnorm()*
 <codeblock id="01_79">
+</codeblock>
+
+### Draw advanced plots with *plot()*, *abline()*, *points()*
+<codeblock id="01_78">
 </codeblock>
 
 ### Student test with *t.test()*

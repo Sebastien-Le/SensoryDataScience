@@ -1,1 +1,5 @@
-read.csv("")
+a <- rnorm(20,85,2)
+b <- rep(1,20)
+plot(a, b, cex = .5, col = "dark red")
+points(x = mean(a), y = 0.8, pch = 24, cex = 0.5, col = "dark red")
+abline(v = 85, col = "grey")
