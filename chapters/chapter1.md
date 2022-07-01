@@ -8,6 +8,75 @@ type: chapter
 id: 1
 ---
 
+<style>
+.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+.accordion label {
+  display: block;
+}
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+.accordion {
+  margin-bottom: 1em;
+}
+.accordion > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+  border-top: 0;
+}
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+.accordion label {
+  color: #333;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #e8e8e8;
+}
+.accordion label:hover,
+.accordion label:focus {
+  background: #d8d8d8;
+}
+
+
+body {
+  padding: 40px;
+}
+a {
+  color: #06c;
+}
+p {
+  margin: 0 0 1em;
+}
+h1 {
+  margin: 0 0 1.5em;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.accordion {
+  max-width: 65em;
+}
+.accordion p:last-child {
+  margin-bottom: 0;
+}
+</style>
 
 <exercise id="1" title="From sensory data collection to a collection of sensory data">
 <style>
@@ -113,7 +182,6 @@ Before importing the data, let's have a look at our first data set based on quan
 
 ## The *Stat* corner: data collection *versus* collection of data
 
-
 Let's recall that:
 
 * A data collection is the process of gathering and measuring information.
@@ -127,8 +195,6 @@ Before importing our data set in R, let's recall that R is like a freeway. It's 
 
 ## The *R* corner: the survival guide
 
-Let's first import our dataset and have a look at it. To do so, we will use two apparently different functions, the `read.csv()` function, dedicated to *csv* files, and the `read.table()` function, which seems more generic. We will also use a very important sign that will allow you to assign results provided by an R function to an R object: `<-`. Indeed, importing data means reading data from a source, then storing what has been read in an R object.
-
 To survive in this jungle what you need to know is: 
 
 * How to install R
@@ -136,7 +202,7 @@ To survive in this jungle what you need to know is:
 * How to use that piece of information
 * How to import a data set and play with it
 
-R can be found on the CRAN (Comprehensive R Archive Network) at the following address: http: //cran.r-project.org/. Choose the version that corresponds to your operating system (windows, mac or Linux), then download it. To install it you can just use the default options and say "yes" to everything. 
+R can be found on the CRAN (Comprehensive R Archive Network) at the following address: http://cran.r-project.org/ . Choose the version that corresponds to your operating system (windows, mac or Linux), then download it. To install it you can just use the default options and say "yes" to everything. 
 
 Once R is installed, open it, and please read carefully the message that appears in your R window, and in particular its end. As written,
 
@@ -154,9 +220,10 @@ If you run the following code
 demo()
 ```
 
-you will see that R will suggest you several demos. Just pick one of them, say *graphics* for instance and have a look at what happens.
+you will see that R will suggest you several demos. Just pick one of them and have a look at what happens.
 
 <codeblock id="01_58">
+To do so, apply demo function using <i>graphics</i> for instance. 
 </codeblock>
 
 As you can see, a function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, all you have to do is to write in the console the name of the function preceded by a question mark, as follows.
@@ -178,7 +245,7 @@ Actually, this line of code will produce exactly the same result as the followin
 
 In this one, we have introduced the notion of **argument**: in mathematics, a variable associated with a function and determining the value of the function.
 
-## The *R* corner: the `read.table()` function
+## The *R* corner: the *read.table()* function
 
 As its name suggests, the `read.table()` function reads a file in table format and creates a **data frame** from it, with cases corresponding to lines and variables to fields in the file. Actually, the two functions `read.csv()` and `read.table()` are the same, except for the defaults, *i.e.* the default values of the arguments. 
 
@@ -192,7 +259,7 @@ Let's have a look at what has been imported in R, the object *experts* which is 
 <codeblock id="01_03">
 </codeblock>
 
-Now, use the `head()` function to display part of the *experts* object.
+Now, apply the `head()` function  on the *experts* object to display part of it.
 
 <codeblock id="01_04">
 </codeblock>
@@ -208,7 +275,7 @@ By comparing these outputs, you can understand the results provided by the `summ
 
 The outputs provided by a function can be either a graphical output, or a numerical output. When it's a numerical output, it's often constituted of many different numerical results. It is literally a list of results, *i.e.* a number of connected items that are calculated by the function. The concept of **list** is really important in R, as you may want to access easily to the different items that constitute the output.  ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
-As the *Panelist*, *Session*, *Rank*, and *Product* variables are intrinsically the sources of variability of the different sensory attributes, they have to be considered as experimental factors. To do so, we are going to transform them as factors by using the `as.factor()` function. As a variable is part of a data frame, we will use the `$` sign to reach a given variable of interest. Actually the `$` sign is used to reach any  component of an R object.
+As the *Panelist*, *Session*, *Rank*, and *Product* variables are intrinsically the sources of variability of the different sensory attributes, they have to be considered as experimental factors. To do so, we are going to transform them as factors by using the `as.factor()` function. As a variable is part of a data frame, we will use the `$` sign to reach a given variable of interest. Actually the `$` sign is used to reach any  component of an R object (including a list).
 
 <codeblock id="01_06">
 </codeblock>
@@ -220,12 +287,15 @@ Let's now do that for the other experimental factors.
 <codeblock id="01_07">
 </codeblock>
 
-Let's now have a look at our data frame (the output is displayed in the console).
+Let's now have a look at our data frame.
 
 <codeblock id="01_08">
 </codeblock>
 
 Apparently, nothing has changed but if you run the `summary()` function you will see that the first 4 variables are now considered as factors.
+
+<codeblock id="01_60">
+</codeblock>
 
 A very important function related to the notion of factor is the `level()` function (and all its variants). Let's apply it to the *Product* variable of our *experts* data frame. This function displays the vector of levels of a factor (or categorical variable).
 
@@ -249,7 +319,7 @@ Let ![formula](https://render.githubusercontent.com/render/math?math=j) be the c
 <codeblock id="01_12">
 </codeblock>
 
-These following lines do the same result:
+These following lines produce the same result. Brackets are used when dealing with several instructions. 
 
 <codeblock id="01_59">
 </codeblock>
@@ -271,17 +341,17 @@ For each sensory attribute, as for any quantitative variable, the `summary()` fu
 
 When you look at the output of the `summary()` function, *Qu.* stands for quartile. By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups, and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
-- Minimum (![formula](https://render.githubusercontent.com/render/math?math=Q_0)) or <img src="https://latex.codecogs.com/svg.image?0^{th}"/> percentile): the lowest data point in the data set excluding any outliers
+- Minimum (<img src="https://latex.codecogs.com/svg.image?Q_0"/>  or <img src="https://latex.codecogs.com/svg.image?0^{th}"/> percentile): the lowest data point in the data set excluding any outliers
 
 - Maximum (<img src="https://latex.codecogs.com/svg.image?Q_4"/>  or <img src="https://render.githubusercontent.com/render/math?math=100^{th}"> percentile): the highest data point in the data set excluding any outliers
 
-- Median (![formula](https://render.githubusercontent.com/render/math?math=Q_2)) or <img src="https://latex.codecogs.com/svg.image?50^{th}"/> percentile): the middle value in the data set
+- Median (<img src="https://latex.codecogs.com/svg.image?Q_2"/>  or <img src="https://latex.codecogs.com/svg.image?50^{th}"/> percentile): the middle value in the data set
 
-- First quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_1) or <img src="https://latex.codecogs.com/svg.image?25^{th}"/>) percentile): also known as the lower quartile, it is the median of the lower half of the data set
+- First quartile (<img src="https://latex.codecogs.com/svg.image?Q_1"/>  or <img src="https://latex.codecogs.com/svg.image?25^{th}"/> percentile): also known as the lower quartile, it is the median of the lower half of the data set
 
-- Third quartile (![formula](https://render.githubusercontent.com/render/math?math=Q_3) or <img src="https://latex.codecogs.com/svg.image?75^{th}"/>) percentile): also known as the upper quartile, it is the median of the upper half of the data set
+- Third quartile (<img src="https://latex.codecogs.com/svg.image?Q_3"/> or <img src="https://latex.codecogs.com/svg.image?75^{th}"/> percentile): also known as the upper quartile, it is the median of the upper half of the data set
 
-## The *R* corner: the `c()` function, building an intermediate data set
+## The *R* corner: the *c()* function, building an intermediate data set
 
 The values of these location parameters can also be obtained by running the functions `mean()` and `quantile()`. The input of these two functions is a sequence of values from which we want to calculate the mean, and the quantiles. After calculating the location paramters, we can combine them using the very important `c()` function (this function combines values into a vector): in other words we apply a function on outputs provided by some other functions.
 
@@ -312,51 +382,42 @@ Then, in order to obtain an operational data frame, we set the names of the colu
 
 In this part, we are going to introduce one of the most convenient way of representing a sequence of values (in our case, the scores associated with a sensory attribute), the so-called *boxplot*.
 
-As for the `mean()` function, the main input you need to fill in is the vector of values you want to represent.
+As for the `mean()` function, the main input you need to fill in is the vector of values you want to represent. Let's represent the *Fruity* attribute.
 
 <codeblock id="01_19">
 </codeblock>
 
 ## The *Stat* corner: the interquartile range
 
-By definition, a boxplot is a standardized way of displaying a sequence of values based on: the minimum, the maximum, the sample median, and the first and third quartiles. In addition to the minimum and maximum values used to construct a boxplot, another important element that can also be employed to obtain a boxplot is the interquartile range (*IQR*), the distance between the upper and lower quartiles. Intuitively, you can see the notion of dispersion appearing in the notion of range. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+By definition, a boxplot is a standardized way of displaying a sequence of values based on: the minimum, the maximum, the sample median, and the first and third quartiles. In addition to the minimum and maximum values used to construct a boxplot, another important element that can also be employed to obtain a boxplot is the interquartile range (*IQR*), the distance between the upper and lower quartiles. Intuitively, you can see the notion of *dispersion* appearing in the notion of range. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
 ## The *R* corner: setting graphical parameters
 
-Let's represent three boxplots in a same graphical output using a loop. To do so, we use the `par()` function to set some graphical parameters and we set the `mfrow` argument to create a matrix of plots in one ploting space.
+To create a matrix of plots in one ploting space, we use the `par()` function to set some graphical parameters, and the `mfrow` argument .
+
+```{r}
+par(mfrow=c(i,j))
+```
+
+Let's represent the three first sensory attributes, from columns 5 to 7 using three boxplots in a same graphical output and a loop.
 
 <codeblock id="01_20">
 </codeblock>
 
 ## Exercise 
 
-To the previous graphical output, add a line corresponding to the mean with the `abline()` function. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+To the previous graphical output, add a line corresponding to the mean with the `abline()` function and the *h* argument, which value will be directly assigned to the mean. ![formula](https://render.githubusercontent.com/render/math?math=\square)
 
 <codeblock id="01_21">
 </codeblock>
 
 By definition, a distribution is "the way in which something is shared out among a group or spread over an area". To some extent, a boxplot is a representation of a distribution. In our situation we want to understand how the scores of given sensory attribute are distributed; we also want to see if this distribution depends on some experimental factors (the products or the panelists, for instance).
 
-For a better understanding of the notion of distribution, let's display the values that lie between 0 and 1 (included), and let's count them. To do so, we first have to select them, then to get the length (or dimension) of the vector with the scores selected. 
-
-## The *Math* corner: function composition
-
-In mathematics, function composition is an operation that takes two functions ![formula](https://render.githubusercontent.com/render/math?math=f) and ![formula](https://render.githubusercontent.com/render/math?math=g), and produces a function ![formula](https://render.githubusercontent.com/render/math?math=h) such that
-<span style="position: center" ><img src="https://latex.codecogs.com/svg.image?h(x)=g(f(x))" style="margin-bottom : -0.25rem"/></span>. In the following code, instead of saving the results of the selection in an R object, we used what is called function composition.
-
-<codeblock id="01_22">
-</codeblock>
-
-`<=` is called a logical operator, and you can combine them if you want the values that lie between 1 and 2.
-
-<codeblock id="01_23">
-</codeblock>
-
-For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie bteween 1 and 2: it seems that our **product space** composed of perfumes is not spicy at all.
+For a better understanding of the notion of distribution, let's display the values that lie between 0 and 1 (included), and let's count them. To do so, we first have to select them, then to get the length (or dimension) of the vector with the scores selected.
 
 ## The *Algo* corner: the notion of logical operators
 
-The most important logical operators are:
+Logical operators are important to select data. The most important logical operators are:
 
 * `<`	less than
 * `<=`	less than or equal to
@@ -368,24 +429,36 @@ The most important logical operators are:
 * `x | y`	x OR y
 * `x & y`	x AND y
 
-As demonstrated, logical operators are important to select data. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+![formula](https://render.githubusercontent.com/render/math?math=\square)
+
+<codeblock id="01_22">
+</codeblock>
+
+You can combine them if you want the values that lie between 1 and 2.
+
+<codeblock id="01_23">
+</codeblock>
+
+For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie bteween 1 and 2: it seems that our **product space** composed of perfumes is not spicy at all.
+
+
 
 Let's visualize the *Spicy* attribute by using a two dimensional graph, where the *x-axis* correspond to the values taken by the scores and the *y-axis* to their respective number of occurrences. To represent this so-called **histogram**, we will first use the `hist()` function. The basic input is the sequence of values you want to represent, as for the `boxplot()` function.
 
 <codeblock id="01_24">
 </codeblock>
 
-As we have seen previously, we have many values that lie between 0 and 1, and it could make sense to change the *breakpoints*. In our case, we used the defaults of the `hist()` function, but we could imagine increasing the number of *breaks*.
+As we have seen previously, we have many values that lie between 0 and 1, and it could make sense to change the *breakpoints*. In our case, we used the defaults of the `hist()` function, but we could imagine increasing the number of *breaks* : let's assign the value of the *breaks* argument to 50.
 
 <codeblock id="01_25">
 </codeblock>
 
-If you consider a frequency as the relative number of times something occurs, the default legend on the *y-axis* is somehow misleading. You can change it by setting the `ylab` argument.
+If you consider a frequency as the relative number of times something occurs, the default legend on the *y-axis* is somehow misleading. You can change it by setting the `ylab` argument to number of occurences.
 
 <codeblock id="01_26">
 </codeblock>
 
-Let's now set the `probability` argument to `TRUE`, and change the default title with the `main` argument.
+Let's now set the `probability` argument to `TRUE`, and change the default title with the `main` argument to "Distribution of the values for the Spicy attribute".
 
 <codeblock id="01_27">
 </codeblock>
@@ -415,7 +488,7 @@ Let's now plot the two vectors `d$x` and `d$y`.
 <codeblock id="01_30">
 </codeblock>
 
-## The *R* corner: `ggplot2` an alternative to base R
+## The *R* corner: *ggplot2* an alternative to base R
 
 So far, the functions we've used are directly integrated in R. There's a possibility to use *external* R functions from what is called a package: in other words, a bunch of functions dedicated to a specific purpose. In the following section, we introduce the `ggplot2` package to visualize our data. `ggplot2` is a system for declaratively creating graphics, based on The Grammar of Graphics. The main idea is to provide the data, tell `ggplot2` how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
 
@@ -448,9 +521,9 @@ Let's say we want to visualize 30% of the values "around" the average (arbitrari
 
 In practice, we want to find `x1` and `x2` such as the mean lies between `x1` and `x2`, and 
 
-<center><img src="https://latex.codecogs.com/svg.image?P[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathbb{P}[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?F_X()"/> is the so-called **cumulative function**, and <img src="https://latex.codecogs.com/svg.image?f_X()"/> the density function of ![formula](https://render.githubusercontent.com/render/math?math=X), a continuous random variable associated with a sensory attribute.
+where <img src="https://latex.codecogs.com/svg.image?F_X" style="margin-bottom : -0.25rem"/> is the so-called **cumulative function**, and <img src="https://latex.codecogs.com/svg.image?f_X" style="margin-bottom : -0.25rem"/> the density function of ![formula](https://render.githubusercontent.com/render/math?math=X), a continuous random variable associated with a sensory attribute.
 
 Let's first identify `i_mean` the index (position) of the mean of the *Vanilla* attribute in the vector `d$x`. To do so we are going to use the `which.max()` function. Then, let's calculate `pcum1` (*resp.* `pcum2`), which is the value of the cumulative function applied on `d$x[i_mean]` minus (*resp.* plus) 0.15. By definition, `x_1` (*resp.* `x2`) is the index of the value in the vector of the values from the cumulative function, such as the cumulative function applied on this value equals `pcum1`. In other words, the value of the cumulative function on `x_1` is equal tothe value of the cumulative function on the mean minus 0.15.
 
@@ -472,15 +545,20 @@ Remember when we defined the boxplot, we said that the box is defined by the int
 
 The most important dispersion parameter is the so-called **standard deviation**. A useful property of the standard deviation is that it is expressed in the same unit as the data.
 
-## The *Stat* corner: mean and standard deviation
-
-Let's say you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of your variables, to get some insights on your population. To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. From this estimator (which is by the way a random variable), you can get an estimation of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> by calculating <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. The standard deviation <img src="https://latex.codecogs.com/svg.image?\sigma" style="margin-bottom : -0.25rem"/> can be estimated using the following expression: <img src="https://latex.codecogs.com/svg.image?s = \sqrt{\frac{1}{n}\sum(x_i-\bar{x})^2}" style="margin-bottom : -1rem"/>.
-
-**Centering** the data is as important as it is simple, apparently. By definition, to center is to place in the middle. Centering is subtracting the average to each value that has been measured. In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow x_i-\bar{x}" style="margin-bottom : -0.25rem"/>, where <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n}\sum x_i" style="margin-bottom : -1rem"/> is the average calculated over the ![formula](https://render.githubusercontent.com/render/math?math=x_i).
-
-Understanding the idea of **standardizing the data**, is the key to understanding statistics. You will see that standardized data will allow you to do compare variables that are not *a priori* comparable: am I bigger than you are small? You will be able to answer that question with standardized data. By definition, when data are standardized, their variance is equal to 1 (hence, their standard deviation is also equal to 1). In other words, let's consider a series <img src="https://latex.codecogs.com/svg.image?\{x_1,\dots,x_n\}" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow \frac{x_i-\bar{x}}{s}" style="margin-bottom : -1rem"/>.
-
-By construction, standardized data have no unit of measurement. These values represent the number of standard deviation that separate an individual from the average individual. Knowing that with a normal distribution, 95% of the realizations lie between more or less 2 standard deviations (actually 1.96) from the average, when a standardized data is higher than 2 in absolute value, it means that the individual is quite peculiar regarding the variable of interest. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+<HTML>
+<section class="accordion">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">The <i>Stat</i> corner: mean and standard deviation</label>
+  </h2>
+  <div class="content">
+    <p> Let's say you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of your variables, to get some insights on your population. To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. From this estimator (which is by the way a random variable), you can get an estimation of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> by calculating <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. The standard deviation <img src="https://latex.codecogs.com/svg.image?\sigma" style="margin-bottom : -0.25rem"/> can be estimated using the following expression: <img src="https://latex.codecogs.com/svg.image?s = \sqrt{\frac{1}{n}\sum(x_i-\bar{x})^2}" style="margin-bottom : -1rem"/>.</p>
+<p> <span style="font-weight : bold">Centering</span> the data is as important as it is simple, apparently. By definition, to center is to place in the middle. Centering is subtracting the average to each value that has been measured. In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow x_i-\bar{x}" style="margin-bottom : -0.25rem"/>, where <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n}\sum x_i" style="margin-bottom : -1rem"/> is the average calculated over the <img src="https://latex.codecogs.com/svg.image?x_{i}" style="margin-bottom : -0.25rem"/>.</p>
+<p>Understanding the idea of <span style="font-weight : bold">standardizing the data</span>, is the key to understanding statistics. You will see that standardized data will allow you to do compare variables that are not <i>a priori</i> comparable: am I bigger than you are small? You will be able to answer that question with standardized data. By definition, when data are standardized, their variance is equal to 1 (hence, their standard deviation is also equal to 1). In other words, let's consider a series <img src="https://latex.codecogs.com/svg.image?\{x_1,\dots,x_n\}" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow \frac{x_i-\bar{x}}{s}" style="margin-bottom : -1rem"/>.</p>
+<p>By construction, standardized data have no unit of measurement. These values represent the number of standard deviation that separate an individual from the average individual. Knowing that with a normal distribution, 95% of the realizations lie between more or less 2 standard deviations (actually 1.96) from the average, when a standardized data is higher than 2 in absolute value, it means that the individual is quite peculiar regarding the variable of interest.</p>
+  </div>
+</section>
+</HTML>
 
 Let's apply the `sd()` function and the `var()` function to a vector of values, in other words let's get the standard deviation of a sensory attribute and its variance: as you might already know, the standard deviation is the square root of the variance.
 
@@ -491,7 +569,8 @@ The call of this function is very easy, but there is in fact a real conceptual d
 
 ## The *Stat* corner: inferential *versus* descriptive
 
-If you look at the help page of the `sd()` function you will see in the *Details* section that "Like var this uses denominator n - 1". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (*https://en.wikipedia.org/wiki/Statistical_inference* and *https://en.wikipedia.org/wiki/Descriptive_statistics*). The denominator ![formula](https://render.githubusercontent.com/render/math?math=n-1) is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by $n$: to boost your estimation, the idea is to divide by a smaller number, ![formula](https://render.githubusercontent.com/render/math?math=n-1) instead of ![formula](https://render.githubusercontent.com/render/math?math=n). ![formula](https://render.githubusercontent.com/render/math?math=\square)
+If you look at the help page of the `sd()` function you will see in the *Details* section that "Like var this uses denominator n - 1". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (*https://en.wikipedia.org/wiki/Statistical_inference* and *https://en.wikipedia.org/wiki/Descriptive_statistics*). The denominator ![formula](https://render.githubusercontent.com/render/math?math=n-1) is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by ![formula](https://render.githubusercontent.com/render/math?math=n): to boost your estimation, the idea is to divide by a smaller number, ![formula](https://render.githubusercontent.com/render/math?math=n-1) instead of ![formula](https://render.githubusercontent.com/render/math?math=n). ![formula](https://render.githubusercontent.com/render/math?math=\square)
+
 
 ## Exercise
 
@@ -514,7 +593,7 @@ Let's consider the two products *Angel* and *J'adore ET*, and the sensory attrib
 
 To clarify this question, let's represent the *Floral* attribute according to the two products *Angel* and *J'adore ET*. This task clearly suggests data manipulation, and we are going to introduce briefly the `dplyr` package. Don't hesitate to have a look at the *dplyr* cheat sheet at the following address: *https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf*. You can also visit this page: *https://dplyr.tidyverse.org/reference/filter.html*.
 
-## The *R* corner: this is a `%>%`
+## The *R* corner: this is a *%>%*
 
 To subset our *experts* data frame, keeping the rows related to the two products *Angel* and *J'adore ET*, we're going to use the `filter()` function and a very important tool named **pipe**, `%>%`; not to be confused with the vertical line `|`, which is the logical operator *OR* and which is also called *pipe*.
 
@@ -548,10 +627,11 @@ As you can see, the *Product* variable is still considered as a factor with 12 l
 <codeblock id="01_41">
 </codeblock>
 
+Let's visualize the density of the *Floral* sensory attribute for the two products *Angel* and *J'adore ET*. We use the `color` argument to differentiate density. 
 <codeblock id="01_42">
 </codeblock>
 
-To have an other visualization, we can use `fill` and not `color` to have the shade of lines and we can change the gradient of colors of lines in informing the parameter `alpha` in `geom_histogram()`
+To have an other visualization, we can use `fill` and not `color` to have the shade of lines and we can change the gradient of colors of lines in informing the parameter `alpha` in `geom_density()`
 
 <codeblock id="01_43">
 </codeblock>
@@ -578,14 +658,12 @@ Let's have a look at the *Angel* data on the one hand, on the *J'adore ET* data 
 
 ## The *Stat* corner: the magic of sampling distribution and confidence interval
 
-In a real life situation, you measure some quantitative variable on a sample of size <img src="https://latex.codecogs.com/svg.image?n"/>, in order to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of what you measure. Formally, you would say, for instance, that you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, that follow a normal distribution with mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> and variance <img src="https://latex.codecogs.com/svg.image?\sigma^2" style="margin-bottom : -0.25rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ x_1, \dots, x_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, to get some insights on your population.
+In a real life situation, you measure some quantitative variable on a sample of size <img src="https://latex.codecogs.com/svg.image?n"/>, in order to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of what you measure. Formally, you would say, for instance, that you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, that follow a normal distribution with mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> and variance <img src="https://latex.codecogs.com/svg.image?\sigma^2" style="margin-bottom : -0rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ x_1, \dots, x_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, to get some insights on your population.
 To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. Why would you do that? The answer is, <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> has some very good properties. This estimator is a random variable which expectation is equal to <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, in other words <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\mu" style="margin-bottom : -0.25rem"/>. By definition, in probability theory, the expected value of a random variable is intuitively the long-run average value of repetitions of the experiment it represents (Wikipedia). The other very important property is that the distribution of the mean <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\bar{X}_n" style="margin-bottom : -0.25rem"/> is approximately a normal distribution, whatever the original distribution of the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, it's incredible but true.
 
-The thing is, in a real life situation, you only have one sample (in most cases). But if you had the possibility to have an infinite number of samples, you would be able to calculate an infinite number of means and to calculate the mean of the means. From that, you would get <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)\bar{X}_n" style="margin-bottom : -0.25rem"/>, as well as the standard deviation of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/>, and its distribution. You would be able to get a confidence interval of the mean, which is really important.
+The thing is, in a real life situation, you only have one sample (in most cases). But if you had the possibility to have an infinite number of samples, you would be able to calculate an infinite number of means and to calculate the mean of the means. From that, you would get <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)" style="margin-bottom : -0.25rem"/>, as well as the standard deviation of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/>, and its distribution. You would be able to get a confidence interval of the mean, which is really important.
 
 If you had enough money to run several times the same experiment, and hence to have measures from many different samples, you would see that the mean of the means over the samples is equal to <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>. Practically, it means that estimating the mean by using the formula <img src="https://latex.codecogs.com/svg.image?\frac{1}{n}\sum x_i" style="margin-bottom : -1rem"/> that you've learned when you were in school, is a good thing to do: the estimator <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/> has a very good property.
-
-Please, copy and paste the following command lines.
 
 <codeblock id="01_46">
 </codeblock>
@@ -605,7 +683,7 @@ When the population is infinite (and in the case of withdraws with replacement),
 
 <center><img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_n)=\frac{\sigma^2}{n}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
-It should make sense for you that the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n"/> depends on the variance of the original data, the ones that you measures on your statistical individual. If the data are variable ("messy"), the average will certainly vary from one sample to the other.
+It should make sense for you that the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> depends on the variance of the original data, the ones that you measures on your statistical individual. If the data are variable ("messy"), the average will certainly vary from one sample to the other.
 
 To understand the denominator, let's take samples of different sizes. If you measure small samples, the mean of your samples will vary more from one sample to the other than if you measure large samples. Let's take samples of size <img src="https://latex.codecogs.com/svg.image?n=2"/> for instance, which is really unrealistic. In one sample you may get two small individuals or two big individuals (let's say you measure the size of an individual), which can explain the fact that the mean may vary a lot from one sample to the other. If you work with samples of size <img src="https://latex.codecogs.com/svg.image?n=1000000000"/>, which can also be unrealistic, you won't probably get 1000000000 small individuals in one sample. For these samples of large size you will probably have something representative of the distribution of your individuals. The means over something representative will not vary a lot from one sample to the other, as they are all supposed to be representative.
 
@@ -613,15 +691,15 @@ This result on the variance of <img src="https://latex.codecogs.com/svg.image?\b
 
 The way <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is distributed is not dependent from the fact that the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/> follow a normal distribution. This result is not that intuitive, but it is really important, as even though you're not working with normal distributions, the estimator of the mean will follow a normal distribution, that's the **central limit theorem**.
 
-Suppose that <img src="https://latex.codecogs.com/svg.image?\forall i, X_i" style="margin-bottom : -0.25rem"/> follows a <img src="https://latex.codecogs.com/svg.image?N(\mu,\sigma^2)" style="margin-bottom : -0.25rem"/>. Then if you standardize the data, you get the following formula:
+Suppose that <img src="https://latex.codecogs.com/svg.image?\forall i, X_i" style="margin-bottom : -0.25rem"/> follows a <img src="https://latex.codecogs.com/svg.image? \mathcal{N}(\mu,\sigma^2)" style="margin-bottom : -0.5rem"/>. Then if you standardize the data, you get the following formula:
 
-<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}} \sim N(0,1)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}} \sim \mathcal{N}(0,1)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 From that formula, you can easily deduce a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>.
 
 <center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}};\bar{X}_n+u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?u_{1-\alpha/2}" style="margin-bottom : -0.25rem"/> is the quantile of a normal distribution (X) such as <img src="https://latex.codecogs.com/svg.image?P(X\leq u_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem"/>.
+where <img src="https://latex.codecogs.com/svg.image?u_{1-\alpha/2}" style="margin-bottom : -0.25rem"/> is the quantile of a normal distribution (X) such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}(X\leq u_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem"/>.
 
 You should read the formula this way:
 
@@ -643,24 +721,26 @@ Why so? Actually, the main idea behind that estimator is that if you work on a s
 
 As <img src="https://latex.codecogs.com/svg.image?S'"/> is a random variable and not a constant (as <img src="https://latex.codecogs.com/svg.image?\sigma"/> when you know its value), the distribution of the "standardized" <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is more complex than in the previous case.
 
-<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{S'/\sqrt{n}} \sim T(n-1)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{S'/\sqrt{n}} \sim  \mathcal{T}(n-1)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 Hence, the confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> is:
 
 <center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}};\bar{X}_n+t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}" style="margin-bottom : -0.75rem"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1"/> degrees of freedom (T) such as <img src="https://latex.codecogs.com/svg.image?P(T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem; margin-top : 1rem"/>. <img src="https://latex.codecogs.com/svg.image?\square"/>
+where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}" style="margin-bottom : -0.75rem"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1"/> degrees of freedom (T) such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}( T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem; margin-top : 1rem"/>. <img src="https://latex.codecogs.com/svg.image?\square"/>
 
 Very practically, it means that you can determine a confidence interval for the real mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> that you will never know.
+
+## Exercise: the notion of *p-value*
+
+The function we're going to use for our **t-test** is called `t.test`. If you don't know how to use this function, write the following code in the console `?t.test` and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? 
 
 <codeblock id="01_48">
 </codeblock>
 
-## Exercise: the notion of *p-value*
+<img src="https://latex.codecogs.com/svg.image?\square"/>
 
-The function we're going to use for our **t-test** is called `t.test`. If you don't know how to use this function, write the following code in the console `?t.test` and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? <img src="https://latex.codecogs.com/svg.image?\square"/>
-
-When you compare two means, <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.25rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.25rem"/>, you want to assess which one of the two following hypotheses. [By definition, a supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation.] is the most convincing:
+When you compare two means, <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.25rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.25rem"/>, you want to assess which one of the two following hypotheses. By definition, a supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation is the most convincing:
 
 1. <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 = \mu_2" style="margin-bottom : -0.25rem"/>
 2. <img src="https://latex.codecogs.com/svg.image?H_1: \mu_1 \ne \mu_2" style="margin-bottom : -0.25rem"/>
@@ -697,7 +777,7 @@ It's not that difficult and it's rather logical (you want to mix both informatio
 
 Under the null hypothesis (the two means are equal):
 
-<center><img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D} \sim T(n_1+n_2-2)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D} \sim \mathcal{T}(n_1+n_2-2)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 
 In statistics, statistical hypothesis testing is fundamental. Two hypotheses are confronted, the null hypothesis, <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/>, and the alternative hypothesis, <img src="https://latex.codecogs.com/svg.image?H_1"  style="margin-bottom : -0.25rem"/>. Apparently, one hypothesis has to be chosen, but in practice the problem is different and can be expressed the following way: should I chose <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/>? In other words, the problem is not symmetrical and <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/> is the hypothesis according to which a decision is taken. By definition (Wikipedia), the size for simple hypotheses, is the test's probability of incorrectly rejecting the null hypothesis. *The false positive rate*; the significance level of a test (<img src="https://latex.codecogs.com/svg.image?\alpha"/>), is the upper bound imposed on the size of a test. Its value is chosen by the statistician prior to looking at the data or choosing any particular test to be used. It is the maximum exposure to erroneously rejecting <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/> he/she is ready to accept. Testing <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/> at significance level <img src="https://latex.codecogs.com/svg.image?\alpha"/> means testing <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/> with a test whose size does not exceed <img src="https://latex.codecogs.com/svg.image?\alpha"/>. In most cases, one uses tests whose size is equal to the significance level.
@@ -742,7 +822,7 @@ In our problem, we want to test whether there is an effect of our factor of inte
 
 Under the null hypothesis, when the factor has no effect, we have the following important result: 
 
-v<img src="https://latex.codecogs.com/svg.image?\frac{\frac{SS_B}{I-1}}{\frac{SS_W}{n-I}}=\frac{MS_F}{MS_R}\sim F^{I-1}_{n-I}" style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\frac{SS_B}{I-1}}{\frac{SS_W}{n-I}}=\frac{MS_F}{MS_R}\sim F^{I-1}_{n-I}" style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 The numerator is the Mean Square of the factor, while the denominator is the Mean Square of the residual. The distribution under the null hypothesis is an *F* distribution with <img src="https://latex.codecogs.com/svg.image?I-1"/> degrees of freedom on the numerator and <img src="https://latex.codecogs.com/svg.image?n-I"/> degrees of freedom on the denominator.
 
@@ -856,7 +936,7 @@ It appears that the `decat()` function provides a sensory description of each pr
 
 According to the coefficients of the first column, this product has been perceived as significantly higher regarding the descriptors *Greedy*, *Heady*,..., and significantly lower regarding the descriptors *Floral*, *Fruity*,...
 
-**Recap. **What have we done so far? and, what should you know? You should know how to install R, to install packages, to look at the information that is necessary to run some functions. Once the analysis is made, you usually get an output which is either a graphical output, or results from some calculations. These numerical results can be displayed in the console, by typing the name of the result of interest. Please, keep in mind the concept of list.
+**Recap.** What have we done so far? and, what should you know? You should know how to install R, to install packages, to look at the information that is necessary to run some functions. Once the analysis is made, you usually get an output which is either a graphical output, or results from some calculations. These numerical results can be displayed in the console, by typing the name of the result of interest. Please, keep in mind the concept of list.
 
 </exercise>
 

@@ -1,0 +1,1 @@
+hist(experts$Spicy, breaks=50)

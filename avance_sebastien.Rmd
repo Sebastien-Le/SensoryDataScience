@@ -579,8 +579,8 @@ points(x = mean(a), y = 0.8, pch = 24, cex = 0.5, col = "dark red")
 
 a <- rnorm(20,85,2)
 b <- rep(1,20)
-means_simulated[1] <- mean(a)
-plot(a, b, cex = .5, col = "pink")
+means_simulated[2] <- mean(a)
+points(a, b, cex = .5, col = "pink")
 points(x = mean(a), y = 0.8, pch = 24, cex = 0.5, col = "pink")
 
 a=rnorm(20,85,2)
@@ -736,7 +736,7 @@ When you compare two means, $\mu_1$ and $\mu_2$, you want to assess which one of
 1. $H_0: \mu_1 = \mu_2$
 2. $H_1: \mu_1 \ne \mu_2$
 
-When you look at the $H_0$, the so-called null hypothesis, you can also rephrase it the following way: $H_0: \mu_1 - \mu_2 =0$. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference $\mu_1 - \mu_2$ (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following test statistic^[By definition, a single measure of some attribute of a sample (_i.e._ a statistic) used in statistical hypothesis testing, Wikipedia]:
+When you look at the $H_0$, the so-called null hypothesis, you can also rephrase it the following way: $H_0: \mu_1 - \mu_2 =0$. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference $\mu_1 - \mu_2$ (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following test statistic; by definition, a single measure of some attribute of a sample (_i.e._ a statistic) used in statistical hypothesis testing, Wikipedia]:
 
 $$
 D=\bar{X}_1-\bar{X}_2.

@@ -1,1 +1,1 @@
-demo(graphics)
+demo(_____)
