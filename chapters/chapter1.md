@@ -79,97 +79,7 @@ h1 {
 </style>
 
 <exercise id="1" title="From sensory data collection to a collection of sensory data">
-<style>
-.accordion > input[type="checkbox"] {
-  position: absolute;
-  left: -100vw;
-}
-.accordion .content {
-  overflow-y: hidden;
-  height: 0;
-  transition: height 0.3s ease;
-}
-.accordion > input[type="checkbox"]:checked ~ .content {
-  height: auto;
-  overflow: visible;
-}
-.accordion label {
-  display: block;
-}
-body {
-  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
-  color: #333;
-  font-weight: 300;
-}
-.accordion {
-  margin-bottom: 1em;
-}
-.accordion > input[type="checkbox"]:checked ~ .content {
-  padding: 15px;
-  border: 1px solid #e8e8e8;
-  border-top: 0;
-}
-.accordion .handle {
-  margin: 0;
-  font-size: 1.125em;
-  line-height: 1.2em;
-}
-.accordion label {
-  color: #333;
-  cursor: pointer;
-  font-weight: normal;
-  padding: 15px;
-  background: #e8e8e8;
-}
-.accordion label:hover,
-.accordion label:focus {
-  background: #d8d8d8;
-}
-.accordion .handle label:before {
-  font-family: 'fontawesome';
-  content: "fa-chevron-white";
-  display: inline-block;
-  margin-right: 10px;
-  font-size: .58em;
-  line-height: 1.556em;
-  vertical-align: middle;
-}
-.accordion > input[type="checkbox"]:checked ~ .handle label:before {
-  content: "\f078";
-}
-body {
-  padding: 40px;
-}
-a {
-  color: #06c;
-}
-p {
-  margin: 0 0 1em;
-}
-h1 {
-  margin: 0 0 1.5em;
-  font-weight: 600;
-  font-size: 1.5em;
-}
-.accordion {
-  max-width: 65em;
-}
-.accordion p:last-child {
-  margin-bottom: 0;
-}
-</style>
-<HTML>
-<section class="accordion">
-  <input type="checkbox" name="collapse2" id="handle2">
-  <h2 class="handle">
-    <label for="handle2">26B. Btan Dubbel</label>
-  </h2>
-  <div class="content">
-    <p><strong>Overall Impression:</strong> A deep reddish-copper, moderately strong, malty, complex Trappist ale with rich malty flavors, dark or dried fruit esters, and light alcohol blended together in a malty presentation that still finishes fairly dry.</p>
-    <p><strong>History:</strong> Originated at monasteries in the Middle Ages, and was revived in the mid-1800s after the Napoleonic era.</p>
-  </div>
-</section>
-</HTML>
+
 One of the most common situation when dealing with *quantitative perception* occurs when a set of stimuli is assessed by panelists according to a bunch of quantitative sensory attributes. One can distinguish between two situations: when the sensory attributes are the same from one panelist to the other, when the sensory attributes are different from one panelist to the other, what happens when panelists can use their own sensory attributes. 
 
 In this course, we will deal essentially with the so-called *QDA* type of data, when panelists rate according to a fix list of attributes. These data are the origin of sensory data, and we will see that it's a very convenient model, from a statistical point of view: in other words you will be able to learn a lot in terms of statistical thinking from these data.
@@ -223,7 +133,7 @@ demo()
 you will see that R will suggest you several demos. Just pick one of them and have a look at what happens.
 
 <codeblock id="01_58">
-To do so, apply demo function using <i>graphics</i> for instance. 
+To do so, apply the demo() function to the instance <i>graphics</i>.
 </codeblock>
 
 As you can see, a function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, all you have to do is to write in the console the name of the function preceded by a question mark, as follows.
