@@ -100,11 +100,12 @@ From a statistical point of view, the **statistical unit** of interest is the fo
 Before importing the data, let's have a look at our first data set based on quantitative measurements: `perfumes_qda_experts.csv`.
 
 ## The *Stat* corner: data collection *versus* collection of data
+<br>
 
 Let's recall that:
 
 * A data collection is the process of gathering and measuring information.
-* A data set is a collection of data. In the case of tabular data, a data set corresponds to one table, where every column of the table represents a particular variable, and each row corresponds to a given record of the data set in question. ![formula](https://render.githubusercontent.com/render/math?math=\square)
+* A data set is a collection of data. In the case of tabular data, a data set corresponds to one table, where every column of the table represents a particular variable, and each row corresponds to a given record of the data set in question. 
 
 </exercise>
 
@@ -113,6 +114,7 @@ Let's recall that:
 Before importing our data set in R, let's recall that R is like a freeway. It's complex, it goes very fast, it can be dangerous when it's not properly used, and as a pedestrian your life expectancy is about 5 to 10 minutes. We all know people that have opened an R session (after struggling for its installation) and that have quitted after 5 minutes, without doing anything but grumbling.
 
 ## The *R* corner: the survival guide
+<br>
 
 To survive in this jungle what you need to know is: 
 
@@ -168,6 +170,7 @@ Actually, this line of code will produce exactly the same result as the followin
 In this one, we have introduced the notion of **argument**: in mathematics, a variable associated with a function and determining the value of the function.
 
 ## The *R* corner: the *read.table()* function
+<br>
 
 As its name suggests, the `read.table()` function reads a file in table format and creates a **data frame** from it, with cases corresponding to lines and variables to fields in the file. Actually, the two functions `read.csv()` and `read.table()` are the same, except for the defaults, *i.e.* the default values of the arguments. 
 
@@ -197,6 +200,7 @@ Finally, use one of the most important function, the `summary()` function. You w
 By comparing these outputs, you can understand the results provided by the `summary()` function applied on a data frame. As you can guess, the `summary()` function is really important and should be used each time you have imported a data set: it provides a summary of the data set of interest which will help you checking whether your data have been properly imported. In this example, it has been applied to the data set *experts*.
 
 ## The *R* corner: the output of a function
+<br>
 
 The outputs provided by a function can be either a graphical output, or a numerical output. When it's a numerical output, it's often constituted of many different numerical results. It is literally a list of results, *i.e.* a number of connected items that are calculated by the function. The concept of **list** is really important in R, as you may want to access easily to the different items that constitute the output.  
 
@@ -241,6 +245,7 @@ And you can change this value easily by assigning another value:
 </codeblock>
 
 ## The *Algo* corner: the notion of iteration
+<br>
 
 Let <img src="https://latex.codecogs.com/svg.image?j" style="margin-bottom:-0.25rem"/> be the column index. We are going to write our first *loop* in R, so that the four first columns of *experts* can be considered as experimental factors.
 
@@ -269,7 +274,10 @@ For each factor, as for any qualitative variable, the `summary()` function provi
 
 For each sensory attribute, as for any quantitative variable, the `summary()` function provides the so-called **location parameters** such as the minimum, the maximum, the median, the mean and the other quartiles of the variable of interest. It looks like our data have been properly imported in R.
 
+<br>
+
 ## The *Stat* corner: the notion of percentile
+<br>
 
 When you look at the output of the `summary()` function, *Qu.* stands for quartile. By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups, and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*. 
 
@@ -283,9 +291,9 @@ When you look at the output of the `summary()` function, *Qu.* stands for quarti
 
 - Third quartile (<img src="https://latex.codecogs.com/svg.image?Q_3"/> or <img src="https://latex.codecogs.com/svg.image?75^{th}"/> percentile): also known as the upper quartile, it is the median of the upper half of the data set
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
-<br>
 
 ## The *R* corner: the *c()* function, building an intermediate data set
+<br>
 
 The values of these location parameters can also be obtained by running the functions `mean()` and `quantile()`. The input of these two functions is a sequence of values from which we want to calculate the mean, and the quantiles. After calculating the location paramters, we can combine them using the very important `c()` function (this function combines values into a vector): in other words we apply a function on outputs provided by some other functions.
 
@@ -322,6 +330,7 @@ As for the `mean()` function, the main input you need to fill in is the vector o
 </codeblock>
 
 ## The *Stat* corner: the interquartile range
+<br>
 
 By definition, a boxplot is a standardized way of displaying a sequence of values based on: the minimum, the maximum, the sample median, and the first and third quartiles. In addition to the minimum and maximum values used to construct a boxplot, another important element that can also be employed to obtain a boxplot is the interquartile range (*IQR*), the distance between the upper and lower quartiles. Intuitively, you can see the notion of *dispersion* appearing in the notion of range. 
 
@@ -330,6 +339,7 @@ By definition, a boxplot is a standardized way of displaying a sequence of value
 
 
 ## The *R* corner: setting graphical parameters
+<br>
 
 To create a matrix of plots in one ploting space, we use the `par()` function to set some graphical parameters, and the `mfrow` argument .
 
@@ -342,13 +352,13 @@ Let's represent the three first sensory attributes, from columns 5 to 7 using th
 <codeblock id="01_20">
 </codeblock>
 
-## Exercise 
-
-To the previous graphical output, add a line corresponding to the mean with the `abline()` function and the *h* argument, which value will be directly assigned to the mean. 
-
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
 <br>
 
+## Exercise 
+<br>
+
+To the previous graphical output, add a line corresponding to the mean with the `abline()` function and the *h* argument, which value will be directly assigned to the mean. 
 
 <codeblock id="01_21">
 </codeblock>
@@ -358,6 +368,7 @@ By definition, a distribution is "the way in which something is shared out among
 For a better understanding of the notion of distribution, let's display the values that lie between 0 and 1 (included), and let's count them. To do so, we first have to select them, then to get the length (or dimension) of the vector with the scores selected.
 
 ## The *Algo* corner: the notion of logical operators
+<br>
 
 Logical operators are important to select data. The most important logical operators are:
 
@@ -406,6 +417,7 @@ Let's now set the `probability` argument to `TRUE`, and change the default title
 </codeblock>
 
 ## Exercise
+<br>
 
 If you want to have a better understanding of the *y-axis*, please have a look at the following link *https://stackoverflow.com/questions/32564005/density-frequency-and-probability-in-hist*. It should help you understanding the notion of histogram and of density. 
 
@@ -434,6 +446,7 @@ Let's now plot the two vectors `d$x` and `d$y`.
 </codeblock>
 
 ## The *R* corner: *ggplot2* an alternative to base R
+<br>
 
 So far, the functions we've used are directly integrated in R. There's a possibility to use *external* R functions from what is called a package: in other words, a bunch of functions dedicated to a specific purpose. In the following section, we introduce the `ggplot2` package to visualize our data. `ggplot2` is a system for declaratively creating graphics, based on The Grammar of Graphics. The main idea is to provide the data, tell `ggplot2` how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
 
@@ -513,15 +526,14 @@ Let's apply the `sd()` function and the `var()` function to a vector of values, 
 The call of this function is very easy, but there is in fact a real conceptual difficulty behind what we do.
 
 ## The *Stat* corner: inferential *versus* descriptive
+<br>
 
 If you look at the help page of the `sd()` function you will see in the *Details* section that "Like var this uses denominator n - 1". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (*https://en.wikipedia.org/wiki/Statistical_inference* and *https://en.wikipedia.org/wiki/Descriptive_statistics*). The denominator ![formula](https://render.githubusercontent.com/render/math?math=n-1) is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by ![formula](https://render.githubusercontent.com/render/math?math=n): to boost your estimation, the idea is to divide by a smaller number, ![formula](https://render.githubusercontent.com/render/math?math=n-1) instead of ![formula](https://render.githubusercontent.com/render/math?math=n). 
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
-<br>
-
-
 
 ## Exercise
+<br>
 
 From your data, create a data frame of dispersion parameters such as the range, the IQR, the standard deviation and the variance. 
 
@@ -546,6 +558,7 @@ Let's consider the two products *Angel* and *J'adore ET*, and the sensory attrib
 To clarify this question, let's represent the *Floral* attribute according to the two products *Angel* and *J'adore ET*. This task clearly suggests data manipulation, and we are going to introduce briefly the `dplyr` package. Don't hesitate to have a look at the *dplyr* cheat sheet at the following address: *https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf*. You can also visit this page: *https://dplyr.tidyverse.org/reference/filter.html*.
 
 ## The *R* corner: this is a *%>%*
+<br>
 
 To subset our *experts* data frame, keeping the rows related to the two products *Angel* and *J'adore ET*, we're going to use the `filter()` function and a very important tool named **pipe**, `%>%`; not to be confused with the vertical line `|`, which is the logical operator *OR* and which is also called *pipe*.
 
@@ -609,6 +622,7 @@ Let's have a look at the *Angel* data on the one hand, on the *J'adore ET* data 
 </codeblock>
 
 ## The *Stat* corner: the magic of sampling distribution and confidence interval
+<br>
 
 In a real life situation, you measure some quantitative variable on a sample of size <img src="https://latex.codecogs.com/svg.image?n"/>, in order to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of what you measure. Formally, you would say, for instance, that you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, that follow a normal distribution with mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> and variance <img src="https://latex.codecogs.com/svg.image?\sigma^2" style="margin-bottom : -0rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ x_1, \dots, x_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, to get some insights on your population.
 To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. Why would you do that? The answer is, <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> has some very good properties. This estimator is a random variable which expectation is equal to <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, in other words <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\mu" style="margin-bottom : -0.25rem"/>. By definition, in probability theory, the expected value of a random variable is intuitively the long-run average value of repetitions of the experiment it represents (Wikipedia). The other very important property is that the distribution of the mean <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\bar{X}_n" style="margin-bottom : -0.25rem"/> is approximately a normal distribution, whatever the original distribution of the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, it's incredible but true.
@@ -681,9 +695,10 @@ Hence, the confidence interval for <img src="https://latex.codecogs.com/svg.imag
 
 where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}" style="margin-bottom : -0.75rem"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1"/> degrees of freedom (T) such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}( T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem; margin-top : 1rem"/>. <img src="https://latex.codecogs.com/svg.image?\square"/>
 
-Very practically, it means that you can determine a confidence interval for the real mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> that you will never know.
+Very practically, it means that you can determine a confidence interval for the real mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> that you will never know. 
 
 ## Exercise: the notion of *p-value*
+<br>
 
 The function we're going to use for our **t-test** is called `t.test`. If you don't know how to use this function, write the following code in the console `?t.test` and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? 
 
@@ -844,6 +859,7 @@ and
 <center><img src="https://latex.codecogs.com/svg.image?e_{ij}=y_{ij} -\hat{y}_{ij}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
 ## Exercise
+<br>
 
 * Install the **FactoMineR** package. 
 * Load the **FactoMineR** package with the `library()` function.
@@ -859,6 +875,7 @@ and
 </codeblock>
 
 ## The SensoMineR corner:
+<br>
 
 Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
 
