@@ -1,7 +1,7 @@
 ---
 title: 'Chapter 1: Dealing with quantitative perception'
 description:
-  '"Sensory Data Science" is an innovative course about data science applied to sensory data. In this course, we will try to find the right balance between statistics, computer science, mathematics, formalism, intuition, with a pinch of sensory, consumer, perception data. The spirit of the course is as follows: start with data, explore them and introduce the statistical and computer elements necessary to obtain knowledge. Data mining will be done using R software.'
+  ' '
 prev: null
 next: /chapter2
 type: chapter
@@ -861,9 +861,20 @@ and
 ## Exercise
 <br>
 
-* Install the **FactoMineR** package. 
-* Load the **FactoMineR** package with the `library()` function.
-* Take a look at the `AovSum()` function of the **FactoMineR** package (`?AovSum`).
+Load the **FactoMineR** package with the `library()` function.
+
+<codeblock id="01_57">
+</codeblock>
+
+We subset the dataframe *experts*:
+
+<codeblock id="01_61">
+</codeblock>
+
+
+
+
+Take a look at the `AovSum()` function of the **FactoMineR** package (`?AovSum`).
 * With the model that you have written, run the `AovSum` function and put the results of this function in an R object called `res`.
 * Apply the `names()` function to `res`. What are the results of this function?
 * Look at the component `res$Ftest`. Concerning the products, what would you say in terms of Floral?
@@ -871,8 +882,7 @@ and
 * Write another model that will allow you to integrate the fact that subject may eventually behave differently.
 * Perform the analysis of variance that corresponds to that new model. Provide an interpretation of the results.
 
-<codeblock id="01_57">
-</codeblock>
+
 
 ## The SensoMineR corner:
 <br>
