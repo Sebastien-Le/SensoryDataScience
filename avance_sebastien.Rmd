@@ -959,6 +959,7 @@ According to the coefficients of the first column, this product has been perceiv
 # Passage aux variables supplémentaires
 
 ```{r}
+set.seed(7)
 tab.adjust.mean <- data.frame(resdecat$adjmean)
 res.PCA <- PCA(tab.adjust.mean)#On recupere le resultat de la PCA
 plan.coord.var <- res.PCA$var$coord[,1:2]#On recupere les coordonnees du plan des variables projetees
@@ -990,6 +991,18 @@ generate_hedonic(35, 2)
 generate_hedonic(35, 3)
 PCA(new.tab.hedonic, quanti.sup = 13:117)
 ```
+#Verifications et coherence
+
+```{r}
+transpose.tab <- data.frame(t(new.tab.hedonic))#On prend la transpose de nos donnees generees
+res.PCA.transpose <- PCA(transpose.tab)#pca sur cette transpose
+mat.means <- rowMeans(transpose.tab) %*% t(rep(1, length(colnames(transpose.tab))))
+transpose.tab.c.row <- sweep(as.matrix(transpose.tab), 1, mat.means, FUN="-")#On centre par rapport aux lignes
+
+PCA(transpose.tab, axes = c(1,2))
+PCA(transpose.tab.c.row)
+```
+
 
 # Individus supplémentaires :
 
