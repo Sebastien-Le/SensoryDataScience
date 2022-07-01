@@ -1,1 +1,1 @@
-read.csv("")
+t.test(jadore_exp$Floral)
