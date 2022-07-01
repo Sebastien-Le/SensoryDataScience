@@ -507,7 +507,7 @@ The most important dispersion parameter is the so-called **standard deviation**.
 <section class="accordion">
   <input type="checkbox" name="collapse2" id="handle2">
   <h2 class="handle">
-    <label for="handle2">The <i>Stat</i> corner: mean and standard deviation</label>
+    <label for="handle2">At second reading: mean and standard deviation</label>
   </h2>
   <div class="content">
     <p> Let's say you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of your variables, to get some insights on your population. To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. From this estimator (which is by the way a random variable), you can get an estimation of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> by calculating <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. The standard deviation <img src="https://latex.codecogs.com/svg.image?\sigma" style="margin-bottom : -0.25rem"/> can be estimated using the following expression: <img src="https://latex.codecogs.com/svg.image?s = \sqrt{\frac{1}{n}\sum(x_i-\bar{x})^2}" style="margin-bottom : -1rem"/>.</p>
@@ -525,10 +525,20 @@ Let's apply the `sd()` function and the `var()` function to a vector of values, 
 
 The call of this function is very easy, but there is in fact a real conceptual difficulty behind what we do.
 
-## The *Stat* corner: inferential *versus* descriptive
-<br>
 
-If you look at the help page of the `sd()` function you will see in the *Details* section that "Like var this uses denominator n - 1". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (*https://en.wikipedia.org/wiki/Statistical_inference* and *https://en.wikipedia.org/wiki/Descriptive_statistics*). The denominator ![formula](https://render.githubusercontent.com/render/math?math=n-1) is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by ![formula](https://render.githubusercontent.com/render/math?math=n): to boost your estimation, the idea is to divide by a smaller number, ![formula](https://render.githubusercontent.com/render/math?math=n-1) instead of ![formula](https://render.githubusercontent.com/render/math?math=n). 
+
+<HTML>
+<section class="accordion">
+  <input type="checkbox" name="collapse3" id="handle3">
+  <h2 class="handle">
+    <label for="handle3">At second reading: inferential versus descriptive</label>
+  </h2>
+  <div class="content">
+    <p> If you look at the help page of the <code>sd()</code> function you will see in the <i>Details</i> section that "Like var this uses denominator  <img src="https://latex.codecogs.com/svg.image?n-1"/>". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (<i><a>https://en.wikipedia.org/wiki/Statistical_inference</a></i> and <i><a>https://en.wikipedia.org/wiki/Descriptive_statistics</a></i>). The denominator <img src="https://latex.codecogs.com/svg.image?n-1"/> is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by  <img src="https://latex.codecogs.com/svg.image?n"/>: to boost your estimation, the idea is to divide by a smaller number, <img src="https://latex.codecogs.com/svg.image?n-1"/> instead of <img src="https://latex.codecogs.com/svg.image?n"/>. 
+</p>
+  </div>
+</section>
+</HTML>
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{30cm}{0.4pt}}"/></center>
 
@@ -884,7 +894,7 @@ Take a look at the `AovSum()` function of the **FactoMineR** package (`?AovSum`)
 
 
 
-## The SensoMineR corner:
+## The decat() function:
 <br>
 
 Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
