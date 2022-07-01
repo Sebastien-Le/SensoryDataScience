@@ -1035,19 +1035,28 @@ According to the coefficients of the first column, this product has been perceiv
 
 ### Get and Set columns and rows names with *colnames()* and *rownames()*
 
-### Import a CSV file with *read.csv()*
+### Represent an attibute with *boxplot()*, *hist()* and *density()*
 
-### Import a CSV file with *read.csv()*
+### Represent an attibute with *geom_boxplot()*, *geom_histogram()* and *geom_density()*
 
-### Import a CSV file with *read.csv()*
+### Get main dispersion parameters with *sd()*, *var()*, *min()*, *max()*
 
-### Import a CSV file with *read.csv()*
+### Filter your data with *dyplr* and *filter*
 
-### Import a CSV file with *read.csv()*
+### Select columns of your data with *dyplr* and *select*
 
-### Import a CSV file with *read.csv()*
+### Draw advanced plots with *plot()*, *abline()*, *points()*
 
-### Import a CSV file with *read.csv()*
+### Simulate gaussian density with *rnorm()*
 
-### Import a CSV file with *read.csv()*
+### Student test with *t.test()*
+
+### fit linear models with *lm()*
+
+### Compare multiple group means with *anova()*
+
+### Anova with the contrasts sum with *AovSum()*
+
+### Understand products according to the sensory descriptors with *decat*
+
 </exercise>
