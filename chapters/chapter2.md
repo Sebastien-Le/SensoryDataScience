@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 2: Sensory analysis for two qualitatives variables'
+title: 'Chapter 2: Dealing with quantitative perception'
 description:
   'This chapter will teach you even more stuff and help you learn some new
   concepts.'

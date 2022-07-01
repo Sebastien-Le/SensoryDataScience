@@ -988,10 +988,7 @@ Write another model that will allow you to integrate the fact that subject may e
 The addition of the Panelist effect in our ANOVA model has for consequence a semantic change when interpreting the results: although *Floral* scores
 were originally collected, the products are now interpreted in terms of preferences. Provide an interpretation of the results.
 
-<codeblock id="01_67">
-</codeblock>
-
-## The *decat()* function:
+## The *R* Corner : the *decat()* function
 <br>
 
 Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
@@ -1026,7 +1023,7 @@ According to the coefficients of the first column, this product has been perceiv
 
 </exercise>
 
-<exercise id="10" title="The ChearR corner">
+<exercise id="10" title="The CheatR corner">
 
 ### Import a CSV file with *read.csv()* or *read.table()*
 <codeblock id="01_68">
@@ -1044,7 +1041,7 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_71">
 </codeblock>
 
-### Get and Set columns and rows names with *colnames()* and *rownames()*
+### Get and set columns and rows names with *colnames()* and *rownames()*
 <codeblock id="01_72">
 </codeblock>
 
@@ -1060,11 +1057,11 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_75">
 </codeblock>
 
-### Filter your data with *dyplr* and *filter*
+### Filter your data with *dyplr* and *filter()*
 <codeblock id="01_76">
 </codeblock>
 
-### Select columns of your data with *dyplr* and *select*
+### Select columns of your data with *dyplr* and *select()*
 <codeblock id="01_77">
 </codeblock>
 
@@ -1080,7 +1077,7 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_80">
 </codeblock>
 
-### fit linear models with *lm()*
+### Fit linear models with *lm()*
 <codeblock id="01_81">
 </codeblock>
 
@@ -1092,7 +1089,7 @@ According to the coefficients of the first column, this product has been perceiv
 <codeblock id="01_83">
 </codeblock>
 
-### Understand products according to the sensory descriptors with *decat*
+### Understand products according to the sensory descriptors with *decat()*
 <codeblock id="01_84">
 </codeblock>
 
