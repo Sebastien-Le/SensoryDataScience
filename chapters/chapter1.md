@@ -929,3 +929,6 @@ According to the coefficients of the first column, this product has been perceiv
 
 </exercise>
 
+<exercise id="10" title="The ChearR corner">
+
+</exercise>
