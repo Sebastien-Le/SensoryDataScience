@@ -950,9 +950,9 @@ Look at the component `res$Ftest`.
 What are the results of this function?
 
 <choice id=1>
-<opt text="It appears that the sensory attribut hasn't a real impact on the different products, such as *Floral* are really specific to some products ">
+<opt text="It appears that the sensory attribut hasn't a real impact on the different products, such as Floral are really specific to some products ">
 </opt>
-<opt text="It appears that the sensory attribut has a real impact on the different products, such as *Floral* are really specific to some products" correct="true">
+<opt text="It appears that the sensory attribut has a real impact on the different products, such as Floral are really specific to some products" correct="true">
 </opt>
 </choice>
 

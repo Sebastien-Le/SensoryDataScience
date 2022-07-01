@@ -1,1 +1,1 @@
-read.csv("")
+anova(res_one_way)
