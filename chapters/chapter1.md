@@ -224,7 +224,7 @@ And you can change this value easily by assigning another value:
 
 ## The *Algo* corner: the notion of iteration
 
-Let ![formula](https://render.githubusercontent.com/render/math?math=j) be the column index. We are going to write our first *loop* in R, so that the four first columns of *experts* can be considered as experimental factors.
+Let <img src="https://latex.codecogs.com/svg.image?j" style="margin-bottom:-0.25rem"/> be the column index. We are going to write our first *loop* in R, so that the four first columns of *experts* can be considered as experimental factors.
 
 <codeblock id="01_12">
 </codeblock>
