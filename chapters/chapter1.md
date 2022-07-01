@@ -40,7 +40,7 @@ body {
 }
 .accordion .handle {
   margin: 0;
-  font-size: 1.125em;
+  font-size: 1.0em;
   line-height: 1.2em;
 }
 .accordion label {
@@ -48,12 +48,12 @@ body {
   cursor: pointer;
   font-weight: normal;
   padding: 15px;
-  background: #ab93c5
+  background:#a1daf8
 ;
 }
 .accordion label:hover,
 .accordion label:focus {
-  background: #8E70AF;
+  background: #61B4DD;
 }
 
 
