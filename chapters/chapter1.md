@@ -44,15 +44,16 @@ body {
   line-height: 1.2em;
 }
 .accordion label {
-  color: #333;
+  color: #FFFDF9;
   cursor: pointer;
   font-weight: normal;
   padding: 15px;
-  background: #e8e8e8;
+  background: #ab93c5
+;
 }
 .accordion label:hover,
 .accordion label:focus {
-  background: #d8d8d8;
+  background: #8E70AF;
 }
 
 
