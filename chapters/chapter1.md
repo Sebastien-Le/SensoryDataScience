@@ -988,10 +988,7 @@ Write another model that will allow you to integrate the fact that subject may e
 The addition of the Panelist effect in our ANOVA model has for consequence a semantic change when interpreting the results: although *Floral* scores
 were originally collected, the products are now interpreted in terms of preferences. Provide an interpretation of the results.
 
-<codeblock id="01_67">
-</codeblock>
-
-## The *decat()* function:
+## The *R* Corner : the *decat()* function
 <br>
 
 Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
