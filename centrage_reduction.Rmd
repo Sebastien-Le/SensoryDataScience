@@ -1,0 +1,105 @@
+---
+title: "exercice centrage reduction"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+experts <- read.table(file="data/perfumes_qda_experts.csv",header=TRUE, sep=",",quote="\"")
+for (col in colnames(experts[,1:4])){
+  experts[, col] <- as.factor(experts[, col])
+}
+```
+
+# Center and reduce 
+
+```{r}
+library(SensoMineR)
+library(dplyr)
+```
+
+We want to center and reduce the matrix of products. Let's choose 7 products and keep 8 sensory attributes:
+```{r eval=FALSE}
+df <- ____
+```
+
+```{r}
+#Soluce
+df <- experts %>%
+  select(c(Panelist,Product, Floral, Marine, Fruity, Heady, Wrapping, Oriental, Greedy, Vanilla)) %>%
+  filter(Product == "Angel" | Product == "Pleasures" | Product == "J'adore EP" | Product == "Aromatics Elixir" | Product == "Shalimar" | Product == "Chanel N5" | Product == "Lolita Lempicka")
+```
+
+Next, we drop the levels of factors with the `droplevels` function:
+```{r}
+df <- droplevels(df)
+```
+
+#First step : center
+
+Centering a matrix is do the difference with the means of each columns. 
+
+Using the `averagetable` function from `SensoMineR`, we can get the matrix of means for adjusted means. We're gonna center this matrix.
+```{r}
+resaverage <- averagetable(df, formul = "~Product+Panelist", firstvar = 3)
+res <- as.matrix(resaverage)
+res
+```
+To center it, we want to do the difference between each adjusted means with the mean of the sensory attribute corresponding to the column. 
+
+To do it, we must to obtain the means of each sensory attributes. The first point is to sum values for each columns:
+
+```{r}
+I <- nrow(res)
+J <- ncol(res)
+g <- rep(1,I)%*%res
+g
+```
+and next we weight them by $n$ (here $n=7$); according the definition of mean: 
+
+```{r}
+D <- diag(1/I, J)
+g <- g%*%D
+g
+```
+This vector is the center of gravity of the attribute's space. Next, we must to get a matrix of dimensions $(p,q)$ (where $p$ is the number of products and $q$ is the number of sensory descriptors) of means for each column.
+
+```{r}
+col_1 <- matrix(1,I,1)
+col_1%*%g
+```
+
+The last step to centering is to do the difference:
+```{r}
+res_c <- res-col_1%*%g
+```
+
+# Second step : reduce
+
+To reduce the matrix of adjusted and centered means, we go to do the matrix product with $\frac{1}{\sigma}$. Let's get the vector of variances of each sensory attributes to begin:
+```{r}
+var <- diag(t(res_c)%*%res_c)/I
+```
+
+Next we calculate $\sigma$ and we get the matrix of $\frac{1}{\sigma}$ of dimensions $(p,q)$:
+```{r}
+inv_sigma <- 1/sqrt(var)
+inv_sigma
+
+m_sigma <- matrix(diag(1/sqrt(diag(t(res_c)%*%res_c)/I)),ncol=J)
+m_sigma
+```
+
+to finish, we do the product:
+```{r}
+res_cr <- res_c%*%m_sigma
+```
+
+A good way to check if a matrix is well centered reduced is to calculate if to verify if standards deviations are equal to 1:
+```{r}
+sqrt(diag(t(res_cr)%*%res_cr)/I)
+```
+

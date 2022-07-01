@@ -1,4 +1,6 @@
 library(dplyr)
+
 sub_experts <- experts %>%
-  filter(Product=="Angel"|Product=="J'adore ET")
+  filter(Product==____|Product==_____)
+
 summary(sub_experts)

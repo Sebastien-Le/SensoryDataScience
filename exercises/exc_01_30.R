@@ -1,0 +1,1 @@
+plot(x = __,y = __,main = "Density of Spicy")

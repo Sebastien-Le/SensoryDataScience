@@ -579,8 +579,8 @@ points(x = mean(a), y = 0.8, pch = 24, cex = 0.5, col = "dark red")
 
 a <- rnorm(20,85,2)
 b <- rep(1,20)
-means_simulated[1] <- mean(a)
-plot(a, b, cex = .5, col = "pink")
+means_simulated[2] <- mean(a)
+points(a, b, cex = .5, col = "pink")
 points(x = mean(a), y = 0.8, pch = 24, cex = 0.5, col = "pink")
 
 a=rnorm(20,85,2)
@@ -736,7 +736,7 @@ When you compare two means, $\mu_1$ and $\mu_2$, you want to assess which one of
 1. $H_0: \mu_1 = \mu_2$
 2. $H_1: \mu_1 \ne \mu_2$
 
-When you look at the $H_0$, the so-called null hypothesis, you can also rephrase it the following way: $H_0: \mu_1 - \mu_2 =0$. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference $\mu_1 - \mu_2$ (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following test statistic^[By definition, a single measure of some attribute of a sample (_i.e._ a statistic) used in statistical hypothesis testing, Wikipedia]:
+When you look at the $H_0$, the so-called null hypothesis, you can also rephrase it the following way: $H_0: \mu_1 - \mu_2 =0$. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference $\mu_1 - \mu_2$ (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following test statistic; by definition, a single measure of some attribute of a sample (_i.e._ a statistic) used in statistical hypothesis testing, Wikipedia]:
 
 $$
 D=\bar{X}_1-\bar{X}_2.
@@ -951,4 +951,69 @@ resdecat$resT$Angel
 According to the coefficients of the first column, this product has been perceived as significantly higher regarding the descriptors *Greedy*, *Heady*,..., and significantly lower regarding the descriptors *Floral*, *Fruity*,...
 
 **Recap. **What have we done so far? and, what should you know? You should know how to install R, to install packages, to look at the information that is necessary to run some functions. Once the analysis is made, you usually get an output which is either a graphical output, or results from some calculations. These numerical results can be displayed in the console, by typing the name of the result of interest. Please, keep in mind the concept of list.
+
+# end part
+# ----------------------------------------------------------------------------------------------------
+# begin new part
+
+# Passage aux variables supplémentaires
+
+```{r}
+set.seed(7)
+tab.adjust.mean <- data.frame(resdecat$adjmean)
+res.PCA <- PCA(tab.adjust.mean)#On recupere le resultat de la PCA
+plan.coord.var <- res.PCA$var$coord[,1:2]#On recupere les coordonnees du plan des variables projetees
+res.kmeans <- kmeans(plan.coord.var, centers=3)#On recupere les clusters associes aux variables pour les futures generations de nos variables hedoniques
+tab.cluster<-data.frame(plan.coord.var)
+tab.cluster$cluster <- res.kmeans$cluster#On rajoute les correspondances var-cluster
+
+new.tab.hedonic <<- tab.adjust.mean#Notre nouveau tableau avec les nouvelles variables generees
+generate_hedonic <- function(nb_iter, nb_clust){
+  temp.tab.clust <- tab.cluster %>% filter(cluster == nb_clust)
+  keepvar <- row.names(temp.tab.clust)
+  temp.tab <- tab.adjust.mean %>% select(all_of(keepvar))
+  for (i in 1:nb_iter){
+    rand <- runif(length(colnames(temp.tab)),1,10)
+    weights <- rand/sum(rand)
+    newvar <- paste0(paste0("Cluster",nb_clust),paste0("hedovar", i))
+    weightmat <- sapply(1:ncol(temp.tab),function(x) temp.tab[,x] * weights[x] )
+    newval <- apply(weightmat, 1, sum)
+    assign(newvar,newval)
+    new.tab.hedonic <<- data.frame(new.tab.hedonic, get(as.name(newvar)))
+    colnames(new.tab.hedonic)[length(colnames(new.tab.hedonic))] <<- newvar
+  }
+  return(new.tab.hedonic)
+}
+
+
+generate_hedonic(35, 1)
+generate_hedonic(35, 2)
+generate_hedonic(35, 3)
+PCA(new.tab.hedonic, quanti.sup = 13:117)
+```
+#Verifications et coherence
+
+```{r}
+transpose.tab <- data.frame(t(new.tab.hedonic))#On prend la transpose de nos donnees generees
+res.PCA.transpose <- PCA(transpose.tab)#pca sur cette transpose
+mat.means <- rowMeans(transpose.tab) %*% t(rep(1, length(colnames(transpose.tab))))
+transpose.tab.c.row <- sweep(as.matrix(transpose.tab), 1, mat.means, FUN="-")#On centre par rapport aux lignes
+
+PCA(transpose.tab, axes = c(1,2))
+PCA(transpose.tab.c.row)
+```
+
+
+# Individus supplémentaires :
+
+```{r}
+means <- summarize_all(tab.adjust.mean, mean)
+new.tab.indsup <- rbind(tab.adjust.mean,G= means)
+PCA(new.tab.indsup, ind.sup = 13)
+```
+```{r}
+#Version avec j'adore ET en individu supplémentaire : 
+index <- match("J'adore ET", rownames(tab.adjust.mean))
+PCA(tab.adjust.mean, ind.sup = index)
+```
 
