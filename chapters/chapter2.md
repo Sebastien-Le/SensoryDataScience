@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 2: Dealing with quantitative perception'
+title: 'Chapter 2: Dealing with qualitative perception'
 description:
   'This chapter will teach you even more stuff and help you learn some new
   concepts.'
