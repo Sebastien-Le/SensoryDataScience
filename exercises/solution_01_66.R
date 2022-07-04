@@ -1,0 +1,1 @@
+res <- AovSum(Floral~ Product + Panelist, data = experts_subset)

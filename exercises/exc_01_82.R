@@ -1,0 +1,1 @@
+anova(res_one_way)

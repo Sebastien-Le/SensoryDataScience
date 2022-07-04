@@ -1,3 +1,5 @@
-spicy.matrix <- as.matrix(dist(means$mean_Spicy))
-citrus.matrix <- as.matrix(dist(means$mean_Citrus))
-floral.matrix <- as.matrix(dist(means$mean_Floral))
+par(mfrow=c(1,3))
+
+for (j in 5:7) {
+  boxplot(experts[,j], main = colnames(experts)[j])
+}

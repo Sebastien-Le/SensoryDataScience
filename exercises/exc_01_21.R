@@ -1,14 +1,6 @@
-df$Floral <- ____
-df$Citrus <- ____
-df$Spicy <- ____
-df$Heady <- ____
+par(mfrow=c(1,3))
 
-a1 <- ____
-
-a2 <- ____
-
-a3 <- ____
-
-a4 <- ____
-
-grid.arrange(____)
+for (j in _:_) {
+  boxplot(experts[_,_], main = colnames(experts)[_])
+  abline(____))
+}

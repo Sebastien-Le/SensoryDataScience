@@ -1,6 +1,2 @@
-a1 <- ____
-a2 <- ____
-a3 <- ____
-
-
-grid.arrange(a1, a2, a3, ncol=2, nrow = 2)
+experts$Spicy[experts$Spicy<=1]
+length(experts$Spicy[experts$Spicy<=1])

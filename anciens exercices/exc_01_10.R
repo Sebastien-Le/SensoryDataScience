@@ -1,0 +1,1 @@
+hist(experts$Spicy, main="Histogram of Spicy", breaks=50, ___=___)

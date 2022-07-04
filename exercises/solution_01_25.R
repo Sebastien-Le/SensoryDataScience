@@ -1,2 +1,1 @@
-heatmap(cov.att)
-heatmap(dist.prod)
+hist(experts$Spicy, breaks=50)

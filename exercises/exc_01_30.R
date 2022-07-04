@@ -1,7 +1,1 @@
-NIPALS <- function(X){
-  
-  return()
-}
-
-NIPALS(means.variables)
-svd(means.variables)$v
+plot(x = __,y = __,main = "Density of Spicy")

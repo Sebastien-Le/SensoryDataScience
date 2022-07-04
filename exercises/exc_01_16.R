@@ -1,10 +1,3 @@
-experts %>%  
-  # Select 3 products and 1 sensory attribute
-  __________ %>% 
-  
-  # Plot the boxplots 
-  __________ + 
-  
-  # Add lines between each means
-  stat_summary(fun.y=mean, geom="line", aes(group=1), color="black") + 
-  stat_summary(fun.y=mean, geom="point")
+colnames(loc.parameters) <- c("mean", "median", "q1", "q3")
+rownames(loc.parameters) <- colnames(experts[,5:16])
+loc.parameters

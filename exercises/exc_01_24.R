@@ -1,1 +1,1 @@
-att.dist <- ___
+hist(experts$Spicy)

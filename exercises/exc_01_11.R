@@ -1,2 +1,2 @@
-hist(____)
-lines(_____, col="red")
+levels(experts$Product)[4] <- "Cinéma"
+levels(experts$Product)
