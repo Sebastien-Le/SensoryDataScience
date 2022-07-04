@@ -14,7 +14,8 @@ install.packages("vietnameseConverter")
 install.packages("stringi")
 install.packages("factoextra")
 install.packages("tidyverse")
-
-
-
-
+install.packages("sentimentr")
+install.packages("tm")
+install.packages("stringr")
+install.packages("data.table")
+install.packages("car")
