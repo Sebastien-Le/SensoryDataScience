@@ -57,7 +57,7 @@ const Layout = ({ isHome, title, description, children }) => {
                                 
                             </div>
                             <div>
-                                <center><img src="MG.png" alt="what image shows"  width="60%"></img></center>
+                                <center><img src="MG.png" alt="what image shows"  width="100%"></img></center>
                             </div>
 
                             <footer className={classes.footer}>
