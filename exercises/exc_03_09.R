@@ -1,0 +1,1 @@
+dico_ira <- read.csv2("data/mots_lemm_iramuteq_ANG.csv")

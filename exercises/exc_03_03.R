@@ -1,0 +1,1 @@
+data_tissu$Text <- tolower(data_tissu$Text)
