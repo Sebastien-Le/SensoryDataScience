@@ -41,7 +41,9 @@ const Layout = ({ isHome, title, description, children }) => {
                                     </Link>
                                 </h1>
                             )}
+
                             <div className={classes.content}>
+                           
                                 {(title || description) && (
                                     <header className={classes.header}>
                                         {title && <h1 className={classes.title}>{title}</h1>}
@@ -51,6 +53,11 @@ const Layout = ({ isHome, title, description, children }) => {
                                     </header>
                                 )}
                                 {children}
+
+                                
+                            </div>
+                            <div>
+                                <center><img src="MG.png" alt="what image shows"  width="100%"></img></center>
                             </div>
 
                             <footer className={classes.footer}>

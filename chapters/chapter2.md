@@ -1,10 +1,8 @@
 ---
-title: 'Chapter 2: Sensory analysis for two qualitatives variables'
+title: 'Chapter 2: Dealing with qualitative perception'
 description:
-  'This chapter will teach you even more stuff and help you learn some new
-  concepts.'
 prev: /chapter1
-next: null
+next: /chapter3
 type: chapter
 id: 2
 ---
