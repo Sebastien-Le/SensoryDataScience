@@ -1,0 +1,601 @@
+ID_juge;Produit;Text;Class;Classe_hedo
+19;A;not thick enough;0;je n'aime pas
+19;B;quite well;0;je n'aime pas
+19;C;right weft;1;j'aime un peu
+19;D;thick enough;1;j'aime un peu
+19;E;classy but a little too dirty;1;j'aime un peu
+19;F;not thick enough;0;je n'aime pas
+19;G;good thick enough;1;j'aime un peu
+19;H;good but too light;1;j'aime un peu
+19;I;it is good;0;je n'aime pas
+19;J;very classy;2;j'aime beaucoup
+20;A;good for the leather ;1;j'aime un peu
+20;B;feeling of dead skin;0;je n'aime pas
+20;C;not bad but a little dry to the touch;1;j'aime un peu
+20;D;seems to be close to the baize;0;je n'aime pas
+20;E;I don't like the velvet feeling;0;je n'aime pas
+20;F;good tactile deeling and very pleasant stiffness;2;j'aime beaucoup
+20;H;quite soft but less pleasant feeling of skin;1;je n'aime pas
+20;I;quite comfortable but a little too dry;1;j'aime un peu
+20;J;quite soft but a little plastic feeling;2;j'aime un peu
+21;A;fine fabrics and small meshes;1;j'aime beaucoup
+21;B;fabric thickness and touch;2;j'aime un peu
+21;C;cheap feeling;0;j'aime beaucoup
+21;D;is damaged by friction;1;je n'aime pas
+21;E;velvety appearance: aesthetic and qualitative;2;j'aime un peu
+21;F;brighter than the A fabric;1;j'aime beaucoup
+21;G;weird to the touch;0;j'aime un peu
+21;H;oily texture;0;je n'aime pas
+21;J;quality leather;1;je n'aime pas
+23;A;it is not sophisticated enough;1;je n'aime pas
+23;B;it is a little too rude;1;j'aime un peu
+23;C;it is too thin;0;j'aime un peu
+23;D;it is too hairy;0;j'aime un peu
+23;E;it is really pleasant to the touch;2;je n'aime pas
+23;F;it is simple and really well finished;2;je n'aime pas
+23;G;it is too soft;1;j'aime beaucoup
+23;H;it is really pleasant and modern;2;j'aime beaucoup
+23;I;it is not refined enough;0;j'aime un peu
+23;J;classy enough;2;j'aime beaucoup
+26;A;I don't know;1;je n'aime pas
+26;B;not flexible enough;0;j'aime beaucoup
+26;C;not cozy enough;0;j'aime un peu
+26;D;itchy fabric;0;je n'aime pas
+26;E;soft mellow comfortable;2;je n'aime pas
+26;F;soft;2;je n'aime pas
+26;G;rough;0;j'aime beaucoup
+26;H;soft to the touch;1;j'aime beaucoup
+26;I;rough fabric;0;je n'aime pas
+26;J;soft mellow comfortable;2;j'aime un peu
+27;A;I like this product a little because it remains discreet without beeing too unpleasant to the touch;1;je n'aime pas
+27;B;I don't like this product because it is thick;0;j'aime beaucoup
+27;C;I like this product a little because it is properly thickened;1;j'aime un peu
+27;D;I don't like this product because it is too similar to carpet;0;je n'aime pas
+27;E;I don't like this product because I don't visualize this kind of material in a car, even if it's nice to the touch;0;j'aime un peu
+27;F;I like this product a little because it remains soft and pleasant to the touch, without being too thick;1;je n'aime pas
+27;G;too coarse;0;je n'aime pas
+27;H;I like this product a little because it is smooth ;1;j'aime un peu
+27;I;I don't like this product because it is not comfortable;0;je n'aime pas
+27;J;remains smooth and quite chic;2;j'aime un peu
+28;A;not thick enough;0;je n'aime pas
+28;B;not qualitative enough;0;j'aime beaucoup
+28;C;not soft enough;1;je n'aime pas
+28;D;too much fibre;0;je n'aime pas
+28;E;just right pleasant to the touch;2;j'aime un peu
+28;F;just right smooth;1;je n'aime pas
+28;G;too soft;0;j'aime beaucoup
+28;H;just right smooth;1;j'aime un peu
+28;I;too industrial;0;je n'aime pas
+28;J;just right qualitative;2;j'aime un peu
+29;A;simple to the touch and correct design;1;je n'aime pas
+29;B;I don't like its simple and ordinary design. The fabric is weird to the touch;0;j'aime beaucoup
+29;C;ugly design;0;j'aime un peu
+29;D;it looks like baize and I'm afraid it's getting damaged too fast;0;je n'aime pas
+29;E;super soft to the touch. I like this type of fabric that gives the impression of being shiny when you run your finger over it;2;je n'aime pas
+29;F;nice to the touch and simple fabric design;1;je n'aime pas
+29;G;I don't like the material at all;0;j'aime beaucoup
+29;H;rigid fabric;0;j'aime un peu
+29;I;It looks like elastic and I don't like to the touch;0;je n'aime pas
+29;J;looks more like leather even if it's not. Soft and pleasant to the touch;1;je n'aime pas
+30;A;too thin;0;je n'aime pas
+30;B;just right thick;1;j'aime un peu
+30;C;soft to the touch;1;je n'aime pas
+30;D;too much dustpan;0;j'aime un peu
+30;E;very soft to the touch;1;j'aime un peu
+30;F;a little thin;1;je n'aime pas
+30;G;too synthetic viscose;0;j'aime un peu
+30;H;too many wrinkles marks;1;j'aime un peu
+30;I;sophisticated;2;je n'aime pas
+30;J;elegant leather imitation;2;j'aime un peu
+31;A;rough;0;j'aime beaucoup
+31;B;rather thick but a little hard;1;j'aime beaucoup
+31;C;a little too thin;0;je n'aime pas
+31;D;must quickly get damaged and fluffy;0;j'aime un peu
+31;E;very soft and thick enough;2;je n'aime pas
+31;F;quite soft but thin;1;je n'aime pas
+31;G;very soft to see over time if it holds or if it subsides;2;j'aime beaucoup
+31;H;interesting material but a stocky effect ;1;j'aime un peu
+31;I;quite thick and must hold well over time;1;j'aime beaucoup
+31;J;leather effect to see on the temperature changes according to the seasons;2;j'aime un peu
+32;A;not pleasant to the touch;0;j'aime un peu
+32;B;thicker and pleasant to the touch;1;j'aime beaucoup
+32;C;pleasant;1;je n'aime pas
+32;D;not pleasant and…;0;j'aime un peu
+32;E;sofa style;1;j'aime un peu
+32;F;slips and don't like the look;1;je n'aime pas
+32;G;foam can easily crash;0;j'aime un peu
+32;H;hard does not slip;0;j'aime un peu
+32;I;pleasant but slippery;0;je n'aime pas
+32;J;don't like the look;1;je n'aime pas
+33;A;sportwear;1;je n'aime pas
+33;C;too rough;0;j'aime un peu
+33;D;unpleasant;0;j'aime un peu
+33;E;unpleasant;0;je n'aime pas
+33;F;unpleasant;0;je n'aime pas
+33;G;headaches;0;je n'aime pas
+33;H;dizziness;0;je n'aime pas
+33;I;sportwear;2;je n'aime pas
+33;J;smooth;2;je n'aime pas
+34;A;just right structured weft;1;je n'aime pas
+34;B;really pleasant to the touch;2;j'aime beaucoup
+34;C;just right balanced and soft weft;1;j'aime beaucoup
+34;D;just right soft fabric;1;j'aime un peu
+34;E;really soft fabrics;2;j'aime beaucoup
+34;F;just right weft and thin fabric;1;j'aime un peu
+34;G;too soft;0;j'aime un peu
+34;H;too sticky;0;j'aime beaucoup
+34;I;too synthetic;0;j'aime un peu
+34;J;just right coated fabric;1;je n'aime pas
+35;A;I like this fabric a little, although it's a little too thin.;1;je n'aime pas
+35;B;I don't like this product because it's a little too thick. ;0;je n'aime pas
+35;C;I really like this product because it is really pleasant to the touch with its little hushed aspect;2;j'aime un peu
+35;D;I don't like this product because for me it will catch too much dust;0;j'aime un peu
+35;E;I don't like this product because I find it too soft for a car interior ;0;je n'aime pas
+35;F;I like this fabric a little because it's just right in terms of weaving;1;j'aime beaucoup
+35;G;I really like this product because it is really soft;2;je n'aime pas
+35;H;I really like this product because it has a slightly leathery aspect;2;je n'aime pas
+35;I;I like this fabric a little because it is just at the level of thickness and I like its weaving;1;j'aime un peu
+35;J;I really like this product because it is really elegant;2;j'aime beaucoup
+36;A;just right to the touch, quite discreet and adapted weft;2;j'aime beaucoup
+36;B;a little dense fabric but may be suitable;1;j'aime un peu
+36;C;very pleasant, I really like the diagonal weft;2;j'aime beaucoup
+36;D;felt for furniture too elaborate;0;j'aime beaucoup
+36;E;velvet fabric for overly classy clothing;0;j'aime un peu
+36;F;just right in the weft and thickness;1;j'aime beaucoup
+36;G;fabric too foamy for insulation;0;je n'aime pas
+36;H;I really like the material;2;je n'aime pas
+36;I;I don't like much fibre for textiles;0;j'aime un peu
+36;J;I don't like imitation leather fabric, unpleasant to the touch;0;je n'aime pas
+37;A;not soft enough;0;j'aime beaucoup
+37;B;too much rough;0;je n'aime pas
+37;C;pleasant;1;je n'aime pas
+37;D;good soft touch;2;je n'aime pas
+37;E;resistant and soft;2;je n'aime pas
+37;F;pleasant;1;j'aime un peu
+37;G;pleasant to the touch soft resistant;2;j'aime beaucoup
+37;H;it hooks;0;j'aime beaucoup
+37;I;it hooks;0;j'aime un peu
+37;J;a little stiff;1;j'aime beaucoup
+38;A;it really like it because it is effective;2;je n'aime pas
+38;B;not enough;0;je n'aime pas
+38;C;there is a lack of practicality;1;j'aime un peu
+38;D;it is too bitter;0;j'aime beaucoup
+38;E;it is good;2;je n'aime pas
+38;F;it is really good;2;j'aime un peu
+38;G;not enough;0;je n'aime pas
+38;H;not enough;0;j'aime beaucoup
+38;I;it is good;2;j'aime beaucoup
+38;J;it is just right mentholated;1;je n'aime pas
+39;A;relatively smooth fabric;1;je n'aime pas
+39;B;not enough;0;j'aime beaucoup
+39;C;i like it a little although it seems a little fluffy;1;j'aime un peu
+39;D;not pretty enough;0;j'aime un peu
+39;E;just right;0;je n'aime pas
+39;F;the fabric appears to be of good quality;2;j'aime un peu
+39;G;not enough;0;je n'aime pas
+39;H;i like it a little because it seems resistant;1;je n'aime pas
+39;I;not enough;0;j'aime beaucoup
+39;J;the fabric seems resistant and probably not very dirty;2;je n'aime pas
+40;A;just right;1;j'aime un peu
+40;B;i don't like it too smooth;0;je n'aime pas
+40;C;very soft;1;j'aime beaucoup
+40;D;very pretty;1;j'aime un peu
+40;E;just right;2;je n'aime pas
+40;F;very bad;1;j'aime un peu
+40;G;just right;2;j'aime un peu
+40;H;not enough;0;j'aime beaucoup
+40;I;not comfortable;1;j'aime un peu
+40;J;just right;2;j'aime beaucoup
+41;A;pleasant touch but XXXXXXX, therefore difficult to maintain with three children;1;je n'aime pas
+41;B;too thick rough and will catch all the dirt;0;j'aime un peu
+41;C;pleasant warm pretty and seems resistant;2;j'aime beaucoup
+41;D;same too many possibilities to catch all the dirt;0;j'aime un peu
+41;E;pleasant touch, warm feeling but probably fragile;1;je n'aime pas
+41;F;soft, tight weave it seems solid and comfortable;1;j'aime beaucoup
+41;G;unpleasant feel, cheep feeling;0;je n'aime pas
+41;H;soft pleasant tight weave seems easy to maintain;1;j'aime un peu
+41;I;soft to the touch seems easy to maintain but not very pretty;1;j'aime un peu
+41;J;it makes you dream and gives the impression of being in a luxury car… a little dream…;2;je n'aime pas
+42;A;soft to the touch;1;j'aime un peu
+42;B;too stiff;0;j'aime un peu
+42;C;shine;1;j'aime beaucoup
+42;D;nice texture;1;j'aime un peu
+42;E;dull;0;je n'aime pas
+42;F;soft to the touch;1;j'aime un peu
+42;G;not easy to the touch;0;j'aime un peu
+42;H;easy to the touch;1;je n'aime pas
+42;I;not pretty to see;0;j'aime un peu
+42;J;nice leather side pattern;2;je n'aime pas
+43;A;too rough;0;j'aime un peu
+43;B;not smooth enough;0;je n'aime pas
+43;C;not thick enough;1;j'aime beaucoup
+43;D;too dustpan;0;je n'aime pas
+43;E;just right to the touch;2;je n'aime pas
+43;F;not soft enough;1;j'aime un peu
+43;G;not rigid enough;0;je n'aime pas
+43;H;too sticky;1;j'aime beaucoup
+43;I;not smooth enough;0;j'aime un peu
+43;J;just right in comfort;2;je n'aime pas
+44;A;looks like natural as a cotton blend;2;j'aime un peu
+44;B;rather comfortable but too striated not pleasant to the skin touch;1;je n'aime pas
+44;C;pleasant in skin contact rather comfortable;2;j'aime beaucoup
+44;D;the fabric looks like a teddy;0;j'aime beaucoup
+44;E;soft velvet aspect;2;j'aime un peu
+44;F;not soft enough;1;j'aime beaucoup
+44;G;soft fleece comfortable;2;je n'aime pas
+44;H;it is dry;0;j'aime beaucoup
+44;I;too much streak in the fabric;1;j'aime un peu
+44;J;too smooth looks like fake leather it sticks on the skin;0;j'aime beaucoup
+45;A;soft to the touch;1;je n'aime pas
+45;B;comfortable;1;j'aime un peu
+45;C;pleasant touch;1;je n'aime pas
+45;D;must be pleasant in winter… less in summer;1;j'aime un peu
+45;E;very plesant feeling to the touch;2;j'aime un peu
+45;F;comfortable but a little too rough to the touch;1;j'aime un peu
+45;G;too acrylic not pleasant to the touch;0;j'aime un peu
+45;H;this fabric has a tight weft and must be resistant to wear;2;j'aime beaucoup
+45;I;same as for fabric H witha softer feel;2;j'aime un peu
+45;J;the comfort of a solid fabric with a pleasant leather feel… the only point that could be negative would be the scratch resistance or other…;2;je n'aime pas
+46;A;fine cotton fabric;1;j'aime beaucoup
+46;B;relief fabric;0;j'aime beaucoup
+46;C;patterns fabric RAS;1;j'aime beaucoup
+46;D;wooly fabric;0;j'aime un peu
+46;E;velvet fabric;0;je n'aime pas
+46;F;soft thin RAS fabric;2;j'aime un peu
+46;G;soft fabric;0;je n'aime pas
+46;H;cotton canvas fabric;1;je n'aime pas
+46;I;patterns fabric RAS;0;j'aime beaucoup
+46;J;imitation leather fabric;1;je n'aime pas
+47;A;I don't like this material;0;j'aime un peu
+47;B;I don't really like this velvet material which will not be suitable for long journeys;0;je n'aime pas
+47;C;I like a little because in low-end it could be suitable;1;j'aime un peu
+47;D;I don't like the feeling of this material, and moreover it's fluffy;0;je n'aime pas
+47;E;the feeling to the touch is very pleasant;2;je n'aime pas
+47;F;I like a little without further explanation;1;j'aime un peu
+47;G;at the second touch I appreciate a little more this fleece material;0;je n'aime pas
+47;H;a peach skin sensation to the touch quite pleasant;2;j'aime beaucoup
+47;I;I don't like this material because it seems rough to me;0;j'aime un peu
+47;J;I like a little this material because it seems practical for the vehicle's interior and is quite elastic so will give a certain comfort;1;je n'aime pas
+48;A;few material and without relief;0;j'aime beaucoup
+48;B;too thick;0;je n'aime pas
+48;C;bland;0;j'aime un peu
+48;D;rough;0;je n'aime pas
+48;E;soft;2;je n'aime pas
+48;F;without expression;0;je n'aime pas
+48;G;too much foam;0;je n'aime pas
+48;H;dustpan;1;j'aime beaucoup
+48;I;ugly;0;je n'aime pas
+48;J;refined;2;je n'aime pas
+49;A;cheap;0;j'aime un peu
+49;B;thick;0;je n'aime pas
+49;C;touch;1;j'aime beaucoup
+49;D;carpet;0;je n'aime pas
+49;E;old cushion;0;je n'aime pas
+49;F;texture;1;j'aime un peu
+49;G;poor quality;0;je n'aime pas
+49;H;thin;0;je n'aime pas
+49;I;old;0;j'aime un peu
+49;J;elegance;1;je n'aime pas
+50;A;I like it a bit because it is simple and efficient;1;je n'aime pas
+50;B;I don't like this product because it is too dense;0;je n'aime pas
+50;C;simple and effective;1;j'aime un peu
+50;D;I don't like the touch simply;0;j'aime un peu
+50;E;I like it a bit because it is soft;1;je n'aime pas
+50;F;I like it a lot because it is aesthetic and effective on many points;2;j'aime un peu
+50;G;I like it a bit because it is rather thick but not too anyway;1;je n'aime pas
+50;H;grabs well the hand;1;j'aime un peu
+50;I;I don't like it because it is too rough;0;j'aime beaucoup
+50;J;I like it a lot because if I had to choose a new car it is likely that I would take a fabric of the same type;2;j'aime un peu
+51;A;it is pleasant to the touch but a little too thin;1;j'aime un peu
+51;B;the fabric is too rough;0;je n'aime pas
+51;C;it is pleasant to the touch but a little too classic;1;j'aime beaucoup
+51;D;I feel like it's a carpet;0;j'aime un peu
+51;E;it is soft in one way but rough in the other;0;je n'aime pas
+51;F;it is pleasant but a classic;1;j'aime un peu
+51;G;it looks fragile;0;je n'aime pas
+51;H;it is not pleasant to the touch;0;je n'aime pas
+51;I;it is a material i appreciate but it looks like an elastic;1;j'aime un peu
+51;J;i find that this material corresponds completely to a car, the car is very pleasant;2;je n'aime pas
+52;A;too rough;0;je n'aime pas
+52;B;too thick;0;j'aime un peu
+52;C;rather thin;0;j'aime beaucoup
+52;D;too woolly;0;je n'aime pas
+52;E;Alcantara style i love it;2;je n'aime pas
+52;F;pleasant to the touch;1;je n'aime pas
+52;G;too soft;0;je n'aime pas
+52;H;sticky texture;0;j'aime beaucoup
+52;I;good;0;j'aime un peu
+52;J;leather style I like it;1;je n'aime pas
+53;A;correct quality;1;je n'aime pas
+53;B;too coarse;0;je n'aime pas
+53;C;suit me;1;j'aime un peu
+53;D;unpleasant contact;0;j'aime un peu
+53;E;I don't like it;0;je n'aime pas
+53;F;I like it;2;j'aime un peu
+53;G;soft and pleasant;1;je n'aime pas
+53;H;too plastic touch;0;je n'aime pas
+53;I;too rigid for my taste;0;j'aime beaucoup
+53;J;interesting leather imitation, of good quality;2;j'aime un peu
+54;A;too rough;0;je n'aime pas
+54;B;thickness…... Maybe not bad;1;je n'aime pas
+54;C;this unified side… sober;1;j'aime beaucoup
+54;D;sweetness… sweetness;2;je n'aime pas
+54;E;comfort;2;j'aime un peu
+54;F;dark and maybe solid;2;j'aime un peu
+54;G;the one I like the best, must easily detach itself;2;j'aime beaucoup
+54;H;must take all the dust;0;j'aime beaucoup
+54;I;nice;1;j'aime beaucoup
+54;J;maybe i was wrong, it must be solid;0;j'aime beaucoup
+55;A;unpleasant contact fabric weft;0;je n'aime pas
+55;B;too hard to the touch;0;j'aime un peu
+55;C;feeling of touch not soft;0;je n'aime pas
+55;D;carpet sensation feel;1;je n'aime pas
+55;E;softer fabric weft;2;je n'aime pas
+55;F;too smooth;1;je n'aime pas
+55;G;soft touch enveloping;2;j'aime un peu
+55;H;carpet impression touch;0;j'aime beaucoup
+55;I;furnishing fabric feeling;1;j'aime un peu
+55;J;plastic refractory;0;j'aime beaucoup
+56;A;seems solid and easy to clean;2;je n'aime pas
+56;B;pleasant to the touch, looks comfortable, thick, and easy to clean;2;j'aime un peu
+56;C;seems solid. Dry to the touch;1;je n'aime pas
+56;D;too catchy;0;j'aime beaucoup
+56;E;very pleasant to the touch. ideal for cuddling in traffic jams;2;j'aime beaucoup
+56;F;dry to the touch but seems fragile;1;j'aime un peu
+56;G;too soft;0;je n'aime pas
+56;H;fatty feel;0;j'aime beaucoup
+56;I;seems solid but a little soft;1;j'aime un peu
+56;J;coarse imitation and unpleasant touch;0;je n'aime pas
+57;A;just right;1;je n'aime pas
+57;B;just right;2;j'aime un peu
+57;C;just right;2;je n'aime pas
+57;D;too soft;1;j'aime un peu
+57;E;too velvet;1;j'aime beaucoup
+57;F;too cheap;1;j'aime beaucoup
+57;G;too cheap;1;j'aime un peu
+57;H;not enough;0;j'aime un peu
+57;I;not soft enough;0;j'aime un peu
+57;J;too plastic;0;j'aime un peu
+59;A;I like a little the discreet patterns of the fabric;1;je n'aime pas
+59;B;I don't like the texture;0;je n'aime pas
+59;C;I like a little the patterns of the fabric;1;je n'aime pas
+59;D;I don't like the touch feeling;0;j'aime un peu
+59;E;I like a lot the fact that the fabric is soft and pleasant to the touch;2;je n'aime pas
+59;F;I like a little the texture of the touch;1;j'aime un peu
+59;G;I don't like the fabric texture;0;je n'aime pas
+59;H;I like a little the texture;1;j'aime beaucoup
+59;I;I don't like the fabric patterns and its texture;0;j'aime un peu
+59;J;I like a lot the patterns and the fabric texture;2;je n'aime pas
+60;A;correct;1;j'aime un peu
+60;B;pleasant touch;2;je n'aime pas
+60;C;correct;1;j'aime beaucoup
+60;D;fluffy;0;j'aime un peu
+60;E;rather pleasant touch;1;j'aime beaucoup
+60;F;correct weft and correct touch;1;j'aime un peu
+60;G;too synthetic touch;0;je n'aime pas
+60;H;sticky;0;j'aime un peu
+60;I;a little rough;1;j'aime un peu
+60;J;leather aspect;0;je n'aime pas
+61;A;correct touch and solidity feeling;2;je n'aime pas
+61;B;not smooth enough unpleasant to the touch;1;j'aime un peu
+61;C;comfortable to the touch, feeling of resistance;2;je n'aime pas
+61;D;unpleasant to the touch and too rough;0;j'aime beaucoup
+61;E;too fluffy;1;j'aime un peu
+61;F;combination of softness sensation and holding;2;j'aime beaucoup
+61;G;too flexible;0;je n'aime pas
+61;H;not soft enough;1;j'aime un peu
+61;I;too rough;0;j'aime beaucoup
+61;J;just right to the touch;1;je n'aime pas
+62;A;too cheap;0;j'aime un peu
+62;B;pleasant but not suitable;1;je n'aime pas
+62;C;soft enough fabric;1;j'aime un peu
+62;D;felt makes dust;0;je n'aime pas
+62;E;velvet;0;j'aime un peu
+62;F;cheap fabric catchy;0;j'aime un peu
+62;G;foam;0;je n'aime pas
+62;H;changes from the classic leather;2;je n'aime pas
+62;I;unpleasant;0;je n'aime pas
+62;J;leather, basic;1;je n'aime pas
+63;A;too thin;0;j'aime beaucoup
+63;B;too thick;0;je n'aime pas
+63;C;well;2;j'aime un peu
+63;D;too hot;0;je n'aime pas
+63;E;too old-fashioned;0;je n'aime pas
+63;F;too dry;0;j'aime beaucoup
+63;G;too thick;0;je n'aime pas
+63;H;too thin;0;je n'aime pas
+63;I;too steep;0;je n'aime pas
+63;J;too synthetic;0;je n'aime pas
+64;A;because it is too simple;0;je n'aime pas
+64;B;original;1;je n'aime pas
+64;C;rather good;1;je n'aime pas
+64;D;original;0;je n'aime pas
+64;E;I really like this textures;2;j'aime un peu
+64;F;too simple;0;j'aime un peu
+64;G;I don't like it;0;je n'aime pas
+64;H;too simple;0;j'aime beaucoup
+64;I;elastic;0;je n'aime pas
+64;J;very pleasant;2;je n'aime pas
+65;A;rough fabric;0;je n'aime pas
+65;B;soft and rough, seems elastic;0;je n'aime pas
+65;C;seems to be weaved, pleasant to the eyes, a little less to the touch;0;j'aime beaucoup
+65;D;the fabric is roughly soft and seems comfortable. Looks like a sponge;0;je n'aime pas
+65;E;very soft and comfortable;2;je n'aime pas
+65;F;too simple, not really soft;0;je n'aime pas
+65;G;padded, comfortable and soft;1;je n'aime pas
+65;H;rough and uncomfortable;0;j'aime beaucoup
+65;I;soft and seems elastic;1;je n'aime pas
+65;J;elegant and soft leather;1;j'aime un peu
+66;A;I don't like this fabric because the quality of the fabric makes me uncomfortable;0;je n'aime pas
+66;B;I really like this fabric because it is the one that is most pleasant to the touch;2;j'aime un peu
+66;C;I like this product a little because although it seems fluffy to me, the material is pleasant to the touch.;1;j'aime un peu
+66;D;I don't like this product because it's fluffy;0;je n'aime pas
+66;E;I like this fabric a little because although losing its color to the touch, it seems to me to offer a comfort ;1;j'aime beaucoup
+66;F;I don't like the fabric seems to me to be of poor quality;0;j'aime un peu
+66;G;I don't like the fabric because the material creaks under my fingers.;0;je n'aime pas
+66;H;I don't like this fabric because it's not pleasant to touch.;0;j'aime un peu
+66;I;I like this fabric a little because although not very luxurious to the eyes its texture is pleasant.;1;je n'aime pas
+66;J;I like this fabric a little because although it is simple it is very pleasant to touch.;1;je n'aime pas
+69;A;fabric that looks tough;1;je n'aime pas
+69;B;product that seems to keep warm not very pleasant to the touch;0;j'aime un peu
+69;C;pleasant and soft;1;j'aime un peu
+69;D;texture which seems cheap;0;je n'aime pas
+69;E;soft product but that i don't see that much in a car;1;j'aime beaucoup
+69;F;pleasant to the touch, and good quality;2;j'aime un peu
+69;G;I don't like the foam underneath;0;j'aime beaucoup
+69;H;product that seems to have a good durability over time;1;je n'aime pas
+69;I;doesn't seem pleasant on a seat;0;j'aime un peu
+69;J;better touch than the others;2;j'aime beaucoup
+70;A;it quickly deteriorates;0;je n'aime pas
+70;B;cheap;0;j'aime un peu
+70;C;quickly deteriorated;0;je n'aime pas
+70;D;cheap;0;j'aime un peu
+70;E;elegant;2;je n'aime pas
+70;F;cheap;0;j'aime un peu
+70;G;cheap;0;je n'aime pas
+70;H;cheap;0;j'aime un peu
+70;I;clean and beautiful;1;j'aime beaucoup
+70;J;practical and elegant;2;je n'aime pas
+72;A;too thin;0;j'aime un peu
+72;B;it seems quite flexible;1;je n'aime pas
+72;C;it seems resistant;1;j'aime beaucoup
+72;D;it is soft but looks fragile;1;je n'aime pas
+72;E;it is very soft;2;je n'aime pas
+72;F;too thin;0;je n'aime pas
+72;G;it is soft;2;je n'aime pas
+72;H;it seems to deteriorate more than the others;0;j'aime beaucoup
+72;I;it seems strong and easy to clean;1;je n'aime pas
+72;J;too synthetic for my taste;0;je n'aime pas
+73;A;basic;1;je n'aime pas
+73;B;too hard;0;j'aime un peu
+73;C;too basic;1;j'aime beaucoup
+73;D;too carpet;0;je n'aime pas
+73;E;pleasant to the touch;2;j'aime un peu
+73;F;too smooth;1;j'aime un peu
+73;G;nice;2;j'aime un peu
+73;H;too catchy;0;j'aime beaucoup
+73;I;simple;1;je n'aime pas
+73;J;too catchy;0;j'aime beaucoup
+74;A;simple;1;je n'aime pas
+74;B;pretty weave soft;2;j'aime un peu
+74;C;pleasant;1;je n'aime pas
+74;D;too much foam;0;j'aime un peu
+74;E;soft but dirty;1;je n'aime pas
+74;F;nothing special;1;j'aime un peu
+74;G;soft checker pretty;2;je n'aime pas
+74;H;rough;0;j'aime beaucoup
+74;I;soft and pretty fabric;1;j'aime un peu
+74;J;classy leather style;1;j'aime beaucoup
+75;A;it is too thin and the pattern is not pretty;0;je n'aime pas
+75;B;it is too thick and the pattern is not pretty;0;j'aime un peu
+75;C;the crossings of the yarns that make up the pattern are too thick;0;je n'aime pas
+75;D;I don't like the felt look;0;j'aime un peu
+75;E;I love the darkness of the fabric, the pattern is invisible and the fabric is soft and silky;2;j'aime beaucoup
+75;F;the fabric is too thin and gives the elastic aspect;0;j'aime un peu
+75;G;the fabric is too thick and the pattern is not beautiful at all;0;je n'aime pas
+75;H;the material is soft but the pattern is not pretty;1;j'aime un peu
+75;I;the pattern looks like an elastic band ;0;j'aime un peu
+75;J;the pattern is pretty and the fabric soft;1;j'aime beaucoup
+76;A;I don't like this fabric because it's rough, even if the aesthetic is fine;0;je n'aime pas
+76;B;I like this fabric and find it quite original, but it may seem difficult to maintain;1;j'aime un peu
+76;C;I like the quality, the aesthetics and the feel of the fabric very much;2;j'aime un peu
+76;D;I don't like this fabric because in addition of being rough, it doesn't seem suitable because difficult to maintain;0;je n'aime pas
+76;E;I like the aesthetic and the feel of this fabric, but it may catch a lot dust;1;je n'aime pas
+76;F;I like this fabric in general;1;je n'aime pas
+76;G;I don't like this fabric very much because it is not very aesthetic;0;je n'aime pas
+76;H;I really like this fabric even though it seems a little fragile to me;2;j'aime beaucoup
+76;I;I like this fabric a little even if i don't find anything extraordinary about it;0;je n'aime pas
+76;J;I like this fabric but it may not be master key enough;1;je n'aime pas
+77;A;beautiful fabric, seems resistant ;2;j'aime un peu
+77;B;coarse fabric, does not give an impression of quality in a passenger compartment;0;je n'aime pas
+77;C;nice good quality but maybe a little coarse;1;j'aime un peu
+77;D;nice fabric but would quickly be damaged in a car, would wear out too quickly with friction for example;0;je n'aime pas
+77;E;the touch of the velvet makes traces on the fabric, it would not be pretty on the whole interior;0;j'aime un peu
+77;F;pretty but too thin, I would be afraid it would tear or wear out quickly ;1;j'aime beaucoup
+77;G;coarse fabric, easy to tear, would quickly be damaged ;0;je n'aime pas
+77;H;seems too thin to me, so too fragile. I'd be afraid he'd tear himself apart. ;0;j'aime un peu
+77;I;seems to me to be the most resistant for the passenger compartment, should last over time and resist friction, children, etc.;2;j'aime un peu
+77;J;nice sample but I prefer fabric in a car, not too much leather;1;je n'aime pas
+78;A;too thin not soft;0;j'aime beaucoup
+78;B;resistant but not very premium, a little basic;1;je n'aime pas
+78;C;refined, very smooth but a little thin;1;j'aime un peu
+78;D;cosy comfortable and soft;2;j'aime beaucoup
+78;E;comfortable soft et above all very premium;2;je n'aime pas
+78;F;doesn't looks like fabric, is very synthetic but sober;1;j'aime un peu
+78;G;poor quality too soft is easily damaged;0;je n'aime pas
+78;H;too basic but sober simple;1;je n'aime pas
+78;I;not comfortable too hard but resistant;0;j'aime un peu
+78;J;looks like fake leather doubtful quality but may be pretty;0;je n'aime pas
+81;A;I like it a little even if it is too simple;1;je n'aime pas
+81;B;because it is just well woven;1;j'aime beaucoup
+81;C;because it is really very chic;2;j'aime un peu
+81;D;even if it's a little old-fashioned;1;je n'aime pas
+81;E;because it is really very elegant;2;j'aime un peu
+81;F;because it is well enough woven;1;j'aime un peu
+81;G;it is too soft;0;j'aime beaucoup
+81;H;because it is really very modern;2;j'aime beaucoup
+81;I;it is too scratched;0;j'aime un peu
+81;J;it is too kitsch;0;je n'aime pas
+82;A;sober and smooth but not original not for a car;1;j'aime un peu
+82;B;not bad but too thick;1;je n'aime pas
+82;C;would fit well in a car even if not smooth enough;2;je n'aime pas
+82;D;too fluffy not smooth enough;0;j'aime un peu
+82;E;pretty but not suitable for a car interior, will take too much dust;0;j'aime un peu
+82;F;smooth but a little too fluffy;1;je n'aime pas
+82;G;doesn't match a car passenger compartment, seems too much like a fabric for seat or clothing;0;je n'aime pas
+82;H;pretty appearance quite smooth linen style can be very elegant;2;j'aime beaucoup
+82;I;looks cheap doesn't fit with a passenger compartment;0;j'aime un peu
+82;J;ideal fits very well with a car interior;2;j'aime beaucoup
+84;A;I like a little because the fabric looks qualitative but thin;1;je n'aime pas
+84;B;I don't like because you can see the linesof the fabric;0;j'aime un peu
+84;C;I really like the quality of the fabric;2;j'aime un peu
+84;D;I don't like because the fabric loses its hair;0;j'aime beaucoup
+84;E;I don't like the velvet material;0;j'aime un peu
+84;F;I really like the quality of the fabric;2;j'aime beaucoup
+84;G;I don't like because it doesn't looks qualitative at all;0;je n'aime pas
+84;H;I don't like the quality of the fabric;0;je n'aime pas
+84;I;I don't like the overly synthetic side of this fabric;0;j'aime un peu
+84;J;I like the leather effect a little but it is not imitated well enough;1;je n'aime pas
+85;A;I like very much because simple and efficient and qualitative aspect;2;je n'aime pas
+85;B;I like a little although it looks too much like clothing cotton;1;j'aime un peu
+85;C;I like very much the same as A but a little less resistant in appearance ;2;j'aime beaucoup
+85;D;too synthetic;0;j'aime un peu
+85;E;I like to the touch although it is not suitable for the inside of a car;1;j'aime un peu
+85;F;I like it but the look is more synthetic and less qualitative ;2;j'aime beaucoup
+85;G;it is not resistant enough;0;j'aime un peu
+85;H;I like it no matter what he doesn't make a quality impression. ;1;j'aime beaucoup
+85;I;it has a too plastic effect;0;j'aime un peu
+85;J;I like a little because resistant but not very aesthetic;1;je n'aime pas
+;;;;j'aime beaucoup
+;;;;je n'aime pas
+;;;;je n'aime pas
+;;;;j'aime un peu
+;;;;j'aime un peu
+;;;;j'aime beaucoup
+;;;;je n'aime pas
+;;;;je n'aime pas
+;;;;j'aime un peu
+;;;;je n'aime pas
+;;;;j'aime beaucoup
+;;;;je n'aime pas
+;;;;j'aime beaucoup
+;;;;j'aime un peu
+;;;;je n'aime pas
+;;;;j'aime beaucoup
+;;;;je n'aime pas
+;;;;je n'aime pas
+;;;;j'aime beaucoup
+;;;;je n'aime pas
+;;;;je n'aime pas
+;;;;je n'aime pas
+;;;;j'aime un peu
+;;;;j'aime beaucoup
+;;;;j'aime un peu
+;;;;j'aime beaucoup
+;;;;je n'aime pas
+;;;;j'aime un peu
+;;;;j'aime beaucoup
+;;;;je n'aime pas
+;;;;j'aime un peu
+;;;;je n'aime pas
+;;;;j'aime un peu
