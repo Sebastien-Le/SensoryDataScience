@@ -51,3 +51,7 @@ How to delete spaces
 <codeblock id="03_11">
 </codeblock>
 </exercise>
+
+
+<exercise id="4" title="Mapping">
+</exercise>
