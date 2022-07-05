@@ -7,9 +7,9 @@ type: chapter
 id: 2
 ---
 
-<exercise id="1" title="Representation of sensory attributes and bivariate analysis">
+<exercise id="1" title="From classes to categories">
   
-  Essai...
+  By definition, a class is "a set or category of things having some property or attribute in common and differentiated from others by kind, type, or quality". In the same way, a category is "a class or division of people or things regarded as having particular shared characteristics".
 
 <codeblock id="02_01">
 </codeblock>
