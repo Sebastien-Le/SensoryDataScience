@@ -8,6 +8,8 @@ id: 2
 ---
 
 <exercise id="1" title="Representation of sensory attributes and bivariate analysis">
+  
+  Essai...
 
 <codeblock id="02_01">
 </codeblock>
