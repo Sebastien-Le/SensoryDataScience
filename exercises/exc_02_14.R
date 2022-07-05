@@ -1,0 +1,1 @@
+res.CA <- CA(GMO_table)
