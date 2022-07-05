@@ -1,7 +1,6 @@
 ---
 title: 'Chapter 1: Dealing with quantitative perception'
-description:
-  ' '
+description: This chapter deals with continuous attributes. We introduce the basic notions of statistics.
 prev: null
 next: /chapter2
 type: chapter
