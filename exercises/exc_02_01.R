@@ -1,7 +1,7 @@
-GMO <- read.csv("data/gmo.csv", sep=';')
-GMO<-GMO[-136,]
+GMO <- read.csv("data/gmo.csv", sep=';', header = TRUE)
+summary(GMO)
 #transform into factor
-for (i in 1:21)
+for (j in 1:21)
 {
-    GMO[, i] <- as.factor(GMO[, i])
+    GMO[, j] <- as.factor(GMO[, j])
 }

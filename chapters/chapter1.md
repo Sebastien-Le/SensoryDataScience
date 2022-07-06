@@ -1,6 +1,6 @@
 ---
 title: 'Chapter 1: Dealing with quantitative perception'
-description: This chapter deals with continuous attributes. We introduce the basic notions of statistics.
+description: This chapter deals with continuous attributes. We introduce the notions of position and dispersion parameters, the concepts of inferential versus descriptive, the comparisons of two means and the analysis of variance.
 prev: null
 next: /chapter2
 type: chapter
@@ -1022,7 +1022,22 @@ According to the coefficients of the first column, this product has been perceiv
 
 </exercise>
 
-<exercise id="10" title="The CheatR corner">
+<exercise id="10" title="From measure to distance">
+</exercise>
+
+<exercise id="11" title="From distance to inertia">
+</exercise>
+
+<exercise id="12" title="From the notion of inertia to its decomposition">
+</exercise>
+
+<exercise id="13" title="From the inertia decomposition to Principal Components Analysis">
+</exercise>
+
+<exercise id="14" title="From Principal Components Analysis to Multiple Factor Analysis">
+</exercise>
+
+<exercise id="15" title="The CheatR corner">
 
 ### Import a CSV file with *read.csv()* or *read.table()*
 <codeblock id="01_68">
