@@ -1,6 +1,6 @@
 ---
 title: 'Chapter 2: Dealing with qualitative perception'
-description: This chapter deals with categorical variables. We introduce the notions of bar plot.
+description: This chapter deals with categorical variables. We introduce the notions of bar plot, of contingency table, of independence.
 prev: /chapter1
 next: /chapter3
 type: chapter
