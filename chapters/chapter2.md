@@ -151,11 +151,11 @@ From the number of columns of *GMO*, we encode the columns as factors, iterative
 
 </exercise>
 
-<exercise id="2" title="From categories to categorical data">
+<exercise id="2" title="From categories to categorical data and their representation">
 
 The output of the `summary()` function is interesting: it illustrates perfectly the notion of class or category. For the question *What do you think of the inclusion of GM raw materials in products to be fed to animals?*, we can see that 135 participants to the survey are divided into 4 classes or categories: 44 are totally opposed, 39 are somewhat against, 44 are favourable, and 8 are very favourable. Practically, we want to represent the way these participants are distributed (or divided) into these 4 classes/categories/response modalities that define a *categorical variable* (or *qualitative variable*).
 
-To do so, we are going to extract this information, to reorder it and to represent it graphically.
+To do so, we are going to extract this information, to re-order it and to represent it graphically.
 
 <codeblock id="02_031">
 </codeblock>
@@ -189,24 +189,67 @@ From the data frame directly. Be careful at the levels order. You can change the
 <codeblock id="02_036">
 </codeblock>
 
-<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+</exercise>
 
-<br>
+<exercise id="3" title="From categorical data to contingency table">
+
+Who are those people who are favourable to the inclusion of GM raw materials in products to be fed to animals? Are they characterized by their political party for instance?
+
+To answer this question we will cross these two variables and build a *contingency table* using the very important `table()` function.
 
 <codeblock id="02_03">
 </codeblock>
 
+Re-order the *Political Party* variable from "Extreme left" to "Right".
+
+<codeblock id="02_03bis">
+</codeblock>
+
+Those people who are favourable to the inclusion of GM raw materials in products to be fed to animals, how are they distributed within the political parties?
 
 <codeblock id="02_04">
 </codeblock>
 
+It seems that the data are structured, which means that there's a link between the two variables *Position.Al.A* and *Political.Party*. In other words, some classes from the *Position.Al.A* variable seem to be associated in a singular way with classes from the *Political.Party* variable.
 
+Concretely, only individuals who vote *Liberal* and *Right* are very favourable to the inclusion of GM raw materials in products to be fed to animals. 
+
+</exercise>
+
+<exercise id="4" title="From contingency table to the notion of independence">
+
+## The *Stat* corner: breaking a *structure* by resampling
+<br>
+
+The idea is to mix or re-sample the data collected for the *Position.Al.A* variable: this new information is stored in  a new column called *Position.Al.A.break*.
 
 <codeblock id="02_05">
 </codeblock>
 
 <codeblock id="02_06">
 </codeblock>
+
+In this example, the structure seems broken, which means that there's no particular link between the two variables *Position.Al.A.break* and *Political.Party*. In other words, classes from the *Position.Al.A.break* variable don't seem to be associated in a singular way with classes from the *Political.Party* variable.
+
+Concretely, for this broken structure, if you are very favourable to the inclusion of GM raw materials in products to be fed to animals, you might vote from "Extreme Left" to "Right" unconditionally.
+
+</exercise>
+
+<exercise id="5" title="From the independence to its deviation">
+
+<img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\cdot\mathcal{P}(B)" style="margin-bottom : -0.25rem"/>
+
+Hence, two qualitative variables are independent when we have the relation :
+
+<img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot}\cdot f_{\cdot j}" style="margin-bottom : -0.25rem"/>
+
+
+The mutual probability only depends of marginal numbers.
+
+First, we construct the table of reference, *i.e.*: a table with the product <img src="https://latex.codecogs.com/svg.image?f_{i\cdot}\cdot f_{\cdot j}" style="margin-bottom : -0.35rem"/> in each cells. 
+
+We have <img src="https://latex.codecogs.com/svg.image?f_{\cdot j}=\dfrac{1}{n}\sum\limits_{j\in J}n_{ij}" style="margin-bottom : -1.95rem"/> and <img src="https://latex.codecogs.com/svg.image?f_{i\cdot}=\dfrac{1}{n}\sum\limits_{i\in I}n_{ij}" style="margin-bottom : -1.95rem"/>
+
 
 <codeblock id="02_07">
 </codeblock>
@@ -217,15 +260,6 @@ From the data frame directly. Be careful at the levels order. You can change the
 <codeblock id="02_09">
 </codeblock>
 
-</exercise>
-
-<exercise id="3" title="From categorical data to contingency table">
-</exercise>
-
-<exercise id="4" title="From contingency table to the notion of independence">
-</exercise>
-
-<exercise id="5" title="From the independence to its deviation">
 
 <codeblock id="02_10">
 </codeblock>

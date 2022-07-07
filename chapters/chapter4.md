@@ -36,4 +36,6 @@ Texte de reponse
 
 Note : choix multiples pas implémentés
 
+Bạn có cảm thấy liên quan đến cuộc tranh luận về GMO (rất nhiều, ở một mức độ nhất định, một chút, không hề)?
+
 </exercise>
