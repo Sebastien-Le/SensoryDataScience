@@ -88,9 +88,9 @@ height: 1px;
 
 <exercise id="1" title="From classes to categories and vice-versa">
 
-By definition, a class is "a set or category of things having some property or attribute in common and differentiated from others by kind, type, or quality". In the same way, a category is "a class or division of people or things regarded as having particular shared characteristics". 
+By definition, a class is a set or category of things having some property or attribute in common. In the same way, a category is a class of people or things regarded as having particular shared characteristics. 
 
-In this chapter, the notion of categories is first introduced using a survey in which people were asked about their perception of genetically modified organisms (GMO):
+In this chapter, the notion of categories is first introduced using a survey in which 135 participants were asked about their perception of genetically modified organisms (GMO):
 
 * Do you feel implicated in the debate about GMO (a lot, to a certain extent, a little, not at all)?
 
@@ -138,22 +138,25 @@ The same people were also asked about the five following descriptive variables:
 
 Intuitively, it is easy to understand that each question, individually, defines categories of people through the response modalities chosen.
 
-In the following code, we first import the data in an R object named *GMO*, then run the `summary()` function on the *GMO* object.
+Import the data in an R object named *GMO*, then apply the `summary()` function to the *GMO* object.
 
 <codeblock id="02_01">
 </codeblock>
 
 As shown above, data are considered as *characters* and should be encoded as factors.
-From the number of columns of *GMO*, we encode the columns as factors, iteratively; then we check that the *GMO* data frame is ready to be analyzed.
+Apply the `ncol()` function to *GMO* to get its number of columns. Use this information to encode the columns as factors, iteratively; then, check that the *GMO* data frame is ready to be analyzed.
 
 <codeblock id="02_02">
+ncol(GMO) returns the number of columns of GMO
 </codeblock>
+
+## The *R* corner: when categories have to be re-ordered
 
 </exercise>
 
 <exercise id="2" title="From categories to categorical data and their representation">
 
-The output of the `summary()` function is interesting: it illustrates perfectly the notion of class or category. For the question *What do you think of the inclusion of GM raw materials in products to be fed to animals?*, we can see that 135 participants to the survey are divided into 4 classes or categories: 44 are totally opposed, 39 are somewhat against, 44 are favourable, and 8 are very favourable. Practically, we want to represent the way these participants are distributed (or divided) into these 4 classes/categories/response modalities that define a *categorical variable* (or *qualitative variable*).
+The output of the `summary()` function is interesting: it illustrates perfectly the notion of class or category. For the question *What do you think of the inclusion of GM raw materials in products to be fed to animals?*, we can see that the 135 participants of the survey are divided into 4 classes or categories: 44 are totally opposed, 39 are somewhat against, 44 are favourable, and 8 are very favourable. Practically, we want to represent the way these participants are distributed (or divided) into these 4 classes (categories or response modalities) that define a *categorical variable* (or *qualitative variable*).
 
 To do so, we are going to extract this information, to re-order it and to represent it graphically.
 
@@ -237,7 +240,14 @@ Concretely, for this broken structure, if you are very favourable to the inclusi
 
 <exercise id="5" title="From the independence to its deviation">
 
-<img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\cdot\mathcal{P}(B)" style="margin-bottom : -0.25rem"/>
+Two events are independent if the occurrence of one does not affect the probability of occurrence of the other. More formally, two events A and B are independent if and only if their joint probability equals the product of their probabilities:
+
+<center><img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\mathcal{P}(B)" style="margin-top : 0rem; margin-bottom : 0rem"/></center>
+
+In the following code, we're using an important function for building contingency table: the `as.data.frame.matrix()` (https://www.r-bloggers.com/2012/03/how-to-convert-contingency-tables-to-data-frames-with-r/).
+
+<codeblock id="02_07">
+</codeblock>
 
 Hence, two qualitative variables are independent when we have the relation :
 
@@ -251,8 +261,7 @@ First, we construct the table of reference, *i.e.*: a table with the product <im
 We have <img src="https://latex.codecogs.com/svg.image?f_{\cdot j}=\dfrac{1}{n}\sum\limits_{j\in J}n_{ij}" style="margin-bottom : -1.95rem"/> and <img src="https://latex.codecogs.com/svg.image?f_{i\cdot}=\dfrac{1}{n}\sum\limits_{i\in I}n_{ij}" style="margin-bottom : -1.95rem"/>
 
 
-<codeblock id="02_07">
-</codeblock>
+
 
 <codeblock id="02_08">
 </codeblock>

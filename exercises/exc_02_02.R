@@ -1,4 +1,2 @@
-ncol(GMO)
-#encode the columns as factors
-for (j in 1:ncol(GMO)) GMO[, j] <- as.factor(GMO[, j])
-summary(GMO)
+for (j in 1:ncol(____)) GMO[, j] <- as.factor(GMO[, j])
+summary(____)
