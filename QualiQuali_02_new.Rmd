@@ -1,0 +1,301 @@
+---
+title: "Part2 : Quali-Quali"
+author: "Guillaume"
+date: "07/06/2022"
+output:
+  html_document: 
+    toc: yes
+---
+#Representation of sensory attributes and bivariate analysis
+## data importation, cleaning and selection
+
+```{r}
+library(FactoMineR)
+library(SensoMineR)
+
+#import
+GMO <- read.csv("data/gmo.csv", sep=';')
+GMO<-GMO[-136,]
+#transform into factor
+for (i in 1:21)
+{
+    GMO[, i] <- as.factor(GMO[, i])
+}
+
+#summary
+summary(GMO)
+
+#selection variable Political.Party and Position.Al.A
+GMO.Al.A <- GMO[,c( "Political.Party","Position.Al.A")]
+
+#or tidyverse version : 
+library(dplyr)
+GMO.Al.A <- GMO %>% select(c( Political.Party,Position.Al.A,))
+```
+
+## Bivariate analysis
+
+We want to visualize both variables simultaneously. A barchat is appropriate to represent categories of one variable, but here it can also be useful to represent the cross-categories of the two variables.
+
+```{r}
+library(ggplot2)
+
+#Re-order levels
+GMO.Al.A$Position.Al.A <- as.factor(GMO.Al.A$Position.Al.A)
+GMO.Al.A$Political.Party <- as.factor(GMO.Al.A$Political.Party)
+GMO.Al.A$Position.Al.A <- ordered(GMO.Al.A$Position.Al.A,c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
+GMO.Al.A$Political.Party  <- ordered(GMO.Al.A$Political.Party,c("Extreme left", "Left", "Greens", "Liberal", "Right"))
+
+ggplot(GMO.Al.A, aes(x=Position.Al.A, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories") +
+  scale_fill_manual(values=c("Extreme left"="brown", "Left"="palevioletred2", "Greens"="chartreuse4", "Liberal"="gold1", "Right"="dodgerblue3"))
+## ..count.. : stat transformation of the original data set
+```
+
+#Concept of independance
+
+## Sample data
+
+To introduce this concept of independence, we remake the first part, but considering samples data. That means, we take keep a fixed column of our 2 variables dataframe, and we arranged randomly the second variable. 
+
+```{r}
+set.seed(7)
+ind.sample <- sample(1:135)
+GMO.Al.A.Sample <- data.frame("Position.Al.A"=GMO.Al.A$Position.Al.A[ind.sample],'Political.Party'=GMO.Al.A$Political.Party)
+
+#Re-order levels
+GMO.Al.A.Sample$Position.Al.A <- as.factor(GMO.Al.A.Sample$Position.Al.A)
+GMO.Al.A.Sample$Political.Party <- as.factor(GMO.Al.A.Sample$Political.Party)
+GMO.Al.A.Sample$Position.Al.A <- ordered(GMO.Al.A.Sample$Position.Al.A,c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
+GMO.Al.A.Sample$Political.Party  <- ordered(GMO.Al.A.Sample$Political.Party,c("Extreme left", "Left", "Greens", "Liberal", "Right"))
+
+#visualization
+ggplot(GMO.Al.A.Sample, aes(Position.Al.A, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories sampled") +
+  scale_fill_manual(values=c("Extreme left"="brown", "Left"="palevioletred2", "Greens"="chartreuse4", "Liberal"="gold1", "Right"="dodgerblue3"))
+```
+## probability side
+
+Study a link between two variables comes to position data to a referent situation, the absence of linkage. In term of probability, saying that two events A and B are independent comes to say :
+$$\mathcal{P}(A\cap B)=\mathcal{P}(A)\cdot\mathcal{P}(B) $$
+Hence, two qualitative variables are independent when we have the relation :
+$f_{ij}=f_{i\cdot}\cdot f_{\cdot j}$
+The mutual probability only depends of marginal numbers. 
+
+## Referent situation
+
+First, we construct the table of reference, __ie : __ a table with the product $$f_{i\cdot}\cdot f_{\cdot j}$$ in each cells. We have $f_{\cdot j}=\dfrac{1}{n}\sum\limits_{j\in\mathcal{J}}n_{ij}$ and $f_{i\cdot}=\dfrac{1}{n}\sum\limits_{i\in\mathcal{I}}n_{ij}$
+
+```{r}
+#We start by adding margins to have row and column profiles
+GMO_table <- as.data.frame.matrix(table(GMO.Al.A))
+fi <- apply(GMO_table, 1, sum)/sum(GMO_table)
+fj <- apply(GMO_table, 2, sum)/sum(GMO_table)
+GMO_theo <- matrix(nrow=5,ncol=4)
+for(i in 1:5){
+for(j in 1:4) GMO_theo[i, j] <- (fi[i]*fj[j])
+}
+rownames(GMO_theo) <- rownames(GMO_table)
+colnames(GMO_theo) <- colnames(GMO_table)
+
+#barplot
+barplot((as.table(as.matrix(GMO_theo))), beside = TRUE, main="effectifs theoriques", col=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
+legend("topleft", inset=.02, title="Political Party", c("Extreme left", "Left","Greens",'Liberal', 'Right'), horiz=TRUE, cex=0.8, fill=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
+
+barplot(t(table(GMO.Al.A.Sample))/135, beside = TRUE, main="sample", col=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
+legend("topleft", inset=.02, title="Political Party", c("Extreme left", "Left", "Greens", 'Liberal', 'Right'), horiz=TRUE, cex=0.8, fill=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
+#
+barplot((table(GMO.Al.A)/135), beside = TRUE,main="non sample", col=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
+legend("topleft", inset=.02, title="Political Party", c("Extreme left", "Left", "Greens", 'Liberal', 'Right'), horiz=TRUE, cex=0.8, fill=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
+```
+We have our referent situation on the left, where variables are perfectly independant. The sample data is very closed to the it, but the original one seems to be deviate. We can try to make first hypothesis concerning a test on independence. 
+
+ggplot version :
+
+```{r}
+library(tidyr)
+df_theo <- as.data.frame.matrix(GMO_theo)
+library(tibble)
+df <- rownames_to_column(df_theo, "Political.Party")
+
+df <- df %>% pivot_longer(!Political.Party, names_to="Position.Al.A", values_to = "frequence")
+
+#Re-order levels
+df$Position.Al.A <- as.factor(df$Position.Al.A)
+df$Political.Party <- as.factor(df$Political.Party)
+df$Position.Al.A <- ordered(df$Position.Al.A,levels=c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
+df$Political.Party <- ordered(df$Political.Party, levels=c("Extreme left", "Left", "Greens", "Liberal", "Right"))
+
+ggplot(df, aes(y=frequence,x=Position.Al.A, fill=Political.Party))+
+         geom_col( position = "dodge", color="black")+ggtitle("Barplot of theorical table")+
+  scale_fill_manual(values=c("Extreme left"="brown", "Left"="palevioletred2", "Greens"="chartreuse4", "Liberal"="gold1", "Right"="dodgerblue3"))
+```
+
+#Deviation to the independance
+
+Now that we have our referent situation, we need to define a deviation to the independence for each pairs of categories. With the hypothesis of independence, we have the relation $f_{ij}=f_{i\cdot}\cdot f_{\cdot j}$ __ie :__ $\dfrac{f_{ij}}{f_{i\cdot}\cdot f_{\cdot j}}-1=0$
+
+```{r}
+fi <- apply(GMO_table, 1, sum)/sum(GMO_table)
+fj <- apply(GMO_table, 2, sum)/sum(GMO_table)
+GMO_deviation <- matrix(nrow=5, ncol=4)
+for(i in 1:5){
+for(j in 1:4) GMO_deviation[i, j] <- (GMO_table[i, j]/sum(GMO_table)/((fi[i]*fj[j])))-1
+}
+rownames(GMO_deviation) <- rownames(GMO_table)
+colnames(GMO_deviation) <- colnames(GMO_table)
+```
+
+These multivariate profiles (as vectors of $R^{J}$ and $R^{I}$) can be directly interpreted in terms of difference from the independence model.
+
+Naturally, if you had to compare two political party in terms of difference from the independence model, you would calculate a distance based on the differences regarding each type of Position.Al.A categories. As the different types of Position.Al.A have a different weight relative to each other, you would naturally take that information into account, and calculate a distance weighted by the relative importance of each type of music. In other words, we're going to consider the following distance between two occupational statuses i and i':
+$$ d^2(i,i') = \sum\limits_{j\in\mathcal{J}}f_{\cdot j}\cdot((\dfrac{f_{ij}}{f_{i\cdot}\cdot f_{\cdot j}})-(\dfrac{f_{i'j}}{f_{i'\cdot}\cdot f_{\cdot j}}))^2$$
+Which can also be written
+$$ d^2(i,i') = \sum\limits_{j\in\mathcal{J}}\dfrac{1}{f_{\cdot j}}(\dfrac{f_{ij}}{f_{i\cdot}}-\dfrac{f_{i'j}}{f_{i'\cdot}})^2$$
+or :
+$$ d^2(i,i') = \sum\limits_{j\in\mathcal{J}}\dfrac{n}{n_{\cdot j}}(\dfrac{n_{ij}}{n_{i\cdot}}-\dfrac{n_{i'j}}{n_{i'\cdot}})^2$$
+
+The distance between i and i' in terms of difference from the independence model lead to the comparison of the profile of i' and the profile of i', category by category. The name of the distance between two row profiles is called the Chi-square distance : 
+$$ d^2(i,i') = d_{\chi^2}^2(i,i') = \sum\limits_{j\in\mathcal{J}}\dfrac{n}{n_{\cdot j}}(\dfrac{n_{ij}}{n_{i\cdot}}-\dfrac{n_{i'j}}{n_{i'\cdot}})^2$$
+
+Calculate the distance matrix between row-profiles _ie_ the political party.
+
+```{r}
+ni <- apply(GMO_table,1, sum)#row sum
+nj <- apply(GMO_table,2, sum)#col sum
+n <- as.numeric(sum(ni))
+GMO_chi2_row <- matrix(nrow=5, ncol=5)
+for(i in 1:5){
+for(j in 1:5){GMO_chi2_row[i, j] <- sum((n/nj)*((GMO_table[i,]/ni[i]) - (GMO_table[j,]/ni[j]))^2)}
+}
+rownames(GMO_chi2_row) <- rownames(GMO_table)
+colnames(GMO_chi2_row) <- rownames(GMO_table)
+
+dim <- ncol(GMO_chi2_row)
+image(1:dim, 1:dim,GMO_chi2_row, axes=F, xlab="", ylab="")
+axis(1, 1:dim, row.names(GMO_chi2_row), cex.axis=1, las=3)
+axis(2, 1:dim, row.names(GMO_chi2_row), cex.axis=1, las=1)
+text(expand.grid(1:dim, 1:dim), sprintf("%0.1f", GMO_chi2_row), cex=1)
+```
+
+
+The chi2 statistic is calculated with the `chisq.test` function. It also gives you the results of the test where the null hypothesis is the independence between the variables based on the statistic. If the statistic is too large, we will reject the hypothesis of independence and reciprocally. 
+
+
+```{r}
+res.chi2.gmo <- chisq.test(GMO_table)
+res.chi2.sample <- chisq.test(table(GMO.Al.A.Sample))
+res.chi2.gmo$residuals
+```
+Here, the 2 variables are not independent at a level of 5%, but the sample data is independent at 5%. This result was interpretable graphically comparing the referent situation barplot to the other two. the p-value is by definition the probability for the statistic to be higher than 36.77, under the null hypothesis for the first test.
+
+#Inertia
+With a distance and a system of masses, we can now focus on the very important concept of inertia. By definition, as evoked in our introduction, the inertia of our Political party is obtained by the following calculation :
+$$ \mathcal{I}(N_{I}) = \sum\limits_{i\in\mathcal{I}} f_{i\cdot}\cdot d^2(i,\mathcal{O}) $$
+where $\mathcal{I}(N_{I})$ is the inertia of the system of rows, $N_{I}$ denotes the scatter plot of the rows in the $R^{J}$ space, and $\mathcal{O}$ denotes the center of gravity of $N_{I}$ . 
+
+#CA
+
+```{r}
+res.CA <- CA(GMO_table)
+```
+We can observe a Guttman effect, with a _parabolic_ form. 
+
+You can also only represent variables or individuals :
+
+```{r}
+plot(res.CA, invisible = "col")
+plot(res.CA, invisible = "row")
+```
+
+#Categories involvement in independance
+
+`descfreq` describes the rows or groups of rows in a contingency table
+
+```{r}
+res.descfreq <- descfreq(GMO_table, proba = 1)
+res.descfreq
+```
+The V-test is used to transform p-values into scores that are more easily interpretable. The main
+feature of this indicator is that it can be positive, or negative, depending on the test that has been performed. It is closed to a Z-score. 
+
+# Pratic example with barbes
+
+```{r}
+library(readxl)
+library(dplyr)
+library(FactoMineR)
+library(vietnameseConverter)
+library(stringi)
+```
+
+## Import + modifications 
+```{r}
+barbesV2 <- read_excel("data/barbesV2.xlsx")
+barbesV2 <- barbesV2 %>% mutate(trad_sans_accents = stri_trans_general(Trad, "Latin-ASCII"))
+barbesV2$Juge <- as.factor(barbesV2$Juge)
+barbesV2$Barbes <- as.factor(barbesV2$Barbes)
+
+barbesV2.viet.acc <- as.data.frame(barbesV2[, -c(3,5)])
+barbesV2.viet.sans.acc <- as.data.frame(barbesV2[, -c(3,4)])
+barbesV2.en <- as.data.frame(barbesV2[,-c(4,5)])
+```
+
+### Anglais :
+```{r}
+res.textual.en.V2 <- textual(barbesV2.en,num.text = 3, contingence.by = 2, sep.word = ";")
+
+eff.en.V2 <- as.data.frame(apply(res.textual.en.V2$cont.table, MARGIN = 2, FUN=sum))
+
+words_selection.en.V2 <- res.textual.en.V2$cont.table[,apply(res.textual.en.V2$cont.table, 2, sum)>=1]
+res.CA.en.V2 <- CA(words_selection.en.V2, graph=FALSE)
+
+plot.CA(res.CA.en.V2, invisible = "row")
+plot.CA(res.CA.en.V2, invisible="col")
+```
+
+### Vietnamien avec accents :
+```{r}
+res.textual.viet.V2 <- textual(barbesV2.viet.acc,num.text = 3, contingence.by = 2, sep.word = ";")
+
+eff.viet.V2 <- as.data.frame(apply(res.textual.viet.V2$cont.table, MARGIN = 2, FUN=sum))
+
+words_selection.viet.V2 <- res.textual.viet.V2$cont.table[,apply(res.textual.viet.V2$cont.table, 2, sum)>=1]
+
+res.CA.viet.V2 <- CA(words_selection.viet.V2, graph=FALSE)
+plot.CA(res.CA.viet.V2, invisible="row")
+plot.CA(res.CA.viet.V2, invisible="col")
+```
+
+### Vietnamien sans accents :
+```{r}
+res.textual.viet.sans.accent.V2 <- textual(barbesV2.viet.sans.acc,num.text = 3, contingence.by = 2, sep.word = ";")
+
+eff.viet.V2 <- as.data.frame(apply(res.textual.viet.sans.accent.V2$cont.table, MARGIN = 2, FUN=sum))
+
+words_selection.viet.sans.accent.V2 <- res.textual.viet.sans.accent.V2$cont.table[,apply(res.textual.viet.sans.accent.V2$cont.table, 2, sum)>=1]
+
+res.CA.viet.sans.accent.V2 <- CA(words_selection.viet.sans.accent.V2, graph=FALSE)
+plot.CA(res.CA.viet.sans.accent.V2, invisible = "row")
+plot.CA(res.CA.viet.sans.accent.V2, invisible = "col") 
+```
+
+### Comparaison
+
+```{r}
+coord.en.V2 <- data.frame("words"=rownames(res.CA.en.V2$col$coord))
+coord.en.V2 <- coord.en.V2 %>% mutate(Dim1.en=res.CA.en.V2$col$coord[,1], Dim2.en=res.CA.en.V2$col$coord[,2])
+coord.en.V2 <- as.data.frame(coord.en.V2[order(coord.en.V2$Dim1.en,coord.en.V2$Dim2.en),])
+
+coord.viet.acc.V2 <- data.frame("words"=rownames(res.CA.viet.V2$col$coord))
+coord.viet.acc.V2 <- coord.viet.acc.V2 %>% mutate(Dim1.viet.acc = res.CA.viet.V2$col$coord[,1], Dim2.viet.acc=res.CA.viet.V2$col$coord[,2])
+coord.viet.acc.V2 <- as.data.frame(coord.viet.acc.V2[order(coord.viet.acc.V2$Dim1.viet.acc,coord.viet.acc.V2$Dim2.viet.acc),])
+
+coord.viet.sans.acc.V2 <- data.frame("words"=rownames(res.CA.viet.sans.accent.V2$col$coord))
+coord.viet.sans.acc.V2 <- coord.viet.sans.acc.V2 %>% mutate(Dim1.viet.sans.acc = res.CA.viet.sans.accent.V2$col$coord[,1], Dim2.viet.sans.acc=res.CA.viet.sans.accent.V2$col$coord[,2])
+coord.viet.sans.acc.V2 <- as.data.frame(coord.viet.sans.acc.V2[order(coord.viet.sans.acc.V2$Dim1.viet.sans.acc,coord.viet.sans.acc.V2$Dim2.viet.sans.acc),])
+
+coord <- cbind(coord.en.V2, coord.viet.acc.V2, coord.viet.sans.acc.V2)
+```
+
+Conclusion : 
+- pas de différence entre CA mots anglais versus mots vietnamiens (warnings sur l'encodage lors de la CA mais coordonnées pareilles);
+- aucune utilité des mots vietnamiens sans accents

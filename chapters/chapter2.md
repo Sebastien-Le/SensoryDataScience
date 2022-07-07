@@ -86,25 +86,121 @@ height: 1px;
 }
 </style>
 
-<exercise id="1" title="From classes to categories">
-  
-By definition, a class is "a set or category of things having some property or attribute in common and differentiated from others by kind, type, or quality". In the same way, a category is "a class or division of people or things regarded as having particular shared characteristics". In this chapter, the notion of categorical variable is first introduced using a survey in which people are asked about their perceptions of genetically modified organisms.
+<exercise id="1" title="From classes to categories and vice-versa">
+
+By definition, a class is "a set or category of things having some property or attribute in common and differentiated from others by kind, type, or quality". In the same way, a category is "a class or division of people or things regarded as having particular shared characteristics". 
+
+In this chapter, the notion of categories is first introduced using a survey in which people were asked about their perception of genetically modified organisms (GMO):
+
+* Do you feel implicated in the debate about GMO (a lot, to a certain extent, a little, not at all)?
+
+* What is your view of GMO cultivation in France (very favourable, favourable, somewhat against, totally opposed)?
+
+* What do you think of the inclusion of GM raw materials in products for human consumption (very favourable, favourable, somewhat against, totally opposed)?
+
+* What do you think of the inclusion of GM raw materials in products to be fed to animals (very favourable, favourable, somewhat against, totally opposed)?
+
+* Have you ever taken part in an anti-GMO protest (Yes/No)?
+
+* Do you think the media communicate enough information about GMO (Yes/No)?
+
+* Do you take it upon yourself to find out more information about GMO (Yes/No)?
+
+* Do you think that GMO might enable us to reduce the use of fungicides (Yes/No)?
+
+* Do you think that GMO might enable us to reduce the problems of hunger in the world (Yes/No)?
+
+* Do you think that the use of GMO might help to improve farmers' lives (Yes/No)?
+
+* Do you think that GMO might lead to future scientific advances (Yes/No)?
+
+* Do you think that GMO represent a danger to our health (Yes/No)?
+
+* Do you think that GMO represent a possible danger to the environment (Yes/No)?
+
+* Do you think that GMO represent a financial risk for farmers (Yes/No)?
+
+* Do you think that GMO are a useless scientific practice (Yes/No)?
+
+* Do you think our grandparents' generation had a healthier diet than us (Yes/No)?
+
+The same people were also asked about the five following descriptive variables:
+
+* Sex (male, female)
+
+* Professional status (farmer, student, manual labourer, senior management, civil servant, accredited professional, technician, retailer, other profession, unemployed, retired)
+
+* Age (--25 years, 25--40 years, 40--60 years, +60 years)
+
+* Is your profession or education in any way linked to agriculture, the food industry or the pharmaceutical industry (Yes/No)?
+
+* Which political movement do you most adhere to (extreme left, green, left, liberal, right, extreme right)?
+
+Intuitively, it is easy to understand that each question, individually, defines categories of people through the response modalities chosen.
+
+In the following code, we first import the data in an R object named *GMO*, then run the `summary()` function on the *GMO* object.
 
 <codeblock id="02_01">
 </codeblock>
 
+As shown above, data are considered as *characters* and should be encoded as factors.
+From the number of columns of *GMO*, we encode the columns as factors, iteratively; then we check that the *GMO* data frame is ready to be analyzed.
+
 <codeblock id="02_02">
-</codeblock>
-
-<codeblock id="02_03">
-</codeblock>
-
-<codeblock id="02_04">
 </codeblock>
 
 </exercise>
 
 <exercise id="2" title="From categories to categorical data">
+
+The output of the `summary()` function is interesting: it illustrates perfectly the notion of class or category. For the question *What do you think of the inclusion of GM raw materials in products to be fed to animals?*, we can see that 135 participants to the survey are divided into 4 classes or categories: 44 are totally opposed, 39 are somewhat against, 44 are favourable, and 8 are very favourable. Practically, we want to represent the way these participants are distributed (or divided) into these 4 classes/categories/response modalities that define a *categorical variable* (or *qualitative variable*).
+
+To do so, we are going to extract this information, to reorder it and to represent it graphically.
+
+<codeblock id="02_031">
+</codeblock>
+
+This can also be done using the very important function `table()`.
+
+<codeblock id="02_032">
+</codeblock>
+
+Let's enhance the output by adding a title and some colors *(https://r-charts.com/colors/)*.
+
+<codeblock id="02_033">
+</codeblock>
+
+If you want to represent the relative frequency, you can do that using the very important function `prop.table()`.
+
+<codeblock id="02_034">
+</codeblock>
+
+
+## The *R* corner: *ggplot2* an alternative to base R
+<br>
+
+Let's represent a categorical variable with the *ggplot2* package. It can be done in several ways.
+
+<codeblock id="02_035">
+</codeblock>
+
+From the data frame directly. Be careful at the levels order. You can change them using the `factor()` function and the *levels* argument.
+
+<codeblock id="02_036">
+</codeblock>
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+
+<br>
+
+<codeblock id="02_03">
+</codeblock>
+
+
+<codeblock id="02_04">
+</codeblock>
+
+
 
 <codeblock id="02_05">
 </codeblock>

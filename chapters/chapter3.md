@@ -2,7 +2,7 @@
 title: 'Chapter 3: Dealing with textual data'
 description:
 prev: /chapter2
-next: null
+next: /chapter4
 type: chapter
 id: 3
 ---
