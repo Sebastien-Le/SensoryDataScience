@@ -25,12 +25,12 @@ for (i in 1:21)
 #summary
 summary(GMO)
 
-#selection variable Political.Party and Position.Al.A
-GMO.Al.A <- GMO[,c( "Political.Party","Position.Al.A")]
+#selection variable Political.Party and Position.A.Food
+GMO.Al.A <- GMO[,c( "Political.Party","Position.A.Food")]
 
 #or tidyverse version : 
 library(dplyr)
-GMO.Al.A <- GMO %>% select(c( Political.Party,Position.Al.A,))
+GMO.Al.A <- GMO %>% select(c( Political.Party,Position.A.Food,))
 ```
 
 ## Bivariate analysis
@@ -40,13 +40,15 @@ We want to visualize both variables simultaneously. A barchat is appropriate to 
 ```{r}
 library(ggplot2)
 
+table(GMO$Position.A.Food,GMO$Political.Party)
+
 #Re-order levels
-GMO.Al.A$Position.Al.A <- as.factor(GMO.Al.A$Position.Al.A)
+GMO.Al.A$Position.A.Food <- as.factor(GMO.Al.A$Position.A.Food)
 GMO.Al.A$Political.Party <- as.factor(GMO.Al.A$Political.Party)
-GMO.Al.A$Position.Al.A <- ordered(GMO.Al.A$Position.Al.A,c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
+GMO.Al.A$Position.A.Food <- ordered(GMO.Al.A$Position.A.Food,c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
 GMO.Al.A$Political.Party  <- ordered(GMO.Al.A$Political.Party,c("Extreme left", "Left", "Greens", "Liberal", "Right"))
 
-ggplot(GMO.Al.A, aes(x=Position.Al.A, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories") +
+ggplot(GMO.Al.A, aes(x=Position.A.Food, ..count..)) + geom_bar(aes(fill = Political.Party),  position = "dodge") + ggtitle("Barplot of cross-categories") +
   scale_fill_manual(values=c("Extreme left"="brown", "Left"="palevioletred2", "Greens"="chartreuse4", "Liberal"="gold1", "Right"="dodgerblue3"))
 ## ..count.. : stat transformation of the original data set
 ```
@@ -60,16 +62,16 @@ To introduce this concept of independence, we remake the first part, but conside
 ```{r}
 set.seed(7)
 ind.sample <- sample(1:135)
-GMO.Al.A.Sample <- data.frame("Position.Al.A"=GMO.Al.A$Position.Al.A[ind.sample],'Political.Party'=GMO.Al.A$Political.Party)
+GMO.Al.A.Sample <- data.frame("Position.A.Food"=GMO.Al.A$Position.A.Food[ind.sample],'Political.Party'=GMO.Al.A$Political.Party)
 
 #Re-order levels
-GMO.Al.A.Sample$Position.Al.A <- as.factor(GMO.Al.A.Sample$Position.Al.A)
+GMO.Al.A.Sample$Position.A.Food <- as.factor(GMO.Al.A.Sample$Position.A.Food)
 GMO.Al.A.Sample$Political.Party <- as.factor(GMO.Al.A.Sample$Political.Party)
-GMO.Al.A.Sample$Position.Al.A <- ordered(GMO.Al.A.Sample$Position.Al.A,c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
+GMO.Al.A.Sample$Position.A.Food <- ordered(GMO.Al.A.Sample$Position.A.Food,c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
 GMO.Al.A.Sample$Political.Party  <- ordered(GMO.Al.A.Sample$Political.Party,c("Extreme left", "Left", "Greens", "Liberal", "Right"))
 
 #visualization
-ggplot(GMO.Al.A.Sample, aes(Position.Al.A, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories sampled") +
+ggplot(GMO.Al.A.Sample, aes(Position.A.Food, ..count..)) + geom_bar(aes(fill = Political.Party), color="black", position = "dodge") + ggtitle("Barplot of cross-categories sampled") +
   scale_fill_manual(values=c("Extreme left"="brown", "Left"="palevioletred2", "Greens"="chartreuse4", "Liberal"="gold1", "Right"="dodgerblue3"))
 ```
 ## probability side
@@ -98,7 +100,7 @@ colnames(GMO_theo) <- colnames(GMO_table)
 
 #barplot
 barplot((as.table(as.matrix(GMO_theo))), beside = TRUE, main="effectifs theoriques", col=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
-legend("topleft", inset=.02, title="Political Party", c("Extreme left", "Left","Greens",'Liberal', 'Right'), horiz=TRUE, cex=0.8, fill=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
+legend("topright", inset=.02, title="Political Party", c("Extreme left", "Left","Greens",'Liberal', 'Right'), horiz=TRUE, cex=0.8, fill=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
 
 barplot(t(table(GMO.Al.A.Sample))/135, beside = TRUE, main="sample", col=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
 legend("topleft", inset=.02, title="Political Party", c("Extreme left", "Left", "Greens", 'Liberal', 'Right'), horiz=TRUE, cex=0.8, fill=c("brown","palevioletred2", "chartreuse4","gold1", "dodgerblue3"))
@@ -116,15 +118,15 @@ df_theo <- as.data.frame.matrix(GMO_theo)
 library(tibble)
 df <- rownames_to_column(df_theo, "Political.Party")
 
-df <- df %>% pivot_longer(!Political.Party, names_to="Position.Al.A", values_to = "frequence")
+df <- df %>% pivot_longer(!Political.Party, names_to="Position.A.Food", values_to = "frequence")
 
 #Re-order levels
-df$Position.Al.A <- as.factor(df$Position.Al.A)
+df$Position.A.Food <- as.factor(df$Position.A.Food)
 df$Political.Party <- as.factor(df$Political.Party)
-df$Position.Al.A <- ordered(df$Position.Al.A,levels=c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
+df$Position.A.Food <- ordered(df$Position.A.Food,levels=c("Totally opposed", "Somewhat Against", "Favourable", "Very Favourable"))
 df$Political.Party <- ordered(df$Political.Party, levels=c("Extreme left", "Left", "Greens", "Liberal", "Right"))
 
-ggplot(df, aes(y=frequence,x=Position.Al.A, fill=Political.Party))+
+ggplot(df, aes(y=frequence,x=Position.A.Food, fill=Political.Party))+
          geom_col( position = "dodge", color="black")+ggtitle("Barplot of theorical table")+
   scale_fill_manual(values=c("Extreme left"="brown", "Left"="palevioletred2", "Greens"="chartreuse4", "Liberal"="gold1", "Right"="dodgerblue3"))
 ```
@@ -146,7 +148,7 @@ colnames(GMO_deviation) <- colnames(GMO_table)
 
 These multivariate profiles (as vectors of $R^{J}$ and $R^{I}$) can be directly interpreted in terms of difference from the independence model.
 
-Naturally, if you had to compare two political party in terms of difference from the independence model, you would calculate a distance based on the differences regarding each type of Position.Al.A categories. As the different types of Position.Al.A have a different weight relative to each other, you would naturally take that information into account, and calculate a distance weighted by the relative importance of each type of music. In other words, we're going to consider the following distance between two occupational statuses i and i':
+Naturally, if you had to compare two political party in terms of difference from the independence model, you would calculate a distance based on the differences regarding each type of Position.A.Food categories. As the different types of Position.A.Food have a different weight relative to each other, you would naturally take that information into account, and calculate a distance weighted by the relative importance of each type of music. In other words, we're going to consider the following distance between two occupational statuses i and i':
 $$ d^2(i,i') = \sum\limits_{j\in\mathcal{J}}f_{\cdot j}\cdot((\dfrac{f_{ij}}{f_{i\cdot}\cdot f_{\cdot j}})-(\dfrac{f_{i'j}}{f_{i'\cdot}\cdot f_{\cdot j}}))^2$$
 Which can also be written
 $$ d^2(i,i') = \sum\limits_{j\in\mathcal{J}}\dfrac{1}{f_{\cdot j}}(\dfrac{f_{ij}}{f_{i\cdot}}-\dfrac{f_{i'j}}{f_{i'\cdot}})^2$$

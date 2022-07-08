@@ -277,28 +277,29 @@ Concretely, for this broken structure, if you are very favourable to the inclusi
 
 Two events are independent if the occurrence of one does not affect the probability of occurrence of the other. More formally, two events A and B are independent if and only if their joint probability equals the product of their probabilities:
 
-<center><img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\mathcal{P}(B)." style="margin-top : 0rem; margin-bottom : 0rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\times\mathcal{P}(B)." style="margin-top : 0rem; margin-bottom : 0rem"/></center>
 
-In the following part, we are going to compare <img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)" style="margin-top : 1rem; margin-bottom : -0.5rem"/> to  <img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A)\mathcal{P}(B)" style="margin-top : 1rem; margin-bottom : -0.5rem"/>, from what have been observed, *i.e.* from the data.
+In the following part, we are going to compare <img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)" style="margin-top : 1rem; margin-bottom : -0.5rem"/> to  <img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A)\times\mathcal{P}(B)" style="margin-top : 1rem; margin-bottom : -0.5rem"/>, from what have been observed, *i.e.* from the data.
 
-In the following code, we're using an important function for building contingency table: the `as.data.frame.matrix()` (https://www.r-bloggers.com/2012/03/how-to-convert-contingency-tables-to-data-frames-with-r/).
+Build a contingency table crossing the two variables *Position.A.Food* and *Political.Party* with the `table()` function. From this contingency table, calculate the marginal probabilities for each variable with the `apply()` and `sum()` functions. Then, from the definition of two independent events, build the probabilities matrix of the joint distribution of *Position.A.Food* and *Political.Party*, under the hypothesis of independence.
 
 <codeblock id="02_07">
 </codeblock>
 
-Hence, two qualitative variables are independent when we have the relation :
+The output `res.table` from the `table()` function can be seen as a matrix <img src="https://latex.codecogs.com/svg.image?(n_{ij})" style="margin-bottom : -0.25rem"/>.
 
-<img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot}\cdot f_{\cdot j}" style="margin-bottom : -0.25rem"/>
+The marginal probabilities for each variable can be defined as :
 
+<center><img src="https://latex.codecogs.com/svg.image?f_{i\cdot}=\dfrac{1}{n}\sum\limits_{i\in I}n_{ij}" style="margin-bottom : -1.95rem"/> and
+<img src="https://latex.codecogs.com/svg.image?f_{\cdot j}=\dfrac{1}{n}\sum\limits_{j\in J}n_{ij}," style="margin-bottom : -1.95rem"/></center>
 
-The mutual probability only depends of marginal numbers.
+where <img src="https://latex.codecogs.com/svg.image?n=\sum\limits_{i\in I}\sum\limits_{j\in J} n_{ij}." style="margin-bottom : -2.15rem"/>
 
-First, we construct the table of reference, *i.e.*: a table with the product <img src="https://latex.codecogs.com/svg.image?f_{i\cdot}\cdot f_{\cdot j}" style="margin-bottom : -0.35rem"/> in each cells. 
+<br>
 
-We have <img src="https://latex.codecogs.com/svg.image?f_{\cdot j}=\dfrac{1}{n}\sum\limits_{j\in J}n_{ij}" style="margin-bottom : -1.95rem"/> and <img src="https://latex.codecogs.com/svg.image?f_{i\cdot}=\dfrac{1}{n}\sum\limits_{i\in I}n_{ij}" style="margin-bottom : -1.95rem"/>
+When the variables are independent:
 
-
-
+<center><img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}." style="margin-bottom : -0.25rem"/></center>
 
 <codeblock id="02_08">
 </codeblock>
