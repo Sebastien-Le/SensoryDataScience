@@ -271,10 +271,6 @@ In this example, the structure seems broken, which means that there's no particu
 
 Concretely, for this broken structure, if you are very favourable to the inclusion of GM raw materials in products to be fed to animals, you might vote from "Extreme Left" to "Right" unconditionally. This leads us to the notion of independence.
 
-</exercise>
-
-<exercise id="5" title="From the independence to its deviation">
-
 Two events are independent if the occurrence of one does not affect the probability of occurrence of the other. More formally, two events A and B are independent if and only if their joint probability equals the product of their probabilities:
 
 <center><img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\times\mathcal{P}(B)." style="margin-top : 0rem; margin-bottom : 0rem"/></center>
@@ -301,33 +297,59 @@ When the variables are independent:
 
 <center><img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}." style="margin-bottom : 0.5rem"/></center>
 
+</exercise>
+
+<exercise id="5" title="From the independence to its deviation">
+
 Beyond the formulas, it is important to understand visually *how far* data can be from the independence, in other words how your data deviate from the independence.
 
+Represent the distribution of the participants according to the two variables *Position.A.Food* and *Political.Party*. Consider 3 situations, the theoretical situation when the two variables are independent (in the sense of the definition above), the artifactual situation when the answers to the *Position.A.Food* are permuted, and finally the observed situation with the data collected. For these representations, use the `barplot()` function, as well as the `legend()` function.
+
+Choose the proper data to visualize the first situation.
+
 <codeblock id="02_08">
+Use Joint.independence
 </codeblock>
 
+Choose the proper data to visualize the second situation.
+
 <codeblock id="02_08b">
+Remember that data have been permuted
 </codeblock>
+
+Choose the proper data to visualize the third situation.
 
 <codeblock id="02_08c">
 </codeblock>
 
-
-## The *R* corner: *ggplot2* an alternative to base R
-<br>
-
-<codeblock id="02_09">
-</codeblock>
+Obviously, the artifactual situation is not far from the independence situation. This result was expected as data were permuted which leads to a lack of structure in the data. The observed situation is quite far from both theoretical and artifactual situations. This result was expected due to the strong structure in the data, particularly between the two variables *Position.A.Food* and *Political.Party*.
 
 </exercise>
 
-<exercise id="6" title="From the notion of deviation to the notion of inertia">
+<exercise id="6" title="From the notion of deviation to the notion of distance">
+
+This drift or deviation from the independence can be formalized starting from the definition of independence. The equation <img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}" style="margin-top : 1rem; margin-bottom : -0.5rem"/> can also be written:
+
+
+<center><img src="https://latex.codecogs.com/svg.image?\dfrac{f_{ij}}{f_{i\cdot}\times f_{\cdot j}}-1=0." style="margin-top : -1rem; margin-bottom : 0rem"/><center>
+
+Calculate the matrix that corresponds to this new formulation of the independence.
 
 <codeblock id="02_10">  
 </codeblock>
 
+For this matrix, positive numbers correspond to a positive dependency (association) between two categories, as illustrated by the number 1.95 for the two categories *Right* and *Very Favourable*.
+
+For this matrix, negative numbers correspond to a negative dependency (incompatibility) between two categories, as illustrated by the number -1 for the two categories *Extreme left* and *Very Favourable*.
+
+These multivariate profiles (as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/>) can be directly interpreted in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns.
+
 <codeblock id="02_11">
 </codeblock>
+
+</exercise>
+
+<exercise id="7" title="From the notion of distance to the notion of inertia">
 
 <codeblock id="02_12">
 </codeblock>
@@ -337,7 +359,7 @@ Beyond the formulas, it is important to understand visually *how far* data can b
 
 </exercise>
 
-<exercise id="7" title="From the notion of inertia to Correspondence Analysis">
+<exercise id="8" title="From the notion of inertia to Correspondence Analysis">
 
 <codeblock id="02_14">
 </codeblock>
@@ -347,14 +369,14 @@ Beyond the formulas, it is important to understand visually *how far* data can b
 
 </exercise>
 
-<exercise id="8" title="From Correspondence Analysis to Multiple Correspondence Analysis">
+<exercise id="9" title="From Correspondence Analysis to Multiple Correspondence Analysis">
 
 <codeblock id="02_16">
 </codeblock>
 
 </exercise>
 
-<exercise id="9" title="Case study: the Beards example with CA">
+<exercise id="10" title="Case study: the Beards example with CA">
 
 <codeblock id="02_17">
 </codeblock>
@@ -376,4 +398,4 @@ Beyond the formulas, it is important to understand visually *how far* data can b
 
 </exercise>
 
-<exercise id="10" title="Case study: the sorting task with MCA">
+<exercise id="11" title="Case study: the sorting task with MCA">

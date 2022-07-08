@@ -1,4 +1,4 @@
-barplot(joint.independence, beside = TRUE, main = "Independent data", 
+barplot(____, beside = TRUE, main = "Theoretical situation", 
         col = c("brown", "palevioletred2", "chartreuse4", "gold1", "dodgerblue3"))
 legend("topright", inset=.02, title="Political Party", 
        c("Extreme left", "Left", "Greens", "Liberal", "Right"), 

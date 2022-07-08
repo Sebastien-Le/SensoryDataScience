@@ -1,4 +1,4 @@
-barplot(table(GMO$Political.Party,____), beside = TRUE, main = "Observed situation", 
+barplot(table(GMO$Political.Party, GMO$Position.A.Food.Permuted), beside = TRUE, main="Artifactual situation", 
         col = c("brown", "palevioletred2", "chartreuse4", "gold1", "dodgerblue3"))
 legend("topright", inset=.02, title="Political Party", 
        c("Extreme left", "Left", "Greens", "Liberal", "Right"), 
