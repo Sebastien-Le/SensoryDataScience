@@ -136,9 +136,9 @@ The same people were also asked about the five following descriptive variables:
 
 * Which political movement do you most adhere to (extreme left, green, left, liberal, right, extreme right)?
 
-Intuitively, it is easy to understand that each question, individually, defines categories of people through the response modalities chosen.
+Intuitively, it is easy to understand that each question, individually, defines categories of participants through the response modalities they have chosen.
 
-Import the data in an R object named *GMO*, then apply the `summary()` function to the *GMO* object.
+Let's now have a look at our data. Import the data in an R object named *GMO*, then apply the `summary()` function to the *GMO* object.
 
 <codeblock id="02_01">
 </codeblock>
@@ -150,30 +150,47 @@ Apply the `ncol()` function to *GMO* to get its number of columns. Use this info
 ncol(GMO) returns the number of columns of GMO
 </codeblock>
 
-## The *R* corner: when categories have to be re-ordered
+The output of the `summary()` function is interesting: it illustrates perfectly the notion of class or category. For the question *"What do you think of the inclusion of GM raw materials in products to be fed to animals?"*, we can see that the 135 participants of the survey are divided into 4 classes or categories: 44 are totally opposed, 39 are somewhat against, 44 are favourable, and 8 are very favourable.
 
 </exercise>
 
 <exercise id="2" title="From categories to categorical data and their representation">
 
-The output of the `summary()` function is interesting: it illustrates perfectly the notion of class or category. For the question *What do you think of the inclusion of GM raw materials in products to be fed to animals?*, we can see that the 135 participants of the survey are divided into 4 classes or categories: 44 are totally opposed, 39 are somewhat against, 44 are favourable, and 8 are very favourable. Practically, we want to represent the way these participants are distributed (or divided) into these 4 classes (categories or response modalities) that define a *categorical variable* (or *qualitative variable*).
+As explained previously, for a given question, the different *response modalities* define classes or categories of participants. Practically, we want to represent the way these participants are distributed into these classes. The graphical representation of a categorical variable is often done through a bar plot: one bar per category with a height proportional to the numeric value associated with the category.
 
-To do so, we are going to extract this information, to re-order it and to represent it graphically.
+Let's have a look at the *Position.H.Food* variable, and let's represent its distribution. To do so, extract the distribution information with the `summary()` function and visualize it with the `barplot()` function.
 
 <codeblock id="02_031">
 </codeblock>
 
-This can also be done using the very important function `table()`.
+By default, the levels of a categorical are sorted in an alphabetical order. In our case, the *Position.H.Food* variable is an *ordered categorical variable*, a categorical variable with a quantitative dimension that can be ordered. For a better understanding of the data, this relation order between the categories should be kept.
+
+To do so, we are using the `c()` function to temporarily re-order the levels.
+
+<codeblock id="02_031b">
+</codeblock>
+
+## The *R* corner: when categories have to be *re-ordered*
+<br>
+
+There's a trick for re-ordering the levels of a categorical variable. 
+
+Check the levels of the categorical variable *Position.Culture*. Re-order these levels in a more *natural* way, by using the `factor()` function, combined with the `levels()` function. Check again the levels of the variable *Position.Culture*
+
+<codeblock id="02_021">
+</codeblock>
+
+Extracting the distribution information can also be done using the very important function `table()`. This function will be used soon when dealing with two categorical variables.
 
 <codeblock id="02_032">
 </codeblock>
 
-Let's enhance the output by adding a title and some colors *(https://r-charts.com/colors/)*.
+Let's enhance the visualization by adding a title and some colors *(https://r-charts.com/colors/)*.
 
 <codeblock id="02_033">
 </codeblock>
 
-If you want to represent the relative frequency, you can do that using the very important function `prop.table()`.
+To represent the distribution in terms of percentages, use the very important function `prop.table()`.
 
 <codeblock id="02_034">
 </codeblock>
@@ -182,12 +199,17 @@ If you want to represent the relative frequency, you can do that using the very 
 ## The *R* corner: *ggplot2* an alternative to base R
 <br>
 
-Let's represent a categorical variable with the *ggplot2* package. It can be done in several ways.
+Let's represent a categorical variable with the *ggplot2* package. While the `barplot()` uses a vector containing the distribution information, the `ggplot()`  function requires to create a data frame. 
 
 <codeblock id="02_035">
 </codeblock>
 
-From the data frame directly. Be careful at the levels order. You can change them using the `factor()` function and the *levels* argument.
+The `data.frame()` function has generated two variables (*Var1* and *Freq*). Associate the x-axis with the categories and the y-axis with the number of occurrences.
+
+<codeblock id="02_035b">
+</codeblock>
+
+Raw data (*MGO*) can be used directly. Associate the x-axis with the categories and set the `stat` to `"count"` (this argument was set previously to `"identity"`, but with the distribution as input).
 
 <codeblock id="02_036">
 </codeblock>
