@@ -299,16 +299,31 @@ where <img src="https://latex.codecogs.com/svg.image?n=\sum\limits_{i\in I}\sum\
 
 When the variables are independent:
 
-<center><img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}." style="margin-bottom : -0.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}." style="margin-bottom : 0.5rem"/></center>
+
+Beyond the formulas, it is important to understand visually *how far* data can be from the independence, in other words how your data deviate from the independence.
 
 <codeblock id="02_08">
 </codeblock>
 
-<codeblock id="02_09">
+<codeblock id="02_08b">
+</codeblock>
+
+<codeblock id="02_08c">
 </codeblock>
 
 
-<codeblock id="02_10">
+## The *R* corner: *ggplot2* an alternative to base R
+<br>
+
+<codeblock id="02_09">
+</codeblock>
+
+</exercise>
+
+<exercise id="6" title="From the notion of deviation to the notion of inertia">
+
+<codeblock id="02_10">  
 </codeblock>
 
 <codeblock id="02_11">
@@ -320,9 +335,6 @@ When the variables are independent:
 <codeblock id="02_13">
 </codeblock>
 
-</exercise>
-
-<exercise id="6" title="From the notion of deviation to the notion of inertia">
 </exercise>
 
 <exercise id="7" title="From the notion of inertia to Correspondence Analysis">
