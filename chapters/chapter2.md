@@ -220,43 +220,56 @@ Raw data (*MGO*) can be used directly. Associate the x-axis with the categories 
 
 Who are those people who are favourable to the inclusion of GM raw materials in products to be fed to animals? Are they characterized by their political party for instance?
 
-To answer this question we will cross these two variables and build a *contingency table* using the very important `table()` function.
+To answer this question cross these two variables and build a *contingency table* using the very important `table()` function; before that re-order the *Position.A.Food* variable, as well as the *Political.Party* variable from "Extreme left" to "Right".
 
 <codeblock id="02_03">
 </codeblock>
 
-Re-order the *Political Party* variable from "Extreme left" to "Right".
+Those people who are favourable to the inclusion of GM raw materials in products to be fed to animals, how are they distributed within the political parties? To answer this question, set the `fill` argument to the name of the variable of interest.
 
-<codeblock id="02_03bis">
+<codeblock id="02_04a">
 </codeblock>
 
-Those people who are favourable to the inclusion of GM raw materials in products to be fed to animals, how are they distributed within the political parties?
+Notice that raw data have been used with the very important `..count..` value.
+
+Set the `position` argument to `"dodge"` for an alternative visualization.
 
 <codeblock id="02_04">
 </codeblock>
 
-It seems that the data are structured, which means that there's a link between the two variables *Position.Al.A* and *Political.Party*. In other words, some classes from the *Position.Al.A* variable seem to be associated in a singular way with classes from the *Political.Party* variable.
+It seems that the data are *structured*, which means that there's a link between the two variables *Position.A.Food* and *Political.Party*. In other words, some classes from the *Position.A.Food* variable seem to be associated in a singular way with classes from the *Political.Party* variable.
 
-Concretely, only individuals who vote *Liberal* and *Right* are very favourable to the inclusion of GM raw materials in products to be fed to animals. 
+Concretely, participants of the survey who are very favourable to the inclusion of GM raw materials in products to be fed to animal are voting either *Liberal* or *Right*.
 
 </exercise>
 
 <exercise id="4" title="From contingency table to the notion of independence">
 
+What happens when data are not structured and when there's no apparent link between two categorical variables?
+
 ## The *Stat* corner: breaking a *structure* by resampling
 <br>
 
-The idea is to mix or re-sample the data collected for the *Position.Al.A* variable: this new information is stored in  a new column called *Position.Al.A.break*.
+To understand what is an absence of structure we will disturb the data. The idea is to mix or resample the data collected for the *Position.A.Food* variable: this new information is stored in a new column called *Position.A.Food.Permuted*.
+
+Create a vector of dimension 135 in which the positions of the participants have been permuted.
+
+<codeblock id="02_05a">
+</codeblock>
+
+Create a vector of dimension 135 in which the values of the participants have been permuted.
 
 <codeblock id="02_05">
 </codeblock>
 
+Visualize the relation between the two variables *Position.A.Food.Permuted* and *Political.Party*.
+
 <codeblock id="02_06">
 </codeblock>
 
-In this example, the structure seems broken, which means that there's no particular link between the two variables *Position.Al.A.break* and *Political.Party*. In other words, classes from the *Position.Al.A.break* variable don't seem to be associated in a singular way with classes from the *Political.Party* variable.
+In this example, the structure seems broken, which means that there's no particular link between the two variables *Position.A.Food.Permuted* and *Political.Party*. In other words, classes from the *Position.A.Food.Permuted* variable don't seem to be associated in a singular way with classes from the *Political.Party* variable.
 
-Concretely, for this broken structure, if you are very favourable to the inclusion of GM raw materials in products to be fed to animals, you might vote from "Extreme Left" to "Right" unconditionally.
+Concretely, for this broken structure, if you are very favourable to the inclusion of GM raw materials in products to be fed to animals, you might vote from "Extreme Left" to "Right" unconditionally. This leads us to the notion of independence.
 
 </exercise>
 
@@ -264,7 +277,9 @@ Concretely, for this broken structure, if you are very favourable to the inclusi
 
 Two events are independent if the occurrence of one does not affect the probability of occurrence of the other. More formally, two events A and B are independent if and only if their joint probability equals the product of their probabilities:
 
-<center><img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\mathcal{P}(B)" style="margin-top : 0rem; margin-bottom : 0rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\mathcal{P}(B)." style="margin-top : 0rem; margin-bottom : 0rem"/></center>
+
+In the following part, we are going to compare <img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)" style="margin-top : 1rem; margin-bottom : -0.5rem"/> to  <img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A)\mathcal{P}(B)" style="margin-top : 1rem; margin-bottom : -0.5rem"/>, from what have been observed, *i.e.* from the data.
 
 In the following code, we're using an important function for building contingency table: the `as.data.frame.matrix()` (https://www.r-bloggers.com/2012/03/how-to-convert-contingency-tables-to-data-frames-with-r/).
 

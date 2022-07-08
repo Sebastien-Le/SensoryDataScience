@@ -1,2 +1,5 @@
-#remember levels have been re-ordered
-table(GMO$Position.Al.A, GMO$Political.Party)
+GMO$Position.A.Food <- factor(GMO$Position.A.Food, 
+                              levels=c('Totally opposed', '____', '____', 'Very Favourable'))
+GMO$Political.Party <- factor(GMO$Political.Party, 
+                              levels=c('Extreme left', '____', 'Greens', 'Liberal', '____'))
+table(GMO$Position.A.Food, GMO$____)

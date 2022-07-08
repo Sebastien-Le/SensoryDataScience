@@ -1,6 +1,3 @@
-set.seed(7)
-ind.sample <- sample(1:135)
-ind.sample
-Position.Al.A.break <- GMO$Position.Al.A[ind.sample]
-GMO <- cbind(GMO, Position.Al.A.break)
-table(GMO$Position.Al.A.break, GMO$Political.Party)
+Position.A.Food.Permuted <- GMO$Position.A.Food[ind.permuted]
+GMO <- cbind(GMO, Position.A.Food.Permuted)
+table(GMO$Position.A.Food.Permuted, GMO$Political.Party)
