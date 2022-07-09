@@ -114,7 +114,7 @@ Let's recall that:
 
 <exercise id="2" title="From a data set to a data frame">
 
-Before importing our data set in R, let's recall that R is like a freeway. It's complex, it goes very fast, it can be dangerous when it's not properly used, and as a pedestrian your life expectancy is about 5 to 10 minutes. We all know people that have opened an R session (after struggling for its installation) and that have quitted after 5 minutes, without doing anything but grumbling.
+Before importing our data set in the R software, let's recall that R is like a freeway. It's complex, it goes very fast, it can be dangerous when it's not properly used, and as a pedestrian your life expectancy is about 5 to 10 minutes. We all know people that have opened an R session (after struggling for its installation) and that have quitted after 5 minutes, without doing anything but grumbling.
 
 ## The *R* corner: the survival guide
 <br>
@@ -126,7 +126,7 @@ To survive in this jungle what you need to know is:
 * How to use that piece of information
 * How to import a data set and play with it
 
-R can be found on the CRAN (Comprehensive R Archive Network) at the following address: http://cran.r-project.org/ . Choose the version that corresponds to your operating system (windows, mac or Linux), then download it. To install it you can just use the default options and say "yes" to everything. 
+R can be found on the CRAN (Comprehensive R Archive Network) at the following address: http://cran.r-project.org/ . Choose the version that corresponds to your operating system (Windows, mac or Linux), then download it. To install it you can just use the default options and say "yes" to everything. 
 
 Once R is installed, open it, and please read carefully the message that appears in your R window, and in particular its end. As written,
 
@@ -136,21 +136,20 @@ Type ’demo()’ for some demos, ’help()’ for on-line help, or
 Type ’q()’ to quit R.
 ```
 
-These are your first R functions: `demo()`, `help()`, `help.start()` and `q()`. 
+these are your first R functions: `demo()`, `help()`, `help.start()` and `q()`. 
 
-If you run the following code
+Run the `demo()` without specifying any arguments.
 
-```{r}
-demo()
-```
+<codeblock id="01_58a">
+</codeblock>
 
-you will see that R will suggest you several demos. Just pick one of them and have a look at what happens.
+R suggests you several demos. Choose `graphics` for instance, and have a look at what happens.
 
 <codeblock id="01_58">
 To do so, apply the demo() function to the instance <i>graphics</i>.
 </codeblock>
 
-As you can see, a function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, all you have to do is to write in the console the name of the function preceded by a question mark, as follows.
+A function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, write in the console the name of the function preceded by a question mark, as follows:
 
 ```{r}
 ?read.csv
@@ -170,7 +169,7 @@ Actually, this line of code will produce exactly the same result as the followin
 <codeblock id="01_17">
 </codeblock>
 
-In this one, we have introduced the notion of **argument**: in mathematics, a variable associated with a function and determining the value of the function.
+In this one, we have introduced the notion of *argument*: in mathematics, a variable associated with a function and determining the value of the function.
 
 ## The *R* corner: the *read.table()* function
 <br>
@@ -369,6 +368,10 @@ To the previous graphical output, add a line corresponding to the mean with the 
 By definition, a distribution is "the way in which something is shared out among a group or spread over an area". To some extent, a boxplot is a representation of a distribution. In our situation we want to understand how the scores of given sensory attribute are distributed; we also want to see if this distribution depends on some experimental factors (the products or the panelists, for instance).
 
 For a better understanding of the notion of distribution, let's display the values that lie between 0 and 1 (included), and let's count them. To do so, we first have to select them, then to get the length (or dimension) of the vector with the scores selected.
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+
+<br>
 
 ## The *Algo* corner: the notion of logical operators
 <br>

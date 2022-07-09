@@ -1,2 +1,1 @@
-plot(res.CA, invisible = "col")
-plot(res.CA, invisible = "row")
+plot.CA(res.CA, invisible = "row", title = "Representation of the opininons")

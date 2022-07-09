@@ -284,7 +284,7 @@ Visualize the relation between the two variables *Position.A.Food.Permuted* and 
 
 In this example, the structure seems broken, which means that there's no particular link between the two variables *Position.A.Food.Permuted* and *Political.Party*. In other words, classes from the *Position.A.Food.Permuted* variable don't seem to be associated in a singular way with classes from the *Political.Party* variable.
 
-Concretely, for this broken structure, if you are very favourable to the inclusion of GM raw materials in products to be fed to animals, you might vote from "Extreme Left" to "Right" unconditionally. This leads us to the notion of independence.
+Concretely, for this broken structure, if you are very favourable to the inclusion of GM raw materials in products to be fed to animals, you might vote from "Extreme left" to "Right" unconditionally. This leads us to the notion of independence.
 
 Two events are independent if the occurrence of one does not affect the probability of occurrence of the other. More formally, two events A and B are independent if and only if their joint probability equals the product of their probabilities:
 
@@ -383,15 +383,7 @@ Calculate the matrix that corresponds to this new formulation of the independenc
 
 For this matrix, positive numbers correspond to a positive dependency (association) between two categories, as illustrated by the number 1.95 for the two categories *Right* and *Very Favourable*; similarly, negative numbers correspond to a negative dependency (incompatibility) between two categories, as illustrated by the number -1 for the two categories *Extreme left* and *Very Favourable*.
 
-## The *R* corner: describing automatically a contingency table
-<br>
-
-The `descfreq()` function of the `FactoMineR` package is useful to describe the rows and the columns of a contingency table: this function provides an automatic decoding of our deviation matrix.
-
-<codeblock id="02_10b">  
-</codeblock>
-
-The deviation matrix above defines multivariate profiles as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> for the rows, and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/> for the columns. These profiles can be directly interpreted in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns. In our example, we expect the two categories *Extreme left* and *Left* to be quite close and the two categories *Extreme left* and *Right* to be quite distant.
+The deviation matrix defines multivariate profiles as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> for the rows, and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/> for the columns. These profiles can be directly interpreted in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns. In our example, we expect the two categories *Extreme left* and *Left* to be quite close and the two categories *Extreme left* and *Right* to be quite distant.
 
 Naturally, if you had to compare two political parties in terms of difference from the independence model, you would calculate a distance based on the differences regarding the levels of the variable *Position.A.Food*. As the different levels of *Position.A.Food* have a different weight relative to each other, you would naturally take that information into account, and calculate a distance weighted by the relative importance of each level. In other words, we're going to consider the following distance between two political parties <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : -1rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?i'" style="margin-top : -1rem; margin-bottom : 0rem"/>:
 
@@ -424,11 +416,13 @@ Visualize this distance matrix with the `image()` function which creates a grid 
 With a distance and a system of masses, we can now focus on the very important concept of inertia. By definition, the inertia of our Political parties is obtained by the following calculation:
 
 <center>
-<img src="https://latex.codecogs.com/svg.image?I(N_{I}) = \sum\limits_{i\in I} f_{i\cdot}\times d^2(i,O)" style="margin-top : 0rem; margin-bottom : 0rem"/>
+<img src="https://latex.codecogs.com/svg.image?I(N_{I}) = \sum\limits_{i\in I} f_{i\cdot}\times d^2(i,O)," style="margin-top : 0rem; margin-bottom : 0rem"/>
 <center>
 
-<codeblock id="02_13">
-</codeblock>
+where <img src="https://latex.codecogs.com/svg.image?I(N_{I})" style="margin-top : 0rem; margin-bottom : -0.3rem"/> is the inertia of the system of rows, <img src="https://latex.codecogs.com/svg.image?N_{I}" style="margin-top : 0rem; margin-bottom : -0.3rem"/> denotes the scatter plot of the rows
+in the <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : 0rem; margin-bottom : 0rem"/> space, and <img src="https://latex.codecogs.com/svg.image?O" style="margin-top : 0rem; margin-bottom : 0rem"/> denotes the center of gravity of <img src="https://latex.codecogs.com/svg.image?N_{I}" style="margin-top : 0rem; margin-bottom : -0.2rem"/>. One can easily show that the inertia is equal to the Chi-square distance divided by the number of individuals.
+
+Hence the name of the distance between two row profiles which is called the Chi-square distance.
 
 </exercise>
 
@@ -438,14 +432,24 @@ The multidimensional analysis of the deviation matrix (or discrepancy matrix) co
 
 These dimensions are obtained by applying the so-called Correspondence Analysis (CA) on the contingency table. Correspondence Analysis is the multidimensional method dedicated to the analysis of the dependence between two categorical variables, from the point of view of their categories. In other words, CA is dedicated to the analysis of the correspondence between the categories of one categorical variable and the categories of another one.
 
-To apply this method, use the `CA()` function of the `FactoMineR` package, then use the `plot.CA()` function in order to represent the rows of data set.
-
-
+To apply this method, use the `CA()` function of the `FactoMineR` package, then use the `plot.CA()` function in order to represent the rows of the contingency table.
 
 <codeblock id="02_14">
 </codeblock>
 
+Use the `plot.CA()` function in order to represent the columns of the contingency table.
+
 <codeblock id="02_15">
+</codeblock>
+
+Have a look at the numerical indicators.
+
+<codeblock id="02_15b">
+</codeblock>
+
+Display the eigenvalues, sum them and multiply the value of the sum by the number of individuals.
+
+<codeblock id="02_15c">
 </codeblock>
 
 </exercise>

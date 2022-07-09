@@ -1,2 +1,2 @@
-GMO <- read.csv("data/gmo.csv", sep=';', header = TRUE)
+GMO <- read.csv("data/gmo.csv", sep = ';', header = TRUE)
 summary(GMO)
