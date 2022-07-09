@@ -1,2 +1,2 @@
-res_one_way <- lm(Floral~Product, data = experts)
+res_one_way <- lm(Floral~____, data =____)
 anova(res_one_way)

@@ -483,13 +483,13 @@ Dispersion is (one of) **the** most important concept in statistics. It can be d
 
 Let's say we want to visualize 30% of the values "around" the average (arbitrarily), how could we do that? 
 
-In practice, we want to find `x1` and `x2` such as the mean lies between `x1` and `x2`, and 
+In practice, we want to find <img src="https://latex.codecogs.com/svg.image?x_1" style="margin-top : 0rem; margin-bottom : -0.2rem"/> and <img src="https://latex.codecogs.com/svg.image?x_2" style="margin-top : 0rem; margin-bottom : -0.2rem"/> such as the mean lies between <img src="https://latex.codecogs.com/svg.image?x_1" style="margin-top : 0rem; margin-bottom : -0.2rem"/> and <img src="https://latex.codecogs.com/svg.image?x_2" style="margin-top : 0rem; margin-bottom : -0.2rem; ; margin-right : 0.2rem"/>, and 
 
-<center><img src="https://latex.codecogs.com/svg.image?\mathbb{P}[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathbb{P}[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3,"/></center>
 
 where <img src="https://latex.codecogs.com/svg.image?F_X" style="margin-bottom : -0.25rem"/> is the so-called **cumulative function**, and <img src="https://latex.codecogs.com/svg.image?f_X" style="margin-bottom : -0.25rem"/> the density function of ![formula](https://render.githubusercontent.com/render/math?math=X), a continuous random variable associated with a sensory attribute.
 
-Let's first identify `i_mean` the index (position) of the mean of the *Vanilla* attribute in the vector `d$x`. To do so we are going to use the `which.max()` function. Then, let's calculate `pcum1` (*resp.* `pcum2`), which is the value of the cumulative function applied on `d$x[i_mean]` minus (*resp.* plus) 0.15. By definition, `x_1` (*resp.* `x2`) is the index of the value in the vector of the values from the cumulative function, such as the cumulative function applied on this value equals `pcum1`. In other words, the value of the cumulative function on `x_1` is equal tothe value of the cumulative function on the mean minus 0.15.
+Let's first identify `i_mean` the index (position) of the mean of the *Vanilla* attribute in the vector `d$x`. To do so, we use the `which.max()` function. Then, let's calculate `pcum1` (*resp.* `pcum2`), which is the value of the cumulative function applied on `d$x[i_mean]` minus (*resp.* plus) 0.15. By definition, `x_1` (*resp.* `x2`) is the index of the value in the vector of the values from the cumulative function, such as the cumulative function applied on this value equals `pcum1`. In other words, the value of the cumulative function on `x_1` is equal tothe value of the cumulative function on the mean minus 0.15.
 
 <codeblock id="01_33">
 </codeblock>
@@ -774,36 +774,38 @@ In statistics, statistical hypothesis testing is fundamental. Two hypotheses are
 
 </exercise>
 
-
-
-
-
 <exercise id="8" title="From the comparison of two means to the notion of model">
 
-The concept of model is very important. A model, in its usual sense, can be seen as a simplified description of the reality. When you test the difference in means between the two products *Angel* and *J'adore ET*, you implicitly suggest that the floral character of a perfume depends on the perfume. This model can be written the following way: `Floral~Products`. From a perceptual point of view, this model is really too simplistic, and in reality, q simple but much more realistic model is to consider the assessor as a factor of variability. In other words, you want to evaluate the following model: `Floral~Products+Panelist`.
+The concept of model is very important. A model, in its usual sense, can be seen as a simplified description of the reality. When you test the difference in means between the two products *Angel* and *J'adore ET*, you implicitly suggest that the floral character of a perfume depends on the perfume. This model can be written the following way: `Floral~Products`. From a perceptual point of view, this model is really too simplistic, and in reality, a simple but much more realistic model is to consider the assessor as a factor of variability. In other words, you want to evaluate the following model: `Floral~Products+Panelist`.
 
 For educational purposes, we will first look at the first model but in practice it is the second model that should be considered.
+
+## The *Stat* corner: the decomposition of the total variance
+<br>
 
 Let's now use the following notations: 
 
 * <img src="https://latex.codecogs.com/svg.image?y_{ij}" style="margin-bottom : -0.25rem"/> is the value taken for the <img src="https://latex.codecogs.com/svg.image?j^{th}" style="margin-bottom : -0.25rem"/> value associated with the <img src="https://latex.codecogs.com/svg.image?i^{th}"/> perfume
 * <img src="https://latex.codecogs.com/svg.image?y_{i.}" style="margin-bottom : -0.25rem"/> is the average over the values for the <img src="https://latex.codecogs.com/svg.image?i^{th}"/> perfume
 * <img src="https://latex.codecogs.com/svg.image?y_{..}" style="margin-bottom : -0.25rem"/> is the average over the values and over the perfumes
-* <img src="https://latex.codecogs.com/svg.image?n_{i}"/> is sample size for the <img src="https://latex.codecogs.com/svg.image?i^{th}"/> perfume
+* <img src="https://latex.codecogs.com/svg.image?n_{i}" style="margin-bottom : -0.15rem"/> is the sample size for the <img src="https://latex.codecogs.com/svg.image?i^{th}"/> perfume
 
 The following formula is very important as it represents a very important concept, the decomposition of the total variance into two parts, the **within** variance and the **between** variance:
 
-<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{..})^2=\sum_{i=1}^In_i(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{i.})^2," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{..})^2=\sum_{i=1}^In_i(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{i.})^2," style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
-<center><img src="https://latex.codecogs.com/svg.image?SS_T=SS_{B}+SS_{W}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/><center>
+<center><img src="https://latex.codecogs.com/svg.image?SS_T=SS_{B}+SS_{W}." style="margin-top : 0rem; margin-bottom : 1.25rem"/><center>
 
-When <img src="https://latex.codecogs.com/svg.image?n_i=r"/> (which means that you have the same number of observations _per_ perfume; the design is called a _balanced design_) the decomposition of the total variance can be written:
+When <img src="https://latex.codecogs.com/svg.image?n_i=r" style="margin-top : 0rem; margin-bottom : -0.2rem; margin-right : 0.2rem"/> (which means that you have the same number of observations *per* perfume; the design is called a *balanced design*) the decomposition of the total variance can be written:
 
-<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{..})^2=\sum_{i=1}^Ir(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{i.})^2." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{..})^2=\sum_{i=1}^Ir(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{r}(y_{ij}-y_{i.})^2." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
-Another very important concept is the _determination coefficient_ which corresponds to the proportion of variability that is due to your factor of interest (in our example, the *Product* factor). In other words, in that *total* variability amongst the values, it is the part due to the differences between the perfumes (*i.e.*, the *Product* factor, also called the _Product_ effect):
+Another very important concept is the _determination coefficient_ which corresponds to the proportion of variability that is due to your factor of interest (in our example, the *Product* factor). In other words, in that *total* variability among the values, it is the part due to the differences between the perfumes (*i.e.*, the *Product* factor, also called the _Product_ effect):
 
-<center><img src="https://latex.codecogs.com/svg.image?R^2=\frac{SS_B}{SS_T}=1-\frac{SS_W}{SS_T}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?R^2=\frac{SS_B}{SS_T}=1-\frac{SS_W}{SS_T}." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
 
 In our problem, we want to test whether there is an effect of our factor of interest or not. We are confronted to an hypothesis test (again):
 
@@ -812,13 +814,13 @@ In our problem, we want to test whether there is an effect of our factor of inte
 
 Under the null hypothesis, when the factor has no effect, we have the following important result: 
 
-<center><img src="https://latex.codecogs.com/svg.image?\frac{\frac{SS_B}{I-1}}{\frac{SS_W}{n-I}}=\frac{MS_F}{MS_R}\sim F^{I-1}_{n-I}" style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\frac{SS_B}{I-1}}{\frac{SS_W}{n-I}}=\frac{MS_F}{MS_R}\sim F^{I-1}_{n-I}" style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 The numerator is the Mean Square of the factor, while the denominator is the Mean Square of the residual. The distribution under the null hypothesis is an *F* distribution with <img src="https://latex.codecogs.com/svg.image?I-1"/> degrees of freedom on the numerator and <img src="https://latex.codecogs.com/svg.image?n-I"/> degrees of freedom on the denominator.
 
 In other words, if you want to test the effect of a factor, you have to calculate that kind of test statistic (the ratio of mean squares). For each test, you will get a *p-value*.
 
-These results can be obtained in two steps. First, we **fit** the model with the very important `lm()` function: the output of this function is what is called a *fitted model object*. Then, we run the `anova()` function on the *fitted model object* to compute an analysis of variance table: this table is crucial as it summarizes how the total variance is decomposed according to your model.
+These results can be obtained in two steps. First, we *fit* the model with the very important `lm()` function: the output of this function is what is called a *fitted model object*. Then, we run the `anova()` function on the *fitted model object* to compute an analysis of variance table: this table is crucial as it summarizes how the total variance is decomposed according to your model.
 
 <codeblock id="01_49">
 </codeblock>
@@ -827,9 +829,6 @@ These results can be obtained in two steps. First, we **fit** the model with the
 </codeblock>
 
 </exercise>
-
-
-
 
 
 <exercise id="9" title="From the notion of model to the analysis of variance model">
