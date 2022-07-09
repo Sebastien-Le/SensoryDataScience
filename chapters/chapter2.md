@@ -339,6 +339,32 @@ Choose the proper data to visualize the third situation.
 
 Obviously, the artifactual situation is not far from the independence situation. This result was expected as data were permuted which leads to a lack of structure in the data. The observed situation is quite far from both theoretical and artifactual situations. This result was expected due to the strong structure in the data, particularly between the two variables *Position.A.Food* and *Political.Party*.
 
+## The *Stat* corner: the *Chi-square* test
+<br>
+
+The notion of deviation to the independence situation is the core of the Chi-square test. This test is designed to evaluate the dependence between two categorical variables. It calculates a distance between what has been observed and the situation of independence.
+
+Use the `chisq.test()` function to test whether the two categorical variables *Political.Party* and *Position.A.Food* are independent.
+
+<codeblock id="02_13">
+</codeblock>
+
+What is the value of the Chi-square distance between these two variables?
+
+<choice id=1>
+<opt text="0.0002428">
+Try again
+</opt>
+<opt text="36.777" correct="true">
+Good job
+</opt>
+<opt text="12">
+Try again
+</opt>
+</choice>
+
+The Chi-square distance represents the distance from the independence situation. The *p-value* is the probability to observe such a distance (in our case such a *high* distance) under the hypothesis of independence. In our case, observing such a distance is really really rare when the data are independent: in other words, it seems that data are really dependent.
+
 </exercise>
 
 <exercise id="6" title="From the notion of deviation to the notion of distance">
@@ -357,7 +383,15 @@ Calculate the matrix that corresponds to this new formulation of the independenc
 
 For this matrix, positive numbers correspond to a positive dependency (association) between two categories, as illustrated by the number 1.95 for the two categories *Right* and *Very Favourable*; similarly, negative numbers correspond to a negative dependency (incompatibility) between two categories, as illustrated by the number -1 for the two categories *Extreme left* and *Very Favourable*.
 
-This matrix defines multivariate profiles as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> for the rows, and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/> for the columns. These profiles can be directly interpreted in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns. In our example, we expect the two categories *Extreme left* and *Left* to be quite close and the two categories *Extreme left* and *Right* to be quite distant.
+## The *R* corner: describing automatically a contingency table
+<br>
+
+The `descfreq()` function of the `FactoMineR` package is useful to describe the rows and the columns of a contingency table: this function provides an automatic decoding of our deviation matrix.
+
+<codeblock id="02_10b">  
+</codeblock>
+
+The deviation matrix above defines multivariate profiles as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> for the rows, and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/> for the columns. These profiles can be directly interpreted in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns. In our example, we expect the two categories *Extreme left* and *Left* to be quite close and the two categories *Extreme left* and *Right* to be quite distant.
 
 Naturally, if you had to compare two political parties in terms of difference from the independence model, you would calculate a distance based on the differences regarding the levels of the variable *Position.A.Food*. As the different levels of *Position.A.Food* have a different weight relative to each other, you would naturally take that information into account, and calculate a distance weighted by the relative importance of each level. In other words, we're going to consider the following distance between two political parties <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : -1rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?i'" style="margin-top : -1rem; margin-bottom : 0rem"/>:
 
@@ -376,7 +410,9 @@ Calculate the distance matrix between row-profiles, *i.e.* the political parties
 <codeblock id="02_11">
 </codeblock>
 
-Visualize this distance matrix.
+As expected, this distance matrix is diagonal; as expected also, the categories *Extreme left* and *Left* are close from each other, and are both far from the category *Right*.
+
+Visualize this distance matrix with the `image()` function which creates a grid of colored or gray-scale rectangles with colors corresponding to the values in the matrix.
 
 <codeblock id="02_12">
 </codeblock>

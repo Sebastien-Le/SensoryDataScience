@@ -1,0 +1,1 @@
+chisq.test(table(GMO$Political.Party, GMO$Position.A.Food))
