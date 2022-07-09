@@ -881,7 +881,7 @@ and
 ## Exercise
 <br>
 
-Load the **FactoMineR** package with the `library()` function.
+Load the `FactoMineR` package with the `library()` function.
 
 <codeblock id="01_57">
 </codeblock>
@@ -891,7 +891,7 @@ We subset the dataframe *experts*:
 <codeblock id="01_61">
 </codeblock>
 
-The `AovSum()` function of the **FactoMineR** package estimates the coefficients of the ANOVA model without any prior information on the products, i.e., by considering that <img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0." style="margin-bottom : -1.5rem"/>. Take a look at the `AovSum()` function of the **FactoMineR** package :
+The `AovSum()` function of the `FactoMineR` package estimates the coefficients of the ANOVA model without any prior information on the products, i.e., by considering that <img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0." style="margin-bottom : -1.5rem"/>. Take a look at the `AovSum()` function of the `FactoMineR` package :
 ```{r out}
 Analysis of variance with the contrasts sum (the sum of the coefficients is 0)
 

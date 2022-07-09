@@ -199,7 +199,7 @@ To represent the distribution in terms of percentages, use the very important fu
 ## The *R* corner: *ggplot2* an alternative to base R
 <br>
 
-Let's represent a categorical variable with the *ggplot2* package. While the `barplot()` uses a vector containing the distribution information, the `ggplot()`  function requires to create a data frame. 
+Let's represent a categorical variable with the `ggplot2` package. While the `barplot()` uses a vector containing the distribution information, the `ggplot()`  function requires to create a data frame. 
 
 <codeblock id="02_035">
 </codeblock>
@@ -225,7 +225,22 @@ To answer this question cross these two variables and build a *contingency table
 <codeblock id="02_03">
 </codeblock>
 
-Those people who are favourable to the inclusion of GM raw materials in products to be fed to animals, how are they distributed within the political parties? To answer this question, set the `fill` argument to the name of the variable of interest.
+## The *Stat* corner: some very important notations
+<br>
+
+A contingency table is a very important object in statistics. It is interesting to present it in a formal way by introducing some notations. Let <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : 0rem; margin-bottom : 0rem"/> be the index of the rows, <img src="https://latex.codecogs.com/svg.image?j" style="margin-top : rem; margin-bottom : -0.4rem"/> be the index of the columns: <img src="https://latex.codecogs.com/svg.image?n_{ij}" style="margin-top : 0rem; margin-bottom : -0.4rem"/> is the contingent of individuals that belong to both categories <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : 0rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?j" style="margin-top : 0rem; margin-bottom : -0.4rem"/>; <img src="https://latex.codecogs.com/svg.image?n" style="margin-top : 0rem; margin-bottom : 0rem"/> is the total number of individuals, 
+
+<center>
+<img src="https://latex.codecogs.com/svg.image?n = \sum_i n_{i.} = \sum_j n_{.j} = \sum_i \sum_j n_{ij}" style="margin-top : 0rem; margin-bottom : -1.5rem"/>,
+<center>
+
+where <img src="https://latex.codecogs.com/svg.image?n_{i.}" style="margin-top : 1rem; margin-bottom : -0.2rem"/> is the contingent of individuals in the category <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : 1rem; margin-bottom : 0rem"/>.
+
+<br>
+
+Now let's ask ourselves an important practical question: those people who are favourable to the inclusion of GM raw materials in products to be fed to animals, how are they distributed within the political parties? 
+
+To answer this question, set the `fill` argument to the name of the variable of interest.
 
 <codeblock id="02_04a">
 </codeblock>
@@ -328,31 +343,53 @@ Obviously, the artifactual situation is not far from the independence situation.
 
 <exercise id="6" title="From the notion of deviation to the notion of distance">
 
-This drift or deviation from the independence can be formalized starting from the definition of independence. The equation <img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}" style="margin-top : 1rem; margin-bottom : -0.5rem"/> can also be written:
+This drift or deviation from the independence can be formalized in relation to a natural comparison point, starting from the definition of independence. The equation <img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}" style="margin-top : 1rem; margin-bottom : -0.5rem"/> can also be written:
 
 
 <center><img src="https://latex.codecogs.com/svg.image?\dfrac{f_{ij}}{f_{i\cdot}\times f_{\cdot j}}-1=0." style="margin-top : -1rem; margin-bottom : 0rem"/><center>
 
-Calculate the matrix that corresponds to this new formulation of the independence.
+In the following, we will see how to interpret this value in relation to its sign.
+
+Calculate the matrix that corresponds to this new formulation of the independence model.
 
 <codeblock id="02_10">  
 </codeblock>
 
-For this matrix, positive numbers correspond to a positive dependency (association) between two categories, as illustrated by the number 1.95 for the two categories *Right* and *Very Favourable*.
+For this matrix, positive numbers correspond to a positive dependency (association) between two categories, as illustrated by the number 1.95 for the two categories *Right* and *Very Favourable*; similarly, negative numbers correspond to a negative dependency (incompatibility) between two categories, as illustrated by the number -1 for the two categories *Extreme left* and *Very Favourable*.
 
-For this matrix, negative numbers correspond to a negative dependency (incompatibility) between two categories, as illustrated by the number -1 for the two categories *Extreme left* and *Very Favourable*.
+This matrix defines multivariate profiles as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> for the rows, and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/> for the columns. These profiles can be directly interpreted in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns. In our example, we expect the two categories *Extreme left* and *Left* to be quite close and the two categories *Extreme left* and *Right* to be quite distant.
 
-These multivariate profiles (as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/>) can be directly interpreted in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns.
+Naturally, if you had to compare two political parties in terms of difference from the independence model, you would calculate a distance based on the differences regarding the levels of the variable *Position.A.Food*. As the different levels of *Position.A.Food* have a different weight relative to each other, you would naturally take that information into account, and calculate a distance weighted by the relative importance of each level. In other words, we're going to consider the following distance between two political parties <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : -1rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?i'" style="margin-top : -1rem; margin-bottom : 0rem"/>:
+
+<center>
+<img src="https://latex.codecogs.com/svg.image?d^2(i,i') = \sum\limits_{j\in J}f_{\cdot j}((\dfrac{f_{ij}}{f_{i\cdot}\times f_{\cdot j}})-(\dfrac{f_{i'j}}{f_{i'\cdot}\times f_{\cdot j}}))^2" style="margin-top : -1rem; margin-bottom : 0rem"/>
+<center>
+
+Actually, it's quite easy to demonstrate that this distance is equivalent to:
+
+<center>
+<img src="https://latex.codecogs.com/svg.image?d^2(i,i') = \sum\limits_{j\in J}\dfrac{n}{n_{\cdot j}}(\dfrac{n_{ij}}{n_{i\cdot}}-\dfrac{n_{i'j}}{n_{i'\cdot}})^2" style="margin-top : 0rem; margin-bottom : 0rem"/>
+<center>
+
+Calculate the distance matrix between row-profiles, *i.e.* the political parties.
 
 <codeblock id="02_11">
+</codeblock>
+
+Visualize this distance matrix.
+
+<codeblock id="02_12">
 </codeblock>
 
 </exercise>
 
 <exercise id="7" title="From the notion of distance to the notion of inertia">
 
-<codeblock id="02_12">
-</codeblock>
+With a distance and a system of masses, we can now focus on the very important concept of inertia. By definition, the inertia of our Political parties is obtained by the following calculation:
+
+<center>
+<img src="https://latex.codecogs.com/svg.image?I(N_{I}) = \sum\limits_{i\in I} f_{i\cdot}\times d^2(i,O)" style="margin-top : 0rem; margin-bottom : 0rem"/>
+<center>
 
 <codeblock id="02_13">
 </codeblock>
@@ -360,6 +397,14 @@ These multivariate profiles (as vectors of <img src="https://latex.codecogs.com/
 </exercise>
 
 <exercise id="8" title="From the notion of inertia to Correspondence Analysis">
+
+The multidimensional analysis of the deviation matrix (or discrepancy matrix) consists in finding the dimensions that maximize the inertia of the orthogonal projection of the rows on the dimensions. In other words, these are the dimensions for which the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the most dependent : these are the dimensions for which the correspondence between the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the highest.
+
+These dimensions are obtained by applying the so-called Correspondence Analysis (CA) on the contingency table. Correspondence Analysis is the multidimensional method dedicated to the analysis of the dependence between two categorical variables, from the point of view of their categories. In other words, CA is dedicated to the analysis of the correspondence between the categories of one categorical variable and the categories of another one.
+
+To apply this method, use the `CA()` function of the `FactoMineR` package, then use the `plot.CA()` function in order to represent the rows of data set.
+
+
 
 <codeblock id="02_14">
 </codeblock>
