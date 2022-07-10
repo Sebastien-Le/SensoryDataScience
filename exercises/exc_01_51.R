@@ -1,2 +1,2 @@
 library(SensoMineR)
-res.decat <- decat(data =____, formul = "~____+____", firstvar = 5, graph = FALSE)
+res.decat <- decat(____, formul = "~____+____", firstvar = 3, graph = FALSE)

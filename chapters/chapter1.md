@@ -968,12 +968,12 @@ Explore the diffent outputs. What do you think?
 <codeblock id="01_67">
 </codeblock>
 
-## The *R* Corner : the *decat()* function
+## The *R* Corner : the *decat()* function...a must have!
 <br>
 
 The `decat()` function automatizes the analysis of QDA data. It provides the sensory attributes that characterize the product space; it provides also a description of each product, just like an identity card.
 
-Apply the `decat()` function and save the outputs in an object named *res.decat*; literally *res.decat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data. For this function, specify properly the model: the main factor of interest, the product factor, should be written first; don't forget the judge effect. The `firstvar` argument is the position of the first sensory attributes.
+Apply the `decat()` function and save the outputs in an object named *res.decat*; literally *res.decat* is equal to the outputs produced by the `decat()` function when applied to the *experts_subset* data. For this function, specify properly the model: the main factor of interest, the product factor, should be written first; don't forget the judge effect. The `firstvar` argument is the position of the first sensory attributes.
 
 <codeblock id="01_51">
 </codeblock>
@@ -1008,7 +1008,17 @@ What have we done so far? and, what should you know? You should know how to inst
 
 </exercise>
 
-<exercise id="10" title="From measure to distance">
+<exercise id="10" title="From the analysis of variance to the notion of distance">
+
+The analysis of variance model is really important as it provides a way to understand the impact of the product effect on each sensory attribute, and at the same time a measure for each product and each sensory attribute, thanks to the estimation of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.35rem"/>
+
+As said previously, the `decat()` function is very important as it automatizes the analysis if QDA data. The principle of this function is simple: perform an analysis of variance by attribute and store the results of these analyses in a list. Among the elements of the list, `adjmean` is of utmost importance: this output gathers the adjusted means of the products based on the estimation of of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.35rem"/>
+
+Display this result in the console.
+
+<codeblock id="01_551">
+</codeblock>
+
 </exercise>
 
 <exercise id="11" title="From distance to inertia">
