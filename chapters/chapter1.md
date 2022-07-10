@@ -1012,16 +1012,20 @@ What have we done so far? and, what should you know? You should know how to inst
 
 The analysis of variance model is really important as it provides a way to understand the impact of the product effect on each sensory attribute, and at the same time a measure for each product and each sensory attribute, thanks to the estimation of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.35rem"/>
 
-As said previously, the `decat()` function is very important as it automatizes the analysis if QDA data. The principle of this function is simple: perform an analysis of variance by attribute and store the results of these analyses in a list. Among the elements of the list, `adjmean` is of utmost importance: this output gathers the adjusted means of the products based on the estimation of of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.35rem"/>
+As said previously, the `decat()` function is very important as it automatizes the analysis if QDA data. The principle of this function is simple: perform an analysis of variance by attribute and store the results of these analyses in a list. Among the elements of the list, `adjmean` is of utmost importance as it gathers the adjusted means of the products based on the estimation of of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.35rem"/>
 
 Display this result in the console.
 
 <codeblock id="01_551">
 </codeblock>
 
+This array gathers the estimation of the adjusted means for each product (row) and for each sensory attribute (column). Each product can be seen as a vector of numbers (similarly each sensory attribute can be seen as a vector of numbers): this vector can be interpreted as some kind of average sensory profile.
+
+Hence, it is possible to calculate a distance between two products, taking into account all the sensory attributes, in order to see which products are close, and which products are distant in terms of sensory profiles.
+
 </exercise>
 
-<exercise id="11" title="From distance to inertia">
+<exercise id="11" title="From the notion of distance to the notion of inertia">
 </exercise>
 
 <exercise id="12" title="From the notion of inertia to its decomposition">
