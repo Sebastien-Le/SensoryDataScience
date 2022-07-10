@@ -48,12 +48,12 @@ body {
   cursor: pointer;
   font-weight: normal;
   padding: 15px;
-  background:#61B4DD;
+  background: #f8ac00;
   border-radius:15px;
 }
 .accordion label:hover,
 .accordion label:focus {
-  background: #4E92B2;
+  background: #e49e00;
 }
 
 
@@ -837,40 +837,50 @@ This model assumes that you can associate one mean _per_ perfume. For a given pe
 
 The model can be written the following way:
 
-<center><img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu_i + \epsilon_{ij}," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu_i + \epsilon_{ij}," style="margin-top : 0rem; margin-bottom : 0rem"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.25rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.25rem"/>. 
+where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.4rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.4rem"/>. 
 
 This model can also be written the following way: 
 
-<center><img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu + \alpha_i + \epsilon_{ij}," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/>.</center>
+<center><img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu + \alpha_i + \epsilon_{ij}," style="margin-top : 0rem; margin-bottom : 0rem"/>.</center>
 
-where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.25rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.25rem"/>. 
+where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.4rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.4rem"/>. 
 
 In order to estimate the parameters of the model, we use the following constraint: 
 
-<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0." style="margin-top : 0rem; margin-bottom : 0rem"/></center>
 
-This constraint is particularly interesting as implicitly you compare the effect of the qualitative factor of interest with respect to the mean <img src="https://latex.codecogs.com/svg.image?\mu"/>.
+This constraint is particularly interesting as implicitly you compare the effect of the qualitative factor of interest with respect to the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-top : 0rem; margin-bottom : -0.25rem"/>.
 
 The problem of estimation of the parameters consists in estimating <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i" style="margin-bottom : -0.25rem"/> such as
 
-<center><img src="https://latex.codecogs.com/svg.image?y_{ij}= \hat{\mu} + \hat{\alpha}_i + \epsilon_{ij}," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?y_{ij}= \hat{\mu} + \hat{\alpha}_i + \epsilon_{ij}," style="margin-top : 0rem; margin-bottom : 0rem"/></center>
 
 that minimize <img src="https://latex.codecogs.com/svg.image?\sum e^2_{ij}" style="margin-bottom : -0.75rem"/>. Hence the name of the method used to get these estimations and which is called the least squares method.
 
-In the case where the number of observations is the same from one condition to the other (here, from one perfume to the other), the estimations of the parameters with the least squares method are very simple and natural:
 
-1. <img src="https://latex.codecogs.com/svg.image?\hat{\mu}=y_{..}" style="margin-bottom : -0.25rem"/>
-2. <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i = y_{i.}-y_{..}" style="margin-bottom : -0.25rem"/>
+<HTML>
+<section class="accordion">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">At second reading: when the number of observations is the same...</label>
+  </h2>
+  <div class="content">
+    <p>In the case where the number of observations is the same from one condition to the other (here, from one perfume to the other), the estimations of the parameters with the least squares method are very simple and natural:
 
-Of course, as mentioned previously, as we want to see whether there's an effect of the factor on a continuous variable <img src="https://latex.codecogs.com/svg.image?Y"/> and for which modality(ies) of the factor there's a difference with respect to the mean, we're going to test <img src="https://latex.codecogs.com/svg.image?\alpha_i" style="margin-bottom : -0.25rem"/> with respect to 0. As always, to assess the veracity of an hypothesis, in our case whether <img src="https://latex.codecogs.com/svg.image?\alpha_i=0" style="margin-bottom : -0.25rem"/> or not, for a given <img src="https://latex.codecogs.com/svg.image?i"/>, we need the variance or the test statistic <img src="https://latex.codecogs.com/svg.image?\sigma^2_{\hat{\alpha}_i}" style="margin-bottom : -0.25rem"/>. When the design is balanced:
+* <img src="https://latex.codecogs.com/svg.image?\hat{\mu}=y_{..}" style="margin-bottom : -0.25rem"/>
+* <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i = y_{i.}-y_{..}" style="margin-bottom : -0.25rem"/>
 
-<center><img src="https://latex.codecogs.com/svg.image?Var(\hat{\alpha}_i)=\sigma^2_{\hat{\alpha}_i} = \frac{I-1}{I}\frac{\sigma^2}{r}."  style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+Of course, as mentioned previously, as we want to see whether there's an effect of the factor on a continuous variable <img src="https://latex.codecogs.com/svg.image?Y"/> and for which modality(ies) of the factor there's a difference with respect to the mean, we're going to test <img src="https://latex.codecogs.com/svg.image?\alpha_i" style="margin-bottom : -0.25rem"/> with respect to 0. As always, to assess the veracity of an hypothesis, in our case whether <img src="https://latex.codecogs.com/svg.image?\alpha_i=0" style="margin-bottom : -0.25rem"/> or not, for a given <img src="https://latex.codecogs.com/svg.image?i"/>, we need the variance or the test statistic <img src="https://latex.codecogs.com/svg.image?\sigma^2_{\hat{\alpha}_i}." style="margin-bottom : -0.55rem"/>
+
+When the design is balanced:
+
+<center><img src="https://latex.codecogs.com/svg.image?Var(\hat{\alpha}_i)=\sigma^2_{\hat{\alpha}_i} = \frac{I-1}{I}\frac{\sigma^2}{r}."  style="margin-top : 0rem; margin-bottom : 1rem"/></center>
 
 To estimate <img src="https://latex.codecogs.com/svg.image?\sigma^2"/> we're going to use as an estimator:
 
-<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{\sum_{i}\sum_{j}(y_{ij}-y_{i.})^2}{n-I}=\frac{\sum_{i}\sum_{j}e^2_{ij}}{n-I}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{\sum_{i}\sum_{j}(y_{ij}-y_{i.})^2}{n-I}=\frac{\sum_{i}\sum_{j}e^2_{ij}}{n-I}." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 Indeed, 
 
@@ -880,6 +890,12 @@ and
 
 <center><img src="https://latex.codecogs.com/svg.image?e_{ij}=y_{ij} -\hat{y}_{ij}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
+</p>
+  </div>
+</section>
+</HTML>
+
+
 ## Exercise
 <br>
 
@@ -888,81 +904,43 @@ Load the `FactoMineR` package with the `library()` function.
 <codeblock id="01_57">
 </codeblock>
 
-We subset the dataframe *experts*:
+In this exercise we limit ourselves to a subset of the data set *experts*: 8 sensory attributes and 7 perfumes.
 
 <codeblock id="01_61">
 </codeblock>
 
-The `AovSum()` function of the `FactoMineR` package estimates the coefficients of the ANOVA model without any prior information on the products, i.e., by considering that <img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0." style="margin-bottom : -1.5rem"/>. Take a look at the `AovSum()` function of the `FactoMineR` package :
-```{r out}
-Analysis of variance with the contrasts sum (the sum of the coefficients is 0)
+The `AovSum()` function of the `FactoMineR` package estimates the coefficients of the ANOVA model without any prior information on the products, i.e., by considering that <img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0" style="margin-bottom : -1.9rem"/>.
 
-* Description : Analysis of variance with the contrasts sum (the sum of the coefficients is 0) 
-                Test for all the coefficients 
-                Handle missing values
-
-* Usage : AovSum(formula, data, na.action = na.omit, ...)
-
-* Arguments
-
-  - formula	: the formula for the model 'y~x1+x2+x1:x2'
-  - data : a data-frame
-  - na.action	: (where relevant) information returned by model.frame on the special handling of NAs.
-  - ... other arguments, cf the function lm
-
-* Value : Retourne des objets
-  - Ftest	 : a table with the F-tests
-  - Ttest	: a table with the t-tests
-
-* Examples : 
-  ## Example two-way anova
-  data(senso)
-  res <- AovSum(Score~ Product + Day , data=senso)
-  res
-  
-  ## Example two-way anova with interaction
-  data(senso)
-  res2 <- AovSum(Score~ Product + Day + Product : Day, data=senso)
-  res2
-  
-  ## Example ancova
-  data(footsize)
-  res3 <- AovSum(footsize ~ size + sex + size : sex, data=footsize)
-  res3
-
-* Authors : Francois Husson husson@agrocampus-ouest.fr
-```
-
-Write the model with the sensory attribute *Floral*.
+Answer to the following question: is there any differences between my products with respect to the *Floral* attribute? Write the proper model.
 
 <codeblock id="01_62">
 </codeblock>
 
-Apply the `names()` function to `res`. What are the results of this function?
+Apply the `names()` function to `res.AovSum`. What are the outputs of this function?
 
 <codeblock id="01_63">
 </codeblock>
 
-Look at the component `res$Ftest`. 
+Look at the `$Ftest` component. 
 
 <codeblock id="01_64">
 </codeblock>
 
-What are the results of this function?
+What do you think of the differences between the perfumes?
 
 <choice id=1>
-<opt text="It appears that the sensory attribut hasn't a real impact on the different products, such as Floral are really specific to some products ">
+<opt text="There are no differences between the perfumes, with respect to the Floral attribute">
 </opt>
-<opt text="It appears that the sensory attribut has a real impact on the different products, such as Floral are really specific to some products" correct="true">
+<opt text="There are lot of differences between the perfumes, with respect to the Floral attribute"" correct="true">
 </opt>
 </choice>
 
-Look at the component `res$Ttest`. 
+Look at the `$Ttest` component. 
 
 <codeblock id="01_65">
 </codeblock>
 
-It seems that the products were appreciated significantly differently. Which one of the products is the most Floral?
+Which one of the perfumes has been perceived as the most Floral?
 
 <choice id=1>
 <opt text="Angel">
@@ -981,23 +959,26 @@ It seems that the products were appreciated significantly differently. Which one
 </opt>
 </choice>
 
-Write another model that will allow you to integrate the fact that subject may eventually behave differently.
+Write another model that will allow you to integrate the fact that the panelists may have behaved differently.
 
 <codeblock id="01_66">
 </codeblock>
 
-The addition of the Panelist effect in our ANOVA model has for consequence a semantic change when interpreting the results: although *Floral* scores
-were originally collected, the products are now interpreted in terms of preferences. Provide an interpretation of the results.
+Explore the diffent outputs. What do you think?
+<codeblock id="01_67">
+</codeblock>
 
 ## The *R* Corner : the *decat()* function
 <br>
 
-Let's now apply the `decat()` function that will help us understanding the products according to the sensory descriptors. In the following code you can see how to run the function and how you can save the outputs in a list that you can name whatever you want: in this example, the outputs are saved in an object named *resdecat* (it could have been called *bob_the_sponge*); literally *resdecat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data.
+The `decat()` function automatizes the analysis of QDA data. It provides the sensory attributes that characterize the product space; it provides also a description of each product, just like an identity card.
+
+Apply the `decat()` function and save the outputs in an object named *res.decat*; literally *res.decat* is equal to the outputs produced by the `decat()` function when applied to the *experts* data. For this function, specify properly the model: the main factor of interest, the product factor, should be written first; don't forget the judge effect. The `firstvar` argument is the position of the first sensory attributes.
 
 <codeblock id="01_51">
 </codeblock>
 
-As mentioned previously, *resdecat* is a list of results. As a list, you can have access to its different components by using the `names()` function, that provides the name of each component of your output.
+As mentioned previously, *res.decat* is a list of results. As a list, you can have access to its different components by using the `names()` function, that provides the name of each component of your output.
 
 <codeblock id="01_52">
 
@@ -1008,7 +989,7 @@ To access to one of the component, just write the name of the output associated 
 <codeblock id="01_53">
 </codeblock>
 
-As a matter of fact, *resdecat$resT* is also constituted of smaller results. Let's identify them with the **names** function (again)
+As a matter of fact, *res.decat$resT* is also constituted of smaller results. Let's identify them with the `names()` function (again).
 
 <codeblock id="01_54">
 </codeblock>
@@ -1020,7 +1001,10 @@ It appears that the `decat()` function provides a sensory description of each pr
 
 According to the coefficients of the first column, this product has been perceived as significantly higher regarding the descriptors *Greedy*, *Heady*,..., and significantly lower regarding the descriptors *Floral*, *Fruity*,...
 
-**Recap.** What have we done so far? and, what should you know? You should know how to install R, to install packages, to look at the information that is necessary to run some functions. Once the analysis is made, you usually get an output which is either a graphical output, or results from some calculations. These numerical results can be displayed in the console, by typing the name of the result of interest. Please, keep in mind the concept of list.
+## Recap 
+<br>
+
+What have we done so far? and, what should you know? You should know how to install R, to install packages, to look at the information that is necessary to run some functions. Once the analysis is made, you usually get an output which is either a graphical output, or results from some calculations. These numerical results can be displayed in the console, by typing the name of the result of interest. Please, keep in mind the concept of list.
 
 </exercise>
 

@@ -1,1 +1,1 @@
-res <- AovSum(Floral~ Product + Panelist, data = experts_subset)
+res.AovSum2 <- AovSum(Floral ~ Product + Panelist, data = experts_subset)

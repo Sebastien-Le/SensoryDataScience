@@ -1,1 +1,1 @@
-names(resdecat)
+names(res.decat)

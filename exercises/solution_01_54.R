@@ -1,1 +1,1 @@
-names(resdecat$resT)
+names(res.decat$resT)

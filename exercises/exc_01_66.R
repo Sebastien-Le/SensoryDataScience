@@ -1,1 +1,1 @@
-res <- AovSum(___~ ___ + ____, data = ____)
+res.AovSum2 <- AovSum(____~____+____, data =____)
