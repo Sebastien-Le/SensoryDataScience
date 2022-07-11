@@ -1,6 +1,6 @@
 ---
 title: 'Chapter 2: Dealing with qualitative perception'
-description: This chapter deals with categorical variables. We introduce the notions of bar plot, of contingency table, of independence.
+description: This chapter deals with categorical variables. We introduce the notions of bar plot, of contingency table, of independence, the magic of Correspondence Analysis...
 prev: /chapter1
 next: /chapter3
 type: chapter
@@ -86,6 +86,85 @@ height: 1px;
 }
 </style>
 
+<style>
+.accordion2 > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+.accordion2 .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+.accordion2 > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+.accordion2 label {
+  display: block;
+}
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+  
+}
+.accordion2 {
+  margin-bottom: 1em;
+}
+.accordion2 > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 0px solid #e8e8e8;
+  border-top: 0;
+}
+.accordion2 .handle {
+  margin: 0;
+  font-size: 1.0em;
+  line-height: 1.2em;
+}
+.accordion2 label {
+  color: #FFFDF9;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #f8ac00;
+  border-radius:15px;
+}
+.accordion2 label:hover,
+.accordion2 label:focus {
+  background: #e49e00;
+}
+
+
+body {
+  padding: 40px;
+}
+a {
+  color: #06c;
+}
+p {
+  margin: 0 0 1em;
+}
+h1 {
+  margin: 0 0 1.5em;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.accordion2 {
+  max-width: 65em;
+}
+.accordion2 p:last-child {
+  margin-bottom: 0;
+}
+hr
+{
+border:solid 1px black;
+width: 96%;
+color: #FFFF00;
+height: 1px;
+}
+</style>
+
 <exercise id="1" title="From classes to categories and vice-versa">
 
 By definition, a class is a set or category of things having some property or attribute in common. In the same way, a category is a class of people or things regarded as having particular shared characteristics. 
@@ -156,6 +235,21 @@ The output of the `summary()` function is interesting: it illustrates perfectly 
 
 <exercise id="2" title="From categories to categorical data and their representation">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec2">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 As explained previously, for a given question, the different *response modalities* define classes or categories of participants. Practically, we want to represent the way these participants are distributed into these classes. The graphical representation of a categorical variable is often done through a bar plot: one bar per category with a height proportional to the numeric value associated with the category.
 
 Let's have a look at the *Position.H.Food* variable, and let's represent its distribution. To do so, extract the distribution information with the `summary()` function and visualize it with the `barplot()` function.
@@ -218,6 +312,21 @@ Raw data (*MGO*) can be used directly. Associate the x-axis with the categories 
 
 <exercise id="3" title="From categorical data to contingency table">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 Who are those people who are favourable to the inclusion of GM raw materials in products to be fed to animals? Are they characterized by their political party for instance?
 
 To answer this question cross these two variables and build a *contingency table* using the very important `table()` function; before that re-order the *Position.A.Food* variable, as well as the *Political.Party* variable from "Extreme left" to "Right".
@@ -259,6 +368,21 @@ Concretely, participants of the survey who are very favourable to the inclusion 
 </exercise>
 
 <exercise id="4" title="From contingency table to the notion of independence">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec4">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 What happens when data are not structured and when there's no apparent link between two categorical variables?
 
@@ -316,6 +440,21 @@ When the variables are independent:
 
 <exercise id="5" title="From the independence to its deviation">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec5">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 Beyond the formulas, it is important to understand visually *how far* data can be from the independence, in other words how your data deviate from the independence.
 
 Represent the distribution of the participants according to the two variables *Position.A.Food* and *Political.Party*. Consider 3 situations, the theoretical situation when the two variables are independent (in the sense of the definition above), the artifactual situation when the answers to the *Position.A.Food* are permuted, and finally the observed situation with the data collected. For these representations, use the `barplot()` function, as well as the `legend()` function.
@@ -369,6 +508,21 @@ The Chi-square distance represents the distance from the independence situation.
 
 <exercise id="6" title="From the notion of deviation to the notion of distance">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec5">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 This drift or deviation from the independence can be formalized in relation to a natural comparison point, starting from the definition of independence. The equation <img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}" style="margin-top : 1rem; margin-bottom : -0.5rem"/> can also be written:
 
 
@@ -404,7 +558,7 @@ Calculate the distance matrix between row-profiles, *i.e.* the political parties
 
 As expected, this distance matrix is diagonal; as expected also, the categories *Extreme left* and *Left* are close from each other, and are both far from the category *Right*.
 
-Visualize this distance matrix with the `image()` function which creates a grid of colored or gray-scale rectangles with colors corresponding to the values in the matrix.
+Visualize this distance matrix with the `heatmap()` function, with colors corresponding to the values in the matrix.
 
 <codeblock id="02_12">
 </codeblock>
@@ -427,6 +581,21 @@ Hence the name of the distance between two row profiles which is called the Chi-
 </exercise>
 
 <exercise id="8" title="From the notion of inertia to Correspondence Analysis">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec5">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 The multidimensional analysis of the deviation matrix (or discrepancy matrix) consists in finding the dimensions that maximize the inertia of the orthogonal projection of the rows on the dimensions. In other words, these are the dimensions for which the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the most dependent : these are the dimensions for which the correspondence between the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the highest.
 
@@ -452,9 +621,39 @@ Display the eigenvalues, sum them and multiply the value of the sum by the numbe
 <codeblock id="02_15c">
 </codeblock>
 
+## The *R* corner: the *descfreq()* function...a must have
+<br>
+
+Use the *descfreq()* function of the `FactoMineR` package to get an automatic description of the rows of the object `res.table`.
+  
+<codeblock id="02_15d">
+</codeblock>
+
+Display the description of the political party associated with the category *Right*. Try with the political party of your choice.
+
+<codeblock id="02_15e">
+</codeblock>
+
 </exercise>
 
 <exercise id="9" title="From Correspondence Analysis to Multiple Correspondence Analysis">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec9">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
+Re-order the levels of the variables *Implicated*, *Position.H.Food*, *Age*, for which there's a natural order relation.
 
 <codeblock id="02_16">
 </codeblock>
