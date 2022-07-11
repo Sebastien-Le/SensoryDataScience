@@ -235,6 +235,21 @@ The output of the `summary()` function is interesting: it illustrates perfectly 
 
 <exercise id="2" title="From categories to categorical data and their representation">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec2">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 As explained previously, for a given question, the different *response modalities* define classes or categories of participants. Practically, we want to represent the way these participants are distributed into these classes. The graphical representation of a categorical variable is often done through a bar plot: one bar per category with a height proportional to the numeric value associated with the category.
 
 Let's have a look at the *Position.H.Food* variable, and let's represent its distribution. To do so, extract the distribution information with the `summary()` function and visualize it with the `barplot()` function.
@@ -297,6 +312,21 @@ Raw data (*MGO*) can be used directly. Associate the x-axis with the categories 
 
 <exercise id="3" title="From categorical data to contingency table">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 Who are those people who are favourable to the inclusion of GM raw materials in products to be fed to animals? Are they characterized by their political party for instance?
 
 To answer this question cross these two variables and build a *contingency table* using the very important `table()` function; before that re-order the *Position.A.Food* variable, as well as the *Political.Party* variable from "Extreme left" to "Right".
@@ -338,6 +368,21 @@ Concretely, participants of the survey who are very favourable to the inclusion 
 </exercise>
 
 <exercise id="4" title="From contingency table to the notion of independence">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec4">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 What happens when data are not structured and when there's no apparent link between two categorical variables?
 
@@ -394,6 +439,21 @@ When the variables are independent:
 </exercise>
 
 <exercise id="5" title="From the independence to its deviation">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec5">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 Beyond the formulas, it is important to understand visually *how far* data can be from the independence, in other words how your data deviate from the independence.
 
