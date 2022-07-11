@@ -86,6 +86,85 @@ height: 1px;
 }
 </style>
 
+<style>
+.accordion2 > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+.accordion2 .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+.accordion2 > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+.accordion2 label {
+  display: block;
+}
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+  
+}
+.accordion2 {
+  margin-bottom: 1em;
+}
+.accordion2 > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 0px solid #e8e8e8;
+  border-top: 0;
+}
+.accordion2 .handle {
+  margin: 0;
+  font-size: 1.0em;
+  line-height: 1.2em;
+}
+.accordion2 label {
+  color: #FFFDF9;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #f8ac00;
+  border-radius:15px;
+}
+.accordion2 label:hover,
+.accordion2 label:focus {
+  background: #e49e00;
+}
+
+
+body {
+  padding: 40px;
+}
+a {
+  color: #06c;
+}
+p {
+  margin: 0 0 1em;
+}
+h1 {
+  margin: 0 0 1.5em;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.accordion2 {
+  max-width: 65em;
+}
+.accordion2 p:last-child {
+  margin-bottom: 0;
+}
+hr
+{
+border:solid 1px black;
+width: 96%;
+color: #FFFF00;
+height: 1px;
+}
+</style>
+
 <exercise id="1" title="From sensory data collection to a collection of sensory data">
 
 One of the most common situation when dealing with *quantitative perception* occurs when a set of stimuli is assessed by panelists according to a bunch of quantitative sensory attributes. One can distinguish between two situations: when the sensory attributes are the same from one panelist to the other, when the sensory attributes are different from one panelist to the other, what happens when panelists can use their own sensory attributes. 
@@ -556,14 +635,7 @@ From your data, create a data frame of dispersion parameters such as the range, 
 <codeblock id="01_35">
 </codeblock>
 
-<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
-<br>
-
 </exercise>
-
-
-
-
 
 <exercise id="6" title="From distribution to conditional distribution">
 
@@ -629,11 +701,22 @@ Remember what we said at the beginning of this part, we want to test whether dif
 
 </exercise>
 
-
-
-
-
 <exercise id="7" title="From conditional distribution to the comparison of two means">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec8">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 Let's have a look at the *Angel* data on the one hand, on the *J'adore ET* data on the other hand. To do so we're going to build two data frames named *angel_exp* and *jadore_exp* respectively.
 
@@ -776,6 +859,21 @@ In statistics, statistical hypothesis testing is fundamental. Two hypotheses are
 
 <exercise id="8" title="From the comparison of two means to the notion of model">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec8">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 The concept of model is very important. A model, in its usual sense, can be seen as a simplified description of the reality. When you test the difference in means between the two products *Angel* and *J'adore ET*, you implicitly suggest that the floral character of a perfume depends on the perfume. This model can be written the following way: `Floral~Products`. From a perceptual point of view, this model is really too simplistic, and in reality, a simple but much more realistic model is to consider the assessor as a factor of variability. In other words, you want to evaluate the following model: `Floral~Products+Panelist`.
 
 For educational purposes, we will first look at the first model but in practice it is the second model that should be considered.
@@ -833,6 +931,21 @@ These results can be obtained in two steps. First, we *fit* the model with the v
 
 <exercise id="9" title="From the notion of model to the analysis of variance model">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec9">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 This model assumes that you can associate one mean _per_ perfume. For a given perfume, the differences amongst the values is due to a random variable that follows a normal distribution.
 
 The model can be written the following way:
@@ -859,12 +972,11 @@ The problem of estimation of the parameters consists in estimating <img src="htt
 
 that minimize <img src="https://latex.codecogs.com/svg.image?\sum e^2_{ij}" style="margin-bottom : -0.75rem"/>. Hence the name of the method used to get these estimations and which is called the least squares method.
 
-
 <HTML>
 <section class="accordion">
-  <input type="checkbox" name="collapse2" id="handle2">
+  <input type="checkbox" name="collapse4" id="handle4">
   <h2 class="handle">
-    <label for="handle2">At second reading: when the number of observations is the same...</label>
+    <label for="handle4">At second reading: when the number of observations is the same...</label>
   </h2>
   <div class="content">
     <p>In the case where the number of observations is the same from one condition to the other (here, from one perfume to the other), the estimations of the parameters with the least squares method are very simple and natural:
@@ -882,18 +994,14 @@ To estimate <img src="https://latex.codecogs.com/svg.image?\sigma^2"/> we're goi
 
 <center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{\sum_{i}\sum_{j}(y_{ij}-y_{i.})^2}{n-I}=\frac{\sum_{i}\sum_{j}e^2_{ij}}{n-I}." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
-Indeed, 
-
-<center><img src="https://latex.codecogs.com/svg.image?\hat{y}_{ij} = \hat{\mu} + \hat{\alpha}_i," style="*margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
-
-and
-
-<center><img src="https://latex.codecogs.com/svg.image?e_{ij}=y_{ij} -\hat{y}_{ij}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
-
+Indeed, <img src="https://latex.codecogs.com/svg.image?\hat{y}_{ij} = \hat{\mu} + \hat{\alpha}_i," style="*margin-top : -1.25rem; margin-bottom : -0.3rem"/> and <img src="https://latex.codecogs.com/svg.image?e_{ij}=y_{ij} -\hat{y}_{ij}." style="margin-top : -1.25rem; margin-bottom : -0.3rem"/>
 </p>
   </div>
 </section>
 </HTML>
+
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 
 
 ## Exercise
@@ -1009,6 +1117,21 @@ What have we done so far? and, what should you know? You should know how to inst
 </exercise>
 
 <exercise id="10" title="From the analysis of variance to the notion of distance">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec10">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 The analysis of variance model is really important as it provides a way to understand the impact of the product effect on each sensory attribute, and at the same time a measure for each product and each sensory attribute, thanks to the estimation of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.35rem"/>
 

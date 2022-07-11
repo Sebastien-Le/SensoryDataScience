@@ -86,6 +86,85 @@ height: 1px;
 }
 </style>
 
+<style>
+.accordion2 > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+.accordion2 .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+.accordion2 > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+.accordion2 label {
+  display: block;
+}
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+  
+}
+.accordion2 {
+  margin-bottom: 1em;
+}
+.accordion2 > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 0px solid #e8e8e8;
+  border-top: 0;
+}
+.accordion2 .handle {
+  margin: 0;
+  font-size: 1.0em;
+  line-height: 1.2em;
+}
+.accordion2 label {
+  color: #FFFDF9;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #f8ac00;
+  border-radius:15px;
+}
+.accordion2 label:hover,
+.accordion2 label:focus {
+  background: #e49e00;
+}
+
+
+body {
+  padding: 40px;
+}
+a {
+  color: #06c;
+}
+p {
+  margin: 0 0 1em;
+}
+h1 {
+  margin: 0 0 1.5em;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.accordion2 {
+  max-width: 65em;
+}
+.accordion2 p:last-child {
+  margin-bottom: 0;
+}
+hr
+{
+border:solid 1px black;
+width: 96%;
+color: #FFFF00;
+height: 1px;
+}
+</style>
+
 <exercise id="1" title="From classes to categories and vice-versa">
 
 By definition, a class is a set or category of things having some property or attribute in common. In the same way, a category is a class of people or things regarded as having particular shared characteristics. 
