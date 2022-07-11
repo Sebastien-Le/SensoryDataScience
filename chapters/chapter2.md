@@ -1,6 +1,6 @@
 ---
 title: 'Chapter 2: Dealing with qualitative perception'
-description: This chapter deals with categorical variables. We introduce the notions of bar plot, of contingency table, of independence.
+description: This chapter deals with categorical variables. We introduce the notions of bar plot, of contingency table, of independence, the magic of Correspondence Analysis...
 prev: /chapter1
 next: /chapter3
 type: chapter
@@ -508,6 +508,21 @@ The Chi-square distance represents the distance from the independence situation.
 
 <exercise id="6" title="From the notion of deviation to the notion of distance">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec5">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 This drift or deviation from the independence can be formalized in relation to a natural comparison point, starting from the definition of independence. The equation <img src="https://latex.codecogs.com/svg.image?f_{ij}=f_{i\cdot} \times f_{\cdot j}" style="margin-top : 1rem; margin-bottom : -0.5rem"/> can also be written:
 
 
@@ -543,7 +558,7 @@ Calculate the distance matrix between row-profiles, *i.e.* the political parties
 
 As expected, this distance matrix is diagonal; as expected also, the categories *Extreme left* and *Left* are close from each other, and are both far from the category *Right*.
 
-Visualize this distance matrix with the `image()` function which creates a grid of colored or gray-scale rectangles with colors corresponding to the values in the matrix.
+Visualize this distance matrix with the `heatmap()` function, with colors corresponding to the values in the matrix.
 
 <codeblock id="02_12">
 </codeblock>
@@ -566,6 +581,21 @@ Hence the name of the distance between two row profiles which is called the Chi-
 </exercise>
 
 <exercise id="8" title="From the notion of inertia to Correspondence Analysis">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec5">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 The multidimensional analysis of the deviation matrix (or discrepancy matrix) consists in finding the dimensions that maximize the inertia of the orthogonal projection of the rows on the dimensions. In other words, these are the dimensions for which the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the most dependent : these are the dimensions for which the correspondence between the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the highest.
 
@@ -591,9 +621,39 @@ Display the eigenvalues, sum them and multiply the value of the sum by the numbe
 <codeblock id="02_15c">
 </codeblock>
 
+## The *R* corner: the *descfreq()* function...a must have
+<br>
+
+Use the *descfreq()* function of the `FactoMineR` package to get an automatic description of the rows of the object `res.table`.
+  
+<codeblock id="02_15d">
+</codeblock>
+
+Display the description of the political party associated with the category *Right*. Try with the political party of your choice.
+
+<codeblock id="02_15e">
+</codeblock>
+
 </exercise>
 
 <exercise id="9" title="From Correspondence Analysis to Multiple Correspondence Analysis">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec9">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
+Re-order the levels of the variables *Implicated*, *Position.H.Food*, *Age*, for which there's a natural order relation.
 
 <codeblock id="02_16">
 </codeblock>
