@@ -1,2 +1,2 @@
-sub_experts <- experts[experts$Product=="Angel"|experts$Product=="J'adore ET", ]
-sub_experts
+experts.2products <- experts[experts$Product=="Angel"|experts$Product=="J'adore ET", ]
+experts.2products

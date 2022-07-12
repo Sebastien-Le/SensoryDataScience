@@ -1,6 +1,4 @@
-ggplot(sub_experts) +
-  aes(__,__) +
-  geom_density(__)  +
-  labs(title="Density of Floral for the 2 products Angel and J'adore ET", 
-       x="Floral values", 
-       y="Density")
+ggplot(experts.2products) +
+  aes(x =____, fill =____) +
+  geom_density(alpha = 0.5)  +
+  labs(title = "Density of Floral for Angel and J'adore ET", x = "Floral values", y = "Density")
