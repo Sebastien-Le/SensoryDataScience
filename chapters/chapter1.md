@@ -956,7 +956,7 @@ Be careful, for educational purposes, *Angel* and *J'adore ET* have been studied
 
 The concept of model is very important. A model, in its usual sense, can be seen as a simplified description of the reality. When you test the difference in means between the two products *Angel* and *J'adore ET*, you implicitly suggest that the floral character of a perfume depends on the perfume. This model can be written the following way: `Floral~Products`. From a perceptual point of view, this model is really too simplistic, and in reality, a simple but much more realistic model is to consider the assessor as a factor of variability. In other words, you want to evaluate the following model: `Floral~Products+Panelist`.
 
-For educational purposes, we will first look at the first model but in practice it is the second model that should be considered.
+<span style="font-weight : bold">For educational purposes, we will first look at the first model but in practice it is the second model that should be considered.</span>
 
 ## The *Stat* corner: the decomposition of the total variance
 <br>
@@ -998,13 +998,19 @@ The numerator is the Mean Square of the factor, while the denominator is the Mea
 
 In other words, if you want to test the effect of a factor, you have to calculate that kind of test statistic (the ratio of mean squares). For each test, you will get a *p-value*.
 
-These results can be obtained in two steps. First, we *fit* the model with the very important `lm()` function: the output of this function is what is called a *fitted model object*. Then, we run the `anova()` function on the *fitted model object* to compute an analysis of variance table: this table is crucial as it summarizes how the total variance is decomposed according to your model.
+These results can be obtained in two steps. First, we <span style="font-weight : bold">fit</span> the model with the very important `lm()` function: the output of this function is what is called a *fitted model object*. Then, we run the `anova()` function on the *fitted model object* to compute an analysis of variance table: this table is crucial as it summarizes how the total variance is decomposed according to your model.
 
 <codeblock id="01_49">
 </codeblock>
 
+For the one-way analysis of variance, the analysis of variance table provided by the `anova()` function shows that the product effect is highly significant with a *p-value* of 1.98e-24: the variability of the scores for the *Floral* attribute is explained significantly by the differences among the perfumes.
+
+The `anova()` function applied to the two *fitted model objects* shows that the second model, the two-ways ANOVA, should be kept in relation to the first one.
+
 <codeblock id="01_50">
 </codeblock>
+
+For the two-ways analysis of variance, the analysis of variance table provided by the `anova()` function shows that both the product effect and the panelist effect are highly significant with a *p-value* of 1.1e-30 and 2.61e-13: the variability of the scores for the *Floral* attribute is explained significantly by the differences among the perfumes and among the panelists.
 
 </exercise>
 
@@ -1032,13 +1038,13 @@ The model can be written the following way:
 
 <center><img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu_i + \epsilon_{ij}," style="margin-top : 0rem; margin-bottom : 0rem"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.4rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.4rem"/>. 
+where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.4rem; margin-right:0.2rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.4rem"/>. 
 
 This model can also be written the following way: 
 
 <center><img src="https://latex.codecogs.com/svg.image?Y_{ij}=\mu + \alpha_i + \epsilon_{ij}," style="margin-top : 0rem; margin-bottom : 0rem"/>.</center>
 
-where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.4rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.4rem"/>. 
+where <img src="https://latex.codecogs.com/svg.image?\epsilon_{ij} \sim N(0,\sigma^2)" style="margin-bottom : -0.4rem; margin-right:0.2rem"/>, with <img src="https://latex.codecogs.com/svg.image?Cov(\epsilon_{ij},\epsilon_{i'j'})=0" style="margin-bottom : -0.4rem"/>. 
 
 In order to estimate the parameters of the model, we use the following constraint: 
 
@@ -1080,24 +1086,18 @@ Indeed, <img src="https://latex.codecogs.com/svg.image?\hat{y}_{ij} = \hat{\mu} 
 </section>
 </HTML>
 
-
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
-
-
-## Exercise
 <br>
 
-Load the `FactoMineR` package with the `library()` function.
-
-<codeblock id="01_57">
-</codeblock>
+## Exercise: the AoVSum() function of FactoMineR
+<br>
 
 In this exercise we limit ourselves to a subset of the data set *experts*: 8 sensory attributes and 7 perfumes.
 
 <codeblock id="01_61">
 </codeblock>
 
-The `AovSum()` function of the `FactoMineR` package estimates the coefficients of the ANOVA model without any prior information on the products, i.e., by considering that <img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0" style="margin-bottom : -1.9rem"/>.
+The `AovSum()` function of the `FactoMineR` package estimates the coefficients of the ANOVA model without any prior information on the products, *i.e.*, by considering that <img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\alpha_i=0" style="margin-bottom : -1.9rem"/>.
 
 Answer to the following question: is there any differences between my products with respect to the *Floral* attribute? Write the proper model.
 
@@ -1159,9 +1159,9 @@ Explore the diffent outputs. What do you think?
 ## The *R* Corner : the *decat()* function...a must have!
 <br>
 
-The `decat()` function automatizes the analysis of QDA data. It provides the sensory attributes that characterize the product space; it provides also a description of each product, just like an identity card.
+The `decat()` function of the `SensoMineR` package automatizes the analysis of QDA data. It provides the sensory attributes that characterize the product space; it provides also a description of each product, just like an identity card.
 
-Apply the `decat()` function and save the outputs in an object named *res.decat*; literally *res.decat* is equal to the outputs produced by the `decat()` function when applied to the *experts_subset* data. For this function, specify properly the model: the main factor of interest, the product factor, should be written first; don't forget the judge effect. The `firstvar` argument is the position of the first sensory attributes.
+Apply the `decat()` function and save the outputs in an object named *res.decat*. For this function, specify properly the model: the main factor of interest, the product effect, should be written first; don't forget the judge effect. The `firstvar` argument is the position of the first sensory attributes.
 
 <codeblock id="01_51">
 </codeblock>
@@ -1189,11 +1189,6 @@ It appears that the `decat()` function provides a sensory description of each pr
 
 According to the coefficients of the first column, this product has been perceived as significantly higher regarding the descriptors *Greedy*, *Heady*,..., and significantly lower regarding the descriptors *Floral*, *Fruity*,...
 
-## Recap 
-<br>
-
-What have we done so far? and, what should you know? You should know how to install R, to install packages, to look at the information that is necessary to run some functions. Once the analysis is made, you usually get an output which is either a graphical output, or results from some calculations. These numerical results can be displayed in the console, by typing the name of the result of interest. Please, keep in mind the concept of list.
-
 </exercise>
 
 <exercise id="10" title="From the analysis of variance to the notion of distance">
@@ -1215,7 +1210,7 @@ What have we done so far? and, what should you know? You should know how to inst
 
 The analysis of variance model is really important as it provides a way to understand the impact of the product effect on each sensory attribute, and at the same time a measure for each product and each sensory attribute, thanks to the estimation of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.35rem"/>
 
-As said previously, the `decat()` function is very important as it automatizes the analysis if QDA data. The principle of this function is simple: perform an analysis of variance by attribute and store the results of these analyses in a list. Among the elements of the list, `adjmean` is of utmost importance as it gathers the adjusted means of the products based on the estimation of of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/>, <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.35rem"/>
+As said previously, the `decat()` function is very important as it automatizes the analysis if QDA data. The principle of this function is simple: perform an analysis of variance by attribute and store the results of these analyses in a list. Among the elements of the list, `adjmean` is of utmost importance as it gathers the adjusted means of the products based on the estimation of the coefficients <img src="https://latex.codecogs.com/svg.image?\hat{\mu}" style="margin-bottom : -0.35rem"/> and <img src="https://latex.codecogs.com/svg.image?\hat{\alpha}_i." style="margin-bottom : -0.25rem"/>
 
 Display this result in the console.
 
@@ -1239,7 +1234,7 @@ Hence, it is possible to calculate a distance between two products, taking into 
   <div class="content">
   <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
   </p>
-<codeblock id="sec3">
+<codeblock id="sec10">
 </codeblock>
   </div>
 </section>
