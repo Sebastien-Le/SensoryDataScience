@@ -173,7 +173,7 @@ In this course, we will deal essentially with the so-called *QDA* type of data, 
 
 Let's say you are a panelist, and you have to assess a set of perfumes according to a list of sensory attributes from 0 to 10: 0 meaning that you don't perceive the perfume you assess as *heady* for instance, 10 meaning that you perceive the perfume as extremely *heady*. Each time you will have to evaluate a perfume, a lab assistant will provide you with a sample of the perfume and a form to be filled. On this form, you will note your name, the three digits code of the perfume you are testing.
 
-From a statistical point of view, the **statistical unit** of interest is the form on which you have noted many information. In other words, as in a data set rows correspond to statistical units and columns correspond to variables, in our situation, each row of our data set is a form with information such as the name of the panelist, the product that has been assessed, the scores for the different sensory attributes.
+From a statistical point of view, the *statistical unit* of interest is the form on which you have noted many information. In other words, as in a data set rows correspond to statistical units and columns correspond to variables, in our situation, each row of our data set is a form with information such as the name of the panelist, the product that has been assessed, the scores for the different sensory attributes.
 
 Before importing the data, let's have a look at our first data set based on quantitative measurements: `perfumes_qda_experts.csv`.
 
@@ -253,7 +253,7 @@ In this one, we have introduced the notion of *argument*: in mathematics, a vari
 ## The *R* corner: the *read.table()* function
 <br>
 
-As its name suggests, the `read.table()` function reads a file in table format and creates a **data frame** from it, with cases corresponding to lines and variables to fields in the file. Actually, the two functions `read.csv()` and `read.table()` are the same, except for the defaults, *i.e.* the default values of the arguments. 
+As its name suggests, the `read.table()` function reads a file in table format and creates a *data frame* from it, with cases corresponding to lines and variables to fields in the file. Actually, the two functions `read.csv()` and `read.table()` are the same, except for the defaults, *i.e.* the default values of the arguments. 
 
 <codeblock id="01_02">
 </codeblock>
@@ -263,7 +263,7 @@ Don't hesitate to have a look at the help page of the `read.table()` function.
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
 
-Let's have a look at what has been imported in R, the object *experts* which is actually a data frame. To display any R object, write its name in the console. To display part of the *experts* object, select the rows and columns you want to diplay. By definition, a data frame is a table or a two-dimensional array, and you can navigate in this array as you would in any matrix, with indices that you would specify using **square brackets** (not to be confused with the **parentheses** used when using a function).
+Let's have a look at what has been imported in R, the object *experts* which is actually a data frame. To display any R object, write its name in the console. To display part of the *experts* object, select the rows and columns you want to diplay. By definition, a data frame is a table or a two-dimensional array, and you can navigate in this array as you would in any matrix, with indices that you would specify using *square brackets* (not to be confused with the *parentheses* used when using a function).
 
 <codeblock id="01_03">
 </codeblock>
@@ -283,7 +283,7 @@ By comparing these outputs, you can understand the results provided by the `summ
 ## The *R* corner: the output of a function
 <br>
 
-The outputs provided by a function can be either a graphical output, or a numerical output. When it's a numerical output, it's often constituted of many different numerical results. It is literally a list of results, *i.e.* a number of connected items that are calculated by the function. The concept of **list** is really important in R, as you may want to access easily to the different items that constitute the output.  
+The outputs provided by a function can be either a graphical output, or a numerical output. When it's a numerical output, it's often constituted of many different numerical results. It is literally a list of results, *i.e.* a number of connected items that are calculated by the function. The concept of *list* is really important in R, as you may want to access easily to the different items that constitute the output.  
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
@@ -342,8 +342,7 @@ Don't hesitate to go to the following link *https://www.r-bloggers.com/2015/12/h
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
-
-
+  
 Finally, let's check our *experts* data frame.
 
 <codeblock id="01_18">
@@ -353,7 +352,7 @@ According to the output, you can see that we have two types of variables: the ex
 
 For each factor, as for any qualitative variable, the `summary()` function provides the number of occurrences for each level: *e.g.*, for the *Product* variable, among the 288 rows in the data frame, 24 rows correspond to an assessment of the product *Angel*. 
 
-For each sensory attribute, as for any quantitative variable, the `summary()` function provides the so-called **location parameters** such as the minimum, the maximum, the median, the mean and the other quartiles of the variable of interest. It looks like our data have been properly imported in R.
+For each sensory attribute, as for any quantitative variable, the `summary()` function provides the so-called *location parameters* such as the minimum, the maximum, the median, the mean and the other quartiles of the variable of interest. It looks like our data have been properly imported in R.
 
 <br>
 
@@ -400,8 +399,22 @@ Then, in order to obtain an operational data frame, we set the names of the colu
 
 
 
-
 <exercise id="3" title="From location parameters to the notion of distribution and its visualization">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 In this part, we are going to introduce one of the most convenient way of representing a sequence of values (in our case, the scores associated with a sensory attribute), the so-called *boxplot*.
 
@@ -478,10 +491,10 @@ You can combine them if you want the values that lie between 1 and 2.
 <codeblock id="01_23">
 </codeblock>
 
-For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie bteween 1 and 2: it seems that our **product space** composed of perfumes is not spicy at all.
+For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie bteween 1 and 2: it seems that our *product space* composed of perfumes is not spicy at all.
 
 
-Let's visualize the *Spicy* attribute by using a two dimensional graph, where the *x-axis* correspond to the values taken by the scores and the *y-axis* to their respective number of occurrences. To represent this so-called **histogram**, we will first use the `hist()` function. The basic input is the sequence of values you want to represent, as for the `boxplot()` function.
+Let's visualize the *Spicy* attribute by using a two dimensional graph, where the *x-axis* correspond to the values taken by the scores and the *y-axis* to their respective number of occurrences. To represent this so-called *histogram*, we will first use the `hist()` function. The basic input is the sequence of values you want to represent, as for the `boxplot()` function.
 
 <codeblock id="01_24">
 </codeblock>
@@ -558,7 +571,22 @@ As in R base, the default output is based on occurrences, but it can be changed 
 
 <exercise id="4" title="From distribution to dispersion">
 
-Dispersion is (one of) **the** most important concept in statistics. It can be defined as the extent to which values of a variable differ from a fixed value such as the mean. We will illustrate graphically this concept and then define it more formally.
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
+Dispersion is (one of) *the* most important concept in statistics. It can be defined as the extent to which values of a variable differ from a fixed value such as the mean. We will illustrate graphically this concept and then define it more formally.
 
 Let's say we want to visualize 30% of the values "around" the average (arbitrarily), how could we do that? 
 
@@ -566,7 +594,7 @@ In practice, we want to find <img src="https://latex.codecogs.com/svg.image?x_1"
 
 <center><img src="https://latex.codecogs.com/svg.image?\mathbb{P}[x_1 \leq X \leq x_2]=F_X(x_2)-F_X(x_1)=\int_{x_1}^{x_2}f_X(x)dx=0.3,"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?F_X" style="margin-bottom : -0.25rem"/> is the so-called **cumulative function**, and <img src="https://latex.codecogs.com/svg.image?f_X" style="margin-bottom : -0.25rem"/> the density function of ![formula](https://render.githubusercontent.com/render/math?math=X), a continuous random variable associated with a sensory attribute.
+where <img src="https://latex.codecogs.com/svg.image?F_X" style="margin-bottom : -0.25rem"/> is the so-called *cumulative function*, and <img src="https://latex.codecogs.com/svg.image?f_X" style="margin-bottom : -0.25rem"/> the density function of ![formula](https://render.githubusercontent.com/render/math?math=X), a continuous random variable associated with a sensory attribute.
 
 Let's first identify `i_mean` the index (position) of the mean of the *Vanilla* attribute in the vector `d$x`. To do so, we use the `which.max()` function. Then, let's calculate `pcum1` (*resp.* `pcum2`), which is the value of the cumulative function applied on `d$x[i_mean]` minus (*resp.* plus) 0.15. By definition, `x_1` (*resp.* `x2`) is the index of the value in the vector of the values from the cumulative function, such as the cumulative function applied on this value equals `pcum1`. In other words, the value of the cumulative function on `x_1` is equal tothe value of the cumulative function on the mean minus 0.15.
 
@@ -582,11 +610,26 @@ The blue area illustrates the notion of dispersion around the mean, in the sense
 
 <exercise id="5" title="From dispersion to standard deviation">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 As said previously, the concept of dispersion can be defined as the extent to which values of a variable differ from a fixed value such as the mean. In the same way as we have introduced location parameters, in this part, we will introduce the notion of dispersion parameters.
 
 Remember when we defined the boxplot, we said that the box is defined by the interquartile range: that *IQR* was our first dispersion parameter. The range, *i.e.* the difference between the maximum and the minimum, is also a dispersion parameter.
 
-The most important dispersion parameter is the so-called **standard deviation**. A useful property of the standard deviation is that it is expressed in the same unit as the data.
+The most important dispersion parameter is the so-called *standard deviation*. A useful property of the standard deviation is that it is expressed in the same unit as the data.
 
 <HTML>
 <section class="accordion">
@@ -639,6 +682,21 @@ From your data, create a data frame of dispersion parameters such as the range, 
 
 <exercise id="6" title="From distribution to conditional distribution">
 
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 The main question with sensory data or perception data is often: "can I explain the differences between the scores provided by my assessors for a given attributes, by the differences between my products?". In other words, one of the main hypothesis you want to test is whether different products might induce different perceptions and therefore might explain the variability of the scores.
 
 Let's consider the two products *Angel* and *J'adore ET*, and the sensory attribute *Floral*: is there a difference between these two products according to the *Floral* attribute?
@@ -648,7 +706,7 @@ To clarify this question, let's represent the *Floral* attribute according to th
 ## The *R* corner: this is a *%>%*
 <br>
 
-To subset our *experts* data frame, keeping the rows related to the two products *Angel* and *J'adore ET*, we're going to use the `filter()` function and a very important tool named **pipe**, `%>%`; not to be confused with the vertical line `|`, which is the logical operator *OR* and which is also called *pipe*.
+To subset our *experts* data frame, keeping the rows related to the two products *Angel* and *J'adore ET*, we're going to use the `filter()` function and a very important tool named *pipe*, `%>%`; not to be confused with the vertical line `|`, which is the logical operator *OR* and which is also called *pipe*.
 
 If you want to know more about pipes (the first one), have a look at the online book *R for data science* from *Hadley Wickham* and *Garrett Grolemund*: *https://r4ds.had.co.nz/pipes.html*.
 
@@ -757,7 +815,7 @@ To understand the denominator, let's take samples of different sizes. If you mea
 
 This result on the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is really important. I'm sure that you have already seen this formula somewhere, and each time you want to calculate a confidence interval for some estimator you divide some variance by <img src="https://latex.codecogs.com/svg.image?\sqrt{n}" style="margin-bottom : -0.25rem"/>. Don't do that systematically. You have to understand what you're doing. If you are interested into some kind of estimator, all you have to do is to get the variance of that estimator. If your estimator is "blablabla", you need to know the variance of "blablabla", in order to get a confidence interval for "blablabla".
 
-The way <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is distributed is not dependent from the fact that the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/> follow a normal distribution. This result is not that intuitive, but it is really important, as even though you're not working with normal distributions, the estimator of the mean will follow a normal distribution, that's the **central limit theorem**.
+The way <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is distributed is not dependent from the fact that the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/> follow a normal distribution. This result is not that intuitive, but it is really important, as even though you're not working with normal distributions, the estimator of the mean will follow a normal distribution, that's the *central limit theorem*.
 
 Suppose that <img src="https://latex.codecogs.com/svg.image?\forall i, X_i" style="margin-bottom : -0.25rem"/> follows a <img src="https://latex.codecogs.com/svg.image? \mathcal{N}(\mu,\sigma^2)" style="margin-bottom : -0.5rem"/>. Then if you standardize the data, you get the following formula:
 
@@ -805,7 +863,7 @@ Very practically, it means that you can determine a confidence interval for the 
 ## Exercise: the notion of *p-value*
 <br>
 
-The function we're going to use for our **t-test** is called `t.test`. If you don't know how to use this function, click on *https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test* and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? 
+The function we're going to use for our *t-test* is called `t.test`. If you don't know how to use this function, click on *https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test* and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? 
 
 <codeblock id="01_48">
 </codeblock>
@@ -888,7 +946,7 @@ Let's now use the following notations:
 * <img src="https://latex.codecogs.com/svg.image?y_{..}" style="margin-bottom : -0.25rem"/> is the average over the values and over the perfumes
 * <img src="https://latex.codecogs.com/svg.image?n_{i}" style="margin-bottom : -0.15rem"/> is the sample size for the <img src="https://latex.codecogs.com/svg.image?i^{th}"/> perfume
 
-The following formula is very important as it represents a very important concept, the decomposition of the total variance into two parts, the **within** variance and the **between** variance:
+The following formula is very important as it represents a very important concept, the decomposition of the total variance into two parts, the *within* variance and the *between* variance:
 
 <center><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{..})^2=\sum_{i=1}^In_i(y_{i.}-y_{..})^2+\sum_{i=1}^I\sum_{j=1}^{n_i}(y_{ij}-y_{i.})^2," style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
@@ -1149,15 +1207,79 @@ Hence, it is possible to calculate a distance between two products, taking into 
 </exercise>
 
 <exercise id="11" title="From the notion of distance to the notion of inertia">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 </exercise>
 
 <exercise id="12" title="From the notion of inertia to its decomposition">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 </exercise>
 
 <exercise id="13" title="From the inertia decomposition to Principal Components Analysis">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 </exercise>
 
 <exercise id="14" title="From Principal Components Analysis to Multiple Factor Analysis">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="sec3">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
 </exercise>
 
 <exercise id="15" title="The CheatR corner">
