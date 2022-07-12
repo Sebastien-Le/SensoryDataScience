@@ -398,7 +398,6 @@ Then, in order to obtain an operational data frame, we set the names of the colu
 </exercise>
 
 
-
 <exercise id="3" title="From location parameters to the notion of distribution and its visualization">
 
 <HTML>
