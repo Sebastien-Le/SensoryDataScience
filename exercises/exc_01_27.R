@@ -1,4 +1,4 @@
 hist(experts$Spicy,
      breaks=50,
-     probability=__,
+     probability=____,
      main=____)

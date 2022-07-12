@@ -434,11 +434,7 @@ By definition, a boxplot is a standardized way of displaying a sequence of value
 ## The *R* corner: setting graphical parameters
 <br>
 
-To create a matrix of plots in one ploting space, we use the `par()` function to set some graphical parameters, and the `mfrow` argument .
-
-```{r}
-par(mfrow=c(i,j))
-```
+To create a matrix of plots in one ploting space, we use the `par()` function to set some graphical parameters, and the `mfrow` argument to split screen (https://r-graph-gallery.com/71-split-screen-with-par-mfrow.html).
 
 Let's represent the three first sensory attributes, from columns 5 to 7 using three boxplots in a same graphical output and a loop.
 
@@ -456,12 +452,7 @@ To the previous graphical output, add a line corresponding to the mean with the 
 <codeblock id="01_21">
 </codeblock>
 
-By definition, a distribution is "the way in which something is shared out among a group or spread over an area". To some extent, a boxplot is a representation of a distribution. In our situation we want to understand how the scores of given sensory attribute are distributed; we also want to see if this distribution depends on some experimental factors (the products or the panelists, for instance).
-
-For a better understanding of the notion of distribution, let's display the values that lie between 0 and 1 (included), and let's count them. To do so, we first have to select them, then to get the length (or dimension) of the vector with the scores selected.
-
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
-
 <br>
 
 ## The *Algo* corner: the notion of logical operators
@@ -481,6 +472,10 @@ Logical operators are important to select data. The most important logical opera
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
+
+By definition, a distribution is "the way in which something is shared out among a group or spread over an area". To some extent, a boxplot is a representation of a distribution. In our situation we want to understand how the scores of given sensory attribute are distributed; we also want to see if this distribution depends on some experimental factors (the products or the panelists, for instance).
+
+For a better understanding of the notion of distribution, let's display the values that lie between 0 and 1 (included), and let's count them. To do so, we first have to select them, then to get the length (or dimension) of the vector with the scores selected.
 
 <codeblock id="01_22">
 </codeblock>

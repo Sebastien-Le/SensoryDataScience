@@ -1,1 +1,1 @@
-plot(x = __,y = __,main = "Density of Spicy")
+plot(x = ____,y = ____,main = "Density of Spicy")
