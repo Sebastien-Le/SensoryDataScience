@@ -1,0 +1,1 @@
+for (j in 1:4) experts[,j] <- as.factor(experts[,j])

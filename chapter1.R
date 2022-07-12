@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> master
 <HTML>
   <section class="accordion">
     <input type="checkbox" name="collapse2" id="handle2">
@@ -15,6 +20,10 @@
   
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> binder
+>>>>>>> master
 # Exo 1
 
 # Exo 2

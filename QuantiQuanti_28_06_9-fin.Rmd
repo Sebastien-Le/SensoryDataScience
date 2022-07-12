@@ -1,0 +1,692 @@
+---
+title: 'Dealing with quantitative perception'
+output:
+  html_document:
+    toc: yes
+    df_print: paged
+    number_sections: yes
+  pdf_document:
+    number_sections: yes
+    toc: yes  
+---
+
+```{r}
+experts <- read.csv("data/perfumes_qda_experts.csv" )
+experts$Product <- as.factor(experts$Product)
+experts$Panelist <- as.factor(experts$Panelist)
+experts$Session <- as.factor(experts$Session)
+experts$Rank <- as.factor(experts$Rank)
+levels(experts$Product)[4] <- "Cinéma"
+library(ggplot2)
+library(gridExtra)
+library(SensoMineR)
+library(dplyr)
+resdecat <- decat(experts, formul = "~Product+Panelist", firstvar = 5, graph = FALSE)
+
+experts_subset <- experts %>%
+  select(c(Panelist,Product, Floral, Marine, Fruity, Heady, Wrapping, Oriental, Greedy, Vanilla)) %>%
+  filter(Product == "Angel" | Product == "Pleasures" | Product == "J'adore EP" | Product == "Aromatics Elixir" | Product == "Shalimar" | Product == "Chanel N5" | Product == "Lolita Lempicka")
+experts_subset <- droplevels(experts_subset)
+
+resaverage <- averagetable(experts_subset, formul = "~Product+Panelist", firstvar = 3)
+```
+
+# From measure to distance
+
+Let's summarize this information by introducing the notion of distance. By definition, the *Euclidean* distance between two products can be obtained the following way:
+$$
+d^2(i,i')=\sum_{j=1}^J(x_{ij}-x_{i'j})^2
+$$
+> Exercise
+
+Calculate the distance matrix between the products based on the standardized data. 
+
+```{r}
+res <- as.matrix(resaverage)
+I <- nrow(res)
+J <- ncol(res)
+D = diag(1/I, J)
+g <- rep(1,I)%*%res%*%D
+col_1 <- matrix(1,I,1)
+col_1%*%g
+res_c <- res-col_1%*%g
+inv_sigma <- 1/sqrt(diag(t(res_c)%*%res_c)/I)
+matrix(diag(1/sqrt(diag(t(res_c)%*%res_c)/I)),ncol=J)
+res_cr <- res_c%*%matrix(diag(1/sqrt(diag(t(res_c)%*%res_c)/I)),ncol=J)
+```
+
+```{r}
+res_cr[1,]-res_cr[2,]
+(res_cr[1,]-res_cr[2,])^2
+sqrt(sum((res_cr[1,]-res_cr[2,])^2))
+dist(res_cr)
+```
+
+
+```{r}
+dist.prod <- as.matrix(dist(resaverage))
+```
+
+
+*https://www.gastonsanchez.com/visually-enforced/how-to/2014/01/15/Center-data-in-R/*
+
+*https://rforhr.com/center.html*
+
+*https://www.statmethods.net/advstats/matrix.html*
+
+# From distance to inertia
+
+```{r}
+res <- as.matrix(resaverage)
+I <- nrow(res)
+J <- ncol(res)
+D = diag(1/I, J)
+g <- rep(1,I)%*%res%*%D
+col_1 <- matrix(1,I,1)
+col_1%*%g
+res_c <- res-col_1%*%g
+inv_sigma <- 1/sqrt(diag(t(res_c)%*%res_c)/I)
+matrix(diag(1/sqrt(diag(t(res_c)%*%res_c)/I)),ncol=J)
+res_cr <- res_c%*%matrix(diag(1/sqrt(diag(t(res_c)%*%res_c)/I)),ncol=J)
+```
+```{r}
+sum(res_cr[,1])
+sum(res_cr[,1]^2)
+sum(res_cr[,1]^2)/I
+sqrt(diag(t(res_cr)%*%res_cr)/I)
+
+rep(0,8)
+(res_cr[1,]-rep(0,8))^2
+Inertia <- sum((res_cr[1,]-rep(0,8))^2)
+for (i in 2:7) Inertia <- Inertia + sum((res_cr[i,]-rep(0,8))^2)
+Inertia/7
+
+Inertia <- sum(res_cr[1,]^2)
+for (i in 2:7) Inertia <- Inertia + sum(res_cr[i,]^2)
+Inertia/I
+
+sum(res_cr^2)/I
+```
+
+# From the notion of inertia to its decomposition
+
+
+As mentioned previously, the `decat()` function is a very useful function when dealing with *QDA* data. Not only this function provides a description of each product, but it also provides a matrix in which rows correspond to products and columns correspond to sensory attributes: at the intersection of each row and each column, the value of the adjusted mean for the model you have considered, in our case, `sensory_attribute~Product+Panelist`. It is as if we had measured each product according to each sensory attribute, all panelists taken together.
+
+Let's focus on a subset of the original data. In practice, working on subsets is never a good idea. Firstly, because from a statistical point of view, we are interested in understanding the variability of the data. Secondly, because from a sensory point of view, a product space must be considered as a whole.
+
+To illustrate our point, we will limit ourselves to 7 products and 8 sensory attributes.
+
+From the *experts* data, create a new R object named *experts_subset*. Apply the `decat()` function on this object, as well as the `averagetable()` function. The results of the `decat()` function will be used to highlight a structure on the data. To do so, we are going to use two very practical functions: `magicsort()` and `coltable()`. If you have understood the *t-test* and therefore if you now how to interpret its value.
+
+
+```{r}
+experts_subset <- experts %>%
+  select(c(Panelist,Product, Floral, Marine, Fruity, Heady, Wrapping, Oriental, Greedy, Vanilla)) %>%
+  filter(Product == "Angel" | Product == "Pleasures" | Product == "J'adore EP" | Product == "Aromatics Elixir" | Product == "Shalimar" | Product == "Chanel N5" | Product == "Lolita Lempicka")
+experts_subset <- droplevels(experts_subset)
+
+resdecat <- decat(experts_subset, formul = "~Product+Panelist", firstvar = 3, graph = FALSE)
+
+
+coltable(resdecat$tabT, 
+    level.lower = -1.96, level.upper = 1.96,
+    main.title = "Average by perfume")
+
+magicsort(resdecat$tabT,method = "median")
+magicsort(resdecat$tabT,method = "median")[-8,-9]
+
+coltable(magicsort(resdecat$tabT,method = "median")[-8,-9], 
+    level.lower = -1.96, level.upper = 1.96,
+    main.title = "Average by perfume")
+
+coltable(magicsort(resdecat$tabT,method = "median")[-8,-9], magicsort(resdecat$tabT,method = "median")[-8,-9], 
+    level.lower = -1.96, level.upper = 1.96,
+    main.title = "Average by perfume")
+
+resaverage <- averagetable(experts_subset, formul = "~Product+Panelist", firstvar = 3)
+
+resaverage.sort <- resaverage[rownames(magicsort(resdecat$tabT,method = "median"))[1:7], colnames(magicsort(resdecat$tabT,method = "median"))[1:8]]
+
+coltable(round(resaverage.sort,3), magicsort(resdecat$tabT,method = "median")[-8,-9], 
+    level.lower = -1.96, level.upper = 1.96,
+    main.title = "Average by perfume")
+
+```
+
+
+
+```{r}
+dist.prod <- as.matrix(dist(resaverage))
+heatmap(dist.prod, symm = TRUE)
+```
+
+
+> The *Stat* corner: playing with singular value decomposition
+
+```{r}
+res.svd <- svd(res_cr)
+
+#Verification
+res.svd$u%*%diag(res.svd$d)%*%t(res.svd$v)
+res_cr
+
+#Individuals coordinates
+ind_coord <- res_cr%*%res.svd$v
+#Variables coordinates
+t(res_cr)%*%res.svd$u/sqrt(I)
+
+```
+
+```{r}
+#faire une représentation avec ind_coord et ggplot
+```
+
+
+> The *Algo* corner: the Nipals algorithm
+
+```{r}
+NIPALS <- function(X){
+  X = as.matrix(X)
+  N = nrow(X)
+  M = ncol(X)
+
+  D = diag(1/N, N)
+  Xini = X
+  qrX=qr(X)
+  rang = qrX$rank
+  vec=matrix(0,nrow=M,ncol=rang)
+  t=X[,1]
+  i=1
+
+  p=t(X)%*%t%*%(1/(t(t)%*%t))
+  p=p/as.numeric(sqrt(t(p)%*%p))
+  print(rang)
+  while (i<rang+1) {
+    norm=1
+    while(norm>0.000001){
+      t=(X%*%p)%*%(1/(t(p)%*%p))
+      p2=t(X)%*%t%*%(1/(t(t)%*%t))
+      p2=p2/as.numeric(sqrt(t(p2)%*%p2))
+      diff=p2-p
+      norm=t(diff)%*%diff
+      p=p2
+      print(p)
+      print(i)
+    }
+    vec[,i]=p
+    X=X-(t%*%t(p))
+    i=i+1
+  }
+  return(vec)
+}
+
+NIPALS(resaverage)
+svd(resaverage)$v
+```
+
+# From the inertia decomposition to Principal Components Analysis
+
+
+Now, we know how is performed the PCA and how we get the coordinates of individuals or variables. To a better understanding of results, including supplementary information is very important and technically not complicated.
+
+
+As PCA only uses continuous variables in the calculation of the distances between individuals, categorical variables can only be considered as supplementary. For continuous variables, determining whether they are illustrative or not is arbitrary, and depends on the point of view adopted. Often, continuous variables are considered as supplementary if they are from a different nature.
+
+> exemple ajout var supp
+
+Supplementary individuals
+
+We can use supplementary individuals to a better understanding of structures. For example, adding supplementary individuals that you already know characteristics is appropriate to compare new products. This requires knowledge and expertise that is external and specific to the study context.
+
+> exemple ajout ind supp
+
+
+# From PCA to Multiple Factor Analysis
+
+Here is an application of weighted PCA with MFA and the dataset wine
+```{r}
+library("FactoMineR")
+library("factoextra")
+
+data(wine)
+
+# We keep actives variables
+wine_quanti <- wine[, -c(1,2,30,31)]
+
+group1 <- wine_quanti[, 1:5]
+group2 <- wine_quanti[, 6:8]
+group3 <- wine_quanti[, 9:18]
+group4 <- wine_quanti[, 19:27]
+
+# PCA on each group
+res.pca1 <- PCA(group1)
+res.pca2 <- PCA(group2)
+res.pca3 <- PCA(group3)
+res.pca4 <- PCA(group4)
+
+# First eigen values of each PCA
+egv1 <- res.pca1$eig[1]
+egv2 <- res.pca2$eig[1]
+egv3 <- res.pca3$eig[1]
+egv4 <- res.pca4$eig[1]
+
+# Vector of weight
+w <- c(1/c(rep(egv1,5),rep(egv2,3),rep(egv3,10),rep(egv4,9) ))
+res.pca.pon <- PCA(wine_quanti, col.w = w)
+
+coord_pca_pond <- res.pca.pon$ind$coord
+
+res.pca.pon$eig
+svd.triplet(scale(wine_quanti))
+PCA(wine_quanti)$svd
+```
+
+> Ajout des blocs déjà faits
+
+# I. Variance and inertia
+
+## Center of gravity
+
+We have seen how to define the variance of a quantitative variable. We can also see the variance more geometrically on an axis. Let's use the variable `Vanilla` from the same data set used in the lesson 1.
+
+```{r}
+vanilla <- experts$Vanilla
+
+plot(x=vanilla, y=rep(1, length(vanilla)), main="Vanilla", ylab="")
+abline(v = mean(vanilla), col="red", lwd=3, lty=2)
+```
+We can see the observations of the variable as points in a one-dimensional space with the mean center of gravity. Let us generalize this vision with two variables:
+```{r}
+df <- data.frame(experts$Vanilla, experts$Citrus)
+colnames(df) <- c("Vanilla", "Citrus")
+```
+
+```{r}
+plot(df)
+points(x=mean(df$Vanilla),y=mean(df$Citrus), type="p", col="red",lwd=3, lty=2)
+text(mean(df$Vanilla)+0.5, mean(df$Citrus)+0.5, "Center of gravity", col="red")
+```
+The center of gravity is the point $(\bar{Vanilla}, \bar{Citrus})$. If we take more than 2 variables, the center of gravity will be the matrix of means of variables. Let's take all the quantitative variables of the data set :
+
+```{r}
+df <- data.frame(experts[,5:16])
+```
+
+Put the coordinates of the center of gravity for this dataframe :
+```{r}
+colMeans(df)
+```
+
+## Inertia
+
+Now we have a point cloud with a center of gravity $G$. The distance that each individual has to this center of gravity can be calculated using the Euclidean distance: $ d^2\left(x_{i},G\right)   = \sum _{i=1}^{p}  \left( x_{ij}-g_{j}\right)^2$ with $p$ the number of variables.
+
+Let's do it with all quantitative variables for the 10th first individuals. For this, you must to calculate the matrix of the center of gravity $n \times p$ and the matrix of distances using the `apply()` function of R:
+```{r}
+matG <- matrix(colMeans(df[1:10,]), nrow(df[1:10,]), ncol(df) , byrow=TRUE)
+apply((df[1:10,] - matG)^2, 1, sum)
+```
+Hide : the result is the vector of 10 distances of individuals between each coordinates of the enter of gravity.
+
+The inertia is the name for the mean of this distances :
+$I=\frac{1}{n}\sum_{i=1}^{n} d^{2}(x_{i}, G)$
+Calculate inertia of the precedent example :
+```{r}
+distG <- apply((df[1:10,] - matG)^2, 1, sum)
+sum(distG)/(nrow(df[1:10,])-1)
+```
+
+## Sum of the variance
+
+Build the vector of the variances of the 12 variables of df:
+```{r}
+variances <- c()
+for (j in 1:12){
+  variances <- cbind(variances, var(df[1:10,j]))
+}
+variances
+```
+Now, calculate the sum of this vector :
+```{r}
+sum(variances)
+```
+Compare the result found here and the one found in the previous section. Then understand this:
+
+$\frac{1}{n}\sum_{i=1}^{n} d^{2}(x_{i}, g))\Leftrightarrow \frac{1}{n}\sum_{i=1}^{n} \sum_{j=1}^{p}(x_{ij}-x_{.j})^{2}))
+\Leftrightarrow \sum_{j=1}^{p} \frac{1}{n}\sum_{i=1}^{n}(x_{ij}-x_{.j})^{2}))\Leftrightarrow \sum_{j=1}^{p} Var(X_{j}))$
+
+# II .Bivariate analysis: two quantitative variables
+
+For this part, we focus on the relation between the variable `Fruity` and `Floral`. Exist it a relation between this two attributes ?
+
+```{r}
+df <- data.frame(experts$Fruity, experts$Floral)
+colnames(df) <- c("Fruity", "Floral")
+```
+
+To begin, plot the observations of the `Floral` attribute in function of the `Fruity` attribuet :
+```{r}
+plot(df)
+```
+What's the information can we obtain with this plot ?
+- the comportement of a variable with an other, for example if `Fruity` increase, `Floral` increased too. It's a linear relation.
+- wrong answer
+- wrong answer
+
+## Covariance
+
+In the first part of this lesson we calculate the variance for one variable. Here, we use the covariance matrix. It's an indicator of the linear direction between 2 variables.
+
+$Cov(X,Y)=\frac{1}{N-1}\sum_{n}^{1}(x_{i}-\bar{x})(y_{i}-\bar{y})$
+Try to calculate manually the covariance between this two variable :
+
+```{r}
+N <- length(df$Floral)
+1/(N-1)*sum((df$Fruity-mean(df$Fruity))*(df$Floral-mean(df$Floral)))
+```
+Verify your answer with the `cov()` function of R :
+```{r}
+cov(df$Fruity,df$Floral)
+```
+
+## Correlation
+
+The correlation between two variables indicate any type of association refers to the degree to which a pair of variables are linearly related. It's a measure of dependence, the most familiar measure is the Pearson correlation coefficient :
+$\rho_{XY} = corr(X,Y) = \frac{cov(X,Y)}{\sigma_{X}\sigma_{Y}}$
+
+Try to calculate the correlation coefficient between `Fruity` and `Floral` :
+```{r}
+cov <- 1/(N-1)*sum((df$Fruity-mean(df$Fruity))*(df$Floral-mean(df$Floral)))
+cov / (sqrt(var(df$Fruity))*sqrt(var(df$Floral)))
+```
+Verify your answer with the `cor()` function of R :
+```{r}
+cor(df$Fruity, df$Floral)
+```
+
+# III. Test-F
+
+## Context and formalisation
+
+The test-F is a statistic test that determines the equality of variances of two populations, this makes it possible to compare two population variances. Both populations are presumed to be Gaussian.
+
+Let $Y = (Y1, . . ,Y_{n_{1}})$ a $n_{1}$-sample of law $\mathcal{N}(\mu_{1}, σ^{2}_{1})$ and $Z = (Z_{1},...,Z_{n_{2}})$ a $n_{2}$-sample of law $\mathcal{N}(\mu_{2}, σ^{2}_{2})$. Assume $Y$ and $Z$ are independent and pose $X = (Y,Z)$.
+So, here we test :
+
+- $ H_{0} : σ^{2}_{1}=σ^{2}_{2} $;
+- $ H_{1} : σ^{2}_{1} \ne σ^{2}_{2}$.
+
+## Construction of the test statistics
+
+Variables $\frac{n_{1}S^{2}_{1}}{\sigma^{2}_{1}} $ and $\frac{n_{2}S^{2}_{2}}{\sigma^{2}_{2}}$ are independent and distributed according to the laws of the $\chi ^{2}(n_{1})$ and $\chi ^{2}(n_{2})$ with $S^{2}_{1}=\frac{1}{n_{1}-1}\sum_{1}^{n}(y_{i}-\bar{y})^2$ and $S^{2}_{2}=\frac{1}{n_{2}-1}\sum_{1}^{n}(z_{i}-\bar{z})^2$.
+
+Under the hypothesis of equality of variances we deduce that the random variable :
+
+$\frac{\frac{n_{1}S^{2}_{1}}{n_{1}-1}}{\frac{n_{2}S^{2}_{2}}{n_{2}-1}} \sim \mathcal{F}(n_{1}-1, n_{2}-1)$
+
+## Decision
+
+In this case, the comparison test being bilateral, H0 is rejected at the risk threshold $\alpha$ in the cases:
+
+- $f_{obs}\le f_{\frac{\alpha}{2}}(v_{1},v_{2})$;
+- $f_{obs}\ge f_{1-\frac{\alpha}{2}}(v_{1},v_{2})$.
+
+Hence the decision rule, H0 is rejected if :
+$f_{obs} 	\notin [f_{\frac{\alpha}{2}}(n_{1}-1,n_{2}-1),f_{1-\frac{\alpha}{2}}(n_{1}-1,n_{2}-1)]$
+
+## Practice
+
+### Manually
+
+In Argentina, an experiment was conducted in 2009 to solve problems related to the intensification of agriculture and especially to a new method cattle feeding. The traditional A.Angus breed is not adapted to this system breeding, a cross: A.Angus x Charolaise was created. The objective is to obtain animals better adapted to these new practices while maintaining a homogeneity comparable to the traditional breed. The character studied is the GMQ (Average Daily Gain) expressed in kg.
+
+The results observed on two batches (here in the sense of "samples") are as follows:
+
+- for lot 1: pure breed, sample size 16, variance 0.26.
+- for lot 2: cross-breed, sample size: 21, variance: 0.37.
+
+Can we consider that the GMQ of cross A . Angus x Charolaise gives results as homogeneous as that of the pure race? (we will take a risk threshold of 0.05).
+
+Calculate $f_{obs}$ and the quantiles of the fisher law :
+
+```{r}
+f <- (16*0.26/15)/(21*0.37/20)
+v1 <- qf(0.025,df1=15,df2=20)
+v2 <- qf(0.975,df1=15,df2=20)
+```
+
+What's the conclusion ?
+- $H0$ rejected
+- $H0$ not rejected
+
+### Using R
+
+Let's compare two variables of the dataset `experts` : `Spicy` and `Heady`. To do a t-test with R, use the `var.test()` function :
+```{r}
+var.test(experts$Spicy, experts$Heady)
+```
+
+Calculate manually the f-statistic :
+```{r}
+(288*var(experts$Spicy)/287)/(288*var(experts$Heady)/287)
+```
+
+
+
+
+# VI. Khi²
+
+## Cross tabulation
+
+The easiest way to obtain a cross tabulation is to use the table function by giving it as parameters the two variables to cross.
+
+```{r}
+library(dplyr)
+library(questionr)
+data_fruity <- experts %>% filter(Fruity>6)
+data_table <- table(data_fruity$Product)
+tab <- table(data_fruity$Product, data_fruity$Panelist)
+cprop(tab)
+```
+
+## Study the cross table of the 2 variables
+
+The idea is if two variables I and J are independent, then we expect the number of individuals nij who satisfy I and J to be equal to eff_theo = ni.\*nj./n On the contrary, if nij is significantly different from fi\*nj , the more reason here is to think that I and J are not independent.
+
+Studying a correlation between two categorical variables leads to comparing the nij with the eff_theo.
+
+```{r}
+data(tea)
+summary(tea)
+tab <- table(tea$breakfast,tea$tea.time)
+tab
+```
+construct the theorical table :
+
+```{r}
+theo11 <- (sum(tab[1,])*sum(tab[,1]))/sum(tab)
+theo12 <- (sum(tab[1,])*sum(tab[,2]))/sum(tab)
+theo21 <- (sum(tab[2,])*sum(tab[,1]))/sum(tab)
+theo22 <- (sum(tab[2,])*sum(tab[,2]))/sum(tab)
+theo <- cbind(c(theo11,theo21),c(theo12,theo22))
+colnames(theo)<-colnames(tab)
+row.names(theo)<- row.names(tab)
+theo
+tab
+```
+We have to compare now the 2 tables.
+
+First, we substract all theorical values to experimental values:
+
+```{r}
+newtab <- tab-theo
+```
+Then we take the square value:
+```{r}
+newtab <- newtab^2
+```
+Finally, we divide by the theorical effectifs :
+```{r}
+newtab <- newtab/theo
+newtab
+```
+This table is called the table of deviations from independence
+
+The sum of the table give the Chi2 statistic:
+```{r}
+chi2 <- sum(newtab)
+chi2
+```
+
+# VII. condes()
+
+## What's the concept?
+
+The `condes()` function from FactoMineR is using when you want to comparate a quantitative variable with other variable. The function identifies the type of others by itself and returns
+
+- the description of the `num.var` by the quantitative variables in the `quanti` argument or/and the categorical variables which characterized the continuous variable renseigned in `num.var`, in the `quali` argument;
+- and when others variables are qualitatives, the `category` returns a description of the continuous variable `num.var` by each category of all the categorical variables.
+
+## Compare with a quantitative variable
+
+In our case, we use the function on the data frame composed of `Floral` and `Fruity` variables :
+
+```{r}
+res.condes <- condes(donnee = data.frame(experts$Fruity, experts$Floral), num.var = 1)
+```
+
+Reminder the description of the function, in our case, what's return ?
+- only `quanti`
+- `quanti` and `quali`
+- `quanti`, `quali` and `category`
+
+Let's get a look on argument(s) :
+```{r}
+res.condes$quanti
+```
+
+Here, it's tested if the correlation coefficient is significantly different from zero. The null hypothesis is $H0 : 	\rho = 0$, there is not significant linear relationship between the two variables and the alternate hypothesis is $H1 : 	\rho 	\ne 0$. Get a look on the p-value, what can you conclude ?
+- there is a significant linear relationship between `Fruity` and `Floral`;
+- there is not a significant linear relationship between `Fruity` and `Floral`.
+_Hind_ : When the p-value < 0.05, H0 is rejected. It's the case here so there is a significant correlation between them.
+
+## Compare with a qualitative variable
+
+```{r}
+res.condes <- condes(donnee = data.frame(experts$Fruity, experts$Product), num.var = 1)
+res.condes$quali
+```
+Here a one-factor variance analysis test is performed.
+
+The first argument is the $R^{2}$ statistic. It represents the percentage of variation in a response variable (here `Fruity`) explained by its relationship with one or more predictor (here `Product`).
+
+The second argument is the p-value from an ANOVA.
+
+With this result, what can you conclude ?
+- the products have been differentiated regarding the sensory attribute `Fruity`;
+- the products haven't been differentiated regarding the sensory attribute `Fruity`
+
+## Use all the data
+
+Let's apply on the entire dataset. We choose to describe the first quantitative variable `Spicy` :
+
+```{r}
+res.condes <- condes(donnee = experts, num.var = 5)
+```
+
+Print results for the quantitative variables first, then for the qualitative variables:
+```{r}
+res.condes$quanti
+res.condes$quali
+```
+
+You can see that only significant variables are displayed in both cases.
+
+Next, an other result of the `condes` function is :
+```{r}
+res.condes$category
+```
+In practice, this result is more important than the other two because we're interested by the differences within the product groups themselves. The p-value  returned is that of the t-test. Here, for each product $i$ the t-test is performed with $H0: \mu_{i} = \mu$ with $\mu_{i}$ the mean estimator of `Spicy` in the group $i$ and $\mu$ the mean estimator for the global population.
+
+# VIII. catdes()
+
+## What's the concept?
+
+The `catdes()` function from FactoMineR is using when you want to comparate a qualitative variable with other variable. The function identifies the type of others by itself and returns
+
+- the description of the `num.var` by the quantitative variables in the `quanti` argument and the $\eta^{2}$-score in for each quantitative variable in the `quanti.var` argument;
+-  the categorical variables which characterized the continuous variable renseigned in `num.var`, in the `test.chi2` argument; and the `category` returns a description of the continuous variable `num.var` by each category of all the categorical variables.
+
+## Compare with a quantitative variable
+
+Let's start to compare the variable `Product` with the quantitative variable `Green`
+```{r}
+res.catdes <- catdes(donnee = data.frame(experts$Product, experts$Green), num.var = 1)
+```
+
+Reminder the description of the function, in our case, what's return ?
+- only `quanti`;
+- `quanti` and `quanti.var`;
+- only `test.chi2`;
+- `test.chi2` and `category`;
+- `quanti`, `quanti.var`,`test.chi2` and `category`.
+
+Let's get a look on argument(s) :
+```{r}
+res.catdes$quanti.var
+res.catdes$quanti
+```
+
+In `quanti.var`, $\eta^{2}$ ranges from 0 to 1 and where values closer to 1 indicate a higher proportion of variance can be explained by a given variable in the ANOVA model performed. The p-value is that of this one-factor ANOVA.
+
+In `quanti`, the v-test performed is very close to the notion of z-score. In its basic form, the V-test is the quantile of a standardized normal distribution (with mean equal to 0 and standard deviation equal to 1) corresponding to a given probability. It is used to transform p-values into scores that are more easily interpretable. The result is displayed as "NULL" for certain modality. This is because the probability used is by default 5%. To display the results for all modalities, change the `proba` argument. Do it:
+
+```{r}
+catdes(donnee = data.frame(experts$Product, experts$Green), num.var = 1, proba=1)
+```
+
+## Compare with a qualitative variable
+
+Let's compare the same `Product` variable but with `Session`. Write the line and look to the result :
+```{r}
+res.catdes <- catdes(donnee = data.frame(experts$Product, experts$Session), num.var = 1)
+```
+
+Why is it NULL ? Try an other solution :
+```{r}
+res.catdes <- catdes(donnee = data.frame(experts$Product, experts$Session), num.var = 1, proba = 1)
+```
+
+Reminder the description of the function, in our case, what's return ?
+- only `quanti`;
+- `quanti` and `quanti.var`;
+- only `test.chi2`;
+- `test.chi2` and `category`;
+- `quanti`, `quanti.var`,`test.chi2` and `category`.
+
+Get this argument(s) :
+
+```{r}
+res.catdes$test.chi2
+res.catdes$category
+```
+In the `test.chi2` argument, like its name, it's the $\chi^{2}$-test result. The important part is in `category` :
+
+- Cla/mod : proportion of individuals of this group in this modality : 8.33% of individuals in the first Session noted the product Angel;
+- Mod/Cla : proportion of individuals of this modality in this group : 50% of individuals who voted Angel was in the first Session;
+- p.value : significance level of the over-representation in the group of the modality;
+- v.test : value of the test statistic used to determine the significance of the descriptive variables of the group. If it's positive there is a over representation of the modality and vice versa.
+
+## Use all the data
+
+Let's apply on the entire dataset. We choose to describe the variable `Product` :
+```{r}
+res.catdes <- catdes(donnee = experts, num.var = 4)
+```
+
+```{r}
+res.catdes$test.chi2
+res.catdes$quanti.var
+res.catdes$quanti
+```
