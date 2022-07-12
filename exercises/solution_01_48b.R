@@ -1,0 +1,1 @@
+t.test(experts.Angel$Floral, mu = 7, conf.level = 0.9)

@@ -850,29 +850,44 @@ From these data frames, calculate a confidence interval for Angel and the attrib
 <codeblock id="01_45b">
 </codeblock>
 
-The confidence interval can also be obtained using the very important `t.test` function which is used in particular to test the equality of a mean with respect to a defined value (https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test or https://datascienceplus.com/t-tests/).
+The confidence interval can also be obtained using the very important `t.test()` function which is used in particular to test the equality of a mean with respect to a defined value (https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test or https://datascienceplus.com/t-tests/).
 
 The main input of this function is a vector of values, as illustrated in the following code.
 
 <codeblock id="01_48">
 </codeblock>
 
+The results provided by the function are numerous and rich. The 2 most obvious ones are the sample estimates, and the confidence interval (you can play with the `conf.level` argument): in other words, an estimation of the true mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/>, that you will never know, a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-top:0.1rem; margin-bottom : -0.3rem ; margin-right : 0.2rem"/>. Then, the value of <img src="https://latex.codecogs.com/svg.image?t" style="margin-right:0.2rem"/> that can be interpreted as the number of standard deviation from the null hypothesis. But for this function, as nothing has been specified, what is the by default null hypothesis? The output provides a hint: "alternative hypothesis: true mean is not equal to 0", which leads to the fact that the null hypothesis is "true mean is equal to 0". Last but not least, the <span style="font-weight : bold">p-value</span>. In this context, this is the probability to observe what has been observed under the hypothesis that the true mean is equal to 0. 
 
+All this information leads to the same conclusion: we reject the null hypothesis that the true mean is equal to 0.
 
-When you compare two means, <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.25rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.25rem"/>, you want to assess which one of the two following hypotheses. By definition, a supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation is the most convincing:
+* 0, the true mean to be tested, doesn't belong to the confidence interval
+
+* <img src="https://latex.codecogs.com/svg.image?t" style="margin-right : 0.2rem"/>, the number of standard deviation, is pretty far from the null hypothesis (its absolute value is higher than 2)
+
+* the <img src="https://latex.codecogs.com/svg.image?p-value" style="margin-bottom : -0.4rem"/> is rather small, less than 0.05
+
+Finally, we can say that *Angel* has been perceived as significantly *Floral*.
+
+Spend some time playing with the arguments of the `t.test()` function.
+
+<codeblock id="01_48b">
+</codeblock>
+
+Let's now compare the two products *Angel* and *J'adore ET*. When you compare two means, <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.4rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.4rem ; margin-right:0.2rem"/>, you want to assess which one of the two following hypotheses is the most convincing:
 
 1. <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 = \mu_2" style="margin-bottom : -0.25rem"/>
-2. <img src="https://latex.codecogs.com/svg.image?H_1: \mu_1 \ne \mu_2" style="margin-bottom : -0.25rem"/>
+2. <img src="https://latex.codecogs.com/svg.image?H_1: \mu_1 \ne \mu_2" style="margin-bottom : -0.35rem"/>
 
-When you look at the <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/>, the so-called null hypothesis, you can also rephrase it the following way: <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 - \mu_2 =0" style="margin-bottom : -0.25rem"/>. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2" style="margin-bottom : -0.25rem"/> (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following test statistic. [By definition, a single measure of some attribute of a sample (_i.e._ a statistic) used in statistical hypothesis testing, Wikipedia]:
+When you look at <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem ; margin-right : 0.2rem"/>, the so-called null hypothesis, you can also rephrase it the following way: <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 - \mu_2 =0" style="margin-bottom : -0.25rem"/>. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2" style="margin-bottom : -0.25rem"/> (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following <span style="font-weight : bold">test statistic</span> (by definition, a single measure of some attribute of a sample, _i.e._ a statistic, used in statistical hypothesis testing, Wikipedia):
 
-<center><img src="https://latex.codecogs.com/svg.image?D=\bar{X}_1-\bar{X}_2." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?D=\bar{X}_1-\bar{X}_2." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
-And of course, if you think about what we said in the previous section, you need to estimate <img src="https://latex.codecogs.com/svg.image?D"/> and its variance, in order to get a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2"  style="margin-bottom : -0.25rem"/>.
+And of course, if you think about what we said in the previous section, you need to estimate <img src="https://latex.codecogs.com/svg.image?D"/> and its variance, in order to get a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2"  style="margin-top:1rem;margin-bottom : -0.25rem"/>.
 
-The main difficulty here is to get an estimator for <img src="https://latex.codecogs.com/svg.image?\sigma^2_D"  style="margin-bottom : -0.25rem"/> (let's call this estimator <img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D"  style="margin-bottom : -0.25rem"/>) and to get the distribution of
+The main difficulty here is to get an estimator for <img src="https://latex.codecogs.com/svg.image?\sigma^2_D"  style="margin-bottom : -0.5rem"/> (let's call this estimator <img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D"  style="margin-bottom : -0.5rem"/>) and to get the distribution of
 
-<center><img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D}," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D}," style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 under the null hypothesis (when the two means are the same).
 
@@ -880,26 +895,45 @@ The principle of this test is fundamental, and it will be always the same princi
 
 As "everything" is independent, the variance of a difference is the sum of the variances. In other words:
 
-<center><img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_1-\bar{X}_2) = Var(\bar{X}_1) + Var(\bar{X}_2)= \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_1-\bar{X}_2) = Var(\bar{X}_1) + Var(\bar{X}_2)= \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
-If we can assume that there's a common variance <img src="https://latex.codecogs.com/svg.image?\sigma^2=\sigma_1^2=\sigma_2^2" style="margin-bottom : -0.25rem"/> (_cf._ next section), then 
+If we can assume that there's a common variance <img src="https://latex.codecogs.com/svg.image?\sigma^2=\sigma_1^2=\sigma_2^2" style="margin-bottom : -0.5rem"/>, then 
 
-<center><img src="https://latex.codecogs.com/svg.image?\sigma^2_D=\sigma^2(\frac{1}{n_1}+\frac{1}{n_2})." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\sigma^2_D=\sigma^2(\frac{1}{n_1}+\frac{1}{n_2})." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
-Now we have to find an estimator of the common variance <img src="https://latex.codecogs.com/svg.image?\sigma^2" style="margin-bottom : -0.25rem"/>, which is naturally the weighted average of the variances:
+Now we have to find an estimator of the common variance <img src="https://latex.codecogs.com/svg.image?\sigma^2" style="margin-bottom : -0.15rem"/>, which is naturally the weighted average of the variances:
 
-<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{(n_1-1){S'_1}^2+(n_2-1){S'_2}^2}{n_1+n_2-2}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2=\frac{(n_1-1){S'_1}^2+(n_2-1){S'_2}^2}{n_1+n_2-2}." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 It's not that difficult and it's rather logical (you want to mix both information, and you mostly believe in the one for which you have lots of observations); and finally:
 
-<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D=\hat{\sigma}^2(\frac{1}{n_1}+\frac{1}{n_2})." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\hat{\sigma}^2_D=\hat{\sigma}^2(\frac{1}{n_1}+\frac{1}{n_2})." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 Under the null hypothesis (the two means are equal):
 
-<center><img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D} \sim \mathcal{T}(n_1+n_2-2)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{D}{\hat{\sigma}_D} \sim \mathcal{T}(n_1+n_2-2)." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 
-In statistics, statistical hypothesis testing is fundamental. Two hypotheses are confronted, the null hypothesis, <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/>, and the alternative hypothesis, <img src="https://latex.codecogs.com/svg.image?H_1"  style="margin-bottom : -0.25rem"/>. Apparently, one hypothesis has to be chosen, but in practice the problem is different and can be expressed the following way: should I chose <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/>? In other words, the problem is not symmetrical and <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/> is the hypothesis according to which a decision is taken. By definition (Wikipedia), the size for simple hypotheses, is the test's probability of incorrectly rejecting the null hypothesis. *The false positive rate*; the significance level of a test (<img src="https://latex.codecogs.com/svg.image?\alpha"/>), is the upper bound imposed on the size of a test. Its value is chosen by the statistician prior to looking at the data or choosing any particular test to be used. It is the maximum exposure to erroneously rejecting <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/> he/she is ready to accept. Testing <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/> at significance level <img src="https://latex.codecogs.com/svg.image?\alpha"/> means testing <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem"/> with a test whose size does not exceed <img src="https://latex.codecogs.com/svg.image?\alpha"/>. In most cases, one uses tests whose size is equal to the significance level.
+In statistics, statistical hypothesis testing is fundamental. Two hypotheses are confronted, the null hypothesis, <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem; margin-right:0.2rem"/>, and the alternative hypothesis, <img src="https://latex.codecogs.com/svg.image?H_1"  style="margin-bottom : -0.25rem"/>. Apparently, one hypothesis has to be chosen, but in practice the problem is different and can be expressed the following way: should I chose <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem; margin-right:0.2rem"/>? In other words, the problem is not symmetrical and <img src="https://latex.codecogs.com/svg.image?H_0"  style="margin-bottom : -0.25rem"/> is the hypothesis according to which a decision is taken.
+
+In practice, to compare the two products *Angel* and *J'adore ET*, in other words two means, use the `t.test()` that takes as input the two vectors of values to be compared.
+
+<codeblock id="01_48c">
+</codeblock>
+
+The results provided by the function are numerous and rich. The 2 most obvious ones are the sample estimates, and the confidence interval (you can play with the `conf.level` argument): in other words, an estimation of the true  means <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/>, that you will never know, a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2" style="margin-top:0.1rem; margin-bottom : -0.3rem ; margin-right : 0.2rem"/>. Then, the value of <img src="https://latex.codecogs.com/svg.image?t" style="margin-right:0.2rem"/> that can be interpreted as the number of standard deviation from the null hypothesis. But for this function, as nothing has been specified, what is the by default null hypothesis? The output provides a hint: "alternative hypothesis: true difference in means is not equal to 0", which leads to the fact that the null hypothesis is "true difference in means is equal to 0". Last but not least, the <span style="font-weight : bold">p-value</span>. In this context, this is the probability to observe what has been observed under the hypothesis that the true difference in means is equal to 0. 
+
+All this information leads to the same conclusion: we reject the null hypothesis that the true difference in means is equal to 0.
+
+* 0, the true difference in means to be tested, doesn't belong to the confidence interval
+
+* <img src="https://latex.codecogs.com/svg.image?t" style="margin-right : 0.2rem"/>, the number of standard deviation, is pretty far from the null hypothesis (its absolute value is higher than 2)
+
+* the <img src="https://latex.codecogs.com/svg.image?p-value" style="margin-bottom : -0.3rem"/> is rather small, less than 0.05
+
+Finally, we can say that *Angel* has been perceived as significantly different from *J'adore ET* with respect to the attribute *Floral*. 
+
+Be careful, for educational purposes, *Angel* and *J'adore ET* have been studied apart from the other perfumes. From a sensory point of view, it doesn't rally make sense as both perfumes are part of a product space, and the product space has been evaluated by the panelists as a whole, with references specific to the product space that were used to train the panel and frame the sensory measures.
 
 </exercise>
 
