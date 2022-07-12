@@ -560,9 +560,6 @@ As in R base, the default output is based on occurrences, but it can be changed 
 </exercise>
 
 
-
-
-
 <exercise id="4" title="From distribution to dispersion">
 
 <HTML>
@@ -599,9 +596,6 @@ The blue area illustrates the notion of dispersion around the mean, in the sense
 
 </exercise>
 
-
-
-
 <exercise id="5" title="From dispersion to standard deviation">
 
 <HTML>
@@ -627,14 +621,15 @@ The most important dispersion parameter is the so-called *standard deviation*. A
 
 <HTML>
 <section class="accordion">
-  <input type="checkbox" name="collapse2" id="handle2">
+  <input type="checkbox" name="collapse5" id="handle5">
   <h2 class="handle">
-    <label for="handle2">At second reading: mean and standard deviation</label>
+    <label for="handle5">At second reading: mean and standard deviation</label>
   </h2>
   <div class="content">
-    <p> Let's say you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of your variables, to get some insights on your population. To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. From this estimator (which is by the way a random variable), you can get an estimation of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> by calculating <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. The standard deviation <img src="https://latex.codecogs.com/svg.image?\sigma" style="margin-bottom : -0.25rem"/> can be estimated using the following expression: <img src="https://latex.codecogs.com/svg.image?s = \sqrt{\frac{1}{n}\sum(x_i-\bar{x})^2}" style="margin-bottom : -1rem"/>.</p>
-<p> <span style="font-weight : bold">Centering</span> the data is as important as it is simple, apparently. By definition, to center is to place in the middle. Centering is subtracting the average to each value that has been measured. In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow x_i-\bar{x}" style="margin-bottom : -0.25rem"/>, where <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n}\sum x_i" style="margin-bottom : -1rem"/> is the average calculated over the <img src="https://latex.codecogs.com/svg.image?x_{i}" style="margin-bottom : -0.25rem"/>.</p>
-<p>Understanding the idea of <span style="font-weight : bold">standardizing the data</span>, is the key to understanding statistics. You will see that standardized data will allow you to do compare variables that are not <i>a priori</i> comparable: am I bigger than you are small? You will be able to answer that question with standardized data. By definition, when data are standardized, their variance is equal to 1 (hence, their standard deviation is also equal to 1). In other words, let's consider a series <img src="https://latex.codecogs.com/svg.image?\{x_1,\dots,x_n\}" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow \frac{x_i-\bar{x}}{s}" style="margin-bottom : -1rem"/>.</p>
+    <p> Let's say you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem; margin-right : 0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>. From the realizations of <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of your variables, to get some insights on your population.
+To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum_i X_i" style="margin-top : 1rem; margin-bottom : -1.9rem"/>. From this estimator (which is by the way a random variable), you can get an estimation of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> by calculating <img src="https://latex.codecogs.com/svg.image?\bar{x}_n=\frac{1}{n} \sum_i x_i" style="margin-top : 1.6rem; margin-bottom : -1.9rem; margin-right : 0.2rem"/>. The standard deviation <img src="https://latex.codecogs.com/svg.image?\sigma" style="margin-bottom : -0rem"/> can be estimated using the following expression: <center><img src="https://latex.codecogs.com/svg.image?s = \sqrt{\frac{1}{n}\sum(x_i-\bar{x})^2}" style="margin-bottom : -1rem"/>.</center></p>
+<p> <span style="font-weight : bold">Centering</span> the data is as important as it is simple, apparently. By definition, to center is to place in the middle. Centering is subtracting the average to each value that has been measured. In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow x_i-\bar{x}" style="margin-bottom : -0.25rem; margin-right : 0.2rem"/>, where <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n} \sum_i x_i" style="margin-top : 1rem; margin-bottom : -1.8rem ; margin-right : 0.2rem"/> is the average calculated over the <img src="https://latex.codecogs.com/svg.image?x_{i}" style="margin-top : 1.5rem; margin-bottom : -0.25rem"/>.</p>
+<p>Understanding the idea of <span style="font-weight : bold">standardizing</span> the data, is the key to understanding statistics. You will see that standardized data will allow you to do compare variables that are not <i>a priori</i> comparable: am I bigger than you are small? You will be able to answer that question with standardized data. By definition, when data are standardized, their variance is equal to 1 (hence, their standard deviation is also equal to 1). In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow \frac{x_i-\bar{x}}{s}" style="margin-bottom : -1rem"/>.</p>
 <p>By construction, standardized data have no unit of measurement. These values represent the number of standard deviation that separate an individual from the average individual. Knowing that with a normal distribution, 95% of the realizations lie between more or less 2 standard deviations (actually 1.96) from the average, when a standardized data is higher than 2 in absolute value, it means that the individual is quite peculiar regarding the variable of interest.</p>
   </div>
 </section>
@@ -647,20 +642,14 @@ Let's apply the `sd()` function and the `var()` function to a vector of values, 
 
 The call of this function is very easy, but there is in fact a real conceptual difficulty behind what we do.
 
+## The *Stat* corner: inferential versus descriptive
+<br>
 
+If you look at the help page of the `code>sd()` function you will see in the <i>Details</i> section that "Like var this uses denominator  <img src="https://latex.codecogs.com/svg.image?n-1"/>". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). 
 
-<HTML>
-<section class="accordion">
-  <input type="checkbox" name="collapse3" id="handle3">
-  <h2 class="handle">
-    <label for="handle3">At second reading: inferential versus descriptive</label>
-  </h2>
-  <div class="content">
-    <p> If you look at the help page of the <code>sd()</code> function you will see in the <i>Details</i> section that "Like var this uses denominator  <img src="https://latex.codecogs.com/svg.image?n-1"/>". In statistics, we distinguish two distinct situations, depending on whether the analysis is inferential or descriptive (exploratory). Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (<i><a>https://en.wikipedia.org/wiki/Statistical_inference</a></i> and <i><a>https://en.wikipedia.org/wiki/Descriptive_statistics</a></i>). The denominator <img src="https://latex.codecogs.com/svg.image?n-1"/> is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by  <img src="https://latex.codecogs.com/svg.image?n"/>: to boost your estimation, the idea is to divide by a smaller number, <img src="https://latex.codecogs.com/svg.image?n-1"/> instead of <img src="https://latex.codecogs.com/svg.image?n"/>. 
-</p>
-  </div>
-</section>
-</HTML>
+Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (<i><a>https://en.wikipedia.org/wiki/Statistical_inference</a></i> and <i><a>https://en.wikipedia.org/wiki/Descriptive_statistics</a></i>). 
+
+The denominator <img src="https://latex.codecogs.com/svg.image?n-1" style="margin-right : 0.2rem"/> is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by  <img src="https://latex.codecogs.com/svg.image?n"/>: to boost your estimation, the idea is to divide by a smaller number, <img src="https://latex.codecogs.com/svg.image?n-1"/> instead of <img src="https://latex.codecogs.com/svg.image?n"/>. 
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 
