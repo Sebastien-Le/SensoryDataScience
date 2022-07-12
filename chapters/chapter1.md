@@ -792,7 +792,6 @@ When the population is infinite (and in the case of withdraws with replacement),
 </section>
 </HTML>
 
-
 ## The *Stat* corner: the magic of confidence interval
 <br>
 
@@ -846,16 +845,19 @@ Let's have a look at the *Angel* data on the one hand, on the *J'adore ET* data 
 <codeblock id="01_45">
 </codeblock>
 
-## Exercise: the notion of *p-value*
-<br>
+From these data frames, calculate a confidence interval for Angel and the attribute *Floral*. 
 
-The function we're going to use for our *t-test* is called `t.test`. If you don't know how to use this function, click on *https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test* and you will get an explanation of the function. Go straight to the example part, at the very end. Think carefully of the parameters that you have to specify. For this test, we want to check whether the product *Angel* or the product *J'adore ET* can be considered as *floral*? Based on what you've experienced, how could you define the notion of _p-value_? 
+<codeblock id="01_45b">
+</codeblock>
+
+The confidence interval can also be obtained using the very important `t.test` function which is used in particular to test the equality of a mean with respect to a defined value (https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test or https://datascienceplus.com/t-tests/).
+
+The main input of this function is a vector of values, as illustrated in the following code.
 
 <codeblock id="01_48">
 </codeblock>
 
-<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
-<br>
+
 
 When you compare two means, <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.25rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.25rem"/>, you want to assess which one of the two following hypotheses. By definition, a supposition or proposed explanation made on the basis of limited evidence as a starting point for further investigation is the most convincing:
 
