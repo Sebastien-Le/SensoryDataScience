@@ -755,62 +755,58 @@ Remember what we said at the beginning of this part, we want to test whether dif
   <div class="content">
   <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
   </p>
-<codeblock id="sec8">
+<codeblock id="sec7">
 </codeblock>
   </div>
 </section>
 </HTML>
 
-Let's have a look at the *Angel* data on the one hand, on the *J'adore ET* data on the other hand. To do so we're going to build two data frames named *angel_exp* and *jadore_exp* respectively.
-
-<codeblock id="01_45">
-</codeblock>
-
-## The *Stat* corner: the magic of sampling distribution and confidence interval
-<br>
-
-In a real life situation, you measure some quantitative variable on a sample of size <img src="https://latex.codecogs.com/svg.image?n"/>, in order to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of what you measure. Formally, you would say, for instance, that you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, that follow a normal distribution with mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> and variance <img src="https://latex.codecogs.com/svg.image?\sigma^2" style="margin-bottom : -0rem"/>. From the realizations <img src="https://latex.codecogs.com/svg.image?\{ x_1, \dots, x_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, to get some insights on your population.
-To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/>. Why would you do that? The answer is, <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> has some very good properties. This estimator is a random variable which expectation is equal to <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, in other words <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\mu" style="margin-bottom : -0.25rem"/>. By definition, in probability theory, the expected value of a random variable is intuitively the long-run average value of repetitions of the experiment it represents (Wikipedia). The other very important property is that the distribution of the mean <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\bar{X}_n" style="margin-bottom : -0.25rem"/> is approximately a normal distribution, whatever the original distribution of the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/>, it's incredible but true.
-
-The thing is, in a real life situation, you only have one sample (in most cases). But if you had the possibility to have an infinite number of samples, you would be able to calculate an infinite number of means and to calculate the mean of the means. From that, you would get <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)" style="margin-bottom : -0.25rem"/>, as well as the standard deviation of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/>, and its distribution. You would be able to get a confidence interval of the mean, which is really important.
-
-If you had enough money to run several times the same experiment, and hence to have measures from many different samples, you would see that the mean of the means over the samples is equal to <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>. Practically, it means that estimating the mean by using the formula <img src="https://latex.codecogs.com/svg.image?\frac{1}{n}\sum x_i" style="margin-bottom : -1rem"/> that you've learned when you were in school, is a good thing to do: the estimator <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1rem"/> has a very good property.
-
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse3" id="handle3">
+  <h2 class="handle">
+    <label for="handle3">At second reading: the magic of sampling distribution</label>
+  </h2>
+  <div class="content">
+  <p>In a real life situation, you measure some quantitative variable on a sample of size <img src="https://latex.codecogs.com/svg.image?n"/>, in order to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of what you measure. Formally, you would say, for instance, that you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem; margin-right : 0.5rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.3rem"/>, that follow a normal distribution with mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> and variance <img src="https://latex.codecogs.com/svg.image?\sigma^2" style="margin-bottom : -0rem"/>.</p> 
+<p>From the realizations <img src="https://latex.codecogs.com/svg.image?\{ x_1, \dots, x_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, to get some insights on your population. To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-top:0.2rem;margin-bottom : -1.1rem"/>. Why would you do that? The answer is, <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> has some very good properties. This estimator is a random variable which expectation is equal to <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-top:1.5rem; margin-bottom : -0.25rem"/>, in other words <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)=\mu" style="margin-bottom : -0.35rem"/>.</p>
+<p>By definition, in probability theory, the expected value of a random variable is intuitively the long-run average value of repetitions of the experiment it represents (Wikipedia). The other very important property is that the distribution of the estimator of the mean <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.2rem"/> is approximately a normal distribution, whatever the original distribution of the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem;margin-right:0.2rem"/>, it's incredible but true.</p>
+<p>The thing is, in a real life situation, you only have one sample (in most cases). But if you had the possibility to have an infinite number of samples, you would be able to calculate an infinite number of means and to calculate the mean of the means. From that, you would get <img src="https://latex.codecogs.com/svg.image?E(\bar{X}_n)" style="margin-bottom : -0.4rem"/>, as well as the standard deviation of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem; margin-right:0.2rem"/>, and its distribution. You would be able to get a <span style="font-weight : bold">confidence interval of the mean</span>, which is really important.</p>
+<p>If you had enough money to run several times the same experiment, and hence to have measures from many different samples, you would see that the mean of the means over the samples is equal to <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>. Practically, it means that estimating the mean by using the formula <img src="https://latex.codecogs.com/svg.image?\frac{1}{n}\sum x_i" style="margin-bottom : -1rem"/> that you've learned when you were in school, is a good thing to do: the estimator <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum X_i" style="margin-bottom : -1.1rem"/> has a very good property.</p>
+  </p>
 <codeblock id="01_46">
 </codeblock>
-
-As you can see, we have simulated 20 *realizations* of a random variable following a normal distribution with <img src="https://latex.codecogs.com/svg.image?\mu=85" style="margin-bottom : -0.25rem"/> and <img src="https://latex.codecogs.com/svg.image?\sigma=2"/>.
-
+<p>As you can see, we have simulated 20 realizations of a random variable following a normal distribution with <img src="https://latex.codecogs.com/svg.image?\mu=85" style="margin-bottom : -0.25rem"/> and <img src="https://latex.codecogs.com/svg.image?\sigma=2"/>.</p>
 <codeblock id="01_47">
 </codeblock>
-
-What if we simulate 100 samples of size 20?
-
+<p>What if we simulate 100 samples of size 20?</p>
 <codeblock id="01_56">
 </codeblock>
-
-Remember the previous graphical representation that you obtained from 11 samples? The means that you have calculated for the 11 samples, are not exactly the same. They vary, but not as much as the original data. It's not only important to understand that, but it should be also very intuitive for you.
+<p>Remember the previous graphical representation that you obtained from 11 samples? The means that you have calculated for the 11 samples, are not exactly the same. They vary, but not as much as the original data. It's not only important to understand that, but it should be also very intuitive for you.
 When the population is infinite (and in the case of withdraws with replacement), the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is:
+<center><img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_n)=\frac{\sigma^2}{n}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center></p>
+<p>It should make sense for you that the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> depends on the variance of the original data, the ones that you measures on your statistical individual. If the data are variable ("messy"), the average will certainly vary from one sample to the other.</p>
+<p>To understand the denominator, let's take samples of different sizes. If you measure small samples, the mean of your samples will vary more from one sample to the other than if you measure large samples. Let's take samples of size <img src="https://latex.codecogs.com/svg.image?n=2"/> for instance, which is really unrealistic. In one sample you may get two small individuals or two big individuals (let's say you measure the size of an individual), which can explain the fact that the mean may vary a lot from one sample to the other. If you work with samples of size <img src="https://latex.codecogs.com/svg.image?n=1000000000"/>, which can also be unrealistic, you won't probably get 1000000000 small individuals in one sample. For these samples of large size you will probably have something representative of the distribution of your individuals. The means over something representative will not vary a lot from one sample to the other, as they are all supposed to be representative.</p>
+<p>This result on the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is really important. I'm sure that you have already seen this formula somewhere, and each time you want to calculate a confidence interval for some estimator you divide some variance by <img src="https://latex.codecogs.com/svg.image?\sqrt{n}" style="margin-bottom : -0.25rem"/>. Don't do that systematically. You have to understand what you're doing. If you are interested into some kind of estimator, all you have to do is to get the variance of that estimator. If your estimator is "blablabla", you need to know the variance of "blablabla", in order to get a confidence interval for "blablabla".</p>
+  </div>
+</section>
+</HTML>
 
-<center><img src="https://latex.codecogs.com/svg.image?Var(\bar{X}_n)=\frac{\sigma^2}{n}." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
-It should make sense for you that the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> depends on the variance of the original data, the ones that you measures on your statistical individual. If the data are variable ("messy"), the average will certainly vary from one sample to the other.
+## The *Stat* corner: the magic of confidence interval
+<br>
 
-To understand the denominator, let's take samples of different sizes. If you measure small samples, the mean of your samples will vary more from one sample to the other than if you measure large samples. Let's take samples of size <img src="https://latex.codecogs.com/svg.image?n=2"/> for instance, which is really unrealistic. In one sample you may get two small individuals or two big individuals (let's say you measure the size of an individual), which can explain the fact that the mean may vary a lot from one sample to the other. If you work with samples of size <img src="https://latex.codecogs.com/svg.image?n=1000000000"/>, which can also be unrealistic, you won't probably get 1000000000 small individuals in one sample. For these samples of large size you will probably have something representative of the distribution of your individuals. The means over something representative will not vary a lot from one sample to the other, as they are all supposed to be representative.
+The way the estimator of the mean, <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem ; margin-right:0.2rem"/>, is distributed is not dependent from the fact that the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.15rem"/> follow a normal distribution. This result is not that intuitive, but it is really important, as even though you're not working with normal distributions, the estimator of the mean will follow a normal distribution, that's the *central limit theorem*.
 
-This result on the variance of <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is really important. I'm sure that you have already seen this formula somewhere, and each time you want to calculate a confidence interval for some estimator you divide some variance by <img src="https://latex.codecogs.com/svg.image?\sqrt{n}" style="margin-bottom : -0.25rem"/>. Don't do that systematically. You have to understand what you're doing. If you are interested into some kind of estimator, all you have to do is to get the variance of that estimator. If your estimator is "blablabla", you need to know the variance of "blablabla", in order to get a confidence interval for "blablabla".
+Suppose that <img src="https://latex.codecogs.com/svg.image?\forall i, X_i" style="margin-bottom : -0.25rem"/> follows a <img src="https://latex.codecogs.com/svg.image? \mathcal{N}(\mu,\sigma^2)" style="margin-bottom : -0.5rem; margin-right:0.1rem "/>. Then if you standardize the data, you get the following formula:
 
-The way <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is distributed is not dependent from the fact that the <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem"/> follow a normal distribution. This result is not that intuitive, but it is really important, as even though you're not working with normal distributions, the estimator of the mean will follow a normal distribution, that's the *central limit theorem*.
-
-Suppose that <img src="https://latex.codecogs.com/svg.image?\forall i, X_i" style="margin-bottom : -0.25rem"/> follows a <img src="https://latex.codecogs.com/svg.image? \mathcal{N}(\mu,\sigma^2)" style="margin-bottom : -0.5rem"/>. Then if you standardize the data, you get the following formula:
-
-<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}} \sim \mathcal{N}(0,1)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}} \sim \mathcal{N}(0,1)." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 From that formula, you can easily deduce a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>.
 
-<center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}};\bar{X}_n+u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}};\bar{X}_n+u_{1-\alpha/2}\times \frac{\sigma}{\sqrt{n}}]," style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?u_{1-\alpha/2}" style="margin-bottom : -0.25rem"/> is the quantile of a normal distribution (X) such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}(X\leq u_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem"/>.
+where <img src="https://latex.codecogs.com/svg.image?u_{1-\alpha/2}" style="margin-bottom : -0.5rem"/> is the quantile of a normal distribution <img src="https://latex.codecogs.com/svg.image?X" style="margin-bottom : -0rem"/> such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}(X\leq u_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem"/>.
 
 You should read the formula this way:
 
@@ -826,24 +822,29 @@ When <img src="https://latex.codecogs.com/svg.image?\sigma"/> is not known, the 
 
 In an inferential context, we are going to use the following formula:
 
-<center><img src="https://latex.codecogs.com/svg.image?S'^2=\frac{1}{n-1}\sum(X_i-\bar{X}_n)^2" style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?S'^2=\frac{1}{n-1}\sum(X_i-\bar{X}_n)^2" style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 Why so? Actually, the main idea behind that estimator is that if you work on a sample in an inferential context you will always underestimate the variance with the sum of squares divided by <img src="https://latex.codecogs.com/svg.image?n"/>, as there is always some variability that you will miss: you observe less diversity on a sample, than on the whole population. So if you want to *infer* you have to boost the formula by dividing your sum of squares by <img src="https://latex.codecogs.com/svg.image?n-1"/> rather than by dividing by <img src="https://latex.codecogs.com/svg.image?n"/>.
 
 As <img src="https://latex.codecogs.com/svg.image?S'"/> is a random variable and not a constant (as <img src="https://latex.codecogs.com/svg.image?\sigma"/> when you know its value), the distribution of the "standardized" <img src="https://latex.codecogs.com/svg.image?\bar{X}_n" style="margin-bottom : -0.25rem"/> is more complex than in the previous case.
 
-<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{S'/\sqrt{n}} \sim  \mathcal{T}(n-1)." style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\bar{X}_n-\mu}{S'/\sqrt{n}} \sim  \mathcal{T}(n-1)." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
 Hence, the confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> is:
 
 <center><img src="https://latex.codecogs.com/svg.image?[\bar{X}_n-t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}};\bar{X}_n+t^{(n-1)}_{1-\alpha/2}\times \frac{S'}{\sqrt{n}}]," style="margin-top : -1.25rem; margin-bottom : 1.25rem"/></center>
 
-where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}" style="margin-bottom : -0.75rem"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1"/> degrees of freedom (T) such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}( T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.5rem; margin-top : 1rem"/>. 
+where <img src="https://latex.codecogs.com/svg.image?t^{(n-1)}_{1-\alpha/2}" style="margin-bottom : -0.75rem"/> is the quantile of a Student distribution with <img src="https://latex.codecogs.com/svg.image?n-1" style="margin-bottom : 0.15rem"/> degrees of freedom <img src="https://latex.codecogs.com/svg.image?T" style="margin-bottom : 0.15rem"/> such as <img src="https://latex.codecogs.com/svg.image?\mathbb{P}( T \leq t^{(n-1)}_{1-\alpha/2})=1-\alpha/2" style="margin-bottom : -0.6rem; margin-top : 1rem"/>. 
 
 Very practically, it means that you can determine a confidence interval for the real mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> that you will never know. 
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
+
+Let's have a look at the *Angel* data on the one hand, on the *J'adore ET* data on the other hand. To do so we're going to build two data frames named `experts.Angel` and `experts.Jadore` respectively.
+
+<codeblock id="01_45">
+</codeblock>
 
 ## Exercise: the notion of *p-value*
 <br>
