@@ -7,4 +7,4 @@ x_2 <- which.max(cumsum(d$y/sum(d$y)) >= pcum2)
 d$x[x_1]
 d$x[x_2]
 plot(d, main = "The notion of dispersion around the mean", type = "l", lwd = 2, col = "blue")
-polygon(c(d$x[x_1], d$x[x_1:x_2],d$x[x_2]), c(0,d$y[x_1:x_2],0), col = 'lightblue')
+polygon(c(d$x[x_1],d$x[x_1:x_2],d$x[x_2]),c(0,d$y[x_1:x_2],0), col = 'lightblue')
