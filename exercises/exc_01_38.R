@@ -1,2 +1,2 @@
-sub_experts <- experts[__,__]
-sub_experts
+experts.2products <- experts[experts$Product=="____"|experts$Product=="____", ]
+experts.2products

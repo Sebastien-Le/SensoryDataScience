@@ -649,7 +649,7 @@ If you look at the help page of the `code>sd()` function you will see in the <i>
 
 Inferential statistical analysis infers properties of a population, for example by testing hypotheses and deriving estimates. Descriptive statistics is distinguished from inferential statistics by its aim to summarize a sample, rather than use the data to learn about the population that the sample of data is thought to represent (<i><a>https://en.wikipedia.org/wiki/Statistical_inference</a></i> and <i><a>https://en.wikipedia.org/wiki/Descriptive_statistics</a></i>). 
 
-The denominator <img src="https://latex.codecogs.com/svg.image?n-1" style="margin-right : 0.2rem"/> is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by  <img src="https://latex.codecogs.com/svg.image?n"/>: to boost your estimation, the idea is to divide by a smaller number, <img src="https://latex.codecogs.com/svg.image?n-1"/> instead of <img src="https://latex.codecogs.com/svg.image?n"/>. 
+The denominator <img src="https://latex.codecogs.com/svg.image?n-1" style="margin-right : 0.2rem"/> is used in an inferential context. As you want to infer from a sample, you will systematically underestimate a deviation by dividing by  <img src="https://latex.codecogs.com/svg.image?n" style="margin-right:0.2rem"/>: to boost your estimation, the idea is to divide by a smaller number, for this estimator by <img src="https://latex.codecogs.com/svg.image?n-1"/> instead of <img src="https://latex.codecogs.com/svg.image?n" style="margin-right:0.1rem"/>. 
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 
@@ -674,7 +674,7 @@ From your data, create a data frame of dispersion parameters such as the range, 
   <div class="content">
   <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
   </p>
-<codeblock id="sec3">
+<codeblock id="sec6">
 </codeblock>
   </div>
 </section>
@@ -682,9 +682,10 @@ From your data, create a data frame of dispersion parameters such as the range, 
 
 The main question with sensory data or perception data is often: "can I explain the differences between the scores provided by my assessors for a given attributes, by the differences between my products?". In other words, one of the main hypothesis you want to test is whether different products might induce different perceptions and therefore might explain the variability of the scores.
 
-Let's consider the two products *Angel* and *J'adore ET*, and the sensory attribute *Floral*: is there a difference between these two products according to the *Floral* attribute?
+Let's consider the two products *Angel* and *J'adore ET*, and the sensory attribute *Floral* : is there a difference between these two products according to this sensory attribute?
 
-To clarify this question, let's represent the *Floral* attribute according to the two products *Angel* and *J'adore ET*. This task clearly suggests data manipulation, and we are going to introduce briefly the `dplyr` package. Don't hesitate to have a look at the *dplyr* cheat sheet at the following address: *https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf*. You can also visit this page: *https://dplyr.tidyverse.org/reference/filter.html*.
+To clarify this question, let's represent the *Floral* attribute according to the two products *Angel* and *J'adore ET*. This task suggests some data manipulation, and we are going to introduce briefly the `dplyr` package. Don't hesitate to have a look at the *dplyr* cheat sheet at the following address: *https://github.com/rstudio/cheatsheets/blob/main/data-transformation.pdf*. You can also visit this page: *https://dplyr.tidyverse.org/reference/filter.html*.
+<br>
 
 ## The *R* corner: this is a *%>%*
 <br>
@@ -711,20 +712,21 @@ Another way to do it, would be to use the `%in%` operator.
 <codeblock id="01_39">
 </codeblock>
 
-Let's have a look et the summary of the subset.
+Let's have a look at the summary of the subset.
 
 <codeblock id="01_40">
 </codeblock>
 
 As you can see, the *Product* variable is still considered as a factor with 12 levels. You can get rid of the unused levels with the `droplevels()` function.
 
-<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
-<br>
-
 <codeblock id="01_41">
 </codeblock>
 
-Let's visualize the density of the *Floral* sensory attribute for the two products *Angel* and *J'adore ET*. We use the `color` argument to differentiate density. 
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
+
+Let's visualize the density of the *Floral* sensory attribute for the two products *Angel* and *J'adore ET*. We use the `color` argument to differentiate density.
+
 <codeblock id="01_42">
 </codeblock>
 
