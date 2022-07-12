@@ -1,5 +1,2 @@
-par(mfrow=c(1,3))
-
-for (j in _:_) {
-  boxplot(experts[_,_], main = colnames(experts)[_])
-}
+par(mfrow=c(1,_))
+for (j in _:_) boxplot(experts[,_], main = colnames(experts)[_])

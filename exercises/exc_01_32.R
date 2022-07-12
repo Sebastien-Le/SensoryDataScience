@@ -1,3 +1,1 @@
-ggplot(experts) +
-  aes(x = Spicy, y = ..density..) +
-  geom_histogram(bins = 50)
+ggplot(experts) + aes(x = Spicy, y = ..density..) + geom_histogram(bins = 50)
