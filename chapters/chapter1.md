@@ -1,6 +1,6 @@
 ---
 title: 'Chapter 1: Dealing with quantitative perception'
-description: This chapter deals with continuous attributes. We introduce the notions of position and dispersion parameters, the concepts of inferential versus descriptive, the comparisons of two means and the analysis of variance.
+description: This chapter deals with continuous attributes. We introduce the notions of position and dispersion parameters, the concepts of inferential versus descriptive, the comparisons of two means, the notion of model, the analysis of variance, PCA, MFA...
 prev: null
 next: /chapter2
 type: chapter
@@ -340,9 +340,11 @@ These following lines produce the same result. Brackets are used when dealing wi
 
 Don't hesitate to go to the following link *https://www.r-bloggers.com/2015/12/how-to-write-the-first-for-loop-in-r/*. 
 
-<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<center>
+<img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/>
+</center>
 <br>
-  
+
 Finally, let's check our *experts* data frame.
 
 <codeblock id="01_18">
@@ -630,7 +632,7 @@ The most important dispersion parameter is the so-called *standard deviation*. A
 To do so, you use an estimator of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/>, usually <img src="https://latex.codecogs.com/svg.image?\bar{X}_n=\frac{1}{n}\sum_i X_i" style="margin-top : 1rem; margin-bottom : -1.9rem"/>. From this estimator (which is by the way a random variable), you can get an estimation of <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> by calculating <img src="https://latex.codecogs.com/svg.image?\bar{x}_n=\frac{1}{n} \sum_i x_i" style="margin-top : 1.6rem; margin-bottom : -1.9rem; margin-right : 0.2rem"/>. The standard deviation <img src="https://latex.codecogs.com/svg.image?\sigma" style="margin-bottom : -0rem"/> can be estimated using the following expression: <center><img src="https://latex.codecogs.com/svg.image?s = \sqrt{\frac{1}{n}\sum(x_i-\bar{x})^2}" style="margin-bottom : -1rem"/>.</center></p>
 <p> <span style="font-weight : bold">Centering</span> the data is as important as it is simple, apparently. By definition, to center is to place in the middle. Centering is subtracting the average to each value that has been measured. In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow x_i-\bar{x}" style="margin-bottom : -0.25rem; margin-right : 0.2rem"/>, where <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n} \sum_i x_i" style="margin-top : 1rem; margin-bottom : -1.8rem ; margin-right : 0.2rem"/> is the average calculated over the <img src="https://latex.codecogs.com/svg.image?x_{i}" style="margin-top : 1.5rem; margin-bottom : -0.25rem"/>.</p>
 <p>Understanding the idea of <span style="font-weight : bold">standardizing</span> the data, is the key to understanding statistics. You will see that standardized data will allow you to do compare variables that are not <i>a priori</i> comparable: am I bigger than you are small? You will be able to answer that question with standardized data. By definition, when data are standardized, their variance is equal to 1 (hence, their standard deviation is also equal to 1). In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow \frac{x_i-\bar{x}}{s}" style="margin-bottom : -1rem"/>.</p>
-<p>By construction, standardized data have no unit of measurement. These values represent the number of standard deviation that separate an individual from the average individual. Knowing that with a normal distribution, 95% of the realizations lie between more or less 2 standard deviations (actually 1.96) from the average, when a standardized data is higher than 2 in absolute value, it means that the individual is quite peculiar regarding the variable of interest.</p>
+<p>By construction, standardized data have no unit of measurement. These values represent the number of standard deviations that separate an individual from the average individual. Knowing that with a normal distribution, 95% of the realizations lie between more or less 2 standard deviations (actually 1.96) from the average, when a standardized data is higher than 2 in absolute value, it means that the individual is quite peculiar regarding the variable of interest.</p>
   </div>
 </section>
 </HTML>
@@ -857,13 +859,13 @@ The main input of this function is a vector of values, as illustrated in the fol
 <codeblock id="01_48">
 </codeblock>
 
-The results provided by the function are numerous and rich. The 2 most obvious ones are the sample estimates, and the confidence interval (you can play with the `conf.level` argument): in other words, an estimation of the true mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/>, that you will never know, a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-top:0.1rem; margin-bottom : -0.3rem ; margin-right : 0.2rem"/>. Then, the value of <img src="https://latex.codecogs.com/svg.image?t" style="margin-right:0.2rem"/> that can be interpreted as the number of standard deviation from the null hypothesis. But for this function, as nothing has been specified, what is the by default null hypothesis? The output provides a hint: "alternative hypothesis: true mean is not equal to 0", which leads to the fact that the null hypothesis is "true mean is equal to 0". Last but not least, the <span style="font-weight : bold">p-value</span>. In this context, this is the probability to observe what has been observed under the hypothesis that the true mean is equal to 0. 
+The results provided by the function are numerous and rich. The 2 most obvious ones are the sample estimates, and the confidence interval (you can play with the `conf.level` argument): in other words, an estimation of the true mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/>, that you will never know, a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-top:0.1rem; margin-bottom : -0.3rem ; margin-right : 0.2rem"/>. Then, the value of <img src="https://latex.codecogs.com/svg.image?t" style="margin-right:0.2rem"/> that can be interpreted as the number of standard deviations from the null hypothesis. But for this function, as nothing has been specified, what is the by default null hypothesis? The output provides a hint: "alternative hypothesis: true mean is not equal to 0", which leads to the fact that the null hypothesis is "true mean is equal to 0". Last but not least, the <span style="font-weight : bold">p-value</span>. In this context, this is the probability to observe what has been observed under the hypothesis that the true mean is equal to 0. 
 
 All this information leads to the same conclusion: we reject the null hypothesis that the true mean is equal to 0.
 
 * 0, the true mean to be tested, doesn't belong to the confidence interval
 
-* <img src="https://latex.codecogs.com/svg.image?t" style="margin-right : 0.2rem"/>, the number of standard deviation, is pretty far from the null hypothesis (its absolute value is higher than 2)
+* <img src="https://latex.codecogs.com/svg.image?t" style="margin-right : 0.2rem"/>, the number of standard deviations, is pretty far from the null hypothesis (its absolute value is higher than 2)
 
 * the <img src="https://latex.codecogs.com/svg.image?p-value" style="margin-bottom : -0.4rem"/> is rather small, less than 0.05
 
@@ -921,13 +923,13 @@ In practice, to compare the two products *Angel* and *J'adore ET*, in other word
 <codeblock id="01_48c">
 </codeblock>
 
-The results provided by the function are numerous and rich. The 2 most obvious ones are the sample estimates, and the confidence interval (you can play with the `conf.level` argument): in other words, an estimation of the true  means <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/>, that you will never know, a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2" style="margin-top:0.1rem; margin-bottom : -0.3rem ; margin-right : 0.2rem"/>. Then, the value of <img src="https://latex.codecogs.com/svg.image?t" style="margin-right:0.2rem"/> that can be interpreted as the number of standard deviation from the null hypothesis. But for this function, as nothing has been specified, what is the by default null hypothesis? The output provides a hint: "alternative hypothesis: true difference in means is not equal to 0", which leads to the fact that the null hypothesis is "true difference in means is equal to 0". Last but not least, the <span style="font-weight : bold">p-value</span>. In this context, this is the probability to observe what has been observed under the hypothesis that the true difference in means is equal to 0. 
+The results provided by the function are numerous and rich. The 2 most obvious ones are the sample estimates, and the confidence interval (you can play with the `conf.level` argument): in other words, an estimation of the true  means <img src="https://latex.codecogs.com/svg.image?\mu_1" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/> and <img src="https://latex.codecogs.com/svg.image?\mu_2" style="margin-bottom : -0.3rem ; margin-right : 0.2rem"/>, that you will never know, a confidence interval for <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2" style="margin-top:0.1rem; margin-bottom : -0.3rem ; margin-right : 0.2rem"/>. Then, the value of <img src="https://latex.codecogs.com/svg.image?t" style="margin-right:0.2rem"/> that can be interpreted as the number of standard deviations from the null hypothesis. But for this function, as nothing has been specified, what is the by default null hypothesis? The output provides a hint: "alternative hypothesis: true difference in means is not equal to 0", which leads to the fact that the null hypothesis is "true difference in means is equal to 0". Last but not least, the <span style="font-weight : bold">p-value</span>. In this context, this is the probability to observe what has been observed under the hypothesis that the true difference in means is equal to 0. 
 
 All this information leads to the same conclusion: we reject the null hypothesis that the true difference in means is equal to 0.
 
 * 0, the true difference in means to be tested, doesn't belong to the confidence interval
 
-* <img src="https://latex.codecogs.com/svg.image?t" style="margin-right : 0.2rem"/>, the number of standard deviation, is pretty far from the null hypothesis (its absolute value is higher than 2)
+* <img src="https://latex.codecogs.com/svg.image?t" style="margin-right : 0.2rem"/>, the number of standard deviations, is pretty far from the null hypothesis (its absolute value is higher than 2)
 
 * the <img src="https://latex.codecogs.com/svg.image?p-value" style="margin-bottom : -0.3rem"/> is rather small, less than 0.05
 
@@ -1221,6 +1223,57 @@ This array gathers the estimation of the adjusted means for each product (row) a
 
 Hence, it is possible to calculate a distance between two products, taking into account all the sensory attributes, in order to see which products are close, and which products are distant in terms of sensory profiles.
 
+By definition, the *Euclidean* distance between two products can be obtained the following way:
+
+<center>
+  <img src="https://latex.codecogs.com/svg.image?d^2(i,i')=\sum_{j=1}^J(x_{ij}-x_{i'j})^2." style="margin-top : 0rem; margin-bottom : -1rem"/>
+<center>
+
+<br>
+
+## The *Algo* corner: a little bit of algebra in this world of brutes
+<br>
+
+Linear algebra allows to sum over indices without looping. In the following part, we are going to standardize the data and calculate a distance matrix among the products thanks to matrix calculations. Don't hesitate to check the following link: https://www.statmethods.net/advstats/matrix.html.
+
+In the code, `res.c` is the data matrix that has been centered, `res.cr` is the data matrix that has been standardized. Let's first calculate `res.c`.
+
+<codeblock id="01_mat1">
+</codeblock>
+
+<span style="font-weight : bold">Centering</span> the data is as important as it is simple, apparently. By definition, to center is to place in the middle. Centering is subtracting the average to each value that has been measured. In other words <img src="https://latex.codecogs.com/svg.image?x_i \leftarrow x_i-\bar{x}" style="margin-bottom : -0.25rem; margin-right : 0.2rem"/>, where <img src="https://latex.codecogs.com/svg.image?\bar{x}=\frac{1}{n} \sum_i x_i" style="margin-top : 1rem; margin-bottom : -1.8rem ; margin-right : 0.2rem"/> is the average calculated over the <img src="https://latex.codecogs.com/svg.image?x_{i}" style="margin-top : 1.5rem; margin-bottom : -0.25rem"/>.
+
+Check that the mean for each column is equal to 0.
+
+<codeblock id="01_mat1b">
+</codeblock>
+
+Let's calculate `res.cr`.
+
+<codeblock id="01_mat2">
+</codeblock>
+
+Understanding the idea of <span style="font-weight : bold">standardizing</span> the data, is the key to understanding statistics. Standardized data allow you to do compare variables that are not <i>a priori</i> comparable: am I bigger than you are small? By definition, when data are standardized, their variance is equal to 1 (hence, their standard deviation is also equal to 1). By construction, standardized data have no unit of measurement. These values represent the number of standard deviations that separate an individual from the average individual.
+
+Check that the standard deviation for each column is equal to 1.
+
+<codeblock id="01_mat2b">
+</codeblock>
+
+What do you think happened? The following code block is for you to try to figure out what happened.
+
+<codeblock id="01_mat2c">
+</codeblock>
+
+Calculate the Euclidean distance between *Angel* and *Aromatics Elixir* from the standardized data. Compare this distance to the one obtained with the `dist()` function.
+
+<codeblock id="01_mat2d">
+</codeblock>
+
+https://en.wikipedia.org/wiki/Cosine_similarity
+
+
+
 </exercise>
 
 <exercise id="11" title="From the notion of distance to the notion of inertia">
@@ -1253,7 +1306,7 @@ Hence, it is possible to calculate a distance between two products, taking into 
   <div class="content">
   <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
   </p>
-<codeblock id="sec3">
+<codeblock id="sec10">
 </codeblock>
   </div>
 </section>
