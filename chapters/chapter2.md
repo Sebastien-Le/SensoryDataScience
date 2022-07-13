@@ -340,12 +340,10 @@ To answer this question cross these two variables and build a *contingency table
 A contingency table is a very important object in statistics. It is interesting to present it in a formal way by introducing some notations. Let <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : 0rem; margin-bottom : 0rem"/> be the index of the rows, <img src="https://latex.codecogs.com/svg.image?j" style="margin-top : 0rem; margin-bottom : -0.4rem"/> be the index of the columns: <img src="https://latex.codecogs.com/svg.image?n_{ij}" style="margin-top : 0rem; margin-bottom : -0.4rem"/> is the contingent of individuals that belong to both categories <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : 0rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?j" style="margin-top : 0rem; margin-bottom : -0.4rem"/>; <img src="https://latex.codecogs.com/svg.image?n" style="margin-top : 0rem; margin-bottom : 0rem"/> is the total number of individuals, 
 
 <center>
-<img src="https://latex.codecogs.com/svg.image?n = \sum_i n_{i.} = \sum_j n_{.j} = \sum_i \sum_j n_{ij}" style="margin-top : 0rem; margin-bottom : -1.5rem"/>,
+<img src="https://latex.codecogs.com/svg.image?n = \sum_i n_{i.} = \sum_j n_{.j} = \sum_i \sum_j n_{ij}," style="margin-top : 0rem; margin-bottom : -0.5rem"/>
 <center>
 
 where <img src="https://latex.codecogs.com/svg.image?n_{i.}" style="margin-top : 1rem; margin-bottom : -0.2rem"/> is the contingent of individuals in the category <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : 1rem; margin-bottom : 0rem"/>.
-
-<br>
 
 Now let's ask ourselves an important practical question: those people who are favourable to the inclusion of GM raw materials in products to be fed to animals, how are they distributed within the political parties? 
 

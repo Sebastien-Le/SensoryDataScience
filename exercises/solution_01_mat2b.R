@@ -1,0 +1,1 @@
+for (j in 1:J) print(sd(res.cr[,j]))
