@@ -1270,10 +1270,6 @@ Calculate the Euclidean distance between *Angel* and *Aromatics Elixir* from the
 <codeblock id="01_mat2d">
 </codeblock>
 
-https://en.wikipedia.org/wiki/Cosine_similarity
-
-
-
 </exercise>
 
 <exercise id="11" title="From the notion of distance to the notion of inertia">
@@ -1287,11 +1283,42 @@ https://en.wikipedia.org/wiki/Cosine_similarity
   <div class="content">
   <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
   </p>
-<codeblock id="sec10">
+<codeblock id="sec11">
 </codeblock>
   </div>
 </section>
 </HTML>
+
+In the previous section, we have moved from a matrix of measure, where products (in rows) are described by sensory attributes (in columns), to a matrix of distance between products: according to their sensory profiles (calculated from the measures), how far are the products from each other? 
+
+This question can be rephrased the following way: how variable is my product space? To answer this question, we have to move from the products to the product space, from the distance to a more global indicator that characterizes the product space in terms of variability among the products.
+
+This global indicator that characterizes the matrix is called the <span style="font-weight : bold">inertia</span>. It's the multidimensional version of the variance. It's the indicator you want to understand, when you want to understand distances between individuals, based on several variables.
+
+More formally, the inertia of a set of weighted individuals I, can be expressed the following way:
+
+<center>
+  <img src="https://latex.codecogs.com/svg.image?I(N_I) = \sum_i p_i \times d^2(i,g)," style="margin-top : 0rem; margin-bottom : 0rem"/>
+<center>
+
+where <img src="https://latex.codecogs.com/svg.image?N_I" style="margin-top : 0rem; margin-bottom : -0.25rem"/> is the scatter plot of the individuals, <img src="https://latex.codecogs.com/svg.image?g" style="margin-top : 0rem; margin-bottom : -0.25rem"/> its center of gravity, <img src="https://latex.codecogs.com/svg.image?p_i" style="margin-top : 0rem; margin-bottom : -0.25rem"/> the weight of each individual.
+
+If you look at carefully, this expression is very similar to the variance expression:
+
+<center>
+  <img src="https://latex.codecogs.com/svg.image?Var(X) = \sum_i \frac{1}{n} \times (x_i-\bar{x})^2." style="margin-top : 0rem; margin-bottom : 0rem"/>
+<center>
+
+In this expression, the distance between an individual and the center of gravity is equal to   <img src="https://latex.codecogs.com/svg.image? (x_i-\bar{x})." style="margin-top : 0rem; margin-bottom : -0.3rem"/>
+
+While in a univariate context variance is the one thing you are interested in, in a multivariate context it's all about <span style="font-weight : bold">inertia</span>.
+
+Let's calculate the inertia of our product space, based on the standardized data (for educational purposes). Note that, as data are standardized, the center of gravity of <img src="https://latex.codecogs.com/svg.image?N_I" style="margin-top : 0rem; margin-bottom : -0.25rem"/> is the origin of our vector space. Therefore, the inertia can be obtained very easily.
+
+<codeblock id="01_85">
+</codeblock>
+
+This magic number, when data are standardized, is equal to the number of variables used to calculate the distance between the individuals. Indeed, if you come back to the definition of the Euclidean distance, and if you permute the sums over the individuals with the sum of the variables, you finally obtain a sum of variances over the variables: each variable being standardized, you sum 1 over the variables, which is the number of variables.
 
 </exercise>
 
@@ -1312,9 +1339,13 @@ https://en.wikipedia.org/wiki/Cosine_similarity
 </section>
 </HTML>
 
+This magic number can be illustrated graphically in at least two ways.
+
 </exercise>
 
 <exercise id="13" title="From the inertia decomposition to Principal Components Analysis">
+
+https://en.wikipedia.org/wiki/Cosine_similarity
 
 <HTML>
 <section class="accordion2">
