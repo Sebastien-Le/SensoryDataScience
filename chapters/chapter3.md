@@ -30,6 +30,14 @@ How to delete spaces
 <codeblock id="03_05">
 </codeblock>
 
+
+<codeblock id="tuto_01">
+</codeblock>
+
+<codeblock id="tuto_02">
+</codeblock>
+
+
 </exercise>
 
 <exercise id="2" title="Corpus">
