@@ -1339,7 +1339,19 @@ This magic number, when data are standardized, is equal to the number of variabl
 </section>
 </HTML>
 
-This magic number can be illustrated graphically in at least two ways.
+This magic number can be illustrated graphically in at least two ways, but according to the same principle: by highlighting a relevant information on data matrix, its <span style="font-weight : bold">structure</span>; in other words, the way the rows of the matrix are inter-related or connected.
+
+```{r}
+coltable(magicsort(res.decat$tabT,method = "median")[-8,-9], 
+         level.lower = -1.96, level.upper = 1.96, cex = 0.8,
+         main.title = "Estimation of the coefficients with 2-ways ANOVA")
+```
+<br>
+<center><img src="Rplot.png" alt="what image shows"  width=100%></center>
+<br>
+
+<codeblock id="01_86">
+</codeblock>
 
 </exercise>
 
