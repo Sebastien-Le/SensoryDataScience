@@ -1,0 +1,769 @@
+---
+title: "Script TIRAC"
+author: "Alexiane LUC"
+date: "7 octobre 2019"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+Importation des donnees :
+
+```{r}
+tissu <- read.csv("data/data_tissu_orig.csv", header=T, sep=";", dec=",", na.strings = " ")
+dico_pola <- read.csv("data/dico_polarite_tissu.csv",header=TRUE,sep=";",dec=",")
+dico_val <- read.csv("data/dico_valence_tissu.csv",header=TRUE,sep=";", dec=",")
+
+
+library(dplyr)
+library(sentimentr)
+library(FactoMineR)
+library(SensoMineR)
+library(tm)
+library(stringr)
+library(tidyr)
+library(data.table)
+library(car)
+
+
+#creation des dictionnaires
+key_pola <- data.frame(
+  mots = dico_pola$Mots,
+  polarite = dico_pola$Polarite,
+  stringsAsFactors = FALSE)
+mykey_pola <- as_key(key_pola)
+
+dico_valence <- lexicon::hash_valence_shifters
+mykey_val <- update_valence_shifter_table(dico_valence, x = data.frame(x =dico_val$Mots,y=dico_val$Valence))
+
+
+Unaccent_dico <- function(text) {
+  text <- gsub("[`^~\"]", " ", text)
+  text= gsub("[éèëê]", "e", text)
+  text= gsub("[ôö]", "o", text)
+  text= gsub("[îï]", "i", text)
+  text <- gsub("[`^~\"éèéêôö]", "", text)
+  text = gsub("[ç]","c",text)
+  text = gsub("[âà]","a",text)
+  text = gsub("[,.;:?]", " ",text)
+  return(text)
+}
+
+Unaccent_jdd <- function(text) {
+  text <- gsub("[`^~\"]", " ", text)
+  text= gsub("[éèëê]", "e", text)
+  text= gsub("[ôö]", "o", text)
+  text= gsub("[îï]", "i", text)
+  text <- gsub("[`^~\"éèéêôö]", "", text)
+  text = gsub("[ç]","c",text)
+  text = gsub("'","' ",text)
+  text = gsub("[âà]","a",text)
+  text = gsub("[,.;:?]", " ",text)
+  return(text)
+}
+
+```
+
+
+Recodage sur jeu de données brut : 10 correspond au nombre de produits.
+
+**PASSER DIRECTEMENT A LA LIGNE 203**
+
+```{r}
+
+recodage_jdd <- function(jdd){
+  nbligne <- length(unique(jdd$X.Case.ID.))*10
+  new_data <- data.frame(matrix(ncol=5, nrow = nbligne))
+  colnames(new_data) <- c("ID_juge","Produit","Classe_hedo","Description","Note")
+  vec_juge <- rep(0,nbligne)
+  nb <- seq(from=1, to=nbligne, by=10)
+  a=1
+  for (i in nb){
+    vec_juge[i:(i+9)] <- unique(jdd$X.Case.ID.)[a]
+    a=a+1
+  }
+  new_data$ID_juge <- vec_juge
+  vec_produit <- rep((c("A","B","C","D","E","F","G","H","I","J")),60)
+  new_data$Produit <- vec_produit
+  j=1
+  for (i in nb){
+    tissuxjuge <- new_data[i:(i+9),]
+    tissuxjuge[,3] <- data.frame(t(jdd[j,(12):(12+9)]))
+    tissuxjuge <- tissuxjuge%>%arrange(Classe_hedo)
+    jaimepas <- which(tissuxjuge$Classe_hedo==1)
+    jaimepeu <- which(tissuxjuge$Classe_hedo==2)
+    jaimebeaucoup <- which(tissuxjuge$Classe_hedo==3)
+    tissuxjuge[jaimepas,4] <- as.character(t(jdd[j,22:(22+length(jaimepas)-1)]))
+    tissuxjuge[jaimepeu,4] <- as.character(t(jdd[j,42:(42+length(jaimepeu)-1)]))
+    tissuxjuge[jaimebeaucoup,4] <- as.character(t(jdd[j,62:(62+length(jaimebeaucoup)-1)]))
+    if (length(jaimepas)>0){
+      tissuxjuge[jaimepas,5] <- t(jdd[j,32:(32+length(jaimepas)-1)])
+    }
+    if (length(jaimepeu)>0){
+      tissuxjuge[jaimepeu,5] <- t(jdd[j,52:(52+length(jaimepeu)-1)])
+    }
+    if (length(jaimebeaucoup)>0){
+      tissuxjuge[jaimebeaucoup,5] <- t(jdd[j,72:(72+length(jaimebeaucoup)-1)])
+    }
+    new_data[i:(i+9),] <- tissuxjuge
+    j=j+1
+  }
+  classe <- new_data$Classe_hedo
+  for (i in 1:length(classe)){
+    if (classe[i]==1){
+      classe[i]="je n'aime pas"
+    }
+    if (classe[i]==2){
+      classe[i]="j'aime un peu"
+    }
+    if (classe[i]==3){
+      classe[i]="j'aime beaucoup"
+    }
+  }
+  new_data$Classe_hedo <- classe
+  new_data$ID_juge <- as.factor(new_data$ID_juge)
+  new_data$Produit <- as.factor(new_data$Produit)
+  new_data$Classe_hedo <- as.factor(new_data$Classe_hedo)
+  new_data$Description <- as.factor(new_data$Description)
+  new_data$Description <- Unaccent_jdd(new_data$Description)
+  new_data$Description <- tolower(new_data$Description)
+  return(new_data)
+}
+
+bon_tissu <- recodage_jdd(tissu)
+
+```
+
+# Correction othographique :
+- La 1ere fonction "jdd_correction" prend en argument le nom du fichier et le dictionnaire : elle renvoie un script enregistré dans votre dossier de travail
+- La 2eme fonction "replace_correction" prend en argument le nom du fichier, le numero de la ligne, la phrase
+  de contexte, le mot mal orthographie et la correction proposee
+
+```{r}
+# jdd_correction <- function(nom_jdd,dico){
+#   nom_jdd$Description <- Unaccent_jdd(nom_jdd$Description)
+#   nom_jdd_description <- as.character(nom_jdd$Description)
+#   cs1 <- check_spelling(Unaccent_jdd(nom_jdd_description),dictionary = dico)
+#   phrase <- rep("NA", dim(cs1)[1])
+#   for (i in 1:(dim(cs1)[1])){
+#     phrase[i] <- nom_jdd[cs1[i,1],4]
+#   }
+#   mot_mal_orthographe <- rep("NA",dim(cs1)[1])
+#   for (i in 1:(dim(cs1)[1])){
+#     mot_mal_orthographe[i] <- cs1[i,3]
+#   }
+#   num_ligne <- rep(NA, dim(cs1)[1])
+#   for (i in 1:(dim(cs1)[1])){
+#     num_ligne[i] <- cs1[i,1]
+#   }
+#   mot_correction <- rep("NA",dim(cs1)[1])
+#   for (i in 1:(dim(cs1)[1])){
+#     mot_correction[i] <- cs1[i,4]
+#   }
+#   data_correction <- data.frame(cbind(num_ligne,phrase,mot_mal_orthographe,mot_correction))
+#   n = dim(data_correction)[1]
+#   sink("outfile.txt")
+#   cat("new_jdd <- nom_jdd")
+#   cat("\n")
+#   cat("## Vous trouvez sur chaque ligne le contexte de la faute, la faute et sa suggestion de remplacement. Merci de la corriger (sans accents, en minuscule) si elle ne vous convient pas. ")
+#   cat("\n")
+#   for (i in 1:n){
+#     cat('new_jdd <- replace_correction(new_jdd,',as.character(data_correction[i,1]),',"',as.character(data_correction[i,2]),'","',
+#         as.character(data_correction[i,3]),',"',as.character(data_correction[i,4]),'")')
+#     cat("\n")
+#   }
+#   sink()
+# }
+# 
+# jdd_correction(bon_tissu,dico)
+# 
+# 
+# replace_correction <- function(nom_jdd,num_ligne,contexte,mot_mal_orthographe,mot_correction){
+#   new_jdd <- nom_jdd
+#   new_jdd[num_ligne,4] <- gsub(mot_mal_orthographe,mot_correction,contexte)
+#   return(new_jdd)
+# }
+# 
+# #copier ci dessous le script avec le mot bien orthographie
+# 
+# bon_tissu <- new_jdd
+```
+
+Ajout de nouvelles colonnes au jdd :
+
+```{r}
+bon_tissu <- read.csv("data/data_corrige.csv",header=T,sep=";",dec=",")
+
+#colonne jugexproduit
+JP <- rep("NA",600)
+for (i in 1:600){
+  JP[i]<-paste(bon_tissu$ID_juge[i],bon_tissu$Produit[i], sep="_")
+}
+data <- cbind(bon_tissu,JP)
+
+#colonne jugexclasse
+JxCH <- rep("NA",600)
+for (i in 1:600){
+  JxCH[i]<-paste(bon_tissu$ID_juge[i],bon_tissu$Classe_hedo[i], sep="_")
+}
+data <- cbind(bon_tissu,JxCH)
+
+```
+
+Différents scores de sentiment :
+
+```{r}
+data_sent <- get_sentences(bon_tissu)
+
+#sentiment par produit x juge
+sentiment1 <- sentiment(data_sent,polarity_dt=mykey_pola,valence_shifters_dt = mykey_val)
+
+#sentiment par juge x class
+sentiment2 <- sentiment_by(data_sent$decription_corrig, by=data_sent$JxCH,
+                           polarity_dt=mykey_pola,valence_shifters_dt = mykey_val, averaging.function = average_mean)
+
+#sentiment par produit
+sentprod <- sentiment_by(data_sent$decription_corrig, by=data_sent$Produit,
+                         polarity_dt=mykey_pola,valence_shifters_dt = mykey_val, averaging.function = average_mean)
+sentprod <- sentprod%>%arrange(-ave_sentiment)
+
+#tableau de contingence produit x classe hedonique
+table_conting_produit <- table(sentiment1$Produit,sentiment1$Classe_hedo)
+table_conting_produit <- table_conting_produit[c(3,10,5,6,1,2,9,8,7,4),]
+
+#moyenne liking par produit
+
+note <- aggregate(data.frame(Note=bon_tissu$Note),by=list(Produit=bon_tissu$Produit),mean)
+note <- note%>%arrange(-Note)
+```
+
+Tableau du résultat de l'anova par juge : coherence score ~ Classe hédonique par juge
+
+```{r}
+anova_juge <- function(jdd_recode){
+  res_anova <- data.frame(matrix(data=0,ncol=6,nrow=232))
+  colnames(res_anova) <- c("Juge","Classe","Estimate","Std. Error","t value","Pr(>|t|")
+  juge <- as.character(unique(jdd_recode$ID_juge))
+  vec_juge <- rep(0,240)
+  nb <- seq(from=1, to=240, by=4)
+  a=1
+  for (i in nb){
+    vec_juge[i:(i+3)] <- (juge[a])
+    a=a+1
+  }
+  vec_juge <- vec_juge[-c(177:180,221:224)]
+  res_anova$Juge <- vec_juge
+  juge <- juge[-c(11,28,41,45,56)]
+  data_sent <- get_sentences(jdd_recode)
+  sentiment1 <- sentiment(data_sent,polarity_dt=mykey_pola,valence_shifters_dt = mykey_val)
+  for (i in 1:length(juge)){
+    sentim = sentiment1[sentiment1$ID_juge==juge[i],]
+    sentim$Classe_hedo <- as.factor(as.character(sentim$Classe_hedo))
+    aov <- AovSum(sentiment~Classe_hedo, data=sentim)
+    lig <- which(res_anova$Juge==juge[i])
+    res_anova[lig[1]:lig[4],3] <- aov[[2]][1:4]
+    res_anova[lig[1]:lig[4],4] <- aov[[2]][5:8]
+    res_anova[lig[1]:lig[4],5] <- aov[[2]][9:12]
+    res_anova[lig[1]:lig[4],6] <- aov[[2]][13:16]
+  }
+  for (i in c("32","49")){
+    sentim = sentiment1[sentiment1$ID_juge==i,]
+    sentim$Classe_hedo <- as.factor(as.character(sentim$Classe_hedo))
+    aov <- AovSum(sentiment~Classe_hedo, data=sentim)
+    lig <- which(res_anova$Juge==i)
+    res_anova[c(lig[1],lig[3],lig[4]),3] <- aov[[2]][1:3]
+    res_anova[c(lig[1],lig[3],lig[4]),4] <- aov[[2]][4:6]
+    res_anova[c(lig[1],lig[3],lig[4]),5] <- aov[[2]][7:9]
+    res_anova[c(lig[1],lig[3],lig[4]),6] <- aov[[2]][10:12]
+  }
+  sentim = sentiment1[sentiment1$ID_juge=="63",]
+  sentim$Classe_hedo <- as.factor(as.character(sentim$Classe_hedo))
+  aov <- AovSum(sentiment~Classe_hedo, data=sentim)
+  lig <- which(res_anova$Juge=="63")
+  res_anova[c(lig[1],lig[2],lig[4]),3] <- aov[[2]][1:3]
+  res_anova[c(lig[1],lig[2],lig[4]),4] <- aov[[2]][4:6]
+  res_anova[c(lig[1],lig[2],lig[4]),5] <- aov[[2]][7:9]
+  res_anova[c(lig[1],lig[2],lig[4]),6] <- aov[[2]][10:12]
+  Classe_hedo_anov <- rep(c("(Intercept)","Classe_hedo - j'aime beaucoup","Classe_hedo - j'aime un peu",
+                            "Classe_hedo - je n'aime pas"),58)
+  res_anova$Classe <- Classe_hedo_anov
+  n <- dim(res_anova)[1]
+  j <- n/4
+  juge <- unique(res_anova$Juge)
+  juge_coherent <- c()
+  juge_moy_coherent <- c()
+  juge_incoherent <- c()
+  jc=1
+  jm=1
+  ji=1
+  for (i in juge){
+    jdd <- res_anova[res_anova$Juge==i,]
+    if (jdd[2,3] > jdd[3,3] & jdd[3,3] > jdd[4,3]){
+      juge_coherent[jc] <- i
+      jc=jc+1
+    }
+    if ((jdd[2,3] > jdd[4,3] & jdd[4,3] > jdd[3,3])|(jdd[3,3] > jdd[2,3] & jdd[2,3] > jdd[4,3])){
+      juge_moy_coherent[jm] <- i
+      jm=jm+1
+    }
+    if (jdd[2,3] < jdd[4,3]){
+      juge_incoherent[ji] <- i
+      ji=ji+1
+    }
+  }
+  return(res_anova)
+}
+
+
+res_anova_juge <- anova_juge(bon_tissu)
+
+```
+
+Coherence score ~ Classe hédonique tous juges confondus
+
+```{r}
+class <- rep(c("J'aime beaucoup","J'aime un peu","Je n'aime pas"),57)
+sent2_juge <- sentiment2[-c(31,32,119,120,81,82)]
+sent2_bis <- cbind(sent2_juge,class)
+sent2_bis$class <- as.factor(sent2_bis$class)
+sent2_bis$jugexclass <- as.factor(sent2_bis$jugexclass)
+
+options(contrasts = c("contr.sum","contr.sum"))
+
+summary(sent2_bis)
+mod <- AovSum(ave_sentiment~class, data=sent2_bis)
+mod
+```
+
+Cohérence entre le liking et le score de sentiment
+
+Sentiment Mapping :
+
+```{r}
+scoresentJP <- sentiment1%>%arrange(JP)
+scoresentJP <- scoresentJP[,c(6,11)]
+
+# Creation d'un tableau de contingence : Produit en ligne, classe hedonique en colonne 
+
+tab_afm <- function(scoresentJP,bon_tissu){
+  tcont <- as.matrix(table(bon_tissu$Produit,bon_tissu$Classe_hedo))
+  tcont <- cbind(c("A","B","C","D","E","F","G","H","I","J"),tcont[,1:3])
+  colnames(tcont)<-c("Produit","j'aime beaucoup","j'aime un peu","je n'aime pas")
+  tcont <- as.data.frame(tcont,row.names = 1)
+  tcont$`j'aime beaucoup`<- as.numeric(as.character(tcont$`j'aime beaucoup`))
+  tcont$`j'aime un peu`<-as.numeric(as.character(tcont$`j'aime un peu`))
+  tcont$`je n'aime pas`<-as.numeric(as.character(tcont$`je n'aime pas`))
+  classehedo <- data.frame(matrix(data="NA",nrow=10, ncol=60))
+  colnames(classehedo) <- unique(bon_tissu$ID_juge)
+  rownames(classehedo) <- unique(bon_tissu$Produit)
+  nb <- seq(from=1, to=600, by=10)
+  a=1
+  for (i in nb){
+    classehedo[,a]<-bon_tissu[i:(i+9),3]
+    a=a+1
+  }
+  jdd_afm_carto <- cbind(classehedo,tcont)
+  jdd_afm_carto <- jdd_afm_carto[,-61]
+  return(jdd_afm_carto)
+}
+
+jdd_afm_carto <- tab_afm(scoresentJP,bon_tissu)
+res.afm <- MFA(jdd_afm_carto,group=c(60,3),type=c("n","f"))
+
+# Creation d'un JDD avec score sentiment : on ajoute le score sentiment par JugexProduit au JDD bon_tissu
+
+jdd_score_sent <- function(bon_tissu,scoresentJP){
+  bon_tissu_scoresentJP <- left_join(bon_tissu,scoresentJP,by="JP")
+  scoresent <- data.frame(matrix(data="NA",nrow=10, ncol=60))
+  colnames(scoresent) <- unique(bon_tissu_scoresentJP$ID_juge)
+  rownames(scoresent) <- unique(bon_tissu_scoresentJP$Produit)
+  nb <- seq(from=1, to=600, by=10)
+  a=1
+  for (i in nb){
+    scoresent[,a]<-bon_tissu_scoresentJP[i:(i+9),8]
+    a=a+1
+  }
+  return(scoresent)
+}
+
+scoresentJP <- scoresentJP[-71,]
+scoresent <- jdd_score_sent(bon_tissu,scoresentJP)
+
+mean <- rep(0,10)
+for (i in 1:10){
+  for (j in 1:60){
+    mean[i] <- mean[i]+scoresent[i,j]
+  }
+}
+mean <- mean/60
+
+res.carto <- carto(res.afm$ind$coord[,1:2],na.omit(scoresent),col.min=0,col.max=4, graph.tree=T,graph.corr=T, main="Sentiment Mapping")
+res.carto$matrice
+```
+#### Carto à la main
+
+```{r}
+mean(scoresent.woNa)
+scoresent.woNa <- scoresent[,-8]    
+xy <- res.afm$ind$coord[,1:2]
+resolution <- 200
+sub.x <- seq(min(xy[,1]), max(xy[,1]), length.out=resolution)
+sub.y <- seq(min(xy[,2]), max(xy[,2]), length.out=resolution)
+mat.final <- matrix(0,nrow=resolution, ncol=resolution)
+for(i in 1:ncol(scoresent.woNa)){
+  mod <- lm(scoresent.woNa[,i]~xy[,1]+xy[,2]+I(xy[,1]^2)+I(xy[,2]^2)+xy[,1]*xy[,2])
+  mat.ind <- matrix(0,nrow=resolution, ncol=resolution)
+  mean.ind <- mean(scoresent.woNa[,i])
+  for(j in 1:resolution){
+    for(k in 1:resolution){
+      predict.lm <- mod$coefficients[1]+(sub.x[j]*mod$coefficients[2])+(sub.y[k]*mod$coefficients[3])+(sub.x[j]^2*mod$coefficients[4])+(sub.y[k]^2*mod$coefficients[5])+(sub.y[k]*sub.x[j]*mod$coefficients[6])
+      mat.ind[j,k] <- as.numeric(predict.lm>mean.ind)
+    }
+  }
+  mat.final<-mat.final+mat.ind
+  print(i)
+}
+
+mat.final<-mat.final*(100/60)
+res.afm
+
+library(factoextra)
+fviz_mfa_ind(res.mfa)
+
+library(RColorBrewer)
+image(sub.x, sub.y,mat.final, col=brewer.pal(n = 8, name = "RdBu"))
+points(res.afm$ind$coord)
+text(res.afm$ind$coord[,1]+0.1,res.afm$ind$coord[,2], label=row.names(res.afm$ind$coord) , col="black", cex=1.2)
+contour(sub.x, sub.y, mat.final, add = TRUE, nlevels = 6)
+```
+
+
+Regroupements en grands concepts :
+Nous l'avions fait lors de TIRAC mais je pense désormais que ce n'est pas envisageable car trop subjectif. A moins de le faire via des techniques de machine learning avec apprentissage
+
+```{r}
+dico_jar<-dico_jar_tissu
+dico_jar$Mots<-Unaccent_dico(dico_jar$Mots)
+jdd_jar <- data.frame(matrix(ncol=dim(dico_jar)[1]+7,nrow = dim(bon_tissu)[1]))
+colnames(jdd_jar) <- c(colnames(bon_tissu),as.character(dico_jar$Mots))
+jdd_jar[,1:7] <- bon_tissu
+
+# Faire un remove words sur la description !!!!
+
+jdd_jar$decription_corrig<-gsub("pas assez", "pas_assez", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("pas vraiment", "pas_assez", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("juste bien", "jar", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("peu trop", "trop", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("manque ", "pas_assez ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("sans ", "pas_assez ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("correctement ", "jar ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("convenablement ", "jar ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("hyper ", "jar ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("super ", "jar ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("bonne ", "jar ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("tres ", "jar ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("^assez ", "jar ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub(" assez ", " jar ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("pas ", "pas_assez ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("peu ", "trop ", jdd_jar$decription_corrig)
+jdd_jar$decription_corrig<-gsub("bien ", "jar ", jdd_jar$decription_corrig)
+
+mot_jar <- dico_jar$Mots
+
+complete_jar <- function(mot_jar,jdd_jar){
+  mj <- length(mot_jar)
+  descrip <- jdd_jar$decription_corrig
+  descrip_split <- str_split(descrip,pattern = " ")
+  for (i in 1:nrow(jdd_jar)){
+    for (j in 1:length(descrip_split[[i]])){ 
+      for (k in 1:mj){
+        if (descrip_split[[i]][j]==mot_jar[k]){
+          if((j-1)>0){
+            jdd_jar[i,(k+7)] <- descrip_split[[i]][j-1]
+          }
+        }
+        if(jdd_jar[i,(k+7)] %in% c("trop","pas_assez","jar")){
+          jdd_jar[i,(k+7)]<-jdd_jar[i,(k+7)]
+        } else {
+          jdd_jar[i,(k+7)]<-NA
+        }
+      }
+    }
+  }
+  return (jdd_jar)
+}
+
+data_test <- complete_jar(mot_jar,jdd_jar)
+
+
+#Supprime les colonnes de NA
+data_test<-data_test[, apply(data_test, 2, function(x) !all(is.na(x)))]
+
+## suit l'hypothèse que si le descripteur n'a pas ete cite par le conso, ca veut dire qu'il est JAR
+# peut etre un raccourci un peu rapide...
+complete_jar_final <- function(data_test,mot_jar){
+  data_jar <- data_test[,8:(dim(data_test)[2])]
+  for (i in 1:dim(data_test)[1]){
+    for (j in 1:(dim(data_test)[2]-7)){
+      if (is.na(data_jar[i,j])){
+        data_jar[i,j] <- "jar"
+      }
+    }
+  }
+  data_test[,8:(dim(data_test)[2])] <- data_jar
+  return(data_test)
+}
+
+data_comp <- complete_jar_final(data_test,mot_jar)
+
+for (i in 8:dim(data_comp)[2]){
+  data_comp[,i] <- as.factor(data_comp[,i])
+}
+
+
+########################################################################################
+### Creation du tableau de contingence des mots x jar par produit
+
+d_orig<-data_comp%>%select(-(Classe_hedo:JxCH),-ID_juge)%>%
+  gather(variable,value,-Produit)
+
+
+# On obtient un tableau de contingence mots x jar par produit
+dd<-d_orig%>%group_by(Produit, variable, value)%>%
+  summarise(nb=n())%>%
+  spread(variable,nb)
+dd[is.na(dd)] <- 0 #Les valeurs manquantes deviennent des 0
+names(dd)[2]<-"str_jar"
+
+#### AC TOUS MOTS CONFONDUS : On concatene dans dd4 les mots et leur structure jar
+
+dd_tot<-dd%>%gather(variable,value,-(Produit:str_jar))%>%
+  unite(temp,variable,str_jar)%>%
+  spread(temp,value)
+
+dd_tot<-as.data.frame(dd_tot)
+rownames(dd_tot)<-dd_tot$Produit
+dd_tot<-dd_tot%>%select(-Produit)
+dd_tot<-dd_tot[, apply(dd_tot, 2, function(x) !all(x==0))] #on supprime les colonnes qu'avec des 0
+
+```
+
+
+Regroupement en 15 concepts :
+
+```{r}
+dd15<-d_orig
+names(dd15)
+
+for (i in 1:nrow(dd15)){
+  if (dd15$variable[i] %in% c("basique","cheap","classique","desagreable","faux cuir","fin","fragile","grossier","imite","industriel","kitch","leger", "moelleux",
+                              "mou","mousse","plastique","poussiere","rapeux","rugueux","salissant","simili cuir","simple","souple","synthetique","vieillot")){
+    if (dd15$value[i] == "trop"){
+      dd15$value[i]<-"pas_assez2"
+    }
+    if (dd15$value[i] == "pas_assez"){
+      dd15$value[i]<-"trop2"
+    }
+  }
+}
+for (i in 1:nrow(dd15)){
+  if (dd15$value[i] == "trop2"){
+    dd15$value[i]<-"trop"
+  }
+  if (dd15$value[i] == "pas_assez2"){
+    dd15$value[i]<-"pas_assez"
+  }
+}
+
+dd15<-dd15%>%group_by(Produit, variable, value)%>%
+  summarise(nb=n())%>%
+  spread(variable,nb)
+dd15[is.na(dd15)] <- 0 #Les valeurs manquantes deviennent des 0
+names(dd15)[2]<-"str_jar"
+
+
+dd15$Epaisseur<-rowSums(dd15[,c("epais","dense","fin","leger")])
+
+dd15$Rigidite<-rowSums(dd15[,c("dur","moelleux","souple","mou","mousse","raide","rigide")])
+
+dd15$Qualite<-rowSums(dd15[,c("resistant","tenue","fragile","qualite","qualitatif","premium")])
+
+dd15$Praticite<-rowSums(dd15[,c("praticite","adapte","poussiere","salissant","facile")])
+
+dd15$Confort<-rowSums(dd15[,c("douillet","confortable","doux","douce","confort","agreable","desagreable",
+                              "chaud")])
+
+dd15$Modernite<-rowSums(dd15[,c("vieillot","basique","classique","moderne","original","elabore","kitch",
+                                "expression","sophistique","structuree","simple")])
+
+dd15$Chic<-rowSums(dd15[,c("cheap","chic","classe","luxueux","synthetique","plastique","industriel","elegant",
+                           "raffine","imite","grossier","beau","joli","jolie","esthetique")])
+# faux cuir et simili cuir PROBLEME
+
+dd15$Brillant<-rowSums(dd15[,c("enduit")])
+
+dd15$Lisse<-rowSums(dd15[,c("lisse","rapeux","rugueux")])
+
+dd15$Strie<-rowSums(dd15[,c("stries","fibres","trame","relief","raye","plissure")])
+
+dd15$Pelucheux<-rowSums(dd15[,c("pelucheux","poilu","moquette","laineux","acrylique")])
+
+dd15$Sec<-rowSums(dd15[,c("sec")])
+
+dd15$Collant<-rowSums(dd15[,c("collant")])
+
+dd15$Velours<-rowSums(dd15[,c("velours")])
+
+dd15$Elastique<-rowSums(dd15[,c("elastique")])
+
+names(dd15)
+dd15_2<-dd15%>%select(1:2,82:92)
+
+dd15_2<-dd15_2%>%gather(variable,value,-(Produit:str_jar))%>%
+  unite(temp,variable,str_jar)%>%
+  spread(temp,value)
+
+dd15_2<-as.data.frame(dd15_2)
+rownames(dd15_2)<-dd15_2$Produit
+dd15_2<-dd15_2%>%select(-Produit)
+
+dd15_2<-dd15_2[, apply(dd15_2, 2, function(x) !all(x==0))] #On supprime les colonnes qu'avec des 0
+
+
+```
+
+Regroupements en 19 concepts :
+
+```{r}
+dd19<-d_orig
+names(dd19)
+
+#Les "trop" deviennent "pas_assez" et les "pas_assez" deviennent des "trop" pour certains mots
+for (i in 1:nrow(dd19)){
+  if (dd19$variable[i] %in% c("cheap","desagreable","elabore","expression","facile","faux cuir","fin","fragile","grossier","imite","industriel","kitch","leger", "moelleux",
+                              "mou","mousse","original","plastique","rapeux","rugueux","simili cuir","sophistique","souple","structuree","synthetique","vieillot")){
+    if (dd19$value[i] == "trop"){
+      dd19$value[i]<-"pas_assez2"
+    }
+    if (dd19$value[i] == "pas_assez"){
+      dd19$value[i]<-"trop2"
+    }
+  }
+}
+for (i in 1:nrow(dd19)){
+  if (dd19$value[i] == "trop2"){
+    dd19$value[i]<-"trop"
+  }
+  if (dd19$value[i] == "pas_assez2"){
+    dd19$value[i]<-"pas_assez"
+  }
+}
+
+
+# On obtient un tableau de contingence mots x jar par produit
+dd19<-dd19%>%group_by(Produit, variable, value)%>%
+  summarise(nb=n())%>%
+  spread(variable,nb)
+dd19[is.na(dd19)] <- 0 #Les valeurs manquantes deviennent des 0
+names(dd19)[2]<-"str_jar"
+
+
+dd19$Epaisseur<-rowSums(dd19[,c("epais","dense","fin","leger")])
+
+dd19$Rigidite<-rowSums(dd19[,c("dur","moelleux","souple","mou","mousse","raide","rigide")])
+
+dd19$Qualite<-rowSums(dd19[,c("resistant","tenue","fragile","qualite","qualitatif","premium")])
+
+dd19$Praticite<-rowSums(dd19[,c("praticite","adapte")])
+
+dd19$Salissant<-rowSums(dd19[,c("poussiere","salissant","facile")])
+
+dd19$Confort<-rowSums(dd19[,c("confortable","confort","agreable","desagreable","chaud")])
+
+dd19$Douceur<-rowSums(dd19[,c("douillet","doux","douce")])
+
+dd19$Agreable<-rowSums(dd19[,c("agreable","desagreable")])
+
+dd19$Modernite<-rowSums(dd19[,c("vieillot","moderne","kitch")])
+
+dd19$Classique<-rowSums(dd19[,c("basique","classique","original","elabore","expression","sophistique","structuree","simple")])
+
+dd19$Chic<-rowSums(dd19[,c("cheap","chic","classe","luxueux","synthetique","plastique","industriel","elegant","raffine","imite","grossier","beau","joli","jolie","esthetique")])
+# faux cuir et simili cuir PROBLEME
+
+dd19$Brillant<-rowSums(dd19[,c("enduit")])
+
+dd19$Lisse<-rowSums(dd19[,c("lisse","rapeux","rugueux")])
+
+dd19$Strie<-rowSums(dd19[,c("stries","fibres","trame","relief","raye","plissure")])
+
+dd19$Pelucheux<-rowSums(dd19[,c("pelucheux","poilu","moquette","laineux","acrylique")])
+
+dd19$Sec<-rowSums(dd19[,c("sec")])
+
+dd19$Collant<-rowSums(dd19[,c("collant")])
+
+dd19$Velours<-rowSums(dd19[,c("velours")])
+
+dd19$Elastique<-rowSums(dd19[,c("elastique")])
+
+names(dd19)
+dd19_2<-dd19%>%select(1:2,82:95)
+
+dd19_2<-dd19_2%>%gather(variable,value,-(Produit:str_jar))%>%
+  unite(temp,variable,str_jar)%>%
+  spread(temp,value)
+
+dd19_2<-as.data.frame(dd19_2)
+rownames(dd19_2)<-dd19_2$Produit
+dd19_2<-dd19_2%>%select(-Produit)
+
+dd19_2<-dd19_2[, apply(dd19_2, 2, function(x) !all(x==0))] #On supprime les colonnes qu'avec des 0
+
+```
+
+
+Résultat sans regroupement :
+
+```{r}
+res.ca<-CA(dd_tot)
+plot(res.ca,invisible=c("col"))
+#HCPC(res.ca)
+
+descfreq(dd_tot,proba=0.05)
+```
+
+Résultat avec le regroupement en 15 grands concepts :
+
+```{r}
+res.ca2<-CA(dd15_2)
+plot(res.ca2,invisible=c("col"))
+#HCPC(res.ca2)
+
+descfreq(dd15_2,proba=0.05)
+```
+
+Résultat avec le regroupement en 19 grands concepts :
+
+```{r}
+res.ca3<-CA(dd19_2)
+plot(res.ca3,invisible=c("col"))
+
+descfreq(dd19_2,proba=0.05)
+
+#classif<-HCPC(res.ca3)
+
+# dataClust<-classif$data.clust
+# dataClust<-as.data.frame(dataClust)
+# 
+# dataClust<-dataClust %>% 
+#   group_by(clust) %>% 
+#   summarise_each(funs(sum))%>%
+#   select(-clust)
+# 
+# dataClust<-as.data.frame(dataClust)
+# 
+# descfreq(dataClust,proba=0.5)
+```
+

@@ -1353,9 +1353,9 @@ coltable(magicsort(res.decat$tabT,method = "median")[-8,-9],
 <codeblock id="01_86">
 </codeblock>
 
-These two graphs suggest a link between the information contained in a matrix, i.e. the inertia of the matrix, and the structure of the matrix, i.e. the way in which the rows approach or oppose each other (resp. the columns) according to their distances.
+These two graphs suggest a link between the information contained in a matrix, *i.e.* the inertia of the matrix, and the structure of the matrix, *i.e.* the way in which the rows approach or oppose each other (*resp.* the columns) according to their distances.
 
-This link can be compared to the decomposition of the total variance presented previously. The inertia of a data matrix can also be decomposed according to the way the rows of the matrix are grouped or opposed: <span style="font-weight : bold">according to the way the rows are structured.</span>
+To some extent, this link can be compared to the decomposition of the total variance presented previously. The inertia of a data matrix can also be decomposed according to the way the rows of the matrix are grouped or opposed: <span style="font-weight : bold">according to the way the rows are structured</span>. The main difference is that the way the structure is broken up is unknown *a priori*: this decomposition is done with respect to a latent variable whose interpretation is not known, *versus* a decomposition done with respect to a factor (or several factors depending on the model considered).
 
 </exercise>
 
@@ -1389,12 +1389,42 @@ Run the `PCA()` function of the `FactoMineR` package on the matrix of the adjust
 <codeblock id="01_87">
 </codeblock>
 
-This structure on the perfumes (the rows of the data matrix) has to be interpreted jointly with its counterpart, i.e. the structure on the sensory attributes. Actually, these two representations are the solutions to a same problem: finding the components that best represent the rows or the columns, in the sense of the projected inertia.
+This structure on the perfumes (the rows of the data matrix) has to be interpreted jointly with its counterpart, *i.e.* the structure on the sensory attributes. Actually, these two representations are the solutions to a same problem: finding the components that best represent the rows or the columns, in the sense of the projected inertia.
 
 Apply the `plot.PCA()` function in order to represent the sensory attributes: set the argument `choix` to `"var"`.
 
 <codeblock id="01_88">
 </codeblock>
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse3" id="handle3">
+  <h2 class="handle">
+    <label for="handle3">At second reading: eigenvectors and eigenvalues, playing with singular value decomposition</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="01_89">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse4" id="handle4">
+  <h2 class="handle">
+    <label for="handle4">At second reading: the Nipals algorithm</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="01_90">
+</codeblock>
+  </div>
+</section>
+</HTML>
 
 
 </exercise>
