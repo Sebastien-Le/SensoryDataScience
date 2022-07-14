@@ -37,6 +37,23 @@ How to delete spaces
 <codeblock id="tuto_02">
 </codeblock>
 
+<codeblock id="tuto_03">
+</codeblock>
+
+<codeblock id="tuto_04">
+</codeblock>
+
+<codeblock id="tuto_05">
+</codeblock>
+
+<codeblock id="tuto_06">
+</codeblock>
+
+<codeblock id="tuto_07">
+</codeblock>
+
+<codeblock id="tuto_08">
+</codeblock>
 
 </exercise>
 

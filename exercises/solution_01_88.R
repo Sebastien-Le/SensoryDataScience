@@ -1,0 +1,1 @@
+plot.PCA(res.pca, choix = "var")

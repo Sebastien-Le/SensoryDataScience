@@ -1,0 +1,191 @@
+---
+title: "Untitled"
+author: "Guillaume"
+date: "13/06/2022"
+output: html_document
+---
+
+#Import library
+```{r}
+library(dplyr)
+library(sentimentr)
+library(FactoMineR)
+library(SensoMineR)
+library(tm)
+library(stringr)
+library(tidyr)
+library(data.table)
+library(car)
+library(lime)
+library(caret)
+library(e1071)
+library(ranger)
+```
+
+#import data
+```{r}
+bon_tissu <- read.csv("data/data_tissus_ANG.csv",header=T,sep=";",dec=",")
+
+#colonne jugexproduit
+JP <- rep("NA",600)
+for (i in 1:600){
+  JP[i]<-paste(bon_tissu$ID_juge[i],bon_tissu$Produit[i], sep="_")
+}
+bon_tissu <- cbind(bon_tissu,JP)
+
+#colonne jugexclasse
+JxCH <- rep("NA",600)
+for (i in 1:600){
+  JxCH[i]<-paste(bon_tissu$ID_juge[i],bon_tissu$Classe_hedo[i], sep="_")
+}
+data <- cbind(bon_tissu,JxCH)
+```
+
+#traduction de la classe hedo en anglais
+```{r}
+summary(bon_tissu)
+bon_tissu$Classe_hedo <- as.factor(bon_tissu$Classe_hedo)
+levels(bon_tissu$Classe_hedo)<-(c("I like it very much", "I like a bit", "I don't like"))
+```
+# Construction du df pour créer le modele
+
+Ici on créer 2 fonctions replace_space_after et replace_space_before. L'idée est qu'a partir d'une liste de mot prédéfinie on puisse joindre automatiquement ces derniers avec le mot suivant ou le mot precedent dans une phrase. Par exemple, le mot "not" sera automatiquement lié au mot suivant ici. "it is not easy" -> "it is not_easy" etc...
+
+```{r}
+# @param :
+# words : a list of words to concatenate with the following word
+# sentence : a sentence we want to concatenate words
+# @return : sentence with words concatenate with an underscore after the word
+replace_space_after <- function(word, sentence){
+  ls_words <- strsplit(sentence, " ")[[1]]
+  sentence_final <- ""
+  n=length(ls_words)
+    if(grepl(word, sentence)){
+      for(j in 1:(n)){
+        if(ls_words[j]==word && j!=n){
+          concat <- paste(ls_words[j], ls_words[j+1], sep = "_")
+        }else if((j>1) &&(ls_words[j]!=word) && (ls_words[j-1]==word) ) {concat <-""}
+        else{concat<-ls_words[j]}
+        if(sentence_final=="")
+        {sentence_final <- paste0(sentence_final, concat)}else{sentence_final <- paste(sentence_final, concat)}
+      }
+    }else{sentence_final<-sentence}
+  return(sentence_final)
+}
+``` 
+
+```{r}
+# @param :
+# words : a list of words to concatenate with the following word
+# sentence : a sentence we want to concatenate words
+# @return : sentence with words concatenate with an underscore before
+replace_space_before <- function(word, sentence){
+  ls_words <- strsplit(sentence, " ")[[1]]
+  sentence_final <- ""
+  n=length(ls_words)
+    if(grepl(word, sentence)){
+      for(j in rev(1:n)){
+        if(ls_words[j]==word && j!=1){
+          concat <- paste(ls_words[j-1], ls_words[j], sep = "_")
+        }else if((j<n) &&(ls_words[j]!=word) && (ls_words[j+1]==word) ) {concat <-""}
+        else{concat<-ls_words[j]}
+        if(length(strsplit(sentence_final, " ")[[1]])==length(ls_words)-1)
+        {sentence_final <- paste0(concat,sentence_final)}else{sentence_final <- paste(concat,sentence_final)}
+      }
+    }else{sentence_final<-sentence}
+  return(sentence_final)
+}
+```
+
+On remplace maintenant les descriptions par leurs concatenations pour une liste de mots arbitraires.  
+```{r}
+ls_words_concat_after = c("right", "not", "too", "good", "very", "quite", "fine", "small", "really", "don't", "super", "many", "too_many")
+
+for(w in ls_words_concat_after){
+  for(i in 1:length(bon_tissu$Text))
+  bon_tissu$Text[i] <- replace_space_after(w,bon_tissu$Text[i])
+}
+
+ls_words_concat_before = c("enough")
+
+for(w in ls_words_concat_before){
+  for(i in 1:length(bon_tissu$Text))
+  bon_tissu$Text[i] <- replace_space_before(w, bon_tissu$Text[i])
+}
+
+```
+
+A present, on recupere tous les mots qui nous interessent des descriptions:
+```{r}
+recup_vect_words<-function(v){
+  ls_words <- c()
+  for (s in v){
+    temp <- strsplit(s, " ")[[1]]
+    for(w in temp){
+      if ((!(w %in% ls_words) )&& (!(w %in% stopwords("en")) ) && w!=""){
+        ls_words<-c(ls_words, w)
+      }
+    }
+  }
+  return(ls_words)
+}
+
+```
+
+On créé le dataframe correspondant à la classe hedonique d'un jugement et un codage binaire sur la présence ou l'absence des mots présents dans toutes les descriptions. 
+
+```{r}
+coln <- recup_vect_words(bon_tissu$Text)
+rown <- row.names(bon_tissu)
+x=rep(0, length.out=600*length(coln))
+
+matrix_cont <- matrix(x, nrow = 600, byrow = TRUE, 
+            dimnames = list(rown, coln))
+data_cont <- data.frame(matrix_cont)
+data_cont$Classe_hedo <- bon_tissu$Classe_hedo
+
+data_cont <- data_cont %>% select("Classe_hedo", everything())
+#remplissage de la matrice : 0 si le mot est dans la description, 0 sinon
+n=dim(data_cont)
+for(i in 1:n[1]){
+  for(j in 2:n[2]){
+    if(colnames(data_cont)[j] %in% strsplit(bon_tissu$Text[i], " ")[[1]]){
+      data_cont[i,j]<-1
+    }
+  }
+}
+
+data_cont$JP <- bon_tissu$JP
+
+#on transforme en facteur les codages
+data_cont[colnames(data_cont)] <- lapply(data_cont[colnames(data_cont)], factor)
+```
+
+# modele
+
+On créé un classifieur entrainé sur toutes les données sauf un jugement arbitrairement choisit
+```{r}
+#@param : jp un jugement "juge-produit"
+ClassifieurJP <- function(jp){
+  data_test <<- data_cont %>% filter(JP==jp) %>% select(-JP)
+  data_train <<- data_cont %>% filter(JP!=jp) %>% select(-JP)
+}
+ClassifieurJP("19_B")
+
+foret_probas <- ranger(Classe_hedo~.,data=data_train, probability=TRUE)
+foret <- ranger(Classe_hedo~.,data=data_train)
+foret$predictions
+
+data_train$classifieur <- foret_probas$predictions[,1]-foret_probas$predictions[,3]
+
+res.aov <- aov(data_train$classifieur~data_train$Classe_hedo)
+summary(res.aov)
+
+data_train %>% group_by(Classe_hedo) %>% summarize(m=mean(classifieur))
+
+explainer <- lime(data_train, foret)
+explanation <- explain(data_test, explainer, n_labels = 1, n_features = 5)
+plot_features(explanation)
+```
+
+

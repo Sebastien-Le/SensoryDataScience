@@ -18,7 +18,7 @@ experts$Session <- as.factor(experts$Session)
 experts$Rank <- as.factor(experts$Rank)
 levels(experts$Product)[4] <- "Cinéma"
 library(ggplot2)
-library(gridExtra)
+#library(gridExtra)
 library(SensoMineR)
 library(dplyr)
 resdecat <- decat(experts, formul = "~Product+Panelist", firstvar = 5, graph = FALSE)
@@ -137,8 +137,8 @@ magicsort(resdecat$tabT,method = "median")
 magicsort(resdecat$tabT,method = "median")[-8,-9]
 
 coltable(magicsort(resdecat$tabT,method = "median")[-8,-9], 
-    level.lower = -1.96, level.upper = 1.96,
-    main.title = "Average by perfume")
+    level.lower = -1.96, level.upper = 1.96, cex = 0.8,
+    main.title = "Estimation of the coefficients with 2-ways ANOVA")
 
 coltable(magicsort(resdecat$tabT,method = "median")[-8,-9], magicsort(resdecat$tabT,method = "median")[-8,-9], 
     level.lower = -1.96, level.upper = 1.96,
@@ -157,7 +157,7 @@ coltable(round(resaverage.sort,3), magicsort(resdecat$tabT,method = "median")[-8
 
 
 ```{r}
-dist.prod <- as.matrix(dist(resaverage))
+dist.prod <- as.matrix(dist(res_cr))
 heatmap(dist.prod, symm = TRUE)
 ```
 
