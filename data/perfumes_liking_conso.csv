@@ -1,0 +1,1237 @@
+consumer,product,liking
+171,Angel,3
+171,Aromatics Elixir,3
+171,Chanel N5,7
+171,Cinéma,6
+171,Coco Mademoiselle,6
+171,Jadore EP,5
+171,Jadore ET,6
+171,Linstant,3
+171,Lolita Lempicka,3
+171,Pleasures,5
+171,Pure Poison,6
+171,Shalimar,3
+553,Angel,3
+553,Aromatics Elixir,5
+553,Chanel N5,1
+553,Cinéma,4
+553,Coco Mademoiselle,7
+553,Jadore EP,8
+553,Jadore ET,6
+553,Linstant,4
+553,Lolita Lempicka,3
+553,Pleasures,6
+553,Pure Poison,5
+553,Shalimar,3
+991,Angel,7
+991,Aromatics Elixir,6
+991,Chanel N5,8
+991,Cinéma,6
+991,Coco Mademoiselle,7
+991,Jadore EP,7
+991,Jadore ET,8
+991,Linstant,9
+991,Lolita Lempicka,6
+991,Pleasures,8
+991,Pure Poison,7
+991,Shalimar,6
+1344,Angel,5
+1344,Aromatics Elixir,6
+1344,Chanel N5,8
+1344,Cinéma,8
+1344,Coco Mademoiselle,6
+1344,Jadore EP,9
+1344,Jadore ET,7
+1344,Linstant,6
+1344,Lolita Lempicka,8
+1344,Pleasures,7
+1344,Pure Poison,7
+1344,Shalimar,8
+1661,Angel,5
+1661,Aromatics Elixir,4
+1661,Chanel N5,1
+1661,Cinéma,7
+1661,Coco Mademoiselle,5
+1661,Jadore EP,5
+1661,Jadore ET,7
+1661,Linstant,7
+1661,Lolita Lempicka,7
+1661,Pleasures,7
+1661,Pure Poison,6
+1661,Shalimar,3
+1679,Angel,5
+1679,Aromatics Elixir,4
+1679,Chanel N5,5
+1679,Cinéma,6
+1679,Coco Mademoiselle,5
+1679,Jadore EP,6
+1679,Jadore ET,5
+1679,Linstant,3
+1679,Lolita Lempicka,5
+1679,Pleasures,7
+1679,Pure Poison,5
+1679,Shalimar,2
+1755,Angel,9
+1755,Aromatics Elixir,9
+1755,Chanel N5,8
+1755,Cinéma,6
+1755,Coco Mademoiselle,8
+1755,Jadore EP,6
+1755,Jadore ET,6
+1755,Linstant,9
+1755,Lolita Lempicka,8
+1755,Pleasures,8
+1755,Pure Poison,9
+1755,Shalimar,9
+1761,Angel,4
+1761,Aromatics Elixir,6
+1761,Chanel N5,5
+1761,Cinéma,5
+1761,Coco Mademoiselle,5
+1761,Jadore EP,6
+1761,Jadore ET,7
+1761,Linstant,7
+1761,Lolita Lempicka,5
+1761,Pleasures,6
+1761,Pure Poison,5
+1761,Shalimar,4
+1801,Angel,6
+1801,Aromatics Elixir,1
+1801,Chanel N5,6
+1801,Cinéma,6
+1801,Coco Mademoiselle,6
+1801,Jadore EP,7
+1801,Jadore ET,6
+1801,Linstant,1
+1801,Lolita Lempicka,5
+1801,Pleasures,7
+1801,Pure Poison,7
+1801,Shalimar,4
+1956,Angel,3
+1956,Aromatics Elixir,5
+1956,Chanel N5,6
+1956,Cinéma,7
+1956,Coco Mademoiselle,7
+1956,Jadore EP,7
+1956,Jadore ET,7
+1956,Linstant,5
+1956,Lolita Lempicka,8
+1956,Pleasures,6
+1956,Pure Poison,5
+1956,Shalimar,7
+2119,Angel,5
+2119,Aromatics Elixir,5
+2119,Chanel N5,6
+2119,Cinéma,6
+2119,Coco Mademoiselle,8
+2119,Jadore EP,7
+2119,Jadore ET,8
+2119,Linstant,7
+2119,Lolita Lempicka,7
+2119,Pleasures,7
+2119,Pure Poison,7
+2119,Shalimar,5
+2529,Angel,2
+2529,Aromatics Elixir,1
+2529,Chanel N5,6
+2529,Cinéma,4
+2529,Coco Mademoiselle,7
+2529,Jadore EP,7
+2529,Jadore ET,6
+2529,Linstant,7
+2529,Lolita Lempicka,5
+2529,Pleasures,6
+2529,Pure Poison,6
+2529,Shalimar,3
+2909,Angel,2
+2909,Aromatics Elixir,5
+2909,Chanel N5,7
+2909,Cinéma,6
+2909,Coco Mademoiselle,7
+2909,Jadore EP,6
+2909,Jadore ET,6
+2909,Linstant,6
+2909,Lolita Lempicka,5
+2909,Pleasures,4
+2909,Pure Poison,7
+2909,Shalimar,7
+2936,Angel,3
+2936,Aromatics Elixir,5
+2936,Chanel N5,3
+2936,Cinéma,9
+2936,Coco Mademoiselle,7
+2936,Jadore EP,7
+2936,Jadore ET,6
+2936,Linstant,6
+2936,Lolita Lempicka,4
+2936,Pleasures,8
+2936,Pure Poison,6
+2936,Shalimar,2
+2996,Angel,5
+2996,Aromatics Elixir,6
+2996,Chanel N5,7
+2996,Cinéma,6
+2996,Coco Mademoiselle,5
+2996,Jadore EP,7
+2996,Jadore ET,6
+2996,Linstant,5
+2996,Lolita Lempicka,5
+2996,Pleasures,6
+2996,Pure Poison,7
+2996,Shalimar,4
+3242,Angel,5
+3242,Aromatics Elixir,1
+3242,Chanel N5,3
+3242,Cinéma,5
+3242,Coco Mademoiselle,8
+3242,Jadore EP,7
+3242,Jadore ET,7
+3242,Linstant,7
+3242,Lolita Lempicka,7
+3242,Pleasures,5
+3242,Pure Poison,7
+3242,Shalimar,3
+3371,Angel,1
+3371,Aromatics Elixir,2
+3371,Chanel N5,7
+3371,Cinéma,9
+3371,Coco Mademoiselle,6
+3371,Jadore EP,8
+3371,Jadore ET,8
+3371,Linstant,7
+3371,Lolita Lempicka,8
+3371,Pleasures,9
+3371,Pure Poison,4
+3371,Shalimar,5
+3541,Angel,3
+3541,Aromatics Elixir,3
+3541,Chanel N5,4
+3541,Cinéma,8
+3541,Coco Mademoiselle,9
+3541,Jadore EP,8
+3541,Jadore ET,6
+3541,Linstant,5
+3541,Lolita Lempicka,7
+3541,Pleasures,6
+3541,Pure Poison,6
+3541,Shalimar,5
+3670,Angel,7
+3670,Aromatics Elixir,4
+3670,Chanel N5,7
+3670,Cinéma,6
+3670,Coco Mademoiselle,5
+3670,Jadore EP,8
+3670,Jadore ET,5
+3670,Linstant,8
+3670,Lolita Lempicka,8
+3670,Pleasures,5
+3670,Pure Poison,6
+3670,Shalimar,6
+3763,Angel,4
+3763,Aromatics Elixir,6
+3763,Chanel N5,6
+3763,Cinéma,5
+3763,Coco Mademoiselle,6
+3763,Jadore EP,8
+3763,Jadore ET,8
+3763,Linstant,6
+3763,Lolita Lempicka,6
+3763,Pleasures,6
+3763,Pure Poison,6
+3763,Shalimar,6
+3764,Angel,4
+3764,Aromatics Elixir,5
+3764,Chanel N5,5
+3764,Cinéma,5
+3764,Coco Mademoiselle,6
+3764,Jadore EP,6
+3764,Jadore ET,6
+3764,Linstant,4
+3764,Lolita Lempicka,6
+3764,Pleasures,6
+3764,Pure Poison,5
+3764,Shalimar,4
+4164,Angel,6
+4164,Aromatics Elixir,8
+4164,Chanel N5,6
+4164,Cinéma,7
+4164,Coco Mademoiselle,8
+4164,Jadore EP,7
+4164,Jadore ET,7
+4164,Linstant,6
+4164,Lolita Lempicka,5
+4164,Pleasures,8
+4164,Pure Poison,7
+4164,Shalimar,5
+4238,Angel,3
+4238,Aromatics Elixir,4
+4238,Chanel N5,7
+4238,Cinéma,4
+4238,Coco Mademoiselle,6
+4238,Jadore EP,4
+4238,Jadore ET,6
+4238,Linstant,3
+4238,Lolita Lempicka,3
+4238,Pleasures,2
+4238,Pure Poison,7
+4238,Shalimar,3
+4529,Angel,9
+4529,Aromatics Elixir,3
+4529,Chanel N5,3
+4529,Cinéma,7
+4529,Coco Mademoiselle,7
+4529,Jadore EP,8
+4529,Jadore ET,7
+4529,Linstant,3
+4529,Lolita Lempicka,8
+4529,Pleasures,2
+4529,Pure Poison,8
+4529,Shalimar,6
+4640,Angel,8
+4640,Aromatics Elixir,8
+4640,Chanel N5,8
+4640,Cinéma,8
+4640,Coco Mademoiselle,7
+4640,Jadore EP,8
+4640,Jadore ET,7
+4640,Linstant,9
+4640,Lolita Lempicka,7
+4640,Pleasures,7
+4640,Pure Poison,8
+4640,Shalimar,8
+5014,Angel,5
+5014,Aromatics Elixir,2
+5014,Chanel N5,3
+5014,Cinéma,5
+5014,Coco Mademoiselle,8
+5014,Jadore EP,8
+5014,Jadore ET,7
+5014,Linstant,4
+5014,Lolita Lempicka,6
+5014,Pleasures,7
+5014,Pure Poison,7
+5014,Shalimar,4
+5582,Angel,2
+5582,Aromatics Elixir,4
+5582,Chanel N5,5
+5582,Cinéma,8
+5582,Coco Mademoiselle,7
+5582,Jadore EP,9
+5582,Jadore ET,9
+5582,Linstant,5
+5582,Lolita Lempicka,6
+5582,Pleasures,7
+5582,Pure Poison,8
+5582,Shalimar,3
+6584,Angel,8
+6584,Aromatics Elixir,6
+6584,Chanel N5,6
+6584,Cinéma,8
+6584,Coco Mademoiselle,8
+6584,Jadore EP,7
+6584,Jadore ET,7
+6584,Linstant,6
+6584,Lolita Lempicka,8
+6584,Pleasures,7
+6584,Pure Poison,8
+6584,Shalimar,6
+6637,Angel,8
+6637,Aromatics Elixir,3
+6637,Chanel N5,8
+6637,Cinéma,3
+6637,Coco Mademoiselle,4
+6637,Jadore EP,4
+6637,Jadore ET,5
+6637,Linstant,6
+6637,Lolita Lempicka,7
+6637,Pleasures,5
+6637,Pure Poison,8
+6637,Shalimar,6
+6667,Angel,8
+6667,Aromatics Elixir,4
+6667,Chanel N5,5
+6667,Cinéma,6
+6667,Coco Mademoiselle,8
+6667,Jadore EP,8
+6667,Jadore ET,7
+6667,Linstant,6
+6667,Lolita Lempicka,7
+6667,Pleasures,5
+6667,Pure Poison,6
+6667,Shalimar,3
+6695,Angel,7
+6695,Aromatics Elixir,6
+6695,Chanel N5,6
+6695,Cinéma,5
+6695,Coco Mademoiselle,6
+6695,Jadore EP,9
+6695,Jadore ET,7
+6695,Linstant,7
+6695,Lolita Lempicka,5
+6695,Pleasures,9
+6695,Pure Poison,7
+6695,Shalimar,3
+6889,Angel,7
+6889,Aromatics Elixir,4
+6889,Chanel N5,8
+6889,Cinéma,7
+6889,Coco Mademoiselle,6
+6889,Jadore EP,5
+6889,Jadore ET,8
+6889,Linstant,6
+6889,Lolita Lempicka,5
+6889,Pleasures,3
+6889,Pure Poison,3
+6889,Shalimar,8
+6931,Angel,5
+6931,Aromatics Elixir,5
+6931,Chanel N5,7
+6931,Cinéma,5
+6931,Coco Mademoiselle,8
+6931,Jadore EP,7
+6931,Jadore ET,7
+6931,Linstant,8
+6931,Lolita Lempicka,4
+6931,Pleasures,6
+6931,Pure Poison,5
+6931,Shalimar,6
+6940,Angel,5
+6940,Aromatics Elixir,4
+6940,Chanel N5,6
+6940,Cinéma,8
+6940,Coco Mademoiselle,7
+6940,Jadore EP,7
+6940,Jadore ET,7
+6940,Linstant,8
+6940,Lolita Lempicka,7
+6940,Pleasures,6
+6940,Pure Poison,6
+6940,Shalimar,5
+7622,Angel,1
+7622,Aromatics Elixir,1
+7622,Chanel N5,4
+7622,Cinéma,5
+7622,Coco Mademoiselle,7
+7622,Jadore EP,6
+7622,Jadore ET,8
+7622,Linstant,7
+7622,Lolita Lempicka,6
+7622,Pleasures,2
+7622,Pure Poison,8
+7622,Shalimar,1
+7679,Angel,5
+7679,Aromatics Elixir,5
+7679,Chanel N5,5
+7679,Cinéma,7
+7679,Coco Mademoiselle,6
+7679,Jadore EP,5
+7679,Jadore ET,6
+7679,Linstant,6
+7679,Lolita Lempicka,5
+7679,Pleasures,6
+7679,Pure Poison,5
+7679,Shalimar,4
+7797,Angel,8
+7797,Aromatics Elixir,6
+7797,Chanel N5,7
+7797,Cinéma,8
+7797,Coco Mademoiselle,5
+7797,Jadore EP,3
+7797,Jadore ET,2
+7797,Linstant,8
+7797,Lolita Lempicka,6
+7797,Pleasures,7
+7797,Pure Poison,4
+7797,Shalimar,6
+8096,Angel,6
+8096,Aromatics Elixir,3
+8096,Chanel N5,1
+8096,Cinéma,6
+8096,Coco Mademoiselle,8
+8096,Jadore EP,5
+8096,Jadore ET,8
+8096,Linstant,8
+8096,Lolita Lempicka,4
+8096,Pleasures,6
+8096,Pure Poison,7
+8096,Shalimar,4
+8118,Angel,5
+8118,Aromatics Elixir,7
+8118,Chanel N5,7
+8118,Cinéma,7
+8118,Coco Mademoiselle,7
+8118,Jadore EP,6
+8118,Jadore ET,6
+8118,Linstant,6
+8118,Lolita Lempicka,8
+8118,Pleasures,8
+8118,Pure Poison,8
+8118,Shalimar,6
+8124,Angel,6
+8124,Aromatics Elixir,7
+8124,Chanel N5,6
+8124,Cinéma,7
+8124,Coco Mademoiselle,7
+8124,Jadore EP,7
+8124,Jadore ET,6
+8124,Linstant,7
+8124,Lolita Lempicka,7
+8124,Pleasures,6
+8124,Pure Poison,5
+8124,Shalimar,8
+8300,Angel,8
+8300,Aromatics Elixir,7
+8300,Chanel N5,5
+8300,Cinéma,7
+8300,Coco Mademoiselle,7
+8300,Jadore EP,7
+8300,Jadore ET,7
+8300,Linstant,7
+8300,Lolita Lempicka,6
+8300,Pleasures,6
+8300,Pure Poison,8
+8300,Shalimar,5
+8588,Angel,2
+8588,Aromatics Elixir,1
+8588,Chanel N5,1
+8588,Cinéma,7
+8588,Coco Mademoiselle,9
+8588,Jadore EP,9
+8588,Jadore ET,9
+8588,Linstant,2
+8588,Lolita Lempicka,4
+8588,Pleasures,6
+8588,Pure Poison,7
+8588,Shalimar,1
+8840,Angel,1
+8840,Aromatics Elixir,1
+8840,Chanel N5,1
+8840,Cinéma,6
+8840,Coco Mademoiselle,2
+8840,Jadore EP,7
+8840,Jadore ET,7
+8840,Linstant,1
+8840,Lolita Lempicka,1
+8840,Pleasures,5
+8840,Pure Poison,8
+8840,Shalimar,1
+9373,Angel,3
+9373,Aromatics Elixir,7
+9373,Chanel N5,7
+9373,Cinéma,5
+9373,Coco Mademoiselle,6
+9373,Jadore EP,8
+9373,Jadore ET,7
+9373,Linstant,6
+9373,Lolita Lempicka,7
+9373,Pleasures,7
+9373,Pure Poison,3
+9373,Shalimar,5
+9492,Angel,1
+9492,Aromatics Elixir,2
+9492,Chanel N5,7
+9492,Cinéma,7
+9492,Coco Mademoiselle,6
+9492,Jadore EP,7
+9492,Jadore ET,6
+9492,Linstant,7
+9492,Lolita Lempicka,3
+9492,Pleasures,6
+9492,Pure Poison,6
+9492,Shalimar,1
+9589,Angel,6
+9589,Aromatics Elixir,4
+9589,Chanel N5,4
+9589,Cinéma,8
+9589,Coco Mademoiselle,5
+9589,Jadore EP,7
+9589,Jadore ET,6
+9589,Linstant,6
+9589,Lolita Lempicka,4
+9589,Pleasures,5
+9589,Pure Poison,5
+9589,Shalimar,3
+9623,Angel,6
+9623,Aromatics Elixir,4
+9623,Chanel N5,8
+9623,Cinéma,7
+9623,Coco Mademoiselle,7
+9623,Jadore EP,8
+9623,Jadore ET,8
+9623,Linstant,7
+9623,Lolita Lempicka,7
+9623,Pleasures,7
+9623,Pure Poison,4
+9623,Shalimar,6
+9651,Angel,5
+9651,Aromatics Elixir,7
+9651,Chanel N5,6
+9651,Cinéma,7
+9651,Coco Mademoiselle,7
+9651,Jadore EP,7
+9651,Jadore ET,7
+9651,Linstant,8
+9651,Lolita Lempicka,6
+9651,Pleasures,7
+9651,Pure Poison,8
+9651,Shalimar,7
+9772,Angel,4
+9772,Aromatics Elixir,5
+9772,Chanel N5,8
+9772,Cinéma,7
+9772,Coco Mademoiselle,4
+9772,Jadore EP,8
+9772,Jadore ET,8
+9772,Linstant,5
+9772,Lolita Lempicka,5
+9772,Pleasures,6
+9772,Pure Poison,6
+9772,Shalimar,7
+9775,Angel,3
+9775,Aromatics Elixir,1
+9775,Chanel N5,5
+9775,Cinéma,6
+9775,Coco Mademoiselle,9
+9775,Jadore EP,9
+9775,Jadore ET,8
+9775,Linstant,8
+9775,Lolita Lempicka,6
+9775,Pleasures,6
+9775,Pure Poison,7
+9775,Shalimar,4
+9821,Angel,7
+9821,Aromatics Elixir,7
+9821,Chanel N5,7
+9821,Cinéma,7
+9821,Coco Mademoiselle,7
+9821,Jadore EP,7
+9821,Jadore ET,7
+9821,Linstant,5
+9821,Lolita Lempicka,3
+9821,Pleasures,7
+9821,Pure Poison,7
+9821,Shalimar,2
+9858,Angel,7
+9858,Aromatics Elixir,2
+9858,Chanel N5,6
+9858,Cinéma,7
+9858,Coco Mademoiselle,7
+9858,Jadore EP,5
+9858,Jadore ET,5
+9858,Linstant,7
+9858,Lolita Lempicka,7
+9858,Pleasures,4
+9858,Pure Poison,7
+9858,Shalimar,5
+9872,Angel,2
+9872,Aromatics Elixir,2
+9872,Chanel N5,1
+9872,Cinéma,8
+9872,Coco Mademoiselle,7
+9872,Jadore EP,6
+9872,Jadore ET,6
+9872,Linstant,4
+9872,Lolita Lempicka,5
+9872,Pleasures,8
+9872,Pure Poison,7
+9872,Shalimar,1
+10147,Angel,7
+10147,Aromatics Elixir,5
+10147,Chanel N5,8
+10147,Cinéma,7
+10147,Coco Mademoiselle,6
+10147,Jadore EP,8
+10147,Jadore ET,7
+10147,Linstant,9
+10147,Lolita Lempicka,8
+10147,Pleasures,8
+10147,Pure Poison,8
+10147,Shalimar,8
+10409,Angel,8
+10409,Aromatics Elixir,7
+10409,Chanel N5,6
+10409,Cinéma,6
+10409,Coco Mademoiselle,7
+10409,Jadore EP,7
+10409,Jadore ET,7
+10409,Linstant,8
+10409,Lolita Lempicka,7
+10409,Pleasures,7
+10409,Pure Poison,7
+10409,Shalimar,7
+10639,Angel,7
+10639,Aromatics Elixir,5
+10639,Chanel N5,5
+10639,Cinéma,7
+10639,Coco Mademoiselle,7
+10639,Jadore EP,5
+10639,Jadore ET,5
+10639,Linstant,7
+10639,Lolita Lempicka,7
+10639,Pleasures,4
+10639,Pure Poison,7
+10639,Shalimar,5
+10815,Angel,3
+10815,Aromatics Elixir,2
+10815,Chanel N5,5
+10815,Cinéma,8
+10815,Coco Mademoiselle,7
+10815,Jadore EP,7
+10815,Jadore ET,7
+10815,Linstant,5
+10815,Lolita Lempicka,4
+10815,Pleasures,5
+10815,Pure Poison,7
+10815,Shalimar,3
+10835,Angel,4
+10835,Aromatics Elixir,7
+10835,Chanel N5,5
+10835,Cinéma,5
+10835,Coco Mademoiselle,6
+10835,Jadore EP,7
+10835,Jadore ET,7
+10835,Linstant,5
+10835,Lolita Lempicka,8
+10835,Pleasures,4
+10835,Pure Poison,8
+10835,Shalimar,5
+10967,Angel,2
+10967,Aromatics Elixir,5
+10967,Chanel N5,6
+10967,Cinéma,4
+10967,Coco Mademoiselle,7
+10967,Jadore EP,7
+10967,Jadore ET,7
+10967,Linstant,4
+10967,Lolita Lempicka,8
+10967,Pleasures,4
+10967,Pure Poison,3
+10967,Shalimar,4
+11074,Angel,1
+11074,Aromatics Elixir,1
+11074,Chanel N5,3
+11074,Cinéma,8
+11074,Coco Mademoiselle,7
+11074,Jadore EP,6
+11074,Jadore ET,4
+11074,Linstant,8
+11074,Lolita Lempicka,1
+11074,Pleasures,7
+11074,Pure Poison,6
+11074,Shalimar,1
+11169,Angel,6
+11169,Aromatics Elixir,6
+11169,Chanel N5,8
+11169,Cinéma,6
+11169,Coco Mademoiselle,7
+11169,Jadore EP,4
+11169,Jadore ET,5
+11169,Linstant,6
+11169,Lolita Lempicka,3
+11169,Pleasures,3
+11169,Pure Poison,6
+11169,Shalimar,5
+11174,Angel,3
+11174,Aromatics Elixir,2
+11174,Chanel N5,1
+11174,Cinéma,6
+11174,Coco Mademoiselle,1
+11174,Jadore EP,1
+11174,Jadore ET,2
+11174,Linstant,7
+11174,Lolita Lempicka,5
+11174,Pleasures,3
+11174,Pure Poison,4
+11174,Shalimar,1
+11215,Angel,6
+11215,Aromatics Elixir,4
+11215,Chanel N5,6
+11215,Cinéma,6
+11215,Coco Mademoiselle,6
+11215,Jadore EP,7
+11215,Jadore ET,5
+11215,Linstant,3
+11215,Lolita Lempicka,4
+11215,Pleasures,7
+11215,Pure Poison,7
+11215,Shalimar,3
+11350,Angel,7
+11350,Aromatics Elixir,3
+11350,Chanel N5,5
+11350,Cinéma,6
+11350,Coco Mademoiselle,7
+11350,Jadore EP,6
+11350,Jadore ET,7
+11350,Linstant,3
+11350,Lolita Lempicka,7
+11350,Pleasures,6
+11350,Pure Poison,7
+11350,Shalimar,8
+11381,Angel,2
+11381,Aromatics Elixir,8
+11381,Chanel N5,7
+11381,Cinéma,4
+11381,Coco Mademoiselle,8
+11381,Jadore EP,7
+11381,Jadore ET,8
+11381,Linstant,9
+11381,Lolita Lempicka,5
+11381,Pleasures,8
+11381,Pure Poison,6
+11381,Shalimar,3
+11531,Angel,6
+11531,Aromatics Elixir,6
+11531,Chanel N5,6
+11531,Cinéma,5
+11531,Coco Mademoiselle,6
+11531,Jadore EP,7
+11531,Jadore ET,6
+11531,Linstant,6
+11531,Lolita Lempicka,6
+11531,Pleasures,5
+11531,Pure Poison,4
+11531,Shalimar,6
+11536,Angel,7
+11536,Aromatics Elixir,4
+11536,Chanel N5,4
+11536,Cinéma,6
+11536,Coco Mademoiselle,6
+11536,Jadore EP,7
+11536,Jadore ET,6
+11536,Linstant,7
+11536,Lolita Lempicka,8
+11536,Pleasures,7
+11536,Pure Poison,5
+11536,Shalimar,8
+11574,Angel,3
+11574,Aromatics Elixir,3
+11574,Chanel N5,7
+11574,Cinéma,7
+11574,Coco Mademoiselle,6
+11574,Jadore EP,8
+11574,Jadore ET,7
+11574,Linstant,9
+11574,Lolita Lempicka,4
+11574,Pleasures,8
+11574,Pure Poison,7
+11574,Shalimar,3
+11677,Angel,7
+11677,Aromatics Elixir,3
+11677,Chanel N5,6
+11677,Cinéma,9
+11677,Coco Mademoiselle,8
+11677,Jadore EP,7
+11677,Jadore ET,7
+11677,Linstant,4
+11677,Lolita Lempicka,8
+11677,Pleasures,5
+11677,Pure Poison,7
+11677,Shalimar,5
+11776,Angel,3
+11776,Aromatics Elixir,7
+11776,Chanel N5,4
+11776,Cinéma,7
+11776,Coco Mademoiselle,7
+11776,Jadore EP,7
+11776,Jadore ET,7
+11776,Linstant,6
+11776,Lolita Lempicka,6
+11776,Pleasures,5
+11776,Pure Poison,6
+11776,Shalimar,5
+11811,Angel,6
+11811,Aromatics Elixir,7
+11811,Chanel N5,7
+11811,Cinéma,8
+11811,Coco Mademoiselle,6
+11811,Jadore EP,7
+11811,Jadore ET,8
+11811,Linstant,6
+11811,Lolita Lempicka,8
+11811,Pleasures,8
+11811,Pure Poison,7
+11811,Shalimar,4
+11947,Angel,3
+11947,Aromatics Elixir,3
+11947,Chanel N5,1
+11947,Cinéma,7
+11947,Coco Mademoiselle,7
+11947,Jadore EP,5
+11947,Jadore ET,5
+11947,Linstant,6
+11947,Lolita Lempicka,6
+11947,Pleasures,6
+11947,Pure Poison,5
+11947,Shalimar,1
+12072,Angel,6
+12072,Aromatics Elixir,6
+12072,Chanel N5,6
+12072,Cinéma,7
+12072,Coco Mademoiselle,7
+12072,Jadore EP,6
+12072,Jadore ET,7
+12072,Linstant,7
+12072,Lolita Lempicka,7
+12072,Pleasures,7
+12072,Pure Poison,7
+12072,Shalimar,7
+12138,Angel,5
+12138,Aromatics Elixir,4
+12138,Chanel N5,6
+12138,Cinéma,5
+12138,Coco Mademoiselle,6
+12138,Jadore EP,7
+12138,Jadore ET,5
+12138,Linstant,4
+12138,Lolita Lempicka,3
+12138,Pleasures,4
+12138,Pure Poison,6
+12138,Shalimar,4
+12244,Angel,4
+12244,Aromatics Elixir,6
+12244,Chanel N5,3
+12244,Cinéma,7
+12244,Coco Mademoiselle,7
+12244,Jadore EP,4
+12244,Jadore ET,8
+12244,Linstant,6
+12244,Lolita Lempicka,6
+12244,Pleasures,5
+12244,Pure Poison,3
+12244,Shalimar,7
+12280,Angel,4
+12280,Aromatics Elixir,6
+12280,Chanel N5,7
+12280,Cinéma,7
+12280,Coco Mademoiselle,5
+12280,Jadore EP,4
+12280,Jadore ET,4
+12280,Linstant,8
+12280,Lolita Lempicka,7
+12280,Pleasures,4
+12280,Pure Poison,7
+12280,Shalimar,5
+12291,Angel,1
+12291,Aromatics Elixir,7
+12291,Chanel N5,7
+12291,Cinéma,9
+12291,Coco Mademoiselle,7
+12291,Jadore EP,8
+12291,Jadore ET,8
+12291,Linstant,3
+12291,Lolita Lempicka,8
+12291,Pleasures,8
+12291,Pure Poison,8
+12291,Shalimar,3
+12292,Angel,2
+12292,Aromatics Elixir,7
+12292,Chanel N5,7
+12292,Cinéma,6
+12292,Coco Mademoiselle,5
+12292,Jadore EP,9
+12292,Jadore ET,7
+12292,Linstant,6
+12292,Lolita Lempicka,5
+12292,Pleasures,8
+12292,Pure Poison,8
+12292,Shalimar,4
+12471,Angel,2
+12471,Aromatics Elixir,2
+12471,Chanel N5,3
+12471,Cinéma,4
+12471,Coco Mademoiselle,7
+12471,Jadore EP,7
+12471,Jadore ET,9
+12471,Linstant,2
+12471,Lolita Lempicka,8
+12471,Pleasures,8
+12471,Pure Poison,6
+12471,Shalimar,1
+12535,Angel,4
+12535,Aromatics Elixir,1
+12535,Chanel N5,7
+12535,Cinéma,7
+12535,Coco Mademoiselle,3
+12535,Jadore EP,5
+12535,Jadore ET,4
+12535,Linstant,8
+12535,Lolita Lempicka,2
+12535,Pleasures,5
+12535,Pure Poison,7
+12535,Shalimar,4
+12547,Angel,2
+12547,Aromatics Elixir,1
+12547,Chanel N5,5
+12547,Cinéma,7
+12547,Coco Mademoiselle,4
+12547,Jadore EP,8
+12547,Jadore ET,5
+12547,Linstant,6
+12547,Lolita Lempicka,7
+12547,Pleasures,4
+12547,Pure Poison,5
+12547,Shalimar,6
+12574,Angel,1
+12574,Aromatics Elixir,2
+12574,Chanel N5,4
+12574,Cinéma,8
+12574,Coco Mademoiselle,4
+12574,Jadore EP,3
+12574,Jadore ET,3
+12574,Linstant,8
+12574,Lolita Lempicka,7
+12574,Pleasures,3
+12574,Pure Poison,4
+12574,Shalimar,4
+12580,Angel,5
+12580,Aromatics Elixir,4
+12580,Chanel N5,4
+12580,Cinéma,3
+12580,Coco Mademoiselle,8
+12580,Jadore EP,8
+12580,Jadore ET,8
+12580,Linstant,3
+12580,Lolita Lempicka,8
+12580,Pleasures,8
+12580,Pure Poison,7
+12580,Shalimar,5
+12656,Angel,4
+12656,Aromatics Elixir,4
+12656,Chanel N5,4
+12656,Cinéma,6
+12656,Coco Mademoiselle,6
+12656,Jadore EP,6
+12656,Jadore ET,5
+12656,Linstant,6
+12656,Lolita Lempicka,4
+12656,Pleasures,6
+12656,Pure Poison,5
+12656,Shalimar,5
+12706,Angel,2
+12706,Aromatics Elixir,4
+12706,Chanel N5,5
+12706,Cinéma,7
+12706,Coco Mademoiselle,4
+12706,Jadore EP,7
+12706,Jadore ET,1
+12706,Linstant,4
+12706,Lolita Lempicka,7
+12706,Pleasures,7
+12706,Pure Poison,4
+12706,Shalimar,6
+12742,Angel,7
+12742,Aromatics Elixir,4
+12742,Chanel N5,4
+12742,Cinéma,7
+12742,Coco Mademoiselle,7
+12742,Jadore EP,7
+12742,Jadore ET,6
+12742,Linstant,7
+12742,Lolita Lempicka,5
+12742,Pleasures,7
+12742,Pure Poison,7
+12742,Shalimar,4
+12774,Angel,2
+12774,Aromatics Elixir,4
+12774,Chanel N5,3
+12774,Cinéma,6
+12774,Coco Mademoiselle,4
+12774,Jadore EP,6
+12774,Jadore ET,3
+12774,Linstant,6
+12774,Lolita Lempicka,5
+12774,Pleasures,4
+12774,Pure Poison,5
+12774,Shalimar,2
+12859,Angel,4
+12859,Aromatics Elixir,4
+12859,Chanel N5,6
+12859,Cinéma,6
+12859,Coco Mademoiselle,5
+12859,Jadore EP,4
+12859,Jadore ET,7
+12859,Linstant,6
+12859,Lolita Lempicka,5
+12859,Pleasures,6
+12859,Pure Poison,6
+12859,Shalimar,8
+12872,Angel,1
+12872,Aromatics Elixir,3
+12872,Chanel N5,4
+12872,Cinéma,2
+12872,Coco Mademoiselle,5
+12872,Jadore EP,9
+12872,Jadore ET,8
+12872,Linstant,6
+12872,Lolita Lempicka,9
+12872,Pleasures,5
+12872,Pure Poison,9
+12872,Shalimar,2
+12924,Angel,6
+12924,Aromatics Elixir,4
+12924,Chanel N5,5
+12924,Cinéma,8
+12924,Coco Mademoiselle,8
+12924,Jadore EP,6
+12924,Jadore ET,8
+12924,Linstant,6
+12924,Lolita Lempicka,6
+12924,Pleasures,5
+12924,Pure Poison,8
+12924,Shalimar,6
+13048,Angel,3
+13048,Aromatics Elixir,6
+13048,Chanel N5,2
+13048,Cinéma,5
+13048,Coco Mademoiselle,7
+13048,Jadore EP,7
+13048,Jadore ET,5
+13048,Linstant,1
+13048,Lolita Lempicka,6
+13048,Pleasures,5
+13048,Pure Poison,7
+13048,Shalimar,1
+13073,Angel,6
+13073,Aromatics Elixir,4
+13073,Chanel N5,4
+13073,Cinéma,7
+13073,Coco Mademoiselle,8
+13073,Jadore EP,7
+13073,Jadore ET,7
+13073,Linstant,5
+13073,Lolita Lempicka,6
+13073,Pleasures,7
+13073,Pure Poison,4
+13073,Shalimar,4
+13090,Angel,1
+13090,Aromatics Elixir,1
+13090,Chanel N5,5
+13090,Cinéma,7
+13090,Coco Mademoiselle,6
+13090,Jadore EP,4
+13090,Jadore ET,5
+13090,Linstant,6
+13090,Lolita Lempicka,6
+13090,Pleasures,2
+13090,Pure Poison,8
+13090,Shalimar,5
+13121,Angel,3
+13121,Aromatics Elixir,1
+13121,Chanel N5,1
+13121,Cinéma,7
+13121,Coco Mademoiselle,7
+13121,Jadore EP,7
+13121,Jadore ET,7
+13121,Linstant,4
+13121,Lolita Lempicka,6
+13121,Pleasures,7
+13121,Pure Poison,5
+13121,Shalimar,7
+13292,Angel,2
+13292,Aromatics Elixir,1
+13292,Chanel N5,1
+13292,Cinéma,6
+13292,Coco Mademoiselle,9
+13292,Jadore EP,7
+13292,Jadore ET,1
+13292,Linstant,1
+13292,Lolita Lempicka,9
+13292,Pleasures,2
+13292,Pure Poison,7
+13292,Shalimar,1
+13311,Angel,1
+13311,Aromatics Elixir,3
+13311,Chanel N5,6
+13311,Cinéma,7
+13311,Coco Mademoiselle,9
+13311,Jadore EP,9
+13311,Jadore ET,9
+13311,Linstant,3
+13311,Lolita Lempicka,8
+13311,Pleasures,9
+13311,Pure Poison,7
+13311,Shalimar,2
+13313,Angel,6
+13313,Aromatics Elixir,8
+13313,Chanel N5,8
+13313,Cinéma,7
+13313,Coco Mademoiselle,9
+13313,Jadore EP,8
+13313,Jadore ET,5
+13313,Linstant,8
+13313,Lolita Lempicka,8
+13313,Pleasures,8
+13313,Pure Poison,9
+13313,Shalimar,8
+13428,Angel,1
+13428,Aromatics Elixir,5
+13428,Chanel N5,3
+13428,Cinéma,5
+13428,Coco Mademoiselle,6
+13428,Jadore EP,5
+13428,Jadore ET,8
+13428,Linstant,6
+13428,Lolita Lempicka,1
+13428,Pleasures,7
+13428,Pure Poison,7
+13428,Shalimar,1
+13538,Angel,7
+13538,Aromatics Elixir,5
+13538,Chanel N5,7
+13538,Cinéma,7
+13538,Coco Mademoiselle,8
+13538,Jadore EP,5
+13538,Jadore ET,7
+13538,Linstant,5
+13538,Lolita Lempicka,5
+13538,Pleasures,6
+13538,Pure Poison,6
+13538,Shalimar,7
+13617,Angel,7
+13617,Aromatics Elixir,1
+13617,Chanel N5,3
+13617,Cinéma,7
+13617,Coco Mademoiselle,9
+13617,Jadore EP,7
+13617,Jadore ET,6
+13617,Linstant,6
+13617,Lolita Lempicka,6
+13617,Pleasures,4
+13617,Pure Poison,8
+13617,Shalimar,2
+13618,Angel,7
+13618,Aromatics Elixir,7
+13618,Chanel N5,2
+13618,Cinéma,8
+13618,Coco Mademoiselle,3
+13618,Jadore EP,3
+13618,Jadore ET,6
+13618,Linstant,8
+13618,Lolita Lempicka,7
+13618,Pleasures,6
+13618,Pure Poison,6
+13618,Shalimar,7
+13645,Angel,7
+13645,Aromatics Elixir,5
+13645,Chanel N5,8
+13645,Cinéma,7
+13645,Coco Mademoiselle,7
+13645,Jadore EP,6
+13645,Jadore ET,6
+13645,Linstant,7
+13645,Lolita Lempicka,5
+13645,Pleasures,8
+13645,Pure Poison,8
+13645,Shalimar,5
+13648,Angel,5
+13648,Aromatics Elixir,4
+13648,Chanel N5,1
+13648,Cinéma,6
+13648,Coco Mademoiselle,5
+13648,Jadore EP,6
+13648,Jadore ET,2
+13648,Linstant,6
+13648,Lolita Lempicka,4
+13648,Pleasures,6
+13648,Pure Poison,4
+13648,Shalimar,2
