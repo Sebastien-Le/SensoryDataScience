@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 4: Overview'
+title: 'Chapter 4: When CATA met JAR - a sonic branding case study'
 description:
 prev: /chapter3
 next: null
@@ -7,9 +7,9 @@ type: chapter
 id: 4
 ---
 
-<exercise id="1" title="Presentation des diapos" type="slides">
+<exercise id="1" title="Matching brand values to a sound logo with CATA and JAR: presentation of the case study" type="slides">
 
-<slides source="chapter1_01_introduction">
+<slides source="Sennheiser">
 </slides>
 
 </exercise>
@@ -38,6 +38,11 @@ Note : choix multiples pas implémentés
 
 Bạn có cảm thấy liên quan đến cuộc tranh luận về GMO (rất nhiều, ở một mức độ nhất định, một chút, không hề)?
 
+</exercise>
 
+<exercise id="3" title="Presentation des diapos" type="slides">
+
+<slides source="chapter1_01_introduction">
+</slides>
 
 </exercise>
