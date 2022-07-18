@@ -1,0 +1,1261 @@
+Judge;Sound;Rank;Innovation;Originality;Sobriety;Proximity;Fun;Premium;Simplicity;Freedom;Human;Technology;Conviviality;Complexity;Popular;Serious;International;Passion;Artisanal;Traditional;Performance;Joyful;Surprising;Exciting;Energetic;Sensual;Sad;Warm;Serious;Adequation;Why;Tempo;Pitch;Instrument
+1;V_120_1;1;0;1;0;0;0;1;0;0;0;0;0;1;0;1;1;0;0;0;1;JAR;ne;JAR;JAR;JAR;ne;JAR;JAR;9;the violin brings a warm and energetic air;120;1;Violon
+1;P_120_1;2;0;0;1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;ne;ne;JAR;JAR;7;piano not high-end enough, not energetic enough;120;1;Piano
+1;A_160_5;3;0;1;1;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;t;t;JAR;t;ne;r_ne;JAR;ne;4;too cheerful, too energetic;160;5;Accordion
+1;A_120_1;4;0;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;1;0;0;t;r_t;r_ne;ne;ne;ne;JAR;r_ne;2;not classy enough;120;1;Accordion
+1;V_160_1;5;1;1;0;0;0;1;0;0;0;0;1;0;1;0;0;0;0;0;1;t;JAR;JAR;t;t;ne;JAR;JAR;7;tempo too fast, too energetic;160;1;Violon
+1;A_160_1;6;0;1;0;0;0;0;1;0;1;0;0;0;1;0;0;0;1;0;0;JAR;t;ne;JAR;ne;r_ne;JAR;JAR;5;too surprising;160;1;Accordion
+1;V_80_1;7;1;0;0;0;0;1;0;0;0;0;0;1;0;1;1;0;0;0;0;ne;t;ne;r_ne;ne;t;ne;JAR;6;surprising by the slow pace, not pleasant;80;1;Violon
+1;P_120_5;8;0;1;0;0;1;0;0;1;1;0;1;0;0;0;0;1;0;0;1;JAR;t;JAR;JAR;JAR;ne;JAR;JAR;8;pleasant echo effect;120;5;Piano
+1;A_80_5;9;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;ne;t;ne;ne;r_ne;JAR;ne;JAR;2;not pleasant, really too slow;80;5;Accordion
+1;P_160_1;10;0;0;1;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;0;t;t;ne;t;ne;ne;t;ne;4;instrument and tempo are not serious;160;1;Piano
+1;P_120_3;11;1;0;1;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;1;JAR;ne;JAR;JAR;JAR;ne;JAR;JAR;7;nice piano;120;3;Piano
+1;P_80_5;12;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;ne;t;r_ne;r_ne;ne;t;ne;JAR;3;really too slow tempo;80;5;Piano
+2;A_80_3;1;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;ne;JAR;r_ne;t;ne;r_t;2;instrument does not do enough technology;80;3;Accordion
+2;P_120_3;2;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;JAR;JAR;ne;JAR;ne;JAR;ne;t;7;echo of the piano made innovative;120;3;Piano
+2;V_80_5;3;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;t;r_ne;JAR;r_ne;t;r_ne;t;1;strident;80;5;Violon
+2;P_80_1;4;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;1;0;0;0;ne;JAR;JAR;ne;JAR;JAR;ne;t;5;tempo too slow, not technological, not innovative;80;1;Piano
+2;V_120_5;5;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;t;ne;JAR;ne;JAR;ne;t;3;a little too strident;120;5;Violon
+2;P_160_5;6;1;0;1;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;JAR;JAR;JAR;t;ne;JAR;JAR;JAR;8;slightly too fast tempo;160;5;Piano
+2;A_160_3;7;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;JAR;ne;ne;t;ne;JAR;t;t;4;tempo a little too fast, inappropriate instrument, too trumpeting;160;3;Accordion
+2;A_160_5;8;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;JAR;JAR;JAR;t;ne;JAR;ne;ne;5;too acute, not serious enough;160;5;Accordion
+2;P_160_1;9;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;0;1;0;ne;ne;ne;t;JAR;JAR;JAR;JAR;6;tempo slightly too fast, echo a little pompous and heavy;160;1;Piano
+2;A_160_1;10;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;1;0;0;JAR;t;ne;ne;ne;t;ne;ne;5;inappropriate instrument, not classy enough;160;1;Accordion
+2;P_120_1;11;0;0;0;0;0;1;0;0;1;0;0;0;0;0;1;0;1;0;0;ne;ne;ne;ne;JAR;JAR;JAR;JAR;5;echo too important, little class;120;1;Piano
+2;P_80_5;12;0;0;0;0;1;0;1;0;0;1;0;0;0;0;0;0;0;0;0;JAR;ne;JAR;t;ne;JAR;ne;JAR;4;too strident, a little too fast;80;5;Piano
+3;V_120_3;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;1;JAR;r_ne;JAR;JAR;JAR;t;ne;JAR;6;too traditional;120;3;Violon
+3;V_160_1;2;0;0;0;0;0;1;0;1;1;0;0;0;0;1;0;0;0;1;0;r_ne;ne;r_ne;t;ne;t;ne;JAR;7;high-end;160;1;Violon
+3;P_80_5;3;0;0;1;1;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;JAR;JAR;ne;ne;t;r_t;r_ne;t;2;not complex enough;80;5;Piano
+3;V_160_3;4;1;0;0;0;0;0;0;0;0;1;0;1;0;1;0;0;0;0;1;r_t;r_t;t;t;r_ne;ne;t;r_ne;0;too popular;160;3;Violon
+3;P_160_5;5;0;0;1;0;1;0;1;0;0;1;0;0;1;0;0;0;0;0;1;t;ne;ne;r_t;ne;JAR;JAR;JAR;4;not an expert sound;160;5;Piano
+3;V_80_1;6;0;0;0;0;0;1;0;0;1;0;0;0;0;1;1;0;0;1;0;r_ne;ne;ne;r_ne;t;t;ne;t;6;not energy-intensive enough for innovation;80;1;Violon
+3;A_160_1;7;0;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;1;1;0;r_t;r_t;r_ne;t;r_ne;ne;JAR;ne;3;far too popular and traditional, not high-end enough;160;1;Accordion
+3;P_160_1;8;0;0;1;1;1;0;0;0;0;0;0;0;1;0;0;0;1;1;0;JAR;JAR;JAR;t;ne;JAR;JAR;JAR;8;quite simple, efficiency, innovation;160;1;Piano
+3;A_120_3;9;0;1;0;0;0;0;1;0;0;0;1;0;1;0;0;0;1;1;0;ne;r_t;r_ne;ne;r_ne;JAR;r_ne;ne;2;traditional, without originality;120;3;Accordion
+3;A_80_5;10;0;1;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;1;t;t;t;r_t;r_ne;ne;t;ne;2;too brief;80;5;Accordion
+3;V_80_3;11;0;1;1;0;0;1;0;1;1;0;0;0;0;1;0;1;0;0;0;JAR;JAR;JAR;JAR;JAR;t;ne;ne;9;sound posed, lack of complexity in bass;80;3;Violon
+3;V_120_5;12;1;1;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;t;r_t;r_ne;ne;r_t;ne;JAR;r_ne;1;sound of old laptop, piercing, unpleasant;120;5;Violon
+4;A_80_1;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;r_ne;t;r_ne;r_ne;r_ne;t;r_ne;r_t;0;accordion makes old-game, oldschool;80;1;Accordion
+4;V_120_3;2;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;ne;JAR;r_ne;JAR;JAR;t;2;;120;3;Violon
+4;P_160_5;3;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;ne;JAR;JAR;JAR;t;6;;160;5;Piano
+4;V_120_1;4;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;t;r_ne;r_ne;r_ne;t;r_ne;t;0;;120;1;Violon
+4;P_120_3;5;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;ne;JAR;t;JAR;JAR;4;;120;3;Piano
+4;V_160_3;6;0;0;0;0;0;0;0;1;0;0;1;0;1;0;0;0;0;0;1;JAR;JAR;JAR;JAR;ne;JAR;JAR;ne;6;;160;3;Violon
+4;P_120_1;7;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;7;;120;1;Piano
+4;V_120_5;8;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;r_t;ne;t;ne;JAR;ne;r_ne;3;;120;5;Violon
+4;A_160_3;9;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;t;t;JAR;r_t;ne;ne;t;r_ne;2;;160;3;Accordion
+4;V_80_3;10;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;t;r_ne;r_ne;ne;r_ne;r_ne;ne;0;;80;3;Violon
+4;A_160_5;11;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;JAR;t;ne;JAR;ne;JAR;ne;JAR;4;;160;5;Accordion
+4;V_160_5;12;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;t;t;JAR;JAR;ne;JAR;JAR;ne;4;;160;5;Violon
+5;V_120_5;1;0;0;0;0;0;1;0;1;0;1;0;0;0;0;0;0;0;0;1;JAR;JAR;ne;JAR;JAR;JAR;ne;ne;2;too light, not serious enough;120;5;Violon
+5;V_120_1;2;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;1;1;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;dynamic, with bass and depth;120;1;Violon
+5;V_160_3;3;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;t;t;t;t;ne;ne;ne;ne;2;too fast, not serious enough, not high-end enough;160;3;Violon
+5;V_80_1;4;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;1;0;0;1;JAR;ne;ne;ne;JAR;JAR;JAR;t;6;not dynamic enough, not innovative enough;80;1;Violon
+5;V_80_3;5;1;0;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;JAR;ne;ne;ne;JAR;t;ne;JAR;3;sad logo, not very dynamic;80;3;Violon
+5;A_80_5;6;0;1;0;1;0;0;1;0;0;1;1;0;0;0;1;0;0;0;0;JAR;JAR;ne;ne;r_ne;JAR;r_ne;JAR;4;not dynamic enough;80;5;Accordion
+5;V_160_1;7;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;JAR;t;t;JAR;JAR;JAR;ne;7;too fast, botched on the end;160;1;Violon
+5;P_120_1;8;0;0;0;0;0;0;1;0;1;0;1;0;0;0;0;1;0;0;1;JAR;ne;ne;ne;JAR;JAR;JAR;ne;6;too soft, not very expert;120;1;Piano
+5;P_80_1;9;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;JAR;JAR;JAR;ne;4;too soft, not innovative;80;1;Piano
+5;P_120_3;10;0;1;0;0;0;0;0;1;1;0;1;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;t;JAR;JAR;7;not dynamic enough;120;3;Piano
+5;P_160_3;11;1;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0;1;0;JAR;t;JAR;JAR;ne;JAR;ne;ne;5;the notes are offbeat, too surprising;160;3;Piano
+5;A_120_5;12;0;0;0;0;0;1;0;0;1;0;0;1;0;1;0;0;0;1;1;JAR;JAR;ne;ne;ne;JAR;ne;ne;3;not enough depth, not enough seriousness;120;5;Accordion
+6;P_120_1;1;1;1;1;0;0;1;0;0;0;0;0;0;0;1;1;0;0;1;0;ne;r_ne;r_ne;ne;r_ne;JAR;JAR;JAR;4;not innovative enough;120;1;Piano
+6;V_160_1;2;1;1;1;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;JAR;ne;JAR;ne;JAR;6;quite innovative;160;1;Violon
+6;A_80_3;3;1;1;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;JAR;JAR;ne;ne;ne;JAR;ne;t;5;too traditional;80;3;Accordion
+6;P_160_5;4;1;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;1;0;0;JAR;t;ne;r_ne;ne;JAR;ne;r_ne;3;not energetic enough, not serious enough;160;5;Piano
+6;V_120_5;5;1;1;1;0;0;1;1;0;0;0;0;0;0;0;0;0;1;0;0;ne;JAR;r_ne;r_ne;r_ne;ne;ne;ne;2;not energetic enough;120;5;Violon
+6;P_80_5;6;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;ne;ne;r_ne;r_ne;r_ne;r_ne;r_ne;r_ne;1;too simplistic;80;5;Piano
+6;P_80_3;7;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;JAR;ne;ne;ne;ne;JAR;JAR;JAR;4;restores the seriousness of the company;80;3;Piano
+6;A_120_5;8;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;t;JAR;ne;ne;ne;JAR;ne;ne;3;not serious enough;120;5;Accordion
+6;V_80_1;9;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;ne;ne;JAR;JAR;JAR;JAR;4;too serious;80;1;Violon
+6;A_160_3;10;1;1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;JAR;JAR;JAR;JAR;JAR;5;serious, warm, not innovative enough;160;3;Accordion
+6;V_160_5;11;0;1;0;0;0;1;1;0;0;0;0;0;0;1;1;0;0;0;0;JAR;t;ne;ne;ne;ne;ne;ne;3;not serious enough, too light;160;5;Violon
+6;A_120_1;12;0;0;1;0;0;1;1;0;0;0;0;0;0;1;0;0;0;1;0;ne;JAR;ne;ne;r_ne;t;ne;t;3;too solemn, too sad;120;1;Accordion
+7;A_80_5;1;0;1;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;r_ne;ne;t;ne;JAR;3;too acute;80;5;Accordion
+7;V_160_3;2;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;1;0;JAR;JAR;JAR;t;ne;JAR;ne;JAR;6;quite dry, quite brief;160;3;Violon
+7;A_120_3;3;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;ne;JAR;ne;ne;r_ne;JAR;ne;JAR;2;lack of proximity;120;3;Accordion
+7;P_120_3;4;1;0;0;1;0;0;0;1;1;0;1;0;0;0;0;1;0;0;0;JAR;ne;ne;JAR;JAR;JAR;ne;JAR;7;sticks well with technology and innovation;120;3;Piano
+7;P_160_1;5;0;0;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;1;ne;JAR;ne;JAR;r_ne;JAR;r_ne;t;4;severe,in short;160;1;Piano
+7;A_80_3;6;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;ne;JAR;ne;ne;ne;JAR;ne;JAR;2;not dynamic enough;80;3;Accordion
+7;P_80_1;7;1;0;1;0;0;1;0;0;0;1;0;1;0;0;1;0;0;0;1;ne;JAR;JAR;ne;JAR;JAR;ne;JAR;8;serious, high-end and technological;80;1;Piano
+7;P_160_5;8;1;1;0;1;0;0;0;1;1;0;0;0;0;0;0;1;0;0;0;ne;JAR;JAR;t;JAR;JAR;JAR;ne;7;;160;5;Piano
+7;P_160_3;9;1;1;0;0;1;0;0;1;0;0;1;0;1;0;0;0;0;0;1;JAR;JAR;JAR;t;JAR;JAR;ne;JAR;8;combines the company's values;160;3;Piano
+7;V_120_1;10;0;0;1;0;0;1;0;0;0;1;0;1;0;1;0;0;0;1;1;ne;JAR;r_ne;JAR;ne;JAR;ne;t;4;too dry, haughty;120;1;Violon
+7;V_80_1;11;0;0;1;0;0;0;0;0;0;1;0;1;0;0;0;0;1;0;0;r_ne;JAR;ne;r_ne;ne;JAR;ne;r_t;2;not dynamic enough, does not reflect the brand;80;1;Violon
+7;A_80_1;12;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;1;0;r_ne;JAR;ne;r_ne;ne;t;r_ne;t;3;too popular, too sad;80;1;Accordion
+8;A_160_1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;1;1;0;r_ne;r_ne;r_ne;ne;r_ne;t;r_ne;t;2;too old-fashioned, too pompous, not at all innovative, not at all recent;160;1;Accordion
+8;P_80_3;2;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;r_ne;ne;r_ne;r_ne;ne;t;r_ne;t;2;far too slow;80;3;Piano
+8;V_80_1;3;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;r_ne;ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;0;mortuary music;80;1;Violon
+8;V_120_5;4;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;JAR;ne;JAR;ne;JAR;4;lacks originality, lacks a nice sound, too high-pitched;120;5;Violon
+8;P_120_5;5;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;ne;ne;ne;ne;JAR;t;r_ne;r_t;5;a little too classic for an innovation brand;120;5;Piano
+8;P_160_1;6;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;ne;ne;ne;JAR;ne;t;ne;t;4;too serious to make young or independent;160;1;Piano
+8;V_80_3;7;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;r_ne;r_ne;r_ne;r_ne;r_t;ne;r_t;2;very ceremonial, does not make sound logo at all;80;3;Violon
+8;P_160_3;8;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;JAR;t;8;not completely innovative but classy rhythm, reflects the technology well;160;3;Piano
+8;P_160_5;9;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;JAR;r_ne;JAR;r_ne;t;6;cold, not warm;160;5;Piano
+8;A_120_5;10;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_t;ne;JAR;r_ne;JAR;ne;t;3;hurts the ears, bad image of technology, surprising in the wrong way;120;5;Accordion
+8;P_80_1;11;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;t;r_ne;t;1;very pompous, classic, not innovative, not user-friendly;80;1;Piano
+8;P_120_1;12;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;ne;r_ne;r_t;r_ne;r_t;1;not innovative;120;1;Piano
+9;P_80_5;1;0;0;0;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;t;JAR;JAR;JAR;5;;80;5;Piano
+9;P_120_5;2;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;JAR;JAR;JAR;JAR;5;;120;5;Piano
+9;P_160_3;3;0;0;0;0;1;0;1;1;0;0;0;0;0;0;1;0;0;0;1;JAR;JAR;ne;JAR;JAR;JAR;t;JAR;6;;160;3;Piano
+9;P_160_1;4;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;t;JAR;t;6;;160;1;Piano
+9;P_80_3;5;0;0;1;0;0;1;0;1;0;0;0;0;0;0;0;1;0;0;0;JAR;JAR;ne;ne;JAR;t;JAR;JAR;5;;80;3;Piano
+9;A_80_1;6;0;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;1;1;0;ne;r_t;ne;ne;JAR;t;JAR;ne;2;;80;1;Accordion
+9;V_120_1;7;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;1;0;1;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;t;7;;120;1;Violon
+9;V_80_5;8;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;t;ne;ne;JAR;JAR;JAR;JAR;4;;80;5;Violon
+9;V_160_3;9;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;160;3;Violon
+9;A_160_3;10;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;t;r_t;ne;JAR;JAR;JAR;t;ne;3;;160;3;Accordion
+9;A_160_1;11;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;1;0;t;r_t;ne;JAR;JAR;JAR;t;ne;2;;160;1;Accordion
+9;A_160_5;12;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;t;JAR;JAR;JAR;JAR;JAR;ne;4;too strident;160;5;Accordion
+10;P_120_5;1;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;JAR;ne;JAR;ne;r_ne;JAR;8;;120;5;Piano
+10;P_80_5;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;r_ne;ne;JAR;ne;ne;t;ne;r_ne;5;;80;5;Piano
+10;A_120_5;3;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;r_t;t;ne;t;r_ne;JAR;ne;JAR;3;;120;5;Accordion
+10;A_80_3;4;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;JAR;ne;ne;r_ne;r_t;JAR;JAR;JAR;8;;80;3;Accordion
+10;A_160_5;5;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;ne;JAR;9;;160;5;Accordion
+10;P_120_3;6;0;1;1;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;JAR;JAR;ne;ne;ne;JAR;JAR;JAR;7;;120;3;Piano
+10;V_120_5;7;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;ne;JAR;ne;r_ne;t;ne;t;3;;120;5;Violon
+10;V_80_5;8;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;r_ne;r_ne;ne;r_ne;JAR;JAR;ne;JAR;7;;80;5;Violon
+10;V_160_1;9;0;0;1;0;0;1;0;0;1;0;1;0;0;0;0;1;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;t;10;;160;1;Violon
+10;A_80_1;10;0;1;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;JAR;r_ne;r_ne;ne;r_ne;t;JAR;JAR;2;;80;1;Accordion
+10;V_80_1;11;0;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;0;JAR;JAR;JAR;ne;JAR;JAR;JAR;t;9;;80;1;Violon
+10;V_160_3;12;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;1;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;9;;160;3;Violon
+11;V_80_5;1;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;ne;JAR;r_ne;ne;ne;t;r_ne;JAR;7;highly electric sound, synonymous with technology and innovation;80;5;Violon
+11;P_80_5;2;0;0;0;0;0;1;1;0;0;1;0;0;0;0;0;0;0;0;0;JAR;ne;ne;ne;ne;t;JAR;JAR;5;classic sound, synonymous with precision but not really innovative;80;5;Piano
+11;V_80_3;3;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;1;0;r_ne;t;ne;JAR;r_ne;t;r_ne;JAR;3;energetic music but too sad, it looks like in a church;80;3;Violon
+11;V_160_1;4;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;ne;JAR;JAR;JAR;JAR;t;JAR;t;7;sound that asserts itself, synonymous with independence, precision;160;1;Violon
+11;P_160_5;5;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;JAR;JAR;t;ne;JAR;8;classic and serious, technology and innovation;160;5;Piano
+11;P_120_5;6;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;r_ne;JAR;t;ne;JAR;6;sound too slow, not innovative enough;120;5;Piano
+11;P_120_3;7;1;0;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;JAR;JAR;ne;JAR;ne;JAR;ne;JAR;8;classic and precise;120;3;Piano
+11;P_80_1;8;0;0;1;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;r_ne;ne;r_ne;r_ne;JAR;r_t;JAR;t;3;too slow, not exciting enough;80;1;Piano
+11;A_80_3;9;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;ne;ne;ne;r_ne;ne;JAR;ne;ne;4;too traditional, bagpipes, too artisanal;80;3;Accordion
+11;P_80_3;10;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;JAR;ne;JAR;t;JAR;JAR;6;a little too slow, a little too classic;80;3;Piano
+11;A_120_3;11;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;JAR;t;t;t;r_ne;JAR;r_ne;ne;3;circus music, not serious enough;120;3;Accordion
+11;A_160_5;12;1;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;r_t;t;t;r_ne;ne;r_ne;JAR;6;far too aggressive;160;5;Accordion
+12;A_120_5;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;ne;ne;t;r_ne;r_ne;ne;r_ne;2;too aggressive;120;5;Accordion
+12;P_120_3;2;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;1;0;0;0;JAR;JAR;ne;JAR;ne;JAR;JAR;JAR;8;classical music, high-end value;120;3;Piano
+12;V_120_3;3;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;ne;JAR;ne;JAR;ne;JAR;5;;120;3;Violon
+12;V_80_1;4;0;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;1;0;ne;JAR;ne;ne;ne;t;ne;t;3;tone too serious, too serious, no innovation;80;1;Violon
+12;P_120_1;5;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;1;0;0;JAR;JAR;ne;ne;ne;JAR;ne;JAR;6;;120;1;Piano
+12;V_80_5;6;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;r_ne;r_t;ne;t;r_ne;r_ne;r_ne;JAR;2;too sharp, strident, not friendly;80;5;Violon
+12;A_80_5;7;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;ne;ne;ne;t;ne;JAR;r_ne;JAR;3;no innovation, synthetic sound, not at all high-end;80;5;Accordion
+12;A_160_1;8;0;0;1;0;0;0;0;0;0;0;1;0;1;0;0;0;0;1;0;JAR;JAR;JAR;JAR;ne;JAR;t;ne;6;too user-friendly, not high-end sound with accordion;160;1;Accordion
+12;P_80_3;9;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;ne;t;ne;JAR;6;Not energetic enough for the innovation and technology side;80;3;Piano
+12;V_160_5;10;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;t;r_t;t;r_t;ne;ne;r_ne;r_ne;5;too shrill sound, not suitable high-end but technology yes.;160;5;Violon
+12;A_160_5;11;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;ne;JAR;9;innovative sound, reflects technology;160;5;Accordion
+12;A_120_3;12;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;t;JAR;JAR;JAR;r_ne;JAR;t;ne;3;accordion neither innovative nor technological novelty, not adapted;120;3;Accordion
+13;A_160_5;1;0;1;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;t;JAR;JAR;t;ne;JAR;ne;r_ne;5;;160;5;Accordion
+13;A_160_1;2;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;JAR;r_ne;t;ne;r_t;1;;160;1;Accordion
+13;V_160_3;3;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;1;0;0;JAR;ne;ne;JAR;JAR;JAR;JAR;JAR;8;;160;3;Violon
+13;P_80_5;4;1;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;JAR;ne;r_ne;JAR;JAR;ne;JAR;4;;80;5;Piano
+13;A_80_3;5;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;JAR;r_ne;t;ne;t;3;;80;3;Accordion
+13;A_120_3;6;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;ne;ne;JAR;ne;t;ne;JAR;4;;120;3;Accordion
+13;P_80_3;7;1;1;0;1;0;1;1;0;0;1;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;JAR;t;ne;JAR;4;;80;3;Piano
+13;V_120_1;8;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;ne;ne;t;ne;r_t;2;;120;1;Violon
+13;V_160_1;9;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;JAR;ne;t;ne;r_t;2;;160;1;Violon
+13;P_160_3;10;0;0;0;1;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;JAR;t;JAR;JAR;7;;160;3;Piano
+13;P_120_1;11;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;JAR;JAR;t;ne;JAR;6;;120;1;Piano
+13;V_120_3;12;1;0;0;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;1;JAR;ne;JAR;JAR;JAR;t;ne;JAR;7;;120;3;Violon
+14;A_120_3;1;0;0;1;1;0;0;1;0;0;0;1;0;1;0;0;0;0;1;0;t;ne;JAR;ne;JAR;JAR;ne;ne;4;;120;3;Accordion
+14;P_80_1;2;0;0;1;0;1;1;0;0;1;0;0;1;0;1;0;0;0;0;1;ne;ne;ne;ne;JAR;t;ne;JAR;2;;80;1;Piano
+14;P_160_1;3;0;0;1;1;1;0;1;1;0;0;0;0;0;1;0;1;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;;160;1;Piano
+14;P_160_3;4;1;0;0;0;1;0;1;1;1;0;1;1;0;0;1;0;1;0;1;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;9;;160;3;Piano
+14;V_160_5;5;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;r_ne;r_t;ne;t;ne;JAR;r_ne;JAR;5;;160;5;Violon
+14;P_80_3;6;1;0;1;1;0;0;1;0;1;1;1;0;1;1;0;0;0;0;0;JAR;JAR;ne;r_ne;JAR;JAR;ne;JAR;4;lack of dynamism in the rhythm;80;3;Piano
+14;A_160_5;7;1;1;0;0;0;1;0;0;0;1;0;1;0;0;1;0;0;0;1;ne;r_t;t;r_t;JAR;JAR;r_ne;JAR;2;;160;5;Accordion
+14;P_80_5;8;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;0;1;0;0;JAR;ne;r_ne;r_ne;JAR;t;JAR;JAR;1;;80;5;Piano
+14;V_120_5;9;1;1;0;0;1;0;0;1;0;1;0;0;0;0;1;1;0;0;1;JAR;r_t;t;r_t;JAR;JAR;JAR;JAR;3;;120;5;Violon
+14;A_120_1;10;0;0;0;1;1;0;1;0;1;0;1;0;1;0;0;1;0;1;0;t;r_ne;r_ne;ne;r_ne;JAR;t;ne;0;;120;1;Accordion
+14;V_120_3;11;1;1;0;0;0;0;0;1;0;1;1;0;0;1;1;1;0;0;1;JAR;JAR;ne;JAR;ne;JAR;JAR;JAR;7;;120;3;Violon
+14;P_120_3;12;0;1;1;1;1;0;0;0;1;0;0;0;0;1;1;0;1;1;0;JAR;JAR;ne;ne;JAR;JAR;ne;JAR;3;;120;3;Piano
+15;P_80_3;1;0;0;1;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;ne;ne;ne;ne;t;JAR;JAR;6;too slow;80;3;Piano
+15;A_160_3;2;0;0;0;0;0;0;1;0;0;0;1;0;1;0;0;0;1;1;0;t;t;JAR;JAR;ne;JAR;JAR;ne;5;too traditional;160;3;Accordion
+15;V_120_1;3;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;ne;JAR;JAR;JAR;JAR;t;JAR;JAR;8;a little too serious, too serious sound;120;1;Violon
+15;A_120_5;4;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_t;r_t;r_t;JAR;ne;JAR;JAR;ne;4;too acute;120;5;Accordion
+15;P_160_3;5;1;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;8;the piano is perhaps a little too classical;160;3;Piano
+15;V_80_3;6;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;1;ne;ne;ne;r_ne;ne;t;ne;JAR;4;too slow;80;3;Violon
+15;P_80_5;7;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;ne;JAR;ne;ne;JAR;JAR;JAR;JAR;6;the pace is a bit too slow;80;5;Piano
+15;A_120_3;8;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;1;1;0;t;t;JAR;JAR;ne;JAR;t;ne;4;it's country, it doesn't fit the classy image;120;3;Accordion
+15;V_120_3;9;0;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;class;120;3;Violon
+15;A_80_5;10;0;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;t;ne;ne;ne;ne;JAR;JAR;ne;4;too acute;80;5;Accordion
+15;P_120_3;11;0;0;1;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;8;the piano is not surprising enough, it does not reflect the value of innovation;120;3;Piano
+15;A_80_3;12;0;0;0;1;0;0;1;0;0;0;1;0;1;0;0;0;1;1;0;ne;ne;ne;ne;ne;JAR;JAR;JAR;5;too slow;80;3;Accordion
+16;V_160_1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;r_ne;ne;ne;r_ne;t;JAR;JAR;4;;160;1;Violon
+16;P_160_1;2;0;0;1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;ne;ne;JAR;ne;t;JAR;JAR;6;;160;1;Piano
+16;V_80_5;3;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;ne;t;JAR;JAR;ne;JAR;r_ne;ne;5;;80;5;Violon
+16;A_160_1;4;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;1;1;0;t;ne;ne;JAR;ne;ne;t;ne;3;;160;1;Accordion
+16;V_120_1;5;1;0;0;0;0;1;0;0;1;0;0;0;0;1;1;0;0;1;0;ne;JAR;JAR;JAR;JAR;JAR;ne;JAR;8;;120;1;Violon
+16;P_160_5;6;0;0;1;0;0;0;0;1;1;0;1;0;0;0;0;1;0;0;0;ne;r_ne;ne;r_ne;ne;r_t;ne;JAR;3;;160;5;Piano
+16;V_160_5;7;1;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;r_ne;JAR;7;;160;5;Violon
+16;A_80_5;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;ne;r_ne;r_t;1;;80;5;Accordion
+16;A_80_3;9;0;0;1;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;ne;ne;r_ne;r_ne;ne;JAR;ne;JAR;4;;80;3;Accordion
+16;V_120_3;10;1;1;0;0;0;1;0;0;0;1;0;1;0;0;1;1;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;ne;JAR;8;;120;3;Violon
+16;P_80_3;11;1;0;1;0;0;0;1;1;1;0;1;0;0;0;1;1;0;0;0;JAR;ne;ne;ne;JAR;JAR;ne;JAR;7;;80;3;Piano
+16;P_80_1;12;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;9;;80;1;Piano
+17;A_160_3;1;1;0;0;0;0;0;1;1;1;1;0;0;1;1;0;0;0;0;1;ne;t;JAR;t;ne;JAR;ne;JAR;6;not classy enough;160;3;Accordion
+17;P_160_5;2;1;1;0;1;0;1;0;0;0;1;0;0;1;1;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;very much in line with the values sought;160;5;Piano
+17;V_160_1;3;1;1;1;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;ne;JAR;ne;ne;ne;r_t;ne;JAR;6;Too sad;160;1;Violon
+17;V_120_1;4;1;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;ne;JAR;ne;ne;ne;r_t;r_ne;t;4;too slow, too sad;120;1;Violon
+17;A_80_5;5;1;1;0;0;0;1;0;0;0;1;1;0;0;1;0;0;0;0;1;ne;t;JAR;ne;JAR;JAR;JAR;JAR;6;too slow, a little aggressive;80;5;Accordion
+17;A_160_5;6;1;1;0;0;0;1;0;1;0;1;0;0;1;1;1;0;0;0;1;JAR;t;JAR;JAR;JAR;JAR;JAR;JAR;7;;160;5;Accordion
+17;V_120_5;7;1;1;0;0;1;0;1;0;0;1;1;1;0;0;0;0;0;0;1;ne;JAR;JAR;ne;JAR;r_t;JAR;JAR;6;too slow;120;5;Violon
+17;A_120_5;8;1;1;0;0;1;1;0;0;0;1;0;0;0;1;1;0;0;0;1;JAR;t;JAR;ne;JAR;JAR;JAR;JAR;7;;120;5;Accordion
+17;A_160_1;9;0;0;0;0;1;0;0;0;0;0;1;0;0;1;0;0;0;1;0;r_ne;ne;ne;ne;ne;r_t;ne;JAR;3;;160;1;Accordion
+17;V_80_5;10;1;1;0;0;0;1;0;0;0;1;0;0;1;0;1;0;0;0;1;JAR;t;JAR;ne;JAR;t;JAR;JAR;7;a little aggressive, too slow;80;5;Violon
+17;A_120_1;11;0;0;0;0;1;0;0;0;0;0;1;0;0;1;0;0;0;1;0;ne;ne;r_ne;r_ne;ne;r_ne;ne;t;2;;120;1;Accordion
+17;P_160_3;12;1;0;1;0;0;1;0;0;0;1;0;0;1;1;1;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;more pleasant to hear, corresponds perfectly to the values of the company;160;3;Piano
+18;V_80_3;1;0;0;1;0;0;1;1;0;1;0;0;1;0;1;0;1;1;1;1;r_ne;JAR;r_ne;r_ne;JAR;JAR;ne;t;7;does not sufficiently restore the technology side, complexity;80;3;Violon
+18;A_80_3;2;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;1;1;0;t;JAR;ne;r_ne;t;t;ne;ne;4;rhythm too slow, his step classy at all;80;3;Accordion
+18;A_160_3;3;0;0;1;1;1;0;0;1;0;0;0;0;1;0;0;1;0;1;0;JAR;JAR;JAR;JAR;ne;JAR;JAR;ne;7;does not sufficiently reflect technology and innovation;160;3;Accordion
+18;P_120_1;4;0;0;1;0;0;1;0;1;1;0;0;1;0;1;1;0;0;0;1;ne;JAR;ne;JAR;JAR;JAR;JAR;JAR;9;;120;1;Piano
+18;V_80_1;5;0;0;0;0;0;1;0;1;1;0;0;1;0;1;1;1;0;0;0;r_ne;r_t;r_ne;r_ne;r_t;t;r_ne;r_t;2;too classic;80;1;Violon
+18;V_120_3;6;1;1;0;1;0;0;1;1;1;0;0;0;0;0;0;1;1;0;0;JAR;JAR;JAR;JAR;ne;ne;JAR;ne;7;;120;3;Violon
+18;P_160_3;7;1;0;1;0;1;1;1;1;0;1;0;1;0;1;1;0;0;0;1;ne;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;;160;3;Piano
+18;P_120_3;8;1;0;1;1;0;0;1;0;1;1;1;0;0;0;1;1;0;0;0;r_ne;ne;ne;ne;t;t;ne;JAR;6;;120;3;Piano
+18;V_160_5;9;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;ne;r_t;r_ne;r_ne;r_ne;ne;r_ne;ne;1;too aggressive, too high-pitched for headphone music;160;5;Violon
+18;P_120_5;10;1;0;0;0;1;1;0;1;1;0;0;0;0;0;1;1;0;0;0;r_ne;JAR;ne;ne;t;t;t;JAR;7;too slow;120;5;Piano
+18;V_80_5;11;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;ne;t;r_ne;r_ne;JAR;t;r_ne;t;3;far too acute;80;5;Violon
+18;P_160_1;12;0;0;1;0;0;1;1;1;1;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;best reflects performance;160;1;Piano
+19;P_160_3;1;0;0;1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;JAR;ne;JAR;JAR;JAR;9;;160;3;Piano
+19;A_120_3;2;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;1;0;ne;ne;ne;r_ne;r_ne;t;ne;t;3;;120;3;Accordion
+19;A_80_1;3;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;2;;80;1;Accordion
+19;P_120_5;4;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;1;1;1;0;t;JAR;ne;JAR;ne;JAR;ne;JAR;5;;120;5;Piano
+19;V_120_3;5;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;ne;ne;ne;ne;JAR;JAR;JAR;6;;120;3;Violon
+19;P_120_1;6;0;0;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;1;0;ne;ne;ne;ne;JAR;JAR;JAR;JAR;8;;120;1;Piano
+19;P_160_5;7;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;9;it makes you think of high-end, expert, class;160;5;Piano
+19;A_80_3;8;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;ne;ne;r_ne;r_ne;ne;r_t;ne;JAR;3;too heavy;80;3;Accordion
+19;V_160_5;9;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;r_t;r_t;r_t;t;ne;JAR;ne;ne;2;too acute;160;5;Violon
+19;V_160_1;10;0;1;1;1;0;1;0;0;1;0;1;0;0;1;0;1;0;0;0;JAR;ne;ne;ne;JAR;JAR;JAR;JAR;8;it reminds us of the classy sound;160;1;Violon
+19;V_120_5;11;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;t;t;JAR;ne;JAR;ne;ne;4;too acute;120;5;Violon
+19;A_80_5;12;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;ne;ne;ne;ne;ne;JAR;JAR;JAR;5;;80;5;Accordion
+20;P_160_1;1;0;0;1;0;1;0;1;0;0;0;0;0;0;1;0;0;1;0;0;r_ne;ne;ne;JAR;ne;t;ne;t;6;;160;1;Piano
+20;A_120_5;2;0;1;0;0;1;0;0;0;0;1;0;1;0;0;0;0;0;0;0;r_t;r_t;ne;JAR;t;ne;JAR;ne;4;;120;5;Accordion
+20;V_120_5;3;1;1;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;r_t;r_t;r_ne;ne;ne;ne;t;JAR;3;;120;5;Violon
+20;V_120_3;4;1;1;0;0;0;1;0;0;0;1;0;1;0;1;0;0;0;0;1;JAR;r_t;JAR;JAR;ne;t;ne;JAR;8;;120;3;Violon
+20;V_80_5;5;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;ne;r_t;r_ne;r_ne;r_ne;t;r_ne;JAR;3;;80;5;Violon
+20;V_120_1;6;0;0;1;0;1;1;1;0;0;1;0;0;0;0;0;0;0;1;1;r_ne;JAR;ne;JAR;ne;r_t;r_ne;t;2;;120;1;Violon
+20;A_80_3;7;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;t;r_t;ne;r_ne;ne;ne;t;r_t;2;;80;3;Accordion
+20;V_80_1;8;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;r_ne;r_t;r_ne;r_ne;r_ne;r_t;r_ne;t;1;;80;1;Violon
+20;A_120_1;9;0;1;0;0;1;0;1;0;0;0;1;0;0;0;0;0;0;0;0;r_ne;JAR;JAR;JAR;ne;t;ne;t;6;;120;1;Accordion
+20;V_160_3;10;1;1;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;t;t;t;t;ne;JAR;JAR;ne;5;;160;3;Violon
+20;P_120_5;11;1;1;0;0;0;1;1;0;0;0;1;0;0;1;1;0;0;0;1;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;10;;120;5;Piano
+20;P_80_3;12;0;0;1;0;0;0;1;1;0;0;0;0;0;0;0;0;0;1;0;ne;JAR;ne;ne;JAR;JAR;ne;JAR;8;;80;3;Piano
+21;V_80_3;1;1;0;0;0;0;0;0;0;1;1;0;1;0;1;0;0;1;0;1;JAR;JAR;ne;JAR;JAR;t;ne;JAR;8;;80;3;Violon
+21;A_160_1;2;0;1;0;1;0;0;1;0;0;0;1;1;0;0;0;0;1;0;0;ne;t;r_ne;JAR;r_ne;t;ne;ne;5;;160;1;Accordion
+21;P_80_1;3;0;0;1;1;0;1;0;1;1;0;1;0;0;1;0;0;0;1;0;ne;r_ne;ne;ne;JAR;t;JAR;JAR;6;already heard;80;1;Piano
+21;P_120_5;4;1;0;0;0;0;1;0;1;0;1;0;0;0;1;0;0;0;0;1;JAR;JAR;ne;r_ne;JAR;t;ne;JAR;7;;120;5;Piano
+21;A_80_1;5;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;t;r_ne;r_ne;r_ne;r_t;ne;ne;3;;80;1;Accordion
+21;A_160_5;6;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;JAR;JAR;ne;t;ne;JAR;ne;JAR;6;a little too acute;160;5;Accordion
+21;A_80_5;7;1;1;0;0;0;0;0;1;0;1;0;1;0;1;0;0;0;0;0;ne;ne;ne;ne;ne;t;ne;JAR;6;too slow;80;5;Accordion
+21;P_80_3;8;0;0;1;0;0;1;0;0;1;0;1;0;1;0;0;1;0;0;1;JAR;ne;JAR;JAR;JAR;t;ne;JAR;8;;80;3;Piano
+21;P_120_1;9;1;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;ne;ne;JAR;JAR;JAR;t;t;t;2;it's more tradition than innovation;120;1;Piano
+21;A_120_1;10;0;1;0;0;0;0;1;0;0;0;1;0;1;0;0;0;1;0;0;ne;JAR;ne;JAR;ne;JAR;ne;JAR;7;;120;1;Accordion
+21;A_80_3;11;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_t;r_ne;r_ne;r_ne;r_t;r_ne;JAR;1;it makes church;80;3;Accordion
+21;V_120_5;12;0;1;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;1;t;t;r_ne;JAR;r_ne;ne;r_ne;JAR;4;far too acute;120;5;Violon
+22;A_120_3;1;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;1;1;0;JAR;ne;ne;JAR;JAR;t;JAR;JAR;6;decent sound but a little flat;120;3;Accordion
+22;V_80_1;2;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;1;0;ne;ne;ne;ne;r_ne;t;ne;t;3;austere;80;1;Violon
+22;A_80_5;3;0;0;0;1;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;t;r_t;t;JAR;JAR;ne;JAR;ne;2;too sharp, his professional step;80;5;Accordion
+22;V_160_5;4;1;1;0;1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;t;JAR;JAR;JAR;ne;ne;JAR;ne;3;too acute, poor quality;160;5;Violon
+22;P_80_1;5;0;0;0;0;0;1;0;0;0;1;0;0;0;1;1;0;0;0;1;ne;JAR;ne;JAR;ne;JAR;ne;JAR;5;a bit slow;80;1;Piano
+22;A_160_1;6;0;0;1;0;0;0;1;0;0;0;0;0;1;0;0;0;1;0;0;JAR;JAR;ne;JAR;ne;JAR;ne;JAR;7;;160;1;Accordion
+22;A_120_5;7;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;1;0;0;t;t;JAR;JAR;t;ne;t;r_ne;3;a little garish;120;5;Accordion
+22;A_160_3;8;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;JAR;JAR;JAR;JAR;ne;JAR;ne;t;6;too simple;160;3;Accordion
+22;P_120_5;9;1;1;0;0;1;0;0;1;0;0;1;0;0;0;0;0;0;0;0;JAR;JAR;ne;ne;ne;JAR;ne;JAR;7;;120;5;Piano
+22;A_160_5;10;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;t;JAR;t;ne;ne;ne;JAR;4;poor sound quality;160;5;Accordion
+22;V_160_3;11;0;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;ne;JAR;JAR;9;sober and of good quality;160;3;Violon
+22;A_80_3;12;0;0;0;0;0;1;0;0;0;0;0;0;0;1;1;0;0;1;0;ne;ne;ne;r_ne;JAR;JAR;ne;JAR;4;;80;3;Accordion
+23;P_120_5;1;0;0;1;0;0;0;1;0;0;1;0;0;0;0;1;0;0;1;1;JAR;ne;r_ne;ne;ne;t;ne;JAR;5;music passe-partout;120;5;Piano
+23;V_160_5;2;1;0;1;0;0;1;0;0;0;1;0;1;0;0;1;0;0;0;1;t;r_t;ne;r_t;r_ne;JAR;r_ne;JAR;1;too garish;160;5;Violon
+23;P_120_1;3;0;0;1;1;0;1;0;1;1;0;1;0;1;0;0;1;1;1;0;JAR;ne;ne;ne;JAR;JAR;JAR;JAR;7;;120;1;Piano
+23;A_80_1;4;0;0;0;1;1;0;1;0;0;0;0;0;1;0;0;0;1;1;0;r_ne;r_ne;r_ne;ne;r_ne;r_t;ne;ne;1;it's guinguette;80;1;Accordion
+23;P_80_1;5;0;0;1;1;0;1;0;1;1;0;1;0;1;0;0;1;1;1;0;JAR;ne;JAR;ne;JAR;JAR;JAR;JAR;6;;80;1;Piano
+23;A_120_5;6;0;0;0;0;0;0;0;0;0;1;0;1;0;1;1;0;0;0;0;t;r_t;r_t;r_t;r_ne;r_ne;JAR;t;1;too garish;120;5;Accordion
+23;A_120_3;7;0;0;1;0;0;0;1;1;0;0;1;0;1;0;0;0;1;0;0;JAR;ne;r_ne;JAR;r_ne;t;JAR;ne;3;;120;3;Accordion
+23;P_160_1;8;0;0;1;0;0;0;1;1;1;0;1;0;1;0;1;1;0;1;1;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;8;;160;1;Piano
+23;V_120_1;9;0;0;1;0;0;0;0;0;1;0;0;0;0;0;1;1;0;0;1;r_ne;ne;r_ne;r_ne;r_ne;r_t;JAR;ne;3;;120;1;Violon
+23;P_80_5;10;1;0;0;0;0;1;0;0;1;1;0;1;0;1;1;1;0;0;1;JAR;ne;JAR;r_ne;JAR;JAR;JAR;JAR;6;too bad it's too soft;80;5;Piano
+23;V_160_1;11;0;0;1;1;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;ne;JAR;JAR;t;ne;t;JAR;JAR;3;;160;1;Violon
+23;A_160_3;12;0;0;1;1;0;0;1;0;0;0;0;0;1;0;0;0;1;1;0;t;JAR;JAR;JAR;ne;JAR;ne;JAR;5;;160;3;Accordion
+24;P_120_3;1;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;1;0;t;t;JAR;JAR;t;r_t;t;JAR;6;not technological;120;3;Piano
+24;A_80_1;2;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;ne;r_t;r_ne;r_ne;ne;r_t;ne;r_t;1;Too sad;80;1;Accordion
+24;A_120_1;3;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;0;ne;t;r_ne;ne;ne;r_t;ne;t;2;;120;1;Accordion
+24;V_80_5;4;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;JAR;r_t;r_ne;ne;JAR;t;ne;t;2;;80;5;Violon
+24;P_80_3;5;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;ne;ne;ne;ne;JAR;t;r_ne;JAR;4;;80;3;Piano
+24;P_160_3;6;0;0;0;1;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;t;ne;JAR;4;too fast;160;3;Piano
+24;A_160_1;7;0;0;0;0;0;0;0;0;1;0;0;1;0;1;0;0;0;1;0;ne;t;r_ne;ne;ne;t;ne;t;1;accordion does not go with branding;160;1;Accordion
+24;V_160_1;8;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;ne;JAR;JAR;t;ne;t;2;;160;1;Violon
+24;V_80_3;9;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;1;1;0;0;ne;ne;r_ne;ne;JAR;t;ne;t;1;too slow;80;3;Violon
+24;V_160_5;10;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;JAR;t;r_ne;ne;ne;JAR;ne;JAR;0;too acute;160;5;Violon
+24;V_160_3;11;0;0;0;0;1;0;1;0;0;0;0;0;1;0;0;0;0;0;0;JAR;ne;JAR;JAR;JAR;t;ne;JAR;5;;160;3;Violon
+24;A_120_5;12;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;ne;ne;ne;JAR;ne;t;ne;JAR;3;;120;5;Accordion
+25;A_120_1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;ne;JAR;ne;t;JAR;JAR;5;;120;1;Accordion
+25;V_80_3;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;;80;3;Violon
+25;A_120_3;3;0;0;0;0;1;1;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;t;t;t;ne;JAR;JAR;JAR;5;;120;3;Accordion
+25;A_120_5;4;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;r_ne;r_ne;r_ne;r_t;r_ne;r_t;r_ne;r_ne;1;;120;5;Accordion
+25;P_120_1;5;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;ne;JAR;ne;ne;3;;120;1;Piano
+25;P_160_1;6;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;ne;ne;ne;JAR;JAR;JAR;ne;ne;5;;160;1;Piano
+25;P_160_5;7;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;JAR;r_ne;r_ne;2;;160;5;Piano
+25;V_120_3;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;JAR;ne;ne;JAR;JAR;JAR;JAR;JAR;7;;120;3;Violon
+25;A_160_5;9;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_t;r_t;r_t;r_t;r_t;r_t;r_t;1;;160;5;Accordion
+25;V_120_1;10;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;ne;ne;ne;ne;ne;ne;ne;1;;120;1;Violon
+25;A_80_1;11;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;ne;ne;ne;ne;ne;ne;ne;ne;2;;80;1;Accordion
+25;V_80_5;12;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_ne;r_ne;r_ne;0;;80;5;Violon
+26;P_160_5;1;0;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;ne;JAR;ne;JAR;JAR;t;ne;t;3;;160;5;Piano
+26;V_80_5;2;0;0;1;0;1;0;0;0;0;0;0;1;0;0;1;0;0;0;0;r_ne;r_t;r_ne;t;r_ne;r_t;ne;ne;0;;80;5;Violon
+26;V_80_1;3;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;ne;r_ne;r_ne;r_ne;r_ne;t;ne;r_t;2;;80;1;Violon
+26;P_160_3;4;1;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;1;ne;JAR;JAR;ne;JAR;JAR;ne;JAR;6;;160;3;Piano
+26;A_120_1;5;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;JAR;r_ne;t;ne;t;4;;120;1;Accordion
+26;P_80_1;6;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;ne;ne;t;ne;JAR;5;;80;1;Piano
+26;A_120_3;7;0;0;0;0;0;0;0;1;1;0;0;0;0;0;1;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;ne;JAR;8;;120;3;Accordion
+26;V_160_3;8;0;1;0;1;0;1;0;0;0;0;0;0;0;0;0;1;0;0;1;JAR;JAR;JAR;JAR;ne;JAR;JAR;ne;8;;160;3;Violon
+26;A_80_1;9;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;r_ne;r_ne;t;ne;t;3;;80;1;Accordion
+26;P_120_1;10;1;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;ne;JAR;JAR;ne;ne;t;JAR;JAR;6;;120;1;Piano
+26;A_160_3;11;0;0;0;0;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;t;t;JAR;t;ne;JAR;JAR;t;7;;160;3;Accordion
+26;P_80_3;12;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;1;0;JAR;JAR;ne;ne;JAR;JAR;JAR;ne;9;;80;3;Piano
+27;V_120_5;1;1;0;1;0;0;1;1;1;1;0;0;0;0;1;0;0;0;1;1;JAR;t;t;JAR;JAR;t;JAR;JAR;7;;120;5;Violon
+27;A_80_1;2;0;0;0;1;0;0;1;0;1;0;0;1;1;0;0;0;1;0;0;r_ne;ne;ne;ne;ne;t;ne;JAR;3;too serious;80;1;Accordion
+27;A_160_1;3;0;0;1;0;0;0;0;1;0;1;0;0;1;0;1;0;1;0;0;ne;ne;JAR;JAR;ne;JAR;ne;JAR;5;;160;1;Accordion
+27;A_120_3;4;1;1;0;1;1;0;0;1;0;0;1;0;0;1;0;0;0;1;0;JAR;ne;JAR;JAR;ne;JAR;ne;ne;5;;120;3;Accordion
+27;V_80_5;5;0;1;0;0;1;1;0;0;1;1;0;1;0;0;0;1;0;0;1;t;t;JAR;ne;JAR;ne;JAR;ne;6;;80;5;Violon
+27;A_80_3;6;0;1;0;0;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;r_ne;ne;ne;JAR;JAR;t;ne;ne;4;a bit religious;80;3;Accordion
+27;A_120_1;7;0;0;1;0;0;0;1;0;0;0;0;1;0;1;1;0;0;1;0;ne;ne;JAR;ne;JAR;t;JAR;ne;4;;120;1;Accordion
+27;V_160_5;8;1;0;1;0;0;1;0;0;0;1;1;0;1;0;1;1;0;0;1;JAR;JAR;t;t;JAR;JAR;ne;JAR;7;;160;5;Violon
+27;P_80_5;9;0;1;1;0;0;1;0;1;1;0;0;0;0;1;0;1;0;0;0;ne;JAR;JAR;JAR;ne;JAR;JAR;ne;8;;80;5;Piano
+27;V_80_1;10;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;1;0;ne;ne;JAR;JAR;JAR;ne;JAR;ne;5;;80;1;Violon
+27;V_120_1;11;1;0;0;1;0;0;0;0;1;0;0;1;0;1;0;1;0;0;0;JAR;ne;JAR;JAR;ne;JAR;JAR;JAR;8;;120;1;Violon
+27;V_80_3;12;0;1;0;0;1;0;0;0;1;0;1;0;0;1;0;1;0;1;0;t;t;JAR;ne;JAR;JAR;ne;ne;7;;80;3;Violon
+28;V_160_5;1;1;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;1;t;r_t;t;t;ne;ne;r_ne;ne;7;too exciting;160;5;Violon
+28;P_160_3;2;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;JAR;ne;ne;JAR;JAR;t;ne;JAR;8;;160;3;Piano
+28;P_120_5;3;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;1;0;0;ne;ne;r_ne;r_ne;JAR;t;JAR;JAR;8;a little too sad;120;5;Piano
+28;V_80_3;4;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;1;0;0;0;r_ne;ne;r_ne;r_ne;ne;t;JAR;JAR;7;a little too languorous;80;3;Violon
+28;A_160_3;5;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;t;JAR;ne;t;JAR;JAR;ne;JAR;6;;160;3;Accordion
+28;A_120_1;6;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;r_ne;ne;ne;r_ne;ne;t;JAR;t;5;far too slow;120;1;Accordion
+28;A_160_5;7;0;1;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;1;JAR;t;r_t;t;ne;r_ne;ne;ne;7;;160;5;Accordion
+28;V_160_1;8;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;JAR;ne;ne;r_ne;ne;JAR;ne;t;6;;160;1;Violon
+28;V_80_1;9;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;1;0;0;r_ne;r_t;ne;ne;JAR;t;ne;JAR;5;;80;1;Violon
+28;P_80_1;10;0;0;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;0;0;ne;t;ne;r_ne;JAR;t;JAR;ne;5;too slow;80;1;Piano
+28;V_120_3;11;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;JAR;t;JAR;JAR;ne;JAR;JAR;JAR;8;;120;3;Violon
+28;V_120_1;12;0;0;0;1;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;r_ne;ne;ne;r_ne;ne;t;ne;JAR;4;;120;1;Violon
+29;P_80_1;1;0;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;ne;JAR;ne;ne;JAR;JAR;9;;80;1;Piano
+29;A_80_5;2;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;t;r_t;r_t;t;r_ne;r_ne;r_ne;r_ne;8;;80;5;Accordion
+29;V_120_3;3;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;JAR;t;ne;JAR;7;;120;3;Violon
+29;A_160_3;4;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;JAR;ne;ne;ne;ne;7;;160;3;Accordion
+29;V_160_3;5;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;ne;t;ne;t;7;;160;3;Violon
+29;V_80_5;6;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;r_t;r_ne;ne;r_ne;ne;ne;ne;5;too sharp, not clear;80;5;Violon
+29;V_80_3;7;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;ne;ne;JAR;ne;ne;t;ne;t;8;;80;3;Violon
+29;P_120_1;8;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;ne;ne;JAR;JAR;JAR;JAR;ne;JAR;8;;120;1;Piano
+29;P_120_5;9;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;ne;t;ne;t;8;;120;5;Piano
+29;A_120_3;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;JAR;JAR;JAR;ne;JAR;ne;t;8;;120;3;Accordion
+29;P_80_5;11;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;ne;ne;ne;ne;ne;t;ne;t;7;;80;5;Piano
+29;A_120_1;12;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;0;ne;t;ne;ne;JAR;JAR;ne;JAR;8;;120;1;Accordion
+30;A_160_3;1;0;0;0;1;0;1;0;0;1;0;1;0;1;0;0;0;0;1;0;JAR;ne;ne;t;ne;JAR;t;r_ne;5;;160;3;Accordion
+30;A_120_3;2;0;1;0;1;0;1;0;1;0;0;1;0;1;1;1;0;0;1;0;ne;r_ne;r_ne;JAR;ne;JAR;JAR;ne;6;;120;3;Accordion
+30;V_160_5;3;1;0;0;0;1;0;0;1;0;1;0;1;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;ne;ne;JAR;ne;8;;160;5;Violon
+30;P_120_3;4;0;0;0;0;0;1;1;0;1;0;0;0;0;1;0;1;1;1;0;r_ne;r_ne;ne;ne;JAR;JAR;ne;JAR;4;;120;3;Piano
+30;V_120_1;5;0;1;1;0;0;0;0;1;0;1;1;0;1;0;1;0;0;0;0;ne;ne;JAR;ne;ne;JAR;ne;JAR;4;;120;1;Violon
+30;V_120_5;6;1;0;0;1;0;0;0;0;1;1;0;1;0;0;0;0;1;0;0;JAR;t;JAR;t;JAR;ne;t;t;6;;120;5;Violon
+30;V_160_3;7;1;1;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;0;1;JAR;JAR;t;t;ne;t;t;JAR;6;;160;3;Violon
+30;P_80_3;8;1;0;1;0;0;1;1;1;0;1;0;1;0;1;0;1;0;0;1;JAR;JAR;JAR;ne;JAR;JAR;JAR;JAR;9;;80;3;Piano
+30;A_120_1;9;0;1;0;0;0;0;0;0;1;0;0;0;1;0;1;0;1;0;0;ne;JAR;ne;ne;JAR;JAR;ne;t;6;;120;1;Accordion
+30;P_120_5;10;0;1;0;0;1;0;0;1;0;1;0;0;0;0;1;0;0;1;0;t;JAR;ne;ne;JAR;ne;t;t;5;;120;5;Piano
+30;P_160_5;11;0;0;1;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;1;t;t;JAR;JAR;t;ne;t;ne;5;;160;5;Piano
+30;A_160_1;12;0;1;0;1;0;1;0;0;1;0;0;1;0;0;1;0;1;0;0;ne;t;ne;JAR;ne;t;r_ne;ne;3;;160;1;Accordion
+31;V_160_3;1;0;0;1;0;0;0;1;0;0;0;0;0;0;1;1;0;0;0;0;ne;JAR;r_ne;ne;r_ne;t;ne;ne;3;;160;3;Violon
+31;A_120_1;2;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;t;r_ne;JAR;0;this sound is monotonous;120;1;Accordion
+31;P_120_3;3;1;0;0;0;0;0;0;1;0;0;1;0;1;0;0;0;0;0;0;JAR;JAR;ne;JAR;r_ne;t;JAR;JAR;5;;120;3;Piano
+31;A_160_3;4;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;JAR;t;JAR;JAR;r_ne;JAR;ne;JAR;3;;160;3;Accordion
+31;A_120_5;5;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;ne;ne;ne;JAR;r_ne;JAR;r_ne;JAR;2;not pleasant to the ear;120;5;Accordion
+31;V_160_1;6;1;0;0;0;0;0;0;1;0;0;0;0;1;0;0;1;0;0;0;JAR;t;t;JAR;JAR;ne;JAR;t;6;;160;1;Violon
+31;V_120_3;7;0;0;0;0;0;0;0;0;1;0;0;1;0;0;0;0;0;1;0;ne;t;t;JAR;r_ne;JAR;JAR;t;6;;120;3;Violon
+31;A_160_1;8;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;JAR;ne;r_ne;t;ne;t;4;;160;1;Accordion
+31;A_80_1;9;1;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;0;0;0;ne;JAR;ne;ne;ne;t;ne;JAR;2;;80;1;Accordion
+31;A_80_3;10;0;1;0;0;0;0;1;1;1;0;1;0;0;0;0;0;0;0;0;ne;ne;ne;JAR;ne;ne;ne;JAR;3;;80;3;Accordion
+31;P_160_1;11;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;ne;JAR;JAR;ne;ne;t;ne;JAR;5;;160;1;Piano
+31;P_80_1;12;1;0;0;0;0;1;0;0;0;1;0;0;1;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;t;ne;JAR;6;;80;1;Piano
+32;A_80_5;1;0;0;0;0;1;0;1;0;0;1;0;0;0;0;0;0;0;0;1;r_ne;ne;ne;r_ne;JAR;JAR;ne;t;3;too serious, too long, not innovative enough;80;5;Accordion
+32;V_120_5;2;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;1;0;0;0;t;JAR;ne;t;ne;JAR;ne;ne;3;;120;5;Violon
+32;P_80_1;3;1;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;1;0;0;JAR;JAR;ne;JAR;JAR;t;JAR;JAR;8;very clear sound, good rhythm;80;1;Piano
+32;P_80_5;4;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;JAR;ne;JAR;ne;JAR;JAR;ne;t;7;good but a bit slow;80;5;Piano
+32;A_160_1;5;0;0;0;0;1;0;0;0;0;0;1;0;0;1;1;0;0;0;0;t;JAR;JAR;r_t;ne;t;ne;JAR;4;too fast;160;1;Accordion
+32;V_160_5;6;1;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;t;t;JAR;r_t;ne;t;ne;JAR;3;too fast, too strident;160;5;Violon
+32;V_80_5;7;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;ne;r_ne;JAR;ne;ne;t;4;slow, precise;80;5;Violon
+32;A_80_1;8;0;0;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;0;JAR;ne;ne;ne;ne;t;JAR;JAR;5;sound bass, quality, warmth, serious;80;1;Accordion
+32;P_160_3;9;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;JAR;t;JAR;t;JAR;ne;JAR;JAR;7;good tempo, clear;160;3;Piano
+32;V_120_3;10;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;JAR;JAR;ne;JAR;ne;JAR;ne;t;6;;120;3;Violon
+32;A_120_5;11;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;1;0;0;0;t;JAR;JAR;t;ne;r_ne;ne;ne;3;sound without personality, too light;120;5;Accordion
+32;P_120_5;12;0;0;0;0;0;1;1;0;0;0;1;0;0;0;0;0;0;0;1;ne;JAR;JAR;ne;JAR;JAR;JAR;JAR;8;mysterious, clear, advancement;120;5;Piano
+33;V_80_1;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;r_ne;ne;r_t;ne;t;4;quite depressing;80;1;Violon
+33;A_160_5;2;1;1;0;0;0;0;1;1;0;0;1;0;0;0;0;0;0;0;0;JAR;t;t;JAR;ne;r_ne;JAR;r_ne;6;quite energetic;160;5;Accordion
+33;P_80_3;3;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;ne;r_ne;r_ne;r_ne;r_ne;t;ne;t;3;;80;3;Piano
+33;A_80_5;4;0;0;0;0;0;1;0;0;0;1;0;0;1;0;0;1;0;0;0;ne;ne;ne;ne;ne;JAR;ne;t;5;;80;5;Accordion
+33;A_120_3;5;0;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;1;JAR;ne;ne;JAR;ne;r_ne;JAR;r_ne;7;;120;3;Accordion
+33;A_160_3;6;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;t;t;JAR;t;JAR;r_ne;JAR;r_ne;8;;160;3;Accordion
+33;A_80_1;7;0;0;1;0;0;0;0;0;1;0;0;1;0;0;1;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;ne;r_t;3;;80;1;Accordion
+33;V_80_3;8;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;1;0;ne;ne;r_ne;r_ne;ne;t;JAR;t;5;;80;3;Violon
+33;V_80_5;9;0;0;0;0;1;0;1;0;0;0;1;0;0;0;0;1;1;0;0;ne;ne;t;ne;t;JAR;JAR;ne;7;;80;5;Violon
+33;V_120_5;10;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;1;0;0;JAR;JAR;t;JAR;t;ne;JAR;ne;7;;120;5;Violon
+33;P_160_1;11;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;1;ne;JAR;ne;ne;ne;JAR;ne;JAR;6;;160;1;Piano
+33;V_160_1;12;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;ne;JAR;ne;JAR;ne;JAR;JAR;JAR;9;;160;1;Violon
+34;V_160_5;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;ne;r_ne;JAR;JAR;8;modernity;160;5;Violon
+34;V_80_3;2;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;ne;r_ne;r_ne;r_t;r_ne;t;2;too slow and too sad;80;3;Violon
+34;A_120_5;3;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;ne;ne;JAR;JAR;ne;ne;ne;JAR;5;notes too pressed;120;5;Accordion
+34;A_160_5;4;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;r_t;t;t;ne;r_ne;ne;ne;4;too fast;160;5;Accordion
+34;A_80_3;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;r_ne;r_ne;r_ne;r_ne;ne;t;r_ne;r_t;3;Too sad;80;3;Accordion
+34;V_160_3;6;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;JAR;JAR;ne;JAR;ne;ne;JAR;t;7;lack of modernity;160;3;Violon
+34;P_160_1;7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;r_ne;r_ne;ne;r_ne;ne;t;ne;r_t;3;its too old, does not evoke technology;160;1;Piano
+34;A_120_1;8;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;ne;ne;JAR;ne;t;5;too slow;120;1;Accordion
+34;A_80_5;9;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;JAR;JAR;ne;ne;JAR;ne;JAR;6;notes too detached;80;5;Accordion
+34;P_160_3;10;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;sound neither too low nor too high, good balance;160;3;Piano
+34;P_80_5;11;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;JAR;ne;ne;JAR;ne;JAR;6;too slow;80;5;Piano
+34;P_160_5;12;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;ne;JAR;JAR;8;a little too acute;160;5;Piano
+35;A_80_1;1;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;ne;ne;ne;r_ne;ne;t;ne;r_t;2;too slow, too serious, not innovative;80;1;Accordion
+35;A_160_3;2;0;1;1;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;t;t;JAR;JAR;JAR;ne;t;ne;5;suitable for a brand of frozen produtcs, too cheerful to be an expert;160;3;Accordion
+35;P_120_3;3;1;0;0;0;0;1;0;1;0;0;0;0;0;1;0;0;0;0;1;ne;ne;JAR;JAR;JAR;ne;JAR;JAR;7;high-end and passion;120;3;Piano
+35;P_80_3;4;1;0;0;0;0;1;0;1;0;0;0;0;0;1;0;0;0;0;1;ne;ne;ne;ne;JAR;ne;JAR;t;6;too slow but classy;80;3;Piano
+35;P_80_5;5;1;0;0;0;1;0;0;0;1;1;0;0;0;0;1;0;0;0;1;t;JAR;t;JAR;JAR;ne;JAR;ne;5;acute, too slow but innovative;80;5;Piano
+35;V_120_3;6;0;0;0;1;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;r_t;t;t;r_t;t;ne;JAR;JAR;4;too energetic, too cheerful;120;3;Violon
+35;P_120_5;7;1;1;0;0;0;1;0;0;0;0;0;0;0;1;1;0;0;1;0;JAR;JAR;ne;ne;JAR;t;JAR;JAR;7;fits the brand well but it lacks a bit of energy;120;5;Piano
+35;A_120_1;8;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;r_ne;ne;r_ne;JAR;ne;r_t;JAR;t;3;does not make you want to;120;1;Accordion
+35;A_120_5;9;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;r_t;r_t;t;t;JAR;r_ne;JAR;ne;4;too high, too expressive, but its tone allows the listener to record this sound and reconstruct it;120;5;Accordion
+35;P_160_5;10;1;1;0;0;0;1;0;0;1;1;0;0;0;1;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;ne;JAR;t;9;fits well with the brand;160;5;Piano
+35;A_80_5;11;0;0;0;1;1;0;0;0;0;0;1;0;0;0;0;0;0;1;0;t;t;ne;r_ne;ne;t;JAR;JAR;4;too slow, lack of rhythm;80;5;Accordion
+35;V_80_1;12;1;0;1;0;0;1;1;0;0;1;0;0;0;1;0;1;0;0;1;ne;JAR;ne;ne;ne;t;JAR;JAR;5;not innovative;80;1;Violon
+36;P_120_5;1;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;1;JAR;ne;JAR;JAR;ne;ne;JAR;JAR;8;technology;120;5;Piano
+36;P_80_3;2;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;1;1;1;0;r_ne;ne;r_ne;r_ne;ne;t;ne;t;2;too slow and sad;80;3;Piano
+36;V_160_3;3;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;1;0;1;0;ne;ne;r_ne;JAR;ne;JAR;JAR;t;5;;160;3;Violon
+36;V_120_3;4;0;0;1;0;0;1;0;0;0;0;1;0;0;1;0;1;0;1;0;ne;r_ne;ne;ne;r_ne;t;ne;JAR;5;;120;3;Violon
+36;P_160_1;5;0;0;0;1;0;0;0;0;1;0;0;0;1;0;0;0;1;1;0;JAR;ne;ne;JAR;ne;JAR;JAR;r_ne;6;;160;1;Piano
+36;P_120_3;6;0;1;0;0;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;ne;r_ne;r_ne;ne;ne;t;JAR;JAR;5;;120;3;Piano
+36;V_80_5;7;0;1;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;JAR;t;JAR;t;4;;80;5;Violon
+36;A_160_3;8;0;0;1;1;0;0;1;0;1;0;1;0;0;1;0;0;0;0;0;JAR;JAR;ne;JAR;ne;JAR;t;JAR;5;;160;3;Accordion
+36;A_160_5;9;1;1;0;0;0;0;1;0;0;1;0;0;0;0;1;0;0;0;1;t;t;JAR;t;JAR;r_ne;JAR;ne;6;;160;5;Accordion
+36;A_120_5;10;0;0;0;0;1;0;1;0;0;0;0;1;0;0;1;0;0;0;0;JAR;t;JAR;JAR;JAR;t;ne;ne;4;;120;5;Accordion
+36;P_80_1;11;0;0;0;1;0;0;0;1;0;0;0;0;0;1;0;0;0;0;1;ne;JAR;JAR;ne;JAR;t;ne;JAR;6;;80;1;Piano
+36;V_160_5;12;0;1;0;0;0;1;0;0;1;0;1;0;0;0;0;0;0;1;0;JAR;JAR;ne;JAR;JAR;JAR;t;JAR;7;;160;5;Violon
+37;A_120_1;1;0;0;1;0;0;0;1;0;0;0;0;0;1;0;0;0;1;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;ne;JAR;2;not innovative, not independent;120;1;Accordion
+37;P_120_3;2;1;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;ne;r_ne;JAR;JAR;JAR;6;good for independence, technological, lack of class and originality;120;3;Piano
+37;P_80_1;3;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;0;sinister;80;1;Piano
+37;V_120_1;4;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;JAR;ne;ne;JAR;JAR;JAR;JAR;JAR;7;cello brings a classy side;120;1;Violon
+37;A_160_5;5;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_t;r_t;r_t;r_t;r_ne;r_ne;r_ne;r_ne;0;strident, childish, not professional;160;5;Accordion
+37;P_80_3;6;1;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;r_ne;ne;ne;r_ne;JAR;t;ne;t;2;lack of energy, lack of initiative, lack of innovation;80;3;Piano
+37;A_80_1;7;0;0;0;1;0;0;0;0;0;0;0;0;1;1;0;0;0;1;0;ne;t;ne;ne;ne;t;ne;ne;0;trone fair, not even energetic, no relation to the company;80;1;Accordion
+37;A_160_1;8;0;0;0;1;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;JAR;ne;r_ne;ne;ne;t;ne;t;2;accordion does not stick to innovation;160;1;Accordion
+37;P_160_5;9;1;0;1;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;6;simple, a little too sober;160;5;Piano
+37;V_120_5;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;t;ne;ne;ne;JAR;ne;t;2;accordion;120;5;Violon
+37;A_120_5;11;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;ne;t;ne;t;2;too solemn, not dynamic enough;120;5;Accordion
+37;P_160_3;12;1;0;0;0;0;0;0;1;1;0;0;0;0;0;0;1;0;0;0;JAR;t;t;JAR;JAR;JAR;JAR;JAR;7;glue with values except expert;160;3;Piano
+38;P_120_1;1;0;0;1;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;ne;JAR;r_ne;r_ne;JAR;t;ne;JAR;4;;120;1;Piano
+38;A_160_1;2;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;ne;r_ne;JAR;JAR;JAR;JAR;ne;3;;160;1;Accordion
+38;A_160_5;3;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;1;1;0;r_t;r_t;t;JAR;ne;JAR;JAR;ne;3;;160;5;Accordion
+38;A_80_5;4;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;t;t;ne;ne;t;JAR;JAR;t;3;;80;5;Accordion
+38;V_80_5;5;1;0;0;0;0;1;0;0;0;1;0;0;0;1;1;0;0;0;1;ne;ne;ne;ne;t;r_t;ne;ne;2;;80;5;Violon
+38;P_160_3;6;1;0;0;0;0;0;1;1;0;0;1;0;1;0;0;0;1;0;0;JAR;JAR;ne;ne;JAR;t;JAR;JAR;5;;160;3;Piano
+38;P_80_5;7;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;1;r_ne;r_t;r_ne;r_ne;t;t;ne;r_ne;2;;80;5;Piano
+38;A_120_1;8;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;r_t;t;r_ne;JAR;ne;t;ne;t;4;;120;1;Accordion
+38;V_160_3;9;1;0;0;1;0;1;0;0;1;0;0;0;1;0;1;0;0;0;0;JAR;JAR;t;t;JAR;JAR;JAR;JAR;6;;160;3;Violon
+38;A_80_3;10;0;1;0;0;1;0;0;1;0;0;0;0;0;0;1;0;0;0;1;t;t;t;ne;JAR;ne;JAR;ne;4;;80;3;Accordion
+38;V_80_1;11;0;0;1;0;0;0;0;0;0;1;0;1;0;1;0;0;0;0;0;r_ne;t;r_ne;r_ne;r_t;t;t;ne;3;;80;1;Violon
+38;V_120_3;12;0;0;0;0;1;0;1;1;0;0;0;0;0;0;1;0;0;1;0;r_t;r_t;t;JAR;ne;ne;ne;JAR;4;;120;3;Violon
+39;P_80_5;1;0;0;0;0;1;0;1;0;0;1;0;0;0;0;1;0;0;0;0;JAR;JAR;JAR;ne;JAR;t;ne;JAR;7;a little soft;80;5;Piano
+39;P_160_1;2;0;0;1;1;0;1;0;0;0;0;0;1;0;1;0;0;0;0;1;ne;JAR;t;t;ne;JAR;JAR;JAR;7;;160;1;Piano
+39;V_80_1;3;0;0;0;0;0;0;0;0;1;0;0;1;0;1;0;1;0;1;0;ne;JAR;JAR;ne;JAR;t;ne;t;5;too serious;80;1;Violon
+39;P_80_1;4;0;0;1;0;1;0;1;0;0;0;0;0;1;0;0;0;0;0;0;ne;ne;ne;ne;ne;t;ne;ne;3;too simple;80;1;Piano
+39;P_120_3;5;0;0;0;0;1;0;1;1;0;1;0;0;0;0;1;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;variation in sound, rear;120;3;Piano
+39;V_120_5;6;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;1;t;t;t;JAR;ne;JAR;ne;ne;5;not pleasant;120;5;Violon
+39;A_120_3;7;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;JAR;t;JAR;JAR;ne;JAR;JAR;ne;6;too accordion, too popular;120;3;Accordion
+39;V_160_1;8;0;0;1;1;0;1;0;0;0;1;0;1;0;1;0;0;0;0;1;ne;JAR;JAR;JAR;ne;t;ne;t;5;it's scary, cold;160;1;Violon
+39;A_80_5;9;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;1;0;0;t;r_t;JAR;JAR;ne;ne;ne;ne;3;aggressive for the ear, bad;80;5;Accordion
+39;P_120_5;10;1;0;0;0;1;0;1;0;0;1;0;0;0;0;1;0;0;0;0;JAR;ne;JAR;JAR;ne;JAR;ne;JAR;7;a bit simple;120;5;Piano
+39;V_80_5;11;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;1;0;0;0;JAR;t;t;ne;ne;JAR;ne;JAR;5;not pleasant;80;5;Violon
+39;A_160_1;12;0;0;1;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;JAR;t;JAR;t;ne;JAR;t;r_ne;4;too accordion;160;1;Accordion
+40;V_120_5;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;ne;ne;r_ne;ne;ne;r_t;r_ne;JAR;2;too feminine, too soft;120;5;Violon
+40;P_160_1;2;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;ne;JAR;JAR;t;ne;JAR;ne;ne;4;classy, energetic, but piano is old-fashioned;160;1;Piano
+40;V_80_3;3;0;0;0;0;0;1;0;0;0;1;0;1;0;1;0;0;0;0;0;r_ne;r_ne;ne;ne;ne;t;ne;r_t;1;sad, soft, seems feverish;80;3;Violon
+40;A_80_3;4;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;ne;ne;r_t;ne;ne;1;its organ recalls mass;80;3;Accordion
+40;P_120_5;5;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;1;0;0;0;r_ne;JAR;ne;ne;JAR;t;r_ne;t;3;serious but lacks energy;120;5;Piano
+40;P_160_3;6;0;0;0;1;1;0;1;0;1;0;1;0;1;0;0;0;1;0;0;ne;JAR;JAR;JAR;r_ne;JAR;ne;JAR;4;fairly neutral;160;3;Piano
+40;P_80_1;7;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;1;ne;JAR;ne;r_ne;ne;ne;r_ne;JAR;3;recalls my grandfather;80;1;Piano
+40;A_80_1;8;0;0;0;0;0;0;0;0;0;0;1;0;1;1;0;0;1;0;0;ne;t;r_ne;ne;r_ne;ne;ne;ne;1;too popular, too soft;80;1;Accordion
+40;A_160_3;9;1;1;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;JAR;t;t;t;r_ne;JAR;r_ne;r_ne;2;lack of link between notes;160;3;Accordion
+40;P_80_5;10;0;0;0;0;0;1;0;0;0;1;0;1;0;1;0;0;0;0;0;r_ne;ne;r_ne;ne;JAR;t;r_ne;ne;2;upscale but cold, not family;80;5;Piano
+40;V_160_3;11;1;1;1;0;0;0;1;0;0;1;0;0;0;0;0;1;0;0;1;ne;t;JAR;t;r_ne;JAR;ne;JAR;6;not warm enough;160;3;Violon
+40;V_80_1;12;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;r_ne;r_ne;r_t;ne;ne;2;dated and rigid;80;1;Violon
+41;A_120_3;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;r_ne;r_ne;r_ne;r_ne;JAR;JAR;JAR;JAR;3;too slow, not innovative;120;3;Accordion
+41;A_160_3;2;0;0;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;ne;JAR;JAR;JAR;JAR;4;;160;3;Accordion
+41;A_80_3;3;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;ne;r_t;ne;ne;3;soft, we fall asleep;80;3;Accordion
+41;P_160_1;4;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;JAR;ne;JAR;JAR;6;piano and strings express high technology, high-end;160;1;Piano
+41;V_160_1;5;0;0;1;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;JAR;JAR;ne;JAR;JAR;r_ne;ne;JAR;7;strings = passion, high-end;160;1;Violon
+41;A_120_5;6;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;ne;t;r_ne;t;2;;120;5;Accordion
+41;A_80_5;7;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;ne;r_t;r_ne;t;2;slow, you die;80;5;Accordion
+41;V_160_3;8;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;ne;ne;JAR;7;fast = independence, efficiency;160;3;Violon
+41;A_120_1;9;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;1;1;0;ne;r_ne;r_ne;r_ne;JAR;JAR;JAR;JAR;5;restores the family side;120;1;Accordion
+41;V_160_5;10;1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;ne;JAR;JAR;ne;JAR;JAR;6;too acute, international;160;5;Violon
+41;A_160_1;11;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;ne;r_ne;r_ne;r_ne;ne;JAR;ne;ne;4;too traditional a little slow, or is the requirement;160;1;Accordion
+41;V_120_5;12;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;JAR;ne;JAR;JAR;7;;120;5;Violon
+42;P_80_3;1;0;0;1;0;0;0;0;1;1;0;0;1;0;1;0;0;0;0;0;ne;JAR;ne;r_ne;ne;t;ne;JAR;5;;80;3;Piano
+42;V_160_1;2;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;1;0;0;0;ne;JAR;JAR;ne;ne;JAR;ne;JAR;7;;160;1;Violon
+42;V_120_1;3;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;r_ne;r_ne;ne;r_t;ne;JAR;3;;120;1;Violon
+42;V_160_5;4;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;t;JAR;ne;ne;t;r_ne;ne;5;;160;5;Violon
+42;A_120_3;5;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;1;1;0;JAR;JAR;ne;ne;ne;ne;ne;JAR;5;;120;3;Accordion
+42;A_80_3;6;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;ne;ne;t;ne;t;5;;80;3;Accordion
+42;V_80_3;7;0;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;0;JAR;JAR;JAR;ne;JAR;JAR;ne;JAR;8;;80;3;Violon
+42;A_160_1;8;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;r_ne;r_ne;r_t;ne;t;4;;160;1;Accordion
+42;P_80_5;9;1;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;JAR;t;ne;ne;JAR;JAR;ne;JAR;7;;80;5;Piano
+42;P_80_1;10;0;1;0;0;0;0;0;0;1;0;0;1;0;1;0;0;0;0;0;JAR;JAR;JAR;ne;JAR;JAR;ne;JAR;8;;80;1;Piano
+42;P_120_1;11;0;1;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;ne;ne;ne;JAR;JAR;JAR;ne;JAR;6;;120;1;Piano
+42;P_120_5;12;1;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;ne;ne;t;ne;t;5;;120;5;Piano
+43;P_120_3;1;0;0;1;0;0;0;1;0;0;0;1;0;0;1;0;0;0;0;0;JAR;r_ne;r_ne;ne;r_ne;JAR;JAR;JAR;5;its classic, does not highlight the brand;120;3;Piano
+43;P_160_5;2;0;1;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;1;t;ne;ne;t;ne;JAR;t;ne;3;too fast;160;5;Piano
+43;V_160_1;3;0;0;1;1;0;1;0;0;0;0;1;0;1;1;1;1;0;1;1;JAR;JAR;JAR;JAR;JAR;JAR;ne;JAR;8;;160;1;Violon
+43;A_160_1;4;1;0;0;0;1;0;1;0;0;0;1;0;1;0;0;0;1;0;0;r_t;t;ne;t;ne;ne;r_t;r_ne;2;bal musette, not credible for a company;160;1;Accordion
+43;A_120_5;5;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;t;t;r_ne;t;r_ne;JAR;ne;ne;3;too high-pitched, not pleasant to hear;120;5;Accordion
+43;V_160_5;6;1;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;1;t;ne;ne;r_t;r_ne;JAR;ne;ne;3;too high-pitched, not pleasant to hear;160;5;Violon
+43;P_160_3;7;1;1;1;1;0;1;1;1;0;1;1;0;1;1;1;1;0;0;1;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;8;reflects the high-end well;160;3;Piano
+43;P_120_5;8;0;0;0;0;0;1;1;0;0;1;0;1;0;1;0;0;0;0;0;ne;r_ne;r_ne;r_ne;r_ne;JAR;ne;t;4;too slow, not innovative enough;120;5;Piano
+43;V_80_3;9;0;1;1;0;0;1;0;0;0;0;0;1;0;1;1;1;0;0;1;ne;ne;r_ne;ne;ne;JAR;JAR;t;6;;80;3;Violon
+43;V_160_3;10;0;0;1;0;0;1;0;1;0;1;0;1;0;1;1;1;0;0;1;ne;ne;ne;t;ne;JAR;ne;JAR;6;;160;3;Violon
+43;V_80_5;11;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;ne;r_ne;JAR;r_ne;ne;2;;80;5;Violon
+43;V_120_5;12;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;ne;ne;r_ne;ne;r_ne;JAR;ne;JAR;5;technology and innovative can be found but not family;120;5;Violon
+44;V_160_3;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;JAR;t;r_t;JAR;JAR;ne;ne;5;;160;3;Violon
+44;V_120_5;2;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;r_ne;r_t;ne;ne;r_ne;JAR;ne;ne;2;;120;5;Violon
+44;A_80_1;3;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;JAR;ne;ne;r_ne;JAR;t;JAR;JAR;4;;80;1;Accordion
+44;V_80_5;4;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;1;ne;JAR;ne;JAR;JAR;ne;JAR;JAR;7;;80;5;Violon
+44;P_120_1;5;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;JAR;ne;ne;JAR;t;JAR;JAR;5;too serious, traditional fact;120;1;Piano
+44;P_80_5;6;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;ne;JAR;ne;r_ne;t;t;JAR;JAR;6;tempo too slow;80;5;Piano
+44;A_80_3;7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;JAR;ne;JAR;ne;JAR;JAR;ne;4;;80;3;Accordion
+44;A_120_3;8;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;JAR;ne;JAR;JAR;JAR;t;ne;JAR;6;;120;3;Accordion
+44;V_120_3;9;0;0;0;0;0;0;0;0;0;0;1;0;0;1;0;0;0;1;0;JAR;JAR;JAR;JAR;JAR;t;JAR;JAR;9;;120;3;Violon
+44;P_120_3;10;1;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;JAR;ne;r_ne;JAR;t;ne;JAR;6;;120;3;Piano
+44;V_160_5;11;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;JAR;JAR;JAR;ne;JAR;ne;JAR;8;;160;5;Violon
+44;V_80_3;12;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;ne;r_ne;ne;r_ne;t;t;ne;JAR;4;;80;3;Violon
+45;V_80_1;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;1;1;ne;ne;r_ne;r_ne;r_ne;t;ne;r_t;0;too dark when it's supposed to be dynamic and innovative;80;1;Violon
+45;A_160_5;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;r_t;t;t;JAR;r_ne;JAR;JAR;ne;3;too strident, sharp;160;5;Accordion
+45;A_160_3;3;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;ne;t;ne;r_ne;r_ne;t;t;t;4;too serious, lack of fun;160;3;Accordion
+45;P_160_5;4;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;JAR;JAR;JAR;ne;JAR;t;JAR;t;7;quite intimate, close but too classic, too soft;160;5;Piano
+45;A_160_1;5;0;0;1;0;0;0;0;0;1;0;0;0;1;1;0;0;0;0;0;r_ne;t;r_ne;r_ne;r_ne;r_t;ne;t;0;too dark, too strict;160;1;Accordion
+45;A_120_1;6;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;t;r_ne;r_ne;r_ne;t;ne;JAR;1;too slow, lack of dynamism;120;1;Accordion
+45;P_120_5;7;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;r_ne;JAR;JAR;ne;t;3;very close, too nice;120;5;Piano
+45;P_120_1;8;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;r_ne;r_ne;r_ne;JAR;JAR;JAR;5;quite classic and serious like the company;120;1;Piano
+45;P_160_1;9;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;r_ne;ne;r_ne;ne;r_ne;t;ne;t;1;too dark, too serious;160;1;Piano
+45;A_80_3;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;r_ne;t;r_ne;r_ne;ne;t;JAR;t;0;too strident;80;3;Accordion
+45;V_120_5;11;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;t;t;ne;ne;ne;JAR;JAR;ne;3;too strident, too spicy, not professional enough;120;5;Violon
+45;V_120_1;12;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;0;0;1;0;ne;ne;ne;ne;ne;t;ne;JAR;5;quite serious, high level;120;1;Violon
+46;P_160_5;1;0;0;1;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;ne;JAR;r_ne;r_ne;JAR;t;ne;t;6;quality sound, technological, slightly innovative;160;5;Piano
+46;A_120_3;2;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;1;0;t;JAR;ne;t;r_ne;r_ne;t;ne;4;too cheerful, not serious enough, does not reflect high technology;120;3;Accordion
+46;P_160_3;3;1;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;0;0;1;ne;t;ne;ne;JAR;JAR;ne;JAR;5;between the serious class and the cheerful, not professional enough;160;3;Piano
+46;A_120_1;4;0;0;0;0;1;0;0;0;0;0;1;1;1;0;0;0;0;1;0;t;t;JAR;JAR;r_ne;r_ne;JAR;ne;5;neutral sound;120;1;Accordion
+46;V_120_1;5;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;t;t;JAR;t;JAR;ne;ne;ne;6;high-end, not innovative;120;1;Violon
+46;V_160_3;6;0;0;0;0;0;1;1;0;0;0;0;0;0;1;0;0;0;1;0;t;t;JAR;r_t;ne;JAR;t;ne;7;innovative, high-tech;160;3;Violon
+46;A_160_5;7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;r_t;r_t;t;JAR;r_ne;ne;JAR;ne;4;too strident, not serious enough;160;5;Accordion
+46;P_80_5;8;0;1;1;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;ne;JAR;JAR;ne;t;7;high-tech sound, professional notes;80;5;Piano
+46;V_160_1;9;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;t;JAR;t;t;ne;ne;t;ne;4;too festive, not classy;160;1;Violon
+46;V_80_5;10;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;1;0;0;1;r_t;r_t;t;r_t;ne;JAR;JAR;ne;3;too ugly;80;5;Violon
+46;V_80_3;11;0;0;0;1;1;0;0;0;0;0;1;1;0;0;0;1;0;0;0;JAR;JAR;JAR;JAR;JAR;t;ne;JAR;7;its own, class;80;3;Violon
+46;A_160_3;12;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;0;t;t;t;t;ne;r_ne;JAR;ne;5;too festive, a little classy;160;3;Accordion
+47;P_160_1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;1;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;t;r_ne;r_t;0;;160;1;Piano
+47;A_120_1;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;ne;r_ne;r_ne;r_ne;t;JAR;r_t;0;;120;1;Accordion
+47;P_80_3;3;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;JAR;JAR;JAR;t;3;;80;3;Piano
+47;P_120_1;4;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;0;;120;1;Piano
+47;V_160_1;5;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_t;ne;ne;r_ne;JAR;ne;JAR;4;;160;1;Violon
+47;A_160_3;6;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;r_t;ne;JAR;ne;JAR;JAR;JAR;5;;160;3;Accordion
+47;P_160_3;7;0;0;0;0;1;0;1;0;0;0;1;0;0;0;0;0;0;0;0;JAR;ne;r_ne;ne;JAR;JAR;JAR;t;5;;160;3;Piano
+47;V_160_5;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_t;r_t;r_t;r_t;r_ne;JAR;r_ne;r_ne;1;;160;5;Violon
+47;V_80_5;9;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;JAR;r_t;r_t;JAR;r_ne;JAR;ne;ne;3;;80;5;Violon
+47;A_80_1;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;1;;80;1;Accordion
+47;V_120_5;11;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;r_t;t;ne;r_ne;JAR;JAR;JAR;4;;120;5;Violon
+47;P_80_5;12;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;ne;JAR;JAR;ne;JAR;8;;80;5;Piano
+48;A_80_3;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;t;ne;JAR;3;;80;3;Accordion
+48;P_80_5;2;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;JAR;JAR;ne;JAR;4;;80;5;Piano
+48;A_160_3;3;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;JAR;ne;ne;JAR;ne;t;JAR;JAR;5;;160;3;Accordion
+48;P_120_5;4;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;ne;JAR;r_ne;JAR;4;;120;5;Piano
+48;V_120_3;5;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;JAR;ne;ne;r_ne;t;r_ne;JAR;3;;120;3;Violon
+48;V_160_5;6;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;r_t;JAR;ne;r_ne;JAR;ne;ne;5;;160;5;Violon
+48;V_160_1;7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;ne;JAR;ne;ne;r_ne;t;r_ne;JAR;5;;160;1;Violon
+48;P_120_1;8;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;ne;JAR;ne;ne;JAR;JAR;JAR;JAR;7;;120;1;Piano
+48;P_80_1;9;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;r_ne;JAR;r_ne;r_ne;ne;JAR;r_ne;JAR;5;;80;1;Piano
+48;A_160_5;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;t;r_t;ne;t;r_ne;JAR;ne;ne;4;;160;5;Accordion
+48;P_160_5;11;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;JAR;JAR;ne;ne;JAR;JAR;JAR;JAR;9;;160;5;Piano
+48;A_80_1;12;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;t;r_ne;r_ne;r_ne;r_t;r_ne;r_t;1;;80;1;Accordion
+49;V_80_3;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;r_ne;JAR;r_ne;JAR;r_ne;r_t;r_ne;JAR;1;;80;3;Violon
+49;P_160_3;2;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;JAR;r_ne;JAR;r_ne;JAR;ne;JAR;4;;160;3;Piano
+49;V_80_5;3;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;r_ne;r_ne;1;;80;5;Violon
+49;A_160_5;4;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;JAR;JAR;JAR;r_ne;ne;ne;JAR;3;;160;5;Accordion
+49;P_80_1;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;r_ne;t;r_ne;r_ne;r_ne;r_t;r_ne;JAR;1;;80;1;Piano
+49;V_120_3;6;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;ne;ne;ne;JAR;JAR;JAR;5;;120;3;Violon
+49;A_160_1;7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;r_ne;t;r_ne;r_ne;r_ne;t;r_ne;JAR;3;;160;1;Accordion
+49;P_160_1;8;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;ne;r_ne;r_ne;r_ne;t;r_ne;JAR;3;;160;1;Piano
+49;V_160_5;9;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;r_ne;ne;r_ne;r_ne;r_ne;r_ne;r_ne;JAR;2;;160;5;Violon
+49;A_80_1;10;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;ne;r_ne;r_ne;r_ne;t;ne;JAR;3;;80;1;Accordion
+49;A_120_3;11;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;ne;JAR;ne;JAR;ne;JAR;JAR;JAR;5;;120;3;Accordion
+49;A_120_1;12;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;ne;JAR;ne;JAR;r_ne;t;ne;JAR;4;;120;1;Accordion
+50;V_160_5;1;0;1;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;1;0;t;t;JAR;JAR;r_ne;ne;JAR;ne;4;too acute;160;5;Violon
+50;P_80_1;2;0;0;1;0;1;0;0;0;1;0;0;0;0;1;0;0;1;0;0;r_ne;JAR;r_ne;r_ne;JAR;t;ne;t;2;too sad not rhythmic enough;80;1;Piano
+50;A_120_5;3;1;1;0;0;0;0;0;0;0;1;0;1;0;0;0;1;0;1;0;t;JAR;JAR;ne;ne;JAR;ne;ne;3;does not represent a high-end brand;120;5;Accordion
+50;P_80_5;4;0;0;1;0;0;1;1;1;1;0;0;0;0;1;1;0;0;0;0;ne;t;ne;ne;t;t;ne;JAR;5;not dynamic enough;80;5;Piano
+50;A_80_5;5;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;JAR;t;t;ne;r_ne;t;ne;ne;4;not fast enough, too acute;80;5;Accordion
+50;V_160_1;6;0;0;0;1;0;0;0;1;1;0;1;0;0;1;0;0;1;1;0;ne;t;ne;JAR;JAR;t;ne;ne;7;maybe a little too serious;160;1;Violon
+50;P_80_3;7;0;0;1;0;0;1;1;1;1;0;0;0;0;1;1;0;0;0;1;JAR;JAR;ne;r_ne;JAR;t;ne;ne;5;lack of energy = business, not active;80;3;Piano
+50;V_120_5;8;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;1;0;0;0;t;t;JAR;JAR;r_ne;JAR;t;ne;4;its pleasant step;120;5;Violon
+50;A_120_1;9;0;0;1;1;0;0;0;0;0;0;1;1;1;0;0;0;1;1;0;r_ne;t;r_ne;JAR;t;r_ne;JAR;ne;4;too serious we have the impression that we will be forced to buy the product;120;1;Accordion
+50;V_80_1;10;0;0;1;0;0;1;0;1;0;0;1;1;0;1;1;0;0;0;1;ne;t;r_ne;r_ne;ne;t;ne;r_t;2;nothing is well adjusted, too sad;80;1;Violon
+50;P_160_3;11;1;1;0;0;1;1;0;0;1;1;1;0;1;0;0;1;0;0;0;JAR;JAR;JAR;t;JAR;JAR;JAR;JAR;8;short and clear, dynamic;160;3;Piano
+50;A_160_5;12;1;0;0;0;0;1;0;0;0;1;0;1;0;0;0;1;0;0;0;t;t;t;t;r_ne;ne;JAR;ne;4;too acute;160;5;Accordion
+51;P_120_5;1;0;0;1;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;ne;ne;ne;JAR;ne;t;ne;JAR;3;Too sad;120;5;Piano
+51;V_80_1;2;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;1;0;r_ne;JAR;ne;r_ne;JAR;t;ne;r_t;4;not innovative enough, too slow;80;1;Violon
+51;A_120_1;3;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;1;0;JAR;JAR;ne;ne;ne;JAR;JAR;ne;3;a little too old-fashioned ;120;1;Accordion
+51;V_120_5;4;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;t;ne;JAR;ne;t;5;too strident;120;5;Violon
+51;P_120_1;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;1;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;good tempo;120;1;Piano
+51;V_160_3;6;0;0;0;0;0;0;0;0;0;0;0;1;0;1;1;0;0;0;1;JAR;JAR;JAR;JAR;ne;JAR;JAR;ne;8;;160;3;Violon
+51;V_160_5;7;0;0;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;0;0;JAR;JAR;t;t;ne;JAR;ne;JAR;6;too strident;160;5;Violon
+51;V_120_1;8;0;0;0;0;0;1;0;0;0;0;0;1;0;1;1;0;0;1;1;ne;ne;ne;ne;JAR;t;JAR;JAR;5;;120;1;Violon
+51;P_80_3;9;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;ne;JAR;ne;ne;JAR;JAR;JAR;JAR;5;too slow;80;3;Piano
+51;P_160_3;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;160;3;Piano
+51;P_120_3;11;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;ne;JAR;ne;ne;JAR;t;ne;JAR;5;;120;3;Piano
+51;V_120_3;12;1;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;1;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;7;;120;3;Violon
+52;A_120_5;1;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;JAR;ne;r_ne;ne;JAR;ne;r_ne;t;8;chic;120;5;Accordion
+52;V_120_1;2;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;ne;JAR;r_ne;ne;ne;t;ne;JAR;5;Too sad;120;1;Violon
+52;P_80_5;3;0;0;0;0;1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;ne;t;ne;t;0;too melancholy;80;5;Piano
+52;A_160_5;4;1;0;0;0;0;0;0;0;0;1;0;0;1;0;0;0;0;1;0;JAR;JAR;JAR;JAR;ne;r_ne;JAR;JAR;9;Affair;160;5;Accordion
+52;V_120_5;5;1;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;ne;ne;r_ne;ne;ne;t;r_ne;JAR;3;too gloomy;120;5;Violon
+52;A_160_1;6;0;0;0;0;0;1;0;1;0;0;0;0;0;1;0;1;0;0;0;JAR;JAR;ne;JAR;r_ne;JAR;JAR;JAR;8;;160;1;Accordion
+52;V_80_1;7;0;1;0;0;0;0;0;1;0;0;0;0;1;1;0;1;0;0;0;r_ne;r_ne;r_ne;r_ne;JAR;t;r_ne;r_t;3;far too serious and slow;80;1;Violon
+52;V_80_3;8;0;0;1;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;JAR;ne;r_ne;ne;JAR;JAR;JAR;JAR;6;;80;3;Violon
+52;A_120_3;9;0;0;0;0;0;1;1;0;0;1;0;0;0;0;0;0;0;1;0;JAR;JAR;JAR;JAR;JAR;ne;JAR;JAR;9;neither too acute nor too serious;120;3;Accordion
+52;V_160_5;10;1;0;0;0;1;0;0;0;0;1;0;1;0;0;0;0;0;0;0;JAR;t;t;t;r_ne;ne;r_ne;r_ne;1;;160;5;Violon
+52;A_160_3;11;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;t;t;JAR;JAR;ne;JAR;t;ne;5;;160;3;Accordion
+52;P_120_3;12;0;0;0;0;1;0;1;0;1;0;0;0;0;0;0;1;0;0;0;ne;r_ne;r_ne;r_ne;t;t;JAR;JAR;4;;120;3;Piano
+53;V_120_3;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;ne;ne;JAR;t;ne;t;4;slow, transmits little enthusiasm, but remains serious;120;3;Violon
+53;P_120_5;2;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;ne;ne;ne;JAR;JAR;ne;JAR;4;too slow, the different sounds are too linked;120;5;Piano
+53;P_120_3;3;0;0;0;0;0;0;0;1;1;0;1;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;ne;9;joyful rhythm, well separated and clear notes;120;3;Piano
+53;V_80_3;4;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;ne;r_ne;ne;ne;JAR;t;ne;t;3;too slow, does not convey enthusiasm or joy;80;3;Violon
+53;P_80_5;5;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;JAR;JAR;JAR;ne;t;7;not bad, but too slow;80;5;Piano
+53;P_160_5;6;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;t;t;t;t;JAR;ne;JAR;ne;5;too fast, not suitable for high-end;160;5;Piano
+53;A_120_5;7;0;0;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;0;0;JAR;t;ne;JAR;JAR;t;ne;JAR;5;too strident sound;120;5;Accordion
+53;V_160_1;8;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;8;quite serious, connotes well the high-end, the seriousness of the company;160;1;Violon
+53;A_80_3;9;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;ne;ne;r_ne;r_ne;ne;t;ne;t;3;too slow, tone poorly adapted;80;3;Accordion
+53;A_120_1;10;0;0;0;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;JAR;JAR;t;ne;JAR;7;not bad, but not happy enough, does not convey the desire to buy;120;1;Accordion
+53;A_160_5;11;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;r_t;t;t;t;ne;ne;t;r_ne;3;sound too high, too fast;160;5;Accordion
+53;P_160_1;12;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;ne;ne;JAR;JAR;JAR;JAR;8;classic but effective;160;1;Piano
+54;A_160_5;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;r_ne;r_ne;r_ne;r_ne;r_ne;r_ne;2;;160;5;Accordion
+54;V_80_5;2;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;r_ne;t;r_ne;ne;2;;80;5;Violon
+54;P_120_5;3;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;ne;r_ne;r_ne;r_ne;JAR;r_ne;ne;3;;120;5;Piano
+54;V_120_5;4;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;ne;r_ne;JAR;r_ne;ne;3;;120;5;Violon
+54;A_80_3;5;0;0;0;0;1;0;1;0;0;0;1;0;1;0;0;0;0;0;0;ne;ne;ne;ne;r_ne;r_ne;ne;JAR;4;;80;3;Accordion
+54;A_80_1;6;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;r_ne;ne;r_ne;r_ne;r_ne;ne;ne;ne;3;;80;1;Accordion
+54;P_160_5;7;0;0;1;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;ne;r_ne;r_ne;JAR;ne;JAR;4;;160;5;Piano
+54;V_120_3;8;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;ne;JAR;JAR;JAR;ne;ne;JAR;JAR;5;;120;3;Violon
+54;V_80_1;9;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;JAR;ne;ne;JAR;ne;JAR;5;;80;1;Violon
+54;A_120_3;10;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;ne;ne;ne;JAR;JAR;4;;120;3;Accordion
+54;A_80_5;11;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;1;r_ne;ne;r_ne;r_ne;r_ne;JAR;ne;JAR;5;;80;5;Accordion
+54;P_80_3;12;1;0;0;0;1;1;0;0;0;1;0;0;0;0;0;0;0;0;1;JAR;ne;JAR;ne;JAR;ne;JAR;ne;5;;80;3;Piano
+55;P_160_3;1;0;0;1;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;ne;JAR;JAR;JAR;JAR;9;serious and welcoming;160;3;Piano
+55;P_120_1;2;0;0;0;0;0;0;0;0;0;1;0;1;0;1;1;0;0;0;0;JAR;ne;r_ne;ne;JAR;t;ne;JAR;7;too far from people;120;1;Piano
+55;P_160_5;3;0;1;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;JAR;t;ne;ne;JAR;JAR;r_ne;JAR;3;too acute;160;5;Piano
+55;V_80_1;4;0;0;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;1;0;r_ne;ne;r_ne;r_ne;t;r_t;ne;JAR;1;burial;80;1;Violon
+55;V_160_5;5;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_t;t;JAR;JAR;r_ne;ne;ne;ne;2;really too acute;160;5;Violon
+55;A_120_5;6;1;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;1;t;t;ne;JAR;ne;ne;JAR;ne;4;not beautiful to hear;120;5;Accordion
+55;P_160_1;7;0;0;0;0;0;1;0;0;1;0;0;0;1;1;0;1;0;0;0;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;10;law as a company;160;1;Piano
+55;P_80_3;8;0;0;1;0;0;0;0;0;0;1;0;0;0;0;1;0;0;1;0;r_ne;JAR;r_ne;r_ne;ne;t;JAR;JAR;3;too soft;80;3;Piano
+55;A_160_1;9;0;1;0;0;1;0;0;1;1;0;1;0;1;0;0;0;0;0;0;t;r_t;ne;JAR;r_ne;r_ne;JAR;r_ne;3;too accordion, too guingette, too popular;160;1;Accordion
+55;V_80_3;10;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;JAR;t;r_ne;r_ne;ne;JAR;JAR;JAR;4;too slow;80;3;Violon
+55;V_120_3;11;0;1;0;0;0;0;0;0;0;1;0;1;0;1;0;1;0;0;0;r_t;t;JAR;JAR;r_ne;ne;JAR;JAR;6;too cheerful;120;3;Violon
+55;A_80_3;12;0;1;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;1;0;r_ne;JAR;r_ne;ne;ne;r_t;r_ne;t;2;too gloomy;80;3;Accordion
+56;A_80_5;1;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;ne;ne;ne;ne;t;ne;JAR;5;;80;5;Accordion
+56;V_80_3;2;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;1;0;t;JAR;t;JAR;ne;JAR;JAR;ne;4;not classy enough;80;3;Violon
+56;P_80_3;3;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;80;3;Piano
+56;P_80_5;4;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;ne;JAR;JAR;ne;JAR;t;ne;JAR;6;a little too slow;80;5;Piano
+56;V_120_3;5;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;t;t;t;t;ne;ne;t;ne;3;does not match the high-end image;120;3;Violon
+56;V_120_1;6;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;t;JAR;7;;120;1;Violon
+56;P_120_1;7;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;t;t;ne;t;ne;ne;JAR;ne;5;;120;1;Piano
+56;A_120_5;8;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;120;5;Accordion
+56;V_120_5;9;1;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;t;JAR;JAR;7;;120;5;Violon
+56;P_160_5;10;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;ne;JAR;ne;7;;160;5;Piano
+56;P_160_1;11;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;t;t;JAR;t;ne;ne;JAR;ne;5;;160;1;Piano
+56;V_80_5;12;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;the slow pace is serious and acute is classy;80;5;Violon
+57;P_120_3;1;0;0;1;0;0;0;1;1;0;0;0;0;0;1;0;0;1;1;0;JAR;JAR;ne;ne;JAR;JAR;JAR;JAR;7;;120;3;Piano
+57;A_80_1;2;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;r_ne;t;ne;r_ne;r_ne;t;r_ne;JAR;2;;80;1;Accordion
+57;P_120_1;3;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;JAR;JAR;ne;ne;JAR;JAR;ne;JAR;7;;120;1;Piano
+57;A_80_3;4;1;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;ne;JAR;ne;r_ne;r_ne;t;ne;t;5;;80;3;Accordion
+57;P_160_3;5;0;0;0;0;1;0;0;1;0;1;0;0;1;0;0;0;0;0;1;t;JAR;ne;JAR;JAR;JAR;ne;JAR;6;;160;3;Piano
+57;P_160_1;6;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;JAR;JAR;ne;ne;ne;t;ne;JAR;6;;160;1;Piano
+57;A_80_5;7;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;1;1;0;r_t;r_t;r_ne;r_ne;ne;t;ne;t;3;;80;5;Accordion
+57;A_120_5;8;1;1;0;1;0;0;1;1;0;0;0;0;1;0;0;0;0;0;1;JAR;ne;ne;r_ne;ne;JAR;JAR;JAR;5;;120;5;Accordion
+57;A_160_5;9;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;JAR;t;ne;ne;ne;t;JAR;ne;6;;160;5;Accordion
+57;V_160_1;10;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;ne;ne;ne;r_ne;ne;JAR;ne;JAR;6;;160;1;Violon
+57;A_120_3;11;0;0;1;0;0;0;1;0;0;0;1;1;0;0;0;1;0;0;0;ne;ne;ne;ne;ne;t;ne;ne;4;;120;3;Accordion
+57;V_120_1;12;1;1;0;0;0;1;0;1;1;1;0;0;0;0;0;1;1;0;1;ne;JAR;JAR;JAR;JAR;t;JAR;t;6;;120;1;Violon
+58;P_120_1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;ne;r_ne;ne;JAR;ne;JAR;3;;120;1;Piano
+58;A_160_5;2;1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;t;JAR;t;ne;JAR;ne;ne;4;son strident;160;5;Accordion
+58;A_160_1;3;0;0;1;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;1;JAR;JAR;ne;ne;ne;JAR;JAR;JAR;6;;160;1;Accordion
+58;V_160_1;4;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;ne;JAR;ne;ne;JAR;t;ne;JAR;4;;160;1;Violon
+58;V_80_3;5;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;r_ne;JAR;ne;r_ne;ne;t;ne;JAR;3;;80;3;Violon
+58;V_80_1;6;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;ne;r_ne;ne;t;ne;t;2;;80;1;Violon
+58;V_160_3;7;0;1;0;0;0;0;0;1;0;0;1;0;1;0;0;1;0;0;0;t;JAR;t;JAR;ne;JAR;JAR;ne;5;;160;3;Violon
+58;A_80_5;8;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;t;ne;r_ne;ne;t;ne;JAR;3;too strident;80;5;Accordion
+58;P_120_3;9;0;0;1;0;0;0;0;0;0;0;0;0;1;0;1;0;1;1;0;JAR;JAR;JAR;ne;JAR;JAR;JAR;JAR;8;lacks a little more energy, a little more speed;120;3;Piano
+58;P_160_1;10;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;ne;ne;ne;JAR;JAR;t;JAR;JAR;6;;160;1;Piano
+58;A_80_1;11;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;r_ne;ne;ne;r_ne;ne;t;ne;t;3;;80;1;Accordion
+58;P_80_3;12;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;ne;JAR;ne;ne;JAR;t;ne;JAR;4;;80;3;Piano
+59;P_160_3;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;r_ne;JAR;JAR;t;r_ne;JAR;7;;160;3;Piano
+59;A_80_3;2;0;0;0;1;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;r_ne;r_t;r_ne;r_ne;r_ne;t;r_ne;r_ne;3;it feels like a church;80;3;Accordion
+59;V_160_5;3;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;r_ne;r_t;ne;ne;ne;t;ne;r_t;2;;160;5;Violon
+59;A_80_5;4;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;t;r_ne;ne;ne;t;ne;t;2;;80;5;Accordion
+59;A_160_3;5;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;JAR;JAR;ne;ne;ne;JAR;ne;JAR;4;;160;3;Accordion
+59;P_160_1;6;1;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;160;1;Piano
+59;V_120_1;7;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_t;r_ne;r_ne;r_ne;r_t;r_ne;r_t;1;;120;1;Violon
+59;V_80_5;8;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;r_ne;r_t;r_ne;r_ne;r_ne;t;ne;r_t;2;;80;5;Violon
+59;P_120_3;9;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;120;3;Piano
+59;V_80_1;10;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_t;r_ne;r_ne;r_ne;r_t;r_ne;r_t;1;;80;1;Violon
+59;P_160_5;11;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;JAR;ne;ne;JAR;ne;JAR;ne;JAR;4;;160;5;Piano
+59;P_80_1;12;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;r_ne;JAR;ne;r_ne;ne;r_t;ne;t;4;;80;1;Piano
+60;P_160_5;1;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;r_ne;ne;ne;t;JAR;t;6;;160;5;Piano
+60;V_80_3;2;1;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;ne;ne;t;ne;t;JAR;t;7;;80;3;Violon
+60;V_120_5;3;0;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;ne;JAR;r_ne;ne;ne;JAR;ne;t;5;;120;5;Violon
+60;V_160_3;4;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;1;0;r_ne;ne;ne;JAR;ne;t;JAR;JAR;6;;160;3;Violon
+60;P_80_1;5;0;1;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;ne;JAR;ne;r_ne;ne;t;ne;JAR;4;;80;1;Piano
+60;A_120_3;6;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;ne;JAR;ne;ne;r_ne;t;JAR;JAR;6;;120;3;Accordion
+60;P_120_5;7;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;0;1;0;0;JAR;JAR;ne;ne;ne;t;JAR;JAR;6;;120;5;Piano
+60;A_160_5;8;0;1;0;0;0;0;1;0;0;0;0;1;0;0;0;1;0;1;0;t;JAR;JAR;t;JAR;ne;t;JAR;6;;160;5;Accordion
+60;P_120_1;9;1;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;0;r_ne;ne;ne;ne;r_ne;t;ne;JAR;4;;120;1;Piano
+60;A_80_5;10;0;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;JAR;ne;t;ne;JAR;6;;80;5;Accordion
+60;P_160_3;11;1;0;0;0;0;0;0;0;1;0;1;0;0;0;0;1;0;0;0;JAR;ne;ne;JAR;JAR;t;JAR;t;6;;160;3;Piano
+60;A_160_3;12;0;0;0;1;0;0;0;1;0;0;1;0;0;0;1;0;0;0;0;r_ne;ne;ne;r_ne;ne;t;ne;JAR;4;;160;3;Accordion
+61;P_80_1;1;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;ne;ne;ne;r_ne;JAR;JAR;ne;t;4;;80;1;Piano
+61;V_160_3;2;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;JAR;r_ne;ne;ne;t;5;;160;3;Violon
+61;P_120_3;3;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;ne;ne;ne;JAR;JAR;ne;JAR;5;;120;3;Piano
+61;A_120_3;4;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;r_ne;JAR;r_ne;ne;ne;ne;JAR;t;4;;120;3;Accordion
+61;V_80_1;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;r_ne;JAR;ne;ne;r_ne;ne;ne;r_t;3;;80;1;Violon
+61;P_80_5;6;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;JAR;JAR;ne;t;6;;80;5;Piano
+61;A_80_1;7;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;r_ne;JAR;ne;ne;r_ne;ne;JAR;r_t;3;;80;1;Accordion
+61;A_80_3;8;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;r_ne;ne;JAR;t;4;;80;3;Accordion
+61;A_120_5;9;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;t;ne;ne;ne;t;5;;120;5;Accordion
+61;P_80_3;10;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;JAR;JAR;ne;JAR;6;;80;3;Piano
+61;A_120_1;11;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;JAR;ne;ne;r_ne;JAR;ne;r_t;3;;120;1;Accordion
+61;P_160_5;12;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;ne;JAR;JAR;ne;JAR;JAR;ne;JAR;7;;160;5;Piano
+62;A_160_1;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;JAR;ne;r_ne;r_ne;t;ne;t;6;;160;1;Accordion
+62;V_120_1;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;r_ne;t;r_ne;r_ne;r_ne;t;r_ne;t;5;;120;1;Violon
+62;V_120_5;3;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;t;t;ne;ne;r_ne;t;ne;ne;4;;120;5;Violon
+62;P_80_3;4;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;r_ne;ne;JAR;JAR;JAR;6;;80;3;Piano
+62;A_80_3;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;t;t;t;t;JAR;t;JAR;JAR;6;;80;3;Accordion
+62;A_160_5;6;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;t;t;r_t;r_t;ne;ne;ne;r_ne;4;;160;5;Accordion
+62;V_120_3;7;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;ne;t;ne;JAR;6;;120;3;Violon
+62;V_80_5;8;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;t;r_t;r_t;ne;t;ne;ne;4;;80;5;Violon
+62;P_80_1;9;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;JAR;JAR;JAR;JAR;7;;80;1;Piano
+62;A_160_3;10;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;t;t;t;t;ne;JAR;ne;ne;4;;160;3;Accordion
+62;V_160_1;11;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;ne;JAR;JAR;JAR;6;;160;1;Violon
+62;V_160_3;12;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;JAR;JAR;JAR;ne;JAR;ne;JAR;6;;160;3;Violon
+63;V_160_1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;r_ne;ne;r_ne;t;r_ne;t;3;;160;1;Violon
+63;V_120_3;2;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;ne;r_ne;ne;r_ne;JAR;ne;t;5;;120;3;Violon
+63;V_160_3;3;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;r_ne;ne;r_ne;t;ne;JAR;4;;160;3;Violon
+63;P_160_3;4;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;9;;160;3;Piano
+63;A_120_3;5;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;ne;t;JAR;JAR;ne;JAR;ne;t;6;;120;3;Accordion
+63;P_120_1;6;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;JAR;JAR;JAR;JAR;7;;120;1;Piano
+63;A_160_3;7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;ne;JAR;ne;t;ne;JAR;ne;t;5;;160;3;Accordion
+63;V_80_1;8;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;ne;JAR;JAR;JAR;JAR;7;;80;1;Violon
+63;V_120_1;9;1;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_ne;r_ne;ne;r_ne;ne;ne;t;4;;120;1;Violon
+63;P_80_1;10;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;ne;ne;ne;JAR;t;JAR;JAR;6;;80;1;Piano
+63;P_160_1;11;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;8;;160;1;Piano
+63;A_120_5;12;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;t;r_ne;t;r_ne;t;ne;t;4;;120;5;Accordion
+64;V_120_1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;1;translates the high-end but not at all innovation;120;1;Violon
+64;A_160_3;2;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;t;JAR;ne;JAR;ne;JAR;ne;ne;4;does not demonstrate the expert, passionate side;160;3;Accordion
+64;A_80_5;3;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;t;t;t;t;ne;ne;ne;ne;4;too much in the treble;80;5;Accordion
+64;A_160_1;4;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;1;0;0;ne;JAR;ne;ne;ne;t;ne;JAR;5;;160;1;Accordion
+64;A_80_1;5;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;JAR;r_ne;r_ne;ne;r_t;r_ne;t;5;;80;1;Accordion
+64;P_120_5;6;0;0;0;0;1;1;0;1;0;0;0;0;0;0;0;1;0;0;0;JAR;JAR;ne;JAR;ne;JAR;ne;JAR;7;;120;5;Piano
+64;A_120_5;7;0;0;0;0;1;0;1;1;0;0;0;0;0;0;0;0;0;1;0;t;t;JAR;JAR;ne;JAR;JAR;ne;6;;120;5;Accordion
+64;P_120_3;8;0;0;1;0;0;1;0;1;0;1;1;0;0;0;0;0;0;0;1;JAR;JAR;ne;JAR;JAR;t;JAR;JAR;8;the theme is more posed;120;3;Piano
+64;P_160_3;9;0;0;1;0;0;1;0;1;0;0;0;1;0;0;0;0;1;0;0;ne;JAR;JAR;JAR;JAR;t;ne;JAR;8;lacks a little cheerfulness;160;3;Piano
+64;V_120_3;10;0;1;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;ne;ne;JAR;t;ne;JAR;7;theme a little sad, not alive enough;120;3;Violon
+64;P_80_5;11;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;ne;JAR;JAR;JAR;JAR;t;JAR;JAR;8;close to a film score;80;5;Piano
+64;V_80_5;12;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;t;JAR;JAR;JAR;ne;JAR;JAR;ne;6;;80;5;Violon
+65;A_160_3;1;0;0;1;1;1;0;1;0;0;0;1;0;0;0;0;0;0;0;0;t;r_ne;r_t;r_t;t;r_ne;r_t;ne;2;far too cheerful;160;3;Accordion
+65;P_120_1;2;1;1;0;0;0;1;0;0;0;1;0;1;0;1;0;0;0;0;1;ne;JAR;ne;ne;JAR;t;JAR;JAR;7;sufficiently sober;120;1;Piano
+65;A_120_3;3;1;0;0;0;1;0;0;1;0;0;0;0;1;0;0;0;0;0;0;t;JAR;r_t;r_t;r_t;r_ne;r_t;ne;4;a little too sporty;120;3;Accordion
+65;A_120_5;4;1;0;0;0;1;0;0;0;0;0;0;0;1;0;0;1;0;0;0;t;JAR;JAR;JAR;r_t;r_ne;r_t;r_ne;1;represents a low-end company;120;5;Accordion
+65;P_160_5;5;1;1;1;0;0;0;1;0;1;1;0;0;0;0;0;0;0;0;0;t;r_ne;JAR;JAR;t;JAR;JAR;JAR;5;looks like windows, not original;160;5;Piano
+65;V_80_5;6;0;0;0;1;1;0;0;0;0;0;0;0;0;1;1;0;0;1;0;JAR;JAR;t;JAR;t;r_t;t;ne;4;sad music;80;5;Violon
+65;A_120_1;7;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;1;1;0;0;t;ne;ne;ne;ne;t;t;ne;2;too burlesque sound;120;1;Accordion
+65;A_80_1;8;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;1;1;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;slow sound demonstrates thoroughness;80;1;Accordion
+65;V_80_1;9;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;t;JAR;JAR;t;JAR;JAR;JAR;JAR;6;makes us think of vain efforts to have quality;80;1;Violon
+65;A_160_1;10;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;JAR;ne;ne;ne;ne;ne;t;ne;4;would go to a young company;160;1;Accordion
+65;P_120_5;11;1;0;1;1;0;0;1;0;0;1;0;0;0;1;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;6;looks like windows, not original;120;5;Piano
+65;V_160_1;12;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;JAR;JAR;t;t;JAR;JAR;JAR;ne;7;aggressive sound;160;1;Violon
+66;V_160_1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;r_ne;ne;JAR;r_ne;JAR;r_ne;t;3;;160;1;Violon
+66;V_160_5;2;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;ne;ne;ne;r_ne;JAR;r_ne;t;3;;160;5;Violon
+66;V_80_1;3;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;JAR;JAR;JAR;JAR;t;JAR;r_t;5;;80;1;Violon
+66;A_80_1;4;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;r_t;JAR;JAR;ne;JAR;JAR;r_ne;0;not technological enough;80;1;Accordion
+66;V_160_3;5;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;JAR;t;JAR;JAR;JAR;JAR;JAR;JAR;7;;160;3;Violon
+66;V_80_3;6;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;ne;ne;r_ne;ne;r_ne;t;JAR;r_t;4;too solemn;80;3;Violon
+66;P_80_1;7;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;r_ne;r_ne;ne;t;ne;JAR;3;;80;1;Piano
+66;A_80_5;8;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;t;ne;JAR;ne;JAR;4;sharp;80;5;Accordion
+66;P_160_5;9;0;0;0;0;1;0;1;0;0;0;1;0;1;0;0;0;0;0;0;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;7;reflects too much simplicity, evokes another brand;160;5;Piano
+66;V_120_1;10;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;JAR;t;ne;ne;JAR;JAR;ne;r_t;6;;120;1;Violon
+66;V_120_3;11;0;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;t;JAR;JAR;t;JAR;JAR;ne;JAR;8;;120;3;Violon
+66;A_120_1;12;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;r_t;ne;r_ne;ne;t;JAR;r_ne;1;not technological enough;120;1;Accordion
+67;A_80_1;1;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;1;1;0;r_ne;r_ne;r_ne;r_ne;ne;r_t;r_ne;t;0;too terroir, too traditional;80;1;Accordion
+67;V_160_5;2;0;0;0;0;0;0;0;1;0;1;0;1;0;0;1;0;0;0;0;ne;JAR;ne;ne;JAR;JAR;ne;t;3;;160;5;Violon
+67;P_160_1;3;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;ne;r_ne;r_ne;r_ne;ne;t;JAR;JAR;2;;160;1;Piano
+67;A_120_3;4;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;ne;r_t;0;;120;3;Accordion
+67;P_80_5;5;0;0;0;0;0;1;0;0;0;0;0;1;0;1;0;1;0;0;0;ne;JAR;ne;JAR;JAR;t;ne;t;5;lack of pep, a little more energetic;80;5;Piano
+67;A_160_1;6;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;1;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;JAR;r_ne;0;recalls the beer festival, in total agreement with the values of the brand;160;1;Accordion
+67;P_80_3;7;0;0;1;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;0;ne;ne;ne;ne;JAR;JAR;ne;JAR;6;conveys class, expertise but lacks madness;80;3;Piano
+67;P_160_5;8;0;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;ne;JAR;t;ne;t;2;too soft for such a dynamic company;160;5;Piano
+67;P_120_5;9;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;1;r_ne;r_ne;r_ne;ne;t;t;ne;t;1;tempo much too slow;120;5;Piano
+67;V_160_3;10;0;1;0;1;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;JAR;JAR;ne;ne;JAR;JAR;JAR;t;6;stands out a little but nothing transcendent;160;3;Violon
+67;V_120_1;11;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;1;0;r_ne;r_ne;r_ne;r_ne;t;r_t;ne;t;0;too slow to convey innovation;120;1;Violon
+67;A_80_5;12;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;t;JAR;JAR;ne;JAR;ne;ne;2;does not make think of a quality material, rather a low quality trinkets;80;5;Accordion
+68;A_160_1;1;0;0;1;0;0;0;1;0;0;1;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;ne;r_ne;t;r_ne;r_t;2;too serious;160;1;Accordion
+68;A_80_5;2;1;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;t;JAR;JAR;r_t;ne;JAR;ne;JAR;4;too aggressive, too acute;80;5;Accordion
+68;V_120_3;3;0;0;0;0;1;0;0;1;0;1;0;0;1;0;0;0;1;1;1;JAR;ne;ne;JAR;JAR;JAR;JAR;t;8;;120;3;Violon
+68;A_160_3;4;0;0;0;0;0;0;1;0;1;0;0;0;0;1;0;0;0;0;0;r_ne;JAR;r_ne;ne;ne;t;ne;t;4;;160;3;Accordion
+68;A_120_1;5;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;r_ne;r_ne;r_t;ne;r_t;1;too serious;120;1;Accordion
+68;P_160_5;6;1;1;0;0;1;1;0;0;1;0;1;0;0;0;0;1;0;0;1;t;JAR;JAR;JAR;ne;JAR;ne;JAR;5;a little too acute;160;5;Piano
+68;P_120_3;7;0;0;1;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;JAR;JAR;ne;ne;t;t;JAR;JAR;6;a little too slow;120;3;Piano
+68;P_80_1;8;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;r_ne;ne;r_t;r_ne;r_t;3;;80;1;Piano
+68;P_80_5;9;1;1;0;0;0;1;0;1;1;1;0;0;0;0;0;0;0;0;1;t;JAR;ne;ne;JAR;ne;JAR;JAR;5;;80;5;Piano
+68;P_120_1;10;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;ne;JAR;JAR;JAR;ne;t;JAR;t;6;a little too serious, a little too serious;120;1;Piano
+68;P_80_3;11;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;JAR;JAR;JAR;ne;JAR;t;JAR;JAR;7;lack of energy;80;3;Piano
+68;A_120_3;12;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;1;0;JAR;t;ne;JAR;r_ne;t;r_ne;t;4;;120;3;Accordion
+69;A_160_3;1;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;1;1;0;r_ne;r_t;r_ne;ne;r_ne;t;r_ne;t;3;;160;3;Accordion
+69;V_120_3;2;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;1;1;0;ne;r_t;ne;ne;ne;t;ne;t;4;;120;3;Violon
+69;A_120_3;3;0;0;1;0;0;1;0;1;1;0;0;0;0;1;0;0;1;1;0;r_ne;r_t;r_ne;r_ne;r_ne;r_t;r_ne;t;2;;120;3;Accordion
+69;P_120_3;4;0;0;1;1;0;1;0;1;1;0;0;0;0;1;0;1;1;1;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;;120;3;Piano
+69;P_80_3;5;0;0;1;0;0;1;0;1;1;0;0;0;0;1;0;1;1;1;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;;80;3;Piano
+69;A_80_5;6;1;1;1;0;0;1;0;0;0;1;0;1;0;1;1;0;1;1;0;ne;r_t;t;t;r_ne;JAR;ne;t;4;;80;5;Accordion
+69;A_120_1;7;0;1;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;0;r_ne;t;r_ne;r_ne;r_ne;t;r_ne;t;4;;120;1;Accordion
+69;P_160_3;8;0;0;1;1;1;1;1;0;0;0;0;0;0;1;0;1;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;ne;JAR;9;;160;3;Piano
+69;V_80_3;9;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;1;1;0;r_ne;t;ne;ne;JAR;JAR;JAR;JAR;7;;80;3;Violon
+69;V_160_1;10;0;0;1;0;0;1;0;0;1;0;0;0;0;1;0;0;0;0;0;r_ne;r_t;r_ne;r_ne;ne;r_ne;r_ne;r_t;3;;160;1;Violon
+69;P_120_5;11;1;0;1;0;1;1;0;0;1;0;0;0;0;1;1;1;0;0;1;ne;JAR;ne;JAR;ne;JAR;ne;t;5;;120;5;Piano
+69;A_80_3;12;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;t;r_ne;r_ne;ne;ne;ne;JAR;5;;80;3;Accordion
+70;V_80_5;1;1;0;0;0;0;1;0;1;0;1;0;0;0;1;0;0;0;0;1;ne;JAR;ne;ne;JAR;t;ne;t;4;too ceremonial;80;5;Violon
+70;A_120_5;2;1;0;0;0;0;0;1;0;0;1;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;t;ne;JAR;ne;JAR;6;a little too energetic, no mystery that could evoke innovation and technology;120;5;Accordion
+70;P_120_5;3;0;0;1;0;0;1;0;1;0;0;0;0;0;1;0;0;1;1;1;JAR;ne;JAR;JAR;JAR;t;ne;JAR;5;too cold, impersonal;120;5;Piano
+70;A_120_1;4;0;0;0;1;0;0;0;0;1;0;1;0;1;0;0;1;1;1;0;ne;t;ne;JAR;r_ne;t;t;r_ne;4;accordion does not go with technology, innovation, sounds too terroir;120;1;Accordion
+70;A_80_5;5;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;t;ne;t;ne;t;ne;JAR;4;;80;5;Accordion
+70;P_80_1;6;0;0;0;0;0;1;0;1;0;0;0;0;0;1;0;0;0;0;1;JAR;JAR;ne;ne;JAR;JAR;JAR;JAR;8;warm but also sober, classy, technology;80;1;Piano
+70;V_120_5;7;0;1;0;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;0;t;t;t;t;r_ne;ne;ne;t;4;tone too aggressive;120;5;Violon
+70;V_80_3;8;0;0;0;0;0;0;0;1;1;0;0;0;0;1;0;1;0;0;0;JAR;JAR;JAR;JAR;JAR;ne;ne;JAR;7;cold side of the violin, not warm enough;80;3;Violon
+70;A_80_1;9;0;0;0;1;0;0;1;0;1;0;1;0;0;0;0;0;1;1;0;JAR;ne;ne;ne;r_ne;t;JAR;ne;5;accordion too rural;80;1;Accordion
+70;V_120_1;10;0;0;1;0;0;1;0;1;0;0;0;1;0;1;0;0;0;0;0;JAR;ne;JAR;JAR;t;t;ne;t;6;too chic, too opera, elite;120;1;Violon
+70;A_80_3;11;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;t;t;t;t;ne;JAR;ne;JAR;6;;80;3;Accordion
+70;P_120_1;12;0;0;1;0;0;1;1;0;0;0;0;0;0;1;0;0;0;0;0;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;7;piano, a high-pitched violin-like sound pollutes a little, a kind of echo;120;1;Piano
+71;V_80_1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;JAR;r_ne;JAR;t;JAR;JAR;3;lack of dynamism;80;1;Violon
+71;P_160_1;2;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;8;it represents the company quite well, I think it sticks, small downside for the violin in the background ;160;1;Piano
+71;V_120_5;3;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;ne;r_t;r_ne;JAR;r_ne;r_t;r_ne;ne;3;too acute;120;5;Violon
+71;P_160_3;4;1;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;ne;ne;7;not bad too high not warm enough, makes less serious especially for technology;160;3;Piano
+71;V_80_3;5;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;r_ne;r_t;ne;r_ne;ne;r_t;ne;ne;3;too high, not fast enough not at all technological;80;3;Violon
+71;V_120_3;6;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;1;ne;t;ne;JAR;ne;t;ne;JAR;5;not high-tech, too traditional;120;3;Violon
+71;A_160_1;7;0;1;1;1;1;0;1;0;0;0;1;0;1;0;0;0;1;0;0;r_t;r_t;JAR;JAR;r_ne;r_ne;r_t;r_ne;0;not at all adapted, good franquette, bal musette;160;1;Accordion
+71;P_120_3;8;0;0;0;0;0;1;0;0;0;0;0;0;0;1;1;0;0;0;0;ne;ne;ne;ne;JAR;t;ne;ne;7;lack of enthusiasm;120;3;Piano
+71;A_120_5;9;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;r_t;r_t;t;JAR;r_ne;ne;ne;ne;3;too acute;120;5;Accordion
+71;A_160_3;10;0;1;0;1;0;0;0;0;0;0;1;0;1;0;0;0;1;0;0;t;t;JAR;JAR;ne;ne;r_t;r_ne;1;bal musette a little;160;3;Accordion
+71;P_80_1;11;0;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;1;1;ne;ne;r_ne;r_ne;JAR;JAR;JAR;JAR;7;dynamic, high-tech more innovative;80;1;Piano
+71;V_160_3;12;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;r_t;r_t;t;r_t;ne;ne;JAR;ne;2;too fast, too sharp, bad for high technology, too young, inmature;160;3;Violon
+72;V_160_3;1;0;1;0;0;0;1;0;1;0;0;0;1;0;1;0;0;0;0;1;t;ne;JAR;t;r_ne;r_ne;JAR;ne;6;a little too lively not serious enough;160;3;Violon
+72;P_120_3;2;0;0;1;0;0;0;1;0;1;0;1;0;0;0;0;0;1;0;0;ne;JAR;JAR;ne;JAR;JAR;ne;t;8;not cheerful enough but rather surprising;120;3;Piano
+72;V_120_5;3;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;ne;ne;r_t;t;r_ne;ne;r_ne;r_ne;3;too acute;120;5;Violon
+72;A_80_5;4;0;0;1;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;r_ne;r_ne;t;ne;r_ne;r_ne;r_ne;ne;2;too slow, lack of dynamism;80;5;Accordion
+72;P_120_5;5;1;0;0;1;0;1;0;0;1;0;1;0;0;0;0;0;1;0;1;ne;JAR;ne;JAR;JAR;JAR;ne;JAR;7;still a little too sharp, not cheerful enough;120;5;Piano
+72;P_80_5;6;0;0;1;0;0;0;1;1;0;0;0;0;0;0;0;0;0;1;0;r_ne;ne;r_ne;r_ne;t;r_t;ne;t;5;too slow so no dynamism;80;5;Piano
+72;V_80_1;7;0;0;0;0;0;1;0;0;0;0;0;1;0;1;1;0;0;0;1;r_ne;r_ne;r_ne;JAR;JAR;t;JAR;r_t;5;too classic, so not innovative enough;80;1;Violon
+72;P_80_3;8;1;1;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;JAR;JAR;JAR;JAR;8;nice sound but a little too slow;80;3;Piano
+72;P_160_1;9;0;0;0;1;1;0;0;0;0;1;0;0;0;0;1;0;0;1;0;ne;JAR;ne;JAR;JAR;JAR;JAR;JAR;9;good dynamic, lacks a little joy;160;1;Piano
+72;V_80_5;10;1;0;0;0;1;0;0;0;0;1;0;0;0;0;0;1;0;0;1;t;JAR;r_t;ne;ne;ne;JAR;r_ne;3;too sharp and too slow;80;5;Violon
+72;P_120_1;11;0;0;0;0;0;1;0;0;1;1;1;0;0;1;1;0;0;1;0;ne;JAR;JAR;JAR;JAR;JAR;ne;JAR;9;pleasant sound, lack of joy, too serious;120;1;Piano
+72;V_80_3;12;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;ne;JAR;JAR;ne;JAR;JAR;JAR;JAR;9;good tone, pleasant, lacks a little dynamism;80;3;Violon
+73;P_80_3;1;1;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;r_ne;r_ne;r_ne;r_ne;JAR;t;ne;t;2;too classic, too slow;80;3;Piano
+73;V_80_1;2;0;0;0;0;0;1;0;1;1;0;0;0;0;1;0;1;0;1;1;JAR;JAR;r_ne;r_ne;JAR;JAR;JAR;JAR;7;a little too slow, very classy, not technological enough;80;1;Violon
+73;A_120_1;3;0;1;0;1;1;0;1;1;0;0;1;0;1;0;0;0;1;1;0;JAR;t;ne;JAR;r_ne;JAR;t;r_ne;0;not at all serious, accordion not at all high-end;120;1;Accordion
+73;V_160_5;4;1;1;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;JAR;t;JAR;JAR;r_ne;JAR;ne;JAR;8;too sharp, hurts the ears, lack of refinement, too cold;160;5;Violon
+73;A_80_5;5;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;r_ne;t;r_ne;r_ne;ne;t;r_ne;t;4;too slow, organ too classical and too ellitist;80;5;Accordion
+73;P_120_1;6;0;0;1;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;ne;ne;ne;JAR;JAR;JAR;JAR;JAR;4;too classic;120;1;Piano
+73;V_80_5;7;1;1;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;ne;t;JAR;ne;ne;JAR;ne;JAR;6;too slow, too acute;80;5;Violon
+73;A_80_3;8;0;0;0;1;1;0;1;0;0;0;0;0;1;0;0;0;1;1;0;JAR;ne;ne;ne;r_ne;JAR;JAR;ne;3;too traditional;80;3;Accordion
+73;A_120_3;9;0;0;0;1;1;0;1;1;0;0;1;0;1;0;0;0;1;1;0;JAR;JAR;JAR;JAR;r_ne;JAR;JAR;r_ne;4;not high-end, not innovative;120;3;Accordion
+73;V_120_5;10;1;1;0;1;1;0;1;0;0;1;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;ne;JAR;ne;JAR;8;a little too cold and sharp;120;5;Violon
+73;A_160_3;11;0;0;0;1;1;0;0;1;0;0;1;0;1;0;0;0;1;1;0;JAR;JAR;JAR;t;r_ne;JAR;JAR;ne;3;accordion does not make high-end or innovative, not serious enough;160;3;Accordion
+73;V_120_3;12;1;0;0;0;0;1;0;1;0;1;0;0;0;0;0;1;0;0;1;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;9;a little too slow, the most suitable;120;3;Violon
+74;P_120_3;1;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;0;ne;ne;JAR;JAR;JAR;JAR;ne;t;7;simple, effective;120;3;Piano
+74;P_120_5;2;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;t;t;t;JAR;ne;r_ne;r_ne;JAR;2;too acute, no aplomb;120;5;Piano
+74;V_120_3;3;1;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;JAR;JAR;t;ne;r_ne;JAR;ne;ne;5;violin more classy than the piano;120;3;Violon
+74;V_80_1;4;1;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;0;ne;JAR;ne;ne;JAR;t;JAR;t;4;cello more pleasant to listen to;80;1;Violon
+74;A_80_3;5;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;1;0;t;r_t;ne;ne;r_ne;r_ne;ne;r_ne;0;accordion not too classy;80;3;Accordion
+74;A_160_5;6;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;r_t;r_t;t;r_t;r_ne;r_ne;ne;r_ne;0;far too acute, too technological;160;5;Accordion
+74;A_120_3;7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;JAR;t;JAR;JAR;r_ne;ne;JAR;r_ne;2;not classy;120;3;Accordion
+74;V_160_1;8;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;t;JAR;JAR;t;8;classy, leading;160;1;Violon
+74;A_160_1;9;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;1;JAR;t;ne;JAR;r_ne;r_ne;ne;r_ne;0;fanfare;160;1;Accordion
+74;P_120_1;10;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;JAR;ne;ne;ne;JAR;JAR;JAR;t;8;;120;1;Piano
+74;P_160_3;11;0;0;1;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;t;ne;JAR;t;ne;ne;t;ne;6;too fast;160;3;Piano
+74;A_80_5;12;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;t;r_t;r_ne;r_ne;r_ne;r_ne;r_ne;r_ne;0;horrible, too sharp, slow;80;5;Accordion
+75;P_160_3;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;JAR;ne;JAR;ne;JAR;ne;JAR;7;;160;3;Piano
+75;A_160_5;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_t;r_ne;t;r_ne;r_t;r_ne;ne;2;;160;5;Accordion
+75;V_120_1;3;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;JAR;ne;r_ne;r_ne;r_t;JAR;JAR;4;;120;1;Violon
+75;A_120_1;4;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;t;ne;r_ne;r_ne;t;JAR;ne;4;;120;1;Accordion
+75;A_160_3;5;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;JAR;JAR;r_ne;ne;ne;ne;6;;160;3;Accordion
+75;P_80_3;6;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;ne;ne;r_ne;r_ne;JAR;t;JAR;JAR;5;;80;3;Piano
+75;P_160_5;7;1;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;r_ne;ne;JAR;6;;160;5;Piano
+75;P_80_5;8;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;ne;r_ne;r_ne;ne;r_t;ne;JAR;5;;80;5;Piano
+75;A_80_5;9;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;r_ne;t;r_ne;ne;r_ne;r_t;r_ne;t;2;;80;5;Accordion
+75;V_120_3;10;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;1;0;JAR;ne;JAR;ne;JAR;JAR;JAR;JAR;7;;120;3;Violon
+75;V_160_3;11;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;1;0;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;9;;160;3;Violon
+75;A_160_1;12;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;ne;t;ne;ne;r_ne;t;JAR;ne;5;;160;1;Accordion
+76;P_160_5;1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;JAR;r_ne;JAR;JAR;ne;JAR;7;;160;5;Piano
+76;V_120_1;2;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;JAR;ne;JAR;JAR;t;JAR;JAR;7;;120;1;Violon
+76;P_160_1;3;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;ne;ne;ne;JAR;JAR;JAR;t;4;;160;1;Piano
+76;A_160_3;4;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;ne;t;ne;ne;r_ne;JAR;t;r_ne;4;;160;3;Accordion
+76;A_160_5;5;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;t;r_t;ne;t;ne;JAR;ne;JAR;6;;160;5;Accordion
+76;A_120_1;6;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;ne;ne;r_ne;JAR;t;ne;t;5;;120;1;Accordion
+76;V_120_3;7;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;JAR;ne;ne;JAR;JAR;r_ne;JAR;5;;120;3;Violon
+76;A_120_5;8;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;JAR;JAR;JAR;ne;t;7;;120;5;Accordion
+76;V_120_5;9;0;0;0;0;0;0;1;0;0;1;0;1;0;0;0;0;0;0;0;r_ne;t;ne;r_ne;ne;t;r_ne;t;2;;120;5;Violon
+76;V_160_1;10;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;ne;JAR;JAR;JAR;JAR;JAR;8;;160;1;Violon
+76;A_80_3;11;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_ne;r_ne;r_ne;r_ne;t;r_ne;t;1;;80;3;Accordion
+76;V_80_3;12;1;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;ne;ne;ne;r_ne;JAR;r_t;r_ne;t;5;;80;3;Violon
+77;V_120_3;1;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;ne;ne;JAR;JAR;JAR;ne;7;too average age;120;3;Violon
+77;A_160_5;2;0;1;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;t;t;r_t;r_t;t;JAR;t;ne;1;annoying;160;5;Accordion
+77;P_80_1;3;0;0;1;0;0;1;0;0;1;0;0;0;0;1;0;0;0;0;1;ne;JAR;JAR;JAR;JAR;JAR;ne;t;6;;80;1;Piano
+77;P_160_1;4;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;160;1;Piano
+77;A_120_3;5;0;0;0;1;0;0;0;0;0;0;1;0;1;0;0;0;1;0;0;t;r_t;t;JAR;ne;JAR;t;ne;3;not serious enough, too popular, gives the impression of being an expert;120;3;Accordion
+77;A_160_3;6;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;1;1;0;t;r_t;t;JAR;JAR;JAR;JAR;ne;4;;160;3;Accordion
+77;V_160_3;7;1;0;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;t;t;t;JAR;JAR;JAR;JAR;JAR;5;too troubadour;160;3;Violon
+77;A_80_5;8;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;r_t;r_t;r_t;r_t;t;ne;t;ne;0;enervant, too acute;80;5;Accordion
+77;V_80_1;9;0;0;1;0;0;1;0;0;1;0;0;1;0;1;0;1;0;0;1;ne;JAR;JAR;ne;JAR;t;JAR;JAR;7;;80;1;Violon
+77;V_120_1;10;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;;120;1;Violon
+77;P_120_1;11;0;0;0;0;0;1;0;0;1;0;0;0;0;1;0;1;0;0;0;JAR;t;JAR;ne;JAR;JAR;ne;JAR;4;;120;1;Piano
+77;V_160_5;12;1;0;0;0;1;0;0;1;1;0;0;0;0;0;0;1;0;0;0;r_t;r_t;r_t;r_t;JAR;JAR;t;ne;2;annoying;160;5;Violon
+78;A_120_5;1;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;t;t;r_ne;JAR;r_ne;r_ne;r_ne;r_ne;0;too electronic, too fast, not classy;120;5;Accordion
+78;P_160_1;2;0;0;1;0;0;1;1;0;0;0;0;0;0;0;0;0;0;1;0;t;JAR;ne;t;ne;JAR;JAR;JAR;4;piano, brings a high-end side;160;1;Piano
+78;A_80_5;3;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;ne;t;t;r_ne;r_ne;t;r_ne;r_ne;1;gloomy and sinister;80;5;Accordion
+78;V_120_1;4;0;0;1;0;0;1;0;1;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;ne;JAR;JAR;JAR;JAR;8;classy, mysterious, sensual, his pleasant feeling;120;1;Violon
+78;V_120_5;5;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_t;r_t;r_t;JAR;r_ne;ne;r_ne;r_ne;0;unpleasant to the ear, problematic for a headphone salesman;120;5;Violon
+78;P_120_1;6;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;t;JAR;JAR;JAR;ne;JAR;JAR;JAR;7;piano + pleasant echo in headphones and class;120;1;Piano
+78;A_160_1;7;0;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;1;1;0;t;r_t;t;JAR;r_ne;ne;t;ne;4;too franchouillard, it's guinguette;160;1;Accordion
+78;V_160_5;8;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;t;t;JAR;r_ne;ne;r_ne;r_ne;1;disagreeable;160;5;Violon
+78;P_120_5;9;0;0;0;0;0;1;0;1;1;0;0;0;0;0;1;1;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;perfect, sober, classy, echo well measured, simple, without fuss and appreciable;120;5;Piano
+78;P_160_3;10;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;t;JAR;JAR;t;ne;JAR;JAR;JAR;7;rhythm is too fast, we do not have time to appreciate the sound, it's better when we have time to wait like the sncf;160;3;Piano
+78;P_160_5;11;1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;JAR;JAR;t;JAR;JAR;JAR;JAR;8;Ok;160;5;Piano
+78;A_80_3;12;0;0;0;1;0;0;1;0;0;0;0;0;0;1;0;0;1;1;0;r_t;r_t;r_ne;r_ne;r_ne;JAR;JAR;r_ne;1;It's a horror movie, it looks like a squeaky door;80;3;Accordion
+79;P_160_1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;JAR;ne;r_ne;r_ne;r_t;r_ne;JAR;6;;160;1;Piano
+79;P_80_5;2;0;0;0;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;ne;JAR;ne;ne;JAR;r_t;JAR;t;3;;80;5;Piano
+79;A_160_5;3;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;t;r_t;JAR;JAR;r_ne;r_ne;JAR;ne;0;good sound for the circus;160;5;Accordion
+79;A_80_1;4;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;ne;t;r_ne;ne;r_ne;JAR;JAR;r_ne;1;good campaign prom intro;80;1;Accordion
+79;P_120_3;5;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;JAR;JAR;t;JAR;JAR;9;;120;3;Piano
+79;V_120_1;6;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;ne;ne;JAR;JAR;r_ne;JAR;ne;r_t;5;;120;1;Violon
+79;V_160_5;7;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;t;t;JAR;JAR;r_ne;ne;t;r_ne;3;;160;5;Violon
+79;P_160_3;8;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;JAR;ne;JAR;ne;JAR;t;ne;JAR;6;;160;3;Piano
+79;V_120_3;9;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;JAR;ne;JAR;ne;ne;JAR;ne;JAR;7;;120;3;Violon
+79;V_80_3;10;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;t;r_ne;r_ne;ne;r_t;ne;t;3;;80;3;Violon
+79;P_80_3;11;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;ne;JAR;ne;JAR;6;;80;3;Piano
+79;V_120_5;12;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;t;JAR;JAR;JAR;ne;JAR;JAR;r_ne;6;;120;5;Violon
+80;P_80_1;1;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;r_ne;ne;r_ne;r_ne;JAR;t;ne;t;3;gloomy, too traditional;80;1;Piano
+80;P_160_5;2;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;JAR;JAR;ne;JAR;JAR;JAR;r_ne;JAR;7;;160;5;Piano
+80;P_120_5;3;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;ne;ne;JAR;ne;JAR;t;r_ne;t;5;loses dynamism, or is independence;120;5;Piano
+80;V_160_1;4;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;1;0;ne;JAR;ne;JAR;ne;t;ne;JAR;4;lack of high technology;160;1;Violon
+80;V_160_5;5;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;ne;ne;ne;JAR;ne;t;r_ne;ne;2;strident and aggressive sound;160;5;Violon
+80;V_120_5;6;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;ne;JAR;JAR;ne;JAR;JAR;ne;JAR;5;;120;5;Violon
+80;V_120_3;7;1;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;8;;120;3;Violon
+80;P_120_1;8;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;1;0;0;r_ne;ne;ne;ne;JAR;t;r_ne;t;3;welcome to the morgue;120;1;Piano
+80;A_120_3;9;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;1;1;0;r_t;r_t;t;t;t;r_ne;t;r_ne;2;made shack with fries, not high tech;120;3;Accordion
+80;V_160_3;10;0;0;1;0;0;0;1;1;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;JAR;JAR;t;JAR;JAR;JAR;9;restores well the high-end and innovative side;160;3;Violon
+80;A_80_1;11;0;1;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;r_ne;t;ne;r_ne;ne;t;ne;JAR;3;its grave, organ, mass or burial;80;1;Accordion
+80;P_80_5;12;1;0;0;1;0;0;0;0;1;0;0;0;0;0;0;1;0;0;1;ne;JAR;JAR;ne;JAR;JAR;JAR;JAR;8;;80;5;Piano
+81;P_120_1;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;ne;ne;ne;ne;r_ne;JAR;JAR;ne;3;;120;1;Piano
+81;P_120_5;2;1;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;;120;5;Piano
+81;P_80_1;3;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;t;ne;ne;3;;80;1;Piano
+81;V_80_3;4;1;0;0;0;1;0;1;1;0;0;0;0;1;0;1;0;1;0;0;t;t;ne;JAR;ne;JAR;JAR;ne;6;;80;3;Violon
+81;P_160_5;5;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;ne;ne;JAR;JAR;ne;JAR;6;;160;5;Piano
+81;A_80_1;6;0;1;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;1;0;ne;t;r_ne;ne;r_ne;r_ne;t;r_ne;2;;80;1;Accordion
+81;P_80_3;7;1;0;0;1;0;0;0;0;1;0;0;0;0;1;0;0;0;0;1;ne;ne;ne;ne;JAR;JAR;ne;JAR;3;;80;3;Piano
+81;V_120_1;8;0;0;1;0;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;ne;t;ne;ne;ne;JAR;t;ne;4;;120;1;Violon
+81;V_80_1;9;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;ne;ne;r_ne;r_ne;ne;JAR;t;ne;1;;80;1;Violon
+81;A_160_5;10;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;1;JAR;t;t;t;JAR;JAR;JAR;JAR;7;;160;5;Accordion
+81;V_80_5;11;1;0;0;0;0;1;0;1;0;0;0;1;0;0;1;0;0;0;1;ne;t;t;ne;JAR;JAR;ne;ne;4;;80;5;Violon
+81;A_160_3;12;0;0;0;1;0;0;0;1;0;0;1;0;0;0;1;0;0;1;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;;160;3;Accordion
+82;A_120_5;1;0;0;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;1;0;t;ne;ne;t;ne;ne;JAR;r_ne;3;too cheerful, too acute;120;5;Accordion
+82;P_80_5;2;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;ne;JAR;JAR;JAR;JAR;9;;80;5;Piano
+82;P_160_1;3;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;JAR;JAR;JAR;ne;t;ne;JAR;6;a little too sad;160;1;Piano
+82;P_120_5;4;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;ne;JAR;ne;7;surprising, gives a high-tech idea;120;5;Piano
+82;P_80_3;5;0;0;0;0;0;1;0;0;1;0;0;0;0;1;0;0;0;0;1;ne;ne;ne;ne;JAR;JAR;ne;JAR;4;a little soft;80;3;Piano
+82;A_160_5;6;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;t;t;JAR;t;ne;r_ne;JAR;ne;3;too acute;160;5;Accordion
+82;P_120_1;7;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;ne;ne;JAR;t;JAR;JAR;5;;120;1;Piano
+82;V_120_3;8;0;1;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;JAR;JAR;JAR;ne;JAR;ne;JAR;6;;120;3;Violon
+82;A_80_1;9;0;0;1;0;0;0;0;0;1;0;0;1;0;0;0;0;1;0;0;ne;JAR;ne;ne;ne;t;ne;t;3;not energetic and innovative enough;80;1;Accordion
+82;P_80_1;10;0;0;1;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;ne;JAR;8;;80;1;Piano
+82;A_80_3;11;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;r_t;JAR;JAR;t;ne;ne;JAR;ne;4;not expert enough;80;3;Accordion
+82;A_120_1;12;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;JAR;ne;JAR;JAR;JAR;7;;120;1;Accordion
+83;V_80_3;1;0;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;1;1;0;ne;t;r_ne;r_ne;r_ne;JAR;r_ne;JAR;4;;80;3;Violon
+83;V_160_5;2;0;0;0;0;0;0;0;1;0;1;0;1;0;0;0;0;0;0;0;t;JAR;JAR;JAR;ne;JAR;JAR;JAR;8;close to the whistling of a bird;160;5;Violon
+83;A_160_1;3;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;1;JAR;r_ne;r_ne;r_ne;ne;JAR;ne;JAR;5;;160;1;Accordion
+83;V_120_3;4;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;ne;ne;JAR;JAR;ne;4;;120;3;Violon
+83;P_160_1;5;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;1;0;0;0;r_ne;ne;r_ne;r_ne;r_ne;JAR;r_ne;r_t;2;piano not adapted, too dramatic;160;1;Piano
+83;A_80_3;6;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;JAR;r_ne;r_ne;JAR;JAR;JAR;JAR;3;too slow, not suitable for innovation;80;3;Accordion
+83;V_160_1;7;0;0;0;0;1;0;0;0;0;0;0;1;0;0;1;0;0;0;0;ne;JAR;JAR;JAR;JAR;t;ne;r_t;5;;160;1;Violon
+83;P_80_5;8;1;1;1;0;0;0;1;0;0;1;0;0;0;1;0;0;0;0;1;JAR;JAR;JAR;ne;JAR;JAR;JAR;JAR;9;;80;5;Piano
+83;A_120_1;9;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;ne;ne;r_ne;ne;JAR;JAR;ne;JAR;4;;120;1;Accordion
+83;P_80_3;10;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;ne;ne;r_ne;JAR;JAR;JAR;t;4;;80;3;Piano
+83;P_120_5;11;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;1;0;1;0;JAR;ne;ne;ne;t;JAR;JAR;JAR;5;too slow;120;5;Piano
+83;V_80_1;12;0;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;1;JAR;ne;ne;ne;JAR;JAR;ne;JAR;3;noise too dull and too slow;80;1;Violon
+84;V_160_1;1;0;1;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;JAR;r_ne;JAR;t;ne;t;3;too church;160;1;Violon
+84;V_120_3;2;0;0;0;0;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;JAR;JAR;JAR;ne;JAR;JAR;ne;ne;7;;120;3;Violon
+84;P_160_3;3;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;ne;r_ne;ne;JAR;JAR;ne;JAR;5;;160;3;Piano
+84;P_80_5;4;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;r_ne;r_ne;r_ne;r_ne;JAR;r_t;r_ne;r_t;0;too soft, icy;80;5;Piano
+84;A_120_5;5;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;r_t;t;t;JAR;JAR;JAR;t;ne;5;too carnival;120;5;Accordion
+84;V_80_3;6;0;1;0;0;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;JAR;JAR;ne;ne;JAR;JAR;ne;JAR;6;;80;3;Violon
+84;A_160_3;7;0;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;JAR;t;ne;JAR;JAR;JAR;JAR;ne;6;;160;3;Accordion
+84;A_80_5;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;r_t;t;r_t;t;t;ne;t;ne;4;;80;5;Accordion
+84;V_80_5;9;1;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;r_ne;ne;ne;r_ne;t;JAR;ne;ne;3;;80;5;Violon
+84;P_120_5;10;0;0;1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;9;sober, elegant, modern;120;5;Piano
+84;V_160_5;11;0;1;0;0;0;0;0;1;1;0;0;0;0;0;0;1;0;0;0;t;t;r_t;r_t;ne;ne;t;r_ne;3;;160;5;Violon
+84;P_80_1;12;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;1;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;1;;80;1;Piano
+85;V_160_5;1;0;0;1;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;1;JAR;t;JAR;JAR;ne;JAR;ne;JAR;6;this sound conveys an image of seriousness and efficiency;160;5;Violon
+85;A_120_5;2;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;ne;r_t;r_ne;r_ne;r_ne;t;JAR;t;2;made old, reminiscent of an organ in a church;120;5;Accordion
+85;V_160_1;3;0;0;1;0;0;1;1;0;0;0;0;0;0;1;0;0;0;1;1;JAR;ne;ne;JAR;ne;JAR;ne;JAR;8;serious and demanding fact;160;1;Violon
+85;P_80_3;4;0;1;0;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;0;JAR;ne;ne;r_ne;JAR;t;JAR;JAR;6;a little soft;80;3;Piano
+85;V_80_5;5;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;r_t;r_ne;r_ne;JAR;t;ne;ne;4;too garish, unpleasant;80;5;Violon
+85;V_160_3;6;1;0;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;1;JAR;ne;JAR;JAR;ne;JAR;ne;JAR;8;serious and effective, very classic;160;3;Violon
+85;A_120_3;7;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;ne;t;JAR;JAR;JAR;ne;JAR;ne;1;antiquated;120;3;Accordion
+85;P_120_5;8;1;0;0;1;0;1;0;1;1;0;0;0;0;1;0;1;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;elegant;120;5;Piano
+85;A_160_3;9;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;r_t;t;ne;JAR;JAR;ne;JAR;ne;2;antiquated;160;3;Accordion
+85;P_120_3;10;0;0;0;0;0;0;1;1;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;t;t;ne;JAR;8;serious and elegant, a little soft;120;3;Piano
+85;P_160_1;11;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;9;original, efficient and different;160;1;Piano
+85;V_120_1;12;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;ne;JAR;JAR;JAR;ne;JAR;ne;JAR;8;very classic;120;1;Violon
+86;V_80_3;1;0;0;0;1;0;0;1;0;0;0;1;0;0;1;0;0;0;1;1;JAR;t;ne;JAR;ne;JAR;ne;t;5;;80;3;Violon
+86;A_120_1;2;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;r_ne;ne;r_ne;ne;ne;t;ne;t;3;;120;1;Accordion
+86;P_120_1;3;0;0;1;0;0;1;1;1;0;1;0;0;0;1;1;0;0;0;1;JAR;ne;JAR;JAR;ne;JAR;ne;JAR;7;;120;1;Piano
+86;A_80_1;4;0;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;r_ne;ne;r_ne;ne;ne;t;ne;t;3;;80;1;Accordion
+86;V_160_1;5;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;t;ne;r_t;ne;t;ne;t;2;;160;1;Violon
+86;P_120_3;6;1;0;1;0;0;1;1;0;0;0;1;1;0;1;0;0;0;1;1;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;8;;120;3;Piano
+86;A_160_5;7;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;t;t;JAR;r_t;ne;JAR;ne;t;3;;160;5;Accordion
+86;V_160_3;8;0;0;1;0;0;1;1;0;0;0;0;1;0;1;0;0;0;1;0;JAR;t;JAR;t;ne;JAR;ne;t;4;;160;3;Violon
+86;V_120_5;9;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;t;r_t;t;r_t;r_ne;t;r_ne;t;2;;120;5;Violon
+86;A_120_5;10;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;1;ne;JAR;JAR;JAR;ne;JAR;ne;t;7;;120;5;Accordion
+86;A_80_5;11;0;0;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;1;JAR;t;JAR;JAR;ne;JAR;ne;JAR;8;;80;5;Accordion
+86;A_80_3;12;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;ne;ne;ne;ne;JAR;ne;JAR;4;;80;3;Accordion
+87;A_160_1;1;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;JAR;r_ne;ne;ne;r_ne;t;ne;t;2;too populist;160;1;Accordion
+87;V_160_3;2;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;JAR;JAR;ne;JAR;ne;JAR;JAR;JAR;8;it seems innovative while being serious but a little too acute;160;3;Violon
+87;V_80_1;3;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;r_ne;ne;JAR;t;JAR;t;5;too heavy;80;1;Violon
+87;V_80_5;4;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;ne;t;t;ne;ne;ne;ne;0;too acute, aggressive;80;5;Violon
+87;V_120_3;5;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;JAR;t;ne;JAR;t;JAR;6;does not sufficiently mark the fact that it is one of the largest manufacturers;120;3;Violon
+87;V_120_1;6;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;1;0;ne;r_ne;r_ne;ne;ne;t;t;JAR;3;not innovative;120;1;Violon
+87;A_120_5;7;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;t;JAR;t;t;r_ne;JAR;r_ne;JAR;1;too sharp, aggressive;120;5;Accordion
+87;A_80_3;8;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;JAR;ne;JAR;ne;r_ne;t;t;ne;2;not catchy enough and related to technology;80;3;Accordion
+87;P_80_5;9;1;1;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;JAR;ne;JAR;JAR;JAR;JAR;JAR;JAR;9;sound looking more built, high quality;80;5;Piano
+87;V_120_5;10;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;t;t;t;t;JAR;ne;ne;JAR;3;too acute;120;5;Violon
+87;A_120_3;11;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;1;0;JAR;ne;ne;t;ne;t;t;ne;4;too traditional;120;3;Accordion
+87;A_80_1;12;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;ne;t;r_ne;t;ne;ne;0;Be a rib-sticker;80;1;Accordion
+88;A_160_5;1;0;0;1;1;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;JAR;ne;ne;JAR;r_ne;ne;JAR;ne;7;not surprising enough, the technology dimension appears only slightly ;160;5;Accordion
+88;A_160_1;2;0;0;0;1;0;0;0;0;0;0;1;0;1;0;0;0;1;1;0;t;r_t;ne;r_ne;r_ne;r_ne;ne;r_ne;1;too chauvinistic;160;1;Accordion
+88;P_160_5;3;1;0;1;0;0;1;1;0;0;1;0;0;0;0;0;0;0;0;1;ne;JAR;ne;JAR;JAR;JAR;JAR;JAR;10;the piano translates innovation well with the help of the treble effect;160;5;Piano
+88;P_120_3;4;0;0;0;0;0;0;0;1;1;0;0;1;0;0;0;1;0;0;0;ne;ne;ne;ne;ne;JAR;JAR;JAR;8;tempo too slow;120;3;Piano
+88;P_120_1;5;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;r_ne;r_ne;ne;ne;JAR;JAR;JAR;6;tempo too slow and sound too low to suggest innovation;120;1;Piano
+88;A_120_5;6;1;1;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;ne;ne;JAR;ne;8;;120;5;Accordion
+88;A_120_1;7;0;0;0;1;0;0;0;0;1;0;0;0;0;1;0;0;0;1;0;ne;ne;r_ne;r_ne;r_ne;JAR;ne;ne;2;too serious depressing;120;1;Accordion
+88;V_160_3;8;1;1;0;0;0;1;1;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;9;;160;3;Violon
+88;V_160_5;9;1;1;1;0;0;0;0;1;0;1;0;0;0;1;0;1;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;ne;JAR;8;too acute;160;5;Violon
+88;A_120_3;10;0;0;0;1;0;0;0;0;1;0;0;0;1;0;0;0;1;1;0;ne;ne;r_ne;r_ne;r_ne;r_ne;ne;ne;2;;120;3;Accordion
+88;V_80_3;11;0;0;0;0;0;1;1;1;1;0;0;1;0;1;0;0;0;0;1;ne;JAR;ne;ne;JAR;JAR;ne;JAR;7;;80;3;Violon
+88;P_120_5;12;1;1;0;0;0;1;1;0;0;1;0;0;0;1;0;1;0;0;1;ne;JAR;ne;JAR;JAR;JAR;JAR;JAR;9;;120;5;Piano
+89;P_80_5;1;0;0;1;0;0;1;0;0;0;0;0;1;0;1;1;0;0;1;0;ne;ne;r_ne;r_ne;ne;t;JAR;JAR;6;not dynamic, no innovation but classy and high-end;80;5;Piano
+89;V_160_1;2;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;ne;JAR;r_ne;JAR;ne;ne;JAR;JAR;5;lack of technological aspect;160;1;Violon
+89;A_120_5;3;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;JAR;r_t;r_ne;r_t;r_ne;r_ne;JAR;ne;4;not classy at all or high-end but technology and unpleasant;120;5;Accordion
+89;V_120_1;4;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;0;0;1;0;JAR;JAR;JAR;JAR;ne;JAR;t;JAR;7;clean, class, technological, innovation;120;1;Violon
+89;P_160_5;5;0;0;1;0;0;1;0;1;1;0;0;0;0;0;0;0;1;0;0;ne;JAR;ne;ne;JAR;JAR;ne;JAR;7;classy, high-end, lack of innovation and independent;160;5;Piano
+89;A_120_3;6;0;1;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;0;t;r_t;r_ne;t;r_ne;ne;JAR;ne;4;made too popular, neither classy nor technological;120;3;Accordion
+89;P_160_3;7;0;1;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;ne;ne;ne;JAR;JAR;ne;6;technology well felt but not high-end enough;160;3;Piano
+89;V_80_5;8;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;r_ne;r_t;ne;r_ne;ne;r_t;ne;t;5;too rigid and piercing for innovation and technology;80;5;Violon
+89;A_120_1;9;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;0;JAR;t;ne;t;r_ne;ne;JAR;ne;4;not at all technology/ innovation /class;120;1;Accordion
+89;P_160_1;10;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;JAR;ne;ne;ne;JAR;JAR;JAR;JAR;6;lack of innovation aspect;160;1;Piano
+89;V_80_1;11;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;1;0;0;0;ne;ne;r_ne;r_ne;r_ne;JAR;JAR;ne;4;not dynamic enough;80;1;Violon
+89;P_120_1;12;1;0;1;1;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;ne;ne;ne;JAR;t;ne;ne;6;lacks a bit of technology and innovation;120;1;Piano
+90;A_80_3;1;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;JAR;ne;r_ne;JAR;r_ne;JAR;JAR;ne;4;not serious enough;80;3;Accordion
+90;A_80_1;2;0;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;ne;JAR;JAR;JAR;r_ne;t;ne;JAR;7;quite serious while being classy;80;1;Accordion
+90;A_120_3;3;0;0;0;0;1;0;0;0;0;0;1;1;0;0;0;0;0;0;0;t;JAR;t;t;t;ne;JAR;ne;4;too fast;120;3;Accordion
+90;P_120_1;4;0;1;0;0;0;1;0;0;0;1;0;1;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;corresponds well to the criterion of the mark;120;1;Piano
+90;P_80_1;5;0;1;0;0;0;1;0;0;0;1;0;1;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;t;JAR;JAR;8;good but a little too slow;80;1;Piano
+90;V_160_5;6;0;0;0;0;1;0;0;0;0;1;0;1;0;0;0;0;0;0;0;t;r_t;r_t;r_t;t;ne;t;r_ne;3;far too fast and too acute;160;5;Violon
+90;P_120_3;7;0;0;1;0;0;1;1;0;0;0;0;0;1;0;1;1;0;0;0;JAR;JAR;JAR;JAR;t;t;JAR;JAR;6;a little too sad;120;3;Piano
+90;V_80_3;8;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;1;JAR;JAR;t;t;t;ne;t;JAR;5;too fast;80;3;Violon
+90;V_120_1;9;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;a little too slow but remains in the tone of the brand, expert, classy, high-end;120;1;Violon
+90;A_160_1;10;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;t;JAR;JAR;t;JAR;ne;t;ne;4;too cheerful;160;1;Accordion
+90;P_80_5;11;0;0;0;1;0;0;1;0;1;0;0;0;1;0;0;1;0;1;0;ne;JAR;ne;ne;t;r_t;ne;ne;4;too sad, not suitable;80;5;Piano
+90;A_160_3;12;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;r_t;t;t;r_t;ne;ne;JAR;r_ne;3;too fast;160;3;Accordion
+91;A_120_1;1;0;0;1;0;0;0;0;0;0;0;0;0;1;1;0;0;0;0;0;r_ne;r_t;r_ne;r_ne;r_ne;r_t;r_ne;t;0;sound too heavy and too popular;120;1;Accordion
+91;V_160_1;2;1;0;0;0;0;0;0;1;0;0;0;1;0;1;0;0;0;0;0;ne;JAR;ne;ne;JAR;r_t;r_ne;t;3;too much in the bass but the resonance restores quite well the high-end;160;1;Violon
+91;V_80_5;3;1;0;0;0;1;0;1;0;1;0;0;0;0;0;0;0;0;0;0;r_ne;JAR;r_ne;r_ne;JAR;r_t;ne;JAR;5;high-pitched sound + resonance, a guarantee of quality but too sad;80;5;Violon
+91;V_120_5;4;1;0;0;0;1;0;1;1;1;0;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;JAR;JAR;r_t;r_ne;t;7;fast enough cadence shows dynamism but too little joyful;120;5;Violon
+91;P_80_5;5;0;0;1;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;1;r_ne;JAR;ne;ne;JAR;t;r_ne;JAR;6;too slow;80;5;Piano
+91;P_120_5;6;1;0;0;0;0;1;0;1;1;1;0;1;0;1;0;0;0;0;1;ne;JAR;ne;JAR;JAR;t;ne;JAR;7;piano and resonance show quality;120;5;Piano
+91;A_160_5;7;0;1;0;1;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;JAR;t;JAR;JAR;JAR;t;JAR;JAR;9;aerial and dynamic sound that reflects my quality and innovation;160;5;Accordion
+91;P_120_3;8;0;0;1;0;0;1;0;1;1;1;0;0;0;1;0;0;0;0;0;JAR;JAR;r_ne;ne;JAR;t;ne;t;6;sad but the violins reflect well the high-end;120;3;Piano
+91;P_80_1;9;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;r_ne;t;r_ne;r_ne;ne;r_t;r_ne;t;4;not fast enough;80;1;Piano
+91;V_120_1;10;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;1;0;0;0;ne;t;ne;ne;JAR;t;ne;t;6;noble instrument that reflects the quality well but too slow and too serious;120;1;Violon
+91;A_160_3;11;0;0;1;1;0;0;1;0;0;0;1;0;1;0;0;0;0;1;0;t;t;JAR;JAR;ne;JAR;JAR;ne;6;a little too popular;160;3;Accordion
+91;A_160_1;12;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;t;JAR;JAR;JAR;t;ne;JAR;6;too serious for new technology, you have to play in the treble, the lens;160;1;Accordion
+92;A_80_5;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;JAR;r_ne;JAR;ne;t;2;;80;5;Accordion
+92;V_120_5;2;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;0;JAR;JAR;JAR;JAR;ne;r_ne;JAR;JAR;9;;120;5;Violon
+92;V_80_3;3;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;ne;JAR;ne;ne;ne;JAR;JAR;JAR;6;;80;3;Violon
+92;A_160_1;4;0;0;0;0;0;0;0;0;0;0;1;0;1;1;0;0;0;0;0;t;JAR;ne;JAR;ne;JAR;JAR;JAR;7;;160;1;Accordion
+92;A_120_3;5;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;1;0;t;t;ne;ne;ne;r_ne;r_ne;r_t;4;;120;3;Accordion
+92;P_80_1;6;0;0;0;0;0;1;0;0;1;0;0;0;0;1;0;1;0;0;0;r_ne;r_ne;ne;r_ne;JAR;t;ne;r_t;4;;80;1;Piano
+92;P_80_5;7;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;0;ne;JAR;JAR;JAR;JAR;JAR;ne;JAR;8;;80;5;Piano
+92;P_160_5;8;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;ne;JAR;JAR;10;;160;5;Piano
+92;A_160_5;9;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;t;r_t;ne;t;r_ne;JAR;t;ne;6;;160;5;Accordion
+92;V_160_5;10;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;1;JAR;t;JAR;JAR;JAR;ne;ne;ne;7;;160;5;Violon
+92;V_80_1;11;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;r_ne;t;r_ne;r_ne;JAR;t;ne;t;4;;80;1;Violon
+92;V_160_1;12;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;1;0;0;ne;JAR;ne;ne;JAR;t;JAR;JAR;7;;160;1;Violon
+93;P_120_5;1;1;0;0;0;0;1;0;0;0;1;0;0;0;1;1;0;0;1;0;JAR;JAR;JAR;JAR;ne;t;ne;JAR;7;;120;5;Piano
+93;A_80_3;2;0;0;0;1;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;ne;ne;ne;ne;r_ne;t;ne;ne;3;;80;3;Accordion
+93;A_160_3;3;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;JAR;ne;ne;JAR;ne;t;JAR;ne;3;;160;3;Accordion
+93;P_160_5;4;1;0;0;0;0;1;1;1;0;1;0;0;0;1;1;0;0;1;0;ne;ne;JAR;JAR;JAR;t;ne;JAR;4;;160;5;Piano
+93;V_160_5;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;t;r_t;t;t;ne;ne;ne;ne;0;;160;5;Violon
+93;A_80_1;6;0;0;0;0;0;0;0;0;0;1;0;1;0;1;0;0;1;1;0;ne;JAR;r_ne;r_ne;r_ne;t;ne;JAR;2;;80;1;Accordion
+93;A_120_1;7;0;0;0;1;0;0;1;0;1;0;0;0;1;1;0;0;0;0;0;ne;JAR;ne;ne;r_ne;t;ne;JAR;2;;120;1;Accordion
+93;V_80_1;8;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;1;1;0;JAR;ne;ne;JAR;JAR;JAR;JAR;JAR;5;;80;1;Violon
+93;V_160_3;9;0;1;0;0;1;1;1;0;0;1;0;0;1;1;0;0;0;1;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;ne;6;;160;3;Violon
+93;P_80_5;10;1;0;0;1;0;1;1;1;1;0;0;0;0;1;1;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;80;5;Piano
+93;P_120_3;11;1;0;1;1;0;1;1;1;1;1;0;0;0;1;1;1;0;0;1;JAR;JAR;ne;ne;ne;JAR;JAR;JAR;8;;120;3;Piano
+93;P_160_3;12;1;0;1;0;0;1;1;1;0;1;0;1;1;1;0;0;0;0;1;JAR;ne;JAR;JAR;ne;JAR;JAR;JAR;7;;160;3;Piano
+94;A_120_3;1;1;0;1;0;0;1;1;0;0;1;0;0;0;1;1;0;0;0;1;ne;ne;ne;ne;r_ne;t;JAR;JAR;4;;120;3;Accordion
+94;V_80_5;2;1;1;1;0;1;0;0;1;1;0;1;0;0;1;1;1;0;0;1;ne;JAR;JAR;ne;ne;t;ne;JAR;5;;80;5;Violon
+94;A_120_5;3;1;0;1;0;0;1;1;1;0;1;0;1;0;1;1;1;0;0;1;JAR;ne;ne;JAR;ne;JAR;JAR;JAR;6;;120;5;Accordion
+94;P_120_3;4;1;0;1;0;0;1;1;0;0;1;0;0;1;1;1;0;1;0;0;ne;ne;ne;JAR;ne;t;ne;JAR;4;;120;3;Piano
+94;V_120_3;5;1;1;1;1;0;0;1;1;1;0;1;0;0;0;0;1;0;1;1;ne;ne;JAR;JAR;ne;t;ne;JAR;4;;120;3;Violon
+94;P_80_3;6;0;0;1;0;0;1;1;0;0;0;0;0;0;1;1;0;0;0;1;r_ne;ne;r_ne;r_ne;r_ne;r_t;r_ne;t;2;;80;3;Piano
+94;P_80_1;7;1;0;1;1;0;1;1;0;0;0;0;1;0;1;1;0;0;0;1;r_ne;ne;r_ne;r_ne;r_ne;r_t;r_ne;JAR;3;;80;1;Piano
+94;A_160_5;8;1;1;0;0;1;0;0;1;1;0;1;0;0;1;0;0;1;0;0;JAR;ne;JAR;JAR;ne;JAR;JAR;JAR;7;;160;5;Accordion
+94;V_80_3;9;1;0;1;0;0;1;1;0;0;1;0;0;0;1;1;0;0;0;1;ne;ne;ne;r_ne;r_ne;t;ne;JAR;4;;80;3;Violon
+94;A_80_3;10;0;0;1;0;1;0;0;1;1;0;1;0;1;1;0;0;1;1;0;ne;ne;r_ne;r_ne;ne;t;ne;JAR;4;;80;3;Accordion
+94;P_160_5;11;1;0;0;0;1;0;1;1;1;1;0;0;0;1;1;0;0;0;0;JAR;JAR;ne;JAR;ne;t;ne;JAR;6;;160;5;Piano
+94;P_160_3;12;0;0;1;1;0;1;1;0;0;1;0;0;0;1;1;0;0;0;1;ne;ne;JAR;JAR;ne;JAR;JAR;JAR;7;;160;3;Piano
+95;V_80_5;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;JAR;ne;ne;JAR;ne;t;ne;JAR;4;;80;5;Violon
+95;A_80_5;2;0;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;r_ne;ne;r_ne;r_ne;ne;t;JAR;JAR;3;;80;5;Accordion
+95;V_160_5;3;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;ne;ne;ne;ne;JAR;t;JAR;JAR;5;;160;5;Violon
+95;A_160_5;4;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;JAR;JAR;t;ne;ne;6;;160;5;Accordion
+95;V_80_1;5;0;1;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;r_ne;t;ne;r_ne;JAR;t;JAR;JAR;5;;80;1;Violon
+95;P_80_1;6;0;0;1;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;JAR;ne;JAR;r_ne;JAR;t;JAR;JAR;7;;80;1;Piano
+95;A_80_1;7;0;0;0;0;0;0;1;0;0;0;1;0;1;0;0;0;0;0;0;JAR;ne;ne;ne;JAR;t;r_ne;JAR;5;;80;1;Accordion
+95;P_160_1;8;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;ne;ne;ne;ne;r_ne;t;ne;JAR;6;;160;1;Piano
+95;P_120_3;9;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0;JAR;ne;ne;JAR;JAR;t;ne;JAR;5;;120;3;Piano
+95;A_120_1;10;0;0;0;0;1;0;0;1;0;0;0;0;0;0;0;0;1;0;0;r_ne;ne;ne;r_ne;JAR;t;ne;JAR;3;;120;1;Accordion
+95;A_160_1;11;0;0;0;0;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;ne;r_ne;ne;r_ne;ne;t;ne;t;2;;160;1;Accordion
+95;A_120_5;12;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;ne;JAR;ne;t;ne;JAR;5;;120;5;Accordion
+96;V_120_5;1;0;1;0;1;1;0;0;1;1;0;0;1;1;0;1;0;0;1;1;t;JAR;ne;JAR;ne;JAR;r_ne;JAR;7;;120;5;Violon
+96;V_160_3;2;1;1;1;0;0;1;0;1;0;0;1;0;0;1;0;0;1;1;1;JAR;JAR;r_ne;t;JAR;ne;ne;ne;8;;160;3;Violon
+96;P_160_3;3;0;0;1;0;0;1;1;0;0;1;0;1;0;1;0;0;1;0;1;ne;r_ne;JAR;ne;JAR;JAR;r_ne;JAR;7;;160;3;Piano
+96;P_80_1;4;1;0;1;1;1;0;0;1;1;1;0;1;0;1;0;1;0;1;0;r_ne;JAR;ne;ne;JAR;t;ne;r_t;6;;80;1;Piano
+96;A_120_1;5;0;1;1;0;1;0;0;1;1;0;1;0;1;0;1;0;1;0;0;t;JAR;ne;JAR;ne;JAR;t;r_ne;7;;120;1;Accordion
+96;A_80_5;6;1;0;0;0;1;0;0;0;0;1;0;1;0;0;1;0;0;1;1;r_t;r_t;r_t;r_t;JAR;r_ne;JAR;ne;5;;80;5;Accordion
+96;V_80_3;7;1;0;1;1;0;1;1;0;0;0;0;0;0;1;1;0;1;0;1;ne;ne;JAR;JAR;JAR;JAR;ne;t;7;;80;3;Violon
+96;A_120_3;8;0;1;0;1;1;0;0;1;1;0;1;0;1;0;0;1;1;1;0;t;JAR;ne;JAR;ne;JAR;JAR;ne;7;;120;3;Accordion
+96;P_80_3;9;0;0;1;0;0;1;1;0;0;1;0;0;0;1;1;0;0;0;1;ne;JAR;JAR;ne;ne;r_t;ne;JAR;6;;80;3;Piano
+96;A_80_1;10;0;1;0;0;1;0;0;1;1;0;1;0;1;0;0;0;1;1;0;ne;ne;JAR;JAR;JAR;t;ne;JAR;7;;80;1;Accordion
+96;V_120_1;11;1;0;0;1;0;1;0;1;0;0;0;1;0;0;1;0;1;0;1;ne;JAR;ne;JAR;r_ne;t;ne;JAR;6;;120;1;Violon
+96;P_120_5;12;0;1;1;0;0;0;0;0;0;1;0;0;1;1;0;1;0;0;1;t;t;t;JAR;JAR;JAR;JAR;ne;7;;120;5;Piano
+97;V_120_3;1;0;0;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;1;JAR;JAR;ne;JAR;JAR;JAR;ne;JAR;8;pleasant sound;120;3;Violon
+97;A_80_5;2;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;0;t;t;ne;ne;r_ne;t;ne;r_ne;4;;80;5;Accordion
+97;P_80_3;3;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;JAR;ne;ne;ne;ne;t;ne;ne;4;;80;3;Piano
+97;A_160_3;4;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;ne;JAR;JAR;JAR;JAR;JAR;8;;160;3;Accordion
+97;V_80_5;5;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_ne;r_ne;ne;r_ne;t;ne;r_ne;2;;80;5;Violon
+97;V_160_1;6;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;ne;JAR;ne;JAR;ne;t;ne;ne;6;;160;1;Violon
+97;A_80_1;7;0;1;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;0;1;ne;ne;ne;r_ne;ne;t;ne;ne;5;;80;1;Accordion
+97;V_160_5;8;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_ne;r_ne;r_ne;r_ne;t;ne;r_ne;3;;160;5;Violon
+97;P_160_5;9;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;1;0;0;r_ne;ne;r_ne;r_ne;ne;t;ne;r_ne;3;;160;5;Piano
+97;A_120_1;10;0;1;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;JAR;ne;ne;JAR;JAR;JAR;ne;ne;6;;120;1;Accordion
+97;V_120_5;11;0;0;1;1;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;JAR;ne;ne;ne;ne;t;ne;r_ne;4;;120;5;Violon
+97;P_120_3;12;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;JAR;ne;JAR;JAR;ne;ne;JAR;JAR;7;;120;3;Piano
+98;P_80_5;1;0;0;1;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;ne;JAR;JAR;ne;JAR;t;ne;JAR;4;too slow;80;5;Piano
+98;P_80_3;2;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;t;JAR;JAR;6;too slow;80;3;Piano
+98;A_80_5;3;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;t;JAR;JAR;ne;JAR;ne;JAR;3;too strident and too slow;80;5;Accordion
+98;V_160_3;4;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;JAR;t;JAR;JAR;JAR;JAR;6;;160;3;Violon
+98;V_120_1;5;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;JAR;JAR;JAR;JAR;JAR;JAR;t;6;more German, not technological enough;120;1;Violon
+98;P_120_3;6;0;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;7;Not bad;120;3;Piano
+98;A_80_3;7;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;JAR;t;ne;ne;ne;JAR;ne;ne;2;the accordion is not that ;80;3;Accordion
+98;P_80_1;8;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;ne;ne;JAR;JAR;JAR;JAR;4;too slow;80;1;Piano
+98;V_160_1;9;0;0;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;5;technological side not present enough;160;1;Violon
+98;V_80_1;10;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;0;JAR;JAR;JAR;ne;JAR;t;JAR;t;3;too slow;80;1;Violon
+98;A_120_5;11;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;ne;JAR;4;too metallic;120;5;Accordion
+98;P_160_5;12;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;quite simple but good;160;5;Piano
+99;A_80_1;1;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;1;reflects its expert but not the other values;80;1;Accordion
+99;V_80_3;2;0;1;0;0;1;0;0;1;0;0;0;0;1;0;0;0;0;0;0;JAR;JAR;JAR;ne;ne;JAR;ne;JAR;4;different sound, technology;80;3;Violon
+99;P_120_1;3;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;1;0;ne;JAR;ne;ne;r_ne;t;r_ne;r_t;3;quality article but old-fashioned image, not new technology;120;1;Piano
+99;V_80_1;4;0;0;0;0;0;1;0;0;0;0;0;1;0;1;0;0;1;1;0;r_ne;t;r_ne;r_ne;r_ne;r_t;r_ne;r_t;0;too austere for new technology, not innovative;80;1;Violon
+99;P_160_3;5;0;1;0;0;1;0;1;1;0;0;1;0;1;0;0;0;0;0;0;t;t;JAR;t;r_ne;JAR;JAR;ne;7;dynamic, independence, innovation, not classy enough;160;3;Piano
+99;A_160_1;6;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;JAR;JAR;JAR;JAR;r_ne;JAR;ne;JAR;7;energetic, bass give a classy side, we hear the quality of the sound;160;1;Accordion
+99;V_120_1;7;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;0;1;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;r_ne;r_t;1;too austere;120;1;Violon
+99;V_160_1;8;0;0;1;1;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_ne;r_ne;ne;r_ne;JAR;ne;t;5;its austere but the short length makes the whole dynamic, technology;160;1;Violon
+99;V_160_3;9;1;0;0;0;0;0;1;0;1;0;1;0;1;0;0;0;0;0;0;r_t;JAR;t;JAR;ne;JAR;JAR;JAR;6;dynamic, independent, too sharp, not classy enough;160;3;Violon
+99;V_120_3;10;0;1;1;0;1;1;0;1;0;0;0;0;0;0;0;1;0;0;0;JAR;JAR;ne;ne;r_ne;JAR;ne;t;5;too slow, does not show innovation;120;3;Violon
+99;A_120_1;11;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;1;0;r_ne;r_ne;r_ne;r_ne;r_ne;r_t;ne;t;1;classy but not innovative;120;1;Accordion
+99;V_80_5;12;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;1;t;r_t;ne;t;JAR;ne;ne;ne;0;bad sound, breaks ears, too different;80;5;Violon
+100;A_80_3;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;1;1;0;ne;ne;ne;r_ne;r_ne;t;ne;JAR;3;traditional, not very innovative;80;3;Accordion
+100;P_160_3;2;1;0;1;0;0;0;0;1;0;0;1;0;1;0;1;0;0;0;0;ne;ne;ne;ne;JAR;t;ne;JAR;4;;160;3;Piano
+100;V_160_3;3;0;0;0;0;0;1;0;0;0;1;0;0;0;0;0;0;0;1;0;ne;JAR;ne;ne;ne;JAR;ne;JAR;5;;160;3;Violon
+100;P_120_1;4;0;0;1;1;0;1;0;0;1;0;1;0;0;1;0;0;0;0;1;ne;ne;ne;r_ne;ne;t;ne;JAR;4;;120;1;Piano
+100;P_160_1;5;0;0;1;1;0;1;0;0;1;0;1;0;0;1;0;0;0;0;0;ne;ne;ne;JAR;JAR;t;ne;JAR;4;;160;1;Piano
+100;P_160_5;6;1;0;0;0;1;0;1;0;0;0;0;0;0;1;0;0;0;0;1;ne;JAR;ne;ne;ne;JAR;r_ne;t;4;;160;5;Piano
+100;A_80_5;7;0;1;0;0;0;0;0;0;0;1;0;1;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;JAR;JAR;7;;80;5;Accordion
+100;A_160_3;8;0;0;1;1;0;0;1;0;1;0;0;0;1;0;0;0;1;1;0;ne;JAR;ne;JAR;JAR;t;ne;JAR;5;;160;3;Accordion
+100;P_80_5;9;1;0;0;0;0;1;0;1;0;0;0;0;0;1;1;1;0;0;0;ne;JAR;ne;ne;ne;t;ne;JAR;4;;80;5;Piano
+100;V_80_5;10;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;ne;JAR;ne;JAR;6;;80;5;Violon
+100;V_80_3;11;0;0;1;1;0;1;0;0;0;1;0;0;0;1;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;;80;3;Violon
+100;A_160_5;12;0;1;0;0;1;0;1;1;0;1;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;ne;JAR;ne;JAR;7;;160;5;Accordion
+101;A_160_5;1;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0;0;0;0;0;ne;JAR;JAR;JAR;r_ne;t;r_ne;JAR;3;a little too strident;160;5;Accordion
+101;A_160_3;2;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;1;0;JAR;ne;ne;ne;ne;t;JAR;ne;2;a little soft for innovation;160;3;Accordion
+101;A_80_1;3;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;ne;r_ne;r_ne;ne;t;ne;JAR;3;a little soft;80;1;Accordion
+101;A_120_5;4;0;1;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;t;JAR;JAR;ne;JAR;ne;JAR;6;correct but a bit sharp;120;5;Accordion
+101;P_160_3;5;1;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;1;JAR;JAR;ne;JAR;JAR;t;JAR;JAR;10;pleasant;160;3;Piano
+101;V_80_1;6;0;0;1;0;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;r_ne;ne;ne;r_ne;ne;r_t;JAR;JAR;2;too traditional;80;1;Violon
+101;P_120_5;7;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;1;ne;JAR;JAR;JAR;ne;t;ne;JAR;5;;120;5;Piano
+101;V_120_5;8;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;t;JAR;JAR;r_ne;t;r_ne;JAR;4;a little too strident;120;5;Violon
+101;A_80_3;9;0;1;0;0;1;0;0;0;0;0;1;0;1;0;0;0;0;0;0;t;JAR;ne;ne;ne;JAR;ne;t;5;;80;3;Accordion
+101;P_80_3;10;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;ne;JAR;ne;JAR;JAR;JAR;8;;80;3;Piano
+101;V_160_1;11;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;t;JAR;ne;JAR;ne;JAR;ne;JAR;5;;160;1;Violon
+101;A_120_3;12;1;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1;JAR;JAR;ne;JAR;r_ne;t;ne;ne;5;;120;3;Accordion
+102;A_160_3;1;1;0;0;1;1;0;0;0;0;0;1;0;0;0;0;0;0;0;0;t;JAR;t;JAR;ne;JAR;JAR;ne;3;;160;3;Accordion
+102;V_80_3;2;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;ne;ne;ne;ne;ne;t;JAR;JAR;3;too much impression of traditional, does not reflect innovation;80;3;Violon
+102;P_80_5;3;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;;80;5;Piano
+102;A_120_3;4;0;0;1;0;0;0;1;0;0;0;0;0;1;0;0;0;1;0;0;t;ne;ne;ne;ne;JAR;JAR;JAR;4;accordion;120;3;Accordion
+102;A_160_1;5;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;ne;ne;ne;JAR;ne;t;ne;JAR;3;;160;1;Accordion
+102;P_160_1;6;1;0;0;0;0;1;0;0;1;0;0;0;0;0;1;0;0;0;1;JAR;ne;ne;JAR;JAR;JAR;JAR;t;6;;160;1;Piano
+102;A_120_5;7;1;1;0;0;1;0;0;0;0;1;1;0;1;0;0;0;0;0;0;t;JAR;JAR;JAR;ne;JAR;t;ne;6;not classy enough;120;5;Accordion
+102;A_80_1;8;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;0;r_ne;r_ne;r_ne;r_ne;ne;t;ne;JAR;2;too slow;80;1;Accordion
+102;P_120_1;9;1;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;JAR;ne;ne;JAR;JAR;JAR;JAR;JAR;7;not original enough, not innovative enough;120;1;Piano
+102;A_80_5;10;1;1;0;0;1;0;1;0;0;1;0;0;0;0;0;0;0;0;0;t;JAR;t;ne;JAR;JAR;JAR;ne;7;not traditional enough, reflects innovation well;80;5;Accordion
+102;V_160_1;11;0;0;0;0;0;0;0;0;0;1;0;1;0;0;1;0;0;1;1;JAR;ne;JAR;JAR;JAR;t;JAR;t;6;lack of innovation;160;1;Violon
+102;P_80_3;12;1;0;0;0;0;1;0;1;0;1;0;0;0;1;1;0;0;0;1;JAR;JAR;JAR;r_ne;JAR;JAR;JAR;JAR;6;;80;3;Piano
+103;V_120_1;1;0;0;0;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;r_ne;ne;r_ne;JAR;JAR;ne;4;does not sufficiently reflect an expert sound;120;1;Violon
+103;A_120_3;2;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_ne;r_ne;r_ne;ne;JAR;ne;r_ne;1;too little energy;120;3;Accordion
+103;A_80_3;3;1;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;1;JAR;JAR;r_ne;r_ne;JAR;JAR;JAR;JAR;6;lack of energy;80;3;Accordion
+103;P_120_5;4;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;t;t;ne;JAR;r_ne;ne;r_t;ne;4;too popular;120;5;Piano
+103;A_80_1;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;JAR;ne;ne;JAR;JAR;ne;t;ne;5;lack of seriousness;80;1;Accordion
+103;V_80_5;6;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0;0;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;matches well;80;5;Violon
+103;P_160_1;7;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;ne;r_t;JAR;t;r_ne;JAR;ne;JAR;4;aggressive sound;160;1;Piano
+103;A_160_1;8;0;0;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;0;t;JAR;r_ne;r_ne;r_ne;ne;t;r_ne;3;not very serious;160;1;Accordion
+103;A_80_5;9;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;JAR;JAR;ne;JAR;ne;8;good together, reflects values well;80;5;Accordion
+103;P_160_5;10;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;0;0;ne;r_t;r_ne;r_ne;r_ne;t;ne;JAR;2;aggressive sound;160;5;Piano
+103;V_120_3;11;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0;t;t;ne;t;ne;JAR;JAR;ne;5;lack of professionalism;120;3;Violon
+103;P_120_3;12;1;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;JAR;ne;ne;r_ne;JAR;JAR;JAR;JAR;6;lack of speed, energy;120;3;Piano
+104;A_160_3;1;0;1;0;0;0;0;1;0;0;0;1;0;1;0;0;0;1;1;0;r_t;r_t;r_ne;ne;r_ne;r_t;ne;r_ne;0;accordion does not represent technology at all;160;3;Accordion
+104;P_120_1;2;0;0;1;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1;r_ne;t;r_ne;r_ne;r_ne;t;r_ne;JAR;1;impression of seriousness;120;1;Piano
+104;P_120_3;3;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;r_t;r_t;ne;t;r_ne;r_ne;JAR;ne;2;too acute;120;3;Piano
+104;P_80_3;4;0;0;1;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;r_ne;r_ne;r_ne;r_ne;ne;t;ne;ne;2;too soft;80;3;Piano
+104;A_160_1;5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;t;t;r_ne;ne;r_ne;r_ne;JAR;ne;3;too traditional;160;1;Accordion
+104;P_160_3;6;1;0;0;0;0;0;0;1;0;0;0;0;0;0;0;0;0;0;0;JAR;JAR;JAR;ne;JAR;JAR;JAR;JAR;8;good speed of melody and tonalite;160;3;Piano
+104;V_120_5;7;0;0;1;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;r_t;t;r_ne;ne;r_ne;r_ne;r_ne;r_ne;1;far too acute;120;5;Violon
+104;A_120_1;8;0;1;0;0;1;0;1;0;1;0;1;0;1;0;0;1;1;1;0;t;t;r_ne;ne;r_ne;r_ne;r_t;r_ne;2;not serious enough;120;1;Accordion
+104;P_160_5;9;1;0;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;t;t;JAR;JAR;JAR;JAR;JAR;JAR;6;not too long, pleasant to listen to;160;5;Piano
+104;P_80_1;10;0;0;0;0;0;0;0;0;0;0;0;1;0;1;1;1;0;0;0;r_ne;ne;r_ne;r_ne;r_ne;t;ne;r_t;2;too soft sound;80;1;Piano
+104;A_120_3;11;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;0;1;1;0;r_t;t;JAR;JAR;ne;ne;JAR;ne;4;too high-pitched sound;120;3;Accordion
+104;P_160_1;12;1;1;0;0;0;0;0;0;0;1;0;0;0;1;1;0;0;0;1;ne;ne;r_ne;ne;r_ne;t;ne;JAR;3;too serious;160;1;Piano
+105;V_160_1;1;0;0;1;0;0;0;1;0;1;0;1;0;0;1;0;1;1;1;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;6;not technological enough;160;1;Violon
+105;P_80_1;2;0;0;1;0;0;0;1;0;0;0;0;0;0;1;1;0;0;0;1;ne;r_ne;r_ne;r_ne;ne;r_t;r_ne;r_t;0;too slow and too soft;80;1;Piano
+105;A_160_1;3;0;1;0;0;1;0;1;0;1;0;1;0;1;0;0;0;1;1;0;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;7;;160;1;Accordion
+105;A_80_3;4;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;1;1;0;JAR;JAR;ne;r_ne;ne;JAR;JAR;t;5;too soft;80;3;Accordion
+105;V_160_3;5;1;1;0;0;1;1;1;1;1;1;1;1;0;0;1;1;1;1;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;10;violin made class, technology, family, class;160;3;Violon
+105;V_80_5;6;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;t;ne;r_ne;ne;JAR;JAR;t;5;too slow, technological aspect, but too cold;80;5;Violon
+105;V_160_5;7;1;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;8;too acute;160;5;Violon
+105;P_160_1;8;0;0;1;1;0;0;1;0;1;0;0;1;0;1;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;t;7;;160;1;Piano
+105;P_160_3;9;1;1;0;0;1;0;1;0;0;1;1;0;0;0;0;0;0;0;1;JAR;JAR;JAR;JAR;JAR;JAR;JAR;JAR;9;less pompous, less serious;160;3;Piano
+105;A_80_1;10;0;0;1;0;0;0;0;0;0;0;0;1;0;1;0;0;0;0;1;ne;r_ne;r_ne;r_ne;ne;r_t;ne;r_t;0;;80;1;Accordion
+105;A_160_5;11;1;1;0;0;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;JAR;t;t;JAR;JAR;JAR;JAR;ne;5;;160;5;Accordion
+105;P_80_3;12;1;0;1;1;0;1;1;0;1;1;0;0;0;1;0;0;0;0;1;JAR;ne;ne;ne;JAR;JAR;JAR;JAR;4;too slow;80;3;Piano
