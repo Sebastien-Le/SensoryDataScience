@@ -9,6 +9,9 @@ id: 4
 
 <exercise id="1" title="Act 1 - too easy: the orange juice case study, understanding a market product space">
 
+<slides source="orange">
+</slides>
+
 
 To get a graphical representation of the density for a sensory attribute, we use the `density()` function, and the very important `plot()` function.
 
@@ -38,6 +41,9 @@ Texte de reponse
 
 <exercise id="2" title="Act 2 - easy: the goji case study, an example of product formulation">
 
+<slides source="goji">
+</slides>
+
 Question
 <choice id=5>
 <opt text="Reponse A ">
@@ -62,21 +68,29 @@ Bạn có cảm thấy liên quan đến cuộc tranh luận về GMO (rất nhi
 
 </exercise>
 
-<exercise id="3" title="Act 3 - JAR: the Sennheiser case study, when JAR meet CATA" type="slides">
+<exercise id="3" title="Act 3 - JAR: the Sennheiser case study, when JAR meet CATA">
 
 <slides source="Sennheiser">
 </slides>
 
+<br>
+
+To get a graphical representation of the density for a sensory attribute, we use the `density()` function, and the very important `plot()` function.
+
+<codeblock id="01_28">
+</codeblock>
+
+
 </exercise>
 
-<exercise id="4" title="Act 4 - difficult: the car seat case study, when JAR are free" type="slides">
+<exercise id="4" title="Act 4 - difficult: the car seat case study, when JAR are free">
 
 <slides source="chapter1_01_introduction">
 </slides>
 
 </exercise>
 
-<exercise id="5" title="Act 5 - in practice: everything you always wanted to know about JAR with R" type="slides">
+<exercise id="5" title="Act 5 - in practice: everything you always wanted to know about JAR with R">
 
 <slides source="chapter1_01_introduction">
 </slides>
