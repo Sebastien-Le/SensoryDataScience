@@ -12,9 +12,14 @@ id: 4
 <slides source="orange">
 </slides>
 
-Import the `orange.csv` file in an R object named `orange`. Use the `summary()` function to check the importation. With the `as.factor()` function, encode all the variables except the *Liking* as factors. With the `levels()` and the `nlevels()` functions, make sure that you have 106 consumers.
+Import the `orange.csv` file in an R object named `orange`. Use the `summary()` function to check the importation. 
 
-<codeblock id="01_28">
+<codeblock id="04_01">
+</codeblock>
+
+With the `as.factor()` function, encode all the variables except the *Liking* as factors. With the `levels()` and the `nlevels()` functions, make sure that you have 106 consumers.
+
+<codeblock id="04_02">
 </codeblock>
 
 These *JAR* data are very simple, actually it's the minimum data you should ask to your consumers when collecting JAR data to understand a product space in terms of qualities and defects.
@@ -38,11 +43,27 @@ Have a look at this link: https://en.wikipedia.org/wiki/Dummy_variable_(statisti
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 
-In the following part, we are going to recode the sensory attributes into dummy variables, to indicate the presence or absence of a particular defect. To recode your variables, use the `acm.disjonctif()` function of the `ade4` package.
+In the following part, we are going to recode the sensory attributes into dummy variables, to indicate the presence or absence of a particular defect. But before that, we are going to aggregate the categories `1` and `2` into `ne` for not enough, `4` and `5` into `tm` for too much, and finally recode the category `3` into `JAR`.
+
+<codeblock id="04_03">
+</codeblock>
+
+To recode your variables, use the `acm.disjonctif()` function of the `ade4` package. Create an R object named `orange.dummy`, in which you store the results of the recoding into dummy variables.
+
+<codeblock id="04_04">
+</codeblock>
 
 Build an R object containing the information about the consumers, the products and the dummy variables.
 
-Use the `AovSum()` function to estimate your model, where the liking is explained by the presence or absence of the defects, the consumers and the products.
+<codeblock id="04_05">
+</codeblock>
+
+Use the `AovSum()` function of the `FactoMineR` package to estimate your model for which the liking is explained by the presence or absence of the defects, the consumers and the products.
+
+<codeblock id="04_06">
+</codeblock>
+
+Penalties can also be estimated for each product. Subset the `orange.dummy` to the data for product `2JPR`, and save the data in an object named `orange.dummy.2JPR`.
 
 </exercise>
 
