@@ -35,6 +35,7 @@ This impact can be measured at a product space level, or at a product level. The
 In practice, once the product space is selected, the point of view according to which you want to understand it,  *i.e.* the sensory attributes, has to be chosen as well. The notion of defect induce naturally a model: the hedonic score, the liking, depends on the defects. No need to mention that liking depends also from the products and the consumers: all tastes are in nature. This is what we are going to consider in the following part.
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
 
 ## The *Stat* corner: the concept of dummy variable
 <br>
@@ -42,6 +43,7 @@ In practice, once the product space is selected, the point of view according to 
 Have a look at this link: https://en.wikipedia.org/wiki/Dummy_variable_(statistics). A dummy variable is a variable that takes values of 0 and 1, where the values indicate the presence or absence of something. When a categorical variable has more than two categories, it can be represented by a set of dummy variables, with one variable for each category.
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
 
 In the following part, we are going to recode the sensory attributes into dummy variables, to indicate the presence or absence of a particular defect. But before that, we are going to aggregate the categories `1` and `2` into `ne` for not enough, `4` and `5` into `tm` for too much, and finally recode the category `3` into `JAR`.
 
@@ -64,6 +66,37 @@ Use the `AovSum()` function of the `FactoMineR` package to estimate your model f
 </codeblock>
 
 Penalties can also be estimated for each product. Subset the `orange.dummy` to the data for product `2JPR`, and save the data in an object named `orange.dummy.2JPR`.
+
+<codeblock id="04_07">
+</codeblock>
+
+Use the `AovSum()` function to estimate your model for which the liking is explained by the presence or absence of the defects.
+
+<codeblock id="04_08">
+</codeblock>
+
+Compare graphically the penalties, when calculated at the product space level, on the one hand, at the level of product 2JPR, on the other hand.
+
+<codeblock id="04_08">
+</codeblock>
+
+## The *R* corner: the JAR() fonction of the SensoMineR package
+<br>
+
+The `JAR()` function of the `SensoMineR` package can be used to facilitate what has been done previously. The arguments of the function are the name of JAR data set, the position of the *product* factor, the position of the *panelist* factor, the position of the *liking* variable. The *JAR* data set must contain only these variables.
+
+<codeblock id="04_09">
+</codeblock>
+
+The graphical output is not informative when the levels of the sensory attributes are the same. Consequently, they have to be changed. Use the very important `paste()` function to add the name of the attribute in front of its levels.
+
+<codeblock id="04_10">
+</codeblock>
+
+Run the `JAR()` function to represent the penalties.
+
+<codeblock id="04_11">
+</codeblock>
 
 </exercise>
 
