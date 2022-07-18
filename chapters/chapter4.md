@@ -9,8 +9,6 @@ id: 4
 
 <exercise id="1" title="Act 1 - too easy: the orange juice case study, understanding a market product space">
 
-<slides source="Sennheiser">
-</slides>
 
 To get a graphical representation of the density for a sensory attribute, we use the `density()` function, and the very important `plot()` function.
 
@@ -66,7 +64,7 @@ Bạn có cảm thấy liên quan đến cuộc tranh luận về GMO (rất nhi
 
 <exercise id="3" title="Act 3 - JAR: the Sennheiser case study, when JAR meet CATA" type="slides">
 
-<slides source="chapter1_01_introduction">
+<slides source="Sennheiser">
 </slides>
 
 </exercise>
