@@ -17,7 +17,7 @@ type: slides
     - Pulp (with or without)
     - Refrigerated (yes or no)
 
-- 105 consumers assessed the 8 orange juices
+- 106 consumers assessed the 8 orange juices
     - 1 hedonic score
     - 6 sensory attributes on a JAR scale
       - Nuance of the color

@@ -1,6 +1,7 @@
-library(readxl)
 library(ade4)
 library(FactoMineR)
+
+library(readxl)
 library(ggplot2)
 library(SensoMineR)
 library(stringr)
@@ -12,11 +13,14 @@ library(dplyr)
 #                                                       #
 #########################################################
 
-orange <- read.csv2("orange.csv")
+orange <- read.csv2("data/orange.csv")
 
 summary(orange,maxsum = 8)
 colnames(orange)
-orange <- as.data.frame(orange)
+dim(orange)
+848/8
+levels(orange$Consumer)
+#orange <- as.data.frame(orange)
 for (j in c(1:2,4:9)) orange[,j] <- as.factor(orange[,j])
 summary(orange)
 for (j in 4:9) levels(orange[,j]) <- c("ne","ne","JAR","tm","tm")
