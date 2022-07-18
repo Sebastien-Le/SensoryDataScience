@@ -263,7 +263,7 @@ Don't hesitate to have a look at the help page of the `read.table()` function.
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
 
-Let's have a look at what has been imported in R, the object *experts* which is actually a data frame. To display any R object, write its name in the console. To display part of the *experts* object, select the rows and columns you want to diplay. By definition, a data frame is a table or a two-dimensional array, and you can navigate in this array as you would in any matrix, with indices that you would specify using *square brackets* (not to be confused with the *parentheses* used when using a function).
+Let's have a look at what has been imported in R, the object *experts* which is actually a data frame. To display any R object, write its name in the console. To display part of the *experts* object, select the rows and columns you want to display. By definition, a data frame is a table or a two-dimensional array, and you can navigate in this array as you would in any matrix, with indices that you would specify using *square brackets* (not to be confused with the *parentheses* used when using a function).
 
 <codeblock id="01_03">
 </codeblock>
@@ -377,7 +377,7 @@ When you look at the output of the `summary()` function, *Qu.* stands for quarti
 ## The *R* corner: the *c()* function, building an intermediate data set
 <br>
 
-The values of these location parameters can also be obtained by running the functions `mean()` and `quantile()`. The input of these two functions is a sequence of values from which we want to calculate the mean, and the quantiles. After calculating the location paramters, we can combine them using the very important `c()` function (this function combines values into a vector): in other words we apply a function on outputs provided by some other functions.
+The values of these location parameters can also be obtained by running the functions `mean()` and `quantile()`. The input of these two functions is a sequence of values from which we want to calculate the mean, and the quantiles. After calculating the location parameters, we can combine them using the very important `c()` function (this function combines values into a vector): in other words we apply a function on outputs provided by some other functions.
 
 <codeblock id="01_13">
 </codeblock>
@@ -436,7 +436,7 @@ By definition, a boxplot is a standardized way of displaying a sequence of value
 ## The *R* corner: setting graphical parameters
 <br>
 
-To create a matrix of plots in one ploting space, we use the `par()` function to set some graphical parameters, and the `mfrow` argument to split screen (https://r-graph-gallery.com/71-split-screen-with-par-mfrow.html).
+To create a matrix of plots in one plotting space, we use the `par()` function to set some graphical parameters, and the `mfrow` argument to split screen (https://r-graph-gallery.com/71-split-screen-with-par-mfrow.html).
 
 Let's represent the three first sensory attributes, from columns 5 to 7 using three boxplots in a same graphical output and a loop.
 
@@ -487,7 +487,7 @@ You can combine them if you want the values that lie between 1 and 2.
 <codeblock id="01_23">
 </codeblock>
 
-For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie bteween 1 and 2: it seems that our *product space* composed of perfumes is not spicy at all.
+For the attribute *Spicy*, 176 values are less than or equal to 1, 24 lie between 1 and 2: it seems that our *product space* composed of perfumes is not spicy at all.
 
 
 Let's visualize the *Spicy* attribute by using a two dimensional graph, where the *x-axis* correspond to the values taken by the scores and the *y-axis* to their respective number of occurrences. To represent this so-called *histogram*, we will first use the `hist()` function. The basic input is the sequence of values you want to represent, as for the `boxplot()` function.
@@ -500,7 +500,7 @@ As we have seen previously, we have many values that lie between 0 and 1, and it
 <codeblock id="01_25">
 </codeblock>
 
-If you consider a frequency as the relative number of times something occurs, the default legend on the *y-axis* is somehow misleading. You can change it by setting the `ylab` argument to number of occurences.
+If you consider a frequency as the relative number of times something occurs, the default legend on the *y-axis* is somehow misleading. You can change it by setting the `ylab` argument to number of occurrences.
 
 <codeblock id="01_26">
 </codeblock>
@@ -520,7 +520,7 @@ If you want to have a better understanding of the *y-axis*, please have a look a
 
 Let's now introduce the notion of density. By definition, the density of a continuous random variable, is a function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random variable) can be interpreted as providing a relative likelihood that the value of the random variable would be close to that sample. (*https://en.wikipedia.org/wiki/Probability_density_function*)
 
-To get a graphical representaton of the density for a sensory attribute, we use the `density()` function, and the very important `plot()` function.
+To get a graphical representation of the density for a sensory attribute, we use the `density()` function, and the very important `plot()` function.
 
 <codeblock id="01_28">
 </codeblock>
@@ -589,7 +589,7 @@ In practice, we want to find <img src="https://latex.codecogs.com/svg.image?x_1"
 
 where <img src="https://latex.codecogs.com/svg.image?F_X" style="margin-bottom : -0.25rem"/> is the so-called *cumulative function*, and <img src="https://latex.codecogs.com/svg.image?f_X" style="margin-bottom : -0.25rem"/> the density function of ![formula](https://render.githubusercontent.com/render/math?math=X), a continuous random variable associated with a sensory attribute.
 
-Let's first identify `i_mean` the index (position) of the mean of the *Vanilla* attribute in the vector `d$x`. To do so, we use the `which.max()` function. Then, let's calculate `pcum1` (*resp.* `pcum2`), which is the value of the cumulative function applied on `d$x[i_mean]` minus (*resp.* plus) 0.15. By definition, `x_1` (*resp.* `x2`) is the index of the value in the vector of the values from the cumulative function, such as the cumulative function applied on this value equals `pcum1`. In other words, the value of the cumulative function on `x_1` is equal tothe value of the cumulative function on the mean minus 0.15.
+Let's first identify `i_mean` the index (position) of the mean of the *Vanilla* attribute in the vector `d$x`. To do so, we use the `which.max()` function. Then, let's calculate `pcum1` (*resp.* `pcum2`), which is the value of the cumulative function applied on `d$x[i_mean]` minus (*resp.* plus) 0.15. By definition, `x_1` (*resp.* `x2`) is the index of the value in the vector of the values from the cumulative function, such as the cumulative function applied on this value equals `pcum1`. In other words, the value of the cumulative function on `x_1` is equal to the value of the cumulative function on the mean minus 0.15.
 
 <codeblock id="01_33">
 </codeblock>
@@ -1154,7 +1154,7 @@ Write another model that will allow you to integrate the fact that the panelists
 <codeblock id="01_66">
 </codeblock>
 
-Explore the diffent outputs. What do you think?
+Explore the different outputs. What do you think?
 <codeblock id="01_67">
 </codeblock>
 
