@@ -24,4 +24,5 @@ for (i in 1:dim(orange)[1]){
   }
 }
 
-orange <- cbind(orange,exp.design)
+orange <- cbind(orange, exp.design)
+orange[1:5,]

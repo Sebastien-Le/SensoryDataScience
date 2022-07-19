@@ -1,5 +1,7 @@
-attr <- 5
+library(ggplot2)
+library(stringr)
 
+attr <- 5
 orange_attr <- as.data.frame(orange[,attr])
 tab <- as.data.frame(table(orange_attr))
 colnames(tab) <- c("mod","count")

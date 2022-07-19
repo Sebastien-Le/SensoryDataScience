@@ -36,6 +36,8 @@ Before diving into the penalty analysis, let's visualize the data.
 <codeblock id="04_02_v">
 </codeblock>
 
+The same type of visualization can be obtained by product.
+
 <codeblock id="04_03_v">
 </codeblock>
 
@@ -149,7 +151,7 @@ As mentioned previously, the juices were chosen according to 3 factors: the ques
 <codeblock id="04_16">
 </codeblock>
 
-Once the information added, you wan use it as supplementary variables.
+Once the information added, you can use it as supplementary variables.
 
 </exercise>
 
