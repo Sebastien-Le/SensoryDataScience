@@ -2,7 +2,7 @@
 title: 'Chapter 4: Everything you always wanted to know about JAR - a play in five acts'
 description:
 prev: /chapter3
-next: null
+next: /chapter5
 type: chapter
 id: 4
 ---
@@ -193,6 +193,22 @@ To get a graphical representation of the density for a sensory attribute, we use
 
 <slides source="chapter1_01_introduction">
 </slides>
+
+<codeblock id="tuto_13">
+</codeblock>
+
+<codeblock id="tuto_14">
+</codeblock>
+
+<codeblock id="tuto_15"> 
+</codeblock>
+    
+<codeblock id="tuto_16">
+</codeblock>
+      
+<codeblock id="tuto_17">
+</codeblock>
+
 
 </exercise>
 
