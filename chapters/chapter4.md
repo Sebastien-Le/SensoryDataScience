@@ -170,7 +170,6 @@ Let's first import the data, make sure that what should be categorical is catego
 <codeblock id="04_2_01">
 </codeblock>
 
-
 </exercise>
 
 <exercise id="3" title="Act 3 - JAR: the Sennheiser case study, when JAR meet CATA">
