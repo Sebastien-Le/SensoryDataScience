@@ -1,26 +1,158 @@
-library(ade4)
-library(FactoMineR)
+setwd("C:/Users/aluc/OneDrive - STRATEGIR/Bureau/Conferences Congres/18 - SPISE Vietnam/Workshop/analyse JAR/AL")
+
+######################
 
 library(readxl)
+library(ade4)
+library(FactoMineR)
 library(ggplot2)
 library(SensoMineR)
 library(stringr)
 library(dplyr)
 
 
+######################
+## FONCTION DISTRIBUTION DES MODALITES JAR
+
+distrib_attr <- function(jdd,attr,session=NULL){ #colonne de l'attribut, colonne de la variable session
+  if(!is.null(session)){
+    nb_session <- length(levels(jdd$Session))
+    jdd_attr <- as.data.frame(jdd[,c(attr,session)])
+    tab <- as.data.frame(table(jdd_attr[,1],jdd_attr[,2]))
+    colnames(tab) <- c("mod","session","count")
+    ggplot(tab,aes(x=mod,y=count,fill=session))+
+      geom_bar(stat="identity",position=position_dodge())+
+      theme_minimal()+
+      ggtitle(str_glue("Distribution of modalities for the attribute {colnames(jdd)[attr]}"))+
+      xlab("Modalities")+
+      ylab("Number of occurrences")+
+      scale_fill_manual(values=c("orange","blue"))
+    
+  }
+  else{
+    jdd_attr <- as.data.frame(jdd[,attr])
+    tab <- as.data.frame(table(jdd_attr))
+    colnames(tab) <- c("mod","count")
+    ggplot(tab,aes(x=mod,y=count))+
+      geom_bar(stat="identity",fill="orange")+
+      theme_minimal()+
+      ggtitle(str_glue("Distribution of modalities for the attribute {colnames(jdd)[attr]}"))+
+      xlab("Modalities")+
+      ylab("Number of occurrences")
+  }
+}
+
+######################
+## FONCTION DISTRIBUTION DES MODALITES JAR PAR PRODUIT
+
+install.packages("gridExtra")
+install.packages("cowplot")
+library("gridExtra")
+library("cowplot")
+
+
+distrib_attr_pdt <- function(jdd,attr,pdt,session=NULL){ #colonne de l'attribut, colonne de la variable session
+  if(!is.null(session)){
+    nb_session <- length(levels(jdd$Session))
+    jdd_attr <- as.data.frame(jdd[,c(session,pdt,attr)])
+    tab <- as.data.frame(table(jdd_attr[,1],jdd_attr[,2],jdd_attr[,3]))
+    colnames(tab) <- c("session","pdt","mod","count")    
+    list_graph <- list()
+    a=1
+    for (j in unique(jdd[,pdt])){
+      gg <- ggplot(tab[which(tab$pdt==j),-2],aes(x=mod,y=count,fill=session))+
+        geom_bar(stat="identity",position=position_dodge())+
+        theme_minimal()+
+        ggtitle(str_glue("Distribution of modalities for the attribute {colnames(jdd)[attr]}"))+
+        xlab("Modalities")+
+        ylab("Number of occurrences")+
+        scale_fill_manual(values=c("orange","blue"))+
+        ylim(0,max(tab$count))
+      list_graph[[a]] <- gg
+      a=a+1
+    }
+    if(length(unique(jdd[,pdt]))%%2==0){
+      plot_grid(plotlist = list_graph,labels=levels(jdd[,pdt]),ncol = round(length(unique(jdd[,pdt]))/2,0)+1, nrow=2)
+    }
+    else{
+      plot_grid(plotlist = list_graph,labels=levels(jdd[,pdt]),ncol = round(length(unique(jdd[,pdt]))/2,0), nrow=2)
+    }
+  }
+  else{
+    jdd_attr <- as.data.frame(jdd[,c(pdt,attr)])
+    tab <- as.data.frame(table(jdd_attr[,1],jdd_attr[,2]))
+    colnames(tab) <- c("pdt","mod","count")
+    list_graph <- list()
+    a=1
+    for (j in unique(jdd[,pdt])){
+      gg <- ggplot(tab[which(tab$pdt==j),-1],aes(x=mod,y=count))+
+        geom_bar(stat="identity",fill="orange")+
+        theme_minimal()+
+        ggtitle(str_glue("Distribution of modalities for the attribute {colnames(jdd)[attr]}"))+
+        xlab("Modalities")+
+        ylab("Number of occurrences")+
+        ylim(0,max(tab$count))
+      list_graph[[a]] <- gg
+      a=a+1
+    }
+    if(length(unique(jdd[,pdt]))%%2==0){
+      plot_grid(plotlist = list_graph,labels=levels(jdd[,pdt]),ncol = round(length(unique(jdd[,pdt]))/2,0)+1, nrow=2)
+    }
+    else{
+      plot_grid(plotlist = list_graph,labels=levels(jdd[,pdt]),ncol = round(length(unique(jdd[,pdt]))/2,0), nrow=2)
+    }
+  }
+}
+
+######################
+## DPLYR : TABLEAU MULTIPLE PDT x JUGES
+
+multiple_tab <- function(jdd,judge,product,attr,session=NULL){ #numero de colonne des variables juge et pdt, nb attribut = vecteur des colonnes attr, colonne session
+  if(!is.null(session)){
+    name_session <- levels(jdd[,session])
+    res <- list()
+    b=1
+    for (k in name_session){
+      jdd_session <- jdd[which(jdd[,session]==k),]
+      j = unique(jdd_session[,judge])
+      p = unique (jdd_session[,product])
+      x <- as.data.frame(matrix(0,length(p),length(attr)*length(j)))
+      a=1
+      for (i in j){
+        x[1:length(p),a:(a+length(attr)-1)] <- jdd_session[which(jdd_session[,judge]==i),attr]
+        a=a+length(attr)
+      }
+      colnames(x) <- paste(rep(colnames(jdd_session)[attr],length(j)),rep(j,each=length(attr)))
+      rownames(x) <- unique (jdd_session[,product])
+      res[[b]] <- x
+      b=b+1
+    }
+  }
+  else{
+    j = unique(jdd[,judge])
+    p = unique (jdd[,product])
+    res <- as.data.frame(matrix(0,length(p),length(attr)*length(j)))
+    a=1
+    for (i in j){
+      res[1:length(p),a:(a+length(attr)-1)] <- jdd[which(jdd[,judge]==i),attr]
+      a=a+length(attr)
+    }
+    colnames(res) <- paste(rep(colnames(jdd)[attr],length(j)),rep(j,each=length(attr)))
+    rownames(res) <- unique (jdd[,product])
+  }
+ return(res)
+}
+
 #########################################################
 #               Orange example                          #
 #                                                       #
 #########################################################
 
-orange <- read.csv2("data/orange.csv")
+orange <- read.csv2("orange.csv")
 
 summary(orange,maxsum = 8)
 colnames(orange)
-dim(orange)
-848/8
-levels(orange$Consumer)
-#orange <- as.data.frame(orange)
+orange <- as.data.frame(orange)
 for (j in c(1:2,4:9)) orange[,j] <- as.factor(orange[,j])
 summary(orange)
 for (j in 4:9) levels(orange[,j]) <- c("ne","ne","JAR","tm","tm")
@@ -64,7 +196,7 @@ plot.MCA(res.mca, invisible = c("ind"))
 ?JAR
 summary(orange)
 colnames(orange)
-for (j in 4:9) levels(orange[,j]) <- c(paste(colnames(orange)[j],levels(orange[,j])[1],sep="."),"JAR",paste(colnames(orange)[j],levels(orange[,j])[3],sep="."))
+for (j in 4:9) levels(orange[,j]) <- c(paste(colnames(orange)[j],levels(orange[,j])[1],sep="_"),"JAR",paste(colnames(orange)[j],levels(orange[,j])[3],sep="_"))
 summary(orange)
 
 res.jar.orange <- JAR(orange,col.p = 2, col.j = 1, col.pref = 3, jarlevel = "JAR")
@@ -78,43 +210,22 @@ res.jar.orange$penalty2
 
 plot.JAR(res.jar.orange, name.prod = "1JPA", model = 2)
 
-summary(orange)
+## distribution modalités JAR
 
-res.mca <- MCA(orange, quanti.sup = 3, quali.sup = 1:2, graph = F)
-plot.MCA(res.mca, invisible = c("var","quali.sup"), label = "none", title = "Understanding defects profiles (ind.)")
-plot.MCA(res.mca, invisible = c("ind","var"), label = "none", title = "Understanding defects profiles (sup. var.)")
+distrib_attr(orange,5)
 
+## distribution modalité JAR par produit
 
-res.mca <- MCA(orange[,-1], quanti.sup = 2, quali.sup = 1, graph = F)
-plot.MCA(res.mca, invisible = c("ind","var"), title = "Understanding defects profiles (sup. var.)")
-plot.MCA(res.mca, choix = "quanti.sup", title = "Understanding defects profiles (sup. var.)")
+distrib_attr_pdt(orange,5,2)
 
-orange$Liking.cat <- as.factor(orange$Liking)
-res.mca <- MCA(orange[,-1], quanti.sup = 2, quali.sup = c(1,9), graph = F)
-plot.MCA(res.mca, invisible = c("ind","var"), title = "Understanding defects profiles (sup. var.)")
+## tableau multiple
 
-plot.MCA(res.mca, invisible = "ind", title = "Understanding defects profiles")
-
+tab_mul <- multiple_tab(orange,1,2,c(4:9))
 
 #########################################################
 #                    Goji example                       #
 #                                                       #
 #########################################################
-
-#PrÃ©paration jeu de donnÃ©es
-# goji <- read_excel("Goji/goji.xlsx")
-# summary(goji)     
-# colnames(goji)
-# goji <- as.data.frame(goji)
-# for (j in 1:10) goji[,j] <- as.factor(goji[,j])
-# summary(goji)
-# levels(goji$Light_dark) <- c("JAR","t.light","t.dark","r.t.light","r.t.dark")
-# levels(goji$Intensity) <- c("JAR","n.e.intense","t.intense","r.n.e.intense","r.t.intense")
-# levels(goji$Sweet) <- c("JAR","n.e.sweet","t.sweet","r.n.e.sweet","r.t.sweet")
-# levels(goji$Acidity) <- c("JAR","n.e.acid","t.acid","r.n.e.acid","r.t.acid")
-# levels(goji$Bitterness) <- c("JAR","n.e.bitter","t.bitter","r.n.e.bitter","r.t.bitter")
-# levels(goji$Fluid_thick) <- c("JAR","t.thick","t.fluid","r.t.thick","r.t.fluid")
-#write.csv(goji, file = "goji.csv")
 
 #Analyse du jeu de donnÃ©es
 goji <- read.csv2("goji.csv")
@@ -142,7 +253,17 @@ res.jar.goji <- JAR(goji_jar,col.p = 2, col.j = 1, col.pref = 9, jarlevel = "JAR
 res.jar.goji$Frequency
 res.jar.goji$penalty2
 
+##distribution modalité JAR
 
+distrib_attr(goji,8,2)
+
+## distribution modalité JAR par produit
+
+distrib_attr_pdt(goji,8,4,2)
+
+## tableau multiple
+
+tab_mul <- multiple_tab(goji,1,4,c(5:10),session = 2)
 
 #########################################################
 #                    Sennheiser example                 #
@@ -227,4 +348,53 @@ contingency.JAR <- bind_rows(contingency.JAR, row.sup)
 contingency.sennheiser <- cbind(contingency.CATA, contingency.JAR)
 colnames(contingency.sennheiser)[60:62] <- c("Instrument","Tempo","Pitch")
 contingency.sennheiser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
