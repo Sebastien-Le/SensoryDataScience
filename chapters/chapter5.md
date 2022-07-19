@@ -98,40 +98,54 @@ Run the `JAR()` function to represent the penalties.
 <codeblock id="04_11">
 </codeblock>
 
-Understanding the impact of defects on liking (or some other similar measure) can be done using <span style="font-weight : bold">exploratory multivariate</span> analyses, that are often complementary to inferential analyses.
-
-Actually, considering a tasting sheet as a statistical individual can be really interesting. We are interested in the association profile between defects. We will see that this approach often justifies the taking into account of all the sensory attributes in our previous model: it is precisely because they are linked that we must include all of them in our linear model.
-
-As for all statistical analysis, we must define a point of view according to which we want to understand the statistical individuals. In our case, this point of view is natural and all the sensory attributes should be taken into account to define our multivariate profiles. As data are categorical, a Multiple Correspondence Analysis should be run.
-
-Use the `MCA()` function of the `FactoMineR` package. Pay attention to the notion of <span style="font-weight : bold">supplementary</span> variables (also called <span style="font-weight : bold">illustrative</span>) variables): it is the most important, if not the only, thing you have to think carefully of. Once supplementary variables are chosen, the rest is used to define the point of view, in other words to differentiate the statistical individuals. 
-
-In order not to be overwhelmed by the results, it is important to look at them little by little, hence the `graph` set to `FALSE`: MCA is a graphical method, the results provided by the function are mainly graphical outputs, and therefore you have to think carefully about what you want to see. Like an investigator you have to explore the graphs little by little.
-
-<codeblock id="04_12">
-</codeblock>
-
-The representation of the supplementary variables suggests to get rid of the consumer variable  but to keep the product variable. Use the position of the consumer variable to get rid of it.
-
-<codeblock id="04_13">
-</codeblock>
-
-The representation of the liking variable suggests to recode it as a factor.
-
-<codeblock id="04_14">
-</codeblock>
-
-Use the `select` argument to visualize defects and qualities eventually.
-
-<codeblock id="04_14">
-</codeblock>
-
 </exercise>
 
 <exercise id="2" title="Act 2 - easy: the goji case study, an example of product formulation">
 
 <slides source="goji">
 </slides>
+
+Question
+<choice id=5>
+<opt text="Reponse A ">
+C'est faux mais ecrit en texte
+</opt>
+<opt text="Reponse B" correct="true">
+Texte de reponse
+</opt>
+<opt text="Reponse C">
+</opt>
+<opt text="Reponse D">
+</opt>
+<opt text="Reponse E">
+</opt>
+<opt text="Reponse F">
+</opt>
+</choice>
+
+Note : choix multiples pas implémentés
+
+Bạn có cảm thấy liên quan đến cuộc tranh luận về GMO (rất nhiều, ở một mức độ nhất định, một chút, không hề)?
+
+
+
+Question
+<choice id=5>
+<opt text="Reponse A ">
+C'est faux mais ecrit en texte
+</opt>
+<opt text="Reponse B" correct="true">
+Texte de reponse
+</opt>
+<opt text="Reponse C">
+</opt>
+<opt text="Reponse D">
+</opt>
+<opt text="Reponse E">
+</opt>
+<opt text="Reponse F">
+</opt>
+</choice>
 
 
 </exercise>
