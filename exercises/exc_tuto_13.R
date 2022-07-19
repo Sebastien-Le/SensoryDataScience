@@ -1,0 +1,5 @@
+library(tm)
+library(NLP)
+library(stringr)
+library(R.temis)
+library(dplyr)
