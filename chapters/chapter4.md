@@ -12,6 +12,9 @@ id: 4
 <slides source="orange">
 </slides>
 
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
+
 Import the `orange.csv` file in an R object named `orange`. Use the `summary()` function to check the importation. 
 
 <codeblock id="04_01">
@@ -27,6 +30,14 @@ These *JAR* data are very simple, actually it's the minimum data you should ask 
 But what does it mean to understand a product space in terms of qualities and defects? It means that you want to measure the impact of an attribute on the liking, when the attribute is not present enough, or on the contrary, when the attribute is too present.
 
 This impact can be measured at a product space level, or at a product level. The methodology for measuring and analyzing this kind of impact is called a <span style="font-weight : bold">penalty analysis</span> (just like in football when an offence is committed by a player in their own penalty area).
+
+Before diving into the penalty analysis, let's visualize the data.
+
+<codeblock id="04_02_v">
+</codeblock>
+
+<codeblock id="04_03_v">
+</codeblock>
 
 
 ## The *Sensory* corner: JAR scales and penalties
@@ -98,6 +109,9 @@ Run the `JAR()` function to represent the penalties.
 <codeblock id="04_11">
 </codeblock>
 
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
+
 Understanding the impact of defects on liking (or some other similar measure) can be done using <span style="font-weight : bold">exploratory multivariate</span> analyses, that are often complementary to inferential analyses.
 
 Actually, considering a tasting sheet as a statistical individual can be really interesting. We are interested in the association profile between defects. We will see that this approach often justifies the taking into account of all the sensory attributes in our previous model: it is precisely because they are linked that we must include all of them in our linear model.
@@ -121,10 +135,21 @@ The representation of the liking variable suggests to recode it as a factor.
 <codeblock id="04_14">
 </codeblock>
 
-Use the `select` argument to visualize defects and qualities eventually.
+Use the `selectMod` argument to visualize defects and qualities eventually.
 
-<codeblock id="04_14">
+<codeblock id="04_15">
 </codeblock>
+
+
+## The *R* corner: the str_split() function of the stringr package
+<br>
+
+As mentioned previously, the juices were chosen according to 3 factors: the question arises as to whether the structure revealed by the analysis can be linked to these factors.  Therefore, it makes sense to add this information in the orange data. To do so, we are going to manipulate strings.
+
+<codeblock id="04_16">
+</codeblock>
+
+Once the information added, you wan use it as supplementary variables.
 
 </exercise>
 
@@ -132,6 +157,18 @@ Use the `select` argument to visualize defects and qualities eventually.
 
 <slides source="goji">
 </slides>
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
+
+Why is this case study different from the previous one? First, the context is different, we are dealing with formulated products according to some experimental design. Then, consumers have evaluated the products twice (which is really rare, but can happen).
+
+Basically, we are going to use the same strategy as for the orange data, but with a particular focus on the experimental factors, and on the comparison between the two sessions.
+
+Let's first import the data, make sure that what should be categorical is categorical. Then, before diving into the penalty analysis, let's visualize the data.
+
+<codeblock id="04_2_01">
+</codeblock>
 
 
 </exercise>
