@@ -167,10 +167,40 @@ Why is this case study different from the previous one? First, the context is di
 
 Basically, we are going to use the same strategy as for the orange data, but with a particular focus on the experimental factors, and on the comparison between the two sessions.
 
-Let's first import the data, make sure that what should be categorical is categorical. Then, before diving into the penalty analysis, let's visualize the data.
+Let's first import the data, and make sure that what should be categorical is categorical.
 
 <codeblock id="04_2_01">
 </codeblock>
+
+As data are not considered as categorical, recode them with the `as.factor()` function and a simple loop.
+
+<codeblock id="04_2_02">
+</codeblock>
+
+Then, before diving into the penalty analysis, let's visualize the data.
+
+<codeblock id="04_2_03">
+</codeblock>
+
+Since consumers have tested the products twice, many analyses can be performed to answer many sensory questions:
+
+- Penalties can be estimated for both sessions of course. They can be estimated for each session, and compared to each other. 
+
+- From a multivariate point of view, profiles of defects can be studied all sessions combined, but they can also be compared to each other with special methods such as Multiple Factor Analysis. 
+
+- If the product is the main object of interest, it is also possible to build a contingency table with products as rows, defects as columns, at the intersection of one row and one column, the number of times a given defect has been identified for a given row.
+
+Let's first look at the penalties across sessions, and see, for example, if the defects have a different impact on liking and typicity. To do so, use the `JAR()` function of the `SensoMineR` package. Remember that the input of this function is the smallest possible JAR data set consisting of the consumer variable, the product variable, the liking (or assimilated) variable, and finally the sensory attributes evaluated on a JAR scale. In other words, apply the `JAR()` function twice, with first the liking variable, then the typicity variable. Save the penalties and compare them.
+
+<codeblock id="04_2_04">
+</codeblock>
+
+Now that the penalties for the liking and for the typicity are estimated, let's compare them to each other graphically.
+
+<codeblock id="04_2_05">
+</codeblock>
+
+The same type of analysis can be done per session.
 
 </exercise>
 
@@ -191,7 +221,7 @@ To get a graphical representation of the density for a sensory attribute, we use
 
 <exercise id="4" title="Act 4 - difficult: the car seat case study, when JAR are free">
 
-<slides source="chapter1_01_introduction">
+<slides source="tissu">
 </slides>
 
 <codeblock id="tuto_13">
@@ -213,8 +243,5 @@ To get a graphical representation of the density for a sensory attribute, we use
 </exercise>
 
 <exercise id="5" title="Act 5 - in practice: everything you always wanted to know about JAR with R">
-
-<slides source="chapter1_01_introduction">
-</slides>
 
 </exercise>
