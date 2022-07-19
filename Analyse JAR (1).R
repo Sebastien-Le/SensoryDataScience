@@ -9,6 +9,8 @@ library(ggplot2)
 library(SensoMineR)
 library(stringr)
 library(dplyr)
+library(gridExtra)
+library(cowplot)
 
 
 ######################
@@ -148,7 +150,7 @@ multiple_tab <- function(jdd,judge,product,attr,session=NULL){ #numero de colonn
 #                                                       #
 #########################################################
 
-orange <- read.csv2("data/orange.csv")
+orange <- read.csv2("orange.csv")
 
 summary(orange,maxsum = 8)
 colnames(orange)
@@ -192,6 +194,50 @@ orange$Liking <- as.factor(orange$Liking)
 res.mca <- MCA(orange[,-c(1:2)], quali.sup = 1, graph = F)
 plot.MCA(res.mca, invisible = c("ind"))
 
+### Facteurs expérimentaux en 3 colonnes
+
+fact_ex <- data.frame(matrix(ncol = 3, nrow = dim(orange)[1]))
+colnames(fact_ex) <- c("Brand", "Pulpe", "Temperature")
+
+for (i in 1:dim(orange)[1]){
+  pdt <- orange$Juice[i]
+  pdt_split <- str_split(pdt,"")[[1]]
+  if(pdt_split[2]=="J"){
+    fact_ex[i,1] <- "Jafaden"
+  }
+  else{
+    fact_ex[i,1] <- "Tropicana"
+  }
+  if(pdt_split[3]=="P"){
+    fact_ex[i,2] <- "With pulpe"
+  }
+  else{
+    fact_ex[i,2] <- "Without pulpe"
+  }
+  if(pdt_split[4]=="A"){
+    fact_ex[i,3] <- "Ambient"
+  }
+  else{
+    fact_ex[i,3] <- "Refrigerated"
+  }
+}
+
+orange_fact <- cbind(orange,fact_ex)
+summary(orange_fact)
+for (j in c(3,9:12)) orange_fact[,j] <- as.factor(orange_fact[,j])
+
+res.mca <- MCA(orange_fact[,-c(1:2)], quali.sup = c(1,8:10))
+
+## Récupération des modalité correspondant aux chaines de caractère que l'on souhaite représenter dans l'ACM
+
+mod <- "JAR"
+all_attr <- rownames(res.mca$var$coord)
+
+mod_select <- all_attr[which(str_detect(all_attr,mod))]
+
+res.mca <- MCA(orange[,-c(1:2)], quali.sup = 1, graph = F)
+plot.MCA(res.mca, invisible = c("ind"), selectMod = mod_select)
+
 #SensoMineR
 ?JAR
 summary(orange)
@@ -210,13 +256,48 @@ res.jar.orange$penalty2
 
 plot.JAR(res.jar.orange, name.prod = "1JPA", model = 2)
 
-## distribution modalit?s JAR
+## distribution modalités JAR
 
-distrib_attr(orange,4)
+attr = 5
 
-## distribution modalit? JAR par produit
+orange_attr <- as.data.frame(orange[,attr])
+tab <- as.data.frame(table(orange_attr))
+colnames(tab) <- c("mod","count")
+ggplot(tab,aes(x=mod,y=count))+
+  geom_bar(stat="identity",fill="orange")+
+  theme_minimal()+
+  ggtitle(str_glue("Distribution of modalities for the attribute {colnames(orange)[attr]}"))+
+  xlab("Modalities")+
+  ylab("Number of occurrences")
 
-distrib_attr_pdt(orange,6,2)
+## distribution modalité JAR par produit
+
+attr = 5
+pdt = 2
+
+orange_attr <- as.data.frame(orange[,c(pdt,attr)])
+tab <- as.data.frame(table(orange_attr[,1],orange_attr[,2]))
+colnames(tab) <- c("pdt","mod","count")
+list_graph <- list()
+a=1
+
+for (j in unique(orange[,pdt])){
+  gg <- ggplot(tab[which(tab$pdt==j),-1],aes(x=mod,y=count))+
+    geom_bar(stat="identity",fill="orange")+
+    theme_minimal()+
+    ggtitle(str_glue("Distribution of attribute {colnames(orange)[attr]} for product {j}"))+
+    xlab("Modalities")+
+    ylab("Number of occurrences")+
+    ylim(0,max(tab$count))
+  list_graph[[a]] <- gg
+  a=a+1
+}
+
+if(length(unique(orange[,pdt]))%%2==0){
+  plot_grid(plotlist = list_graph,ncol = round(length(unique(orange[,pdt]))/2,0), nrow=2)
+} else{
+  plot_grid(plotlist = list_graph,labels=levels(orange[,pdt]),ncol = round(length(unique(orange[,pdt]))/2,0)+1, nrow=2)
+}
 
 ## tableau multiple
 
@@ -253,11 +334,11 @@ res.jar.goji <- JAR(goji_jar,col.p = 2, col.j = 1, col.pref = 9, jarlevel = "JAR
 res.jar.goji$Frequency
 res.jar.goji$penalty2
 
-##distribution modalit? JAR
+##distribution modalité JAR
 
 distrib_attr(goji,8,2)
 
-## distribution modalit? JAR par produit
+## distribution modalité JAR par produit
 
 distrib_attr_pdt(goji,8,4,2)
 
