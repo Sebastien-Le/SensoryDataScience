@@ -184,7 +184,7 @@ Then, before diving into the penalty analysis, let's visualize the data.
 
 Since consumers have tested the products twice, many analyses can be performed to answer many sensory questions:
 
-- Penalties can be estimated for both sessions of course. They can be estimated for each session, and compared to each other. 
+- Penalties can be estimated for both sessions of course. They can also be estimated for each session, and compared to each other. 
 
 - From a multivariate point of view, profiles of defects can be studied all sessions combined, but they can also be compared to each other with special methods such as Multiple Factor Analysis. 
 
@@ -201,6 +201,12 @@ Now that the penalties for the liking and for the typicity are estimated, let's 
 </codeblock>
 
 The same type of analysis can be done per session.
+
+Let's have a look at the profiles of defects. The idea is to represent the profiles all sessions combined, and to see if the structure induced by the profiles can be explained by supplementary information such as the experimental factors used to formulate the products.
+
+<codeblock id="04_2_06">
+</codeblock>
+
 
 </exercise>
 

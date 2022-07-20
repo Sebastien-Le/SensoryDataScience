@@ -1,0 +1,571 @@
+ID_juge;Product;Hedo_cat;Text;Liking
+19;A;I don't like;not thick enough;2
+19;B;I don't like;quite well;4
+19;C;I like moderately;right weft;5
+19;D;I like moderately;thick enough;6
+19;E;I like moderately;classy but a little too dirty;6
+19;F;I don't like;not thick enough;2
+19;G;I like moderately;good thick enough;6
+19;H;I like moderately;good but too light;5
+19;I;I don't like;it is good;5
+19;J;I like very much;very classy;9
+20;A;I like moderately;good for the leather ;6
+20;B;I don't like;feeling of dead skin;3
+20;C;I like moderately;not bad but a little dry to the touch;7
+20;D;I don't like;seems to be close to the baize;2
+20;E;I don't like;I don't like the velvet feeling;3
+20;F;I like very much;good tactile deeling and very pleasant stiffness;10
+20;G;I don't like;too soft and spongy;1
+20;H;I like moderately;quite soft but less pleasant feeling of skin;6
+20;I;I like moderately;quite comfortable but a little too dry;7
+20;J;I like very much;quite soft but a little plastic feeling;9
+21;A;I like moderately;fine fabrics and small meshes;7
+21;B;I like very much;fabric thickness and touch;9
+21;C;I don't like;cheap feeling;3
+21;D;I like moderately;is damaged by friction;6
+21;E;I like very much;velvety appearance: aesthetic and qualitative;10
+21;F;I like moderately;brighter than the A fabric;6
+21;G;I don't like;weird to the touch;4
+21;H;I don't like;oily texture;4
+21;I;I don't like;ras;5
+21;J;I like moderately;quality leather;8
+23;A;I like moderately;it is not sophisticated enough;6
+23;B;I like moderately;it is a little too rude;6
+23;C;I don't like;it is too thin;5
+23;D;I don't like;it is too hairy;3
+23;E;I like very much;it is really pleasant to the touch;10
+23;F;I like very much;it is simple and really well finished;10
+23;G;I like moderately;it is too soft;6
+23;H;I like very much;it is really pleasant and modern;10
+23;I;I don't like;it is not refined enough;4
+23;J;I like very much;classy enough;9
+26;A;I like moderately;I don't know;6
+26;B;I don't like;not flexible enough;5
+26;C;I don't like;not cozy enough;5
+26;D;I don't like;itchy fabric;5
+26;E;I like very much;soft mellow comfortable;9
+26;F;I like very much;soft;8
+26;G;I don't like;rough;5
+26;H;I like moderately;soft to the touch;7
+26;I;I don't like;rough fabric;5
+26;J;I like very much;soft mellow comfortable;10
+27;A;I like moderately;I like this product a little because it remains discreet without beeing too unpleasant to the touch;5
+27;B;I don't like;I don't like this product because it is thick;3
+27;C;I like moderately;I like this product a little because it is properly thickened;5
+27;D;I don't like;I don't like this product because it is too similar to carpet;2
+27;E;I don't like;I don't like this product because I don't visualize this kind of material in a car, even if it's nice to the touch;3
+27;F;I like moderately;I like this product a little because it remains soft and pleasant to the touch, without being too thick;6
+27;G;I don't like;too coarse;1
+27;H;I like moderately;I like this product a little because it is smooth ;5
+27;I;I don't like;I don't like this product because it is not comfortable;1
+27;J;I like very much;remains smooth and quite chic;7
+28;A;I don't like;not thick enough;4
+28;B;I don't like;not qualitative enough;3
+28;C;I like moderately;not soft enough;6
+28;D;I don't like;too much fibre;3
+28;E;I like very much;just right pleasant to the touch;9
+28;F;I like moderately;just right smooth;7
+28;G;I don't like;too soft;4
+28;H;I like moderately;just right smooth;7
+28;I;I don't like;too industrial;3
+28;J;I like very much;just right qualitative;9
+29;A;I like moderately;simple to the touch and correct design;6
+29;B;I don't like;I don't like its simple and ordinary design. The fabric is weird to the touch;2
+29;C;I don't like;ugly design;1
+29;D;I don't like;it looks like baize and I'm afraid it's getting damaged too fast;2
+29;E;I like very much;super soft to the touch. I like this type of fabric that gives the impression of being shiny when you run your finger over it;9
+29;F;I like moderately;nice to the touch and simple fabric design;6
+29;G;I don't like;I don't like the material at all;1
+29;H;I don't like;rigid fabric;1
+29;I;I don't like;It looks like elastic and I don't like to the touch;2
+29;J;I like moderately;looks more like leather even if it's not. Soft and pleasant to the touch;7
+30;A;I don't like;too thin;3
+30;B;I like moderately;just right thick;5
+30;C;I like moderately;soft to the touch;5
+30;D;I don't like;too much dustpan;3
+30;E;I like moderately;very soft to the touch;6
+30;F;I like moderately;a little thin;5
+30;G;I don't like;too synthetic viscose;4
+30;H;I like moderately;too many wrinkles marks;5
+30;I;I like very much;sophisticated;6
+30;J;I like very much;elegant leather imitation;8
+31;A;I don't like;rough;2
+31;B;I like moderately;rather thick but a little hard;4
+31;C;I don't like;a little too thin;3
+31;D;I don't like;must quickly get damaged and fluffy;1
+31;E;I like very much;very soft and thick enough;9
+31;F;I like moderately;quite soft but thin;4
+31;G;I like very much;very soft to see over time if it holds or if it subsides;10
+31;H;I like moderately;interesting material but a stocky effect ;4
+31;I;I like moderately;quite thick and must hold well over time;6
+31;J;I like very much;leather effect to see on the temperature changes according to the seasons;8
+32;A;I don't like;not pleasant to the touch;2
+32;B;I like moderately;thicker and pleasant to the touch;7
+32;C;I like moderately;pleasant;7
+32;D;I don't like;not pleasant and;3
+32;E;I like moderately;sofa style;7
+32;F;I like moderately;slips and don't like the look;5
+32;G;I don't like;foam can easily crash;2
+32;H;I don't like;hard does not slip;2
+32;I;I don't like;pleasant but slippery;7
+32;J;I like moderately;don't like the look;5
+33;A;I like moderately;sportswear;6
+33;B;I don't like;ras;1
+33;C;I don't like;too rough;3
+33;D;I don't like;unpleasant;0
+33;E;I don't like;unpleasant;0
+33;F;I don't like;unpleasant;0
+33;G;I don't like;headaches;0
+33;H;I don't like;dizziness;0
+33;I;I like very much;sportswear;5
+33;J;I like very much;smooth;6
+34;A;I like moderately;just right structured weft;6
+34;B;I like very much;really pleasant to the touch;8
+34;C;I like moderately;just right balanced and soft weft;6
+34;D;I like moderately;just right soft fabric;5
+34;E;I like very much;really soft fabrics;8
+34;F;I like moderately;just right weft and thin fabric;6
+34;G;I don't like;too soft;3
+34;H;I don't like;too sticky;0
+34;I;I don't like;too synthetic;3
+34;J;I like moderately;just right coated fabric;6
+35;A;I like moderately;I like this fabric a little, although it's a little too thin.;6
+35;B;I don't like;I don't like this product because it's a little too thick. ;6
+35;C;I like very much;I really like this product because it is really pleasant to the touch with its little hushed aspect;9
+35;D;I don't like;I don't like this product because for me it will catch too much dust;4
+35;E;I don't like;I don't like this product because I find it too soft for a car interior ;5
+35;F;I like moderately;I like this fabric a little because it's just right in terms of weaving;7
+35;G;I like very much;I really like this product because it is really soft;9
+35;H;I like very much;I really like this product because it has a slightly leathery aspect;9
+35;I;I like moderately;I like this fabric a little because it is just at the level of thickness and I like its weaving;8
+35;J;I like very much;I really like this product because it is really elegant;10
+36;A;I like very much;just right to the touch, quite discreet and adapted weft;7
+36;B;I like moderately;a little dense fabric but may be suitable;4
+36;C;I like very much;very pleasant, I really like the diagonal weft;7
+36;D;I don't like;felt for furniture too elaborate;2
+36;E;I don't like;velvet fabric for overly classy clothing;3
+36;F;I like moderately;just right in the weft and thickness;6
+36;G;I don't like;fabric too foamy for insulation;1
+36;H;I like very much;I really like the material;8
+36;I;I don't like;I don't like much fibre for textiles;3
+36;J;I don't like;I don't like imitation leather fabric, unpleasant to the touch;1
+37;A;I don't like;not soft enough;4
+37;B;I don't like;too much rough;2
+37;C;I like moderately;pleasant;6
+37;D;I like very much;good soft touch;9
+37;E;I like very much;resistant and soft;8
+37;F;I like moderately;pleasant;7
+37;G;I like very much;pleasant to the touch soft resistant;10
+37;H;I don't like;it hooks;3
+37;I;I don't like;it hooks;3
+37;J;I like moderately;a little stiff;5
+38;A;I like very much;it really like it because it is effective;10
+38;B;I don't like;not enough;6
+38;C;I like moderately;there is a lack of practicality;8
+38;D;I don't like;it is too bitter;6
+38;E;I like very much;it is good;8
+38;F;I like very much;it is really good;10
+38;G;I don't like;not enough;4
+38;H;I don't like;not enough;5
+38;I;I like very much;it is good;9
+38;J;I like moderately;it is just right mentholated;7
+39;A;I like moderately;relatively smooth fabric;6
+39;B;I don't like;not enough;0
+39;C;I like moderately;i like it a little although it seems a little fluffy;5
+39;D;I don't like;not pretty enough;0
+39;E;I don't like;just right;5
+39;F;I like very much;the fabric appears to be of good quality;8
+39;G;I don't like;not enough;1
+39;H;I like moderately;i like it a little because it seems resistant;4
+39;I;I don't like;not enough;1
+39;J;I like very much;the fabric seems resistant and probably not very dirty;10
+40;A;I like moderately;just right;2
+40;B;I don't like;i don't like it too smooth;1
+40;C;I like moderately;very soft;3
+40;D;I like moderately;very pretty;4
+40;E;I like very much;just right;9
+40;F;I like moderately;very bad;4
+40;G;I like very much;just right;10
+40;H;I don't like;not enough;1
+40;I;I like moderately;not comfortable;3
+40;J;I like very much;just right;10
+41;A;I like moderately;pleasant touch, therefore difficult to maintain with three children;3
+41;B;I don't like;too thick rough and will catch all the dirt;1
+41;C;I like very much;pleasant warm pretty and seems resistant;7
+41;D;I don't like;same too many possibilities to catch all the dirt;0
+41;E;I like moderately;pleasant touch, warm feeling but probably fragile;5
+41;F;I like moderately;soft, tight weave it seems solid and comfortable;6
+41;G;I don't like;unpleasant feel, cheep feeling;0
+41;H;I like moderately;soft pleasant tight weave seems easy to maintain;6
+41;I;I like moderately;soft to the touch seems easy to maintain but not very pretty;5
+41;J;I like very much;it makes you dream and gives the impression of being in a luxury car a little dream;9
+42;A;I like moderately;soft to the touch;6
+42;B;I don't like;too stiff;3
+42;C;I like moderately;shine;7
+42;D;I like moderately;nice texture;7
+42;E;I don't like;dull;4
+42;F;I like moderately;soft to the touch;6
+42;G;I don't like;not easy to the touch;3
+42;H;I like moderately;easy to the touch;6
+42;I;I don't like;not pretty to see;2
+42;J;I like very much;nice leather side pattern;9
+43;A;I don't like;too rough;2
+43;B;I don't like;not smooth enough;2
+43;C;I like moderately;not thick enough;4
+43;D;I don't like;too dustpan;2
+43;E;I like very much;just right to the touch;8
+43;F;I like moderately;not soft enough;5
+43;G;I don't like;not rigid enough;2
+43;H;I like moderately;too sticky;4
+43;I;I don't like;not smooth enough;2
+43;J;I like very much;just right in comfort;9
+44;A;I like very much;looks like natural as a cotton blend;6
+44;B;I like moderately;rather comfortable but too striated not pleasant to the skin touch;5
+44;C;I like very much;pleasant in skin contact rather comfortable;7
+44;D;I don't like;the fabric looks like a teddy;5
+44;E;I like very much;soft velvet aspect;7
+44;F;I like moderately;not soft enough;5
+44;G;I like very much;soft fleece comfortable;8
+44;H;I don't like;it is dry;6
+44;I;I like moderately;too much streak in the fabric;5
+44;J;I don't like;too smooth looks like fake leather it sticks on the skin;4
+45;A;I like moderately;soft to the touch;4
+45;B;I like moderately;comfortable;5
+45;C;I like moderately;pleasant touch;3
+45;D;I like moderately;must be pleasant in winter less in summer;3
+45;E;I like very much;very plesant feeling to the touch;6
+45;F;I like moderately;comfortable but a little too rough to the touch;3
+45;G;I don't like;too acrylic not pleasant to the touch;0
+45;H;I like very much;this fabric has a tight weft and must be resistant to wear;7
+45;I;I like very much;same as for fabric H witha softer feel;8
+45;J;I like very much;the comfort of a solid fabric with a pleasant leather feel the only point that could be negative would be the scratch resistance or other;8
+46;A;I like moderately;fine cotton fabric;6
+46;B;I don't like;relief fabric;3
+46;C;I like moderately;patterns fabric RAS;6
+46;D;I don't like;wooly fabric;2
+46;E;I don't like;velvet fabric;2
+46;F;I like very much;soft thin RAS fabric;8
+46;G;I don't like;soft fabric;3
+46;H;I like moderately;cotton canvas fabric;6
+46;I;I don't like;patterns fabric RAS;3
+46;J;I like moderately;imitation leather fabric;6
+47;A;I don't like;I don't like this material;0
+47;B;I don't like;I don't really like this velvet material which will not be suitable for long journeys;2
+47;C;I like moderately;I like a little because in low-end it could be suitable;5
+47;D;I don't like;I don't like the feeling of this material, and moreover it's fluffy;1
+47;E;I like very much;the feeling to the touch is very pleasant;8
+47;F;I like moderately;I like a little without further explanation;4
+47;G;I don't like;at the second touch I appreciate a little more this fleece material;6
+47;H;I like very much;a peach skin sensation to the touch quite pleasant;7
+47;I;I don't like;I don't like this material because it seems rough to me;0
+47;J;I like moderately;I like a little this material because it seems practical for the vehicle's interior and is quite elastic so will give a certain comfort;7
+48;A;I don't like;few material and without relief;1
+48;B;I don't like;too thick;1
+48;C;I don't like;bland;1
+48;D;I don't like;rough;1
+48;E;I like very much;soft;10
+48;F;I don't like;without expression;1
+48;G;I don't like;too much foam;2
+48;H;I like moderately;dustpan;2
+48;I;I don't like;ugly;1
+48;J;I like very much;refined;10
+49;A;I don't like;cheap;2
+49;B;I don't like;thick;6
+49;C;I like moderately;touch;5
+49;D;I don't like;carpet;3
+49;E;I don't like;old cushion;2
+49;F;I like moderately;texture;5
+49;G;I don't like;poor quality;2
+49;H;I don't like;thin;3
+49;I;I don't like;old;3
+49;J;I like moderately;elegance;3
+50;A;I like moderately;I like it a bit because it is simple and efficient;6
+50;B;I don't like;I don't like this product because it is too dense;2
+50;C;I like moderately;simple and effective;6
+50;D;I don't like;I don't like the touch simply;2
+50;E;I like moderately;I like it a bit because it is soft;6
+50;F;I like very much;I like it a lot because it is aesthetic and effective on many points;9
+50;G;I like moderately;I like it a bit because it is rather thick but not too anyway;6
+50;H;I like moderately;grabs well the hand;6
+50;I;I don't like;I don't like it because it is too rough;2
+50;J;I like very much;I like it a lot because if I had to choose a new car it is likely that I would take a fabric of the same type;10
+51;A;I like moderately;it is pleasant to the touch but a little too thin;6
+51;B;I don't like;the fabric is too rough;0
+51;C;I like moderately;it is pleasant to the touch but a little too classic;7
+51;D;I don't like;I feel like it's a carpet;0
+51;E;I don't like;it is soft in one way but rough in the other;2
+51;F;I like moderately;it is pleasant but a classic;7
+51;G;I don't like;it looks fragile;2
+51;H;I don't like;it is not pleasant to the touch;1
+51;I;I like moderately;it is a material i appreciate but it looks like an elastic;8
+51;J;I like very much;i find that this material corresponds completely to a car, the car is very pleasant;10
+52;A;I don't like;too rough;4
+52;B;I don't like;too thick;4
+52;C;I don't like;rather thin;5
+52;D;I don't like;too woolly;3
+52;E;I like very much;Alcantara style i love it;8
+52;F;I like moderately;pleasant to the touch;5
+52;G;I don't like;too soft;3
+52;H;I don't like;sticky texture;3
+52;I;I don't like;good;5
+52;J;I like moderately;leather style I like it;6
+53;A;I like moderately;correct quality;5
+53;B;I don't like;too coarse;3
+53;C;I like moderately;suit me;6
+53;D;I don't like;unpleasant contact;1
+53;E;I don't like;I don't like it;5
+53;F;I like very much;I like it;9
+53;G;I like moderately;soft and pleasant;7
+53;H;I don't like;too plastic touch;2
+53;I;I don't like;too rigid for my taste;2
+53;J;I like very much;interesting leather imitation, of good quality;9
+54;A;I don't like;too rough;3
+54;B;I like moderately;thickness... Maybe not bad;5
+54;C;I like moderately;this unified side sober;6
+54;D;I like very much;sweetness sweetness;6
+54;E;I like very much;comfort;6
+54;F;I like very much;dark and maybe solid;6
+54;G;I like very much;the one I like the best, must easily detach itself;8
+54;H;I don't like;must take all the dust;3
+54;I;I like moderately;nice;6
+54;J;I don't like;maybe i was wrong, it must be solid;6
+55;A;I don't like;unpleasant contact fabric weft;3
+55;B;I don't like;too hard to the touch;2
+55;C;I don't like;feeling of touch not soft;4
+55;D;I like moderately;carpet sensation feel;5
+55;E;I like very much;softer fabric weft;8
+55;F;I like moderately;too smooth;5
+55;G;I like very much;soft touch enveloping;9
+55;H;I don't like;carpet impression touch;5
+55;I;I like moderately;furnishing fabric feeling;5
+55;J;I don't like;plastic refractory;3
+56;A;I like very much;seems solid and easy to clean;10
+56;B;I like very much;pleasant to the touch, looks comfortable, thick, and easy to clean;10
+56;C;I like moderately;seems solid. Dry to the touch;10
+56;D;I don't like;too catchy;0
+56;E;I like very much;very pleasant to the touch. ideal for cuddling in traffic jams;10
+56;F;I like moderately;dry to the touch but seems fragile;7
+56;G;I don't like;too soft;8
+56;H;I don't like;fatty feel;0
+56;I;I like moderately;seems solid but a little soft;7
+56;J;I don't like;coarse imitation and unpleasant touch;2
+57;A;I like moderately;just right;5
+57;B;I like very much;just right;8
+57;C;I like very much;just right;8
+57;D;I like moderately;too soft;5
+57;E;I like moderately;too velvet;6
+57;F;I like moderately;too cheap;5
+57;G;I like moderately;too cheap;5
+57;H;I don't like;not enough;2
+57;I;I don't like;not soft enough;2
+57;J;I don't like;too plastic;2
+59;A;I like moderately;I like a little the discreet patterns of the fabric;6
+59;B;I don't like;I don't like the texture;3
+59;C;I like moderately;I like a little the patterns of the fabric;6
+59;D;I don't like;I don't like the touch feeling;4
+59;E;I like very much;I like a lot the fact that the fabric is soft and pleasant to the touch;9
+59;F;I like moderately;I like a little the texture of the touch;7
+59;G;I don't like;I don't like the fabric texture;4
+59;H;I like moderately;I like a little the texture;7
+59;I;I don't like;I don't like the fabric patterns and its texture;3
+59;J;I like very much;I like a lot the patterns and the fabric texture;9
+60;A;I like moderately;correct;5
+60;B;I like very much;pleasant touch;7
+60;C;I like moderately;correct;5
+60;D;I don't like;fluffy;0
+60;E;I like moderately;rather pleasant touch;6
+60;F;I like moderately;correct weft and correct touch;6
+60;G;I don't like;too synthetic touch;3
+60;H;I don't like;sticky;3
+60;I;I like moderately;a little rough;5
+60;J;I don't like;leather aspect;2
+61;A;I like very much;correct touch and solidity feeling;8
+61;B;I like moderately;not smooth enough unpleasant to the touch;4
+61;C;I like very much;comfortable to the touch, feeling of resistance;9
+61;D;I don't like;unpleasant to the touch and too rough;1
+61;E;I like moderately;too fluffy;4
+61;F;I like very much;combination of softness sensation and holding;9
+61;G;I don't like;too flexible;2
+61;H;I like moderately;not soft enough;5
+61;I;I don't like;too rough;3
+61;J;I like moderately;just right to the touch;5
+62;A;I don't like;too cheap;3
+62;B;I like moderately;pleasant but not suitable;5
+62;C;I like moderately;soft enough fabric;6
+62;D;I don't like;felt makes dust;1
+62;E;I don't like;velvet;1
+62;F;I don't like;cheap fabric catchy;4
+62;G;I don't like;foam;1
+62;H;I like very much;changes from the classic leather;8
+62;I;I don't like;unpleasant;3
+62;J;I like moderately;leather, basic;7
+63;A;I don't like;too thin;3
+63;B;I don't like;too thick;3
+63;C;I like very much;well;8
+63;D;I don't like;too hot;3
+63;E;I don't like;too old-fashioned;2
+63;F;I don't like;too dry;2
+63;G;I don't like;too thick;5
+63;H;I don't like;too thin;3
+63;I;I don't like;too steep;3
+63;J;I don't like;too synthetic;0
+64;A;I don't like;because it is too simple;4
+64;B;I like moderately;original;7
+64;C;I like moderately;rather good;6
+64;D;I don't like;original;7
+64;E;I like very much;I really like this textures;9
+64;F;I don't like;too simple;4
+64;G;I don't like;I don't like it;3
+64;H;I don't like;too simple;2
+64;I;I don't like;elastic;2
+64;J;I like very much;very pleasant;9
+65;A;I don't like;rough fabric;3
+65;B;I don't like;soft and rough, seems elastic;3
+65;C;I don't like;seems to be weaved, pleasant to the eyes, a little less to the touch;4
+65;D;I don't like;the fabric is roughly soft and seems comfortable. Looks like a sponge;5
+65;E;I like very much;very soft and comfortable;9
+65;F;I don't like;too simple, not really soft;2
+65;G;I like moderately;padded, comfortable and soft;8
+65;H;I don't like;rough and uncomfortable;2
+65;I;I like moderately;soft and seems elastic;6
+65;J;I like moderately;elegant and soft leather;7
+66;A;I don't like;I don't like this fabric because the quality of the fabric makes me uncomfortable;3
+66;B;I like very much;I really like this fabric because it is the one that is most pleasant to the touch;9
+66;C;I like moderately;I like this product a little because although it seems fluffy to me, the material is pleasant to the touch.;6
+66;D;I don't like;I don't like this product because it's fluffy;3
+66;E;I like moderately;I like this fabric a little because although losing its color to the touch, it seems to me to offer a comfort ;6
+66;F;I don't like;I don't like the fabric seems to me to be of poor quality;3
+66;G;I don't like;I don't like the fabric because the material creaks under my fingers.;3
+66;H;I don't like;I don't like this fabric because it's not pleasant to touch.;3
+66;I;I like moderately;I like this fabric a little because although not very luxurious to the eyes its texture is pleasant.;7
+66;J;I like moderately;I like this fabric a little because although it is simple it is very pleasant to touch.;7
+69;A;I like moderately;fabric that looks tough;5
+69;B;I don't like;product that seems to keep warm not very pleasant to the touch;4
+69;C;I like moderately;pleasant and soft;7
+69;D;I don't like;texture which seems cheap;1
+69;E;I like moderately;soft product but that i don't see that much in a car;5
+69;F;I like very much;pleasant to the touch, and good quality;8
+69;G;I don't like;I don't like the foam underneath;2
+69;H;I like moderately;product that seems to have a good durability over time;6
+69;I;I don't like;doesn't seem pleasant on a seat;3
+69;J;I like very much;better touch than the others;9
+70;A;I don't like;it quickly deteriorates;4
+70;B;I don't like;cheap;4
+70;C;I don't like;quickly deteriorated;4
+70;D;I don't like;cheap;4
+70;E;I like very much;elegant;9
+70;F;I don't like;cheap;4
+70;G;I don't like;cheap;4
+70;H;I don't like;cheap;4
+70;I;I like moderately;clean and beautiful;8
+70;J;I like very much;practical and elegant;10
+72;A;I don't like;too thin;3
+72;B;I like moderately;it seems quite flexible;9
+72;C;I like moderately;it seems resistant;8
+72;D;I like moderately;it is soft but looks fragile;6
+72;E;I like very much;it is very soft;10
+72;F;I don't like;too thin;3
+72;G;I like very much;it is soft;10
+72;H;I don't like;it seems to deteriorate more than the others;4
+72;I;I like moderately;it seems strong and easy to clean;7
+72;J;I don't like;too synthetic for my taste;1
+73;A;I like moderately;basic;5
+73;B;I don't like;too hard;3
+73;C;I like moderately;too basic;5
+73;D;I don't like;too carpet;2
+73;E;I like very much;pleasant to the touch;9
+73;F;I like moderately;too smooth;6
+73;G;I like very much;nice;8
+73;H;I don't like;too catchy;2
+73;I;I like moderately;simple;5
+73;J;I don't like;too catchy;1
+74;A;I like moderately;simple;5
+74;B;I like very much;pretty weave soft;8
+74;C;I like moderately;pleasant;6
+74;D;I don't like;too much foam;2
+74;E;I like moderately;soft but dirty;5
+74;F;I like moderately;nothing special;4
+74;G;I like very much;soft checker pretty;8
+74;H;I don't like;rough;3
+74;I;I like moderately;soft and pretty fabric;6
+74;J;I like moderately;classy leather style;7
+75;A;I don't like;it is too thin and the pattern is not pretty;2
+75;B;I don't like;it is too thick and the pattern is not pretty;0
+75;C;I don't like;the crossings of the yarns that make up the pattern are too thick;3
+75;D;I don't like;I don't like the felt look;0
+75;E;I like very much;I love the darkness of the fabric, the pattern is invisible and the fabric is soft and silky;10
+75;F;I don't like;the fabric is too thin and gives the elastic aspect;3
+75;G;I don't like;the fabric is too thick and the pattern is not beautiful at all;0
+75;H;I like moderately;the material is soft but the pattern is not pretty;6
+75;I;I don't like;the pattern looks like an elastic band ;0
+75;J;I like moderately;the pattern is pretty and the fabric soft;7
+76;A;I don't like;I don't like this fabric because it's rough, even if the aesthetic is fine;3
+76;B;I like moderately;I like this fabric and find it quite original, but it may seem difficult to maintain;6
+76;C;I like very much;I like the quality, the aesthetics and the feel of the fabric very much;9
+76;D;I don't like;I don't like this fabric because in addition of being rough, it doesn't seem suitable because difficult to maintain;2
+76;E;I like moderately;I like the aesthetic and the feel of this fabric, but it may catch a lot dust;7
+76;F;I like moderately;I like this fabric in general;7
+76;G;I don't like;I don't like this fabric very much because it is not very aesthetic;3
+76;H;I like very much;I really like this fabric even though it seems a little fragile to me;9
+76;I;I don't like;I like this fabric a little even if i don't find anything extraordinary about it;5
+76;J;I like moderately;I like this fabric but it may not be master key enough;7
+77;A;I like very much;beautiful fabric, seems resistant ;7
+77;B;I don't like;coarse fabric, does not give an impression of quality in a passenger compartment;2
+77;C;I like moderately;nice good quality but maybe a little coarse;5
+77;D;I don't like;nice fabric but would quickly be damaged in a car, would wear out too quickly with friction for example;3
+77;E;I don't like;the touch of the velvet makes traces on the fabric, it would not be pretty on the whole interior;4
+77;F;I like moderately;pretty but too thin, I would be afraid it would tear or wear out quickly ;5
+77;G;I don't like;coarse fabric, easy to tear, would quickly be damaged ;1
+77;H;I don't like;seems too thin to me, so too fragile. I'd be afraid he'd tear himself apart. ;4
+77;I;I like very much;seems to me to be the most resistant for the passenger compartment, should last over time and resist friction, children, etc.;9
+77;J;I like moderately;nice sample but I prefer fabric in a car, not too much leather;6
+78;A;I don't like;too thin not soft;1
+78;B;I like moderately;resistant but not very premium, a little basic;5
+78;C;I like moderately;refined, very smooth but a little thin;6
+78;D;I like very much;cosy comfortable and soft;7
+78;E;I like very much;comfortable soft et above all very premium;9
+78;F;I like moderately;doesn't looks like fabric, is very synthetic but sober;6
+78;G;I don't like;poor quality too soft is easily damaged;2
+78;H;I like moderately;too basic but sober simple;5
+78;I;I don't like;not comfortable too hard but resistant;4
+78;J;I don't like;looks like fake leather doubtful quality but may be pretty;4
+81;A;I like moderately;I like it a little even if it is too simple;4
+81;B;I like moderately;because it is just well woven;5
+81;C;I like very much;because it is really very chic;9
+81;D;I like moderately;even if it's a little old-fashioned;3
+81;E;I like very much;because it is really very elegant;9
+81;F;I like moderately;because it is well enough woven;5
+81;G;I don't like;it is too soft;2
+81;H;I like very much;because it is really very modern;8
+81;I;I don't like;it is too scratched;3
+81;J;I don't like;it is too kitsch;3
+82;A;I like moderately;sober and smooth but not original not for a car;4
+82;B;I like moderately;not bad but too thick;3
+82;C;I like very much;would fit well in a car even if not smooth enough;6
+82;D;I don't like;too fluffy not smooth enough;0
+82;E;I don't like;pretty but not suitable for a car interior, will take too much dust;0
+82;F;I like moderately;smooth but a little too fluffy;5
+82;G;I don't like;doesn't match a car passenger compartment, seems too much like a fabric for seat or clothing;2
+82;H;I like very much;pretty appearance quite smooth linen style can be very elegant;8
+82;I;I don't like;looks cheap doesn't fit with a passenger compartment;0
+82;J;I like very much;ideal fits very well with a car interior;10
+84;A;I like moderately;I like a little because the fabric looks qualitative but thin;4
+84;B;I don't like;I don't like because you can see the linesof the fabric;2
+84;C;I like very much;I really like the quality of the fabric;8
+84;D;I don't like;I don't like because the fabric loses its hair;1
+84;E;I don't like;I don't like the velvet material;2
+84;F;I like very much;I really like the quality of the fabric;8
+84;G;I don't like;I don't like because it doesn't looks qualitative at all;1
+84;H;I don't like;I don't like the quality of the fabric;1
+84;I;I don't like;I don't like the overly synthetic side of this fabric;1
+84;J;I like moderately;I like the leather effect a little but it is not imitated well enough;4
+85;A;I like very much;I like very much because simple and efficient and qualitative aspect;8
+85;B;I like moderately;I like a little although it looks too much like clothing cotton;4
+85;C;I like very much;I like very much the same as A but a little less resistant in appearance ;7
+85;D;I don't like;too synthetic;0
+85;E;I like moderately;I like to the touch although it is not suitable for the inside of a car;4
+85;F;I like very much;I like it but the look is more synthetic and less qualitative ;6
+85;G;I don't like;it is not resistant enough;0
+85;H;I like moderately;I like it no matter what he doesn't make a quality impression. ;3
+85;I;I don't like;it has a too plastic effect;1
+85;J;I like moderately;I like a little because resistant but not very aesthetic;3
