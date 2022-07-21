@@ -1,0 +1,571 @@
+Judge;Product;Comment;Hedo_cat;RF_accuracy;valency_score
+19;A;not thick enough;1;0,7;-0,906
+19;B;quite well;1;0,7;-0,054
+19;C;right weft;2;0,7;-0,216
+19;D;thick enough;2;0,7;-0,906
+19;E;classy but a little too dirty;2;0,7;0,09
+19;F;not thick enough;1;0,7;-0,906
+19;G;good thick enough;2;0,7;-0,04
+19;H;good but too light;2;0,7;0,116
+19;I;it is good;1;0,7;0,05
+19;J;very classy;3;0,7;0,27
+20;A;good for the leather ;2;0,8;0,268
+20;B;feeling of dead skin;1;0,8;-0,754
+20;C;not bad but a little dry to the touch;2;0,8;-0,028
+20;D;seems to be close to the baize;1;0,8;-0,742
+20;E;i don t like the velvet feeling;1;0,8;-0,974
+20;F;good tactile deeling and very pleasant stiffness;3;0,8;0,556
+20;G;too soft and spongy;1;0,8;-0,114
+20;H;quite soft but less pleasant feeling of skin;2;0,8;0,118
+20;I;quite comfortable but a little too dry;2;0,8;0,132
+20;J;quite soft but a little plastic feeling;3;0,8;0,296
+21;A;fine fabrics and small meshes;2;0,8;-0,282
+21;B;fabric thickness and touch;3;0,8;0,048
+21;C;cheap feeling;1;0,8;-0,838
+21;D;is damaged by friction;2;0,8;-0,484
+21;E;velvety appearance aesthetic and qualitative;3;0,8;0,432
+21;F;brighter than the a fabric;2;0,8;-0,522
+21;G;weird to the touch;1;0,8;-0,52
+21;H;oily texture;1;0,8;-0,794
+21;I;ras;1;0,8;-0,948
+21;J;quality leather;2;0,8;-0,172
+23;A;it is not sophisticated enough;2;0,9;-0,114
+23;B;it is a little too rude;2;0,9;-0,036
+23;C;it is too thin;1;0,9;-0,998
+23;D;it is too hairy;1;0,9;-0,998
+23;E;it is really pleasant to the touch;3;0,9;0,718
+23;F;it is simple and really well finished;3;0,9;0,768
+23;G;it is too soft;2;0,9;-0,042
+23;H;it is really pleasant and modern;3;0,9;0,77
+23;I;it is not refined enough;1;0,9;-0,46
+23;J;classy enough;3;0,9;0,18
+26;A;i don t know;2;0,8;-0,61
+26;B;not flexible enough;1;0,8;-0,928
+26;C;not cozy enough;1;0,8;-0,946
+26;D;itchy fabric;1;0,8;-0,886
+26;E;soft mellow comfortable;3;0,8;0,592
+26;F;soft;3;0,8;0,004
+26;G;rough;1;0,8;-1
+26;H;soft to the touch;2;0,8;0,038
+26;I;rough fabric;1;0,8;-0,978
+26;J;soft mellow comfortable;3;0,8;0,592
+27;A;i like this product a little because it remains discreet without beeing too unpleasant to the touch;2;1;-0,118
+27;B;i don t like this product because it is thick;1;1;-0,994
+27;C;i like this product a little because it is properly thickened;2;1;-0,014
+27;D;i don t like this product because it is too similar to carpet;1;1;-0,998
+27;E;i don t like this product because i don t visualize this kind of material in a car  evenif it s nice to the touch;1;1;-0,834
+27;F;i like this product a little because it remains soft and pleasant to the touch  without being too thick;2;1;0,054
+27;G;too coarse;1;1;-0,998
+27;H;i like this product a little because it is smooth ;2;1;-0,024
+27;I;i don t like this product because it is not comfortable;1;1;-0,758
+27;J;remains smooth and quite chic;3;1;0,378
+28;A;not thick enough;1;0,8;-0,898
+28;B;not qualitative enough;1;0,8;-0,518
+28;C;not soft enough;2;0,8;-0,088
+28;D;toomuch fibre;1;0,8;-0,988
+28;E;justright pleasant to the touch;3;0,8;0,374
+28;F;justright smooth;2;0,8;0,24
+28;G;too soft;1;0,8;-0,056
+28;H;justright smooth;2;0,8;0,24
+28;I;too industrial;1;0,8;-0,998
+28;J;justright qualitative;3;0,8;0,444
+29;A;simple to the touch and correct design;2;1;-0,054
+29;B;i don t like its simple and ordinary design  the fabric is weird to the touch;1;1;-0,806
+29;C;ugly design;1;1;-0,97
+29;D;it looks like baize and i m afraid it s getting damaged too fast;1;1;-0,656
+29;E;super soft to the touch  i like this type of fabric that gives the impression of being shiny when you run your finger over it;3;1;0,49
+29;F;nice to the touch and simple fabric design;2;1;-0,058
+29;G;i don t like the material at all;1;1;-0,994
+29;H;rigid fabric;1;1;-0,914
+29;I;it looks like elastic and i don t like to the touch;1;1;-0,906
+29;J;looks more like leather evenif it s not  soft and pleasant to the touch;2;1;0,11
+30;A;too thin;1;1;-0,996
+30;B;justright thick;2;1;0,254
+30;C;soft to the touch;2;1;0,048
+30;D;toomuch dustpan;1;1;-0,872
+30;E;very soft to the touch;2;1;0,048
+30;F;a little thin;2;1;-0,18
+30;G;too synthetic viscose;1;1;-1
+30;H;too many wrinkles marks;2;1;-0,396
+30;I;sophisticated;3;1;0,034
+30;J;elegant leather imitation;3;1;0,662
+31;A;rough;1;0,7;-1
+31;B;rather thick but a little hard;2;0,7;-0,126
+31;C;a little too thin;1;0,7;-0,148
+31;D;must quickly get damaged and fluffy;1;0,7;-0,824
+31;E;very soft and thick enough;3;0,7;-0,058
+31;F;quite soft but thin;2;0,7;-0,058
+31;G;very soft to see over time if it holds or if it subsides;3;0,7;0,36
+31;H;interesting material but a stocky effect ;2;0,7;-0,31
+31;I;quite thick and must hold well over time;2;0,7;0,002
+31;J;leather effect to see on the temperature changes according to the seasons;3;0,7;0,52
+32;A;not pleasant to the touch;1;0,5;0,07
+32;B;thicker and pleasant to the touch;2;0,5;0,082
+32;C;pleasant;2;0,5;-0,05
+32;D;not pleasant and;1;0,5;-0,05
+32;E;sofa style;2;0,5;-0,192
+32;F;slips and don t like the look;2;0,5;-0,57
+32;G;foam can easily crash;1;0,5;-0,94
+32;H;hard does not slip;1;0,5;-0,988
+32;I;pleasant but slippery;1;0,5;-0,158
+32;J;don t like the look;2;0,5;-0,73
+33;A;sportswear;2;0,8;0,054
+33;B;ras;1;0,8;-0,944
+33;C;too rough;1;0,8;-1
+33;D;unpleasant;1;0,8;-1
+33;E;unpleasant;1;0,8;-1
+33;F;unpleasant;1;0,8;-1
+33;G;headaches;1;0,8;-1
+33;H;dizziness;1;0,8;-1
+33;I;sportswear;3;0,8;0,054
+33;J;smooth;3;0,8;-0,334
+34;A;justright structured weft;2;0,9;0,228
+34;B;really pleasant to the touch;3;0,9;0,684
+34;C;justright balanced and soft weft;2;0,9;0,148
+34;D;justright soft fabric;2;0,9;0,146
+34;E;really soft fabrics;3;0,9;0,568
+34;F;justright weft and thin fabric;2;0,9;0,102
+34;G;too soft;1;0,9;-0,05
+34;H;too sticky;1;0,9;-0,878
+34;I;too synthetic;1;0,9;-0,998
+34;J;justright coated fabric;2;0,9;0,228
+35;A;i like this fabric a little  although it s a little too thin ;2;1;-0,032
+35;B;i don t like this product because it s a little too thick  ;1;1;-0,696
+35;C;i really like this product because it is really pleasant to the touch with its little hushed aspect;3;1;0,618
+35;D;i don t like this product because for me it will catch toomuch dust;1;1;-0,99
+35;E;i don t like this product because i find it too soft for a car interior ;1;1;-0,58
+35;F;i like this fabric a little because it s justright in terms of weaving;2;1;0,08
+35;G;i really like this product because it is really soft;3;1;0,664
+35;H;i really like this product because it has a slightly leathery aspect;3;1;0,896
+35;I;i like this fabric a little because it is just at the level of thickness and i like its weaving;2;1;0,006
+35;J;i really like this product because it is really elegant;3;1;0,952
+36;A;justright to the touch  quite discreet and adapted weft;3;0,9;0,424
+36;B;a little dense fabric but may be suitable;2;0,9;-0,026
+36;C;very pleasant  i really like the diagonal weft;3;0,9;0,792
+36;D;felt for furniture too elaborate;1;0,9;-1
+36;E;velvet fabric for overly classy clothing;1;0,9;-0,33
+36;F;justright in the weft and thickness;2;0,9;0,196
+36;G;fabric too foamy for insulation;1;0,9;-0,89
+36;H;i really like the material;3;0,9;0,822
+36;I;i don t like much fibre for textiles;1;0,9;-0,884
+36;J;i don t like imitation leather fabric  unpleasant to the touch;1;0,9;-0,786
+37;A;not soft enough;1;0,6;-0,106
+37;B;toomuch rough;1;0,6;-0,994
+37;C;pleasant;2;0,6;-0,032
+37;D;good soft touch;3;0,6;0,326
+37;E;resistant and soft;3;0,6;0,334
+37;F;pleasant;2;0,6;-0,032
+37;G;pleasant to the touch soft resistant;3;0,6;0,388
+37;H;it hooks;1;0,6;-0,996
+37;I;it hooks;1;0,6;-0,996
+37;J;a little stiff;2;0,6;-0,044
+38;A;it really like it because it is effective;3;1;0,898
+38;B;notenough;1;1;-1
+38;C;there is a lack of practicality;2;1;-0,438
+38;D;it is too bitter;1;1;-1
+38;E;it is good;3;1;0,07
+38;F;it is really good;3;1;0,822
+38;G;notenough;1;1;-1
+38;H;notenough;1;1;-1
+38;I;it is good;3;1;0,07
+38;J;it is justright mentholated;2;1;0,288
+39;A;relatively smooth fabric;2;0,9;-0,188
+39;B;notenough;1;0,9;-1
+39;C;i like it a little although it seems a little fluffy;2;0,9;-0,006
+39;D;not pretty enough;1;0,9;-0,808
+39;E;justright;1;0,9;0,352
+39;F;the fabric appears to be of good quality;3;0,9;0,406
+39;G;notenough;1;0,9;-1
+39;H;i like it a little because it seems resistant;2;0,9;0,134
+39;I;notenough;1;0,9;-1
+39;J;the fabric seems resistant and probably not very dirty;3;0,9;0,488
+40;A;justright;2;0,6;0,338
+40;B;i don t like it too smooth;1;0,6;-0,874
+40;C;very soft;2;0,6;-0,058
+40;D;very pretty;2;0,6;-0,784
+40;E;justright;3;0,6;0,338
+40;F;very bad;2;0,6;-0,252
+40;G;justright;3;0,6;0,338
+40;H;notenough;1;0,6;-0,998
+40;I;not comfortable;2;0,6;0,034
+40;J;justright;3;0,6;0,338
+41;A;pleasant touch  therefore difficult to maintain with three children;2;1;0,076
+41;B;too thick rough and will catch all the dirt;1;1;-0,992
+41;C;pleasant warm pretty and seems resistant;3;1;0,492
+41;D;same too many possibilities to catch all the dirt;1;1;-0,868
+41;E;pleasant touch  warm feeling but probably fragile;2;1;0,142
+41;F;soft  tight weave it seems solid and comfortable;2;1;0,266
+41;G;unpleasant feel  cheep feeling;1;1;-0,814
+41;H;soft pleasant tight weave seems easy to maintain;2;1;0,078
+41;I;soft to the touch seems easy to maintain but not very pretty;2;1;0,012
+41;J;it makes you dream and gives the impression of being in a luxury car a little dream;3;1;0,5
+42;A;soft to the touch;2;0,7;0,016
+42;B;too stiff;1;0,7;-0,972
+42;C;shine;2;0,7;-0,522
+42;D;nice texture;2;0,7;-0,016
+42;E;dull;1;0,7;-0,998
+42;F;soft to the touch;2;0,7;0,016
+42;G;not easy to the touch;1;0,7;-0,352
+42;H;easy to the touch;2;0,7;-0,352
+42;I;not pretty to see;1;0,7;-0,786
+42;J;nice leather side pattern;3;0,7;0,27
+43;A;too rough;1;0,7;-1
+43;B;not smooth enough;1;0,7;-0,512
+43;C;not thick enough;2;0,7;-0,926
+43;D;too dustpan;1;0,7;-0,826
+43;E;justright to the touch;3;0,7;0,314
+43;F;not soft enough;2;0,7;-0,124
+43;G;not rigid enough;1;0,7;-0,958
+43;H;too sticky;2;0,7;-0,904
+43;I;not smooth enough;1;0,7;-0,512
+43;J;justright in comfort;3;0,7;0,502
+44;A;looks like natural as a cotton blend;3;0,7;0,268
+44;B;rather comfortable but too striated not pleasant to the skin touch;2;0,7;0,302
+44;C;pleasant in skin contact rather comfortable;3;0,7;0,376
+44;D;the fabric looks like a teddy;1;0,7;-0,452
+44;E;soft velvet aspect;3;0,7;0,198
+44;F;not soft enough;2;0,7;-0,088
+44;G;soft fleece comfortable;3;0,7;0,494
+44;H;it is dry;1;0,7;-0,91
+44;I;toomuch streak in the fabric;2;0,7;-0,516
+44;J;too smooth looks like fake leather it sticks on the skin;1;0,7;-0,426
+45;A;soft to the touch;2;0,9;0,016
+45;B;comfortable;2;0,9;-0,004
+45;C;pleasant touch;2;0,9;0,134
+45;D;must be pleasant in winter less in summer;2;0,9;0,084
+45;E;very plesant feeling to the touch;3;0,9;0,124
+45;F;comfortable but a little too rough to the touch;2;0,9;-0,176
+45;G;too acrylic not pleasant to the touch;1;0,9;0,026
+45;H;this fabric has a tight weft and must be resistant to wear;3;0,9;0,412
+45;I;same as for fabric h witha softer feel;3;0,9;0,356
+45;J;the comfort of a solid fabric with a pleasant leather feel the only point that could be negative would be the scratch resistance or other;3;0,9;0,608
+46;A;fine cotton fabric;2;0,7;-0,226
+46;B;relief fabric;1;0,7;-0,888
+46;C;patterns fabric ras;2;0,7;-0,628
+46;D;wooly fabric;1;0,7;-0,904
+46;E;velvet fabric;1;0,7;-0,838
+46;F;soft thin ras fabric;3;0,7;-0,044
+46;G;soft fabric;1;0,7;-0,036
+46;H;cotton canvas fabric;2;0,7;-0,306
+46;I;patterns fabric ras;1;0,7;-0,628
+46;J;imitation leather fabric;2;0,7;-0,048
+47;A;i don t like this material;1;0,8;-0,992
+47;B;i don t really like this velvet material which will not be suitable for long journeys;1;0,8;-0,344
+47;C;i like a little because in lowend it could be suitable;2;0,8;0
+47;D;i don t like the feeling of this material  and moreover it s fluffy;1;0,8;-0,962
+47;E;the feeling to the touch is very pleasant;3;0,8;0,254
+47;F;i like a little without further explanation;2;0,8;-0,008
+47;G;at the second touch i appreciate a little more this fleece material;1;0,8;-0,38
+47;H;a peach skin sensation to the touch quite pleasant;3;0,8;0,47
+47;I;i don t like this material because it seems rough to me;1;0,8;-0,972
+47;J;i like a little this material because it seems practical for the vehicle s interior and is quite elastic so will give a certain comfort;2;0,8;0,048
+48;A;few material and without relief;1;0,7;-0,862
+48;B;too thick;1;0,7;-0,984
+48;C;bland;1;0,7;-1
+48;D;rough;1;0,7;-1
+48;E;soft;3;0,7;-0,032
+48;F;without expression;1;0,7;-0,986
+48;G;toomuch foam;1;0,7;-0,99
+48;H;dustpan;2;0,7;-0,81
+48;I;ugly;1;0,7;-1
+48;J;refined;3;0,7;-0,358
+49;A;cheap;1;0,7;-0,994
+49;B;thick;1;0,7;-0,97
+49;C;touch;2;0,7;-0,49
+49;D;carpet;1;0,7;-0,974
+49;E;old cushion;1;0,7;-1
+49;F;texture;2;0,7;-0,766
+49;G;poor quality;1;0,7;-0,76
+49;H;thin;1;0,7;-1
+49;I;old;1;0,7;-1
+49;J;elegance;2;0,7;-0,546
+50;A;i like it a bit because it is simple and efficient;2;1;0,004
+50;B;i don t like this product because it is too dense;1;1;-0,99
+50;C;simple and effective;2;1;-0,216
+50;D;i don t like the touch simply;1;1;-0,912
+50;E;i like it a bit because it is soft;2;1;0,048
+50;F;i like it a lot because it is aesthetic and effective on many points;3;1;0,676
+50;G;i like it a bit because it is rather thick but not too anyway;2;1;-0,05
+50;H;grabs well the hand;2;1;0,066
+50;I;i don t like it because it is too rough;1;1;-1
+50;J;i like it a lot because if i had to choose a new car it is likely that i would take a fabric of the same type;3;1;0,632
+51;A;it is pleasant to the touch but a little too thin;2;0,9;-0,006
+51;B;the fabric is too rough;1;0,9;-0,974
+51;C;it is pleasant to the touch but a little too classic;2;0,9;0,04
+51;D;i feel like it s a carpet;1;0,9;-0,398
+51;E;it is soft in one way but rough in the other;1;0,9;-0,556
+51;F;it is pleasant but a classic;2;0,9;0,032
+51;G;it looks fragile;1;0,9;-0,836
+51;H;it is not pleasant to the touch;1;0,9;0,08
+51;I;it is a material i appreciate but it looks like an elastic;2;0,9;-0,28
+51;J;i find that this material corresponds completely to a car  the car is very pleasant;3;0,9;0,402
+52;A;too rough;1;0,8;-1
+52;B;too thick;1;0,8;-0,98
+52;C;rather thin;1;0,8;-0,788
+52;D;too woolly;1;0,8;-1
+52;E;alcantara style i love it;3;0,8;0,354
+52;F;pleasant to the touch;2;0,8;0,058
+52;G;too soft;1;0,8;-0,088
+52;H;sticky texture;1;0,8;-0,766
+52;I;good;1;0,8;0,09
+52;J;leather style i like it;2;0,8;0,038
+53;A;correct quality;2;0,8;-0,05
+53;B;too coarse;1;0,8;-0,998
+53;C;suit me;2;0,8;-0,528
+53;D;unpleasant contact;1;0,8;-0,984
+53;E;i don t like it;1;0,8;-0,998
+53;F;i like it;3;0,8;-0,222
+53;G;soft and pleasant;2;0,8;0,072
+53;H;too plastic touch;1;0,8;-0,57
+53;I;too rigid for my taste;1;0,8;-1
+53;J;interesting leather imitation  of good quality;3;0,8;0,494
+54;A;too rough;1;1;-1
+54;B;thickness    maybe not bad;2;1;0,006
+54;C;this unified side sober;2;1;-0,178
+54;D;sweetness sweetness;3;1;0,044
+54;E;comfort;3;1;0,218
+54;F;dark and maybe solid;3;1;0,18
+54;G;the one i like the best  must easily detach itself;3;1;0,472
+54;H;must take all the dust;1;1;-0,934
+54;I;nice;2;1;-0,006
+54;J;maybe i was wrong  it must be solid;1;1;-0,396
+55;A;unpleasant contact fabric weft;1;0,8;-0,586
+55;B;too hard to the touch;1;0,8;-0,608
+55;C;feeling of touch not soft;1;0,8;0,032
+55;D;carpet sensation feel;2;0,8;-0,318
+55;E;softer fabric weft;3;0,8;0,342
+55;F;too smooth;2;0,8;-0,354
+55;G;soft touch enveloping;3;0,8;0,166
+55;H;carpet impression touch;1;0,8;-0,61
+55;I;furnishing fabric feeling;2;0,8;-0,354
+55;J;plastic refractory;1;0,8;-0,992
+56;A;seems solid and easy to clean;3;0,8;0,254
+56;B;pleasant to the touch  looks comfortable  thick  and easy to clean;3;0,8;0,428
+56;C;seems solid  dry to the touch;2;0,8;-0,046
+56;D;too catchy;1;0,8;-1
+56;E;very pleasant to the touch  ideal for cuddling in traffic jams;3;0,8;0,486
+56;F;dry to the touch but seems fragile;2;0,8;-0,204
+56;G;too soft;1;0,8;-0,068
+56;H;fatty feel;1;0,8;-0,832
+56;I;seems solid but a little soft;2;0,8;0,036
+56;J;coarse imitation and unpleasant touch;1;0,8;-0,634
+57;A;justright;2;0,4;0,328
+57;B;justright;3;0,4;0,328
+57;C;justright;3;0,4;0,328
+57;D;too soft;2;0,4;-0,056
+57;E;too velvet;2;0,4;-0,83
+57;F;too cheap;2;0,4;-0,992
+57;G;too cheap;2;0,4;-0,992
+57;H;notenough;1;0,4;-1
+57;I;not soft enough;1;0,4;-0,11
+57;J;too plastic;1;0,4;-1
+59;A;i like a little the discreet patterns of the fabric;2;1;-0,01
+59;B;i don t like the texture;1;1;-0,982
+59;C;i like a little the patterns of the fabric;2;1;-0,012
+59;D;i don t like the touch feeling;1;1;-0,81
+59;E;i like a lot the fact that the fabric is soft and pleasant to the touch;3;1;0,438
+59;F;i like a little the texture of the touch;2;1;-0,024
+59;G;i don t like the fabric texture;1;1;-0,98
+59;H;i like a little the texture;2;1;-0,01
+59;I;i don t like the fabric patterns and its texture;1;1;-0,924
+59;J;i like a lot the patterns and the fabric texture;3;1;0,398
+60;A;correct;2;0,9;-0,124
+60;B;pleasant touch;3;0,9;0,11
+60;C;correct;2;0,9;-0,124
+60;D;fluffy;1;0,9;-0,822
+60;E;rather pleasant touch;2;0,9;0,136
+60;F;correct weft and correct touch;2;0,9;0,016
+60;G;too synthetic touch;1;0,9;-0,628
+60;H;sticky;1;0,9;-0,89
+60;I;a little rough;2;0,9;-0,412
+60;J;leather aspect;1;0,9;-0,284
+61;A;correct touch and solidity feeling;3;0,8;0,242
+61;B;not smooth enough unpleasant to the touch;2;0,8;-0,394
+61;C;comfortable to the touch  feeling of resistance;3;0,8;0,42
+61;D;unpleasant to the touch and too rough;1;0,8;-0,79
+61;E;too fluffy;2;0,8;-0,814
+61;F;combination of softness sensation and holding;3;0,8;0,276
+61;G;too flexible;1;0,8;-0,954
+61;H;not soft enough;2;0,8;-0,098
+61;I;too rough;1;0,8;-1
+61;J;justright to the touch;2;0,8;0,276
+62;A;too cheap;1;1;-0,99
+62;B;pleasant but not suitable;2;1;0,028
+62;C;soft enough fabric;2;1;-0,084
+62;D;felt makes dust;1;1;-0,976
+62;E;velvet;1;1;-0,808
+62;F;cheap fabric catchy;1;1;-0,942
+62;G;foam;1;1;-1
+62;H;changes from the classic leather;3;1;0,354
+62;I;unpleasant;1;1;-1
+62;J;leather  basic;2;1;-0,008
+63;A;too thin;1;0,9;-0,996
+63;B;too thick;1;0,9;-0,98
+63;C;well;3;0,9;-0,018
+63;D;too hot;1;0,9;-1
+63;E;too oldfashioned;1;0,9;-0,986
+63;F;too dry;1;0,9;-0,912
+63;G;too thick;1;0,9;-0,98
+63;H;too thin;1;0,9;-0,996
+63;I;too steep;1;0,9;-1
+63;J;too synthetic;1;0,9;-0,99
+64;A;because it is too simple;1;0,8;-0,614
+64;B;original;2;0,8;-0,684
+64;C;rather good;2;0,8;0,142
+64;D;original;1;0,8;-0,684
+64;E;i really like this textures;3;0,8;0,894
+64;F;too simple;1;0,8;-0,614
+64;G;i don t like it;1;0,8;-0,998
+64;H;too simple;1;0,8;-0,614
+64;I;elastic;1;0,8;-0,96
+64;J;very pleasant;3;0,8;0,034
+65;A;rough fabric;1;0,7;-0,966
+65;B;soft and rough  seems elastic;1;0,7;-0,558
+65;C;seems to be weaved  pleasant to the eyes  a little less to the touch;1;0,7;-0,294
+65;D;the fabric is roughly soft and seems comfortable  looks like a sponge;1;0,7;-0,12
+65;E;very soft and comfortable;3;0,7;0,462
+65;F;too simple  not really soft;1;0,7;0,406
+65;G;padded  comfortable and soft;2;0,7;0,436
+65;H;rough and uncomfortable;1;0,7;-1
+65;I;soft and seems elastic;2;0,7;-0,076
+65;J;elegant and soft leather;2;0,7;0,308
+66;A;i don t like this fabric because the quality of the fabric makes me uncomfortable;1;1;-0,95
+66;B;i really like this fabric because it is the one that is most pleasant to the touch;3;1;0,73
+66;C;i like this product a little because although it seems fluffy to me  the material is pleasant to the touch ;2;1;-0,014
+66;D;i don t like this product because it s fluffy;1;1;-0,976
+66;E;i like this fabric a little because although losing its color to the touch  it seems to me to offer a comfort ;2;1;0,022
+66;F;i don t like the fabric seems to me to be of poor quality;1;1;-0,886
+66;G;i don t like the fabric because the material creaks under my fingers ;1;1;-0,992
+66;H;i don t like this fabric because it s not pleasant to touch ;1;1;-0,51
+66;I;i like this fabric a little because although not very luxurious to the eyes its texture is pleasant ;2;1;0,002
+66;J;i like this fabric a little because although it is simple it is very pleasant to touch ;2;1;0,03
+69;A;fabric that looks tough;2;0,7;-0,504
+69;B;product that seems to keep warm not very pleasant to the touch;1;0,7;-0,222
+69;C;pleasant and soft;2;0,7;0,058
+69;D;texture which seems cheap;1;0,7;-0,77
+69;E;soft product but that i don t see that much in a car;2;0,7;-0,282
+69;F;pleasant to the touch  and good quality;3;0,7;0,496
+69;G;i don t like the foam underneath;1;0,7;-0,998
+69;H;product that seems to have a good durability over time;2;0,7;0,192
+69;I;doesn t seem pleasant on a seat;1;0,7;-0,296
+69;J;better touch than the others;3;0,7;0,148
+70;A;it quickly deteriorates;1;1;-0,984
+70;B;cheap;1;1;-0,992
+70;C;quickly deteriorated;1;1;-0,984
+70;D;cheap;1;1;-0,992
+70;E;elegant;3;1;0,58
+70;F;cheap;1;1;-0,992
+70;G;cheap;1;1;-0,992
+70;H;cheap;1;1;-0,992
+70;I;clean and beautiful;2;1;-0,17
+70;J;practical and elegant;3;1;0,734
+72;A;too thin;1;0,7;-0,998
+72;B;it seems quite flexible;2;0,7;-0,224
+72;C;it seems resistant;2;0,7;0,092
+72;D;it is soft but looks fragile;2;0,7;-0,068
+72;E;it is very soft;3;0,7;-0,054
+72;F;too thin;1;0,7;-0,998
+72;G;it is soft;3;0,7;-0,054
+72;H;it seems to deteriorate more than the others;1;0,7;-0,656
+72;I;it seems strong and easy to clean;2;0,7;-0,008
+72;J;too synthetic for my taste;1;0,7;-1
+73;A;basic;2;0,7;-0,176
+73;B;too hard;1;0,7;-0,988
+73;C;too basic;2;0,7;-0,176
+73;D;too carpet;1;0,7;-0,956
+73;E;pleasant to the touch;3;0,7;0,142
+73;F;too smooth;2;0,7;-0,36
+73;G;nice;3;0,7;0,02
+73;H;too catchy;1;0,7;-0,998
+73;I;simple;2;0,7;-0,63
+73;J;too catchy;1;0,7;-0,998
+74;A;simple;2;0,7;-0,604
+74;B;pretty weave soft;3;0,7;0,176
+74;C;pleasant;2;0,7;0,014
+74;D;toomuch foam;1;0,7;-0,992
+74;E;soft but dirty;2;0,7;-0,004
+74;F;nothing special;2;0,7;-0,414
+74;G;soft checker pretty;3;0,7;0,204
+74;H;rough;1;0,7;-1
+74;I;soft and pretty fabric;2;0,7;0,022
+74;J;classy leather style;2;0,7;0,224
+75;A;it is too thin and the pattern is not pretty;1;1;-0,91
+75;B;it is too thick and the pattern is not pretty;1;1;-0,876
+75;C;the crossings of the yarns that make up the pattern are too thick;1;1;-0,948
+75;D;i don t like the felt look;1;1;-0,762
+75;E;i love the darkness of the fabric  the pattern is invisible and the fabric is soft and silky;3;1;0,494
+75;F;the fabric is too thin and gives the elastic aspect;1;1;-0,696
+75;G;the fabric is too thick and the pattern is not beautiful at all;1;1;-0,738
+75;H;the material is soft but the pattern is not pretty;2;1;0,03
+75;I;the pattern looks like an elastic band ;1;1;-0,53
+75;J;the pattern is pretty and the fabric soft;2;1;0,032
+76;A;i don t like this fabric because it s rough  evenif the aesthetic is fine;1;1;-0,96
+76;B;i like this fabric and find it quite original  but it may seem difficult to maintain;2;1;0,002
+76;C;i like the quality  the aesthetics and the feel of the fabric very much;3;1;0,414
+76;D;i don t like this fabric because in addition of being rough  it doesn t seem suitable because difficult to maintain;1;1;-0,92
+76;E;i like the aesthetic and the feel of this fabric  but it may catch a lot dust;2;1;0,278
+76;F;i like this fabric in general;2;1;-0,146
+76;G;i don t like this fabric very much because it is not very aesthetic;1;1;-0,852
+76;H;i really like this fabric even though it seems a little fragile to me;3;1;0,682
+76;I;i like this fabric a little evenif i don t find anything extraordinary about it;1;1;-0,694
+76;J;i like this fabric but it may not be master key enough;2;1;-0,15
+77;A;beautiful fabric  seems resistant ;3;0,9;0,362
+77;B;coarse fabric  does not give an impression of quality in a passenger compartment;1;0,9;-0,688
+77;C;nice good quality but maybe a little coarse;2;0,9;0,096
+77;D;nice fabric but would quickly be damaged in a car  would wear out too quickly with friction for example;1;0,9;-0,414
+77;E;the touch of the velvet makes traces on the fabric  it would not be pretty on the whole interior;1;0,9;-0,588
+77;F;pretty but too thin  i would be afraid it would tear or wear out quickly ;2;0,9;-0,516
+77;G;coarse fabric  easy to tear  would quickly be damaged ;1;0,9;-0,782
+77;H;seems too thin to me  so too fragile  i d be afraid he d tear himself apart  ;1;0,9;-0,726
+77;I;seems to me to be the most resistant for the passenger compartment  should last over time and resist friction  children  etc ;3;0,9;0,608
+77;J;nice sample but i prefer fabric in a car  not toomuch leather;2;0,9;-0,034
+78;A;too thin not soft;1;0,8;-0,124
+78;B;resistant but not very premium  a little basic;2;0,8;0,096
+78;C;refined  very smooth but a little thin;2;0,8;-0,06
+78;D;cosy comfortable and soft;3;0,8;0,522
+78;E;comfortable soft et above all very premium;3;0,8;0,476
+78;F;doesn t looks like fabric  is very synthetic but sober;2;0,8;-0,204
+78;G;poor quality too soft is easily damaged;1;0,8;-0,318
+78;H;too basic but sober simple;2;0,8;-0,052
+78;I;not comfortable too hard but resistant;1;0,8;-0,012
+78;J;looks like fake leather doubtful quality but may be pretty;1;0,8;-0,43
+81;A;i like it a little evenif it is too simple;2;0,9;0,002
+81;B;because it is just well woven;2;0,9;0,054
+81;C;because it is really very chic;3;0,9;0,924
+81;D;evenif it s a little oldfashioned;2;0,9;-0,026
+81;E;because it is really very elegant;3;0,9;0,986
+81;F;because it is well enough woven;2;0,9;-0,02
+81;G;it is too soft;1;0,9;-0,03
+81;H;because it is really very modern;3;0,9;0,932
+81;I;it is too scratched;1;0,9;-1
+81;J;it is too kitsch;1;0,9;-1
+82;A;sober and smooth but not original not for a car;2;1;-0,018
+82;B;not bad but too thick;2;1;-0,278
+82;C;would fit well in a car evenif not smooth enough;3;1;0,342
+82;D;too fluffy not smooth enough;1;1;-0,508
+82;E;pretty but not suitable for a car interior  will take toomuch dust;1;1;-0,664
+82;F;smooth but a little too fluffy;2;1;-0,026
+82;G;doesn t match a car passenger compartment  seems toomuch like a fabric for seat or clothing;1;1;-0,604
+82;H;pretty appearance quite smooth linen style can be very elegant;3;1;0,69
+82;I;looks cheap doesn t fit with a passenger compartment;1;1;-0,844
+82;J;ideal fits very well with a car interior;3;1;0,558
+84;A;i like a little because the fabric looks qualitative but thin;2;1;0
+84;B;i don t like because you can see the linesof the fabric;1;1;-0,96
+84;C;i really like the quality of the fabric;3;1;0,862
+84;D;i don t like because the fabric loses its hair;1;1;-0,998
+84;E;i don t like the velvet material;1;1;-0,986
+84;F;i really like the quality of the fabric;3;1;0,862
+84;G;i don t like because it doesn t looks qualitative at all;1;1;-0,78
+84;H;i don t like the quality of the fabric;1;1;-0,924
+84;I;i don t like the overly synthetic side of this fabric;1;1;-0,95
+84;J;i like the leather effect a little but it is not imitated well enough;2;1;0,04
+85;A;i like very much because simple and efficient and qualitative aspect;3;1;0,538
+85;B;i like a little although it looks toomuch like clothing cotton;2;1;-0,038
+85;C;i like very much the same as a but a little less resistant in appearance ;3;1;0,53
+85;D;too synthetic;1;1;-0,998
+85;E;i like to the touch although it is not suitable for the inside of a car;2;1;-0,052
+85;F;i like it but the look is more synthetic and less qualitative ;3;1;0,442
+85;G;it is not resistant enough;1;1;-0,28
+85;H;i like it no matter what he doesn t make a quality impression  ;2;1;-0,014
+85;I;it has a too plastic effect;1;1;-0,908
+85;J;i like a little because resistant but not very aesthetic;2;1;0,156

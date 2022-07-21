@@ -1,18 +1,19 @@
-library(dplyr)
-library(sentimentr)
-library(FactoMineR)
-library(RTextTools)
+# library(sentimentr)
+# library(FactoMineR)
+# library(ggplot2)
 
 ##02
-leather <- read.csv2("data/leather.csv")
-dico_pola <- read.csv2("data/valency_leather.csv")
-dico_val <- read.csv2("data/valence_shifters_leather.csv")
+leather <- read.csv2("data/carseat.csv")
+dict.polarity <- read.csv2("data/valency_leather.csv")
+dict.val.shift <- read.csv2("data/valence_shifters_leather.csv")
 
+summary(leather)
+for (j in 1:3) leather[,j] <- as.factor(leather[,j])
 
 ##03
 leather$Text <- tolower(leather$Text) #met tout en minuscules
-dico_pola$Word <- tolower(dico_pola$Word)
-dico_val$Word <- tolower(dico_val$Word)
+dict.polarity$Word <- tolower(dict.polarity$Word)
+dict.val.shift$Word <- tolower(dict.val.shift$Word)
 
 leather$Text <- gsub("[`^~.',!?;\"]", " ", leather$Text)
 leather$Text <- gsub("[[:punct:]]", "", leather$Text)
@@ -23,68 +24,71 @@ leather$Text <- gsub("even if", "evenif", leather$Text)
 leather$Text <- gsub("not enough", "notenough", leather$Text)
 
 ##04
-mykey_pola <- as_key(dico_pola)
-mykey_val <- as_key(dico_val)
+library(sentimentr)
+polarity <- as_key(dict.polarity)
+val.shift <- as_key(dict.val.shift)
 
 ##05
-data_sent <- get_sentences(leather$Text)
-sentiment1 <- sentiment(data_sent, polarity_dt = mykey_pola, valence_shifters_dt = mykey_val)
+res.sent <- get_sentences(leather$Text)
+res.sentiment <- sentiment(res.sent, polarity_dt = polarity, valence_shifters_dt = val.shift)
 
 ##06
-leather$sentiment <- sentiment1$sentiment
-sentprod <- aggregate(leather$sentiment, by = list(leather$Product), FUN = mean)
-sentprod <- sentprod %>% arrange(-x)
+leather$Sentiment <- res.sentiment$sentiment
 
-##07
-liking <- aggregate(leather$Liking, by = list(leather$Product), FUN = mean)
-liking <- liking %>% arrange(-x)
+library(FactoMineR)
+res.consistency <- AovSum(Sentiment ~ Hedo_cat + ID_juge, data = leather)
+res.consistency$Ftest
 
-##08
-leather$Liking <- factor(leather$Liking)
-leather$Hedo_cat <- factor(leather$Hedo_cat)
+res.consistency <- AovSum(Sentiment ~ Hedo_cat, data = leather)
+res.consistency$Ftest
+res.consistency$Ttest
 
-AovSum(leather$sentiment ~ leather$Hedo_cat)
-AovSum(leather$sentiment ~ leather$Liking)
+library(ggplot2)
+ggplot(leather, aes(Hedo_cat, Sentiment)) +
+  geom_boxplot()
 
-##09
-data_pca <- data.frame(matrix(0,ncol=length(unique(leather$ID_juge)), nrow=length(unique(leather$Product))))
-colnames(data_pca) <- unique(leather$ID_juge)
-rownames(data_pca) <- unique(leather$Product)
+leather <- leather[order(leather$ID_juge, leather$Product), ]
 
-for(j in 1:length(unique(leather$ID_juge))){
-  for (i in 1:length(unique(leather$Product))){
-    k <- leather[which(leather$ID_juge == colnames(data_pca)[j] & leather$Product == rownames(data_pca)[i]),6]
-    if(length(k)==0){
-      data_pca[i,j] <- 0
-    }else{
-      data_pca[i,j] <- k
-    }
-  }
+prod.Sentiment <- matrix(0, nrow = 10, ncol = 57)
+for (j in 0:56){
+  for (i in 1:10) prod.Sentiment[i,j+1] <- leather$Sentiment[j*10+i]
 }
+rownames(prod.Sentiment) <- levels(as.factor(leather$Product))
+colnames(prod.Sentiment) <- paste("S",levels(leather$ID_juge),sep = "")
+res.pca <- PCA(prod.Sentiment)
 
-res.pca <- PCA(data_pca)
+#############################
+# ML
+#############################
+#
+leather.score <- read.csv2("data/carseat_scores.csv")
+summary(leather.score)
+for (j in 1:3) leather.score[,j] <- as.factor(leather.score[,j])
 
-##10
-dtm <- create_matrix(leather$Text, removeStopwords = TRUE)
-#dtm$dimnames$Terms
+#
+leather.score <- leather.score[order(leather.score$ID_juge, leather.score$Product), ]
 
-dtm_mat <- as.data.frame(matrix(0,nrow=length(unique(leather$Product)),ncol=dtm$ncol))
-rownames(dtm_mat) <- unique(leather$Product)
-colnames(dtm_mat) <- dtm$dimnames$Terms
-
-for(i in 1:dim(leather)[1]){
-  sent <- str_split(leather$Text[i]," ")[[1]]
-  for (j in 1:length(sent)){
-    dtm_mat[which(rownames(dtm_mat)==leather$Product[i]),which(colnames(dtm_mat)==sent[j])] <- dtm_mat[which(rownames(dtm_mat)==leather$Product[i]),which(colnames(dtm_mat)==sent[j])] + 1
-  }
+#
+prod.Valency_ML <- matrix(0, nrow = 10, ncol = 57)
+for (j in 0:56){
+  for (i in 1:10) prod.Valency_ML[i,j+1] <- leather.score$Valency_ML[j*10+i]
 }
+rownames(prod.Valency_ML) <- levels(as.factor(leather.score$Product))
+colnames(prod.Valency_ML) <- paste("ML",levels(leather.score$ID_juge),sep = "")
 
-res_desc <- descfreq(dtm_mat, proba = 0.1)
+#
+res.pca <- PCA(prod.Valency_ML)
 
-for (i in 1:10) res_desc[[i]] <- res_desc[[i]][which(res_desc[[i]][,3]>=1),]
+#
+prod.Liking <- matrix(0, nrow = 10, ncol = 57)
+for (j in 0:56){
+  for (i in 1:10) prod.Liking[i,j+1] <- leather.score$Liking[j*10+i]
+}
+rownames(prod.Liking) <- levels(as.factor(leather.score$Product))
+colnames(prod.Liking) <- paste("L",levels(leather.score$ID_juge),sep = "")
+#
+res.pca <- PCA(prod.Liking)
 
-res.ca <- CA(dtm_mat[,apply(dtm_mat, 2, sum)>=3], graph = F)
-plot.CA(res.ca, invisible = "col")
+scores <- cbind(prod.Sentiment, prod.Valency_ML, prod.Liking)
+res.mfa <- MFA(scores, group = rep(57, 3), type = rep("s", 3), name.group = c("Sentiment", "Machine", "Liking"))
 
-res.ca <- CA(dtm_mat, graph = F)
-plot.CA(res.ca, invisible = "col")
