@@ -31,16 +31,57 @@ But what does it mean to understand a product space in terms of qualities and de
 
 This impact can be measured at a product space level, or at a product level. The methodology for measuring and analyzing this kind of impact is called a <span style="font-weight : bold">penalty analysis</span> (just like in football when an offence is committed by a player in their own penalty area).
 
-Before diving into the penalty analysis, let's visualize the data.
+Before diving into the penalty analysis, let's visualize the data. The main question you should answer to is: what do I want to visualize?
 
-<codeblock id="04_02_v">
+Actually, JAR data can be considered as categorical variable: therefore, you want to see the distribution of each sensory attribute in terms of JAR categories. To do so, for a given attribute, use the `table()` function to get that distribution. Then, with the `as.data.frame()` function, transform this result into an R object that you will be able to plot.
+
+<codeblock id="04_02_v1">
 </codeblock>
 
-The same type of visualization can be obtained by product.
+With the `ggplot()` and `geom_bar()` functions of the `ggplot2` package, plot the distribution from the R object `tab`.
 
-<codeblock id="04_03_v">
+<codeblock id="04_02_v2">
 </codeblock>
 
+As you can see, this visualization is not explicit enough as you can't tell what is on the x-axis, nor on the y-axis. Improve your visualization with the `xlab()`, `ylab()`, `ggtitle()` functions.
+
+<codeblock id="04_02_v3">
+</codeblock>
+
+Use different *themes* to enhance your visualization. Have a look at the following link https://ggplot2-book.org/polishing.html. For instance, start with the `theme_minimal()` function.
+
+<codeblock id="04_02_v4">
+</codeblock>
+
+Of course the same type of visualization can be obtained for a given product. To do so, you need the contingency table that crosses the products and the levels of a given JAR attribute. Use the very important `table()` function (again) to obtain such a table.
+
+<codeblock id="04_02_v5">
+</codeblock>
+
+From this contingency table, represent the distribution of the JAR attribute *Odor Intensity*, and the product *1JPA*. Note that ggplot visualizations can be saved easily.
+
+<codeblock id="04_02_v6">
+</codeblock>
+
+From this contingency table, represent the distribution of the JAR attribute *Odor Intensity*, and the product *7TWA*.
+
+<codeblock id="04_02_v7">
+</codeblock>
+
+To compare these 2 products, use the `plot_grid()` function of the `cowplot` package.
+
+<codeblock id="04_02_v8">
+</codeblock>
+
+Actually, the comparison between the 2 products is still complicated. Obviously, the y-axis has to be set to the same scale. With the following code, get easily the maximum of occurrences for these 2 products.
+
+<codeblock id="04_02_v9">
+</codeblock>
+
+Use the `ylim()` to set the y-axes at the same scale, so that both products can be easily compared.
+
+<codeblock id="04_02_v10">
+</codeblock>
 
 ## The *Sensory* corner: JAR scales and penalties
 <br>
@@ -73,12 +114,49 @@ Build an R object containing the information about the consumers, the products a
 <codeblock id="04_05">
 </codeblock>
 
-Use the `AovSum()` function of the `FactoMineR` package to estimate your model for which the liking is explained by the presence or absence of the defects, the consumers and the products.
+Use the `AovSum()` function of the `FactoMineR` package to estimate your model for which the liking is explained by the presence or absence of the defects, the consumers and the products. Use the `names()` function to get the names of the elements of the list of results provided by the `AovSum()` function. Display the results of the *t-test*.
 
 <codeblock id="04_06">
 </codeblock>
 
-Penalties can also be estimated for each product. Subset the `orange.dummy` to the data for product `2JPR`, and save the data in an object named `orange.dummy.2JPR`.
+## The *R* corner: the JAR() fonction of the SensoMineR package
+<br>
+
+Actually, there's a very convenient way to get the penalties directly with the `JAR()` function of the `SensoMineR` package. Be careful, the `JAR()` function takes as input the most simple JAR data you can collect: *i.e.*, a data set with the product effect, the consumer effect, the liking *type* variable, and sensory attributes evaluated on a JAR scale. The arguments of the function are the name of JAR data set, the position of the product effect, the position of the consumer effect, the position of the liking variable.
+
+<codeblock id="04_06s">
+</codeblock>
+
+Note that the proper just about right level has to be specified, otherwise  the function will not work. Note also that the model we are interested in is the second one, the one that considers all the sensory attributes at the same time: the results of this model are saved in the object `$penalty2`.
+
+Use the `plot.JAR()` to visualize the results for a given product, say `2JPR` for instance.
+
+<codeblock id="04_06t">
+</codeblock>
+
+The graphical output is not informative when the levels of the sensory attributes are the same. Consequently, they have to be changed. Use the very important `paste()` function to add the name of the attribute in front of its levels. Let's see how it works.
+
+<codeblock id="04_10avant">
+</codeblock>
+
+Now, let's do it for all the sensory attributes.
+
+<codeblock id="04_10">
+</codeblock>
+
+Run the `JAR()` function to estimate the penalties, and the `plot.JAR()` function to represent them for the product `2JPR`.
+
+<codeblock id="04_11">
+</codeblock>
+
+Although this function is really interesting, it has its limits: the penalties are estimated for the whole product space. In other words, if you want to represent another product, the only things that are going to change are the values on the x-axis: the frequencies.
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
+
+It makes sense to estimate penalties for each product and not only for the whole product space. To do so, the model to consider has to be modified as the product effect can't longer be taken into account.
+
+Subset the `orange.dummy` to the data for product `2JPR`, and save the data in an object named `orange.dummy.2JPR`.
 
 <codeblock id="04_07">
 </codeblock>
@@ -88,31 +166,32 @@ Use the `AovSum()` function to estimate your model for which the liking is expla
 <codeblock id="04_08">
 </codeblock>
 
-Compare graphically the penalties, when calculated at the product space level, on the one hand, at the level of product 2JPR, on the other hand.
+Compare graphically the penalties, when calculated at the product space level, on the one hand, at the level of product 2JPR, on the other hand. To do so, think about what you want to visualize: for all the defects, the values of the penalties estimated for all the products on the x-axis, for a given product on the y-axis.
 
-<codeblock id="04_08">
+First, build the proper data set, with the defects as rows, the estimation of the penalties as columns, for the whole product space, for a given product.
+
+<codeblock id="04_08a">
 </codeblock>
 
-## The *R* corner: the JAR() fonction of the SensoMineR package
-<br>
+With the `ggplot()` and `geom_point()` functions, visualize the defects according to their penalties.
 
-The `JAR()` function of the `SensoMineR` package can be used to facilitate what has been done previously. The arguments of the function are the name of JAR data set, the position of the *product* factor, the position of the *panelist* factor, the position of the *liking* variable. The *JAR* data set must contain only these variables.
-
-<codeblock id="04_09">
+<codeblock id="04_08b">
 </codeblock>
 
-The graphical output is not informative when the levels of the sensory attributes are the same. Consequently, they have to be changed. Use the very important `paste()` function to add the name of the attribute in front of its levels.
+For this kind of representation, you have to be careful. Your brain is more comfortable when the x-axis and the y-axis have the same scale. Use the `coord_fixed()` function to fix the axes of representation. Before that, use the `summary()` function to delimit your visualization.
 
-<codeblock id="04_10">
+<codeblock id="04_08c">
 </codeblock>
 
-Run the `JAR()` function to represent the penalties.
+The labels of your defects are very important and they need to be represented. Use the `geom_text_repel()` function of the `ggrepel` package.
 
-<codeblock id="04_11">
+<codeblock id="04_08d">
 </codeblock>
 
-<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
-<br>
+Let's now bring the final touch with the notion of themes: choose the one that best suits your mood.
+
+<codeblock id="04_08e">
+</codeblock>
 
 Understanding the impact of defects on liking (or some other similar measure) can be done using <span style="font-weight : bold">exploratory multivariate</span> analyses, that are often complementary to inferential analyses.
 
