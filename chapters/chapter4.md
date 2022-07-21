@@ -7,7 +7,7 @@ type: chapter
 id: 4
 ---
 
-<exercise id="1" title="Act 1 - too easy: the orange juice case study, understanding a market product space">
+<exercise id="1" title="Act 1 - introduction: the orange juice case study, understanding a market product space">
 
 <slides source="orange">
 </slides>
@@ -15,7 +15,7 @@ id: 4
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
 
-Import the `orange.csv` file in an R object named `orange`. Use the `summary()` function to check the importation. 
+With the `read.csv2()` function, import the orange data set and save it in an R object named orange. With the `summary()` function, make sure that the data set has been well imported. Check carefully the type of each variable. As there are 8 orange juices in the case study, set the `maxsum` argument to 8.
 
 <codeblock id="04_01">
 </codeblock>
@@ -248,6 +248,6 @@ To get a graphical representation of the density for a sensory attribute, we use
 
 </exercise>
 
-<exercise id="5" title="Act 5 - in practice: everything you always wanted to know about JAR with R">
+<exercise id="5" title="Act 5 - conclusion: everything you always wanted to know about JAR with R">
 
 </exercise>

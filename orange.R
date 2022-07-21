@@ -1,31 +1,39 @@
-## libraries
-library(gridExtra)
-library(cowplot)
-library(ade4)
-library(FactoMineR)
-library(stringr)
-library(ggplot2)
+# library(cowplot)
+# library(ade4)
+# library(FactoMineR)
+# library(stringr)
+# library(ggplot2)
+# library(ggrepel)
+# library(SensoMineR)
 
-# import of dataset and summary
+# With the `read.csv2()` function, import the orange data set and save it in an R object named orange. 
+# With the `summary()` function, make sure that the data set has been well imported.
+# Check carefully the type of each variable.
+# As there are 8 orange juices in the case study, set the `maxsum` argument to 8.
+
 orange <- read.csv2("data/orange.csv")
 summary(orange, maxsum = 8)
 
-# transformation into factor variable
-# With the levels() and the nlevels() functions, make sure that you have 106 consumers.
+# With the `as.factor()` function, encode all the variables except the *Liking* as factors. With the `levels()` and the `nlevels()` functions, make sure that you have 106 consumers.
+
 for (j in c(1:2,4:9)) orange[,j] <- as.factor(orange[,j])
 levels(orange$Consumer)
 nlevels(orange$Consumer)
 
+
 # visualization of the data distribution
 #https://r-charts.com/colors/
+
 table(orange[,5])
 tab <- as.data.frame(table(orange[,5]))
 
 #1st attempt
+library(ggplot2)
 ggplot(tab, aes(x = Var1, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange")
 
 #2nd attempt
+library(stringr)
 ggplot(tab, aes(x = Var1, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange") +
   xlab("Modalities") +
@@ -40,8 +48,8 @@ ggplot(tab, aes(x = Var1, y = Freq)) +
   ggtitle(str_glue("Distribution of modalities for the attribute Io")) +
   theme_minimal()
 
-
 #The same type of visualization can be obtained by product.
+table(orange[,2],orange[,5])
 tab <- as.data.frame(table(orange[,2],orange[,5]))
 
 #1st attempt
@@ -53,6 +61,8 @@ JPA <- ggplot(tab[tab$Var1 == "1JPA",], aes(x = Var2, y = Freq)) +
   ggtitle(str_glue("Distribution for the attribute Io and 1JPA")) +
   theme_minimal()
 
+JPA
+
 TWA <- ggplot(tab[tab$Var1 == "7TWA",], aes(x = Var2, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange") +
   xlab("Modalities") +
@@ -60,11 +70,15 @@ TWA <- ggplot(tab[tab$Var1 == "7TWA",], aes(x = Var2, y = Freq)) +
   ggtitle(str_glue("Distribution for the attribute Io and 7TWA")) +
   theme_minimal()
 
-plot_grid(JPA, TWA, labels=c("A", "B"), ncol = 2, nrow = 1)
+TWA
+
+library(cowplot)
+plot_grid(JPA, TWA, labels=c("(a)", "(b)"), ncol = 2, nrow = 1)
 
 
 #2nd attempt
-max(tab$Freq)
+tab[tab$Var1 == "1JPA"|tab$Var1 == "7TWA",]
+max(tab[tab$Var1 == "1JPA"|tab$Var1 == "7TWA",]$Freq)
 
 JPA <- ggplot(tab[tab$Var1 == "1JPA",], aes(x = Var2, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange") +
@@ -84,11 +98,11 @@ TWA <- ggplot(tab[tab$Var1 == "7TWA",], aes(x = Var2, y = Freq)) +
 
 plot_grid(JPA, TWA, labels = c("A","B"), ncol = 2, nrow = 1)
 
-
 #aggregate the categories 1 and 2 into ne for not enough, 4 and 5 into tm for too much, and finally recode the category 3 into JAR.
 for (j in 4:9) levels(orange[,j]) <- c("ne","ne","JAR","tm","tm")
 
 #Recoding of the variables with the acm.disjonctif() function
+library(ade4)
 orange.dummy <- acm.disjonctif(orange[,4:9])
 orange.dummy[1:5,]
 
@@ -96,15 +110,18 @@ orange.dummy[1:5,]
 orange.dummy <- cbind(orange[,1:3], orange.dummy)
 orange.dummy[1:5,]
 
-
 #Use the AovSum() function of the FactoMineR package to estimate your model for which the liking is explained by 
 #the presence or absence of the defects, the consumers and the products.
+library(FactoMineR)
 res.penalty.all <- AovSum(Liking ~ Nc.ne + Nc.tm + Io.ne + Io.tm + Su.ne + Su.tm +
                             Ac.ne + Ac.tm + Bt.ne + Bt.tm + Pu.ne + Pu.tm +
                             Consumer + Juice, data = orange.dummy)
+names(res.penalty.all)
 res.penalty.all$Ttest
 
 #Facilitation with the JAR function
+library(SensoMineR)
+res.jar <- JAR(orange, col.p = 2, col.j = 1, col.pref = 3)
 res.jar <- JAR(orange, col.p = 2, col.j = 1, col.pref = 3, jarlevel="JAR")
 res.jar$penalty2
 
@@ -115,6 +132,11 @@ plot.JAR(res.jar, name.prod = "2JPR", model = 2)
 
 #The graphical output is not informative when the levels of the sensory attributes are the same. 
 #Consequently, they are changed with the paste() function, to add the name of the attribute in front of its levels.
+j<- 5
+colnames(orange)[j]
+levels(orange[,j])[1]
+paste(colnames(orange)[j], levels(orange[,j])[1], sep=".")
+
 for (j in 4:9) levels(orange[,j]) <- c(paste(colnames(orange)[j], levels(orange[,j])[1], sep="."),"JAR",
                                        paste(colnames(orange)[j], levels(orange[,j])[3], sep="."))
 summary(orange)
@@ -145,7 +167,7 @@ ggplot(penalties, aes(x = All_products, y = JPR)) +
   geom_abline(intercept = 0, slope = 1) +
   xlab("Penalties for all products") +
   ylab("Penalties for JPR") +
-  ggtitle("Impact of defects all versus JPR")
+  ggtitle("Impact of defects: product space versus JPR")
 
 # Fixed coordinates (equal scales) with coord_fixed
 # The coord_fixed function is very useful in case you want a 
@@ -163,7 +185,7 @@ ggplot(penalties, aes(x = All_products, y = JPR)) +
   geom_abline(intercept = 0, slope = 1) +
   xlab("Penalties for all products") +
   ylab("Penalties for JPR") +
-  ggtitle("Impact of defects all versus JPR") +
+  ggtitle("Impact of defects: product space versus JPR") +
   coord_fixed() +
   ylim(-2,0.5) +
   xlim(-2,0.5)
@@ -173,13 +195,14 @@ ggplot(penalties, aes(x = All_products, y = JPR)) +
 #https://ggrepel.slowkow.com/reference/geom_text_repel.html
 #attempt ggrepel
 
+library(ggrepel)
 ggplot(penalties, aes(x = All_products, y = JPR)) +
   geom_point() +
   geom_text_repel(label = rownames(penalties)) +
   geom_abline(intercept = 0, slope = 1) +
   xlab("Penalties for all products") +
   ylab("Penalties for JPR") +
-  ggtitle("Impact of defects all versus JPR") +
+  ggtitle("Impact of defects: product space versus JPR") +
   coord_fixed() +
   ylim(-2,0.5) +
   xlim(-2,0.5)
@@ -192,7 +215,7 @@ ggplot(penalties, aes(x = All_products, y = JPR)) +
   geom_abline(intercept = 0, slope = 1) +
   xlab("Penalties for all products") +
   ylab("Penalties for JPR") +
-  ggtitle("Impact of defects all versus JPR") +
+  ggtitle("Impact of defects: product space versus JPR") +
   coord_fixed() +
   ylim(-2,0.5) +
   xlim(-2,0.5) +
@@ -211,9 +234,20 @@ orange$Liking.cat <- as.factor(orange$Liking)
 res.mca <- MCA(orange[,-1], quanti.sup = 2, quali.sup = c(1,9), graph = F)
 plot.MCA(res.mca, invisible = c("ind","var"), title = "Understanding defects profiles (sup. var.)")
 
+#
+plot.MCA(res.mca, invisible = "ind", title = "Understanding defects profiles (sup. var.)")
+names(res.mca)
+names(res.mca$var)
+res.mca$var$coord
+rownames(res.mca$var$coord)
+mod.active <- rownames(res.mca$var$coord)
+
+str_detect(mod.active, "JAR")
+which(str_detect(mod.active, "JAR"))
+mod.active[which(str_detect(mod.active, "JAR"))]
+
 mod <- "JAR"
-active.mod <- rownames(res.mca$var$coord)
-mod.select <- active.mod[which(str_detect(active.mod, mod))]
+mod.select <- mod.active[which(str_detect(mod.active, mod))]
 plot.MCA(res.mca, invisible = "ind", selectMod = c(mod.select,rownames(res.mca$quali.sup$coord)))
 
 #As mentioned previously, the juices were chosen according to 3 factors: the question arises as to whether the structure 
@@ -248,4 +282,5 @@ for (i in 1:dim(orange)[1]){
   }
 }
 
-orange <- cbind(orange,exp.design) 
+orange <- cbind(orange, exp.design)
+orange[1:5,]
