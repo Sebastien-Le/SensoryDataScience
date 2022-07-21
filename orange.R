@@ -33,19 +33,18 @@ ggplot(tab, aes(x = Var1, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange")
 
 #2nd attempt
-library(stringr)
 ggplot(tab, aes(x = Var1, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange") +
   xlab("Modalities") +
   ylab("Number of occurrences") +
-  ggtitle(str_glue("Distribution of modalities for the attribute Io")) 
+  ggtitle("Distribution of modalities for the attribute Io")
 
 #3rd attempt
 ggplot(tab, aes(x = Var1, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange") +
   xlab("Modalities") +
   ylab("Number of occurrences") +
-  ggtitle(str_glue("Distribution of modalities for the attribute Io")) +
+  ggtitle("Distribution of modalities for the attribute Io") +
   theme_minimal()
 
 #The same type of visualization can be obtained by product.
@@ -58,7 +57,7 @@ JPA <- ggplot(tab[tab$Var1 == "1JPA",], aes(x = Var2, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange") +
   xlab("Modalities") +
   ylab("Number of occurrences") +
-  ggtitle(str_glue("Distribution for the attribute Io and 1JPA")) +
+  ggtitle("Distribution for the attribute Io and 1JPA") +
   theme_minimal()
 
 JPA
@@ -67,7 +66,7 @@ TWA <- ggplot(tab[tab$Var1 == "7TWA",], aes(x = Var2, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange") +
   xlab("Modalities") +
   ylab("Number of occurrences") +
-  ggtitle(str_glue("Distribution for the attribute Io and 7TWA")) +
+  ggtitle("Distribution for the attribute Io and 7TWA") +
   theme_minimal()
 
 TWA
@@ -85,7 +84,7 @@ JPA <- ggplot(tab[tab$Var1 == "1JPA",], aes(x = Var2, y = Freq)) +
   xlab("Modalities") +
   ylab("Number of occurrences") +
   ylim(0, 45) +
-  ggtitle(str_glue("Distribution for the attribute Io and 1JPA")) +
+  ggtitle("Distribution for the attribute Io and 1JPA") +
   theme_minimal()
 
 TWA <- ggplot(tab[tab$Var1 == "7TWA",], aes(x = Var2, y = Freq)) +
@@ -93,7 +92,7 @@ TWA <- ggplot(tab[tab$Var1 == "7TWA",], aes(x = Var2, y = Freq)) +
   xlab("Modalities") +
   ylab("Number of occurrences") +
   ylim(0, 45) +
-  ggtitle(str_glue("Distribution for the attribute Io and 7TWA")) +
+  ggtitle("Distribution for the attribute Io and 7TWA") +
   theme_minimal()
 
 plot_grid(JPA, TWA, labels = c("A","B"), ncol = 2, nrow = 1)
@@ -121,7 +120,6 @@ res.penalty.all$Ttest
 
 #Facilitation with the JAR function
 library(SensoMineR)
-res.jar <- JAR(orange, col.p = 2, col.j = 1, col.pref = 3)
 res.jar <- JAR(orange, col.p = 2, col.j = 1, col.pref = 3, jarlevel="JAR")
 res.jar$penalty2
 
