@@ -211,6 +211,8 @@ goji.s1[1:5,]
 goji.s2[1:5,]
 
 goji.s1.s2 <- cbind(goji.s1[,-c(1:6,13:14)], goji.s2[,-c(1:6,13:14)])
+print("Done!")
+
 res.mfa <- MFA(goji.s1.s2, group = c(6,6), type = c("n","n"), name.group = c("S1","S2"), graph = F)
 plot.MFA(res.mfa, choix = "group")
 

@@ -432,14 +432,54 @@ Apply the `descfreq()` function to understand the base effect and the dose effec
 
 Since consumers have tested the products twice, many analyses can be performed to answer many sensory questions:
 
-- Penalties can be estimated for both sessions of course. They can also be estimated for each session, and compared to each other. 
+- Penalties can be estimated for each session, and compared to each other. 
 
-- From a multivariate point of view, profiles of defects can be studied all sessions combined, but they can also be compared to each other with special methods such as Multiple Factor Analysis. 
+- From a multivariate point of view, profiles of defects for each session can be compared to each other with special methods such as Multiple Factor Analysis (MFA). 
 
-- If the product is the main object of interest, it is also possible to build a contingency table with products as rows, defects as columns, at the intersection of one row and one column, the number of times a given defect has been identified for a given row.
+- If the product is the main object of interest, it is also possible to build contingency tables for each session, with products as rows, defects as columns. They can also be compared to each other with MFA.
 
+As you can guess, we are going to talk about multiple tables and of course Multiple Factor Analysis, the *Queen* of the multiple tables methods.
 
+Similarly to the beginning of the case study with the liking and the typicity we are going to create two objects, one per session, named respectively `goji.liking.s1` and `goji.liking.s2`. Here, we are interested in comparing the impact of the defects on the liking for the two sessions.
 
+<codeblock id="04_2_26">
+</codeblock>
+
+Once the objects are created, apply the `JAR()` function, store the results and build an object that will allow you to compare the penalties for sessions 1 and 2.
+
+<codeblock id="04_2_27">
+</codeblock>
+
+Now it's time for the visual comparison between the penalties. Take your time and run a very similar code to the one you used for comparing liking and typicity.
+
+<codeblock id="04_2_28">
+</codeblock>
+
+To compare the profiles of defects of each session, build a multiple table by combining data from session 1 to data from session 2. Instead of binding by rows, you have to bind by columns. To do so, you have to order the two newly created data sets, by consumer and by product, to make sure that you are not mixing the data.
+
+<codeblock id="04_2_29">
+</codeblock>
+
+Last but not least, the very important `MFA()` function. Before applying it, you need to know what it does. As you want to compare session 1 and session 2, the function needs to understand the way your data are organised. In other words, you have to specify that there are two groups of variables and that each group contains 6 variables (6 sensory attributes). You also have to specify the type of each group, whether the group is made of quantitative variables, qualitative variables, or is a contingency table.
+
+Save the results in an object named `res.mfa`, use the `plot.MFA()` to get the representation of the groups.
+
+<codeblock id="04_2_30">
+</codeblock>
+
+The most important thing right now is to understand how to use the function. The graphical output is quite easy to understand as it shows that the structure induced by the profiles of defects has not changed from one session to the other.
+
+Let's quickly do the same type of analysis at a product level. In other words, let's build 2 contingency tables.
+
+<codeblock id="04_2_31">
+</codeblock>
+
+Now you have to think about an important argument, the type of your groups. This analysis is quite unusual, although very important, it's a Multiple Factor Analysis on Contingency Tables. We will come back later on this one in the next case study.
+
+<codeblock id="04_2_32">
+</codeblock>
+
+As you can see, the structure induced on the products by the defects is globally the same from one session to the other.
 
 </exercise>
 
