@@ -4,7 +4,7 @@ colnames(exp.design) <- c("Brand","Pulp","Temperature")
 for (i in 1:dim(orange)[1]){
   pdt <- orange$Juice[i]
   pdt_split <- str_split(pdt,"")[[1]]
-  if(pdt_split[2]=="J"){
+  if(pdt_split[2]=="____"){
     exp.design[i,1] <- "Jafaden"
   }
   else{
@@ -16,7 +16,7 @@ for (i in 1:dim(orange)[1]){
   else{
     exp.design[i,2] <- "Without pulp"
   }
-  if(pdt_split[4]=="A"){
+  if(pdt_split[4]=="____"){
     exp.design[i,3] <- "Ambient"
   }
   else{
@@ -24,5 +24,5 @@ for (i in 1:dim(orange)[1]){
   }
 }
 
-orange <- cbind(orange, exp.design)
+orange <- ____(orange, exp.design)
 orange[1:5,]

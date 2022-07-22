@@ -1,0 +1,1 @@
+plot.MCA(res.mca, invisible = "____", title = "Understanding defects profiles (sup. var.)")

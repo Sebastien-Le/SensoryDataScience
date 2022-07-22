@@ -1,4 +1,5 @@
-mod <- "JAR"
-active.mod <- rownames(res.mca$var$coord)
-mod.select <- active.mod[which(str_detect(active.mod, mod))]
-plot.MCA(res.mca, invisible = "ind", selectMod = c(mod.select,rownames(res.mca$quali.sup$coord)))
+names(res.mca)
+names(res.mca$var)
+res.mca$var$coord
+____(res.mca$var$coord)
+mod.active <- ____(res.mca$var$coord)

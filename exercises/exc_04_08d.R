@@ -1,0 +1,11 @@
+library(ggrepel)
+ggplot(penalties, aes(x = All_products, y = JPR)) +
+  geom_point() +
+  geom_text_repel(label = ____(____)) +
+  geom_abline(intercept = 0, slope = 1) +
+  xlab("Penalties for all products") +
+  ylab("Penalties for JPR") +
+  ggtitle("Impact of defects: product space versus JPR") +
+  coord_fixed() +
+  ylim(-2,0.5) +
+  xlim(-2,0.5)
