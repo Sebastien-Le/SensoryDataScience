@@ -1,0 +1,1 @@
+descfreq(contingency[c(1:9),])

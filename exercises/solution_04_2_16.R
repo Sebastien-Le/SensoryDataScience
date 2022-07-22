@@ -1,0 +1,1 @@
+plot.MCA(res.mca, choix = "quanti.sup")
