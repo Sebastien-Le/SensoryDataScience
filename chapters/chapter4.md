@@ -203,24 +203,48 @@ Use the `MCA()` function of the `FactoMineR` package. Pay attention to the notio
 
 In order not to be overwhelmed by the results, it is important to look at them little by little, hence the `graph` set to `FALSE`: MCA is a graphical method, the results provided by the function are mainly graphical outputs, and therefore you have to think carefully about what you want to see. Like an investigator you have to explore the graphs little by little.
 
+By default, for multiple correspondence analysis, the main output is the visualization of the individuals and the categories. These two scatter plots, the one of the individuals and the one of the categories, are represented in the same space as their relative position to each other is interpretable. This graph is often cluttered because of the large number of objects to be represented: it is important to know how to select them.
+
+In the console, represent the cloud of individuals on the one hand, and the cloud of modalities on the other hand.
+
 <codeblock id="04_12">
 </codeblock>
 
-The representation of the supplementary variables suggests to get rid of the consumer variable  but to keep the product variable. Use the position of the consumer variable to get rid of it.
+The representation of the supplementary variables suggests to get rid of the consumer variable, but to keep the product variable. To solve these problems, use the position of the consumer variable to get rid of it. Visualize the liking variable that has been considered as a quantitative supplementary variable.
 
 <codeblock id="04_13">
 </codeblock>
 
-The representation of the liking variable suggests to recode it as a factor.
+What do you think about the link between the liking variable and the two first dimensions, the link between the categories of the product effect and the two first dimensions; finally the link between the liking and the products? In other words, the representation of the liking variable suggests to recode it as a factor, in order to visualize it in the same representation as the one of the defects and the categories.
+
+Use the `as.factor()` function to recode the liking variable, set the arguments properly to visualize the categories of liking with the categories of the product effect.
 
 <codeblock id="04_14">
 </codeblock>
 
-Use the `selectMod` argument to visualize defects and qualities eventually.
+Now, let's connect these supplementary information to the core of the analysis: the defects. 
+
+<codeblock id="04_14b">
+</codeblock>
+
+As you can see, the visualization is quite cluttered. We need to find a way to select the categories we want to display. Use the `selectMod` argument to visualize defects and qualities eventually. To use this very important argument, you need to know the labels of the objects you want to represent. You will see that it is possible to select these names in a very simple way.
+
+First, store the names of the active categories in an object named `mod.active` (modalities and categories represent the same concept).
 
 <codeblock id="04_15">
 </codeblock>
 
+Then, use the `str_detect()` function of the `stringr` package to select the categories that contain the string `JAR` for instance.
+
+<codeblock id="04_15a">
+</codeblock>
+
+Finally, create an R object in which you store the value `JAR`, and run the `plot.MCA()` function with the `selectMod` argument that has been properly set.
+
+<codeblock id="04_15b">
+</codeblock>
+
+Actually, you are learning to code a function using the notion of argument through the object in which you store a value.
 
 ## The *R* corner: the str_split() function of the stringr package
 <br>
@@ -233,6 +257,8 @@ As mentioned previously, the juices were chosen according to 3 factors: the ques
 Once the information added, you can use it as supplementary variables.
 
 </exercise>
+
+
 
 <exercise id="2" title="Act 2 - easy: the goji case study, an example of product formulation">
 

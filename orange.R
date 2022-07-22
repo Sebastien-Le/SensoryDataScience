@@ -240,6 +240,7 @@ res.mca$var$coord
 rownames(res.mca$var$coord)
 mod.active <- rownames(res.mca$var$coord)
 
+library(stringr)
 str_detect(mod.active, "JAR")
 which(str_detect(mod.active, "JAR"))
 mod.active[which(str_detect(mod.active, "JAR"))]
