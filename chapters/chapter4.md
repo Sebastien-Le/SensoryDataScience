@@ -256,6 +256,9 @@ As mentioned previously, the juices were chosen according to 3 factors: the ques
 
 Once the information added, you can use it as supplementary variables.
 
+<codeblock id="04_17">
+</codeblock>
+
 </exercise>
 
 
@@ -268,9 +271,9 @@ Once the information added, you can use it as supplementary variables.
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
 
-Why is this case study different from the previous one? First, the context is different, we are dealing with formulated products according to some experimental design. Then, consumers have evaluated the products twice (which is really rare, but can happen).
+Why is this case study different from the previous one? First, the context is different, we are dealing with formulated products according to some experimental design. Then, consumers have evaluated the products twice (which is really rare, but can happen). Finally, consumers have evaluated the products through liking and typicity, in other words, through two quantitative variables. They represent two different dimensions of perception that might be linked.
 
-Basically, we are going to use the same strategy as for the orange data, but with a particular focus on the experimental factors, and on the comparison between the two sessions.
+Basically, we are going to use the same strategy as for the orange data, but in order to compare the impact of defects on liking on the one hand, on typicity on the other hand. It might be interesting to see whether some defects have more impact on liking than on typicity. Finally, we will focus on the experimental factors, and on the comparison between the two sessions.
 
 Let's first import the data, and make sure that what should be categorical is categorical.
 
@@ -282,10 +285,150 @@ As data are not considered as categorical, recode them with the `as.factor()` fu
 <codeblock id="04_2_02">
 </codeblock>
 
-Then, before diving into the penalty analysis, let's visualize the data.
+Let's first look at the penalties across sessions, and see, for example, if the defects have a different impact on liking and typicity. To do so, use the `JAR()` function of the `SensoMineR` package. Remember that the input of this function is the smallest possible JAR data set consisting of the consumer variable, the product variable, the liking (or assimilated) variable, and finally the sensory attributes evaluated on a JAR scale. In other words, apply the `JAR()` function twice, with first the liking variable, then the typicity variable. Save the penalties and compare them.
 
-<codeblock id="04_2_03">
+Create two R objects named `goji.liking` and `goji.typicity`, in which you store the proper information: think carefully about the minimum information to estimate penalties.
+
+<codeblock id="04_2_04">
 </codeblock>
+
+Run the `JAR()` function of the `SensoMineR` package on both objects, store the results in two separate objects and compare the estimation of the penalties for the model that takes into account all the sensory attributes at the same time.
+
+<codeblock id="04_2_04a">
+</codeblock>
+
+Obviously, comparing penalties estimated from the liking and the typicity is not straightforward. As you know, a graph is worth a thousand words. Let's plot the two sets of penalties. To do so, we are going to build the proper data set as input of the `ggplot()` and `geom_point()` functions: a data frame, where rows correspond to defects and columns to penalties for the liking and the typicity.
+
+<codeblock id="04_2_04b">
+</codeblock>
+
+Let's now plot these two vectors of penalties with the `ggplot()` and `geom_point()` functions.
+
+<codeblock id="04_2_04c">
+</codeblock>
+
+It is obvious that this visualization must be drastically improved. As in the introduction, you have to think about a proper frame of representation: think about the limits of the x-axis and the y-axis, think about the scales of the x-axis and the y-axis (`coord_fixed()`).
+
+<codeblock id="04_2_04d">
+</codeblock>
+
+Once the limits are set, think about the labels of the defects, as this is the main information to be displayed. Use the `geom_text_repel()` of the `ggrepel` package to display properly the labels.
+
+<codeblock id="04_2_04e">
+</codeblock>
+
+Unfortunately, the visualization needs some improvements: pay attention to the warning message that tells you that there are "9 unlabeled data points (too many overlaps). Consider increasing max.overlaps".
+
+<codeblock id="04_2_04f">
+</codeblock>
+
+And now, the final polish: play with the themes and find the one that suits best with your mood.
+
+<codeblock id="04_2_04g">
+</codeblock>
+
+What do you think about this visualization?
+
+Let's now move to the multivariate analysis of the defects. In other words, let's study the profiles of defects. As presented in the orange case study, we're going to use Multiple Correspondence Analysis.
+
+First, as always, run the `summary()` function on the goji data set. It allows you to check if you are working on the proper data, and to choose the <span style="font-weight : bold">active variables</span> that define your profile of defects.
+
+<codeblock id="04_2_10">
+</codeblock>
+
+The active variables are in our case the sensory attributes, all the other variables are going to be considered as illustrative.
+
+<codeblock id="04_2_11">
+</codeblock>
+
+As shown, the shape of the defects profiles is kind of particular. It shows that there are special profiles with defects that are quite rare: unfortunately, categories that are rarely chosen have an important impact in the analysis. There's a way to solve this problem: recoding the levels and aggregating, in our case, *not enough* and *really not enough*, *too much* and *really too much*. The recoding option will not be shown here, we will use a special argument of the `MCA()` function, `level.ventil`. This argument is, in practice, really important when dealing with categorical data. This argument is a proportion corresponding to the level under which the category is ventilated; by default, 0 and no "*ventilation*" is done (*ventiler* is a french verb that means to distribute).
+
+<codeblock id="04_2_12">
+</codeblock>
+
+As shown, the defects that have been rarely chosen have been aggregated randomly to some other defects of the same attribute. It will not change the interpretation of the analysis, but it will facilitate it. Now, represent the active categories, and the supplementary categories.
+
+<codeblock id="04_2_13">
+</codeblock>
+
+The output still needs to be improved. Let's get rid of the uninformative factors (at least for this analysis), and let's keep the informative ones, *i.e.* the product effect, the base effect and the dose of goji effect.
+
+<codeblock id="04_2_14">
+</codeblock>
+
+Just like in the orange case study, select the JAR categories and the formulation categories.
+
+<codeblock id="04_2_15">
+</codeblock>
+
+Finally, represent the liking and the typicity variables as supplementary quantitative variables.
+
+<codeblock id="04_2_16">
+</codeblock>
+
+What do you think about all these visualizations?
+
+This part is completely new compared to what have been shown in the orange case study. We're going to study the data at a product level. We are going to build a <span style="font-weight : bold">contingency table</span>, with as rows, the products, and as columns, the defects: at the intersection of one row and one column, the number of times a given defect has been qualified a given product. We have seen this type of table in the orange case study for visualization purposes: let's now analyze this type of table. But before that, let's build it.
+
+Select the product effect and the sensory attributes. Initialize your contingency table. Keep on building it with a loop.
+
+<codeblock id="04_2_17">
+</codeblock>
+
+It's important to understand this code. You will see in the next case study that it will be simplified using a very powerful function. Now, we're going to study the defects at a formulation level and not at a product level. In other words, we're going to build contingency tables for the base effect and the dose effect. To do so, we are going to use an important function that will prevent you from making loops: that's why this function is so important, loops are not that elegant, nor efficient. Don't hesitate to have a look at https://www.r-bloggers.com/2010/08/a-brief-introduction-to-%E2%80%9Capply%E2%80%9D-in-r/.
+
+<codeblock id="04_2_18">
+</codeblock>
+
+Let's do that for the dose effect...
+
+<codeblock id="04_2_19">
+</codeblock>
+
+...and bind it with the main contingency table.
+
+<codeblock id="04_2_20">
+</codeblock>
+
+We are now ready for a very important multivariate analysis: Correspondence Analysis, nothing else but the graphical version of the very important <span style="font-weight : bold">Chi-square test</span>.
+
+As for all exploratory multivariate analysis, the main questions before running the analysis are: 
+
+- what do you want to represent?
+- how do you want to represent it?
+
+In fact, in practice, we rarely answer the first question, as we often want to study all the rows of our data set. But in any case, we must answer the second question, as it constitutes the point of view according to which we analyze the data.
+
+The second question corresponds to the choice of the <span style="font-weight : bold">active</span> variables *versus* the <span style="font-weight : bold">illustrative</span> ones. You have to do that each time.
+
+The first question corresponds to the choice of the <span style="font-weight : bold">active</span> rows *versus* the <span style="font-weight : bold">illustrative</span> ones. It rarely happens, except in this case study.
+
+As you can easily guess, the products are going to be active, and the categories associated with the formulation are going to be illustrative. Run the `CA()` function of the `FactoMineR` package, by specifying the supplementary (illustrative) rows. Save the results in an object named `res.ca`. 
+
+<codeblock id="04_2_21">
+</codeblock>
+
+Use the `plot.CA()` function to represent the rows only.
+
+<codeblock id="04_2_22">
+</codeblock>
+
+Use the very important `ellipseCA()` function to represent *confidence ellipses* around the products.
+
+<codeblock id="04_2_23">
+</codeblock>
+
+These graphical representations are very useful: they allow us to understand the data, but also to communicate and convey messages. However, they are not sufficient in themselves, we need a tool to automatically describe a contingency table: rows *versus* columns and *vice versa*. This tool is the very important `descfreq()` function of the `FactoMineR` package.
+
+<codeblock id="04_2_24">
+</codeblock>
+
+Apply the `descfreq()` function to understand the base effect and the dose effect.
+
+<codeblock id="04_2_25">
+</codeblock>
+
+<br>
 
 Since consumers have tested the products twice, many analyses can be performed to answer many sensory questions:
 
@@ -295,22 +438,7 @@ Since consumers have tested the products twice, many analyses can be performed t
 
 - If the product is the main object of interest, it is also possible to build a contingency table with products as rows, defects as columns, at the intersection of one row and one column, the number of times a given defect has been identified for a given row.
 
-Let's first look at the penalties across sessions, and see, for example, if the defects have a different impact on liking and typicity. To do so, use the `JAR()` function of the `SensoMineR` package. Remember that the input of this function is the smallest possible JAR data set consisting of the consumer variable, the product variable, the liking (or assimilated) variable, and finally the sensory attributes evaluated on a JAR scale. In other words, apply the `JAR()` function twice, with first the liking variable, then the typicity variable. Save the penalties and compare them.
 
-<codeblock id="04_2_04">
-</codeblock>
-
-Now that the penalties for the liking and for the typicity are estimated, let's compare them to each other graphically.
-
-<codeblock id="04_2_05">
-</codeblock>
-
-The same type of analysis can be done per session.
-
-Let's have a look at the profiles of defects. The idea is to represent the profiles all sessions combined, and to see if the structure induced by the profiles can be explained by supplementary information such as the experimental factors used to formulate the products.
-
-<codeblock id="04_2_06">
-</codeblock>
 
 
 </exercise>

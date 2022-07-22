@@ -57,8 +57,8 @@ ggplot(penalties, aes(x = Liking, y = Typicity)) +
   ylab("Penalties for Typicity") +
   ggtitle("Impact of defects on liking and typicity") +
   coord_fixed() +
-  ylim(-2.8,0.5) +
-  xlim(-2.8,0.5)
+  ylim(-2.8,0.3) +
+  xlim(-2.8,0.3)
 
 
 #https://ggrepel.slowkow.com/index.html
@@ -115,12 +115,12 @@ plot.MCA(res.mca, invisible = c("var", "quali.sup"), label = "no")
 #2nd attempt
 res.mca <- MCA(goji, quali.sup = 1:6, quanti.sup = 13:14, graph = F, level.ventil = 0.1)
 plot.MCA(res.mca, invisible = c("var", "quali.sup"), label = "no")
+
 plot.MCA(res.mca, invisible = c("ind", "quali.sup"))
 plot.MCA(res.mca, invisible = "ind")
 
 #3rd attempt
 res.mca <- MCA(goji[,-c(1:3)], quali.sup = 1:3, quanti.sup = 10:11, graph = F, level.ventil = 0.1)
-plot.MCA(res.mca, invisible = c("var", "quali.sup"), label = "no")
 plot.MCA(res.mca, invisible = "ind")
 
 library(stringr)
@@ -129,6 +129,7 @@ all.attr <- rownames(res.mca$var$coord)
 mod.select <- all.attr[which(str_detect(all.attr, mod))]
 
 plot.MCA(res.mca, invisible = "ind", selectMod = c("orange","pineapple","apple","20","10","0",mod.select))
+
 plot.MCA(res.mca, choix = "quanti.sup")
 
 ## CA and descfreq on contingency table

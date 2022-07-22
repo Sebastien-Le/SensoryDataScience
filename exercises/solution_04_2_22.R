@@ -1,0 +1,1 @@
+plot.CA(res.ca, invisible = "col")

@@ -1,0 +1,1 @@
+ellipseCA(res.ca, ellipse = "row", invisible = "col")
