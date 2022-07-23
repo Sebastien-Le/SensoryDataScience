@@ -490,10 +490,121 @@ As you can see, the structure induced on the products by the defects is globally
 
 <br>
 
-To get a graphical representation of the density for a sensory attribute, we use the `density()` function, and the very important `plot()` function.
+Rest assured, from now on the code should not be a problem for you. It's all about sensory issues as we already have most of our statistical tools. What is common to the last case study? The notion of formulation factors...in this case study, we are building sound logos using experimental factors. 
 
-<codeblock id="01_28">
+What is different? A lot of things. First, there are a lot of products to assess (27 sound logos), second we have not only JAR data, but also Check All That Apply data (CATA), and textual data, the infamous <span style="font-weight : bold">Why?</span> question. Finally, last but not least, we are not working with liking, it's a lot more conceptual. We are asking consumers to assess the notion of appropriateness.
+
+The statistical tools, or concepts, we are going to play with are the contingency tables (like in the previous studies), some multiple tables, a lot of frequency tests.
+
+Let's warm up with the usual routine: import the data and make sure that data are well imported.
+
+<codeblock id="04_s1">
 </codeblock>
+
+According to the `summary()` function, rename the variable at column 30 as `Serious`, and recode the data with the `as.factor()` function, except variables `Adequation` and `Why`. Check the recoding with the `summary()` function.
+
+<codeblock id="04_s2">
+</codeblock>
+
+Change the values of the levels of the CATA data, reorder the levels of the JAR data.
+
+<codeblock id="04_s3">
+</codeblock>
+
+Run the following code in order to create a very helpful function that will simply produce contingency tables.
+
+<codeblock id="04_s4">
+</codeblock>
+
+The input of the function is a matrix constituted of categorical variables. The function calculates contingency tables crossing the first column of the matrix and all the others, then aggregates them all.
+
+Build an temporary matrix by selecting the product effect and the CATA data. Apply the `cont.categories()` function to the temporary data set. Save the results in an R object named  `contingency.CATA`. With the `t()` function, transpose the matrix to get the sounds as rows.
+
+<codeblock id="04_s5">
+</codeblock>
+
+Use the object `contingency.CATA` to get the number of times a given instrument has been associated with a CATA item.
+
+<codeblock id="04_s6">
+</codeblock>
+
+Do the same thing for the other factors, the tempo and the pitch.
+
+<codeblock id="04_s7">
+</codeblock>
+
+Aggregate all these vectors into an R object named `row.sup`, then aggregate `row.sup` to `contingency.CATA`. Keep one column out of two, the yes column for instance.
+
+<codeblock id="04_s8">
+</codeblock>
+
+Use the `str_replace()` function of the `stringr` package to change the names of the columns, and to get rid of the yes.
+
+<codeblock id="04_s9">
+</codeblock>
+
+Now, do the same thing for the JAR data, until the creation of the `row.sup` object.
+
+<codeblock id="04_s10">
+</codeblock>
+
+In this part, we are going to create three columns from the names of the sounds, each column being one of the three factors used to create the sounds.
+
+<codeblock id="04_s11">
+</codeblock>
+
+Aggregate the three experimental factors to the object `contingency.JAR`, transform the `row.sup` object as a data frame.
+
+<codeblock id="04_s12">
+</codeblock>
+
+Use the `bind_rows()` function of the `dplyr` package to aggregate the objects `contingency.JAR` and `row.sup`.
+
+<codeblock id="04_s13">
+</codeblock>
+
+As you can see, building the `contingency.JAR` object was a little bit more complicated. It is mainly due to the fact that you are aggregating objects with different dimensions. Now, let's build our final data set named `contingency.sennheiser`.
+
+<codeblock id="04_s14">
+</codeblock>
+
+From the last case study, you already know how to characterize the rows and columns of a contingency table, how to run a Correspondence Analysis on the JAR data, or on the CATA data (the idea is the same). You also know how to add supplementary rows and supplementary columns. You should try by yourself before going further.
+
+<codeblock id="04_s15">
+</codeblock>
+
+This following part is conceptually more complicated, as we want to compare the structure induced on the sound logos by the CATA on the one hand, the JAR on the other hand. Actually, asking consumers to evaluate an attribute according to a concept (in our case the adequacy), and not according to the traditional liking, is a little bit risky. It is then important to find a way to check if consumers have well understood the task. If the JAR are in the same area as the values of Sennheiser, then we can rely on the data.
+
+Run an MFA on the `contingency.sennheiser` data. Try to understand the meaning of these visualizations.
+
+<codeblock id="04_s16">
+</codeblock>
+
+Represent the columns of your contingency data. As you know, rows and columns live in the same space.
+
+<codeblock id="04_s17">
+</codeblock>
+
+As you can see, this visualization is not optimal. We will make another one. To do so, we will use the coordinates of the columns calculated by the MFA. From these coordinates, we will represent the columns with the `ggplot()` and `geom_point()` functions.
+
+Build an R object containing the coordinates of the columns on the first five dimensions, as well as their names, and finally the group these columns belong to, CATA or JAR.
+
+<codeblock id="04_s18">
+</codeblock>
+
+Now that you have built the proper data set, use the `summary()` function to get the limits of your graph, then the `ggplot()` and `geom_point()` functions to plot the graph. You can have a look at https://ggplot2-book.org/.
+
+<codeblock id="04_s19">
+</codeblock>
+
+As in the previous case studies, let's select some columns, and let's represent for instance the columns associated with the JAR level.
+
+<codeblock id="04_s20">
+</codeblock>
+
+<center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
+<br>
+
 
 
 </exercise>
@@ -505,6 +616,7 @@ To get a graphical representation of the density for a sensory attribute, we use
 
 <codeblock id="tuto_13">
 </codeblock>
+
 
 <codeblock id="tuto_14">
 </codeblock>

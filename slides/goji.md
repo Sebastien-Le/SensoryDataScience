@@ -2,7 +2,7 @@
 type: slides
 ---
 
-# On the impact of Goji berries in the liking of multi-fruit juices
+# On the impact of Goji berries in the liking and typicity of multi-fruit juices
 
 ---
 
