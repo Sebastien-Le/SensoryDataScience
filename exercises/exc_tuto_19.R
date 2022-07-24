@@ -1,0 +1,1 @@
+res.mfa <- MFA(scores, group = rep(57, 3), type = rep("s", 3), name.group = c("Sentiment", "Machine", "Liking"))

@@ -1,2 +1,3 @@
-data_sent <- get_sentences(data_leather)
-sentiment1 <- sentiment(data_sent,polarity_dt=mykey_pola,valence_shifters_dt = mykey_val)
+res.sent <- get_sentences(leather$Text)
+res.sentiment <- sentiment(res.sent, polarity_dt = polarity, valence_shifters_dt = val.shift)
+print("Done!")

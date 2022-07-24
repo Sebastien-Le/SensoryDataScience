@@ -1,18 +1,7 @@
-data_tissu$Text <- tolower(data_tissu$Text)
-stw_en <- stopwords("en")
-stw_en <- stw_en[-which(stw_en%in%c("no","not"))]
-data_tissu$Text <- removeWords(data_tissu$Text, stw_en)
-
-supprespace <- function(x){
-  a <- unlist(strsplit(x," "))
-  if (length(which(a==""))==0){
-    paste(a, collapse = " ")
-  }
-  else{
-    paste(a[-which(a=="")],collapse=" ")
-  }
+prod.Liking <- matrix(0, nrow = 10, ncol = 57)
+for (j in 0:56){
+  for (i in 1:10) prod.Liking[i,j+1] <- leather.score$Liking[j*10+i]
 }
-
-for (i in 1:N){
-  data_tissu$Text[i] <- supprespace(data_tissu$Text[i])
-}
+rownames(prod.Liking) <- levels(as.factor(leather.score$Product))
+colnames(prod.Liking) <- paste("L",levels(leather.score$ID_juge),sep = "")
+print("Done!")

@@ -1,5 +1,3 @@
-sentiment1$Liking <- factor(sentiment1$Liking)
-sentiment1$Hedo_cat <- factor(sentiment1$Hedo_cat)
-
-AovSum(sentiment1$sentiment ~ sentiment1$Hedo_cat)
-AovSum(sentiment1$sentiment ~ sentiment1$Liking)
+res.consistency <- AovSum(Sentiment ~ Hedo_cat, data = leather)
+res.consistency$Ftest
+res.consistency$Ttest

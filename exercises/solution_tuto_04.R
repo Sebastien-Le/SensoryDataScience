@@ -1,7 +1,4 @@
-key_pola <- data.frame(
-  mots = dico_pola$Word,
-  polarite = dico_pola$Valency,
-  stringsAsFactors = FALSE)
-mykey_pola <- as_key(key_pola)
-
-mykey_val <- as_key(dico_val)
+library(sentimentr)
+polarity <- as_key(dict.polarity)
+val.shift <- as_key(dict.val.shift)
+print("Done!")

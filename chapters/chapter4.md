@@ -677,22 +677,62 @@ You can do the same thing for the other experimental factors. Let's try.
 <slides source="tissu">
 </slides>
 
-<codeblock id="tuto_13">
+<codeblock id="tuto_01"> 
+</codeblock>
+    
+<codeblock id="tuto_02"> 
 </codeblock>
 
+<codeblock id="tuto_03"> 
+</codeblock>
+    
+<codeblock id="tuto_04"> 
+</codeblock>
+    
+<codeblock id="tuto_05"> 
+</codeblock>
 
-<codeblock id="tuto_14">
+<codeblock id="tuto_06"> 
+</codeblock>
+
+<codeblock id="tuto_07"> 
+</codeblock>
+
+<codeblock id="tuto_08"> 
+</codeblock>
+    
+<codeblock id="tuto_09"> 
+</codeblock>
+
+<codeblock id="tuto_10"> 
+</codeblock>
+    
+<codeblock id="tuto_11"> 
+</codeblock>
+    
+<codeblock id="tuto_12"> 
+</codeblock>
+
+<codeblock id="tuto_13"> 
+</codeblock>
+    
+<codeblock id="tuto_14"> 
 </codeblock>
 
 <codeblock id="tuto_15"> 
 </codeblock>
     
-<codeblock id="tuto_16">
+<codeblock id="tuto_16"> 
 </codeblock>
-      
-<codeblock id="tuto_17">
+    
+<codeblock id="tuto_17"> 
 </codeblock>
 
+<codeblock id="tuto_18"> 
+</codeblock>
+
+<codeblock id="tuto_19"> 
+</codeblock>
 
 </exercise>
 
