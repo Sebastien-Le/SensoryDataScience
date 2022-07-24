@@ -68,7 +68,9 @@ colnames(prod.Sentiment) <- paste("S",levels(leather$ID_juge),sep = "")
 print("Done!")
 
 ##11
-res.pca <- PCA(prod.Sentiment)
+res.pca <- PCA(prod.Sentiment, graph = FALSE)
+plot.PCA(res.pca)
+plot.PCA(res.pca, choix = "var")
 
 #############################
 # ML
@@ -92,7 +94,9 @@ colnames(prod.Valency_ML) <- paste("ML",levels(leather.score$ID_juge),sep = "")
 print("Done!")
 
 ##15
-res.pca <- PCA(prod.Valency_ML)
+res.pca <- PCA(prod.Valency_ML, graph = FALSE)
+plot.PCA(res.pca)
+plot.PCA(res.pca, choix = "var")
 
 ##16
 prod.Liking <- matrix(0, nrow = 10, ncol = 57)
@@ -104,11 +108,18 @@ colnames(prod.Liking) <- paste("L",levels(leather.score$ID_juge),sep = "")
 print("Done!")
 
 ##17
-res.pca <- PCA(prod.Liking)
+res.pca <- PCA(prod.Liking, graph = FALSE)
+plot.PCA(res.pca)
+plot.PCA(res.pca, choix = "var")
 
 ##18
 scores <- cbind(prod.Sentiment, prod.Valency_ML, prod.Liking)
 print("Done!")
 
 ##19
-res.mfa <- MFA(scores, group = rep(57, 3), type = rep("s", 3), name.group = c("Sentiment", "Machine", "Liking"))
+res.mfa <- MFA(scores, group = rep(57, 3), type = rep("s", 3), 
+               name.group = c("Sentiment", "Machine", "Liking"), graph = FALSE)
+plot.MFA(res.mfa, choix = "group")
+plot.MFA(res.mfa, choix = "axes")
+plot.MFA(res.mfa, choix = "ind")
+plot.MFA(res.mfa, partial = "all")

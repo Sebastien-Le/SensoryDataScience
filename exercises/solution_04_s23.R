@@ -5,3 +5,4 @@ sennheiser.text$Why <- gsub(" enough", "enough", sennheiser.text$Why)
 
 sennheiser.text$Why <- gsub("[`^~.',!?;\"]", " ", sennheiser.text$Why)
 sennheiser.text$Why <- gsub("[[:punct:]]", "", sennheiser.text$Why)
+print("Done!")

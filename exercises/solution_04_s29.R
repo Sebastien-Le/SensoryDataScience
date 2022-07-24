@@ -1,0 +1,1 @@
+descfreq(instrument.why, proba = 0.1)

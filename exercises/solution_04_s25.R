@@ -9,3 +9,4 @@ supprespace <- function(x){
 }
 
 for (i in 1:630) sennheiser.text$Why[i] <- supprespace(sennheiser.text$Why[i])
+print("Done!")
