@@ -1,3 +1,3 @@
-res.pca <- PCA(prod.Sentiment, graph = FALSE)
+res.pca <- PCA(____, graph = FALSE)
 plot.PCA(res.pca)
-plot.PCA(res.pca, choix = "var")
+plot.PCA(res.pca, choix = "____")

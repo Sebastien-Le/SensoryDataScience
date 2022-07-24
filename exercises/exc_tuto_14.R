@@ -1,5 +1,5 @@
 leather.score <- leather.score[order(leather.score$ID_juge, leather.score$Product), ]
-prod.Valency_ML <- matrix(0, nrow = 10, ncol = 57)
+prod.Valency_ML <- matrix(0, nrow = 10, ncol = __)
 for (j in 0:56){
   for (i in 1:10) prod.Valency_ML[i,j+1] <- leather.score$Valency_ML[j*10+i]
 }

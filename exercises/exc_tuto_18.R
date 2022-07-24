@@ -1,2 +1,2 @@
-scores <- cbind(prod.Sentiment, prod.Valency_ML, prod.Liking)
+scores <- cbind(____, ____, ____)
 print("Done!")
