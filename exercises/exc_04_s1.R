@@ -1,2 +1,2 @@
-sennheiser <- read.csv2("data/sennheiser.csv")
-summary(sennheiser)
+sennheiser <- ____("data/sennheiser.csv")
+____(sennheiser)

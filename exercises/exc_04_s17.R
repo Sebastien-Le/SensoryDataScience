@@ -1,0 +1,1 @@
+plot.MFA(res.mfa, choix = "freq", invisible = "____")
