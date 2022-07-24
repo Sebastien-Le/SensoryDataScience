@@ -602,8 +602,71 @@ As in the previous case studies, let's select some columns, and let's represent 
 <codeblock id="04_s20">
 </codeblock>
 
+This part is dedicated to <span style="font-weight : bold">textual data</span>, the infamous <span style="font-weight : bold">Why?</span> question. For this kind of data, the preparation phase is really important. Once done, the rest is pretty classic, at least in this part.
+
+Lets' have a look at these data from line 20 to line 60. What can you say from this kind of data?
+
+<codeblock id="04_s21">
+</codeblock>
+
+To facilitate the manipulation of the data, you are going to build a new data set named `sennheiser.text`. Just keep the consumer effect, the product effect, and the answers to the <span style="font-weight : bold">Why?</span> question: in other words, get rid of the empty comments. This situation occurs quite often with consumer data: answering an opened ended question is not an easy task. Don't forget to check that your new data set has been properly created.
+
+<codeblock id="04_s22">
+</codeblock>
+
+## The *R* corner: cleaning textual data
+<br>
+
+Now, we are going to clean the newly created data set. You don't have to know how to do it by heart, but at least you have to understand. Spend some time in the console and try to figure out the meaning of each line of code.
+
+<codeblock id="04_s23">
+</codeblock>
+
+The next step is for the stop words that we are going to remove. To do so, we are going to use the `tm` package.
+
+<codeblock id="04_s24">
+</codeblock>
+
+Finally, we have created a function to get rid of the improper space.
+
+<codeblock id="04_s25">
+</codeblock>
+
+Now, that the textual data has been processed, have a look at it before analyzing it.
+
+<codeblock id="04_s26">
+</codeblock>
+
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
+
+Cleaning or pre-processing is the most important thing to do when dealing with textual data. Once it's done, we can use simple but very efficient functions. As mentioned previously, the contingency table is the corner stone of a lot of statistical analysis. The idea is to build a matrix where columns correspond to word, and rows are the levels of the categorical variable of interest. In most of the situations, we are interested in the products described by the words. Therefore, what we want to analyze most of the time the contingency table where rows are the products and columns are the words used to describe them. As in the previous case studies, from that matrix, we can obtain supplementary rows (or columns) by aggregating them. It is illustrated in the following example.
+
+First, use the `textual()` function of the `FactoMineR` package to build a contingency table crossing products and words.
+
+<codeblock id="04_s27">
+</codeblock>
+
+Then, from this matrix, build a contingency table crossing the instrument and the words. Remember, you have done that before.
+
+<codeblock id="04_s28">
+</codeblock>
+
+You can do the same thing for the other experimental factors. Let's try.
+
+<codeblock id="04_s29">
+</codeblock>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

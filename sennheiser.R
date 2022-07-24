@@ -212,26 +212,27 @@ for (i in 1:630) sennheiser.text$Why[i] <- supprespace(sennheiser.text$Why[i])
 sennheiser.text[1:5,]
 
 res.textual <- textual(sennheiser.text, num.text = 3, contingence.by = 2)
+names(res.textual)
 res.textual$nb.words
 res.textual$cont.table
 
 A <- apply(res.textual$cont.table[grep("A_",rownames(res.textual$cont.table)),], FUN = sum, 2)
 P <- apply(res.textual$cont.table[grep("P_",rownames(res.textual$cont.table)),], FUN = sum, 2)
 V <- apply(res.textual$cont.table[grep("V_",rownames(res.textual$cont.table)),], FUN = sum, 2)
+instrument.why <- rbind(A,P,V)
+
+descfreq(instrument.why, proba = 0.1)
 
 T120 <- apply(res.textual$cont.table[grep("_120",rownames(res.textual$cont.table)),], FUN = sum, 2)
 T160 <- apply(res.textual$cont.table[grep("_160_",rownames(res.textual$cont.table)),], FUN = sum, 2)
 T80 <- apply(res.textual$cont.table[grep("_80",rownames(res.textual$cont.table)),], FUN = sum, 2)
+tempo.why <- rbind(T120,T160,T80)
+
+descfreq(tempo.why, proba = 0.1)
 
 P1 <- apply(res.textual$cont.table[grep("0_1",rownames(res.textual$cont.table)),], FUN = sum, 2)
 P3 <- apply(res.textual$cont.table[grep("0_3",rownames(res.textual$cont.table)),], FUN = sum, 2)
 P5 <- apply(res.textual$cont.table[grep("0_5",rownames(res.textual$cont.table)),], FUN = sum, 2)
-
-instrument.why <- rbind(A,P,V)
-descfreq(instrument.why, proba = 0.1)
-
-tempo.why <- rbind(T120,T160,T80)
-descfreq(tempo.why, proba = 0.1)
-
 pitch.why <- rbind(P1,P3,P5)
+
 descfreq(pitch.why, proba = 0.1)

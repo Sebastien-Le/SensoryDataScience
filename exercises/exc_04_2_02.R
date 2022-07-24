@@ -1,2 +1,2 @@
-for (j in 1:10) goji[,j] <- as.factor(goji[,j])
+for (j in _:_) goji[,j] <- ____(goji[,j])
 summary(goji)
