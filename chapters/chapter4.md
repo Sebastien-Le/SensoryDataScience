@@ -490,7 +490,7 @@ As you can see, the structure induced on the products by the defects is globally
 
 <br>
 
-Rest assured, from now on the code should not be a problem for you. It's all about sensory issues as we already have most of our statistical tools. What is common to the last case study? The notion of formulation factors...in this case study, we are building sound logos using experimental factors. 
+Rest assured, from now on the code should not be a problem for you. It's all about sensory issues as we already have most of our statistical tools. The first question you have to ask yourself is: what have in common this case study and the two last ones? Compared to the last one for instance, the notion of formulation factors: in this case study, we are building sound logos using experimental factors. 
 
 What is different? A lot of things. First, there are a lot of products to assess (27 sound logos), second we have not only JAR data, but also Check All That Apply data (CATA), and textual data, the infamous <span style="font-weight : bold">Why?</span> question. Finally, last but not least, we are not working with liking, it's a lot more conceptual. We are asking consumers to assess the notion of appropriateness.
 
@@ -501,12 +501,12 @@ Let's warm up with the usual routine: import the data and make sure that data ar
 <codeblock id="04_s1">
 </codeblock>
 
-According to the `summary()` function, rename the variable at column 30 as `Serious`, and recode the data with the `as.factor()` function, except variables `Adequation` and `Why`. Check the recoding with the `summary()` function.
+According to the `summary()` function, rename the variable at column 30 as `Serious`, and recode the data with the `as.factor()` function, except variables `Adequation` (adequacy, suitable) and `Why`. Check the recoding with the `summary()` function.
 
 <codeblock id="04_s2">
 </codeblock>
 
-Change the values of the levels of the CATA data, reorder the levels of the JAR data.
+Change the values of the levels of the CATA data into more explicit levels such as "Yes" and "No". Then, reorder the levels of the JAR data as previously done.
 
 <codeblock id="04_s3">
 </codeblock>
@@ -523,7 +523,7 @@ Build an temporary matrix by selecting the product effect and the CATA data. App
 <codeblock id="04_s5">
 </codeblock>
 
-Use the object `contingency.CATA` to get the number of times a given instrument has been associated with a CATA item.
+Use the object `contingency.CATA` and the very important `apply()` function, to get the number of times a given instrument has been associated with a CATA item.
 
 <codeblock id="04_s6">
 </codeblock>
@@ -538,7 +538,7 @@ Aggregate all these vectors into an R object named `row.sup`, then aggregate `ro
 <codeblock id="04_s8">
 </codeblock>
 
-Use the `str_replace()` function of the `stringr` package to change the names of the columns, and to get rid of the yes.
+Use the `str_replace()` function of the `stringr` package to change the names of the columns, and to get rid of the "yes".
 
 <codeblock id="04_s9">
 </codeblock>
@@ -568,7 +568,7 @@ As you can see, building the `contingency.JAR` object was a little bit more comp
 <codeblock id="04_s14">
 </codeblock>
 
-From the last case study, you already know how to characterize the rows and columns of a contingency table, how to run a Correspondence Analysis on the JAR data, or on the CATA data (the idea is the same). You also know how to add supplementary rows and supplementary columns. You should try by yourself before going further.
+From the last case study, you already know how to characterize the rows and columns of a contingency table, how to run a Correspondence Analysis on the JAR data, or on the CATA data (the idea is the same). You also know how to add supplementary rows and supplementary columns. You should try by yourself before going further. Spend some time with R. 
 
 <codeblock id="04_s15">
 </codeblock>
@@ -627,7 +627,10 @@ Now, we are going to clean the newly created data set. You don't have to know ho
 <codeblock id="04_s23">
 </codeblock>
 
-The next step is for the stop words that we are going to remove. To do so, we are going to use the `tm` package.
+The next step is for the stopwords that we are going to remove. These are actually the most common words in any language (like articles, prepositions, pronouns, 
+conjunctions, etc), they don't add much information to the text. Examples of stopwords in English are “the”, “a”, “an”, “so”, “what”.
+
+To remove the stopwords, we are going to use the `tm` package.
 
 <codeblock id="04_s24">
 </codeblock>
@@ -665,19 +668,6 @@ You can do the same thing for the other experimental factors. Let's try.
 <codeblock id="04_s30">
 </codeblock>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </exercise>
 
 <exercise id="4" title="Act 4 - difficult: the car seat case study, when JAR are free">
@@ -685,11 +675,31 @@ You can do the same thing for the other experimental factors. Let's try.
 <slides source="tissu">
 </slides>
 
+These data express an opinion about the products through the use of terms such as "too much", "not enough" and "just right", that imply assets and weaknesses. 
+
+An asset (respectively, a weakness) can then be defined as a word or a set of words associated with a positive (respectively, negative) valence; the term valence being used in psychology to describe the intrinsically pleasant or unpleasant nature of a stimulus. 
+
+Seeking to assess the valence associated with textual data that reflects an opinion (as it is the case of Free JAR comments) is common in natural language processing, and belongs to what is commonly known as sentiment analysis.
+
+More precisely, sentiment analysis aims at studying opinions, feelings, attitudes and emotions expressed by an individual towards a product. In particular, it allows us to evaluate the emotional tone of an individual relative to a text by a quantitative score, that we call valency score.
+In practice, there are two main approaches to perform sentiment analysis.
+
+The lexical approach is the most intuitive one. It is based on the creation of dictionaries, 
+associating to each word a known quantitative weight, defined according to its positive, negative or neutral nature. The interest for the experimenter is to be able to define and adapt these weights to the context. The valency score of a sentence is calculated according to the ratio of positive and negative words, and according to predefined grammatical rules, considering the negations.
+
+
+We are first interested in this first approach, based on dictionaries. To do so, we need to import 
+the leather data set as well as the associated dictionaries
+
 <codeblock id="tuto_01"> 
 </codeblock>
+
+Then, as usual, you need to recode the necessary variable as factors.
     
 <codeblock id="tuto_02"> 
 </codeblock>
+
+As a preprocessing, we need to homogenize the textual data in lowercase using the tolower() function. The punctuation is removed and the terms that make sense when they are combined are re-coded and combined.
 
 <codeblock id="tuto_03"> 
 </codeblock>
