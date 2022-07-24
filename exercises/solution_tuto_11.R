@@ -1,0 +1,1 @@
+res.pca <- PCA(prod.Sentiment)
