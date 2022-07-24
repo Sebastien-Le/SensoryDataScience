@@ -602,6 +602,11 @@ As in the previous case studies, let's select some columns, and let's represent 
 <codeblock id="04_s20">
 </codeblock>
 
+The following MFA is interesting as we are going to add a supplementary group.
+
+<codeblock id="04_s20bis">
+</codeblock>
+
 This part is dedicated to <span style="font-weight : bold">textual data</span>, the infamous <span style="font-weight : bold">Why?</span> question. For this kind of data, the preparation phase is really important. Once done, the rest is pretty classic, at least in this part.
 
 Lets' have a look at these data from line 20 to line 60. What can you say from this kind of data?
@@ -652,9 +657,12 @@ Then, from this matrix, build a contingency table crossing the instrument and th
 <codeblock id="04_s28">
 </codeblock>
 
+<codeblock id="04_s29">
+</codeblock>
+
 You can do the same thing for the other experimental factors. Let's try.
 
-<codeblock id="04_s29">
+<codeblock id="04_s30">
 </codeblock>
 
 
