@@ -1,6 +1,6 @@
 ---
 title: 'Chapter 4: Everything you always wanted to know about JAR - a play in five acts'
-description:
+description: This chapter was co-written by Alexiane Luc and myself.
 prev: /chapter3
 next: /chapter5
 type: chapter
@@ -675,9 +675,9 @@ You can do the same thing for the other experimental factors. Let's try.
 <slides source="tissu">
 </slides>
 
-These data express an opinion about the products through the use of terms such as "too much", "not enough" and "just right", that imply assets and weaknesses. 
+These data express an opinion about the products through the use of terms such as "too much", "not enough" and "just right", that imply qualities and defects. 
 
-An asset (respectively, a weakness) can then be defined as a word or a set of words associated with a positive (respectively, negative) valence; the term valence being used in psychology to describe the intrinsically pleasant or unpleasant nature of a stimulus. 
+An quality (respectively, a defect) can then be defined as a word or a set of words associated with a positive (respectively, negative) valence; the term valence being used in psychology to describe the intrinsically pleasant or unpleasant nature of a stimulus. 
 
 Seeking to assess the valence associated with textual data that reflects an opinion (as it is the case of Free JAR comments) is common in natural language processing, and belongs to what is commonly known as sentiment analysis.
 
@@ -687,67 +687,106 @@ In practice, there are two main approaches to perform sentiment analysis.
 The lexical approach is the most intuitive one. It is based on the creation of dictionaries, 
 associating to each word a known quantitative weight, defined according to its positive, negative or neutral nature. The interest for the experimenter is to be able to define and adapt these weights to the context. The valency score of a sentence is calculated according to the ratio of positive and negative words, and according to predefined grammatical rules, considering the negations.
 
-
 We are first interested in this first approach, based on dictionaries. To do so, we need to import 
 the leather data set as well as the associated dictionaries
 
 <codeblock id="tuto_01"> 
 </codeblock>
 
-Then, as usual, you need to recode the necessary variable as factors.
+Then, as usual, you need to recode the variables as factors, when necessary.
     
 <codeblock id="tuto_02"> 
 </codeblock>
 
-As a preprocessing, we need to homogenize the textual data in lowercase using the tolower() function. The punctuation is removed and the terms that make sense when they are combined are re-coded and combined.
+As a pre-processing, we need to homogenize the textual data in lowercase using the `tolower()` function. The punctuation is removed and the terms that make sense when they are combined are re-coded and combined.
 
 <codeblock id="tuto_03"> 
 </codeblock>
+
+The R package used to achieve the sentiment analysis needs to operate on dictionaries that are 
+recognized as "key" object. A transformation is thus achieved. To do so, use the `as_key()` function of the `sentimentr` package.
     
 <codeblock id="tuto_04"> 
 </codeblock>
     
+The `sentiment()` function of the `sentimentr` package is used to perform the sentiment analysis.
+The function takes also as arguments the *polarity* and the *valence shifter* dictionaries.
+
 <codeblock id="tuto_05"> 
 </codeblock>
+
+The valency score obtained for each comment are concatenated to the leather data set in order to associate to each
+comment its valency score.
 
 <codeblock id="tuto_06"> 
 </codeblock>
 
+We need to check the consistency of the resulting valency scores with the hedonic categories in order to be sure that this quantitative score is relevant and can be exploited. To achieve it, an analysis of variance that explains the valency score according to the hedonic categories and the judges is achieved. What do you think of the results?
+
 <codeblock id="tuto_07"> 
 </codeblock>
+
+A boxplot can be obtained with the `geom_boxplot()` function of the `ggplot2` package, in order to represent the
+distribution of the valency scores according to the hedonic categories in which the described product has been
+placed by the respondent prior to the description step.
 
 <codeblock id="tuto_08"> 
 </codeblock>
     
+Let's now create a matrix product x respondent whose entries are the valency scores associated with the description of the product under study done by the respondent under study. It is just a reorganization of the data.
+
 <codeblock id="tuto_09"> 
 </codeblock>
 
+We thus want to run a PCA on this data table. The graphical display represents an internal preference mapping. Let's now see how the respondents (as variables) are displayed.
+
 <codeblock id="tuto_10"> 
 </codeblock>
+
+Results from this first approach seem promising as the transformation of a textual data into a quantitative data allows to consider new analyses. However, various limitations can be noted regarding the way the valency scores were calculated. First of all, since the dictionary is implemented by one experimenter, these scores are not necessarily transposable to another experimenter. In this sense, this approach appears subjective. Moreover, a positive attribute for a certain type of product may turn out to be negative for another. This is for example the case of the "acid" attribute, which can be positive for a lemon pie, but negative for a wine. The dictionaries must then be recreated as soon as the product space is different. In this sense, this approach is not generic. In order to overcome these limitations, we are more interested in a second approach, which is a machine learning one. Contrary to the lexical approach, it is only based on the collected data.
     
 <codeblock id="tuto_11"> 
 </codeblock>
+
+For saving time, import the data set with the valency scores calculated with the machine learning approach.
     
 <codeblock id="tuto_12"> 
 </codeblock>
 
+As always, transform the variables that need to be imported as factors.
+
 <codeblock id="tuto_13"> 
 </codeblock>
+
+As for the valency scores resulting from the lexical approach, we transform the data set into a matrix products x respondents, whose entries are the valency scores calculated with the machine learning approach, associated with the description of the product by the respondent.
     
 <codeblock id="tuto_14"> 
 </codeblock>
 
+Run a Principal Component Analysis with the `PCA()` function of the `FactoMineR` package in order to get a representation the products based on these new valency scores.
+
 <codeblock id="tuto_15"> 
 </codeblock>
+
+In order to check the consistency and the added-value of the valency scores regarding Liking, let's construct the same
+matrix products x respondents as for the valency scores from the two approaches. The entries are the liking scores given
+by each respondent for each product.
     
 <codeblock id="tuto_16"> 
 </codeblock>
+
+Let's run a PCA to represent the products according to their Liking scores.
     
 <codeblock id="tuto_17"> 
 </codeblock>
 
+Now we want to see the differences between products according to the three different scores: valency scores from
+lexical approach, valency scores from machine learning approach and liking scores. To do so, we need to combine the three products x respondents matrices.
+
 <codeblock id="tuto_18"> 
 </codeblock>
+
+Run a Multiple Factor Analysis with the `MFA()` function in order to see how consistent are the three different scores. Keep in mind that Liking scores were collected in order to assess the validity of our sentiment analysis and machine learning approaches.
 
 <codeblock id="tuto_19"> 
 </codeblock>
