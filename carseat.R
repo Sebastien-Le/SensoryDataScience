@@ -1,6 +1,7 @@
-# library(sentimentr)
-# library(FactoMineR)
-# library(ggplot2)
+# Un-comment and run line from 2 to 4 once
+# install.packages("sentimentr")
+# install.packages("FactoMineR")
+# install.packages("ggplot2")
 
 #01
 
