@@ -32,7 +32,7 @@ library(ggplot2)
 ggplot(tab, aes(x = Var1, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange")
 
-#2nd attempt
+ #2nd attempt
 ggplot(tab, aes(x = Var1, y = Freq)) +
   geom_bar(stat = "identity", fill = "orange") +
   xlab("Modalities") +
@@ -141,7 +141,7 @@ summary(orange)
 
 #JAR function
 res.jar <- JAR(orange, col.p = 2, col.j = 1, col.pref = 3, jarlevel="JAR")
-plot.JAR(res.jar, name.prod = "2JPR", model = 2)
+plot.JAR(res.jar, name.prod = "6TPR", model = 2)
 
 #Penalties can also be estimated for each product.
 orange.dummy.2JPR <- orange.dummy[orange.dummy$Juice == "2JPR",]
