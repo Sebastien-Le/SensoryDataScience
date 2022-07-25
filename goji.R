@@ -1,17 +1,21 @@
-# library(ggplot2)
-# library(ggrepel)
-# library(SensoMineR)
-# library(stringr)
+# Un-comment and run line from 2 to 5 once
+# install.packages("ggplot2")
+# install.packages("ggrepel")
+# install.packages("SensoMineR")
+# install.packages("stringr")
 
 #1
+
 goji <- read.csv2("data/goji.csv")
 summary(goji)
 
 #2
+
 for (j in 1:12) goji[,j] <- as.factor(goji[,j])
 summary(goji)
 
 #3-penalty
+
 library(SensoMineR)
 goji.liking <- goji[,-c(2,3,5,6,14)]
 goji.typicity <- goji[,-c(2,3,5,6,13)]
@@ -22,14 +26,15 @@ res.jar.typicity <- JAR(goji.typicity, col.p = 2, col.j = 1, col.pref = 9, jarle
 res.jar.liking$penalty2
 res.jar.typicity$penalty2
 
-#building a data frame for plotting without supplementary
+# Building a data frame for plotting without supplementary information.
+
 penalties <- cbind(res.jar.liking$penalty2, res.jar.typicity$penalty2)[,c(1,4)]
 colnames(penalties) <- c("Liking","Typicity")
 penalties <- as.data.frame(penalties)
 penalties
 
-#https://ggplot2.tidyverse.org/reference/geom_point.html
-#first attempt
+# https://ggplot2.tidyverse.org/reference/geom_point.html
+# 1st attempt
 library(ggplot2)
 ggplot(penalties, aes(x = Liking, y = Typicity)) +
   geom_point() +
@@ -39,14 +44,14 @@ ggplot(penalties, aes(x = Liking, y = Typicity)) +
   ylab("Penalties for Typicity") +
   ggtitle("Impact of defects on liking and typicity")
 
-# Fixed coordinates (equal scales) with coord_fixed
 # The coord_fixed function is very useful in case you want a 
 # fixed aspect ratio for your plot regardless the size of the plotting device, 
 # this is, one unit along the X axis will be the same unit along the Y axis.
+# https://ggplot2.tidyverse.org/reference/coord_fixed.html
 
-#2nd attempt
-#for min and max for ggplot
-#https://ggplot2.tidyverse.org/reference/coord_fixed.html
+# 2nd attempt
+# Run the `summary()` function for min and max for ggplot.
+
 summary(penalties)
 
 ggplot(penalties, aes(x = Liking, y = Typicity)) +
@@ -61,9 +66,9 @@ ggplot(penalties, aes(x = Liking, y = Typicity)) +
   xlim(-2.8,0.3)
 
 
-#https://ggrepel.slowkow.com/index.html
-#https://ggrepel.slowkow.com/reference/geom_text_repel.html
-#attempt ggrepel
+# https://ggrepel.slowkow.com/index.html
+# https://ggrepel.slowkow.com/reference/geom_text_repel.html
+# attempt ggrepel
 
 library(ggrepel)
 ggplot(penalties, aes(x = Liking, y = Typicity)) +
@@ -89,8 +94,8 @@ ggplot(penalties, aes(x = Liking, y = Typicity)) +
   xlim(-2.8,0.5)
 
 
-#https://ggplot2-book.org/polishing.html
-#Theme
+# https://ggplot2-book.org/polishing.html
+# attempt theme
 ggplot(penalties, aes(x = Liking, y = Typicity)) +
   geom_point() +
   geom_text_repel(label = rownames(penalties), max.overlaps = Inf) +
@@ -104,22 +109,23 @@ ggplot(penalties, aes(x = Liking, y = Typicity)) +
   theme_light()
 
 
-#multivariate analysis
-#1st attempt
-# factoMineR car SensoMineR
+# multivariate analysis
+# 1st attempt
+# FactoMineR is loaded as SensoMineR is
+
 summary(goji)
 res.mca <- MCA(goji, quali.sup = 1:6, quanti.sup = 13:14, graph = F)
 plot.MCA(res.mca)
 plot.MCA(res.mca, invisible = c("var", "quali.sup"), label = "no")
 
-#2nd attempt
+# 2nd attempt
 res.mca <- MCA(goji, quali.sup = 1:6, quanti.sup = 13:14, graph = F, level.ventil = 0.1)
 plot.MCA(res.mca, invisible = c("var", "quali.sup"), label = "no")
 
 plot.MCA(res.mca, invisible = c("ind", "quali.sup"))
 plot.MCA(res.mca, invisible = "ind")
 
-#3rd attempt
+# 3rd attempt
 res.mca <- MCA(goji[,-c(1:3)], quali.sup = 1:3, quanti.sup = 10:11, graph = F, level.ventil = 0.1)
 plot.MCA(res.mca, invisible = "ind")
 
@@ -132,7 +138,7 @@ plot.MCA(res.mca, invisible = "ind", selectMod = c("orange","pineapple","apple",
 
 plot.MCA(res.mca, choix = "quanti.sup")
 
-## CA and descfreq on contingency table
+# CA and descfreq on contingency table.
 
 goji.inter <- goji[,c(4,7:12)] # product and JAR
 
@@ -147,8 +153,8 @@ for (j in 3:7){
   contingency <- cbind(contingency, inter)
 }
 
-#very important
-#https://www.r-bloggers.com/2010/08/a-brief-introduction-to-%e2%80%9capply%e2%80%9d-in-r/
+# very important `apply()` function
+# https://www.r-bloggers.com/2010/08/a-brief-introduction-to-%e2%80%9capply%e2%80%9d-in-r/
 
 Apple <- apply(contingency[c("127","431","759"),], FUN = sum, 2)
 Pineapple <- apply(contingency[c("245","518","876"),], FUN = sum, 2)
@@ -170,11 +176,9 @@ descfreq(contingency[c(1:9),])
 descfreq(contingency[c(10:12),])
 descfreq(contingency[c(13:15),])
 
+# Taking into account the sessions.
+# Penalty analysis sessions comparison.
 
-##################################
-# Sessions
-
-#penalty analysis sessions comparison
 goji.liking.s1 <- goji[goji$Session =="S1",-c(2,3,5,6,14)]
 goji.liking.s2 <- goji[goji$Session =="S2",-c(2,3,5,6,14)]
 
@@ -185,7 +189,8 @@ penalties <- cbind(res.jar.s1$penalty2, res.jar.s2$penalty2)[,c(1,4)]
 colnames(penalties) <- c("Session_1","Session_2")
 penalties <- as.data.frame(penalties)
 
-#for min and max for ggplot
+# For min and max for ggplot.
+
 summary(penalties)
 
 ggplot(penalties, aes(x = Session_1, y = Session_2)) +
@@ -200,7 +205,7 @@ ggplot(penalties, aes(x = Session_1, y = Session_2)) +
   xlim(-3,0.5) +
   theme_light()
 
-#Multivariate advanced - representation of the groups
+# Multivariate advanced - representation of the groups
 goji.s1 <- goji[goji$Session =="S1",]
 goji.s2 <- goji[goji$Session =="S2",]
 
@@ -216,7 +221,7 @@ print("Done!")
 res.mfa <- MFA(goji.s1.s2, group = c(6,6), type = c("n","n"), name.group = c("S1","S2"), graph = F)
 plot.MFA(res.mfa, choix = "group")
 
-#
+# Multiple Factor Analysis on contingency tables
 
 j <- 7
 goji.s1.prod <- table(goji.s1$Product, goji.s1[,j])
@@ -228,7 +233,6 @@ for (j in 8:12){
   goji.s1.prod <- cbind(goji.s1.prod, inter)
 }
 
-
 j <- 7
 goji.s2.prod <- table(goji.s2$Product, goji.s2[,j])
 colnames(goji.s2.prod) <- paste(colnames(goji.s2)[j], levels(goji.s2[,j]), sep = "_")
@@ -239,12 +243,7 @@ for (j in 8:12){
   goji.s2.prod <- cbind(goji.s2.prod, inter)
 }
 
-goji.prod.s1.s2 <- cbind(goji.s1.prod,goji.s2.prod)
+goji.prod.s1.s2 <- cbind(goji.s1.prod, goji.s2.prod)
 
 res.mfa <- MFA(goji.prod.s1.s2, group = c(30,30), type = c("f","f"), name.group = c("S1","S2"), graph = F)
 plot.MFA(res.mfa, choix = "group")
-
-
-
-
-
