@@ -793,6 +793,44 @@ Run a Multiple Factor Analysis with the `MFA()` function pf the `FactoMineR` pac
 
 </exercise>
 
-<exercise id="5" title="Act 5 - conclusion: everything you always wanted to know about JAR with R">
+<exercise id="5" title="Act 5 - conclusion: teach me to do it myself">
+
+- If you want the R scripts or the data sets of this tutorial, you have to know first how to download a file from github:
+    - Go to the file you want to download.
+    - Click it to view the contents within the GitHub UI.
+    - In the top right, right click the Raw button.
+    - Save as...
+
+- If you are looking for the R scripts:
+
+https://github.com/Sebastien-Le/SensoryDataScience/
+
+- If you are looking for the data sets:
+
+https://github.com/Sebastien-Le/SensoryDataScience/tree/master/data
+
+- If you want to learn about R and Rstudio:
+
+https://hbctraining.github.io/Intro-to-R-flipped/lessons/01_introR-R-and-RStudio.html
+
+- If you want to learn about exploratory multivariate analysis and the FactoMineR package: 
+
+http://factominer.free.fr/index.html
+
+- If you want to know how to run usual statistical analyses with R: 
+
+https://www.statmethods.net/index.html
+
+- If you are looking for a good online book about R and data science:
+
+https://r4ds.had.co.nz/
+
+- If you are looking for a good online book about visualization:
+
+https://ggplot2-book.org/
+
+- If you want to find a free book about R: 
+
+https://bookdown.org/
 
 </exercise>

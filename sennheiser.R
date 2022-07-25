@@ -1,9 +1,10 @@
-# library(ggplot2)
-# library(ggrepel)
-# library(dplyr)
-# library(stringr)
-# library(FactoMineR)
-# library(tm)
+# Un-comment and run line from 2 to 7 once
+# install.packages("ggplot2")
+# install.packages("ggrepel")
+# install.packages("dplyr")
+# install.packages("stringr")
+# install.packages("FactoMineR")
+# install.packages("tm")
 
 #1
 sennheiser <- read.csv2("data/sennheiser.csv")
