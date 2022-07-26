@@ -726,28 +726,28 @@ We need to check the consistency of the resulting valency scores with the hedoni
 <codeblock id="tuto_07"> 
 </codeblock>
 
+<codeblock id="tuto_08"> 
+</codeblock>
+
 A boxplot can be obtained with the `geom_boxplot()` function of the `ggplot2` package, in order to represent the
 distribution of the valency scores according to the hedonic categories in which the described product has been
 placed by the respondent prior to the description step.
 
-<codeblock id="tuto_08"> 
+<codeblock id="tuto_09"> 
 </codeblock>
 
 Let's now create a matrix product x respondent whose entries are the valency scores associated with the description of a product by a respondent. It is just a reorganization of the data.
 
-<codeblock id="tuto_09"> 
+<codeblock id="tuto_10"> 
 </codeblock>
 
 We thus want to run a PCA on this data table. The graphical display represents an internal preference mapping. Let's now see how the respondents (as variables) are displayed.
 
-<codeblock id="tuto_10"> 
+<codeblock id="tuto_11"> 
 </codeblock>
 
 Results from this first approach seem promising as the transformation of a textual data into a quantitative data allows to consider new analyses. However, various limitations can be noted regarding the way the valency scores were calculated. First of all, since the dictionary is implemented by one experimenter, these scores are not necessarily transposable to another experimenter. In this sense, this approach appears subjective. Moreover, a positive attribute for a certain type of product may turn out to be negative for another. This is for example the case of the "acid" attribute, which can be positive for a lemon pie, but negative for a wine. The dictionaries must then be recreated as soon as the product space is different. In this sense, this approach is not generic. In order to overcome these limitations, we are more interested in a second approach, which is a machine learning one. Contrary to the lexical approach, it is only based on the collected data.
     
-<codeblock id="tuto_11"> 
-</codeblock>
-
 For saving time, import the data set with the valency scores calculated with the machine learning approach.
 
 <codeblock id="tuto_12"> 
@@ -793,7 +793,7 @@ Run a Multiple Factor Analysis with the `MFA()` function pf the `FactoMineR` pac
 
 </exercise>
 
-<exercise id="5" title="Act 5 - conclusion: teach me to do it myself">
+<exercise id="5" title="Act 5 - conclusion: teach me to do it myself!">
 
 - If you want the R scripts or the data sets of this tutorial, you have to know first how to download a file from github:
     - Go to the file you want to download.

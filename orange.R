@@ -1,5 +1,5 @@
 # Un-comment and run line from 2 to 8 once
-# install.packages("cowplot")
+# install.packages(" cowplot")
 # install.packages("ade4")
 # install.packages("FactoMineR")
 # install.packages("stringr")

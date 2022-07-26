@@ -6,21 +6,28 @@
 # install.packages("FactoMineR")
 # install.packages("tm")
 
-#1
+# Import the data and make sure that data are well imported.
+
 sennheiser <- read.csv2("data/sennheiser.csv")
 summary(sennheiser)
 
-#2
+# According to the 'summary()' function, rename the variable at column 30 as Serious, 
+# and recode the data with the as.factor() function, except variables Adequation (adequacy,
+# suitable) and Why. Check the recoding with the 'summary()' function.
+
 colnames(sennheiser)[30] <- "Serious"
 for (j in c(1:30,33:35)) sennheiser[,j] <- as.factor(sennheiser[,j])
 summary(sennheiser)
 
-#3
+# Change the values of the levels of the CATA data into more explicit levels such as “Yes” and “No”. 
+# Then, reorder the levels of the JAR data as previously done.
+
 for (j in 4:22) levels(sennheiser[,j]) <- c("No","Yes")
 for (j in 23:30) sennheiser[,j] <- factor(sennheiser[,j], levels = c('r_ne', 'ne', 'JAR', 't', 'r_t'))
 print("Done!")
 
-#4
+# Run the following code in order to create a very helpful function that will simply produce contingency tables.
+
 cont.categories <- function (x){
   
   ind.jar <- 2:ncol(x)
@@ -36,21 +43,27 @@ cont.categories <- function (x){
 }
 print("Done!")
 
-#CATA, from 4 to 22
+# Analysis of CATA data, from columns 4 to 22.
 
-#5
+# Build an temporary matrix by selecting the product effect and the CATA data. Apply the cont.categories() function 
+# to the temporary data set. Save the results in an R object named contingency.CATA. With the t() function, 
+# transpose the matrix to get the sounds as rows.
+
 sennheiser.inter <- sennheiser[,c(2,4:22)]
 contingency.CATA <- cont.categories(sennheiser.inter)
 contingency.CATA <- t(contingency.CATA)
 print("Done!")
 
-#6
+# Use the object contingency.CATA and the very important apply() function, to get the number of times a given instrument
+# has been associated with a CATA item.
+
 A <- apply(contingency.CATA[grep("A_",rownames(contingency.CATA)),], FUN = sum, 2)
 P <- apply(contingency.CATA[grep("P_",rownames(contingency.CATA)),], FUN = sum, 2)
 V <- apply(contingency.CATA[grep("V_",rownames(contingency.CATA)),], FUN = sum, 2)
 print("Done!")
 
-#7
+# Do the same thing for the other factors, the tempo and the pitch.
+
 T120 <- apply(contingency.CATA[grep("_120",rownames(contingency.CATA)),], FUN = sum, 2)
 T160 <- apply(contingency.CATA[grep("_160_",rownames(contingency.CATA)),], FUN = sum, 2)
 T80 <- apply(contingency.CATA[grep("_80",rownames(contingency.CATA)),], FUN = sum, 2)
@@ -60,20 +73,24 @@ P3 <- apply(contingency.CATA[grep("0_3",rownames(contingency.CATA)),], FUN = sum
 P5 <- apply(contingency.CATA[grep("0_5",rownames(contingency.CATA)),], FUN = sum, 2)
 print("Done!")
 
-#8
+# Aggregate all these vectors into an R object named row.sup, then aggregate row.sup to contingency.CATA. 
+# Keep one column out of two, the yes column for instance.
+
 row.sup <- rbind(A, P, V, T120, T160, T80, P1, P3, P5)
 contingency.CATA <- rbind(contingency.CATA, row.sup)
 contingency.CATA <- contingency.CATA[, seq(2,38,2)]
 print("Done!")
 
-#9
+# Use the str_replace() function of the stringr package to change the names of the columns, and to get rid of the “yes”.
+
 library(stringr)
 colnames(contingency.CATA) <- str_replace(colnames(contingency.CATA), ".Yes", "")
 colnames(contingency.CATA)
 
-#JAR, from 23 to 30
+# Analysis of JAR data, from columbs 23 to 30.
 
-#10
+# Now, do the same thing for the JAR data, until the creation of the row.sup object.
+
 sennheiser.inter <- sennheiser[,c(2,23:30)]
 contingency.JAR <- cont.categories(sennheiser.inter)
 contingency.JAR <- t(contingency.JAR)
@@ -93,7 +110,8 @@ P5 <- apply(contingency.JAR[grep("0_5", rownames(contingency.JAR)),], FUN = sum,
 row.sup <- rbind(A, P, V, T120, T160, T80, P1, P3, P5)
 print("Done!")
 
-#11
+# In this part, we are going to create three columns from the names of the sounds, each column being one of the three factors used to create the sounds.
+
 i <- 1
 exp.design <- strsplit(rownames(contingency.JAR)[i], split = "_")[[1]]
 for (i in 2:27){
@@ -101,27 +119,29 @@ for (i in 2:27){
 }
 exp.design[1:5,]
 
-#12
+# Aggregate the three experimental factors to the object contingency.JAR, transform the row.sup object as a data frame.
+
 contingency.JAR <- cbind(contingency.JAR, as.data.frame(exp.design))
 row.sup <- as.data.frame(row.sup)
 print("Done!")
 
-#13
+# Use the 'bind_rows()' function of the dplyr package to aggregate the objects contingency.JAR and row.sup.
+
 library(dplyr)
 contingency.JAR <- bind_rows(contingency.JAR, row.sup)
 summary(contingency.JAR)
 
-#14
+# As you can see, building the contingency.JAR object was a little bit more complicated. 
+# It is mainly due to the fact that you are aggregating objects with different dimensions. 
+# Now, let’s build our final data set named contingency.sennheiser.
+
 contingency.sennheiser <- cbind(contingency.CATA, contingency.JAR)
 colnames(contingency.sennheiser)[60:62] <- c("Instrument","Tempo","Pitch")
 colnames(contingency.sennheiser)
 dim(contingency.sennheiser)
 
-#15 - vide
+# Run an MFA on the contingency.sennheiser data. Try to understand the meaning of these visualizations.
 
-###########
-#Most simple MFA with two groups
-#16
 library(FactoMineR)
 res.mfa <- MFA(contingency.sennheiser[1:27,1:59], group = c(19,40), 
                type = c("f","f"), name.group = c("CATA","JAR"), graph = FALSE)
@@ -129,10 +149,13 @@ plot.MFA(res.mfa, choix = "group")
 plot.MFA(res.mfa, choix = "axes")
 plot.MFA(res.mfa, partial = "all")
 
-#17
+# Represent the columns of your contingency data. As you know, rows and columns live in the same space.
+
 plot.MFA(res.mfa, choix = "freq", invisible = "ind")
 
-#18
+# Build an R object containing the coordinates of the columns on the first five dimensions, as well as their names, 
+# and finally the group these columns belong to, CATA or JAR.
+
 names(res.mfa)
 res.mfa$eig
 names(res.mfa)
@@ -143,8 +166,9 @@ type <- c(rep("cata",19),rep("jar",40))
 coord.freq <- cbind(as.data.frame(res.mfa$freq$coord),type)
 print("Done!")
 
+# Now that you have built the proper data set, use the summary() function to get the limits of your graph, 
+# then the ggplot() and geom_point() functions to plot the graph.
 
-#19
 summary(coord.freq)
 
 library(ggplot2)
@@ -160,7 +184,9 @@ ggplot(coord.freq, aes(x = Dim.1, y = Dim.2)) +
   xlim(-1,1.5) +
   theme_light()
 
-#20
+# As in the previous case studies, let’s select some columns, and let’s represent 
+# for instance the columns associated with the JAR level.
+
 mod <- c("JAR")
 all.attr <- rownames(res.mfa$freq$coord)
 mod.select <- all.attr[which(str_detect(all.attr,mod))]
@@ -179,7 +205,8 @@ ggplot(coord.freq, aes(x = Dim.1, y = Dim.2, label=names)) +
   xlim(-1,1.5) +
   theme_light()
 
-#20bis
+# The following MFA is interesting as we are going to add a supplementary group.
+
 res.mfa <- MFA(contingency.sennheiser[1:27,], group = c(19,40,3), type = c("f","f","n"), 
                name.group = c("CATA","JAR","COMPO"), num.group.sup = 3, graph = FALSE)
 plot.MFA(res.mfa)
@@ -189,16 +216,22 @@ plot.MFA(res.mfa, partial = "all")
 plot.MFA(res.mfa, choix = "freq", invisible = "ind")
 
 ####################################
-#textual
+# This part is dedicated to textual data, the infamous Why? question. 
+# For this kind of data, the preparation phase is really important. Once done, 
+# the rest is pretty classic, at least in this part.
 
-#21
+# Lets’ have a look at these data from line 20 to line 60. What can you say from this kind of data?
+
 sennheiser$Why[20:60]
 
-#22
+# To facilitate the manipulation of the data, you are going to build a new data set named sennheiser.text. 
+# Just keep the consumer effect, the product effect, and the answers to the Why? question.
+
 sennheiser.text <- sennheiser[which(!sennheiser$Why==""),c(1,2,32)]
 summary(sennheiser.text)
 
-#23
+# Now, we are going to clean the newly created data set.
+
 sennheiser.text$Why <- tolower(sennheiser.text$Why)
 sennheiser.text$Why <- gsub("too ", "too", sennheiser.text$Why)
 sennheiser.text$Why <- gsub("not ", "not", sennheiser.text$Why)
@@ -208,7 +241,8 @@ sennheiser.text$Why <- gsub("[`^~.',!?;\"]", " ", sennheiser.text$Why)
 sennheiser.text$Why <- gsub("[[:punct:]]", "", sennheiser.text$Why)
 print("Done!")
 
-#24
+# To remove the stopwords, we are going to use the tm package.
+
 library(tm)
 stw <- stopwords("en")
 stw <- stw[-which(stw%in%c("no","not"))]
@@ -216,7 +250,8 @@ stw <- stw[-which(stw%in%c("no","not"))]
 sennheiser.text$Why <- removeWords(sennheiser.text$Why,stw)
 print("Done!")
 
-#25
+# Finally, we have created a function to get rid of the improper space.
+
 supprespace <- function(x){
   a <- unlist(strsplit(x," "))
   if (length(which(a==""))==0){
@@ -230,37 +265,41 @@ supprespace <- function(x){
 for (i in 1:630) sennheiser.text$Why[i] <- supprespace(sennheiser.text$Why[i])
 print("Done!")
 
-#26
+# Now that the textual data has been processed, have a look at it before analyzing it.
+
 sennheiser.text[1:5,]
 
-#27
+# Use the 'textual()' function of the FactoMineR package to build a contingency table crossing products and words.
+
 res.textual <- textual(sennheiser.text, num.text = 3, contingence.by = 2)
 names(res.textual)
 res.textual$nb.words
 res.textual$cont.table
 
-#28
+# From this matrix, build a contingency table crossing the instrument and the words.
+
 A <- apply(res.textual$cont.table[grep("A_",rownames(res.textual$cont.table)),], FUN = sum, 2)
 P <- apply(res.textual$cont.table[grep("P_",rownames(res.textual$cont.table)),], FUN = sum, 2)
 V <- apply(res.textual$cont.table[grep("V_",rownames(res.textual$cont.table)),], FUN = sum, 2)
 instrument.why <- rbind(A,P,V)
 instrument.why
 
-#29
+# Run a description of frequencies.
+
 descfreq(instrument.why, proba = 0.1)
 
-#30 - vide
+# You can do the same thing for the other experimental factors. Let’s try.
 
-# T120 <- apply(res.textual$cont.table[grep("_120",rownames(res.textual$cont.table)),], FUN = sum, 2)
-# T160 <- apply(res.textual$cont.table[grep("_160_",rownames(res.textual$cont.table)),], FUN = sum, 2)
-# T80 <- apply(res.textual$cont.table[grep("_80",rownames(res.textual$cont.table)),], FUN = sum, 2)
-# tempo.why <- rbind(T120,T160,T80)
-# 
-# descfreq(tempo.why, proba = 0.1)
-# 
-# P1 <- apply(res.textual$cont.table[grep("0_1",rownames(res.textual$cont.table)),], FUN = sum, 2)
-# P3 <- apply(res.textual$cont.table[grep("0_3",rownames(res.textual$cont.table)),], FUN = sum, 2)
-# P5 <- apply(res.textual$cont.table[grep("0_5",rownames(res.textual$cont.table)),], FUN = sum, 2)
-# pitch.why <- rbind(P1,P3,P5)
+T120 <- apply(res.textual$cont.table[grep("_120",rownames(res.textual$cont.table)),], FUN = sum, 2)
+T160 <- apply(res.textual$cont.table[grep("_160_",rownames(res.textual$cont.table)),], FUN = sum, 2)
+T80 <- apply(res.textual$cont.table[grep("_80",rownames(res.textual$cont.table)),], FUN = sum, 2)
+tempo.why <- rbind(T120,T160,T80)
+
+descfreq(tempo.why, proba = 0.1)
+
+P1 <- apply(res.textual$cont.table[grep("0_1",rownames(res.textual$cont.table)),], FUN = sum, 2)
+P3 <- apply(res.textual$cont.table[grep("0_3",rownames(res.textual$cont.table)),], FUN = sum, 2)
+P5 <- apply(res.textual$cont.table[grep("0_5",rownames(res.textual$cont.table)),], FUN = sum, 2)
+pitch.why <- rbind(P1,P3,P5)
 
 descfreq(pitch.why, proba = 0.1)
