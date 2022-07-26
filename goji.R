@@ -4,29 +4,37 @@
 # install.packages("SensoMineR")
 # install.packages("stringr")
 
-#1
+# Let’s first import the data, and make sure that what should be categorical is categorical.
 
 goji <- read.csv2("data/goji.csv")
 summary(goji)
 
-#2
+# As data are not considered as categorical, recode them with the as.factor() function and a simple loop.
 
 for (j in 1:12) goji[,j] <- as.factor(goji[,j])
 summary(goji)
 
-#3-penalty
+# Create two R objects named goji.liking and goji.typicity, in which you store the proper information,
+# which are consumer variable, the product variable, the liking (or assimilated) variable, and finally 
+# the sensory attributes evaluated on a JAR scale.
 
-library(SensoMineR)
 goji.liking <- goji[,-c(2,3,5,6,14)]
 goji.typicity <- goji[,-c(2,3,5,6,13)]
 
+# Then run the JAR() function of the SensoMineR package on both objects, store the results in two 
+# separate objects and compare the estimation of the penalties for the model that takes into 
+# account all the sensory attributes at the same time.
+
+library(SensoMineR)
 res.jar.liking <- JAR(goji.liking, col.p = 2, col.j = 1, col.pref = 9, jarlevel = "JAR")
 res.jar.typicity <- JAR(goji.typicity, col.p = 2, col.j = 1, col.pref = 9, jarlevel = "JAR")
 
 res.jar.liking$penalty2
 res.jar.typicity$penalty2
 
-# Building a data frame for plotting without supplementary information.
+# Let’s plot the two sets of penalties. First, build the proper data set as input of the 
+# ggplot() and geom_point() functions: a data frame, where rows correspond to defects and 
+# columns to penalties for the liking and the typicity.
 
 penalties <- cbind(res.jar.liking$penalty2, res.jar.typicity$penalty2)[,c(1,4)]
 colnames(penalties) <- c("Liking","Typicity")
@@ -35,6 +43,7 @@ penalties
 
 # https://ggplot2.tidyverse.org/reference/geom_point.html
 # 1st attempt
+
 library(ggplot2)
 ggplot(penalties, aes(x = Liking, y = Typicity)) +
   geom_point() +
@@ -68,7 +77,7 @@ ggplot(penalties, aes(x = Liking, y = Typicity)) +
 
 # https://ggrepel.slowkow.com/index.html
 # https://ggrepel.slowkow.com/reference/geom_text_repel.html
-# attempt ggrepel
+# put the labels of the defects.
 
 library(ggrepel)
 ggplot(penalties, aes(x = Liking, y = Typicity)) +
@@ -111,7 +120,7 @@ ggplot(penalties, aes(x = Liking, y = Typicity)) +
 
 # multivariate analysis
 # 1st attempt
-# FactoMineR is loaded as SensoMineR is
+# the summary() function allows to choose the active variables.
 
 summary(goji)
 res.mca <- MCA(goji, quali.sup = 1:6, quanti.sup = 13:14, graph = F)
@@ -129,6 +138,8 @@ plot.MCA(res.mca, invisible = "ind")
 res.mca <- MCA(goji[,-c(1:3)], quali.sup = 1:3, quanti.sup = 10:11, graph = F, level.ventil = 0.1)
 plot.MCA(res.mca, invisible = "ind")
 
+#  Select the JAR categories and the formulation categories that you want to display.
+
 library(stringr)
 mod <- "JAR"
 all.attr <- rownames(res.mca$var$coord)
@@ -138,9 +149,9 @@ plot.MCA(res.mca, invisible = "ind", selectMod = c("orange","pineapple","apple",
 
 plot.MCA(res.mca, choix = "quanti.sup")
 
-# CA and descfreq on contingency table.
+# Create a contingency table between the products and the JAR attributes.
 
-goji.inter <- goji[,c(4,7:12)] # product and JAR
+goji.inter <- goji[,c(4,7:12)]
 
 j <- 2
 contingency <- table(goji.inter$Product,goji.inter[,j])
@@ -153,7 +164,7 @@ for (j in 3:7){
   contingency <- cbind(contingency, inter)
 }
 
-# very important `apply()` function
+# very important `apply()` function.
 # https://www.r-bloggers.com/2010/08/a-brief-introduction-to-%e2%80%9capply%e2%80%9d-in-r/
 
 Apple <- apply(contingency[c("127","431","759"),], FUN = sum, 2)
@@ -164,13 +175,19 @@ D0 <- apply(contingency[c("127","245","362"),], FUN = sum, 2)
 D10 <- apply(contingency[c("431","518","694"),], FUN = sum, 2)
 D20 <- apply(contingency[c("759","876","983"),], FUN = sum, 2)
 
+# Let's bind it to the main contingency table.
+
 row.sup <- rbind(Apple,Pineapple,Orange,D0,D10,D20)
 
 contingency <- rbind(contingency,row.sup)
 
+# Let's run the CA.
+
 res.ca <- CA(contingency, graph = F, row.sup = c(10:15))
 plot.CA(res.ca, invisible = "col")
 ellipseCA(res.ca, ellipse = "row", invisible = "col")
+
+# Let's run a description of frequencies in order to characterize the products.
 
 descfreq(contingency[c(1:9),])
 descfreq(contingency[c(10:12),])
@@ -189,7 +206,7 @@ penalties <- cbind(res.jar.s1$penalty2, res.jar.s2$penalty2)[,c(1,4)]
 colnames(penalties) <- c("Session_1","Session_2")
 penalties <- as.data.frame(penalties)
 
-# For min and max for ggplot.
+# Identify min and max for ggplot.
 
 summary(penalties)
 
@@ -205,7 +222,8 @@ ggplot(penalties, aes(x = Session_1, y = Session_2)) +
   xlim(-3,0.5) +
   theme_light()
 
-# Multivariate advanced - representation of the groups
+# Multivariate advanced - representation of the groups.
+
 goji.s1 <- goji[goji$Session =="S1",]
 goji.s2 <- goji[goji$Session =="S2",]
 
@@ -221,7 +239,7 @@ print("Done!")
 res.mfa <- MFA(goji.s1.s2, group = c(6,6), type = c("n","n"), name.group = c("S1","S2"), graph = F)
 plot.MFA(res.mfa, choix = "group")
 
-# Multiple Factor Analysis on contingency tables
+# Multiple Factor Analysis on contingency tables.
 
 j <- 7
 goji.s1.prod <- table(goji.s1$Product, goji.s1[,j])
