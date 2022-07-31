@@ -813,6 +813,12 @@ https://github.com/Sebastien-Le/SensoryDataScience/tree/master/data
 
 https://hbctraining.github.io/Intro-to-R-flipped/lessons/01_introR-R-and-RStudio.html
 
+https://r-bootcamp.netlify.app/
+
+https://rbasics.netlify.app/
+
+https://philosopher-analyst.netlify.app/intro-r/
+
 - If you want to learn about exploratory multivariate analysis and the FactoMineR package: 
 
 http://factominer.free.fr/index.html
