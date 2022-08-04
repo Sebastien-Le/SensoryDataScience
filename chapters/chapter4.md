@@ -262,7 +262,6 @@ Once the information added, you can use it as supplementary variables.
 </exercise>
 
 
-
 <exercise id="2" title="Act 2 - easy: the goji case study, an example of product formulation">
 
 <slides source="goji">
@@ -804,6 +803,8 @@ Run a Multiple Factor Analysis with the `MFA()` function pf the `FactoMineR` pac
 - If you are looking for the R scripts:
 
 https://github.com/Sebastien-Le/SensoryDataScience/
+
+Then download the following files: orange.R, goji.R, sennheiser.R and carseat.R
 
 - If you are looking for the data sets:
 
