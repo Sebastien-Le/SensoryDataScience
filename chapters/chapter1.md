@@ -1318,7 +1318,7 @@ Let's calculate the inertia of our product space, based on the standardized data
 <codeblock id="01_85">
 </codeblock>
 
-This magic number, when data are standardized, is equal to the number of variables used to calculate the distance between the individuals. Indeed, if you come back to the definition of the Euclidean distance, and if you permute the sums over the individuals with the sum of the variables, you finally obtain a sum of variances over the variables: each variable being standardized, you sum 1 over the variables, which is the number of variables.
+This magic number, when data are standardized, is equal to the number of variables used to calculate the distance between the individuals. Indeed, if you come back to the definition of the Euclidean distance, and if you permute the sums over the individuals with the sum over the variables, you finally obtain a sum of variances over the variables: each variable being standardized, you sum 1 over the variables, which is the number of variables.
 
 </exercise>
 
