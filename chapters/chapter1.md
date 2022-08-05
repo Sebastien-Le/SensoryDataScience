@@ -1380,7 +1380,7 @@ By definition, a structure is something arranged in a definite pattern of organi
 
 Our product space is a scatter plot in a vector space of dimension <img src="https://latex.codecogs.com/svg.image?J" style="margin-top : 0rem; margin-bottom : 0rem"/> (the number of sensory attributes that constitute the sensory profile). The idea is to understand the structure of this product space: what are the products that are the most different, how these oppositions between products are structured, how can these oppositions between products be explained?
 
-These questions can be explained graphically with Principal Component Analysis (PCA), a method that, as its name suggests, extracts the main dimensions of variability from multidimensional data.
+These questions can be explained graphically with Principal Component Analysis (PCA), a method that, as its name suggests, extracts the main (principal) dimensions (components) of variability from multidimensional data.
 
 To do this, PCA searches for the dimensions that maximize the variance of the scatter plot projected onto these same dimensions.
 
