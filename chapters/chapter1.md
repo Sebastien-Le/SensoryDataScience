@@ -1318,7 +1318,7 @@ Let's calculate the inertia of our product space, based on the standardized data
 <codeblock id="01_85">
 </codeblock>
 
-This magic number, when data are standardized, is equal to the number of variables used to calculate the distance between the individuals. Indeed, if you come back to the definition of the Euclidean distance, and if you permute the sums over the individuals with the sum of the variables, you finally obtain a sum of variances over the variables: each variable being standardized, you sum 1 over the variables, which is the number of variables.
+This magic number, when data are standardized, is equal to the number of variables used to calculate the distance between the individuals. Indeed, if you come back to the definition of the Euclidean distance, and if you permute the sums over the individuals with the sum over the variables, you finally obtain a sum of variances over the variables: each variable being standardized, you sum 1 over the variables, which is the number of variables.
 
 </exercise>
 
@@ -1380,7 +1380,7 @@ By definition, a structure is something arranged in a definite pattern of organi
 
 Our product space is a scatter plot in a vector space of dimension <img src="https://latex.codecogs.com/svg.image?J" style="margin-top : 0rem; margin-bottom : 0rem"/> (the number of sensory attributes that constitute the sensory profile). The idea is to understand the structure of this product space: what are the products that are the most different, how these oppositions between products are structured, how can these oppositions between products be explained?
 
-These questions can be explained graphically with Principal Component Analysis (PCA), a method that, as its name suggests, extracts the main dimensions of variability from multidimensional data.
+These questions can be explained graphically with Principal Component Analysis (PCA), a method that, as its name suggests, extracts the main (principal) dimensions (components) of variability from multidimensional data.
 
 To do this, PCA searches for the dimensions that maximize the variance of the scatter plot projected onto these same dimensions.
 
