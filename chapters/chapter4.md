@@ -1,10 +1,10 @@
 ---
 title: 'Chapter 4: Everything you always wanted to know about JAR - a play in five acts'
 description: This part was co-written by Alexiane Luc and Sébastien Lê. Thanks for her invaluable help!
-prev: /chapter3
-next: /chapter5
+prev: /chapter2
+next: /chapter4
 type: chapter
-id: 4
+id: 3
 ---
 
 <exercise id="1" title="Act 1 - introduction: the orange juice case study, understanding a market product space">
