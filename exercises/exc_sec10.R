@@ -13,4 +13,4 @@ experts.subset <- experts %>%
          | Product == "Shalimar" | Product == "Chanel N5" | Product == "Lolita Lempicka")
 experts.subset <- droplevels(experts.subset)
 res.decat <- decat(experts.subset, formul = "~Product+Panelist", firstvar = 3, graph = FALSE)
-print("Ready!")
+print("Done!")

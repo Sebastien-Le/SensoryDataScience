@@ -5,3 +5,4 @@ experts$Session <- as.factor(experts$Session)
 experts$Rank <- as.factor(experts$Rank)
 levels(experts$Product)[4] <- "Cinéma"
 experts.2products <- experts[experts$Product=="Angel"|experts$Product=="J'adore ET", ]
+print("Done!")
