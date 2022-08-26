@@ -1426,21 +1426,16 @@ Apply the `plot.PCA()` function in order to represent the sensory attributes: se
 </section>
 </HTML>
 
-
-</exercise>
-
-<exercise id="14" title="From Principal Components Analysis to Multiple Factor Analysis">
-
 <HTML>
 <section class="accordion2">
-  <input type="checkbox" name="collapse2" id="handle2">
+  <input type="checkbox" name="collapse5" id="handle5">
   <h2 class="handle">
-    <label for="handle2">In the last episodes...</label>
+    <label for="handle5">At second reading: from PCA to MFA</label>
   </h2>
   <div class="content">
   <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
   </p>
-<codeblock id="sec3">
+<codeblock id="01_90">
 </codeblock>
   </div>
 </section>
@@ -1448,7 +1443,7 @@ Apply the `plot.PCA()` function in order to represent the sensory attributes: se
 
 </exercise>
 
-<exercise id="15" title="The CheatR corner">
+<exercise id="14" title="The CheatR corner">
 
 ### Import a CSV file with *read.csv()* or *read.table()*
 <codeblock id="01_68">
