@@ -625,7 +625,7 @@ The most important dispersion parameter is the so-called *standard deviation*. A
 <section class="accordion">
   <input type="checkbox" name="collapse5" id="handle5">
   <h2 class="handle">
-    <label for="handle5">At second reading: mean and standard deviation</label>
+    <label for="handle5">At second reading: centering and standardizing</label>
   </h2>
   <div class="content">
     <p> Let's say you observe a bunch of random variables <img src="https://latex.codecogs.com/svg.image?X_i" style="margin-bottom : -0.25rem; margin-right : 0.25rem"/>, <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>. From the realizations of <img src="https://latex.codecogs.com/svg.image?\{ X_1, \dots, X_n \}" style="margin-bottom : -0.25rem"/>, you usually want to estimate the mean <img src="https://latex.codecogs.com/svg.image?\mu" style="margin-bottom : -0.25rem"/> of your variables, to get some insights on your population.
