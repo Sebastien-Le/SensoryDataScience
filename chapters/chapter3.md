@@ -18,12 +18,13 @@ id: 3
 With the `read.csv2()` function, import the orange data set and save it in an R object named orange. With the `summary()` function, make sure that the data set has been well imported. Check carefully the type of each variable. As there are 8 orange juices in the case study, set the `maxsum` argument to 8.
 
 <codeblock id="04_01">
-To be exact, this function reads a file in table format and creates a data frame from it, with cases corresponding to lines and variables to fields in the file ; the result of this reading should be stored in an R object. We should rather say, read the file and save it in an R object. <br> summary() is a generic function used to produce result summaries of the results of various model fitting functions. This is one of the most important functions. Always use it when importing your data.
+To be exact, the function read.csv2() reads a file in table format and creates a data frame from it, with cases corresponding to lines and variables to fields in the file ; the result of this reading should be stored in an R object. We should rather say, read the file and save it in an R object. <br> summary() is a generic function used to produce result summaries of the results of various model fitting functions. This is one of the most important functions. Always use it when importing your data.
 </codeblock>
 
 With the `as.factor()` function, encode all the variables except the *Liking* as factors. With the `levels()` and the `nlevels()` functions, make sure that you have 106 consumers.
 
 <codeblock id="04_02">
+In fact, the first two variables could have been directly imported as factors with the argument <i>stringsAsFactors</i> set to TRUE: <br>orange <- read.csv2("data/orange.csv", stringsAsFactors=TRUE)
 </codeblock>
 
 These *JAR* data are very simple, actually it's the minimum data you should ask to your consumers when collecting JAR data to understand a product space in terms of qualities and defects.
@@ -37,11 +38,13 @@ Before diving into the penalty analysis, let's visualize the data. The main ques
 Actually, JAR data can be considered as categorical variable: therefore, you want to see the distribution of each sensory attribute in terms of JAR categories. To do so, for a given attribute, use the `table()` function to get that distribution. Then, with the `as.data.frame()` function, transform this result into an R object that you will be able to plot.
 
 <codeblock id="04_02_v1">
+The table() function uses cross-classifying factors to build a contingency table of the counts at each combination of factor levels. In this case, it is applied to one column and therefore it provides the distribution of the column of interest.
 </codeblock>
 
 With the `ggplot()` and `geom_bar()` functions of the `ggplot2` package, plot the distribution from the R object `tab`.
 
 <codeblock id="04_02_v2">
+As you need the ggplot2 package, you have to load it. Make sure that you have installed it on your computer. To do so, use the install.packages() function: download and install packages from CRAN-like repositories or from local files.
 </codeblock>
 
 As you can see, this visualization is not explicit enough as you can't tell what is on the x-axis, nor on the y-axis. Improve your visualization with the `xlab()`, `ylab()`, `ggtitle()` functions.
