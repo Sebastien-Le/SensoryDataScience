@@ -18,6 +18,7 @@ id: 3
 With the `read.csv2()` function, import the orange data set and save it in an R object named orange. With the `summary()` function, make sure that the data set has been well imported. Check carefully the type of each variable. As there are 8 orange juices in the case study, set the `maxsum` argument to 8.
 
 <codeblock id="04_01">
+To be exact, this function reads a file in table format and creates a data frame from it, with cases corresponding to lines and variables to fields in the file ; the result of this reading should be stored in an R object. We should rather say, read the file and save it in an R object. <br> summary() is a generic function used to produce result summaries of the results of various model fitting functions. This is one of the most important functions. Always use it when importing your data.
 </codeblock>
 
 With the `as.factor()` function, encode all the variables except the *Liking* as factors. With the `levels()` and the `nlevels()` functions, make sure that you have 106 consumers.
