@@ -15,7 +15,7 @@ id: 3
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
 
-Use the `read.csv2()` function to import the orange data set and save it in an R object named orange. Use the `summary()` function to make sure that the data set has been imported well. Carefully check the type of each variable. As there are 8 orange juices in the case study, set the `maxsum` argument to 8. 
+Use the `read.csv2()` function to import the orange data set and save it in an R object named orange. Use the `summary()` function to make sure that the data set has been imported well. Carefully check the type of each variable. As there are 8 orange juices in the case study, set the `maxsum` argument to 8.
 
 <codeblock id="04_01">
 To be exact, the function read.csv2() reads a file in table format and creates a data frame from it, with cases corresponding to lines and variables to fields in the file ; the result of this reading should be stored in an R object. We should rather say, read the file and save it in an R object. <br> summary() is a generic function used to produce result summaries of the results of various model fitting functions. This is one of the most important functions. Always use it when importing your data.
