@@ -28,30 +28,30 @@ summary(____, maxsum = 8)
 ```
 -->
 
-With the `as.factor()` function, encode all the variables except the *Liking* as factors. With the `levels()` and the `nlevels()` functions, make sure that you have 106 consumers.
+Use the `as.factor()` function to encode all variables except *Liking* as factors. Use the `levels()` and `nlevels()` functions to make sure you have 106 consumers.
 
 <codeblock id="04_02">
 In fact, the first two variables could have been directly imported as factors with the argument <i>stringsAsFactors</i> set to TRUE: <br>orange <- read.csv2("data/orange.csv", stringsAsFactors=TRUE)
 </codeblock>
 
-These *JAR* data are very simple, actually it's the minimum data you should ask to your consumers when collecting JAR data to understand a product space in terms of qualities and defects.
+These *JAR* data are very simple, in fact it's the minimum data you should ask your consumers when collecting JAR data to understand a product space in terms of qualities and defects.
 
-But what does it mean to understand a product space in terms of qualities and defects? It means that you want to measure the impact of an attribute on the liking, when the attribute is not present enough, or on the contrary, when the attribute is too present.
+But what does it mean to understand a product space in terms of qualities and defects? It means that you want to measure the impact of an attribute on liking when the attribute is not present enough or, conversely, when the attribute is present too much.
 
 This impact can be measured at a product space level, or at a product level. The methodology for measuring and analyzing this kind of impact is called a <span style="font-weight : bold">penalty analysis</span> (just like in football when an offence is committed by a player in their own penalty area).
 
-Before diving into the penalty analysis, let's visualize the data. The main question you should answer to is: what do I want to visualize?
+Before we dive into penalty analysis, let's visualise the data. The most important question to answer is: what do I want to visualise?
 
-Actually, JAR data can be considered as categorical variable: therefore, you want to see the distribution of each sensory attribute in terms of JAR categories. To do so, for a given attribute, use the `table()` function to get that distribution. Then, with the `as.data.frame()` function, transform this result into an R object that you will be able to plot.
+In fact, JAR data can be thought of as a categorical variable: therefore, you may want to see the distribution of each sensory attribute in terms of JAR categories. To do this, for a given attribute, use the `table()` function to get this distribution. Then use the `as.data.frame()` function to transform this result into an R object that you can plot.
 
 <codeblock id="04_02_v1">
-The table() function uses cross-classifying factors to build a contingency table of the counts at each combination of factor levels. In this case, it is applied to one column and therefore it provides the distribution of the column of interest.
+The table() function uses cross-classifying factors to build a contingency table of the counts at each combination of factor levels. In this case, it is applied to a column and therefore it provides the distribution of the column of interest.
 </codeblock>
 
 With the `ggplot()` and `geom_bar()` functions of the `ggplot2` package, plot the distribution from the R object `tab`.
 
 <codeblock id="04_02_v2">
-As you need the ggplot2 package, you have to load it. Make sure that you have installed it on your computer. To do so, use the install.packages() function: download and install packages from CRAN-like repositories or from local files.
+As you will need the ggplot2 package, you will need to download it. Make sure it is installed on your computer. To do this, use the install.packages() function: download and install packages from CRAN-like repositories or from local files.
 </codeblock>
 
 As you can see, this visualization is not explicit enough as you can't tell what is on the x-axis, nor on the y-axis. Improve your visualization with the `xlab()`, `ylab()`, `ggtitle()` functions.
@@ -64,7 +64,7 @@ Use different *themes* to enhance your visualization. Have a look at the followi
 <codeblock id="04_02_v4">
 </codeblock>
 
-Of course the same type of visualization can be obtained for a given product. To do so, you need the contingency table that crosses the products and the levels of a given JAR attribute. Use the very important `table()` function (again) to obtain such a table.
+Of course, the same type of visualisation can be obtained for a given product. To do this, you need the contingency table that crosses the products and levels of a given JAR attribute. Use the very important `table()` function (again) to get such a table.
 
 <codeblock id="04_02_v5">
 </codeblock>
@@ -84,7 +84,7 @@ To compare these 2 products, use the `plot_grid()` function of the `cowplot` pac
 <codeblock id="04_02_v8">
 </codeblock>
 
-Actually, the comparison between the 2 products is still complicated. Obviously, the y-axis has to be set to the same scale. With the following code, get easily the maximum of occurrences for these 2 products.
+Actually, the comparison between the 2 products is still complicated. Obviously, the y-axis must be set to the same scale. With the following code, you can easily find the maximum of the occurrences for these 2 products.
 
 <codeblock id="04_02_v9">
 </codeblock>
