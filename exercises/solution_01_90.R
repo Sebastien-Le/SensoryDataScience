@@ -1,4 +1,4 @@
-NIPALS <- function(X){
+vonmises <- function(X){
   X = as.matrix(X)
   N = nrow(X)
   M = ncol(X)
@@ -7,7 +7,7 @@ NIPALS <- function(X){
   Xini = X
   qrX=qr(X)
   rang = qrX$rank
-  vec=matrix(0,nrow=M,ncol=rang)
+  vec=matrix(0,nrow=M,ncol=rang) 
   t=X[,1]
   i=1
   
@@ -33,5 +33,5 @@ NIPALS <- function(X){
   return(vec)
 }
 
-NIPALS(res.cr)
+vonmises(res.cr)
 svd(res.cr)$v

@@ -1400,6 +1400,8 @@ Apply the `plot.PCA()` function in order to represent the sensory attributes: se
 <codeblock id="01_88">
 </codeblock>
 
+<p>In PCA, variables are always centered, thus the scatter plot of rows is also always centered. However, this is not necessarily true for the scatter plot of variables.</p>
+
 <HTML>
 <section class="accordion2">
   <input type="checkbox" name="collapse3" id="handle3">
@@ -1407,25 +1409,28 @@ Apply the `plot.PCA()` function in order to represent the sensory attributes: se
     <label for="handle3">At second reading: eigenvectors and eigenvalues, playing with singular value decomposition</label>
   </h2>
   <div class="content">
-  <p> This section is a brief introduction to the concept of singular value decomposition. It shows what is behind a PCA. It involves the extraction of so-called eigenvalues, <i>i.e.</i> values specific to a matrix.
+  <p> This section illustrates briefly the concept of singular value decomposition. It shows what is behind a PCA. It involves the extraction of so-called eigenvalues, <i>i.e.</i> values specific to a matrix.
 
-  The `svd()` function computes the singular-value decomposition of a rectangular matrix <i>X</i>. The returned value is a list with a vector containing the singular values of <i>X</i>, sorted decreasingly, a matrix whose columns contain the left singular vectors of <i>X</i>, a matrix whose columns contain the right singular vectors of <i>X</i>.
-  </p>
+  The `svd()` function computes the singular-value decomposition of a rectangular matrix <i>X</i>. The returned value is a list with a vector containing `d` the singular values of <i>X</i>, sorted decreasingly, a matrix `u` whose columns contain the left singular vectors of <i>X</i>, a `v` matrix whose columns contain the right singular vectors of <i>X</i>.
   
+  In the following example, we apply the `svd()` function to the dataset `res.cr`, <i>i.e.</i> the dataset where the values have been centered and standardized to unit variance, and store the results in an object named `res.svd`. As explained, `res.svd` is a list constituted of 3 objects. 
+  
+  The following result illustrates the data <b>reconstruction formula</b> and demonstrates why eigenvalues and eigenvectors are unique to a matrix. As demonstrated, the dataset `res.cr` can be reconstructed by multiplying the elements of its own singular value decomposition.</p>
+
 <codeblock id="01_89_1">
 </codeblock>
 
-aaaaaaaaaaaaaaaaaaaaa
+<p>The following result illustrates the notion of projection. The points' coordinates, the points being the rows/individuals of our data matrix, are obtained by changing the reference frame and projecting the original coordinates, which are the values initially measured, onto the components that maximise the inertia (in this case, the variance) of the projected point cloud.</p>
 
 <codeblock id="01_89_2">
 </codeblock>
 
-bbbbbbbbbbbbbbbbbbbbbb
+<p>The following result illustrates the concept of projection, specifically in relation to columns, the columns being the variables of our data matrix. This result is not as straightforward as in the case of rows since rows and columns do not play symmetrical roles in the data. In PCA, variables are always centered, thus the scatter plot of rows is also always centered. However, this is not necessarily true for the scatter plot of variables.</p>
 
 <codeblock id="01_89_3">
 </codeblock>
 
-  </div>
+</div>
 </section>
 </HTML>
 
@@ -1433,10 +1438,12 @@ bbbbbbbbbbbbbbbbbbbbbb
 <section class="accordion2">
   <input type="checkbox" name="collapse4" id="handle4">
   <h2 class="handle">
-    <label for="handle4">At second reading: the Nipals algorithm</label>
+    <label for="handle4">At second reading: I've got the power...iteration algorithm</label>
   </h2>
   <div class="content">
- 
+
+It is important to mention this algorithm, at least in a data science course, which serves as the basis for another well-known algorithm, the NIPALS algorithm. To understand the process of obtaining eigenvectors, execute the command lines below. Don't hesitate to go to the following link *https://en.wikipedia.org/wiki/Power_iteration* and to compare the pseudocode to the R code.
+  
 <codeblock id="01_90">
 </codeblock>
   </div>
@@ -1451,7 +1458,10 @@ bbbbbbbbbbbbbbbbbbbbbb
   </h2>
   <div class="content">
   
-<codeblock id="01_90">
+<p>The code lines below demonstrate how Multiple Factor Analysis is weighted and give an understanding of what a weighted PCA is. Of course, the FactoMineR package's MFA function can also provide various graphical representations, including groups, or a partial representation of individuals. These representations aid in comprehending the common and distinct structures of diverse data tables measured on the same set of statistical individuals.
+</p>
+
+<codeblock id="01_91">
 </codeblock>
   </div>
 </section>
