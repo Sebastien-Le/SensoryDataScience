@@ -409,7 +409,7 @@ Then, in order to obtain an operational data frame, we set the names of the colu
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec3">
 </codeblock>
@@ -571,7 +571,7 @@ As in R base, the default output is based on occurrences, but it can be changed 
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec3">
 </codeblock>
@@ -607,7 +607,7 @@ The blue area illustrates the notion of dispersion around the mean, in the sense
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec3">
 </codeblock>
@@ -674,7 +674,7 @@ From your data, create a data frame of dispersion parameters such as the range, 
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec6">
 </codeblock>
@@ -755,7 +755,7 @@ Remember what we said at the beginning of this part, we want to test whether dif
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec7">
 </codeblock>
@@ -881,7 +881,7 @@ Let's now compare the two products *Angel* and *J'adore ET*. When you compare tw
 1. <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 = \mu_2" style="margin-bottom : -0.25rem"/>
 2. <img src="https://latex.codecogs.com/svg.image?H_1: \mu_1 \ne \mu_2" style="margin-bottom : -0.35rem"/>
 
-When you look at <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem ; margin-right : 0.2rem"/>, the so-called null hypothesis, you can also rephrase it the following way: <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 - \mu_2 =0" style="margin-bottom : -0.25rem"/>. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2" style="margin-bottom : -0.25rem"/> (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following <span style="font-weight : bold">test statistic</span> (by definition, a single measure of some attribute of a sample, _i.e._ a statistic, used in statistical hypothesis testing, Wikipedia):
+When you look at <img src="https://latex.codecogs.com/svg.image?H_0" style="margin-bottom : -0.25rem ; margin-right : 0.2rem"/>, the so-called null hypothesis, you can also rephrase it the following way: <img src="https://latex.codecogs.com/svg.image?H_0: \mu_1 - \mu_2 =0" style="margin-bottom : -0.25rem"/>. If you think carefully about what you've seen so far, what you need in order to assess these two hypotheses is a confidence interval for the difference <img src="https://latex.codecogs.com/svg.image?\mu_1 - \mu_2" style="margin-bottom : -0.25rem"/> (that you will never know, by the way). In other words, to assess the veracity of these hypotheses, what you need to do is to consider the following <span style="font-weight : bold">test statistic</span> (by definition, a single measure of some attribute of a sample, *i.e.* a statistic, used in statistical hypothesis testing, Wikipedia):
 
 <center><img src="https://latex.codecogs.com/svg.image?D=\bar{X}_1-\bar{X}_2." style="margin-top : 0rem; margin-bottom : 1.25rem"/></center>
 
@@ -948,7 +948,7 @@ Be careful, for educational purposes, *Angel* and *J'adore ET* have been studied
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec8">
 </codeblock>
@@ -1026,7 +1026,7 @@ For the two-ways analysis of variance, the analysis of variance table provided b
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec9">
 </codeblock>
@@ -1202,7 +1202,7 @@ According to the coefficients of the first column, this product has been perceiv
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec10">
 </codeblock>
@@ -1281,7 +1281,7 @@ Calculate the Euclidean distance between *Angel* and *Aromatics Elixir* from the
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec11">
 </codeblock>
@@ -1331,7 +1331,7 @@ This magic number, when data are standardized, is equal to the number of variabl
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec11">
 </codeblock>
@@ -1339,7 +1339,12 @@ This magic number, when data are standardized, is equal to the number of variabl
 </section>
 </HTML>
 
-This magic number can be illustrated graphically in at least two ways, but according to the same principle: by highlighting a relevant information on data matrix, its <span style="font-weight : bold">structure</span>; in other words, the way the rows of the matrix are inter-related or connected.
+This magic number can be illustrated graphically in at least two ways, but according to the same principle: by highlighting a relevant information on data matrix, its <span style="font-weight : bold">structure</span>; in other words, the way the rows of the matrix are interrelated or connected. The two tables below illustrate the notion of structure associated with a matrix.
+
+<codeblock id="01_86">
+</codeblock>
+
+This first graph shows the structure in the data matrix by the distance between the perfumes. The difficulty with this representation is that this proximity cannot be interpreted in terms of sensory descriptors.
 
 ```{r}
 coltable(magicsort(res.decat$tabT,method = "median")[-8,-9], 
@@ -1350,16 +1355,15 @@ coltable(magicsort(res.decat$tabT,method = "median")[-8,-9],
 <center><img src="Rplot.png" alt="what image shows"  width=100%></center>
 <br>
 
-<codeblock id="01_86">
-</codeblock>
+Here, the proximity between perfumes can be interpreted directly in terms of sensory descriptors. This representation allows us to visualise the notion of a sensory profile. It also shows the proximity between the sensory descriptors through the way they are correlated. This second table shows a contrast between two types of products: perfumes that are more fruity and floral on the one hand, and perfumes that are more oriental and heady on the other.
 
-These two graphs suggest a link between the information contained in a matrix, *i.e.* the inertia of the matrix, and the structure of the matrix, *i.e.* the way in which the rows approach or oppose each other (*resp.* the columns) according to their distances.
+These two vizualisations suggest a link between the information contained in a matrix, *i.e.* the inertia of the matrix, and the structure of the matrix, *i.e.* the way in which the rows approach or oppose each other (*resp.* the columns) according to their distances.
 
 To some extent, this link can be compared to the decomposition of the total variance presented previously. The inertia of a data matrix can also be decomposed according to the way the rows of the matrix are grouped or opposed: <span style="font-weight : bold">according to the way the rows are structured</span>. The main difference is that the way the structure is broken up is unknown *a priori*: this decomposition is done with respect to a latent variable whose interpretation is not known, *versus* a decomposition done with respect to a factor (or several factors depending on the model considered).
 
 </exercise>
 
-<exercise id="13" title="From the inertia decomposition to Principal Components Analysis">
+<exercise id="13" title="From the inertia decomposition to Principal Components Analysis and beyond">
 
 <HTML>
 <section class="accordion2">
@@ -1368,7 +1372,7 @@ To some extent, this link can be compared to the decomposition of the total vari
     <label for="handle2">In the last episodes...</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  <p>Please run the following code before starting this section if your connection has been lost or if you have interrupted your learning.
   </p>
 <codeblock id="sec11">
 </codeblock>
@@ -1376,9 +1380,9 @@ To some extent, this link can be compared to the decomposition of the total vari
 </section>
 </HTML>
 
-By definition, a structure is something arranged in a definite pattern of organization. The notion of structure suggests the idea of singular dimensions that define the contours of the matrix.
+By definition, a structure is something arranged in a particular pattern of organization. The notion of structure suggests the idea of singular dimensions that define the contours of the matrix.
 
-Our product space is a scatter plot in a vector space of dimension <img src="https://latex.codecogs.com/svg.image?J" style="margin-top : 0rem; margin-bottom : 0rem"/> (the number of sensory attributes that constitute the sensory profile). The idea is to understand the structure of this product space: what are the products that are the most different, how these oppositions between products are structured, how can these oppositions between products be explained?
+Our product space is a scatter plot in a vector space of dimension <img src="https://latex.codecogs.com/svg.image?J" style="margin-top : 0rem; margin-bottom : 0rem"/> (the number of sensory attributes that constitute the sensory profile). The idea is to understand the structure of this product space: what are the most different products, how are these contrasts between products structured, how can these contrasts between products be explained?
 
 These questions can be explained graphically with Principal Component Analysis (PCA), a method that, as its name suggests, extracts the main (principal) dimensions (components) of variability from multidimensional data.
 
@@ -1389,12 +1393,14 @@ Run the `PCA()` function of the `FactoMineR` package on the matrix of the adjust
 <codeblock id="01_87">
 </codeblock>
 
-This structure on the perfumes (the rows of the data matrix) has to be interpreted jointly with its counterpart, *i.e.* the structure on the sensory attributes. Actually, these two representations are the solutions to a same problem: finding the components that best represent the rows or the columns, in the sense of the projected inertia.
+This structure on the perfumes (the rows of the data matrix) must be interpreted jointly with its counterpart, *i.e.* the structure on the sensory attributes. In fact, these two representations are the solutions to a same problem: to find the components that best represent the rows or the columns, in the sense of the projected inertia.
 
 Apply the `plot.PCA()` function in order to represent the sensory attributes: set the argument `choix` to `"var"`.
 
 <codeblock id="01_88">
 </codeblock>
+
+<p>In PCA, variables are always centered, thus the scatter plot of rows is also always centered. However, this is not necessarily true for the scatter plot of variables.</p>
 
 <HTML>
 <section class="accordion2">
@@ -1403,11 +1409,28 @@ Apply the `plot.PCA()` function in order to represent the sensory attributes: se
     <label for="handle3">At second reading: eigenvectors and eigenvalues, playing with singular value decomposition</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
-  </p>
-<codeblock id="01_89">
+  <p> This section illustrates briefly the concept of singular value decomposition. It shows what is behind a PCA. It involves the extraction of so-called eigenvalues, <i>i.e.</i> values specific to a matrix.
+
+  The `svd()` function computes the singular-value decomposition of a rectangular matrix <i>X</i>. The returned value is a list with a vector containing `d` the singular values of <i>X</i>, sorted decreasingly, a matrix `u` whose columns contain the left singular vectors of <i>X</i>, a `v` matrix whose columns contain the right singular vectors of <i>X</i>.
+  
+  In the following example, we apply the `svd()` function to the dataset `res.cr`, <i>i.e.</i> the dataset where the values have been centered and standardized to unit variance, and store the results in an object named `res.svd`. As explained, `res.svd` is a list constituted of 3 objects. 
+  
+  The following result illustrates the data <b>reconstruction formula</b> and demonstrates why eigenvalues and eigenvectors are unique to a matrix. As demonstrated, the dataset `res.cr` can be reconstructed by multiplying the elements of its own singular value decomposition.</p>
+
+<codeblock id="01_89_1">
 </codeblock>
-  </div>
+
+<p>The following result illustrates the notion of projection. The points' coordinates, the points being the rows/individuals of our data matrix, are obtained by changing the reference frame and projecting the original coordinates, which are the values initially measured, onto the components that maximise the inertia (in this case, the variance) of the projected point cloud.</p>
+
+<codeblock id="01_89_2">
+</codeblock>
+
+<p>The following result illustrates the concept of projection, specifically in relation to columns, the columns being the variables of our data matrix. This result is not as straightforward as in the case of rows since rows and columns do not play symmetrical roles in the data. In PCA, variables are always centered, thus the scatter plot of rows is also always centered. However, this is not necessarily true for the scatter plot of variables.</p>
+
+<codeblock id="01_89_3">
+</codeblock>
+
+</div>
 </section>
 </HTML>
 
@@ -1415,11 +1438,12 @@ Apply the `plot.PCA()` function in order to represent the sensory attributes: se
 <section class="accordion2">
   <input type="checkbox" name="collapse4" id="handle4">
   <h2 class="handle">
-    <label for="handle4">At second reading: the Nipals algorithm</label>
+    <label for="handle4">At second reading: I've got the power...iteration algorithm</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
-  </p>
+
+It is important to mention this algorithm, at least in a data science course, which serves as the basis for another well-known algorithm, the NIPALS algorithm. To understand the process of obtaining eigenvectors, execute the command lines below. Don't hesitate to go to the following link *https://en.wikipedia.org/wiki/Power_iteration* and to compare the pseudocode to the R code.
+  
 <codeblock id="01_90">
 </codeblock>
   </div>
@@ -1433,9 +1457,11 @@ Apply the `plot.PCA()` function in order to represent the sensory attributes: se
     <label for="handle5">At second reading: from PCA to MFA</label>
   </h2>
   <div class="content">
-  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
-  </p>
-<codeblock id="01_90">
+  
+<p>The code lines below demonstrate how Multiple Factor Analysis is weighted and give an understanding of what a weighted PCA is. Of course, the FactoMineR package's MFA function can also provide various graphical representations, including groups, or a partial representation of individuals. These representations aid in comprehending the common and distinct structures of diverse data tables measured on the same set of statistical individuals. The main challenge of using MFA is in creating groups of variable and selecting their status as either active or illustrative.
+</p>
+
+<codeblock id="01_91">
 </codeblock>
   </div>
 </section>
