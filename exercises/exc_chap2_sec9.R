@@ -8,3 +8,4 @@ GMO$Position.A.Food <- factor(GMO$Position.A.Food,
                               levels=c('Totally opposed', 'Somewhat Against', 'Favourable', 'Very Favourable'))
 GMO$Political.Party <- factor(GMO$Political.Party, 
                               levels=c('Extreme left', 'Left', 'Greens', 'Liberal', 'Right'))
+print("Done!")

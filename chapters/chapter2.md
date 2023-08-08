@@ -633,3 +633,59 @@ Display the description of the political party associated with the category *Rig
 </codeblock>
 
 </exercise>
+
+<exercise id="9" title="From Correspondence Analysis to Multiple Correspondence Analysis">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec5">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
+The multidimensional analysis of the deviation matrix (or discrepancy matrix) consists in finding the dimensions that maximize the inertia of the orthogonal projection of the rows on the dimensions. In other words, these are the dimensions for which the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the most dependent : these are the dimensions for which the correspondence between the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the highest.
+
+These dimensions are obtained by applying the so-called Correspondence Analysis (CA) on the contingency table. Correspondence Analysis is the multidimensional method dedicated to the analysis of the dependence between two categorical variables, from the point of view of their categories. In other words, CA is dedicated to the analysis of the correspondence between the categories of one categorical variable and the categories of another one.
+
+To apply this method, use the `CA()` function of the `FactoMineR` package, then use the `plot.CA()` function in order to represent the rows of the contingency table.
+
+<codeblock id="02_14">
+</codeblock>
+
+Use the `plot.CA()` function in order to represent the columns of the contingency table.
+
+<codeblock id="02_15">
+</codeblock>
+
+Have a look at the numerical indicators.
+
+<codeblock id="02_15b">
+</codeblock>
+
+Display the eigenvalues, sum them and multiply the value of the sum by the number of individuals.
+
+<codeblock id="02_15c">
+</codeblock>
+
+## The *R* corner: the *descfreq()* function...a must have
+<br>
+
+Use the *descfreq()* function of the `FactoMineR` package to get an automatic description of the rows of the object `res.table`.
+  
+<codeblock id="02_15d">
+</codeblock>
+
+Display the description of the political party associated with the category *Right*. Try with the political party of your choice.
+
+<codeblock id="02_15e">
+</codeblock>
+
+</exercise>

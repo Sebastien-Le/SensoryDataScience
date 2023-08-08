@@ -23,3 +23,4 @@ for(i in 1:5){
 }
 rownames(joint.independence) <- rownames(res.table)
 colnames(joint.independence) <- colnames(res.table)
+print("Done!")
