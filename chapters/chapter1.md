@@ -1458,7 +1458,7 @@ It is important to mention this algorithm, at least in a data science course, wh
   </h2>
   <div class="content">
   
-<p>The code lines below demonstrate how Multiple Factor Analysis is weighted and give an understanding of what a weighted PCA is. Of course, the FactoMineR package's MFA function can also provide various graphical representations, including groups, or a partial representation of individuals. These representations aid in comprehending the common and distinct structures of diverse data tables measured on the same set of statistical individuals.
+<p>The code lines below demonstrate how Multiple Factor Analysis is weighted and give an understanding of what a weighted PCA is. Of course, the FactoMineR package's MFA function can also provide various graphical representations, including groups, or a partial representation of individuals. These representations aid in comprehending the common and distinct structures of diverse data tables measured on the same set of statistical individuals. The main challenge of using MFA is in creating groups of variable and selecting their status as either active or illustrative.
 </p>
 
 <codeblock id="01_91">
