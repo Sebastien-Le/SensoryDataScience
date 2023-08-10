@@ -651,11 +651,11 @@ Display the description of the political party associated with the category *Rig
 </section>
 </HTML>
 
-The multidimensional analysis of the deviation matrix (or discrepancy matrix) consists in finding the dimensions that maximize the inertia of the orthogonal projection of the rows on the dimensions. In other words, these are the dimensions for which the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the most dependent : these are the dimensions for which the correspondence between the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the highest.
+Multiple Correspondence Analysis (MCA) is an extension of Correspondence Analysis (CA) that allows for the analysis of the relationships among more than two categorical variables simultaneously. This method can also be seen as a PCA on categorical variables. Indeed, the datasets analysed in PCA and MCA are similar, with individuals in rows and variables in columns, continuous variables in the case of PCA and categorical variables in the case of MCA.
 
-These dimensions are obtained by applying the so-called Correspondence Analysis (CA) on the contingency table. Correspondence Analysis is the multidimensional method dedicated to the analysis of the dependence between two categorical variables, from the point of view of their categories. In other words, CA is dedicated to the analysis of the correspondence between the categories of one categorical variable and the categories of another one.
+MCA is a useful technique in data exploration and visualization when working with complex categorical data with multiple variables. It helps to identify patterns and associations between the different categorical variables, as well as the relationships among the categories within each variable.
 
-To apply this method, use the `CA()` function of the `FactoMineR` package, then use the `plot.CA()` function in order to represent the rows of the contingency table.
+To apply this method, use the `MCA()` function of the `FactoMineR` package, then use the `plot.MCA()` function in order to represent the rows of the dataset.
 
 <codeblock id="02_14">
 </codeblock>
