@@ -645,7 +645,7 @@ Display the description of the political party associated with the category *Rig
   <div class="content">
   <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
   </p>
-<codeblock id="chap2_sec5">
+<codeblock id="chap2_sec9">
 </codeblock>
   </div>
 </section>
@@ -656,6 +656,8 @@ Multiple Correspondence Analysis (MCA) is an extension of Correspondence Analysi
 MCA is a useful technique in data exploration and visualization when working with complex categorical data with multiple variables. It helps to identify patterns and associations between the different categorical variables, as well as the relationships among the categories within each variable.
 
 To apply this method, use the `MCA()` function of the `FactoMineR` package, then use the `plot.MCA()` function in order to represent the rows of the dataset.
+
+Prior to applying the `MCA()` function, it is essential to address the following question: Which variables should I use to distinguish between individuals? In our example, we aim to categorize individuals based on variables related to genetically modified organisms (GMOs).
 
 <codeblock id="02_14">
 </codeblock>
