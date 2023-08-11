@@ -716,6 +716,17 @@ As indicated by the code, the `HCPC()` function can automatically determine an o
 
 The function provides two particularly important outputs: the original dataset, *i.e.* the one analyzed by the MCA, to which the cluster variable derived from the hierarchical clustering on the MCA components has been added (`$data.clust`); the automatic description of the cluster variable (`$desc.var`).
 
+To obtain the distribution of the cluster variable, simply apply the `summary()` function to the appropriate dataset.
+
+<codeblock id="02_048">
+</codeblock>
+
+You can now proceed to review the description of the clusters and interpret them.
+
+<codeblock id="02_049">
+</codeblock>
+
+
 ## The *R* corner: the *catdes()* function...a must have
 <br>
 

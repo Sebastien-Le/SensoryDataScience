@@ -1,0 +1,1 @@
+summary(res.hcpc$data.clust)
