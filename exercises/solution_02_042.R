@@ -1,0 +1,1 @@
+plot.MCA(res.mca, invisible = c("var","quali.sup"), label = "none", title = "Representation of the indivuals")

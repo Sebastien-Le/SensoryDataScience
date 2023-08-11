@@ -1,0 +1,1 @@
+plot.MCA(res.mca, invisible = c("____","____"), label = "____", title = "Representation of the indivuals")

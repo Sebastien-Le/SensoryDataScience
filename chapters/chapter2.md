@@ -674,14 +674,19 @@ Use the `plot.MCA()` function in order to represent the results from MCA.
 <codeblock id="02_039">
 </codeblock>
 
-Have a look at the numerical indicators.
+As you can see, the graph is overloaded. It shows the individuals in black, the modalities associated with the active variables in red and the supplementary variables in green. It is possible to represent only one type of object by making the others invisible using the `invisible` argument. If you set the argument to `"var"` then the modalities associated with the active variables will not be represented. If you set the argument to `"quali.sup"` then the modalities associated with the supplementary variables will not be represented.
 
-<codeblock id="02_15b">
+<codeblock id="02_040">
 </codeblock>
 
-Display the eigenvalues, sum them and multiply the value of the sum by the number of individuals.
+If you set the argument to `"quali.sup"` then the modalities associated with the supplementary variables will not be represented.
 
-<codeblock id="02_15c">
+<codeblock id="02_041">
+</codeblock>
+
+By playing with the `label` argument, represent individuals without their identifier.
+
+<codeblock id="02_042">
 </codeblock>
 
 ## The *R* corner: the *catdes()* function...a must have
