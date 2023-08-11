@@ -664,14 +664,14 @@ The `MCA()` function facilitates the distinction between variables used in calcu
 <codeblock id="02_037">
 </codeblock>
 
-Multiple correspondence analysis is highly sensitive to rare modalities, leading to greater distance between individuals who have them and those who do not. The `MCA()` function includes a crucial argument, namely the `level.ventil` argument. Set this argument to 0.05: individuals who have chosen rare modalities, taken by less than 5% of individuals, are randomly assigned another modality.
+Multiple correspondence analysis is highly sensitive to rare modalities, leading to greater distance between individuals who possess them and those who do not. The `MCA()` function includes a crucial argument, namely the `level.ventil` argument. Set this argument to 0.05: individuals who have chosen rare modalities, taken by less than 5% of individuals, are randomly assigned another modality.
 
 <codeblock id="02_038">
 </codeblock>
 
-Use the `plot.CA()` function in order to represent the columns of the contingency table.
+Use the `plot.MCA()` function in order to represent the results from MCA.
 
-<codeblock id="02_15">
+<codeblock id="02_039">
 </codeblock>
 
 Have a look at the numerical indicators.
