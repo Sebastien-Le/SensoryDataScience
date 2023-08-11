@@ -730,14 +730,18 @@ You can now proceed to review the description of the clusters and interpret them
 ## The *R* corner: the *catdes()* function...a must have
 <br>
 
-Use the *catdes()* function of the `FactoMineR` package to get an automatic description of the rows of the object `res.table`.
-  
-<codeblock id="02_15d">
+The `catdes()` function is one of the most important in the `FactoMineR` package. It enables the automatic description of a qualitative variable using the other variables in the dataset, whether they are quantitative or qualitative.
+
+We will apply this function to two variables of interest. First, the political party variable. This will enable us to have a description of political parties based on their stance towards GMOs.
+
+<codeblock id="02_050">
 </codeblock>
 
 Display the description of the political party associated with the category *Right*. Try with the political party of your choice.
 
-<codeblock id="02_15e">
+Second, the cluster variable, which will provide an automatic description of the cluster variable obtained from the HCPC function.
+
+<codeblock id="02_051">
 </codeblock>
 
 </exercise>
