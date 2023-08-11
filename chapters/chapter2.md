@@ -595,7 +595,7 @@ Hence the name of the distance between two row profiles which is called the Chi-
 </section>
 </HTML>
 
-The multidimensional analysis of the deviation matrix (or discrepancy matrix) consists in finding the dimensions that maximize the inertia of the orthogonal projection of the rows on the dimensions. In other words, these are the dimensions for which the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the most dependent : these are the dimensions for which the correspondence between the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the highest.
+The multidimensional analysis of the deviation matrix (or discrepancy matrix) consists in finding the dimensions that maximize the inertia of the orthogonal projection of the rows (on these dimensions). In other words, these are the dimensions for which the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the most dependent: these are the dimensions for which the correspondence (the association) between the categories of the variable *Political.Party* and the categories of the variable *Position.A.Food* are the highest.
 
 These dimensions are obtained by applying the so-called Correspondence Analysis (CA) on the contingency table. Correspondence Analysis is the multidimensional method dedicated to the analysis of the dependence between two categorical variables, from the point of view of their categories. In other words, CA is dedicated to the analysis of the correspondence between the categories of one categorical variable and the categories of another one.
 
@@ -657,9 +657,16 @@ MCA is a useful technique in data exploration and visualization when working wit
 
 To apply this method, use the `MCA()` function of the `FactoMineR` package, then use the `plot.MCA()` function in order to represent the rows of the dataset.
 
-Prior to applying the `MCA()` function, it is essential to address the following question: Which variables should I use to distinguish between individuals? In our example, we aim to categorize individuals based on variables related to genetically modified organisms (GMOs).
+Before using the `MCA()` function, a crucial question needs to be addressed: which variables should be used to differentiate individuals? In this example, the goal is to classify individuals based on their opinions on genetically modified organisms (GMOs). Therefore, to distinguish between two individuals, variables associated with GMOs will be used. To calculate the distance between individuals, the first 16 variables of the dataset are utilised.
 
-<codeblock id="02_14">
+The `MCA()` function facilitates the distinction between variables used in calculating the distance between individuals, *i.e.* active variables and other variables referred to as illustrative or supplementary variables. To classify the variables, the arguments *quanti.sup* and *quali.sup* are employed, each indicating the columns of supplementary quantitative or qualitative variables. By default, any remaining variables are considered to be active variables.
+
+<codeblock id="02_037">
+</codeblock>
+
+Multiple correspondence analysis is highly sensitive to rare modalities, leading to greater distance between individuals who have them and those who do not. The `MCA()` function includes a crucial argument, namely the `level.ventil` argument. Set this argument to 0.05: individuals who have chosen rare modalities, taken by less than 5% of individuals, are randomly assigned another modality.
+
+<codeblock id="02_038">
 </codeblock>
 
 Use the `plot.CA()` function in order to represent the columns of the contingency table.
@@ -677,10 +684,10 @@ Display the eigenvalues, sum them and multiply the value of the sum by the numbe
 <codeblock id="02_15c">
 </codeblock>
 
-## The *R* corner: the *descfreq()* function...a must have
+## The *R* corner: the *catdes()* function...a must have
 <br>
 
-Use the *descfreq()* function of the `FactoMineR` package to get an automatic description of the rows of the object `res.table`.
+Use the *catdes()* function of the `FactoMineR` package to get an automatic description of the rows of the object `res.table`.
   
 <codeblock id="02_15d">
 </codeblock>

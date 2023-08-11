@@ -1,0 +1,1 @@
+heatmap(chi2.row, symm = TRUE)
