@@ -745,3 +745,115 @@ Second, the cluster variable, which will provide an automatic description of the
 </codeblock>
 
 </exercise>
+
+<exercise id="9" title="From Multiple Correspondence Analysis to Sorting Data">
+
+<HTML>
+<section class="accordion2">
+  <input type="checkbox" name="collapse2" id="handle2">
+  <h2 class="handle">
+    <label for="handle2">In the last episodes...</label>
+  </h2>
+  <div class="content">
+  <p>This is what you need to do before beginning this section, if your connection has been interrupted or if you have have interrupted your learning.
+  </p>
+<codeblock id="chap2_sec9">
+</codeblock>
+  </div>
+</section>
+</HTML>
+
+Multiple Correspondence Analysis (MCA) is an extension of Correspondence Analysis (CA) that allows for the analysis of the relationships among more than two categorical variables simultaneously. This method can also be seen as a PCA on categorical variables. Indeed, the datasets analysed in PCA and MCA are similar, with individuals in rows and variables in columns, continuous variables in the case of PCA and categorical variables in the case of MCA.
+
+MCA is a useful technique in data exploration and visualization when working with complex categorical data with multiple variables. It helps to identify patterns and associations between the different categorical variables, as well as the relationships among the categories within each variable.
+
+To apply this method, use the `MCA()` function of the `FactoMineR` package, then use the `plot.MCA()` function in order to represent the rows of the dataset.
+
+Before using the `MCA()` function, a crucial question needs to be addressed: which variables should be used to differentiate individuals? In this example, the goal is to classify individuals based on their opinions on genetically modified organisms (GMOs). Therefore, to distinguish between two individuals, variables associated with GMOs will be used. To calculate the distance between individuals, the first 16 variables of the dataset are utilised.
+
+The `MCA()` function facilitates the distinction between variables used in calculating the distance between individuals, *i.e.* active variables and other variables referred to as illustrative or supplementary variables. To classify the variables, the arguments *quanti.sup* and *quali.sup* are employed, each indicating the columns of supplementary quantitative or qualitative variables. By default, any remaining variables are considered to be active variables.
+
+<codeblock id="02_037">
+</codeblock>
+
+Multiple correspondence analysis is highly sensitive to rare modalities, leading to greater distance between individuals who possess them and those who do not. The `MCA()` function includes a crucial argument, namely the `level.ventil` argument. Set this argument to 0.05: individuals who have chosen rare modalities, taken by less than 5% of individuals, are randomly assigned another modality.
+
+<codeblock id="02_038">
+</codeblock>
+
+Use the `plot.MCA()` function in order to represent the results from MCA.
+
+<codeblock id="02_039">
+</codeblock>
+
+As you can see, the graph is overloaded. It shows the individuals in black, the modalities associated with the active variables in red and the supplementary variables in green. It is possible to represent only one type of object by making the others invisible using the `invisible` argument. If you set the argument to `"var"` then the modalities associated with the active variables will not be represented. If you set the argument to `"quali.sup"` then the modalities associated with the supplementary variables will not be represented.
+
+<codeblock id="02_040">
+</codeblock>
+
+If you set the argument to `"quali.sup"` then the modalities associated with the supplementary variables will not be represented.
+
+<codeblock id="02_041">
+</codeblock>
+
+By playing with the `label` argument, represent individuals without their identifier.
+
+<codeblock id="02_042">
+</codeblock>
+
+Represent the modalities associated with the supplementary variables. Comment and interpret this graphical output.
+
+<codeblock id="02_043">
+</codeblock>
+
+To comprehend the structure of variability between individuals induced by the distance based on GMO variables, use the `dimdesc()` function to gain a better understanding of the dimensions derived from the MCA. This function is applied to the results of the MCA directly.
+
+<codeblock id="02_044">
+</codeblock>
+
+Interpret the first dimension using the code provided below. Start by identifying the modalities that are associated with the supplementary variables. These modalities are particularly interesting because they did not intervene in the distance between individuals and therefore did not participate in the construction of the dimensions.
+
+<codeblock id="02_045">
+</codeblock>
+
+In the case of questionnaire data, it is common to want to obtain a typology of respondents. This can easily be done using an unsupervised classification based on the factorial coordinates from the MCA. This classification can easily be done using the `HCPC()` function. Note that by default, the number of factorial coordinates saved by the `MCA()` function is equal to 5. It is possible to carry out the typology on a larger number of factorial coordinates: this is done using the `ncp` argument of the `MCA()` function.
+
+<codeblock id="02_046">
+</codeblock>
+
+As indicated by the code, the `HCPC()` function can automatically determine an optimal number of clusters. To achieve this, the `nb.clust` argument should be set to -1. Now that we have clusters of respondents who share a common perception of GMOs, we can explore how these clusters can be nterpreted: let's examine the numerical indicators provided by the `HCPC()` function.
+
+<codeblock id="02_047">
+</codeblock>
+
+The function provides two particularly important outputs: the original dataset, *i.e.* the one analyzed by the MCA, to which the cluster variable derived from the hierarchical clustering on the MCA components has been added (`$data.clust`); the automatic description of the cluster variable (`$desc.var`).
+
+To obtain the distribution of the cluster variable, simply apply the `summary()` function to the appropriate dataset.
+
+<codeblock id="02_048">
+</codeblock>
+
+You can now proceed to review the description of the clusters and interpret them.
+
+<codeblock id="02_049">
+</codeblock>
+
+
+## The *R* corner: the *catdes()* function...a must have
+<br>
+
+The `catdes()` function is one of the most important in the `FactoMineR` package. It enables the automatic description of a qualitative variable using the other variables in the dataset, whether they are quantitative or qualitative.
+
+We will apply this function to two variables of interest. First, the political party variable. This will enable us to have a description of political parties based on their stance towards GMOs.
+
+<codeblock id="02_050">
+</codeblock>
+
+Display the description of the political party associated with the category *Right*. Try with the political party of your choice.
+
+Second, the cluster variable, which will provide an automatic description of the cluster variable obtained from the HCPC function.
+
+<codeblock id="02_051">
+</codeblock>
+
+</exercise>
