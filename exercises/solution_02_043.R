@@ -1,0 +1,1 @@
+plot.MCA(res.mca, invisible = c("ind","var"), label = "quali.sup", title = "Representation of supplementary variables")

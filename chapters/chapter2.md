@@ -689,6 +689,23 @@ By playing with the `label` argument, represent individuals without their identi
 <codeblock id="02_042">
 </codeblock>
 
+Represent the modalities associated with the supplementary variables. Comment and interpret this graphical output.
+
+<codeblock id="02_043">
+</codeblock>
+
+To comprehend the structure of variability between individuals induced by the distance based on GMO variables, use the `dimdesc()` function to gain a better understanding of the dimensions derived from the MCA. This function is applied to the results of the MCA directly.
+
+<codeblock id="02_044">
+</codeblock>
+
+Interpret the first dimension using the code provided below. Begin by identifying the modalities that are characteristic of this dimension and that are associated with the supplementary variables. These modalities are particularly interesting because they did not participate in the construction of the dimensions and did not intervene in the distance between individuals.
+
+<codeblock id="02_045">
+</codeblock>
+
+
+
 ## The *R* corner: the *catdes()* function...a must have
 <br>
 
