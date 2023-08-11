@@ -709,6 +709,8 @@ In the case of questionnaire data, it is common to want to obtain a typology of 
 <codeblock id="02_046">
 </codeblock>
 
+As suggested by the code, the `HCPC()` function can automatically identify the number of clusters. The argument `nb.clust` is set to -1. Now that we have clusters of respondents who share a common perception of GMOs, we can examine how these clusters have been characterized: let's have a look at the numerical indicators provided by the `HCPC()` function.
+
 
 
 ## The *R* corner: the *catdes()* function...a must have
