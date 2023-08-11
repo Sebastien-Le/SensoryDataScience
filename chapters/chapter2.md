@@ -709,9 +709,12 @@ In the case of questionnaire data, it is common to want to obtain a typology of 
 <codeblock id="02_046">
 </codeblock>
 
-As suggested by the code, the `HCPC()` function can automatically identify the number of clusters. The argument `nb.clust` is set to -1. Now that we have clusters of respondents who share a common perception of GMOs, we can examine how these clusters have been characterized: let's have a look at the numerical indicators provided by the `HCPC()` function.
+As indicated by the code, the `HCPC()` function can automatically determine an optimal number of clusters. To achieve this, the `nb.clust` argument should be set to -1. Now that we have clusters of respondents who share a common perception of GMOs, we can explore how these clusters can be nterpreted: let's examine the numerical indicators provided by the `HCPC()` function.
 
+<codeblock id="02_047">
+</codeblock>
 
+The function provides two particularly important outputs: the original dataset, *i.e.* the one analyzed by the MCA, to which the cluster variable derived from the hierarchical clustering on the MCA components has been added (`$data.clust`); the automatic description of the cluster variable (`$desc.var`).
 
 ## The *R* corner: the *catdes()* function...a must have
 <br>
