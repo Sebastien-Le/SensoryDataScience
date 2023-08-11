@@ -699,9 +699,14 @@ To comprehend the structure of variability between individuals induced by the di
 <codeblock id="02_044">
 </codeblock>
 
-Interpret the first dimension using the code provided below. Begin by identifying the modalities that are characteristic of this dimension and that are associated with the supplementary variables. These modalities are particularly interesting because they did not participate in the construction of the dimensions and did not intervene in the distance between individuals.
+Interpret the first dimension using the code provided below. Start by identifying the modalities that are associated with the supplementary variables. These modalities are particularly interesting because they did not intervene in the distance between individuals and therefore did not participate in the construction of the dimensions.
 
 <codeblock id="02_045">
+</codeblock>
+
+In the case of questionnaire data, it is common to want to obtain a typology of respondents. This can easily be done using an unsupervised classification based on the factorial coordinates from the MCA. This classification can easily be done using the `HCPC()` function. Note that by default, the number of factorial coordinates saved by the `MCA()` function is equal to 5. It is possible to carry out the typology on a larger number of factorial coordinates: this is done using the `ncp` argument of the `MCA()` function.
+
+<codeblock id="02_046">
 </codeblock>
 
 
