@@ -3,7 +3,7 @@
     "title": "My Sensory Data Science course",
     "slogan": "A free online course",
     "description": "'Sensory Data Science' is an innovative course about data science applied to sensory data. In this course, we will try to find the right balance between statistics, computer science, mathematics, formalism, intuition, with a pinch of sensory, consumer, perception data. The spirit of the course is as follows: start with data, explore them and introduce the statistical and computer elements necessary to obtain knowledge. Data mining will be done using R software.",
-    "bio": "Course initated by Sébastien Lê, Guillaume Béguec and Marion Moussay, the statistics and computer science trio in the Department Institut Agro, Agrocampus Ouest, CNRS, IRMAR - UMR 6625, F-35000 Rennes, France",
+    "bio": "The course was created by Sébastien Lê and implemented by Sébastien Lê, Guillaume Béguec, and Marion Moussay, from the statistics and computer science department, Institut Agro Rennes-Angers, CNRS, IRMAR - UMR 6625, F-35000 Rennes, France",
     "siteUrl": "https://course-starter-r.netlify.com",
     "twitter": "spacy_io",
     "fonts": "IBM+Plex+Mono:500|IBM+Plex+Sans:700|Lato:400,400i,700,700i",
