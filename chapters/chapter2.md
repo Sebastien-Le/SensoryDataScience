@@ -746,7 +746,7 @@ Second, the cluster variable, which will provide an automatic description of the
 
 </exercise>
 
-<exercise id="9" title="From Multiple Correspondence Analysis to Sorting Data">
+<exercise id="10" title="From Multiple Correspondence Analysis to Sorting Data">
 
 <HTML>
 <section class="accordion2">
