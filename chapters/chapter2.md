@@ -760,9 +760,18 @@ As you can see this description is the one that you have obtained with the `HCPC
 
 In this section we illustrate how MCA can be used to analyse sorting data in a natural way. We will use sorting data from the `SensoMineR` package, which we will analyse using the `MCA()` function in the `FactoMineR` package.
 
-Load the `SensoMineR` package with the `library()` function, then load the `perfume` dataset with the `data()` function. View the *perfume* dataset.
+Load the `SensoMineR` package with the `library()` function, then load the `perfume` dataset with the `data()` function. View columns 1, 2, 4, 6 of the *perfume* dataset.
 
 <codeblock id="02_052">
+</codeblock>
+
+In order to comprehend why sorting data can be naturally analysed using ACM, it is necessary to understand the nature of the data.
+
+In this example, perfumes are evaluated by consumers and grouped according to their similarity. The first consumer grouped the perfumes *Coco Mademoiselle*, *JadoreEP* and *JadoreET* and described them with the attributes *soap* and *clean*. Similarly, the same consumer grouped *Linstant* and *Pleasures*, but did not describe the group.
+
+Each consumer can be considered as a class variable, *i.e.* a qualitative variable. We are therefore dealing with a data set in which the statistical individuals are described by a set of qualitative variables. We can therefore apply a MCA to the dataset.
+
+<codeblock id="02_053">
 </codeblock>
 
 
