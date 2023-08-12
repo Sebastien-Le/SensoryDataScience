@@ -739,9 +739,17 @@ We will apply this function to two variables of interest. First, the political p
 
 Display the description of the political party associated with the category *Right*. Try with the political party of your choice.
 
+<codeblock id="02_050a">
+</codeblock>
+
 Second, the cluster variable, which will provide an automatic description of the cluster variable obtained from the HCPC function.
 
 <codeblock id="02_051">
+</codeblock>
+
+Display the description of the first cluster.
+
+<codeblock id="02_051a">
 </codeblock>
 
 </exercise>
