@@ -167,13 +167,13 @@ height: 1px;
 
 <exercise id="1" title="From sensory data collection to a collection of sensory data">
 
-One of the most common situation when dealing with *quantitative perception* occurs when a set of stimuli is assessed by panelists according to a bunch of quantitative sensory attributes. One can distinguish between two situations: when the sensory attributes are the same from one panelist to the other, when the sensory attributes are different from one panelist to the other, what happens when panelists can use their own sensory attributes. 
+One of the most common situations when dealing with *quantitative perception* is when a set of stimuli is judged by panelists according to a set of quantitative sensory attributes. One can distinguish between two situations: when the sensory attributes are the same from one panelist to the other, and when the sensory attributes are different from one panelist to the other, which happens when panelists can use their own sensory attributes.
 
-In this course, we will deal essentially with the so-called *QDA* type of data, when panelists rate according to a fix list of attributes. These data are the origin of sensory data, and we will see that it's a very convenient model, from a statistical point of view: in other words you will be able to learn a lot in terms of statistical thinking from these data.
+In this course we will mainly be dealing with the so-called *QDA* type of data, where panelists rate according to a fixed list of attributes. This data is the origin of sensory data, and we'll see that it's a very convenient model from a statistical point of view: in other words, you'll be able to learn a lot from it in terms of statistical thinking.
 
-Let's say you are a panelist, and you have to assess a set of perfumes according to a list of sensory attributes from 0 to 10: 0 meaning that you don't perceive the perfume you assess as *heady* for instance, 10 meaning that you perceive the perfume as extremely *heady*. Each time you will have to evaluate a perfume, a lab assistant will provide you with a sample of the perfume and a form to be filled. On this form, you will note your name, the three digits code of the perfume you are testing.
+Suppose you are a panelist and you are asked to rate a series of perfumes on a list of sensory attributes from 0 to 10: 0 means that you do not find the perfume you are rating to be, for example, *heady*, 10 means that you find the perfume to be extremely *heady*. Each time you are asked to rate a perfume, a lab assistant will give you a sample of the perfume and a form to fill in. On this form you will write your name and the three-digit code of the perfume you are testing.
 
-From a statistical point of view, the *statistical unit* of interest is the form on which you have noted many information. In other words, as in a data set rows correspond to statistical units and columns correspond to variables, in our situation, each row of our data set is a form with information such as the name of the panelist, the product that has been assessed, the scores for the different sensory attributes.
+From a statistical point of view, the *statistical unit* of interest is the form on which you have recorded a lot of information. In other words, just as in a data set the rows correspond to statistical units and the columns to variables, in our situation each row of our data set is a form containing information such as the name of the panelist, the product that was evaluated, the scores for the different sensory attributes.
 
 Before importing the data, let's have a look at our first data set based on quantitative measurements: `perfumes_qda_experts.csv`.
 
@@ -193,7 +193,7 @@ Let's recall that:
 
 <exercise id="2" title="From a data set to a data frame">
 
-Before importing our data set in the R software, let's recall that R is like a freeway. It's complex, it goes very fast, it can be dangerous when it's not properly used, and as a pedestrian your life expectancy is about 5 to 10 minutes. We all know people that have opened an R session (after struggling for its installation) and that have quitted after 5 minutes, without doing anything but grumbling.
+Before we import our data set into the R software, let's remember that R is like a motorway. It's complex, it's fast, it can be dangerous if you don't use it properly, and as a pedestrian your life expectancy is about 5 to 10 minutes. We all know people who have started an R session (after struggling to get it installed) and left after 5 minutes without doing anything but grumble.
 
 ## The *R* corner: the survival guide
 <br>
@@ -228,17 +228,17 @@ R suggests you several demos. Choose `graphics` for instance, and have a look at
 To do so, apply the demo() function to the instance <i>graphics</i>.
 </codeblock>
 
-A function (with some rare exceptions) need some inputs to produce some outputs. What you need now, is a list of functions that are really important, and some insights about how to use functions. These insights can be found easily once you know the name of the function you want to use, which is often the case. To have access to the help page of a function, write in the console the name of the function preceded by a question mark, as follows:
+A function (with some rare exceptions) needs some inputs to produce some outputs. What you need now is a list of functions that are really important, and some insight into how to use functions. These hints are easy to find if you know the name of the function you want to use, which is often the case. To access the help page for a function, type the name of the function in the console, preceded by a question mark, as follows:
 
 ```{r}
 ?read.csv
 ```
-The structure of the help page in the R documentation is roughly the same from one function to the other. It begins by a description of the function, then it shows how it can be used, then it describes the arguments of the function, in other words the input you have to provide to run the function (some/most of the arguments are optional as there is often a default value for each argument). Finally, it presents the outputs calculated or plotted by the function and it provides examples that you can copy and paste directly in your R console, without even having any data sets. 
+The structure of the help page in the R documentation is roughly the same from function to function. It starts with a description of the function, then it shows how to use it, then it describes the arguments of the function, in other words the input you need to provide to run the function (some/most of the arguments are optional, as there is often a default value for each argument). Finally, it presents the outputs calculated or plotted by the function, and provides examples that you can copy and paste directly into your R console without having any data sets.
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
 
-Let's first import our dataset in R and have a look at it. To do so, we will use the `read.csv()` function, dedicated to *csv* files. We will also use a very important sign that will allow you to assign results provided by an R function to an R object: `<-`. Indeed, importing data means reading data from a source, then storing what has been read in an R object.
+First, let's import our dataset into R and have a look at it. We will use the `read.csv()` function, which is dedicated to *csv* files. We will also use a very important character that allows you to assign the results returned by an R function to an R object: `<-`. In fact, importing data means reading data from a source and then storing what has been read in an R object.
 
 <codeblock id="01_01">
 </codeblock>
@@ -253,7 +253,7 @@ In this one, we have introduced the notion of *argument*: in mathematics, a vari
 ## The *R* corner: the *read.table()* function
 <br>
 
-As its name suggests, the `read.table()` function reads a file in table format and creates a *data frame* from it, with cases corresponding to lines and variables to fields in the file. Actually, the two functions `read.csv()` and `read.table()` are the same, except for the defaults, *i.e.* the default values of the arguments. 
+As its name suggests, the `read.table()` function reads a file in table format and creates a *data frame* from it, with cases corresponding to lines and variables to fields in the file. Actually, the two functions `read.csv()` and `read.table()` are the same, except for the defaults, *i.e.* the default values of the arguments.
 
 <codeblock id="01_02">
 </codeblock>
@@ -263,7 +263,7 @@ Don't hesitate to have a look at the help page of the `read.table()` function.
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
 
-Let's have a look at what has been imported in R, the object *experts* which is actually a data frame. To display any R object, write its name in the console. To display part of the *experts* object, select the rows and columns you want to display. By definition, a data frame is a table or a two-dimensional array, and you can navigate in this array as you would in any matrix, with indices that you would specify using *square brackets* (not to be confused with the *parentheses* used when using a function).
+Let's have a look at what was imported into R, the *experts* object, which is actually a data frame. To view any R object, type its name in the console. To view part of the *experts* object, select the rows and columns you want to see. By definition, a data frame is a table or a two-dimensional array, and you can navigate in this array as you would in any matrix, with indices that you would specify using *square brackets* (not to be confused with the *parentheses* used when using a function).
 
 <codeblock id="01_03">
 </codeblock>
@@ -278,17 +278,17 @@ Finally, use one of the most important function, the `summary()` function. You w
 <codeblock id="01_05">
 </codeblock>
 
-By comparing these outputs, you can understand the results provided by the `summary()` function applied on a data frame. As you can guess, the `summary()` function is really important and should be used each time you have imported a data set: it provides a summary of the data set of interest which will help you checking whether your data have been properly imported. In this example, it has been applied to the data set *experts*.
+By comparing these outputs you can understand the results of the `summary()` function applied to a data frame. As you can imagine, the `summary()` function is really important and should be used every time you import a dataset: it provides a summary of the dataset of interest, which will help you to check that your data has been imported correctly. In this example it has been applied to the *experts* dataset.
 
 ## The *R* corner: the output of a function
 <br>
 
-The outputs provided by a function can be either a graphical output, or a numerical output. When it's a numerical output, it's often constituted of many different numerical results. It is literally a list of results, *i.e.* a number of connected items that are calculated by the function. The concept of *list* is really important in R, as you may want to access easily to the different items that constitute the output.  
+The output of a function can be either a graphical output or a numerical output. If it's a numerical output, it's often made up of many different numerical results. It is literally a list of results, *i.e.* a number of related elements calculated by the function. The concept of *list* is really important in R, as you may want to easily access the different elements that make up the output.
 
 <center><img src="https://latex.codecogs.com/svg.image?\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}"/></center>
 <br>
 
-As the *Panelist*, *Session*, *Rank*, and *Product* variables are intrinsically the sources of variability of the different sensory attributes, they have to be considered as experimental factors. To do so, we are going to transform them as factors by using the `as.factor()` function. As a variable is part of a data frame, we will use the `$` sign to reach a given variable of interest. Actually the `$` sign is used to reach any  component of an R object (including a list).
+Since the variables *Panelist*, *Session*, *Rank* and *Product* are in themselves the sources of variability of the different sensory attributes, they need to be considered as experimental factors. To do this, we will transform them into factors using the `as.factor()` function. As a variable is part of a data frame, we will use the `$` sign to access a particular variable of interest. In fact, the `$` sign is used to access any component of an R object (including a list).
 
 <codeblock id="01_06">
 </codeblock>
@@ -361,7 +361,7 @@ For each sensory attribute, as for any quantitative variable, the `summary()` fu
 ## The *Stat* corner: the notion of percentile
 <br>
 
-When you look at the output of the `summary()` function, *Qu.* stands for quartile. By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups, and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*. 
+When you look at the output of the `summary()` function, *Qu.* stands for quartile. By definition, each of four equal groups into which a population can be divided according to the distribution of values of a particular variable;  each of the three values of the random variable that divide a population into four groups, and as you can guess the second quartile of a series of numbers is the *median* (by definition, the value that separates the series of values into two equal parts). Sometimes, you will see the notion of *percentile*.
 
 - Minimum (<img src="https://latex.codecogs.com/svg.image?Q_0"/>  or <img src="https://latex.codecogs.com/svg.image?0^{th}"/> percentile): the lowest data point in the data set excluding any outliers
 
