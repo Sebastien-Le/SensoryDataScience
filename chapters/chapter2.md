@@ -167,9 +167,9 @@ height: 1px;
 
 <exercise id="1" title="From classes to categories and vice-versa">
 
-By definition, a class is a set or category of things having some property or attribute in common. In the same way, a category is a class of people or things regarded as having particular shared characteristics. 
+By definition, a class is a set or category of things that have some property or attribute in common. In the same way, a category is a group of people or things that are considered to have certain common characteristics. 
 
-In this chapter, the notion of categories is first introduced using a survey in which 135 participants were asked about their perception of genetically modified organisms (GMO):
+In this chapter, the concept of categories is first introduced using a survey in which 135 participants were asked about their perceptions of genetically modified organisms (GMOs):
 
 * Do you feel implicated in the debate about GMO (a lot, to a certain extent, a little, not at all)?
 
@@ -229,7 +229,7 @@ Apply the `ncol()` function to *GMO* to get its number of columns. Use this info
 ncol(GMO) returns the number of columns of GMO
 </codeblock>
 
-The output of the `summary()` function is interesting: it illustrates perfectly the notion of class or category. For the question *"What do you think of the inclusion of GM raw materials in products to be fed to animals?"*, we can see that the 135 participants of the survey are divided into 4 classes or categories: 44 are totally opposed, 39 are somewhat against, 44 are favourable, and 8 are very favourable.
+The output of the `summary()` function is interesting: it perfectly illustrates the notion of class or category. For the question *"What do you think of the inclusion of GM raw materials in products to be fed to animals?"*, we can see that the 135 participants of the survey are divided into 4 classes or categories: 44 are totally opposed, 39 are somewhat against, 44 are favourable, and 8 are very favourable.
 
 </exercise>
 
@@ -250,14 +250,14 @@ The output of the `summary()` function is interesting: it illustrates perfectly 
 </section>
 </HTML>
 
-As explained previously, for a given question, the different *response modalities* define classes or categories of participants. Practically, we want to represent the way these participants are distributed into these classes. The graphical representation of a categorical variable is often done through a bar plot: one bar per category with a height proportional to the numeric value associated with the category.
+As explained earlier, for a given question, the different *response modalities* define classes or categories of respondents. In practice, we want to plot the way in which these respondents are distributed across these classes. The graphical representation of a categorical variable is often done using a bar graph: one bar per category with a height proportional to the numerical value associated with the category.
 
 Let's have a look at the *Position.H.Food* variable, and let's represent its distribution. To do so, extract the distribution information with the `summary()` function and visualize it with the `barplot()` function.
 
 <codeblock id="02_031">
 </codeblock>
 
-By default, the levels of a categorical are sorted in an alphabetical order. In our case, the *Position.H.Food* variable is an *ordered categorical variable*, a categorical variable with a quantitative dimension that can be ordered. For a better understanding of the data, this relation order between the categories should be kept.
+By default, the levels of a categorical variable are sorted alphabetically. In our case, the variable *Position.H.Food* is an *ordered categorical variable*, a categorical variable with a quantitative dimension that can be ordered. For a better understanding of the data, this relational order between the categories should be maintained.
 
 To do so, we are using the `c()` function to temporarily re-order the levels.
 
@@ -267,14 +267,14 @@ To do so, we are using the `c()` function to temporarily re-order the levels.
 ## The *R* corner: when categories have to be *re-ordered*
 <br>
 
-There's a trick for re-ordering the levels of a categorical variable. 
+There's a trick to reordering the levels of a categorical variable.
 
-Check the levels of the categorical variable *Position.Culture*. Re-order these levels in a more *natural* way, by using the `factor()` function, combined with the `levels()` function. Check again the levels of the variable *Position.Culture*
+Check the levels of the categorical variable *Position.Culture*. Reorder these levels in a more *natural* way, using the `factor()` function in combination with the `levels()` function. Check the levels of the *Position.Culture* variable again.
 
 <codeblock id="02_021">
 </codeblock>
 
-Extracting the distribution information can also be done using the very important function `table()`. This function will be used soon when dealing with two categorical variables.
+Extracting the distribution information can also be done using the very important `table()` function. This function will soon be used when dealing with two categorical variables.
 
 <codeblock id="02_032">
 </codeblock>
@@ -284,7 +284,7 @@ Let's enhance the visualization by adding a title and some colors *(https://r-ch
 <codeblock id="02_033">
 </codeblock>
 
-To represent the distribution in terms of percentages, use the very important function `prop.table()`.
+To represent the distribution in terms of percentages, use the very important `prop.table()` function.
 
 <codeblock id="02_034">
 </codeblock>
@@ -293,7 +293,7 @@ To represent the distribution in terms of percentages, use the very important fu
 ## The *R* corner: *ggplot2* an alternative to base R
 <br>
 
-Let's represent a categorical variable with the `ggplot2` package. While the `barplot()` uses a vector containing the distribution information, the `ggplot()`  function requires to create a data frame. 
+Let's plot a categorical variable using the `ggplot2` package. While `barplot()` uses a vector containing the distribution information, the `ggplot()` function requires a data frame to be created.
 
 <codeblock id="02_035">
 </codeblock>
@@ -303,7 +303,7 @@ The `data.frame()` function has generated two variables (*Var1* and *Freq*). Ass
 <codeblock id="02_035b">
 </codeblock>
 
-Raw data (*MGO*) can be used directly. Associate the x-axis with the categories and set the `stat` to `"count"` (this argument was set previously to `"identity"`, but with the distribution as input).
+Raw data (*MGO*) can be used directly. Associate the x-axis with the categories and set the `stat` to `"count"` (this argument was previously set to `"identity"`, but with the distribution as input).
 
 <codeblock id="02_036">
 </codeblock>
@@ -327,9 +327,9 @@ Raw data (*MGO*) can be used directly. Associate the x-axis with the categories 
 </section>
 </HTML>
 
-Who are those people who are favourable to the inclusion of GM raw materials in products to be fed to animals? Are they characterized by their political party for instance?
+Who are the people who support the inclusion of GM raw materials in products to be fed to animals? Are they characterised by their political party, for example?
 
-To answer this question cross these two variables and build a *contingency table* using the very important `table()` function; before that re-order the *Position.A.Food* variable, as well as the *Political.Party* variable from "Extreme left" to "Right".
+To answer this question, cross these two variables and build a *contingency table* using the very important `table()` function; before doing this, reorder the *Position.A.Food* variable, as well as the *Political.Party* variable from "Extreme left" to "Right".
 
 <codeblock id="02_03">
 </codeblock>
@@ -345,7 +345,7 @@ A contingency table is a very important object in statistics. It is interesting 
 
 where <img src="https://latex.codecogs.com/svg.image?n_{i.}" style="margin-top : 1rem; margin-bottom : -0.2rem"/> is the contingent of individuals in the category <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : 1rem; margin-bottom : 0rem"/>.
 
-Now let's ask ourselves an important practical question: those people who are favourable to the inclusion of GM raw materials in products to be fed to animals, how are they distributed within the political parties? 
+Now let's ask an important practical question: how are those people who are in favour of including GM raw materials in products to be fed to animals distributed within the political parties? 
 
 To answer this question, set the `fill` argument to the name of the variable of interest.
 
@@ -359,9 +359,9 @@ Set the `position` argument to `"dodge"` for an alternative visualization.
 <codeblock id="02_04">
 </codeblock>
 
-It seems that the data are *structured*, which means that there's a link between the two variables *Position.A.Food* and *Political.Party*. In other words, some classes from the *Position.A.Food* variable seem to be associated in a singular way with classes from the *Political.Party* variable.
+It appears that the data is *structured*, which means that there's a relationship between the two variables *Position.A.Food* and *Political.Party*. In other words, some classes from the *Position.A.Food* variable seem to be uniquely associated with classes from the *Political.Party* variable.
 
-Concretely, participants of the survey who are very favourable to the inclusion of GM raw materials in products to be fed to animal are voting either *Liberal* or *Right*.
+Specifically, respondents who are very supportive of the inclusion of GM raw materials in products to be fed to animals vote either "Liberal" or "Right".
 
 </exercise>
 
@@ -387,7 +387,7 @@ What happens when data are not structured and when there's no apparent link betw
 ## The *Stat* corner: breaking a *structure* by resampling
 <br>
 
-To understand what is an absence of structure we will disturb the data. The idea is to mix or resample the data collected for the *Position.A.Food* variable: this new information is stored in a new column called *Position.A.Food.Permuted*.
+In order to understand what a lack of structure is, we are going to disrupt the data. The idea is to mix or resample the data collected for the variable *Position.A.Food*: this new information is stored in a new column called *Position.A.Food.Permuted*.
 
 Create a vector of dimension 135 in which the positions of the participants have been permuted.
 
@@ -404,17 +404,17 @@ Visualize the relation between the two variables *Position.A.Food.Permuted* and 
 <codeblock id="02_06">
 </codeblock>
 
-In this example, the structure seems broken, which means that there's no particular link between the two variables *Position.A.Food.Permuted* and *Political.Party*. In other words, classes from the *Position.A.Food.Permuted* variable don't seem to be associated in a singular way with classes from the *Political.Party* variable.
+In this example, the structure appears to be broken, meaning that there's no particular link between the two variables *Position.A.Food.Permuted* and *Political.Party*. In other words, classes from the *Position.A.Food.Permuted* variable don't seem to be uniquely associated with classes from the *Political.Party* variable.
 
-Concretely, for this broken structure, if you are very favourable to the inclusion of GM raw materials in products to be fed to animals, you might vote from "Extreme left" to "Right" unconditionally. This leads us to the notion of independence.
+Specifically, for this broken structure, if you are very much in favour of the inclusion of GM raw materials in products to be fed to animals, you could vote unconditionally from "Extreme left" to "Right". This brings us to the concept of independence.
 
-Two events are independent if the occurrence of one does not affect the probability of occurrence of the other. More formally, two events A and B are independent if and only if their joint probability equals the product of their probabilities:
+Two events are independent if the occurrence of one does not affect the probability of the other. More formally, two events A and B are independent if and only if their joint probability is equal to the product of their (individual) probabilities:
 
 <center><img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)=\mathcal{P}(A)\times\mathcal{P}(B)." style="margin-top : 0rem; margin-bottom : 0rem"/></center>
 
 In the following part, we are going to compare <img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A\cap B)" style="margin-top : 1rem; margin-bottom : -0.5rem"/> to  <img src="https://latex.codecogs.com/svg.image?\mathcal{P}(A)\times\mathcal{P}(B)" style="margin-top : 1rem; margin-bottom : -0.5rem"/>, from what have been observed, *i.e.* from the data.
 
-Build a contingency table crossing the two variables *Position.A.Food* and *Political.Party* with the `table()` function. From this contingency table, calculate the marginal probabilities for each variable with the `apply()` and `sum()` functions. Then, from the definition of two independent events, build the probabilities matrix of the joint distribution of *Position.A.Food* and *Political.Party*, under the hypothesis of independence.
+Create a contingency table with the `table()` function that crosses the two variables *Position.A.Food* and *Political.Party*. From this contingency table, calculate the marginal probabilities for each variable using the `apply()` and `sum()` functions. Then, from the definition of two independent events, build the probability matrix of the joint distribution of *Position.A.Food* and *Political.Party*, under the hypothesis of independence.
 
 <codeblock id="02_07">
 </codeblock>
@@ -453,9 +453,9 @@ When the variables are independent:
 </section>
 </HTML>
 
-Beyond the formulas, it is important to understand visually *how far* data can be from the independence, in other words how your data deviate from the independence.
+Beyond the formulas, it is important to visually understand *how far* the data can be from independence, in other words, how your data deviates from independence.
 
-Represent the distribution of the participants according to the two variables *Position.A.Food* and *Political.Party*. Consider 3 situations, the theoretical situation when the two variables are independent (in the sense of the definition above), the artifactual situation when the answers to the *Position.A.Food* are permuted, and finally the observed situation with the data collected. For these representations, use the `barplot()` function, as well as the `legend()` function.
+Plot the distribution of participants according to the two variables *Position.A.Food* and *Political.Party*. Consider 3 situations, the theoretical situation when the two variables are independent (as defined above), the artefactual situation when the answers to *Position.A.Food* are permuted, and finally the observed situation with the data collected. For these plots, use the `barplot()` and `legend()` functions.
 
 Choose the proper data to visualize the first situation.
 
@@ -463,18 +463,18 @@ Choose the proper data to visualize the first situation.
 Use Joint.independence
 </codeblock>
 
-Choose the proper data to visualize the second situation.
+Select the appropriate data to visualise the first situation.
 
 <codeblock id="02_08b">
 Remember that data have been permuted
 </codeblock>
 
-Choose the proper data to visualize the third situation.
+Select the appropriate data to visualise the third situation.
 
 <codeblock id="02_08c">
 </codeblock>
 
-Obviously, the artifactual situation is not far from the independence situation. This result was expected as data were permuted which leads to a lack of structure in the data. The observed situation is quite far from both theoretical and artifactual situations. This result was expected due to the strong structure in the data, particularly between the two variables *Position.A.Food* and *Political.Party*.
+Obviously, the artefactual situation is not far from the independence situation. This result was expected as data were permuted which leads to a lack of structure in the data. The observed situation is quite far from both theoretical and artefactual situations. This result was expected due to the strong structure in the data, particularly between the two variables *Position.A.Food* and *Political.Party*.
 
 ## The *Stat* corner: the *Chi-square* test
 <br>
@@ -500,7 +500,7 @@ Try again
 </opt>
 </choice>
 
-The Chi-square distance represents the distance from the independence situation. The *p-value* is the probability to observe such a distance (in our case such a *high* distance) under the hypothesis of independence. In our case, observing such a distance is really really rare when the data are independent: in other words, it seems that data are really dependent.
+The Chi-square distance represents the distance from the independence situation. The *p-value* is the probability of observing such a distance (in our case such a *high* distance) under the hypothesis of independence. In our case, it is really very rare to observe such a distance when the data are independent: in other words, it seems that the data are really dependent.
 
 </exercise>
 
@@ -533,11 +533,11 @@ Calculate the matrix that corresponds to this new formulation of the independenc
 <codeblock id="02_10">  
 </codeblock>
 
-For this matrix, positive numbers correspond to a positive dependency (association) between two categories, as illustrated by the number 1.95 for the two categories *Right* and *Very Favourable*; similarly, negative numbers correspond to a negative dependency (incompatibility) between two categories, as illustrated by the number -1 for the two categories *Extreme left* and *Very Favourable*.
+In this matrix, positive numbers correspond to a positive dependency (association) between two categories, as illustrated by the number 1.95 for the two categories *Right* and *Very favourable*; similarly, negative numbers correspond to a negative dependency (incompatibility) between two categories, as illustrated by the number -1 for the two categories *Extreme left* and *Very favourable*.
 
-The deviation matrix defines multivariate profiles as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> for the rows, and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/> for the columns. These profiles can be directly interpreted in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns. In our example, we expect the two categories *Extreme left* and *Left* to be quite close and the two categories *Extreme left* and *Right* to be quite distant.
+The deviation matrix defines multivariate profiles as vectors of <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : -1rem; margin-bottom : 0rem"/> for the rows, and <img src="https://latex.codecogs.com/svg.image?R^I" style="margin-top : -1rem; margin-bottom : 0rem"/> for the columns. These profiles can be interpreted directly in terms of difference from the independence model. Hence the idea of calculating a distance between two rows or two columns. In our example, we expect the two categories *Extreme left* and *Left* to be quite close and the two categories *Extreme left* and *Right* to be quite distant.
 
-Naturally, if you had to compare two political parties in terms of difference from the independence model, you would calculate a distance based on the differences regarding the levels of the variable *Position.A.Food*. As the different levels of *Position.A.Food* have a different weight relative to each other, you would naturally take that information into account, and calculate a distance weighted by the relative importance of each level. In other words, we're going to consider the following distance between two political parties <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : -1rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?i'" style="margin-top : -1rem; margin-bottom : 0rem"/>:
+Obviously, if you were comparing two political parties in terms of how they differ from the independence model, you would calculate a distance based on the differences regarding the levels of the variable *Position.A.Food*. As the different levels of *Position.A.Food* have a different weight relative to each other, you would naturally take that information into account, and calculate a distance weighted by the relative importance of each level. In other words, we're going to consider the following distance between two political parties <img src="https://latex.codecogs.com/svg.image?i" style="margin-top : -1rem; margin-bottom : 0rem"/> and <img src="https://latex.codecogs.com/svg.image?i'" style="margin-top : -1rem; margin-bottom : 0rem"/>:
 
 <center>
 <img src="https://latex.codecogs.com/svg.image?d^2(i,i') = \sum\limits_{j\in J}f_{\cdot j}((\dfrac{f_{ij}}{f_{i\cdot}\times f_{\cdot j}})-(\dfrac{f_{i'j}}{f_{i'\cdot}\times f_{\cdot j}}))^2" style="margin-top : -1rem; margin-bottom : 0rem"/>
@@ -554,7 +554,7 @@ Calculate the distance matrix between row-profiles, *i.e.* the political parties
 <codeblock id="02_11">
 </codeblock>
 
-As expected, this distance matrix is diagonal; as expected also, the categories *Extreme left* and *Left* are close from each other, and are both far from the category *Right*.
+As expected, this distance matrix is diagonal; as expected also, the categories *Extreme left* and *Left* are close from each other, and both are far from the category *Right*.
 
 Visualize this distance matrix with the `heatmap()` function, with colors corresponding to the values in the matrix.
 
@@ -565,7 +565,7 @@ Visualize this distance matrix with the `heatmap()` function, with colors corres
 
 <exercise id="7" title="From the notion of distance to the notion of inertia">
 
-With a distance and a system of masses, we can now focus on the very important concept of inertia. By definition, the inertia of our Political parties is obtained by the following calculation:
+With a distance and a system of masses, we can now focus on the very important concept of inertia. By definition, the inertia of our political parties is obtained by the following calculation:
 
 <center>
 <img src="https://latex.codecogs.com/svg.image?I(N_{I}) = \sum\limits_{i\in I} f_{i\cdot}\times d^2(i,O)," style="margin-top : 0rem; margin-bottom : 0rem"/>
@@ -574,7 +574,7 @@ With a distance and a system of masses, we can now focus on the very important c
 where <img src="https://latex.codecogs.com/svg.image?I(N_{I})" style="margin-top : 0rem; margin-bottom : -0.3rem"/> is the inertia of the system of rows, <img src="https://latex.codecogs.com/svg.image?N_{I}" style="margin-top : 0rem; margin-bottom : -0.3rem"/> denotes the scatter plot of the rows
 in the <img src="https://latex.codecogs.com/svg.image?R^J" style="margin-top : 0rem; margin-bottom : 0rem"/> space, and <img src="https://latex.codecogs.com/svg.image?O" style="margin-top : 0rem; margin-bottom : 0rem"/> denotes the center of gravity of <img src="https://latex.codecogs.com/svg.image?N_{I}" style="margin-top : 0rem; margin-bottom : -0.2rem"/>. One can easily show that the inertia is equal to the Chi-square distance divided by the number of individuals.
 
-Hence the name of the distance between two row profiles which is called the Chi-square distance.
+Hence the name of the distance between two row profiles, the Chi-square distance.
 
 </exercise>
 
