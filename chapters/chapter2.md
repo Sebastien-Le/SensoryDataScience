@@ -778,18 +778,6 @@ Each consumer can be considered as a class variable, *i.e.* a qualitative variab
 ## The *R* corner: the *fast()* function...a must have
 <br>
 
-The `catdes()` function is one of the most important in the `FactoMineR` package. It enables the automatic description of a qualitative variable using the other variables in the dataset, whether they are quantitative or qualitative.
-
-We will apply this function to two variables of interest. First, the political party variable. This will enable us to have a description of political parties based on their stance towards GMOs.
-
-<codeblock id="02_050">
-</codeblock>
-
-Display the description of the political party associated with the category *Right*. Try with the political party of your choice.
-
-Second, the cluster variable, which will provide an automatic description of the cluster variable obtained from the HCPC function.
-
-<codeblock id="02_051">
-</codeblock>
+The `SensoMineR` package includes a function dedicated to the analysis of sorting data, the `fast()` function. Thanks to this function, you can obtain confidence ellipses around the stimuli and you can also analyse the words used to describe the groups.
 
 </exercise>
