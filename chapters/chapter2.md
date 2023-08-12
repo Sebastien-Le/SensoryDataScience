@@ -752,6 +752,8 @@ Display the description of the first cluster.
 <codeblock id="02_051a">
 </codeblock>
 
+As you can see this description is the one that you have obtained with the `HCPC()` function.
+
 </exercise>
 
 <exercise id="10" title="From Multiple Correspondence Analysis to Sorting Data">

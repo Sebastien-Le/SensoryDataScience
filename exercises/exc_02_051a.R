@@ -1,2 +1,1 @@
-res.catdes.cluster <- catdes(res.hcpc$data.clust, num.var = __)
-names(____)
+res.catdes.cluster$____$'____'
