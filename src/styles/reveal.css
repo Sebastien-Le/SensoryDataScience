@@ -151,7 +151,7 @@
 }
 
 .reveal .slides section .fragment.highlight-blue.visible {
-    color: #ffb413;
+    color: #1b91ff;
 }
 
 .reveal .slides section .fragment.highlight-current-red.current-fragment {
@@ -163,7 +163,7 @@
 }
 
 .reveal .slides section .fragment.highlight-current-blue.current-fragment {
-    color: #ffb413;
+    color: #1b91ff;
 }
 
 /*********************************************
